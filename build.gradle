@@ -21,6 +21,7 @@ repositories {
     mavenCentral()
 }
 
+def withKithkyn = providers.gradleProperty('with_kithkyn').map { it.toBoolean() }.getOrElse(true)
 def kithkynProjectDirectory = file(findProperty('kithkyn_project_dir') ?: '../kithkyn')
 def kithkynPropertiesFile = new File(kithkynProjectDirectory, 'gradle.properties')
 def kithkynProperties = new Properties()
@@ -102,7 +103,9 @@ configurations {
 }
 
 dependencies {
-    localRuntime files(kithkynJar)
+    if (withKithkyn) {
+        localRuntime files(kithkynJar)
+    }
 
     testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
@@ -167,7 +170,9 @@ tasks.matching { it.name == 'runEffectsCapture' }.configureEach { dependsOn prep
 tasks.matching { task ->
     task.name in ['runClient', 'runClientJoinLocal', 'runEffectsCapture', 'runServer', 'runGameTestServer']
 }.configureEach {
-    dependsOn buildKithkyn
+    if (withKithkyn) {
+        dependsOn buildKithkyn
+    }
 }
 
 def generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {

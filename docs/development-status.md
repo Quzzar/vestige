@@ -41,6 +41,29 @@ All **214 replacement primary-cast videos** are now published in the gallery, wi
 
 ## Verification
 
+### October 2 GitHub repository setup
+
+Vestige now uses [Quzzar/vestige](https://github.com/Quzzar/vestige) as its canonical GitHub
+repository. The README follows Kithkyn's project overview, requirements, installation,
+development and attribution structure. Project metadata points to Vestige's source and issue
+tracker, and the inherited Discord support link is removed. License and historical credits
+remain intact.
+
+The [Build workflow](../.github/workflows/build.yml) follows Kithkyn's Java 21 build setup,
+with standalone native Minecraft tests, complete generated-catalog and recording checks,
+a separate Bun gallery job and downloadable development jars. `-Pwith_kithkyn=false`
+omits the companion JAR and build dependency; ordinary development runs still co-load the
+version-matched sibling checkout. This keeps CI independent of changes to Kithkyn's platform.
+
+Local `./gradlew --offline check build runGameTestServer -Pwith_kithkyn=false` passes with
+**59 JUnit tests** (zero failures, errors or skips) and **all 90 required Minecraft tests**.
+Both converters and every generated catalog/reference/balance/source/art check pass.
+**17 balance, seven presentation and five capture Python tests**, **six gallery tests**,
+the frozen Bun install and TypeScript/Vite build pass. All **214 actual cast recordings**
+pass their definition/video hash and coverage checks. Packaged metadata contains the correct
+source and issue URLs. The existing non-blocking gallery bundle-size warning remains.
+This setup creates development build checks and artifacts; no release is published.
+
 ### October 2 complete spell art pass
 
 `./gradlew --offline build runGameTestServer` passes with **59 JUnit tests** (zero failures/errors/skips) and **all 90 required Minecraft GameTests**. The final packaged JAR contains all 214 current definition bytes. New geometry/payload tests cover finite coiling/rooted paths and all thirty-two shapes with bounded rhythm parameters. A real-food test verifies Gluttony grants thirty mana for each of the first three completed bread meals, then none for the fourth. The default projectile world test verifies unchanged seven-HP damage, a substantial finite contact cue and its expiry. The last Planar Sight adjustment is cosmetic; its final build/catalog tests and actual render pass, with the ninety-test world result unchanged.

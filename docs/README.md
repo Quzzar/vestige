@@ -3,6 +3,7 @@
 ## Current project and decisions
 
 - [Development status](development-status.md): implemented work, verification, and remaining milestones.
+- [Repository and builds](repository.md): GitHub checks, downloadable jars, standalone testing and contribution workflow.
 - [Spell reference](spell-reference.md): all 214 spells, worked examples, trait ratings, scaling, costs, targeting, effect plans, and current appearance.
 - [Spell rarity and balance](design/spell-balance.md): four rarities, relative ratings, formula calibration, boost leverage, and comparisons within rarity.
 - [Complete spell balance review](spell-balance-review.md): all 214 native outcome/cost reviews, direct per-creature ceilings, role tradeoffs, and tested limits.

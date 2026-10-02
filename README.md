@@ -1,44 +1,119 @@
 # Vestige: Traditions of Lost Magic
 
-Vestige is a Minecraft magic, exploration, and adventure mod about rediscovering lost traditions. Development currently focuses on a standalone, data-driven spell system for **Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21**.
+A Minecraft magic, exploration and adventure mod about rediscovering lost traditions.
+Vestige currently focuses on native spells: **214 independently authored spells**, with
+distinct effects, native balance and a recording of every spell being cast inside Minecraft.
 
-The inherited Wizardry gameplay layer has been removed. Vestige's own wands, discovery and progression remain deferred. The current catalog contains **214 native spells: 110 Iron adaptations, 100 Pathfinder 2e adaptations and four native examples**. They execute without Iron or a tabletop rules engine. The [Iron ledger](docs/design/iron-spell-conversions.md) and [Pathfinder ledger](docs/design/pathfinder-spell-conversions.md) record provenance, behavior and deliberate adaptation differences.
+[Source](https://github.com/Quzzar/vestige) · [Issues](https://github.com/Quzzar/vestige/issues) · [Spell reference](docs/spell-reference.md) · [Cast gallery](docs/effects-workshop.md)
 
-Spells are immutable data composed from rarity, traditions, relative traits, costs, targeting and reusable effect plans. All 214 have independent **common, uncommon, rare or mythic** assignments, native mana/recovery tuning and shared animation recipes. The latest 36 Pathfinder spells add solid constructs, physical scale/traversal, ally formations, protection budgets, private sensing and object/companion utility. The [100-spell selection](docs/pathfinder-spell-selection.md) lists their actual behavior; the [1,992-source inventory](docs/pathfinder-spell-inventory.md) remains a separate future review queue.
+[![Build](https://github.com/Quzzar/vestige/actions/workflows/build.yml/badge.svg)](https://github.com/Quzzar/vestige/actions/workflows/build.yml)
 
-The [cast gallery](docs/effects-workshop.md) searches all 214 spells and shows **actual Minecraft casts only**. All **214 spells have a recorded primary cast**, including area boundaries, ordered chains, water knockback, live model copies, a combat companion, and real ice/tree/water terrain with safe per-cell cleanup. The full catalog is visible by default. Browser sketches and effect studies are removed. `runEffectsCapture` exports the isolated native client; `/vestige_magic cast` is the development entrypoint. [Spell breakdowns](docs/spell-reference.md), [balance](docs/spell-balance-review.md), [runtime design](docs/design/spell-runtime.md) and [verification](docs/development-status.md) record behavior and limits. Visuals use original procedural rendering and vanilla assets; source-mod animation assets are not imported.
+A NeoForge mod for **Minecraft 1.21.1**. Vestige grew from Electroblob's Wizardry and
+Wizardry Redux; the inherited gameplay systems have been retired in favor of its native runtime.
 
-## Development
+## What it does
 
-Install Java 21, then:
+- **214 spells.** 110 adaptations inspired by Iron's Spells, 100 inspired by Pathfinder
+  Second Edition, and four native examples. Each has an explicit executable plan and source
+  provenance. Iron and a tabletop rules engine are not required to run them.
+- **Magic with physical consequences.** Projectiles, area bursts, ordered chains, rays,
+  movement, protections, companions and temporary terrain. Wall of Ice raises a real,
+  breakable wall; cleanup preserves cells that players have broken or replaced.
+- **Composed spell effects.** Original procedural visuals combine 32 shared shapes with
+  vanilla particles, sounds and entity models. Spells have authored silhouettes, materials
+  and motion. Source-mod animation code and assets are not imported.
+- **Independent rarity and balance.** Common, uncommon, rare and mythic spells have native
+  mana and recovery costs. Actual outcomes, timing and constraints determine balance;
+  trait numbers describe relative scaling rather than a power budget.
+- **Actual cast recordings.** The searchable gallery includes a primary Minecraft cast for
+  every spell, showing targets, area boundaries, status effects, movement and world changes.
+  Recordings are silent excerpts with observed results, not browser recreations.
 
-```bash
-./gradlew build
-./gradlew test
-./gradlew runGameTestServer
-./gradlew runClient
-```
+The [spell reference](docs/spell-reference.md), [balance review](docs/spell-balance-review.md)
+and [art breakdown](docs/spell-art-direction.md) describe the complete catalog.
 
-Development runs also build and load Kithkyn from `../kithkyn`, checking matching Minecraft and NeoForge versions. Override with `-Pkithkyn_project_dir=/absolute/path/to/kithkyn`. Kithkyn co-loading does not implement spell interoperability.
+## Requirements
 
-`runServer` starts a dedicated server. `runClientJoinLocal` joins localhost:25565; use `-Pjoinport=25566` for another port. `verifyKithkynCompatibility` checks platform versions without launching the game.
+| | |
+| --- | --- |
+| Minecraft | 1.21.1 |
+| Loader | NeoForge; the verified development baseline is 21.1.72 |
+| Java | 21 |
+| Sides | Both. Install on the server and every client. |
+| Other mods | None required; Kithkyn is optional. |
 
-In-game operators can try the catalog:
+## Try the development build
+
+1. Download `vestige-<version>.jar` from a successful [Build workflow](https://github.com/Quzzar/vestige/actions/workflows/build.yml) run's `vestige-jars` artifact, or build it locally.
+2. Install NeoForge for Minecraft 1.21.1 and put the jar in the server and clients' `mods` folders.
+3. Enter a world with operator permission and use the spell commands below.
+
+There is no published release yet. Native wands, spell discovery and progression are deferred;
+operator commands are the current development entrypoint. The old equipment and progression
+systems are not connected to these spells.
+
+## Commands
 
 ```text
 /vestige_magic list
-/vestige_magic effects vestige:pf2_wall_of_ice
-/vestige_magic effects vestige:pf2_wall_of_ice 0
 /vestige_magic cast vestige:fireball
+/vestige_magic cast vestige:pf2_wall_of_ice
 /vestige_magic cast vestige:heartstop
-/vestige_magic cast vestige:portal
+/vestige_magic mana 200
+/vestige_magic cast_balanced vestige:fireball
 /vestige_magic interrupt
 /vestige_magic dispel
 ```
 
-Cast Portal twice while aiming at different positions. Recast a summon spell to dismiss its cohort. The operator command bypasses resources and discovery while preserving timing; normal equipment controls and progression are deferred.
+`cast` bypasses resources and recovery while retaining casting timing and recasts.
+`cast_balanced` enforces native mana and recovery. Recast a summon to dismiss its cohort;
+cast Portal twice while aiming at different positions to connect two points.
+See [the runtime guide](docs/design/spell-runtime.md) for payment, targeting and channel rules.
 
-Definitions live in `src/main/resources/data/vestige/runtime_spells/`. To regenerate both explicitly authored conversion batches and verify the Pathfinder snapshot:
+## Watch the spells
+
+From the repository root:
+
+```bash
+cd tools/effects-viewer
+bun install --frozen-lockfile
+bun run dev
+```
+
+Open [localhost:5175](http://127.0.0.1:5175/) and keep the server running. Search all 214
+spells, play a cast, download its MP4 or copy its native cast command. The viewer plays saved
+footage; it does not launch Minecraft. [The gallery guide](docs/effects-workshop.md) explains
+how to record updated casts.
+
+## Compatibility and current limits
+
+Kithkyn is an optional companion mod. Default development runs build and co-load the sibling
+Kithkyn checkout after checking matching platform versions. This does not implement spell
+interoperability with Kithkyn, Iron or other mods.
+
+The native conversions adapt source behavior to Minecraft. Custom creature and weapon artwork,
+character casting gestures and wider multiplayer playtesting remain future work. The source
+ledgers record deliberate differences; [development status](docs/development-status.md) records
+the tests, recordings and practical limits.
+
+## Development
+
+Java 21 and the Gradle wrapper:
+
+```bash
+./gradlew build
+./gradlew test
+./gradlew check build runGameTestServer -Pwith_kithkyn=false
+./gradlew runClient
+./gradlew runServer
+```
+
+`runClient` and `runServer` co-load `../kithkyn` by default. Use `-Pwith_kithkyn=false`
+for standalone runs, or `-Pkithkyn_project_dir=/absolute/path/to/kithkyn` to choose the
+companion checkout. `runClientJoinLocal` joins localhost:25565; override with `-Pjoinport=25566`.
+
+Definitions live in `src/main/resources/data/vestige/runtime_spells/`. Regenerate the authored
+catalog with:
 
 ```bash
 python3 tools/convert_irons_spells.py
@@ -46,6 +121,34 @@ python3 tools/convert_pathfinder_spells.py
 python3 tools/convert_pathfinder_spells.py --check
 ```
 
-The pinned source catalog is `tools/irons-spells.json`. Generation requires neither an Iron checkout nor a runtime dependency. See [CREDITS.md](CREDITS.md) for attribution.
+Read [docs/](docs/README.md) and [AGENTS.md](AGENTS.md) before changing a system.
+[Repository and builds](docs/repository.md) describes the GitHub checks and build artifacts.
 
-For balance playtesting in Survival, use `/vestige_magic mana 200` then `/vestige_magic cast_balanced vestige:<spell>`. The ordinary `cast` development command bypasses mana and cooldowns. Wands, discovery and progression remain deferred.
+## Contributing
+
+Issues and pull requests are welcome at the [issue tracker](https://github.com/Quzzar/vestige/issues).
+Fork, branch and open a PR. CI verifies the catalog, unit and Minecraft behavior tests,
+cast recordings and gallery build on every pull request and push to `main`.
+
+## License
+
+The inherited [license](LICENSE.md) and attribution notices are retained. Vestige's native
+spell recipes and procedural visual compositions are independently authored.
+
+Vestige is not affiliated with Mojang, Microsoft, Paizo or the authors of its source inspirations.
+
+## Credits and inspiration
+
+- [Electroblob's Wizardry](https://github.com/Electroblob77/Wizardry), by Electroblob,
+  and [Wizardry Redux](https://github.com/Binaris00/ElectroblobsWizardryRedux), by Binaris
+  and contributors, are the project's historical origins.
+- [Iron's Spells 'n Spellbooks](https://github.com/iron431/irons-spells-n-spellbooks),
+  by iron431 and contributors, inspires the 110-spell Iron catalog and visual design references.
+- Pathfinder Second Edition, by Paizo, inspires 100 native adaptations. [Archives of Nethys](https://2e.aonprd.com/Spells.aspx)
+  provides the canonical references, with Wanderer's Guide and the Foundry PF2e project
+  informing taxonomy and the broader source inventory.
+
+[CREDITS.md](CREDITS.md) retains the full historical attribution and pinned sources.
+The [Iron ledger](docs/design/iron-spell-conversions.md) and
+[Pathfinder ledger](docs/design/pathfinder-spell-conversions.md) document native behavior
+and differences from their inspirations.
