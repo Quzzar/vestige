@@ -1,0 +1,188 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1718",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Telekinetic Projectile",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 363",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1718"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:force": 1,
+    "vestige:motion": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 6
+    },
+    {
+      "type": "cooldown",
+      "ticks": 20
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 200,
+        "values": {
+          "speed": 1.8,
+          "distance": {
+            "product": [
+              20,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          }
+        },
+        "identifiers": {
+          "item": "minecraft:cobblestone"
+        },
+        "bindings": [],
+        "on_hit": [
+          {
+            "type": "damage",
+            "values": {
+              "amount": {
+                "product": [
+                  6,
+                  {
+                    "trait": "vestige:amplify"
+                  }
+                ]
+              },
+              "ignore_invulnerability": 1
+            }
+          },
+          {
+            "type": "visual",
+            "visual": {
+              "duration": 24,
+              "radius": 0.9,
+              "height": 0.25,
+              "layers": [
+                {
+                  "shape": "shards",
+                  "color": "99aabf",
+                  "alpha": 0.85,
+                  "width": 0.045,
+                  "scale": 1.0,
+                  "speed": 1.5,
+                  "phase": 0,
+                  "count": 4
+                },
+                {
+                  "shape": "ripple",
+                  "color": "eef5ff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.7,
+                  "speed": -0.9750000000000001,
+                  "phase": 1.2,
+                  "count": 3
+                },
+                {
+                  "shape": "sparks",
+                  "color": "eef5ff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:entity.generic.explode",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        ],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "eef5ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "shards",
+              "color": "99aabf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.0,
+              "speed": 1.5,
+              "phase": 0,
+              "count": 4
+            },
+            {
+              "shape": "ripple",
+              "color": "eef5ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -0.9750000000000001,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "eef5ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,209 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT' apply(false)
-    id 'net.neoforged.moddev.legacyforge' version '2.0.77' apply(false)
+    id 'java-library'
+    id 'net.neoforged.moddev' version '1.0.21'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+    withJavadocJar()
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+def kithkynProjectDirectory = file(findProperty('kithkyn_project_dir') ?: '../kithkyn')
+def kithkynPropertiesFile = new File(kithkynProjectDirectory, 'gradle.properties')
+def kithkynProperties = new Properties()
+if (kithkynPropertiesFile.isFile()) {
+    kithkynPropertiesFile.withInputStream { kithkynProperties.load(it) }
+}
+def kithkynVersion = kithkynProperties.getProperty('mod_version', '1.0.0')
+def kithkynJar = new File(kithkynProjectDirectory, "build/libs/kithkyn-${kithkynVersion}.jar")
+def vestigePlatformVersions = [
+        minecraft_version: minecraft_version.toString(),
+        neo_version      : neo_version.toString()
+]
+def kithkynPlatformVersions = vestigePlatformVersions.keySet().collectEntries { propertyName ->
+    [(propertyName): kithkynProperties.getProperty(propertyName)]
+}
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        clientJoinLocal {
+            client()
+            programArguments.addAll '--quickPlayMultiplayer', 'localhost:' + (findProperty('joinport') ?: '25565')
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            gameDirectory = project.file('run-client')
+        }
+
+        effectsCapture {
+            client()
+            gameDirectory = project.file('run/effects-capture')
+            programArguments.addAll '--width', '960', '--height', '540'
+            systemProperty 'vestige.capture.output', project.file(findProperty('capture_output') ?: 'build/native-capture').absolutePath
+            systemProperty 'vestige.capture.spells', findProperty('capture_spells') ?: ''
+            systemProperty 'vestige.capture.kind', findProperty('capture_kind') ?: 'cast'
+            systemProperty 'vestige.capture.seconds', findProperty('capture_seconds') ?: '8'
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        gameTestServer {
+            type = 'gameTestServer'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+
+    unitTest {
+        enable()
+        testedMod = mods."${mod_id}"
+    }
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    localRuntime files(kithkynJar)
+
+    testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+}
+
+tasks.named('processTestResources', ProcessResources) {
+    from('tools/irons-spells.json')
+    from('tools/pathfinder-spells.json')
+    from('tools/effects-viewer/src/catalog.json')
+}
+
+def verifyKithkynCompatibility = tasks.register('verifyKithkynCompatibility') {
+    group = 'verification'
+    description = 'Verifies that the sibling Kithkyn project matches Vestige\'s development platform.'
+    inputs.file(kithkynPropertiesFile)
+    inputs.properties(vestigePlatformVersions)
+
+    doLast {
+        if (!kithkynPropertiesFile.isFile()) {
+            throw new GradleException("Kithkyn was not found at ${kithkynProjectDirectory}. Set -Pkithkyn_project_dir=/path/to/kithkyn if it lives elsewhere.")
+        }
+
+        vestigePlatformVersions.each { propertyName, expected ->
+            def actual = kithkynPlatformVersions[propertyName]
+            if (actual != expected) {
+                throw new GradleException("Kithkyn ${propertyName} is ${actual}, but Vestige requires ${expected}.")
+            }
+        }
+    }
+}
+
+def buildKithkyn = tasks.register('buildKithkyn', Exec) {
+    group = 'development'
+    description = 'Builds the sibling Kithkyn mod used by Vestige development runs.'
+    dependsOn verifyKithkynCompatibility
+    workingDir kithkynProjectDirectory
+    environment 'JAVA_HOME', System.getProperty('java.home')
+    commandLine new File(kithkynProjectDirectory, 'gradlew').absolutePath, 'jar'
+    inputs.files(fileTree(new File(kithkynProjectDirectory, 'src')), kithkynPropertiesFile, new File(kithkynProjectDirectory, 'build.gradle'))
+    outputs.file(kithkynJar)
+}
+
+def prepareEffectsCapture = tasks.register('prepareEffectsCapture') {
+    def captureDirectory = project.file('run/effects-capture')
+    group = 'development'
+    description = 'Configures the isolated footage client without altering normal development worlds.'
+    doLast {
+        captureDirectory.mkdirs()
+        new File(captureDirectory, 'options.txt').text = 'onboardAccessibility:false\npauseOnLostFocus:false\nrenderDistance:4\nautoJump:false\nmaxFps:60\n'
+        def config = new File(captureDirectory, 'config/kithkyn-common.toml')
+        config.parentFile.mkdirs()
+        config.text = config.isFile() ? config.text.replace('"Enable LLM?" = true', '"Enable LLM?" = false') : '[llm]\n"Enable LLM?" = false\n'
+    }
+}
+
+tasks.matching { it.name == 'runEffectsCapture' }.configureEach { dependsOn prepareEffectsCapture }
+
+tasks.matching { task ->
+    task.name in ['runClient', 'runClientJoinLocal', 'runEffectsCapture', 'runServer', 'runGameTestServer']
+}.configureEach {
+    dependsOn buildKithkyn
+}
+
+def generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {
+    def replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_credits            : mod_credits,
+            mod_description        : mod_description,
+            kithkyn_version_range  : kithkyn_version_range
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from 'src/main/templates'
+    into 'build/generated/sources/modMetadata'
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+jar {
+    from(rootProject.file('LICENSE.md')) {
+        into 'META-INF'
+    }
+    from(rootProject.file('CREDITS.md')) {
+        into 'META-INF'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
 }

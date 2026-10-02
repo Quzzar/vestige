@@ -1,0 +1,120 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:shield",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Shield",
+    "cast_type": "instant",
+    "cooldown_ticks": 160
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:abjuration": 4,
+    "vestige:force": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 240
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            3,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current",
+            "required": true
+          },
+          "manifestation": {
+            "kind": "vestige:barrier",
+            "duration": 200,
+            "values": {
+              "stationary": 1,
+              "health": 20,
+              "radius": 2
+            },
+            "identifiers": {},
+            "bindings": [],
+            "on_hit": [],
+            "on_tick": [],
+            "on_end": [],
+            "interval": 1,
+            "visual": {
+              "duration": 200,
+              "radius": 1.15,
+              "height": 1,
+              "layers": [
+                {
+                  "shape": "shield",
+                  "color": "b67cff",
+                  "alpha": 0.85,
+                  "width": 0.045,
+                  "scale": 1.1,
+                  "speed": 0.3,
+                  "phase": 0,
+                  "count": 8
+                },
+                {
+                  "shape": "sigil",
+                  "color": "f4deff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.77,
+                  "speed": -0.195,
+                  "phase": 1.2,
+                  "count": 4
+                },
+                {
+                  "shape": "sparks",
+                  "color": "f4deff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:block.amethyst_block.resonate",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

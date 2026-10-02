@@ -1,0 +1,225 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1997",
+    "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+    "name": "Gravity Well",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core 2 p. 246",
+      "rank": 3,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1997"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:force": 1,
+    "vestige:space": 1,
+    "vestige:motion": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            18,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current",
+            "required": true
+          },
+          "manifestation": {
+            "kind": "vestige:area",
+            "duration": 1,
+            "values": {
+              "particles": 0
+            },
+            "identifiers": {},
+            "bindings": [],
+            "on_hit": [],
+            "on_tick": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "near_target",
+                  "required": false,
+                  "distance": {
+                    "product": [
+                      4,
+                      {
+                        "trait": "vestige:area"
+                      }
+                    ]
+                  },
+                  "relationship": "hostile",
+                  "options": {
+                    "count": 4
+                  }
+                },
+                "effects": [
+                  {
+                    "type": "pull",
+                    "values": {
+                      "strength": {
+                        "product": [
+                          0.7,
+                          {
+                            "trait": "vestige:amplify"
+                          }
+                        ]
+                      },
+                      "up": 0
+                    }
+                  }
+                ]
+              }
+            ],
+            "on_end": [],
+            "interval": 1,
+            "visual": {
+              "duration": 24,
+              "radius": 1,
+              "height": 0.08,
+              "layers": [
+                {
+                  "shape": "vortex",
+                  "color": "57418f",
+                  "alpha": 0.85,
+                  "width": 0.22,
+                  "scale": 1.0,
+                  "speed": -1.1,
+                  "phase": 0,
+                  "count": 8
+                },
+                {
+                  "shape": "sigil",
+                  "color": "d992ff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.7,
+                  "speed": 0.7150000000000001,
+                  "phase": 1.2,
+                  "count": 4
+                },
+                {
+                  "shape": "sparks",
+                  "color": "d992ff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            18,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 24,
+            "radius": {
+              "product": [
+                4,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "height": 0.08,
+            "layers": [
+              {
+                "shape": "vortex",
+                "color": "57418f",
+                "alpha": 0.85,
+                "width": 0.22,
+                "scale": 1.0,
+                "speed": -1.1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "sigil",
+                "color": "d992ff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 0.7,
+                "speed": 0.7150000000000001,
+                "phase": 1.2,
+                "count": 4
+              },
+              {
+                "shape": "sparks",
+                "color": "d992ff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

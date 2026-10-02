@@ -1,8 +1,0 @@
-{
-  "parent": "ebwizardry:item/runestone_item",
-  "textures": {
-    "overlay": "ebwizardry:block/runestone_earth_4_overlay",
-    "rune": "ebwizardry:block/runestone_earth_4",
-    "side": "ebwizardry:block/runestone_earth_0"
-  }
-}

@@ -1,0 +1,139 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:shadow_slash",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Shadow Slash",
+    "cast_type": "instant",
+    "cooldown_ticks": 300
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:shadow": 4,
+    "vestige:teleportation": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 30
+    },
+    {
+      "type": "cooldown",
+      "ticks": 140
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            12,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "teleport"
+        }
+      ]
+    },
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "melee",
+        "required": false,
+        "distance": {
+          "product": [
+            5,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "angle": 65,
+          "count": 4
+        }
+      },
+      "effects": [
+        {
+          "type": "weapon_damage",
+          "values": {
+            "amount": {
+              "product": [
+                5,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "weapon_fraction": 0.5,
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "slash",
+            "color": "57418f",
+            "alpha": 0.85,
+            "width": 0.18,
+            "scale": 1.6,
+            "speed": -1.4,
+            "phase": 0,
+            "count": 7
+          },
+          {
+            "shape": "vortex",
+            "color": "d992ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.1199999999999999,
+            "speed": 0.9099999999999999,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "d992ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

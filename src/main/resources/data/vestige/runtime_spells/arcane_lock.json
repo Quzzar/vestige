@@ -1,0 +1,148 @@
+{
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:abjuration": 5,
+    "vestige:amplify": 1,
+    "vestige:range": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 20
+    },
+    {
+      "type": "cooldown",
+      "ticks": 40
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "block_ray",
+        "distance": {
+          "product": [
+            8,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "branch",
+          "condition": {
+            "type": "compare",
+            "path": "vestige:block/locked_by_actor",
+            "operation": "equal",
+            "expected": true
+          },
+          "then": [
+            {
+              "type": "unlock"
+            }
+          ],
+          "else": [
+            {
+              "type": "create_manifestation",
+              "target": {
+                "selection": "current"
+              },
+              "manifestation": {
+                "kind": "vestige:block_lock",
+                "duration": -1,
+                "values": {},
+                "identifiers": {},
+                "visual": {
+                  "duration": 200,
+                  "radius": 1,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "sigil",
+                      "color": "b67cff",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 1.0,
+                      "speed": 0.35,
+                      "phase": 0,
+                      "count": 7
+                    },
+                    {
+                      "shape": "chain",
+                      "color": "f4deff",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.7,
+                      "speed": -0.22749999999999998,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "f4deff",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "sigil",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.0,
+            "speed": 0.35,
+            "phase": 0,
+            "count": 7
+          },
+          {
+            "shape": "chain",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": -0.22749999999999998,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

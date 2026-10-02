@@ -1,7 +1,0 @@
-{
-  "parent": "ebwizardry:block/runestone",
-  "textures": {
-    "rune": "ebwizardry:block/runestone_fire_1",
-    "side": "ebwizardry:block/runestone_fire_0"
-  }
-}

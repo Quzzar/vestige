@@ -1,0 +1,5276 @@
+{
+  "system": "pathfinder_second_edition",
+  "updated": "2026-10-02",
+  "scope": "100 curated canonical sources, all with explicit native recipes and balance entries. The 36 selection proposals are retained separately as historical design evidence. This is a total selection, not 100 additional spells.",
+  "native_catalog_count": 214,
+  "counts": {
+    "native_recipe": 100
+  },
+  "historical_proposal_scaling": "Descriptive trait units start at 1. Amplify, range and area only affect values explicitly identified in each plan. Source rank and rarity never set native costs or power.",
+  "spells": [
+    {
+      "source": {
+        "id": "electric_arc",
+        "display_name": "Electric Arc",
+        "aon_id": 1509,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 328,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1509",
+        "summary": "Electricity jumps between at most two creatures."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_electric_arc",
+      "native": {
+        "behavior": "Arc to the aimed creature and at most one nearby enemy, dealing four HP to each.",
+        "adaptation": "A visible four-block jump replaces independently selected Pathfinder targets; no Reflex save or heightening.",
+        "rarity": "common",
+        "traits": {
+          "vestige:lightning": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 24
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "ignition",
+        "display_name": "Ignition",
+        "aon_id": 1565,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 336,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1565",
+        "summary": "A targeted flame hits harder within melee reach and can leave a lingering burn."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_ignition",
+      "native": {
+        "behavior": "Burn one aimed creature; six direct HP within three blocks, four farther away, plus a short burn.",
+        "adaptation": "Melee reach gives a deterministic bonus; normal hits burn rather than using a critical-hit gate.",
+        "rarity": "common",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "frostbite",
+        "display_name": "Frostbite",
+        "aon_id": 1539,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 332,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1539",
+        "summary": "Targeted cold damages a creature; a severe failure leaves it vulnerable to bludgeoning."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_frostbite",
+      "native": {
+        "behavior": "Chill an aimed creature for four HP and briefly weaken it.",
+        "adaptation": "Weakness on hit replaces critical-save physical vulnerability; vanilla freezing replaces cold presentation.",
+        "rarity": "common",
+        "traits": {
+          "vestige:ice": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "caustic_blast",
+        "display_name": "Caustic Blast",
+        "aon_id": 1461,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 319,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1461",
+        "summary": "An acid glob splashes a small area and may leave lingering corrosion."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_caustic_blast",
+      "native": {
+        "behavior": "Splash acid over a small three-target area.",
+        "adaptation": "Three direct HP and brief Weakness replace acid dice and critical persistent damage; native damage is magic.",
+        "rarity": "common",
+        "traits": {
+          "vestige:acid": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 30
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "divine_lance",
+        "display_name": "Divine Lance",
+        "aon_id": 1498,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "divine"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 325,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1498",
+        "summary": "A divine beam attacks one creature's spirit."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_divine_lance",
+      "native": {
+        "behavior": "Strike one creature with a five-HP spiritual lance.",
+        "adaptation": "Spirit damage uses native magic; deity sanctification and tabletop immunities are not imported.",
+        "rarity": "common",
+        "traits": {
+          "vestige:spirit": 1,
+          "vestige:holy": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "void_warp",
+        "display_name": "Void Warp",
+        "aon_id": 1745,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 366,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1745",
+        "summary": "Void energy harms a living creature and may briefly weaken it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_void_warp",
+      "native": {
+        "behavior": "Warp living flesh for five HP and a brief weakness; undead are unaffected.",
+        "adaptation": "Undead immunity uses the Minecraft undead entity-type tag; no Fortitude save.",
+        "rarity": "common",
+        "traits": {
+          "vestige:void": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "vitality_lash",
+        "display_name": "Vitality Lash",
+        "aon_id": 1744,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 366,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1744",
+        "summary": "Vital energy attacks undead or creatures sustained by void healing."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_vitality_lash",
+      "native": {
+        "behavior": "A vitality lash deals seven HP to undead and leaves living creatures unharmed.",
+        "adaptation": "Minecraft undead membership replaces negative-healing rules; no damage to living targets.",
+        "rarity": "common",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:holy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "gouging_claw",
+        "display_name": "Gouging Claw",
+        "aon_id": 1546,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 333,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1546",
+        "summary": "A briefly transformed claw delivers a melee strike and bleeding."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_gouging_claw",
+      "native": {
+        "behavior": "A short claw sweep wounds one enemy for six HP and a brief lingering injury.",
+        "adaptation": "Wither substitutes for persistent bleed; no weapon equipment change or attack roll.",
+        "rarity": "common",
+        "traits": {
+          "vestige:polymorph": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "telekinetic_projectile",
+        "display_name": "Telekinetic Projectile",
+        "aon_id": 1718,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 363,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1718",
+        "summary": "Telekinesis hurls a small unattended object; its magic properties do not improve the hit."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_telekinetic_projectile",
+      "native": {
+        "behavior": "Hurl a six-HP telekinetic stone.",
+        "adaptation": "A native visual stone replaces choosing a loose physical object; no inventory consumption or damage-type selection.",
+        "rarity": "common",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:motion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "needle_darts",
+        "display_name": "Needle Darts",
+        "aon_id": 1375,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 144,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1375",
+        "summary": "Three metal needles strike one target; their metal can matter and then returns."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_needle_darts",
+      "native": {
+        "behavior": "Three needles converge on one aimed creature for at most six direct HP.",
+        "adaptation": "Iron-looking delivery replaces held-metal material selection, weaknesses, and critical bleed; no material is consumed.",
+        "rarity": "common",
+        "traits": {
+          "vestige:metal": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 20
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "slashing_gust",
+        "display_name": "Slashing Gust",
+        "aon_id": 1321,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 71,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1321",
+        "summary": "Cutting air attacks one or two creatures depending on available hands."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_slashing_gust",
+      "native": {
+        "behavior": "A narrow gust cuts at most two creatures in its path.",
+        "adaptation": "A narrow two-target corridor replaces independent attack rolls and one/two-free-hand selection.",
+        "rarity": "common",
+        "traits": {
+          "vestige:air": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 24
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "spout",
+        "display_name": "Spout",
+        "aon_id": 2031,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 252,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2031",
+        "summary": "An upward water blast hits a small space; a suitable body of water enlarges it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_spout",
+      "native": {
+        "behavior": "An aimed water spout damages and lifts up to three creatures.",
+        "adaptation": "Always uses the small splash variant; water-surface size changes and critical effects are simplified.",
+        "rarity": "common",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:motion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 30
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "scatter_scree",
+        "display_name": "Scatter Scree",
+        "aon_id": 2021,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 250,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2021",
+        "summary": "Falling rocks damage two neighboring spaces and leave removable difficult terrain."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_scatter_scree",
+      "native": {
+        "behavior": "An initial three-HP stone burst leaves a three-second slowing patch.",
+        "adaptation": "A particle field replaces persistent solid rubble and difficult-terrain blocks; does not change terrain.",
+        "rarity": "common",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:stone": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 30
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "tangle_vine",
+        "display_name": "Tangle Vine",
+        "aon_id": 1713,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 362,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1713",
+        "summary": "A conjured vine slows a target and can immobilize it on a severe hit."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_tangle_vine",
+      "native": {
+        "behavior": "A breakable vine marker tethers and slows one enemy for three seconds.",
+        "adaptation": "A six-HP backing marker replaces escape checks and critical immobilization; no terrain vines.",
+        "rarity": "common",
+        "traits": {
+          "vestige:plant": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 40
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "puff_of_poison",
+        "display_name": "Puff of Poison",
+        "aon_id": 2016,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 249,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2016",
+        "summary": "A short-range toxic breath delivers an initial hit and lingering poison."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_puff_of_poison",
+      "native": {
+        "behavior": "A close poison puff deals three HP and poisons one creature for three seconds.",
+        "adaptation": "Native magic impact plus vanilla Poison replaces poison dice and critical persistent damage; vanilla immunities apply to the status.",
+        "rarity": "common",
+        "traits": {
+          "vestige:poison": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 30
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "shield",
+        "display_name": "Shield",
+        "aon_id": 1671,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 356,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1671",
+        "summary": "Brief force protection can absorb a hit; blocking ends it and prevents immediate reuse."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_shield",
+      "native": {
+        "behavior": "A three-second ward reduces the next incoming hit by three HP.",
+        "adaptation": "Automatic one-hit reduction substitutes for AC, a chosen Shield Block reaction, and the tabletop recast lockout.",
+        "rarity": "common",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 6
+          },
+          {
+            "type": "cooldown",
+            "ticks": 60
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "breathe_fire",
+        "display_name": "Breathe Fire",
+        "aon_id": 1457,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 319,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1457",
+        "summary": "A brief exhalation damages creatures in a forward cone."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_breathe_fire",
+      "native": {
+        "behavior": "Breathe a short cone of fire into at most four enemies.",
+        "adaptation": "A single native cone replaces saves and damage dice; burning is deterministic on contact.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 70
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "force_barrage",
+        "display_name": "Force Barrage",
+        "aon_id": 1536,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 332,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1536",
+        "summary": "Reliable force shards can be distributed among targets, with more shards for more actions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_force_barrage",
+      "native": {
+        "behavior": "Three homing force bolts deliver up to nine HP to an aimed enemy.",
+        "adaptation": "Fixed three-bolt version replaces one/two/three-action options; native projectiles can miss or be blocked.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 70
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "hydraulic_push",
+        "display_name": "Hydraulic Push",
+        "aon_id": 1561,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 336,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1561",
+        "summary": "Pressurized water strikes and knocks a creature or unattended object backward."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_hydraulic_push",
+      "native": {
+        "behavior": "A water jet deals seven HP and forcefully pushes one creature.",
+        "adaptation": "Native velocity replaces fixed-grid push distance and critical doubling.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:motion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 16
+          },
+          {
+            "type": "cooldown",
+            "ticks": 60
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "grim_tendrils",
+        "display_name": "Grim Tendrils",
+        "aon_id": 1548,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 334,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1548",
+        "summary": "Dark tendrils strike living creatures along a line and cause bleeding."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_grim_tendrils",
+      "native": {
+        "behavior": "A narrow void line damages four creatures at most, leaving brief lingering injuries.",
+        "adaptation": "Wither replaces persistent bleed; eligible undead are excluded from void damage.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:void": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 70
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "thunderstrike",
+        "display_name": "Thunderstrike",
+        "aon_id": 1721,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 363,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1721",
+        "summary": "A distant lightning strike combines electrical and sonic damage; metal targets fare worse."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_thunderstrike",
+      "native": {
+        "behavior": "A thunderbolt deals nine HP and briefly weakens an aimed creature.",
+        "adaptation": "One typed lightning impact replaces separate electricity/sonic rolls and critical clumsy/deafened conditions.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:lightning": 1,
+          "vestige:air": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 20
+          },
+          {
+            "type": "cooldown",
+            "ticks": 80
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "fear",
+        "display_name": "Fear",
+        "aon_id": 1524,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1524",
+        "summary": "Magical fear weakens a creature and can force it to flee."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_fear",
+      "native": {
+        "behavior": "Frighten one enemy, reducing its melee strength and movement briefly.",
+        "adaptation": "Weakness II and Slowness replace frightened values and critical fleeing; native AI does not run a fear state.",
+        "rarity": "common",
+        "traits": {
+          "vestige:emotion": 1,
+          "vestige:mind": 1,
+          "vestige:illusion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 10
+          },
+          {
+            "type": "cooldown",
+            "ticks": 70
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "fleet_step",
+        "display_name": "Fleet Step",
+        "aon_id": 1531,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 332,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1531",
+        "summary": "The caster gains a substantial short-lived movement boost."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_fleet_step",
+      "native": {
+        "behavior": "Gain Speed III for five seconds.",
+        "adaptation": "Vanilla movement speed replaces the fixed tabletop speed bonus.",
+        "rarity": "common",
+        "traits": {
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 10
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "gentle_landing",
+        "display_name": "Gentle Landing",
+        "aon_id": 1542,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 333,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1542",
+        "summary": "A reactive updraft slows a falling creature and prevents the affected fall's damage."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_gentle_landing",
+      "native": {
+        "behavior": "Gain five seconds of Slow Falling.",
+        "adaptation": "A self buff replaces the falling-target reaction; must be cast before impact.",
+        "rarity": "common",
+        "traits": {
+          "vestige:air": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 80
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "protection",
+        "display_name": "Protection",
+        "aon_id": 1641,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 351,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1641",
+        "summary": "A willing creature receives a short-lived defensive ward."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_protection",
+      "native": {
+        "behavior": "Reduce four incoming hits by twenty percent within eight seconds.",
+        "adaptation": "Percentage damage prevention replaces AC and saving-throw bonuses; no alignment filtering.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:holy": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 16
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "false_vitality",
+        "display_name": "False Vitality",
+        "aon_id": 1523,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1523",
+        "summary": "Undead-associated energies grant temporary extra resilience."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_false_vitality",
+      "native": {
+        "behavior": "Gain four temporary absorption HP for eight seconds.",
+        "adaptation": "Vanilla Absorption I replaces tabletop temporary HP; recasts follow vanilla status replacement instead of adding pools.",
+        "rarity": "common",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "soothe",
+        "display_name": "Soothe",
+        "aon_id": 1678,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 357,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1678",
+        "summary": "Mental reassurance heals a willing creature and fortifies its mental defenses."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_soothe",
+      "native": {
+        "behavior": "Heal seven HP and remove Weakness from yourself.",
+        "adaptation": "Self healing and removing Weakness replace touch healing and the mental-save bonus.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:emotion": 1,
+          "vestige:life": 1,
+          "vestige:enchantment": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 90
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "enfeeble",
+        "display_name": "Enfeeble",
+        "aon_id": 1513,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 329,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1513",
+        "summary": "A targeted spell saps strength for a duration determined by resistance."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_enfeeble",
+      "native": {
+        "behavior": "Weaken one creature’s melee attacks for six seconds.",
+        "adaptation": "Weakness II replaces save-dependent enfeebled degrees; no damage.",
+        "rarity": "common",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 10
+          },
+          {
+            "type": "cooldown",
+            "ticks": 70
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "resist_energy",
+        "display_name": "Resist Energy",
+        "aon_id": 1651,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 353,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1651",
+        "summary": "A touched creature resists one selected form of elemental damage."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_resist_energy",
+      "native": {
+        "behavior": "Halve six incoming fire hits within ten seconds.",
+        "adaptation": "This baseline selects fire; acid/cold/electricity/sonic choices are deferred. Uses Minecraft fire damage tags.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 220
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "floating_flame",
+        "display_name": "Floating Flame",
+        "aon_id": 1533,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 332,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1533",
+        "summary": "A sustained flame moves under the caster's command and burns creatures it passes."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_floating_flame",
+      "native": {
+        "behavior": "A fixed floating flame pulses fifteen direct HP over five seconds to each lingering enemy.",
+        "adaptation": "A stationary field replaces sustained manual movement; no tabletop action-per-round sustain.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 22
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "revealing_light",
+        "display_name": "Revealing Light",
+        "aon_id": 1653,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 353,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1653",
+        "summary": "An area of magical light dazzles creatures and defeats invisibility or concealment."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_revealing_light",
+      "native": {
+        "behavior": "Reveal up to four creatures with Glowing and strip their invisibility.",
+        "adaptation": "Glowing/short Weakness replace concealed, dazzled and blinded degrees; does not create a true anti-stealth perimeter.",
+        "rarity": "common",
+        "traits": {
+          "vestige:light": 1,
+          "vestige:divination": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "spiritual_armament",
+        "display_name": "Spiritual Armament",
+        "aon_id": 1687,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 359,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1687",
+        "summary": "A ghostly weapon echo attacks at range and can strike again when sustained."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_spiritual_armament",
+      "native": {
+        "behavior": "A spirit weapon follows one target for ten one-and-a-half-HP strikes.",
+        "adaptation": "A target-following field replaces attack rolls, a shaped weapon, and manual sustained attacks.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:spirit": 1,
+          "vestige:holy": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 22
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "fireball",
+        "display_name": "Fireball",
+        "aon_id": 1530,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1530",
+        "summary": "A chosen point erupts in a large fire blast."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_fireball",
+      "native": {
+        "behavior": "A fireball bursts for fourteen direct HP and burning against up to five enemies.",
+        "adaptation": "Native capped hostile-only blast differs from indiscriminate tabletop area damage; no terrain destruction.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 38
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "lightning_bolt",
+        "display_name": "Lightning Bolt",
+        "aon_id": 1586,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 341,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1586",
+        "summary": "Lightning damages creatures along a long straight line."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_lightning_bolt",
+      "native": {
+        "behavior": "A narrow lightning line deals fourteen HP to up to five enemies.",
+        "adaptation": "Native line and target cap replace Reflex saves and uncapped grid line; no terrain ignition.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:lightning": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 16
+          },
+          {
+            "type": "mana",
+            "amount": 36
+          },
+          {
+            "type": "cooldown",
+            "ticks": 140
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "vampiric_feast",
+        "display_name": "Vampiric Feast",
+        "aon_id": 1736,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 365,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1736",
+        "summary": "A draining touch harms a living creature and grants temporary resilience from actual damage."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_vampiric_feast",
+      "native": {
+        "behavior": "A close draining touch deals eight HP and grants four temporary HP if it causes health loss.",
+        "adaptation": "Fixed Absorption I replaces temporary HP equal to half damage; it does not heal the caster. Undead are immune to the harmful drain.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:void": 1,
+          "vestige:blood": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "haste",
+        "display_name": "Haste",
+        "aon_id": 1553,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 335,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1553",
+        "summary": "A creature gains an extra action usable only to move or strike."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_haste",
+      "native": {
+        "behavior": "Gain Speed II and Haste II for eight seconds.",
+        "adaptation": "Movement and mining speed replace a restricted extra action; no extra spell casts or attack timer bypass.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:time": 1,
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "slow",
+        "display_name": "Slow",
+        "aon_id": 1677,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 357,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1677",
+        "summary": "Time distortion reduces a creature's available actions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_slow",
+      "native": {
+        "behavior": "Slow one creature’s movement and block work for five seconds.",
+        "adaptation": "Slowness III and Mining Fatigue II replace action loss; casting channels are not automatically interrupted.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:time": 1,
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 22
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "bind_undead",
+        "display_name": "Bind Undead",
+        "aon_id": 1449,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 318,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1449",
+        "summary": "A sufficiently weak mindless undead becomes a minion; hostile treatment ends control."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_bind_undead",
+      "native": {
+        "behavior": "Temporarily control one existing undead mob for eight seconds.",
+        "adaptation": "Finite ownership replaces permanent obedience and spoken orders; players and native summons cannot be claimed. Existing AI follows/fights for the caster.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:death": 1,
+          "vestige:necromancy": 1,
+          "vestige:enchantment": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 16
+          },
+          {
+            "type": "mana",
+            "amount": 34
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "field_of_life",
+        "display_name": "Field of Life",
+        "aon_id": 1526,
+        "rank": 6,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1526",
+        "summary": "A sustained zone restores living creatures and damages undead each round."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_field_of_life",
+      "native": {
+        "behavior": "A six-second life field heals living creatures and hurts undead each second.",
+        "adaptation": "Indiscriminate living healing/undead damage is retained; no sustain action, restores HP rather than limbs.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:holy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 40
+          },
+          {
+            "type": "cooldown",
+            "ticks": 220
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "regenerate",
+        "display_name": "Regenerate",
+        "aon_id": 1648,
+        "rank": 7,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 352,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1648",
+        "summary": "Powerful ongoing regeneration repairs injury; acid or fire briefly suppresses it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_regenerate",
+      "native": {
+        "behavior": "Regenerate twelve HP over eight seconds unless fire damage ends the effect.",
+        "adaptation": "Fire permanently ends this cast; source acid suppression, regrowing anatomy and death prevention are simplified.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 16
+          },
+          {
+            "type": "mana",
+            "amount": 38
+          },
+          {
+            "type": "cooldown",
+            "ticks": 260
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "fire_shield",
+        "display_name": "Fire Shield",
+        "aon_id": 1529,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1529",
+        "summary": "A fiery blocking shield protects from cold and can burn adjacent attackers."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_fire_shield",
+      "native": {
+        "behavior": "An eight-second fire shield blocks three hits and burns nearby attackers, with limited freezing resistance.",
+        "adaptation": "Automatic finite reactions replace choosing Shield Block and a physical held shield; only Minecraft freezing-tagged damage counts as cold.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 34
+          },
+          {
+            "type": "cooldown",
+            "ticks": 220
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "weapon_storm",
+        "display_name": "Weapon Storm",
+        "aon_id": 1758,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 369,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1758",
+        "summary": "Magical copies of a held weapon strike a cone or surrounding area."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_weapon_storm",
+      "native": {
+        "behavior": "A weapon storm sweeps up to five enemies with ten HP plus half the caster’s attack value.",
+        "adaptation": "Uses one cone instead of a cone/burst selection; flat additive weapon context replaces dice-size multiplication.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:metal": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 38
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "spirit_blast",
+        "display_name": "Spirit Blast",
+        "aon_id": 1685,
+        "rank": 6,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 358,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1685",
+        "summary": "A concentrated attack delivers a powerful hit to one creature's spirit."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_spirit_blast",
+      "native": {
+        "behavior": "A spiritual detonation strikes up to five enemies for sixteen HP.",
+        "adaptation": "Native magic can strike ordinary living bodies; spirit-only interactions and possession-specific effects are deferred.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:spirit": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 24
+          },
+          {
+            "type": "mana",
+            "amount": 44
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "chain_lightning",
+        "display_name": "Chain Lightning",
+        "aon_id": 1462,
+        "rank": 6,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 319,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1462",
+        "summary": "Lightning jumps through distinct creatures while line of effect remains valid."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_chain_lightning",
+      "native": {
+        "behavior": "Lightning jumps through up to six visible enemies for twelve HP each.",
+        "adaptation": "A six-victim no-repeat chain replaces save-based chain continuation; each jump requires visibility.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:lightning": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 42
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "eclipse_burst",
+        "display_name": "Eclipse Burst",
+        "aon_id": 1508,
+        "rank": 7,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 328,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1508",
+        "summary": "Freezing darkness hits a large area, harming living creatures with void and potentially blinding."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_eclipse_burst",
+      "native": {
+        "behavior": "An eclipse blast deals twenty HP and briefly blinds and weakens up to six enemies.",
+        "adaptation": "One cold impact replaces cold plus void rolls; undead take the cold component, with no permanent blindness or darkness terrain.",
+        "rarity": "mythic",
+        "traits": {
+          "vestige:ice": 1,
+          "vestige:void": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 30
+          },
+          {
+            "type": "mana",
+            "amount": 62
+          },
+          {
+            "type": "cooldown",
+            "ticks": 280
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "arctic_rift",
+        "display_name": "Arctic Rift",
+        "aon_id": 1444,
+        "rank": 8,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 316,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1444",
+        "summary": "A long freezing rift damages and slows victims; severe hits encase them in breakable ice."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_arctic_rift",
+      "native": {
+        "behavior": "A wide cold rift deals twenty-two HP and heavily slows at most six enemies.",
+        "adaptation": "Freezing/Slowness replace enfeebling, slowed actions and exact line geometry; no physical terrain rift.",
+        "rarity": "mythic",
+        "traits": {
+          "vestige:ice": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 32
+          },
+          {
+            "type": "mana",
+            "amount": 64
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "falling_stars",
+        "display_name": "Falling Stars",
+        "aon_id": 1521,
+        "rank": 9,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 330,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1521",
+        "summary": "Four celestial impacts combine central blunt force and a chosen energy explosion without repeat overlap damage."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_falling_stars",
+      "native": {
+        "behavior": "Channel twelve falling stars; each creature can take at most six five-HP impacts.",
+        "adaptation": "Rain projectiles replace four independently located elemental bursts; shared hit caps prevent overlap multiplication.",
+        "rarity": "mythic",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:earth": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 36
+          },
+          {
+            "type": "mana",
+            "amount": 70
+          },
+          {
+            "type": "cooldown",
+            "ticks": 360
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "cataclysm",
+        "display_name": "Cataclysm",
+        "aon_id": 1460,
+        "rank": 10,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 319,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1460",
+        "summary": "A vast eruption combines several elemental disasters with terrain-dependent physical impacts."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_cataclysm",
+      "native": {
+        "behavior": "Channel four elemental surges into one fixed area for up to thirty-two direct HP per creature.",
+        "adaptation": "Four explicit native phases replace six simultaneous damage categories, massive terrain effects and flying-creature exceptions.",
+        "rarity": "mythic",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:fire": 1,
+          "vestige:ice": 1,
+          "vestige:lightning": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 40
+          },
+          {
+            "type": "mana",
+            "amount": 90
+          },
+          {
+            "type": "cooldown",
+            "ticks": 600
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "glass_shield",
+        "display_name": "Glass Shield",
+        "aon_id": 1333,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 94,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1333",
+        "summary": "A fragile glass defense blocks a hit, then shatters and can wound the nearby attacker."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_glass_shield",
+      "native": {
+        "behavior": "A three-second glass ward blocks three HP once and lashes a nearby attacker for three HP.",
+        "adaptation": "Automatic mitigation and magic retaliation replace raising/blocking a glass shield, saves, and critical shards; terrain is unchanged.",
+        "rarity": "common",
+        "traits": {
+          "vestige:glass": 1,
+          "vestige:force": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 16
+          },
+          {
+            "type": "cooldown",
+            "ticks": 80
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "translocate",
+        "display_name": "Translocate",
+        "aon_id": 1724,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 363,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1724",
+        "summary": "The caster moves instantly to a visible open destination; a higher-rank version reaches previously visited distant locations."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_translocate",
+      "native": {
+        "behavior": "Teleport to a visible dry, supported empty position within twenty blocks.",
+        "adaptation": "Only local visible travel; loaded-space and collision validation can reject a paid cast. No distant memory destination or dimension transfer; arrival plays after success.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:space": 1,
+          "vestige:teleportation": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 120
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "figment",
+        "display_name": "Figment",
+        "aon_id": 1528,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 331,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1528",
+        "summary": "A small sustained image or simple sound can distract observers, who can recognize and disbelieve it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_figment",
+      "native": {
+        "behavior": "A stationary four-second light-and-sound figment draws nearby hostile mobs toward its one-hit marker.",
+        "adaptation": "A fixed wisp/lure replaces arbitrary images or sounds, skill checks and per-viewer disbelief. It deals no damage and can be struck to end it.",
+        "rarity": "common",
+        "traits": {
+          "vestige:mind": 1,
+          "vestige:illusion": 1,
+          "vestige:sonic": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 4
+          },
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "illusory_creature",
+        "display_name": "Illusory Creature",
+        "aon_id": 1567,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 336,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1567",
+        "summary": "A sustained creature illusion can attack belief, disappears when struck, and stops harming observers who disbelieve it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_illusory_creature",
+      "native": {
+        "behavior": "A stationary one-hit wolf-shaped decoy distracts hostile mobs for at most six seconds.",
+        "adaptation": "Uses a silent inert vanilla wolf silhouette with no attacks; movement, belief damage and per-observer disbelief are omitted. The proxy is targetable, not a fully nonphysical image.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:mind": 1,
+          "vestige:illusion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 22
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "invisibility",
+        "display_name": "Invisibility",
+        "aon_id": 1577,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 339,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1577",
+        "summary": "A creature becomes invisible until expiry or a completed hostile action; a higher-rank version survives hostile actions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_invisibility",
+      "native": {
+        "behavior": "Stay invisible for eight seconds; dealing committed damage ends this cast and its two-tick refresh.",
+        "adaptation": "Uses vanilla invisibility: armor/held items remain visible. Only committed damage ends the buff; failed swings and other hostile actions are not detected. External longer invisibility is not removed.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:shadow": 1,
+          "vestige:illusion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "grease",
+        "display_name": "Grease",
+        "aon_id": 1547,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 333,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1547",
+        "summary": "Slippery ground impairs footing; coating an object instead makes handling it difficult, with distinct held and worn effects."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_grease",
+      "native": {
+        "behavior": "A four-second patch slows and nudges up to three hostile creatures each half-second.",
+        "adaptation": "Slowness and small caster-relative impulses approximate slippery footing. No prone state, real friction changes, object greasing or permanent blocks.",
+        "rarity": "common",
+        "traits": {
+          "vestige:oil": 1,
+          "vestige:earth": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 6
+          },
+          {
+            "type": "mana",
+            "amount": 16
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "mud_pit",
+        "display_name": "Mud Pit",
+        "aon_id": 2009,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 248,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2009",
+        "summary": "A temporary layer of thick mud turns a ground area into difficult terrain."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_mud_pit",
+      "native": {
+        "behavior": "A six-second mud patch strongly slows at most four hostile creatures, fading shortly after they leave.",
+        "adaptation": "Slowness III approximates difficult terrain; existing blocks and actual friction are unchanged. A destructible marker owns the finite field.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:water": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 8
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 140
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "heal",
+        "display_name": "Heal",
+        "aon_id": 1554,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 335,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1554",
+        "summary": "Vital energy heals living recipients or harms undead; different casting lengths provide touch, ranged, and area versions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_heal",
+      "native": {
+        "behavior": "A ranged vitality pulse heals one living creature for eight HP or harms undead for eight HP.",
+        "adaptation": "One ranged form only; no action-count variants, area form, self fallback, saves or automatic heightening. Living enemies can be healed.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:holy": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 120
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "harm",
+        "display_name": "Harm",
+        "aon_id": 1552,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "divine"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 334,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1552",
+        "summary": "Void energy harms living recipients or heals undead; different casting lengths provide touch, ranged, and area versions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_harm",
+      "native": {
+        "behavior": "A ranged void pulse heals undead for eight HP or harms one living creature for eight HP.",
+        "adaptation": "One ranged form only; eligibility uses the undead tag rather than a tabletop negative-healing rule. No area/touch variants or automatic heightening.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:void": 1,
+          "vestige:death": 1,
+          "vestige:necromancy": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 120
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "detect_magic",
+        "display_name": "Detect Magic",
+        "aon_id": 1485,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 323,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1485",
+        "summary": "A pulse reports nearby magic; higher ranks reveal strength and rough location, with restrictions on detecting deceptive illusions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_detect_magic",
+      "native": {
+        "behavior": "Privately report whether native manifestations or equipped enchanted items are within sixteen blocks.",
+        "adaptation": "Presence only, from loaded native state/equipped items. It does not inspect other mods, inventories or blocks, reveal hidden locations, or unlock discovery/progression.",
+        "rarity": "common",
+        "traits": {
+          "vestige:mind": 1,
+          "vestige:divination": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 4
+          },
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 60
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "read_aura",
+        "display_name": "Read Aura",
+        "aon_id": 1646,
+        "rank": 1,
+        "cantrip": true,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 352,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1646",
+        "summary": "Extended object examination detects magic and assists identification; detecting deceptive illusions depends on their relative rank."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_read_aura",
+      "native": {
+        "behavior": "After two seconds of examination, privately report whether the currently held object is enchanted.",
+        "adaptation": "Main-hand item at completion is the inspection target; only vanilla enchantment presence is recognized. No full item identification, stored discovery or observer-wide result.",
+        "rarity": "common",
+        "traits": {
+          "vestige:mind": 1,
+          "vestige:divination": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 40
+          },
+          {
+            "type": "mana",
+            "amount": 10
+          },
+          {
+            "type": "cooldown",
+            "ticks": 80
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "rust_cloud",
+        "display_name": "Rust Cloud",
+        "aon_id": 1377,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 145,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1377",
+        "summary": "A rust cloud cuts occupants and obscures vision; rusting metal creatures can expand it and suffer lingering harm."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_rust_cloud",
+      "native": {
+        "behavior": "A five-second abrasive cloud deals at most ten direct HP per creature and briefly obscures four hostile occupants.",
+        "adaptation": "Blindness approximates obscured sight. Metal-specific expansion/weakness and item rust are omitted; no durability or terrain changes.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:metal": 1,
+          "vestige:air": 1,
+          "vestige:evocation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 16
+          },
+          {
+            "type": "mana",
+            "amount": 36
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "cinder_swarm",
+        "display_name": "Cinder Swarm",
+        "aon_id": 1350,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 118,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1350",
+        "summary": "Fiery insects surround one creature; ant and firefly variants repeatedly combine damage with movement or vision impairment."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_cinder_swarm",
+      "native": {
+        "behavior": "A following firefly swarm burns its captured creature for ten direct HP over five seconds and briefly blinds it.",
+        "adaptation": "Only the firefly-inspired variant, with a breakable marker and fixed five pulses. The ant variant, insect models, saves and forced movement are omitted; nearby bystanders take no pulse damage.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 28
+          },
+          {
+            "type": "cooldown",
+            "ticks": 140
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "summon_animal",
+        "display_name": "Summon Animal",
+        "aon_id": 1694,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 360,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1694",
+        "summary": "A sustained animal ally fights for the caster, with stronger creature choices at higher ranks."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_summon_animal",
+      "native": {
+        "behavior": "Summon one sixteen-HP allied wolf for twenty seconds; recasting dismisses it.",
+        "adaptation": "A single curated vanilla wolf uses native ownership/follow/combat AI; no tabletop animal roster, source creature stats or automatic rank heightening.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 30
+          },
+          {
+            "type": "cooldown",
+            "ticks": 400
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "flicker",
+        "display_name": "Flicker",
+        "aon_id": 1532,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 332,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1532",
+        "summary": "Planar flickering reduces damage except force and repeatedly transports the caster a short distance in a random direction."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_flicker",
+      "native": {
+        "behavior": "For six seconds, reduce four nonmagical hits by a quarter and attempt a short safe random teleport every two seconds.",
+        "adaptation": "Native magical damage bypasses the finite mitigation, a broader exception than source force. Unsafe random destinations skip that pulse; no phased entity state or unseen geometry.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:space": 1,
+          "vestige:teleportation": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 28
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "gentle_breeze",
+        "display_name": "Gentle Breeze",
+        "aon_id": 1316,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 70,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1316",
+        "summary": "A restorative breeze supports recovery and affliction resistance, eases heat, and heals living creatures that remain throughout its duration."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_gentle_breeze",
+      "native": {
+        "behavior": "A six-second restorative field heals each living visitor six HP once after three seconds of uninterrupted sampled occupancy.",
+        "adaptation": "A missing five-tick sample resets dwell; reentry cannot earn a second heal in the same cast. Undead are excluded; medical skill, affliction saves and temperature systems are omitted.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:air": 1,
+          "vestige:life": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 12
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "wall_of_stone",
+        "display_name": "Wall of Stone",
+        "aon_id": 1751,
+        "rank": 5,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 367,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1751",
+        "summary": "Creates solid stone in a chosen wall, bridge, or stair shape."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_wall_of_stone",
+      "native": {
+        "behavior": "Raise a seven-by-three solid, 40-HP stone panel for fifteen seconds.",
+        "adaptation": "One rectangular entity collision panel replaces arbitrary permanent stone terrain; finite durability/lifetime, occupied placement rejected and no block drops. It also blocks native sight targeting.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:stone": 1,
+          "vestige:conjuration": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 40
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "wall_of_ice",
+        "display_name": "Wall of Ice",
+        "aon_id": 1750,
+        "rank": 5,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 367,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1750",
+        "summary": "Forms an opaque ice barrier; shattered sections can leave a hazardous frozen passage."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_wall_of_ice",
+      "native": {
+        "behavior": "Raise a five-by-three wall of individually breakable ice blocks, lifting occupants as rows emerge in a frost burst. After ten seconds, surviving conjured blocks sink and shatter.",
+        "adaptation": "A temporary one-block-thick wall replaces the former HP slab and fracture damage. Width scales with area up to nine blocks; loaded supported air cells and safe lifting headroom are required. Broken or replaced cells permanently lose ownership; expiry, dispel and unload preserve player replacements. Conjured ice yields no items or melting water.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:ice": 1,
+          "vestige:conjuration": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 42
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "wall_of_water",
+        "display_name": "Wall of Water",
+        "aon_id": 1028,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Secrets of Magic",
+        "page": 139,
+        "edition": "legacy",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=96"
+        },
+        "revision": "aon-2026-10-01; Secrets of Magic errata 2.0 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1028",
+        "summary": "Raises a standing water barrier that affects fire, projectile passage, and creatures crossing it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_wall_of_water",
+      "native": {
+        "behavior": "Raise a five-by-three traversable wall of real conjured water for ten seconds, extinguishing creatures and slowing physical projectiles in its cells.",
+        "adaptation": "Water uses native water rendering and immersion physics, confined to owned cells rather than spreading source blocks. Supported loaded air is required; broken or replaced cells lose their claims. Expiry drains surviving water, preserving player replacements. No harvested water; native spell projectiles bypass the additional drag.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:abjuration": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 28
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "illusory_object",
+        "display_name": "Illusory Object",
+        "aon_id": 1569,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 337,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1569",
+        "summary": "Projects a stationary object's appearance, with richer sensory detail available at higher ranks."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_illusory_object",
+      "native": {
+        "behavior": "Show a stationary, non-solid object silhouette for ten seconds.",
+        "adaptation": "An original translucent crate-sized preset replaces unrestricted object modeling; collision and resources stay unchanged and an attack removes the fragile image.",
+        "rarity": "common",
+        "traits": {
+          "vestige:illusion": 1,
+          "vestige:dream": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "wooden_double",
+        "display_name": "Wooden Double",
+        "aon_id": 1416,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 199,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1416",
+        "summary": "A reaction substitutes a wooden decoy for a critical hit while the caster steps aside."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_wooden_double",
+      "native": {
+        "behavior": "The first hit of at least eight HP sheds up to six HP and attempts a safe sideways step.",
+        "adaptation": "Automatic finite interception replaces a chosen reaction and critical-hit trigger. Overflow remains; failed relocation never grants extra mitigation.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:wood": 1,
+          "vestige:illusion": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "protector_tree",
+        "display_name": "Protector Tree",
+        "aon_id": 2015,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 249,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2015",
+        "summary": "Grows a tree that intercepts attacks against nearby allies, consuming its own health first."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_protector_tree",
+      "native": {
+        "behavior": "Grow an oak tree from real temporary logs and leaves. Its sixteen-HP pool protects three consenting adjacent allies for ten seconds.",
+        "adaptation": "Loaded supported air and room for the entire canopy are required. Recipients are captured on placement and must stay within three blocks. Each missing trunk removes a quarter of the maximum protection; damage spends the shared pool. Only surviving owned blocks retract at expiry; edits, replacements and holes are preserved. No log or leaf loot.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:plant": 1,
+          "vestige:wood": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 38
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "collective_transposition",
+        "display_name": "Collective Transposition",
+        "aon_id": 1978,
+        "rank": 6,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 243,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1978",
+        "summary": "Repositions several creatures within a local area; unwilling targets can resist."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_collective_transposition",
+      "native": {
+        "behavior": "Move three willing nearby allies into a supported formation at the aimed destination.",
+        "adaptation": "Automatic fixed formation replaces independently chosen destinations. Every destination validates before any creature moves; players opt in through the development consent control.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:space": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 44
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "zephyr_slip",
+        "display_name": "Zephyr Slip",
+        "aon_id": 1327,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 73,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1327",
+        "summary": "A reactive gust carries the caster away from a newly adjacent creature."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_zephyr_slip",
+      "native": {
+        "behavior": "The first enemy entering a two-block boundary triggers a safe three-block retreat away from it.",
+        "adaptation": "Finite proximity entry replaces a chosen reaction; no damage immunity and an obstructed retreat keeps the effect waiting until expiry.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:air": 1,
+          "vestige:motion": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 22
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "share_life",
+        "display_name": "Share Life",
+        "aon_id": 1669,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "divine"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 356,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1669",
+        "summary": "Links an ally's life to the caster, splitting incoming injury while the pair remain close."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_share_life",
+      "native": {
+        "behavior": "Transfer half an ally’s incoming damage to yourself, up to eight actual HP total, while preserving one HP.",
+        "adaptation": "Only actual caster health/absorption loss reduces the original pending hit. Transfer cannot recursively transfer again; same dimension, consent and distance required.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:blood": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "see_the_unseen",
+        "display_name": "See the Unseen",
+        "aon_id": 1663,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 355,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1663",
+        "summary": "Perceives invisible creatures and nearby phased spirits, and helps the caster recognize illusions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_see_the_unseen",
+      "native": {
+        "behavior": "Privately outline nearby invisible creatures for ten seconds.",
+        "adaptation": "Caster-only silhouettes replace tabletop concealed checks; no invisibility removal or public glowing. Native perception boundaries still apply.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:light": 1,
+          "vestige:divination": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 20
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "freezing_rain",
+        "display_name": "Freezing Rain",
+        "aon_id": 1388,
+        "rank": 5,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Rage of Elements",
+        "page": 173,
+        "edition": "remaster",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-05-17",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+        },
+        "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1388",
+        "summary": "Sustains movable rain that hinders movement and can turn into damaging, slowing sleet."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_freezing_rain",
+      "native": {
+        "behavior": "An eight-second rain patch makes moving grounded creatures slide and obscures native perception across its edge.",
+        "adaptation": "A velocity traction approximation and scoped creature rendering replace general weather, tabletop concealment and all block visibility; no terrain freezing or damage.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:ice": 1,
+          "vestige:water": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 30
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "summon_plant_or_fungus",
+        "display_name": "Summon Plant or Fungus",
+        "aon_id": 1705,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 361,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1705",
+        "summary": "Calls a plant or fungal creature to fight while the spell is sustained."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_summon_plant_or_fungus",
+      "native": {
+        "behavior": "Summon a stationary healing plant with six shared healing HP, or a fungus with eight shared guard HP.",
+        "adaptation": "Two original support presets replace a bestiary. No melee minion AI; actual healed HP spends the plant budget, and destruction/expiry ends support.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:plant": 1,
+          "vestige:life": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 28
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "summon_fey",
+        "display_name": "Summon Fey",
+        "aon_id": 1700,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 360,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1700",
+        "summary": "Calls a fey creature to fight while the spell is sustained."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_summon_fey",
+      "native": {
+        "behavior": "A fragile fey support silhouette spends four tricks briefly slowing nearby enemies.",
+        "adaptation": "A stationary four-use support role replaces bestiary selection, spell lists and independent initiative. No copied creature model or vex melee reskin.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:mind": 1,
+          "vestige:illusion": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 28
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "summon_elemental",
+        "display_name": "Summon Elemental",
+        "aon_id": 1698,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 360,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1698",
+        "summary": "Calls an elemental creature to fight while the spell is sustained."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_summon_elemental",
+      "native": {
+        "behavior": "Choose earth cover, air projectile drag, water firefighting or a fire-pressure body with twelve shared damage HP.",
+        "adaptation": "Four original, stationary elemental roles replace full summoned creature stat blocks. Every mode shares native costs and lifetime/budget constraints; no bestiary or automatic source-rank scaling.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:air": 1,
+          "vestige:water": 1,
+          "vestige:fire": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 38
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "create_water",
+        "display_name": "Create Water",
+        "aon_id": 1476,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 322,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1476",
+        "summary": "Produces drinkable water that eventually vanishes if unused."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_create_water",
+      "native": {
+        "behavior": "Add one water layer to an aimed cauldron.",
+        "adaptation": "A finite Minecraft utility volume replaces a gallon pool. Full cauldrons fail; no fluid source block, item duplication or damaging water attack.",
+        "rarity": "common",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 60
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "creation",
+        "display_name": "Creation",
+        "aon_id": 1477,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 322,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1477",
+        "summary": "Conjures a temporary, simple object from permitted materials without creating genuine valuables."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_creation",
+      "native": {
+        "behavior": "Assemble a temporary wooden cover, step or platform for twenty seconds.",
+        "adaptation": "Finite presets replace arbitrary mundane objects. Geometry has collision and durability but produces no inventory items, containers or loot.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:wood": 1,
+          "vestige:plant": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 30
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "enlarge",
+        "display_name": "Enlarge",
+        "aon_id": 1514,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 329,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1514",
+        "summary": "Grows a willing creature and its equipment, increasing melee reach and force with awkwardness."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_enlarge",
+      "native": {
+        "behavior": "Become physically one-and-a-half size for eight seconds, with one extra block of player reach.",
+        "adaptation": "Actual synced body scale and explicit reach replace tabletop size categories and weapon damage bonuses; occupied growth is rejected.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:polymorph": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "shrink",
+        "display_name": "Shrink",
+        "aon_id": 1672,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 356,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1672",
+        "summary": "Makes a willing creature and its equipment tiny, reducing its reach."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_shrink",
+      "native": {
+        "behavior": "Become physically half size for eight seconds, with reduced player reach.",
+        "adaptation": "Actual body clearance replaces tabletop Tiny rules. Expiry removes only its owned modifiers and searches above an obstructed restoring body; no stealth immunity.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:polymorph": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "water_breathing",
+        "display_name": "Water Breathing",
+        "aon_id": 1755,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 369,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1755",
+        "summary": "Enables several creatures to breathe underwater for an extended period."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_water_breathing",
+      "native": {
+        "behavior": "Give up to three willing nearby allies thirty seconds of Water Breathing.",
+        "adaptation": "Finite group environmental adaptation replaces long tabletop duration. Vanilla status merging preserves longer external Water Breathing effects.",
+        "rarity": "common",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:life": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 120
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "water_walk",
+        "display_name": "Water Walk",
+        "aon_id": 1756,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 369,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1756",
+        "summary": "Lets a creature stand and travel across liquids while retaining the option to swim."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_water_walk",
+      "native": {
+        "behavior": "Stand and move on nearby water surfaces for eight seconds; crouch to enter the water.",
+        "adaptation": "Shared client/server contact support replaces fluid collision hooks. It does not lift submerged bodies or provide airborne flight; source/flowing-water heights are sampled.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:water": 1,
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "gecko_grip",
+        "display_name": "Gecko Grip",
+        "aon_id": 1541,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 333,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1541",
+        "summary": "Gives a creature clinging hands and feet for climbing surfaces."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_gecko_grip",
+      "native": {
+        "behavior": "Climb when touching a wall for eight seconds; crouch to release the grip.",
+        "adaptation": "Client/server wall-contact velocity replaces arbitrary surface adhesion and ceiling crawling; no general flight.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:plant": 1,
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 18
+          },
+          {
+            "type": "cooldown",
+            "ticks": 160
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "magic_passage",
+        "display_name": "Magic Passage",
+        "aon_id": 1591,
+        "rank": 5,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "uncommon",
+        "publication": "Player Core",
+        "page": 342,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1591",
+        "summary": "Opens a temporary tunnel through an eligible wall and expels occupants when it closes."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_magic_passage",
+      "native": {
+        "behavior": "Open a two-high, three-deep ordinary-stone passage for twelve seconds, then restore unchanged air cells.",
+        "adaptation": "Fixed tunnel geometry replaces arbitrary Pathfinder passage dimensions. Ores/containers are excluded; exit and permissions validate first, occupants move to a checked exit before restoration.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:space": 1,
+          "vestige:stone": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 44
+          },
+          {
+            "type": "cooldown",
+            "ticks": 400
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "shape_stone",
+        "display_name": "Shape Stone",
+        "aon_id": 1667,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 356,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1667",
+        "summary": "Reshapes an existing stone mass into a rough form, potentially unbalancing creatures standing on it."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_shape_stone",
+      "native": {
+        "behavior": "Capture one ordinary stone cell; recast within five seconds to move it to a nearby empty destination.",
+        "adaptation": "One permanent volume-conserving cell move replaces freeform reshaping. At most six blocks between ends; no ore, containers, drops, occupied destination or invented stone.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:earth": 1,
+          "vestige:stone": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "item_facade",
+        "display_name": "Item Facade",
+        "aon_id": 1579,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 340,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1579",
+        "summary": "Disguises an object's apparent condition as pristine or decrepit without repairing its actual state."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_item_facade",
+      "native": {
+        "behavior": "Overlay an illusory pristine-condition label and held-item glimmer for ten seconds.",
+        "adaptation": "The initial native facade is a clearly labeled cosmetic tooltip/glimmer, not a full model replacement. Actual item identity, durability, enchantments and inventory data remain authoritative.",
+        "rarity": "common",
+        "traits": {
+          "vestige:illusion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 10
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "silence",
+        "display_name": "Silence",
+        "aon_id": 1674,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 357,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1674",
+        "summary": "Suppresses a willing creature's sound and sound-dependent actions; higher ranks spread this into an aura."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_silence",
+      "native": {
+        "behavior": "Suppress positional sounds and explicitly vocal native delivery within a three-block region for eight seconds.",
+        "adaptation": "Scoped sound emission/playback and an executable utterance gate replace tabletop verbal components. Existing ambient loops and non-native spell systems are outside the gate.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:sonic": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "mirror_image",
+        "display_name": "Mirror Image",
+        "aon_id": 197,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Core Rulebook",
+        "page": 352,
+        "edition": "legacy",
+        "errata": {
+          "version": "4.0",
+          "date": "2023-01-03",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=1"
+        },
+        "revision": "aon-2026-10-01; Core Rulebook errata 4.0 (2023-01-03)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=197",
+        "summary": "Creates consumable illusory duplicates that can divert incoming attacks away from the caster."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_mirror_image",
+      "native": {
+        "behavior": "Three copies of the caster’s live model and equipment each absorb up to five HP of an eligible direct incoming attack.",
+        "adaptation": "Finite deterministic mitigation replaces random target redirection. Projectiles, environmental fire and explosions bypass this initial direct-melee form; images do not block area damage.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:illusion": 1,
+          "vestige:light": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 26
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "time_jump",
+        "display_name": "Time Jump",
+        "aon_id": 2843,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Impossible Magic",
+        "page": 167,
+        "edition": "remaster",
+        "errata": {
+          "version": "Summer 2026, 1st Printing",
+          "date": "2026-07-30",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=355"
+        },
+        "revision": "aon-2026-10-01; Impossible Magic errata Summer 2026, 1st Printing (2026-07-30)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=2843",
+        "summary": "Grants movement during a brief personal time stop, avoiding movement reactions but penalizing rapid reuse."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_time_jump",
+      "native": {
+        "behavior": "Briefly step out of time for one second, anchoring the body and suppressing attacks, uses and incoming damage.",
+        "adaptation": "A bounded one-second absence replaces advancing the whole world’s time. No global time stop, movement during absence, resource regeneration or guaranteed tabletop action economy.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:time": 1,
+          "vestige:space": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 34
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "gravity_well",
+        "display_name": "Gravity Well",
+        "aon_id": 1997,
+        "rank": 3,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 246,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1997",
+        "summary": "Pulls creatures and unsecured objects toward a central point, with resistance and collision limits."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_gravity_well",
+      "native": {
+        "behavior": "Collapse the formation of at most four enemies toward one aimed anchor with a single inward impulse.",
+        "adaptation": "One zero-damage native impulse replaces Reflex saves and forced grid distance; no persistent vortex or repeating damage.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:space": 1,
+          "vestige:motion": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 180
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "repulsion",
+        "display_name": "Repulsion",
+        "aon_id": 1650,
+        "rank": 6,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 353,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1650",
+        "summary": "Creates an aura that hinders or prevents creatures voluntarily approaching the caster."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_repulsion",
+      "native": {
+        "behavior": "A six-second boundary rejects enemies crossing inward, while allies and outgoing movement pass.",
+        "adaptation": "A stationary boundary replaces save-based aura movement restrictions. Creatures already inside remain; ranged attacks pass. Position changes crossing the sampled boundary are rejected at the next tick.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 36
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "containment",
+        "display_name": "Containment",
+        "aon_id": 1981,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core 2",
+        "page": 243,
+        "edition": "remaster",
+        "errata": {
+          "version": "1.1",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+        },
+        "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1981",
+        "summary": "Encloses one creature in a stationary, destructible force field that blocks passage and outside effects."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_containment",
+      "native": {
+        "behavior": "Enclose the aimed enemy within a two-way movement boundary for five seconds; outside hits spend a shared sixteen-HP pool.",
+        "adaptation": "Movement boundary and finite outside-attack durability replace an invulnerable tabletop sphere. It is traversable after breaking; inside attacks and terrain are not blocked.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:force": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 36
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "magnetic_attraction",
+        "display_name": "Magnetic Attraction",
+        "aon_id": 944,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Secrets of Magic",
+        "page": 114,
+        "edition": "legacy",
+        "errata": {
+          "version": "2.0",
+          "date": "2024-12-16",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=96"
+        },
+        "revision": "aon-2026-10-01; Secrets of Magic errata 2.0 (2024-12-16)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=944",
+        "summary": "Draws small metal objects to the caster or a lodestone, with resistance for secured possessions."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_magnetic_attraction",
+      "native": {
+        "behavior": "Pull up to eight nearby loose metal stacks toward your hand.",
+        "adaptation": "A concrete ingot/nugget/raw-metal whitelist replaces arbitrary metal-material rules. Existing item entities/stacks remain intact; no equipped-item theft or copying.",
+        "rarity": "common",
+        "traits": {
+          "vestige:metal": 1,
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 100
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "pet_cache",
+        "display_name": "Pet Cache",
+        "aon_id": 1627,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 348,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1627",
+        "summary": "Shelters a willing companion in a private extradimensional space, then returns it safely when the spell ends."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_pet_cache",
+      "native": {
+        "behavior": "Shelter your existing tame companion for ten seconds, returning the same UUID and inventory afterward.",
+        "adaptation": "Owned non-riding, non-leashed companions only. Uses an isolated private-dimension cell and persistent emergency-return journal; an unavailable private world rejects the cast.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:space": 1,
+          "vestige:life": 1,
+          "vestige:conjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 20
+          },
+          {
+            "type": "cooldown",
+            "ticks": 200
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "clairvoyance",
+        "display_name": "Clairvoyance",
+        "aon_id": 1466,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 320,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1466",
+        "summary": "Creates a stationary remote viewpoint through which the caster sees using their ordinary visual senses."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_clairvoyance",
+      "native": {
+        "behavior": "See through a stationary sensor up to twenty blocks away for eight seconds; damage immediately ends the view.",
+        "adaptation": "Client camera changes while the server body stays vulnerable. Fixed sensor facing and normal tracked chunks replace arbitrary remote locations/panning; casting and interaction are blocked while viewing.",
+        "rarity": "rare",
+        "traits": {
+          "vestige:divination": 1,
+          "vestige:space": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 32
+          },
+          {
+            "type": "cooldown",
+            "ticks": 300
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "status",
+        "display_name": "Status",
+        "aon_id": 1690,
+        "rank": 2,
+        "cantrip": false,
+        "traditions": [
+          "divine",
+          "occult",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 359,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1690",
+        "summary": "Maintains awareness of a willing living ally's direction, distance, and conditions on the same plane."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_status",
+      "native": {
+        "behavior": "Privately monitor three consenting nearby allies’ coarse health, affliction count, distance and direction for fifteen seconds.",
+        "adaptation": "Recipients captured at cast time; same-world loaded bodies only. No through-boundary public glowing, exact private health display or universal creature tracking.",
+        "rarity": "common",
+        "traits": {
+          "vestige:life": 1,
+          "vestige:divination": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 10
+          },
+          {
+            "type": "mana",
+            "amount": 12
+          },
+          {
+            "type": "cooldown",
+            "ticks": 120
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "air_bubble",
+        "display_name": "Air Bubble",
+        "aon_id": 1438,
+        "rank": 1,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "divine",
+          "primal"
+        ],
+        "rarity": "common",
+        "publication": "Player Core",
+        "page": 314,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1438",
+        "summary": "A reaction supplies breathable air when a creature enters an environment where it cannot breathe."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_air_bubble",
+      "native": {
+        "behavior": "Breathe through water or suffocation until safe air resumes, with a five-second maximum.",
+        "adaptation": "A self-cast conditional rescue replaces a reaction targeting another creature. Only drowning/suffocation is prevented; ordinary attacks are unaffected.",
+        "rarity": "common",
+        "traits": {
+          "vestige:air": 1,
+          "vestige:life": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "mana",
+            "amount": 8
+          },
+          {
+            "type": "cooldown",
+            "ticks": 80
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "id": "peaceful_bubble",
+        "display_name": "Peaceful Bubble",
+        "aon_id": 1624,
+        "rank": 4,
+        "cantrip": false,
+        "traditions": [
+          "arcane",
+          "occult"
+        ],
+        "rarity": "uncommon",
+        "publication": "Player Core",
+        "page": 348,
+        "edition": "remaster",
+        "errata": {
+          "version": "Spring 2026, 1st Printing",
+          "date": "2026-02-06",
+          "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+        },
+        "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+        "url": "https://2e.aonprd.com/Spells.aspx?ID=1624",
+        "summary": "Creates a traversable privacy boundary that blocks outside perception and magical observation, and protects sleep."
+      },
+      "status": "native_recipe",
+      "native_id": "vestige:pf2_peaceful_bubble",
+      "native": {
+        "behavior": "A traversable ten-second bubble conceals creatures across its edge from native targeting and rendering.",
+        "adaptation": "Scoped creature privacy replaces universal sound, weather, scrying and shelter rules. No damage prevention, solid wall, private-room teleport or general sleep guarantee.",
+        "rarity": "uncommon",
+        "traits": {
+          "vestige:dream": 1,
+          "vestige:illusion": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1,
+          "vestige:range": 1,
+          "vestige:area": 1
+        },
+        "costs": [
+          {
+            "type": "time",
+            "ticks": 20
+          },
+          {
+            "type": "mana",
+            "amount": 24
+          },
+          {
+            "type": "cooldown",
+            "ticks": 240
+          }
+        ]
+      }
+    }
+  ],
+  "excluded_overlap": [
+    {
+      "candidate": "Darkness",
+      "reason": "A generic Blindness volume would repeat existing control fields. Revisit only with actual visibility/light-volume behavior."
+    },
+    {
+      "candidate": "Scouting Eye",
+      "reason": "Clairvoyance supplies the first remote-camera design; a mobile reconnaissance sensor can follow once stationary camera ownership is solved."
+    },
+    {
+      "candidate": "Interposing Earth",
+      "reason": "An existing native example already provides its one-hit ward. Directional cover is an upgrade to that identity, not another count-padding entry."
+    },
+    {
+      "candidate": "More elemental bolts and blasts",
+      "reason": "The implemented64 Pathfinder spells and110 Iron adaptations already cover many basic attacks. New names/colors alone do not warrant more native spells."
+    }
+  ]
+}

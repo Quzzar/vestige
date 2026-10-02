@@ -1,0 +1,211 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:lob_creeper",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Lob Creeper",
+    "cast_type": "instant",
+    "cooldown_ticks": 40
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:evocation": 4,
+    "vestige:conjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 200,
+        "values": {
+          "speed": 0.8,
+          "distance": {
+            "product": [
+              32,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          },
+          "gravity": 0.05
+        },
+        "identifiers": {
+          "item": "minecraft:creeper_head"
+        },
+        "bindings": [],
+        "on_hit": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  3,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "relationship": "hostile",
+              "options": {
+                "count": 6
+              }
+            },
+            "effects": [
+              {
+                "type": "damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      6,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  },
+                  "ignore_invulnerability": 1
+                }
+              }
+            ],
+            "visual": {
+              "duration": 24,
+              "radius": {
+                "product": [
+                  3,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "height": 0.25,
+              "layers": [
+                {
+                  "shape": "motes",
+                  "color": "8bac29",
+                  "alpha": 0.85,
+                  "width": 0.045,
+                  "scale": 1.4,
+                  "speed": 0.7,
+                  "phase": 0,
+                  "count": 6
+                },
+                {
+                  "shape": "rays",
+                  "color": "e0ff8d",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.9799999999999999,
+                  "speed": -0.45499999999999996,
+                  "phase": 1.2,
+                  "count": 3
+                },
+                {
+                  "shape": "sparks",
+                  "color": "e0ff8d",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:entity.generic.explode",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        ],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "e0ff8d",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "motes",
+              "color": "8bac29",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.4,
+              "speed": 0.7,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "rays",
+              "color": "e0ff8d",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.9799999999999999,
+              "speed": -0.45499999999999996,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "e0ff8d",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

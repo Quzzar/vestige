@@ -1,0 +1,207 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1577",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Invisibility",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 339",
+      "rank": 2,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1577"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:shadow": 1,
+    "vestige:illusion": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 8
+    },
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 200
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 24,
+            "radius": 0.7,
+            "height": 0.08,
+            "layers": [
+              {
+                "shape": "motes",
+                "color": "d98bd0",
+                "alpha": 0.85,
+                "width": 0.045,
+                "scale": 0.85,
+                "speed": -1.4,
+                "phase": 0,
+                "count": 7
+              },
+              {
+                "shape": "ripple",
+                "color": "fff0fa",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 0.595,
+                "speed": 0.9099999999999999,
+                "phase": 1.2,
+                "count": 3
+              },
+              {
+                "shape": "sparks",
+                "color": "fff0fa",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 160,
+        "values": {
+          "particles": 0
+        },
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:pf2/invisibility_release",
+            "duration": 160,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:pf2/invisibility_release/trigger",
+                "event": "vestige:damage_dealt",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "end_manifestation"
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "self",
+              "required": true
+            },
+            "effects": [
+              {
+                "type": "status",
+                "values": {
+                  "duration": 2,
+                  "amplifier": 0
+                },
+                "identifiers": {
+                  "effect": "minecraft:invisibility"
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "self",
+              "required": true
+            },
+            "effects": [
+              {
+                "type": "visual",
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.7,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "motes",
+                      "color": "d98bd0",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 0.85,
+                      "speed": -1.4,
+                      "phase": 0,
+                      "count": 7
+                    },
+                    {
+                      "shape": "ripple",
+                      "color": "fff0fa",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.595,
+                      "speed": 0.9099999999999999,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "fff0fa",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "interval": 1
+      }
+    }
+  ]
+}

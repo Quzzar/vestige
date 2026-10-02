@@ -1,0 +1,139 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1321",
+    "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+    "name": "Slashing Gust",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Rage of Elements p. 71",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1321"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:air": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 24
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "beam",
+        "required": true,
+        "distance": {
+          "product": [
+            16,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 2,
+          "radius": 1
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                4,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "c4eeeb",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "slash",
+            "color": "57d0c7",
+            "alpha": 0.85,
+            "width": 0.18,
+            "scale": 1.5,
+            "speed": 2.0,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "ripple",
+            "color": "e2fff3",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.0499999999999998,
+            "speed": -1.3,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "e2fff3",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

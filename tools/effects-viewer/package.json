@@ -1,0 +1,23 @@
+{
+  "name": "vestige-effects-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "4.1.11"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "typescript": "5.9.3",
+    "vite": "7.1.9",
+    "@vanilla-extract/css": "1.17.4",
+    "@vanilla-extract/vite-plugin": "5.1.1"
+  }
+}

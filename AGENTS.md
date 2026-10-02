@@ -1,95 +1,63 @@
-# Electroblob's Wizardry Redux
+# Vestige: Traditions of Lost Magic
 
-Minecraft 1.20.1 magic mod with 180+ spells, 8 elements. Multi-loader: Fabric + Forge.
+Minecraft magic, exploration, and adventure mod. The active baseline is Minecraft 1.21.1, NeoForge 21.1.72, and Java 21. This is one Gradle project under `src/`; the former common/Fabric/Forge layout is retired.
 
-## Project structure
+## Current scope
 
-- `common/` — shared mod code (most logic lives here)
-- `fabric/` — Fabric loader entrypoint + platform-specific code
-- `forge/` — Forge loader entrypoint + platform-specific code
-- `buildSrc/` — Gradle convention plugins (`multiloader-common`, `multiloader-loader`)
+Build native spells first. The inherited Wizardry gameplay, wands, upgrades, spellbooks, discovery, XP tiers, artifacts, world generation, recipes, networking, attachments, and compatibility shims have been removed. Vestige's own wands, discovery, and progression are explicitly deferred. Do not reconnect the old systems to the native runtime.
 
-The `fabric/` and `forge/` subprojects depend on `:common` via Gradle configuration (capabilities-based, not a simple `implementation`). Changes to `common/` automatically apply to both.
+The 110 default-enabled spells in the pinned Iron catalog have explicit native adaptations. Iron is a behavioral source for this content; it is not required to execute it. Exact source spell/school IDs and the pinned revision remain provenance. Future interoperability with foreign Iron casts is a separate adapter concern. Pathfinder 2e batches add independently authored native adaptations with frozen AoN provenance. Source rank/cantrip/rarity are inert reference facts; native rarity and costs are independent.
+
+## Structure
+
+- `src/main/java/com/quzzar/vestige/VestigeMod.java` — NeoForge bootstrap; registers reusable native delivery entities.
+- `src/main/java/com/quzzar/vestige/magic/definition/` — immutable spells, traditions, traits, costs, targeting, provenance, and primitive catalog.
+- `magic/condition/`, `magic/expression/`, `magic/effect/` — reusable conditions, numerical expressions, and composed plans.
+- `magic/runtime/` — server-thread casts, recasts, bindings, manifestations, pending outcomes, causal history.
+- `magic/presentation/` — layered immutable visuals, bounded client payloads and shared procedural rendering; author presets in `tools/spell_visuals.py`.
+- `magic/world/` — Minecraft targeting, actions, delivery/backing entities, client renderer, private spaces, events, and operator commands.
+- `src/main/resources/data/vestige/runtime_spells/` — native Iron/Pathfinder adaptations and four native examples; generated totals are in the conversion/reference/balance ledgers.
+- `src/main/resources/data/vestige/dimension*/` — private-space dimension definition.
+- `src/main/java/com/quzzar/vestige/gametest/` and `magic/world/PrivateSpaceTest.java` — Minecraft behavior tests.
+- `src/test/java/` — JUnit model/runtime and complete catalog parsing tests.
+- `tools/irons-spells.json` — frozen 110-spell source catalog.
+- `tools/pathfinder-spells.json` — frozen AoN references for implemented Pathfinder batches; the broader inventory remains a separate review queue.
+- `tools/convert_pathfinder_spells.py` — explicit PF2 recipes and ledger; `--check` detects drift.
+- `tools/spell_authoring.py` — shared source-independent effect-graph authoring helpers.
+- `tools/convert_irons_spells.py` — deterministic explicit recipes; regenerates converted JSON and its ledger. No fallback conversion and no upstream checkout required.
+- `src/main/templates/` — expanded mod metadata; `docs/design/` and `docs/research/` — decisions and historical evidence.
 
 ## Commands
 
 ```bash
-# Build everything
 ./gradlew build
-
-# Run Fabric client
-./gradlew fabric:runClient
-
-# Run Forge client
-./gradlew forge:runClient
-
-# Run Fabric server
-./gradlew fabric:runServer
-
-# Run Forge server
-./gradlew forge:runServer
-
-# Forge data generation (outputs to common/src/generated/resources)
-./gradlew forge:runData
-
-# Run Fabric game tests
-./gradlew fabric:runGameTest
-
-# Run Forge game tests
-./gradlew forge:runGameTestServer
-
-# Publish to CurseForge & Modrinth (requires CURSEFORGE_TOKEN and MODRINTH_TOKEN env vars)
-./gradlew fabric:publishMods forge:publishMods
+./gradlew test
+./gradlew verifyKithkynCompatibility
+./gradlew runGameTestServer
+./gradlew runClient
+./gradlew runServer
+./gradlew runClientJoinLocal
+python3 tools/convert_irons_spells.py
+python3 tools/convert_pathfinder_spells.py
 ```
 
-**Key:** `org.gradle.daemon=false` is set in `gradle.properties` — each Gradle invocation starts fresh. No typecheck or lint commands exist.
+Java 21 is used by both the toolchain and Gradle daemon. Development runs build/load the sibling Kithkyn project, verifying matching Minecraft/NeoForge versions. Override its location with `-Pkithkyn_project_dir=/absolute/path`. `runClientJoinLocal` defaults to localhost:25565; override with `-Pjoinport=25566`. There is no supported `runData` task.
 
-## Entry points
+## Design and conventions
 
-| Module | Class | Role |
-|---|---|---|
-| common | `WizardryMainMod` | `init()` called by both loaders; registers config, events, registry stubs |
-| fabric | `WizardryFabricMod` (implements `ModInitializer`) | Fabric init; uses Fabric API for registries, events, networking |
-| forge | `WizardryForgeMod` (`@Mod(ebwizardry)`) | Forge init; uses Forge event bus and registries |
-| common client | `WizardryClientMod` | Client-side setup (config screen) |
-| fabric client | `WizardryFabricClient` | Fabric client entrypoint |
-| forge client | `WizardryForgeClient` | Forge client setup via `modBus` listener |
+Check `BREAKING_CHANGES.md` before changing public APIs. Read `CONTEXT.md`, `docs/design/trait-catalog.md`, `docs/design/spell-runtime.md`, `docs/design/iron-spell-conversions.md`, and `docs/design/pathfinder-spell-conversions.md` before changing spell structure. For balance changes, read `docs/design/spell-balance.md` and `docs/spell-balance-review.md`; author outcomes in the relevant `tools/convert_irons_spells.py` or `tools/convert_pathfinder_spells.py` recipes and costs in `tools/spell-balance-policy.json`. Preserve relative trait units while tuning actual outcomes, timing, and constraints. Research/prototype documents retain historical proposals; their headers identify superseded scope decisions.
 
-## Architecture
+- Mod ID `vestige`, root package `com.quzzar.vestige`; use `VestigeMainMod.location(path)`.
+- Spell definitions are immutable. A cast owns resolved traits, scalar state, target anchors, and its continuation.
+- Traits are a flat, open namespaced repertoire. Effects explicitly read scaling traits. `volatile` is the sole trait with inherent runtime semantics; another semantic trait requires an explicit decision with the project owner.
+- Derive capabilities from executable plans, including callbacks and bindings. Delivery/outcome words are not traits.
+- Compose reusable effects and targeting in data. Avoid a class or bespoke runtime branch per spell.
+- Own cleanup of spawned entities, transient modifiers, callbacks, and bindings. Server stop/reload closes active state. Private rooms and container lock ownership are persistent; ordinary active spells are not serialized.
+- Calculating damage/healing outcomes may be changed before commit. Preserve causal lineage when reactions produce further events.
+- Preserve historical attribution in `CREDITS.md` and `LICENSE.md`; do not copy Iron code/assets as part of recipe authoring.
 
-- **Platform abstraction:** `Services.PLATFORM`, `Services.OBJECT_DATA`, `Services.NETWORK_HELPER`, `Services.REGISTRY_UTIL` loaded via Java `ServiceLoader`. Each has Fabric and Forge implementations under `fabric/src/.../platform/` and `forge/src/.../platform/`.
-- **Custom registries:** Spells, elements, and spell tiers use custom `Registry` objects registered via loader-specific code (`EBRegistriesFabric`, `EBRegistriesForge`). Minecraft registries (blocks, items, entities, etc.) use vanilla `Registry.register()` on Fabric and `DeferredRegister` on Forge.
-- **Networking:** Fabric uses Fabric API (`EBFabricServerNetwork`); Forge uses `EBForgeNetwork` with its own packet system.
-- **Mixin configs:** Two files on Forge: `ebwizardry.mixins.json` (common) + `ebwizardry.forge.mixins.json` (forge-specific). Fabric uses only `ebwizardry.mixins.json` + access widener (`ebwizardry.accesswidener`).
-- **Access transformers:** Forge uses `META-INF/accesstransformer.cfg` from `common/`. Fabric uses `ebwizardry.accesswidener` from `common/`.
-- **Data generation:** Forge `runData` task outputs to `common/src/generated/resources/`. Both loaders include this directory in resources (excluding `.cache` and `docs/spells/ebwizardry/**`).
+## Verification
 
-## Dependencies & mod compat
+Run `test` for model/runtime/catalog changes, `build` for packaging, and `runGameTestServer` for world behavior. Add targeted behavior tests for new mechanics; a successful parse is not gameplay verification. For catalog changes, regenerate both conversion tools and run `tools/convert_pathfinder_spells.py --check`. Regenerate and run `--check` for `tools/document_spells.py`, `tools/audit_spell_balance.py`, `tools/document_spell_balance.py`, and `tools/document_pathfinder_inventory.py`; run `tools/test_spell_balance.py`. Completion requires every policy entry and generated definition to agree, appropriate unit/world tests to pass, and actual results/limitations recorded in `docs/development-status.md`. Inspect actual client appearance before claiming presentation verification.
 
-- **Fabric deps (required):** Fabric API 0.92.2+, Fabric Loader 0.16.9+
-- **Forge deps (required):** Forge 47.1.25+
-- **Cardinal Components API** (Fabric only): embedded via `include()` — bundled in the jar
-- **Trinkets** (Fabric optional), **Curios** (Forge optional), **Accessories** (both, optional)
-- **JEI** (optional, both loaders)
-- **Cloth Config** (optional, both loaders)
-- **Mixinextras** (Forge: `jarJar` included, common: `compileOnly`)
-- **MarkdownGenerator** (runtime, used for spell doc generation)
-
-## Conventions
-
-- Root package: `com.binaris.wizardry`
-- Mod ID: `ebwizardry`
-- `ResourceLocation` helper: `WizardryMainMod.location(path)` or `WizardryMainMod.location(namespace, path)`
-- Wand upgrade registration: `WandUpgrades.initUpgrades()` called per-loader
-- Bookshelf items: `BookshelfMenu.initBookItems()` called per-loader
-- `NotImplementedItems.init()` called per-loader
-- API events use `WizardryEventBus.fireEvent()` (custom event bus, not Forge/Fabric native)
-- Breaking changes tracked in `BREAKING_CHANGES.md` — check before refactoring API classes in `api/`
-- `GeometryUtils` → renamed to `VecUtils`; `InventoryUtils` → merged into `EntityUtils`; `DrawingUtils` → moved to `ClientUtils`
-
-## Testing
-
-- Only Forge has jUnit test config (`test { useJUnitPlatform() }` in `forge/build.gradle`)
-- Fabric game tests run via `fabric:runGameTest` (uses `-Dfabric-api.gametest`)
-- Forge game tests run via `forge:runGameTestServer` (uses `forge.enabledGameTestNamespaces=ebwizardry`)
-- No unit tests exist in `common/` or `fabric/` beyond game tests
+Operator `cast` bypasses resources, cooldowns and discovery while retaining timing/recasts. `cast_balanced` enforces native mana/recovery; `mana [0..200]` controls test energy. See `docs/design/spell-runtime.md` for payment, cooldown, and channel rules. These controls are the development entrypoint while wands/progression remain deferred.

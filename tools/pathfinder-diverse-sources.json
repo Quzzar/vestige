@@ -1,0 +1,844 @@
+{
+  "system": "pathfinder_second_edition",
+  "edition": "mixed",
+  "retrieved": "2026-10-01",
+  "revision": "aon-2026-10-01",
+  "note": "Frozen provenance for the latest 36 native adaptations, now included in pathfinder-spells.json and the complete 100-source implementation ledger. Short original paraphrases; source rank, cantrip status and rarity are reference facts. Remaster identities are preferred, with three explicitly legacy sources retained. Native IDs use pf2_<id>.",
+  "spells": [
+    {
+      "id": "wall_of_stone",
+      "display_name": "Wall of Stone",
+      "aon_id": 1751,
+      "rank": 5,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 367,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1751",
+      "summary": "Creates solid stone in a chosen wall, bridge, or stair shape."
+    },
+    {
+      "id": "wall_of_ice",
+      "display_name": "Wall of Ice",
+      "aon_id": 1750,
+      "rank": 5,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 367,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1750",
+      "summary": "Forms an opaque ice barrier; shattered sections can leave a hazardous frozen passage."
+    },
+    {
+      "id": "wall_of_water",
+      "display_name": "Wall of Water",
+      "aon_id": 1028,
+      "rank": 3,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Secrets of Magic",
+      "page": 139,
+      "edition": "legacy",
+      "errata": {
+        "version": "2.0",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=96"
+      },
+      "revision": "aon-2026-10-01; Secrets of Magic errata 2.0 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1028",
+      "summary": "Raises a standing water barrier that affects fire, projectile passage, and creatures crossing it."
+    },
+    {
+      "id": "illusory_object",
+      "display_name": "Illusory Object",
+      "aon_id": 1569,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 337,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1569",
+      "summary": "Projects a stationary object's appearance, with richer sensory detail available at higher ranks."
+    },
+    {
+      "id": "wooden_double",
+      "display_name": "Wooden Double",
+      "aon_id": 1416,
+      "rank": 3,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Rage of Elements",
+      "page": 199,
+      "edition": "remaster",
+      "errata": {
+        "version": "2.0",
+        "date": "2024-05-17",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+      },
+      "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1416",
+      "summary": "A reaction substitutes a wooden decoy for a critical hit while the caster steps aside."
+    },
+    {
+      "id": "protector_tree",
+      "display_name": "Protector Tree",
+      "aon_id": 2015,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core 2",
+      "page": 249,
+      "edition": "remaster",
+      "errata": {
+        "version": "1.1",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+      },
+      "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=2015",
+      "summary": "Grows a tree that intercepts attacks against nearby allies, consuming its own health first."
+    },
+    {
+      "id": "collective_transposition",
+      "display_name": "Collective Transposition",
+      "aon_id": 1978,
+      "rank": 6,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core 2",
+      "page": 243,
+      "edition": "remaster",
+      "errata": {
+        "version": "1.1",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+      },
+      "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1978",
+      "summary": "Repositions several creatures within a local area; unwilling targets can resist."
+    },
+    {
+      "id": "zephyr_slip",
+      "display_name": "Zephyr Slip",
+      "aon_id": 1327,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Rage of Elements",
+      "page": 73,
+      "edition": "remaster",
+      "errata": {
+        "version": "2.0",
+        "date": "2024-05-17",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+      },
+      "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1327",
+      "summary": "A reactive gust carries the caster away from a newly adjacent creature."
+    },
+    {
+      "id": "share_life",
+      "display_name": "Share Life",
+      "aon_id": 1669,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "divine"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 356,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1669",
+      "summary": "Links an ally's life to the caster, splitting incoming injury while the pair remain close."
+    },
+    {
+      "id": "see_the_unseen",
+      "display_name": "See the Unseen",
+      "aon_id": 1663,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 355,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1663",
+      "summary": "Perceives invisible creatures and nearby phased spirits, and helps the caster recognize illusions."
+    },
+    {
+      "id": "freezing_rain",
+      "display_name": "Freezing Rain",
+      "aon_id": 1388,
+      "rank": 5,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Rage of Elements",
+      "page": 173,
+      "edition": "remaster",
+      "errata": {
+        "version": "2.0",
+        "date": "2024-05-17",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=205"
+      },
+      "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1388",
+      "summary": "Sustains movable rain that hinders movement and can turn into damaging, slowing sleet."
+    },
+    {
+      "id": "summon_plant_or_fungus",
+      "display_name": "Summon Plant or Fungus",
+      "aon_id": 1705,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 361,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1705",
+      "summary": "Calls a plant or fungal creature to fight while the spell is sustained."
+    },
+    {
+      "id": "summon_fey",
+      "display_name": "Summon Fey",
+      "aon_id": 1700,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "occult",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 360,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1700",
+      "summary": "Calls a fey creature to fight while the spell is sustained."
+    },
+    {
+      "id": "summon_elemental",
+      "display_name": "Summon Elemental",
+      "aon_id": 1698,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 360,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1698",
+      "summary": "Calls an elemental creature to fight while the spell is sustained."
+    },
+    {
+      "id": "create_water",
+      "display_name": "Create Water",
+      "aon_id": 1476,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 322,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1476",
+      "summary": "Produces drinkable water that eventually vanishes if unused."
+    },
+    {
+      "id": "creation",
+      "display_name": "Creation",
+      "aon_id": 1477,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 322,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1477",
+      "summary": "Conjures a temporary, simple object from permitted materials without creating genuine valuables."
+    },
+    {
+      "id": "enlarge",
+      "display_name": "Enlarge",
+      "aon_id": 1514,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 329,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1514",
+      "summary": "Grows a willing creature and its equipment, increasing melee reach and force with awkwardness."
+    },
+    {
+      "id": "shrink",
+      "display_name": "Shrink",
+      "aon_id": 1672,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 356,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1672",
+      "summary": "Makes a willing creature and its equipment tiny, reducing its reach."
+    },
+    {
+      "id": "water_breathing",
+      "display_name": "Water Breathing",
+      "aon_id": 1755,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 369,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1755",
+      "summary": "Enables several creatures to breathe underwater for an extended period."
+    },
+    {
+      "id": "water_walk",
+      "display_name": "Water Walk",
+      "aon_id": 1756,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 369,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1756",
+      "summary": "Lets a creature stand and travel across liquids while retaining the option to swim."
+    },
+    {
+      "id": "gecko_grip",
+      "display_name": "Gecko Grip",
+      "aon_id": 1541,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 333,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1541",
+      "summary": "Gives a creature clinging hands and feet for climbing surfaces."
+    },
+    {
+      "id": "magic_passage",
+      "display_name": "Magic Passage",
+      "aon_id": 1591,
+      "rank": 5,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "uncommon",
+      "publication": "Player Core",
+      "page": 342,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1591",
+      "summary": "Opens a temporary tunnel through an eligible wall and expels occupants when it closes."
+    },
+    {
+      "id": "shape_stone",
+      "display_name": "Shape Stone",
+      "aon_id": 1667,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 356,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1667",
+      "summary": "Reshapes an existing stone mass into a rough form, potentially unbalancing creatures standing on it."
+    },
+    {
+      "id": "item_facade",
+      "display_name": "Item Facade",
+      "aon_id": 1579,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 340,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1579",
+      "summary": "Disguises an object's apparent condition as pristine or decrepit without repairing its actual state."
+    },
+    {
+      "id": "silence",
+      "display_name": "Silence",
+      "aon_id": 1674,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "divine",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 357,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1674",
+      "summary": "Suppresses a willing creature's sound and sound-dependent actions; higher ranks spread this into an aura."
+    },
+    {
+      "id": "mirror_image",
+      "display_name": "Mirror Image",
+      "aon_id": 197,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Core Rulebook",
+      "page": 352,
+      "edition": "legacy",
+      "errata": {
+        "version": "4.0",
+        "date": "2023-01-03",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=1"
+      },
+      "revision": "aon-2026-10-01; Core Rulebook errata 4.0 (2023-01-03)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=197",
+      "summary": "Creates consumable illusory duplicates that can divert incoming attacks away from the caster."
+    },
+    {
+      "id": "time_jump",
+      "display_name": "Time Jump",
+      "aon_id": 2843,
+      "rank": 3,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Impossible Magic",
+      "page": 167,
+      "edition": "remaster",
+      "errata": {
+        "version": "Summer 2026, 1st Printing",
+        "date": "2026-07-30",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=355"
+      },
+      "revision": "aon-2026-10-01; Impossible Magic errata Summer 2026, 1st Printing (2026-07-30)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=2843",
+      "summary": "Grants movement during a brief personal time stop, avoiding movement reactions but penalizing rapid reuse."
+    },
+    {
+      "id": "gravity_well",
+      "display_name": "Gravity Well",
+      "aon_id": 1997,
+      "rank": 3,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core 2",
+      "page": 246,
+      "edition": "remaster",
+      "errata": {
+        "version": "1.1",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+      },
+      "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1997",
+      "summary": "Pulls creatures and unsecured objects toward a central point, with resistance and collision limits."
+    },
+    {
+      "id": "repulsion",
+      "display_name": "Repulsion",
+      "aon_id": 1650,
+      "rank": 6,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 353,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1650",
+      "summary": "Creates an aura that hinders or prevents creatures voluntarily approaching the caster."
+    },
+    {
+      "id": "containment",
+      "display_name": "Containment",
+      "aon_id": 1981,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core 2",
+      "page": 243,
+      "edition": "remaster",
+      "errata": {
+        "version": "1.1",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=227"
+      },
+      "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1981",
+      "summary": "Encloses one creature in a stationary, destructible force field that blocks passage and outside effects."
+    },
+    {
+      "id": "magnetic_attraction",
+      "display_name": "Magnetic Attraction",
+      "aon_id": 944,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Secrets of Magic",
+      "page": 114,
+      "edition": "legacy",
+      "errata": {
+        "version": "2.0",
+        "date": "2024-12-16",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=96"
+      },
+      "revision": "aon-2026-10-01; Secrets of Magic errata 2.0 (2024-12-16)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=944",
+      "summary": "Draws small metal objects to the caster or a lodestone, with resistance for secured possessions."
+    },
+    {
+      "id": "pet_cache",
+      "display_name": "Pet Cache",
+      "aon_id": 1627,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "occult",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 348,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1627",
+      "summary": "Shelters a willing companion in a private extradimensional space, then returns it safely when the spell ends."
+    },
+    {
+      "id": "clairvoyance",
+      "display_name": "Clairvoyance",
+      "aon_id": 1466,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 320,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1466",
+      "summary": "Creates a stationary remote viewpoint through which the caster sees using their ordinary visual senses."
+    },
+    {
+      "id": "status",
+      "display_name": "Status",
+      "aon_id": 1690,
+      "rank": 2,
+      "cantrip": false,
+      "traditions": [
+        "divine",
+        "occult",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 359,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1690",
+      "summary": "Maintains awareness of a willing living ally's direction, distance, and conditions on the same plane."
+    },
+    {
+      "id": "air_bubble",
+      "display_name": "Air Bubble",
+      "aon_id": 1438,
+      "rank": 1,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "divine",
+        "primal"
+      ],
+      "rarity": "common",
+      "publication": "Player Core",
+      "page": 314,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1438",
+      "summary": "A reaction supplies breathable air when a creature enters an environment where it cannot breathe."
+    },
+    {
+      "id": "peaceful_bubble",
+      "display_name": "Peaceful Bubble",
+      "aon_id": 1624,
+      "rank": 4,
+      "cantrip": false,
+      "traditions": [
+        "arcane",
+        "occult"
+      ],
+      "rarity": "uncommon",
+      "publication": "Player Core",
+      "page": 348,
+      "edition": "remaster",
+      "errata": {
+        "version": "Spring 2026, 1st Printing",
+        "date": "2026-02-06",
+        "source_url": "https://2e.aonprd.com/Sources.aspx?ID=216"
+      },
+      "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1624",
+      "summary": "Creates a traversable privacy boundary that blocks outside perception and magical observation, and protects sleep."
+    }
+  ]
+}

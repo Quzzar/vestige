@@ -1,0 +1,144 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1758",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Weapon Storm",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 369",
+      "rank": 4,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1758"
+    }
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:metal": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 38
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "cone",
+        "required": false,
+        "distance": {
+          "product": [
+            9,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 5,
+          "angle": 55
+        }
+      },
+      "effects": [
+        {
+          "type": "weapon_damage",
+          "values": {
+            "amount": {
+              "product": [
+                10,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "weapon_fraction": 0.5,
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "bacbd9",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "slash",
+            "color": "99aabf",
+            "alpha": 0.85,
+            "width": 0.18,
+            "scale": 1.25,
+            "speed": 1.8,
+            "phase": 0,
+            "count": 16
+          },
+          {
+            "shape": "shards",
+            "color": "eef5ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.875,
+            "speed": -1.1700000000000002,
+            "phase": 1.2,
+            "count": 8
+          },
+          {
+            "shape": "sparks",
+            "color": "eef5ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

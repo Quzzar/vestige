@@ -1,0 +1,237 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:summon_swords",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Summon Swords",
+    "cast_type": "long",
+    "cooldown_ticks": 3000
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:ender": 4,
+    "vestige:conjuration": 4,
+    "vestige:metal": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 30
+    },
+    {
+      "type": "mana",
+      "amount": 54
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 1,
+          "health": 8,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:vex",
+          "weapon": "minecraft:iron_sword"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "slash",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.18,
+              "scale": 1.0,
+              "speed": 0.8,
+              "phase": 0,
+              "count": 3
+            },
+            {
+              "shape": "motes",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -0.52,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 1,
+          "health": 8,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:vex",
+          "weapon": "minecraft:golden_sword"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "slash",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.18,
+              "scale": 1.0,
+              "speed": 0.8,
+              "phase": 0,
+              "count": 3
+            },
+            {
+              "shape": "motes",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -0.52,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 1,
+          "health": 8,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:vex",
+          "weapon": "minecraft:diamond_sword"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "slash",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.18,
+              "scale": 1.0,
+              "speed": 0.8,
+              "phase": 0,
+              "count": 3
+            },
+            {
+              "shape": "motes",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -0.52,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "await_recast",
+      "timeout": 600
+    },
+    {
+      "type": "dismiss_manifestations"
+    }
+  ]
+}

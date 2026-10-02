@@ -1,0 +1,151 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1561",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Hydraulic Push",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 336",
+      "rank": 1,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1561"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:water": 1,
+    "vestige:motion": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 8
+    },
+    {
+      "type": "mana",
+      "amount": 16
+    },
+    {
+      "type": "cooldown",
+      "ticks": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            20,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                7,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": 1.2,
+            "up": 0.35
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "jet",
+            "color": "278bcf",
+            "alpha": 0.8,
+            "width": 0.6,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "splash",
+            "color": "a1eaff",
+            "alpha": 0.95,
+            "width": 0.04,
+            "scale": 1.5,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "ripple",
+            "color": "239dcc",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.3,
+            "speed": 2.0,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "helix",
+            "color": "c2f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.9099999999999999,
+            "speed": -1.3,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "c2f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ],
+        "sound": {
+          "id": "minecraft:entity.player.splash.high_speed",
+          "volume": 0.6,
+          "pitch": 1.1
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug or issue with Electroblob's Wizardry Redux
+description: Report a bug or issue with Vestige
 title: "[BUG] "
 labels: ["bug"]
 body:
@@ -42,8 +42,8 @@ body:
     id: mod-version
     attributes:
       label: Mod Version
-      description: What version of Electroblob's Wizardry Redux are you using?
-      placeholder: "e.g., 1.0.0"
+      description: What version of Vestige are you using?
+      placeholder: "e.g., 0.1.0"
     validations:
       required: true
 
@@ -52,16 +52,16 @@ body:
     attributes:
       label: Minecraft Version
       description: What version of Minecraft are you using?
-      placeholder: "e.g., 1.20.1"
+      placeholder: "e.g., 1.21.1"
     validations:
       required: true
 
   - type: input
-    id: forge-version
+    id: neoforge-version
     attributes:
-      label: Forge/Fabric Version
+      label: NeoForge Version
       description: What version of the mod loader are you using?
-      placeholder: "e.g., Forge 47.2.0"
+      placeholder: "e.g., NeoForge 21.1.72"
     validations:
       required: true
 

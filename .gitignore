@@ -21,4 +21,13 @@ build
 # other
 eclipse
 run
-/common/src/generated/resources/docs/
+run-client
+/src/generated/resources/docs/
+
+# local effects workbench
+node_modules/
+dist/
+
+# Python authoring caches
+__pycache__/
+*.py[cod]

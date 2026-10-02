@@ -1,0 +1,114 @@
+{
+  "rarity": "common",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:force": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 14
+    },
+    {
+      "type": "cooldown",
+      "ticks": 40
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self"
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 100,
+        "values": {
+          "damage": {
+            "product": [
+              7,
+              {
+                "trait": "vestige:amplify"
+              }
+            ]
+          },
+          "distance": {
+            "product": [
+              20,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          },
+          "speed": 1.5
+        },
+        "identifiers": {
+          "item": "minecraft:amethyst_shard"
+        },
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "shards",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.0,
+              "speed": 2.2,
+              "phase": 0,
+              "count": 4
+            },
+            {
+              "shape": "helix",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -1.4300000000000002,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

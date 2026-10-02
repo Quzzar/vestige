@@ -1,0 +1,135 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1498",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Divine Lance",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 325",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1498"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "divine"
+  ],
+  "traits": {
+    "vestige:spirit": 1,
+    "vestige:holy": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 6
+    },
+    {
+      "type": "cooldown",
+      "ticks": 20
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            20,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                5,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "fff1b0",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "ffd45a",
+            "alpha": 0.85,
+            "width": 0.085,
+            "scale": 1.5,
+            "speed": 1.9,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "helix",
+            "color": "fffbe1",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.0499999999999998,
+            "speed": -1.2349999999999999,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "fffbe1",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

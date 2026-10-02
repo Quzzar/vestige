@@ -1,53 +1,51 @@
-**Note: This mod is currently in Alpha. For development updates, bug reports, and community discussion, join our [Discord](https://discord.gg/9R3nw3uQTu) and check our [Wiki](https://electroblobs-redux-wiki.pages.dev/)**
+# Vestige: Traditions of Lost Magic
 
-## About
+Vestige is a Minecraft magic, exploration, and adventure mod about rediscovering lost traditions. Development currently focuses on a standalone, data-driven spell system for **Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21**.
 
-![Ice wand inside Arcane Workbench block](https://cdn.modrinth.com/data/cached_images/950556ffcccb39aeb9831ce1e991ad94d87bba12.png)
+The inherited Wizardry gameplay layer has been removed. Vestige's own wands, discovery and progression remain deferred. The current catalog contains **214 native spells: 110 Iron adaptations, 100 Pathfinder 2e adaptations and four native examples**. They execute without Iron or a tabletop rules engine. The [Iron ledger](docs/design/iron-spell-conversions.md) and [Pathfinder ledger](docs/design/pathfinder-spell-conversions.md) record provenance, behavior and deliberate adaptation differences.
 
-Wizardry isn't like most magic mods. It has very few crafting recipes and no complex constructions or systems behind it, so you don't have to interrupt your experience by checking how to do everything. Find spell books, upgrade wands, create quick scrolls, fight against elemental spirits, trade with wizards and many more!
+Spells are immutable data composed from rarity, traditions, relative traits, costs, targeting and reusable effect plans. All 214 have independent **common, uncommon, rare or mythic** assignments, native mana/recovery tuning and shared animation recipes. The latest 36 Pathfinder spells add solid constructs, physical scale/traversal, ally formations, protection budgets, private sensing and object/companion utility. The [100-spell selection](docs/pathfinder-spell-selection.md) lists their actual behavior; the [1,992-source inventory](docs/pathfinder-spell-inventory.md) remains a separate future review queue.
 
-With more than 180 spells (and still adding more) each one with unique features, so you will always find something new to see and enjoy. You could also add spell packs that could add more content to your adventure. Will you be able to collect each one of the spells that are lost in the arcana?
+The [cast gallery](docs/effects-workshop.md) searches all 214 spells and shows **actual Minecraft casts only**. All **214 spells have a recorded primary cast**, including area boundaries, ordered chains, water knockback, live model copies, a combat companion, and real ice/tree/water terrain with safe per-cell cleanup. The full catalog is visible by default. Browser sketches and effect studies are removed. `runEffectsCapture` exports the isolated native client; `/vestige_magic cast` is the development entrypoint. [Spell breakdowns](docs/spell-reference.md), [balance](docs/spell-balance-review.md), [runtime design](docs/design/spell-runtime.md) and [verification](docs/development-status.md) record behavior and limits. Visuals use original procedural rendering and vanilla assets; source-mod animation assets are not imported.
 
-Start by mining Magic Crystals (though there are "easier" ways to find them if you explore!). Combine 1 Magic Crystal + 1 Stick + 1 Gold Nugget to craft your first wand and begin your arcane apprenticeship.
+## Development
 
-## Features
+Install Java 21, then:
 
-- 180+ spells, each with unique and special behaviors
-- 8 different magic elements (Fire, Ice, Earth, and more!)
-- Upgrade your wand to cast higher-tier spells
-- Discover 4 new elemental armor sets and over 70 powerful artifacts
-- Interact with good wizards or challenge evil mages hidden throughout the world
+```bash
+./gradlew build
+./gradlew test
+./gradlew runGameTestServer
+./gradlew runClient
+```
 
-## Installation
+Development runs also build and load Kithkyn from `../kithkyn`, checking matching Minecraft and NeoForge versions. Override with `-Pkithkyn_project_dir=/absolute/path/to/kithkyn`. Kithkyn co-loading does not implement spell interoperability.
 
-### Fabric
+`runServer` starts a dedicated server. `runClientJoinLocal` joins localhost:25565; use `-Pjoinport=25566` for another port. `verifyKithkynCompatibility` checks platform versions without launching the game.
 
-**Required:** Fabric Loader 0.16.9+ (for Minecraft 1.20.1)
+In-game operators can try the catalog:
 
-**Required:** [Fabric API 0.92.2+](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+```text
+/vestige_magic list
+/vestige_magic effects vestige:pf2_wall_of_ice
+/vestige_magic effects vestige:pf2_wall_of_ice 0
+/vestige_magic cast vestige:fireball
+/vestige_magic cast vestige:heartstop
+/vestige_magic cast vestige:portal
+/vestige_magic interrupt
+/vestige_magic dispel
+```
 
-**Optional (Recommended):** Use [Accessories](https://www.curseforge.com/minecraft/mc-mods/accessories) or [Trinkets](https://www.curseforge.com/minecraft/mc-mods/trinkets) for a better experience with the trinkets.
+Cast Portal twice while aiming at different positions. Recast a summon spell to dismiss its cohort. The operator command bypasses resources and discovery while preserving timing; normal equipment controls and progression are deferred.
 
-**Important (WHEN USING ACCESSORIES):** If any other mods in your modpack list use 'Trinkets' as a dependency, download [Accessories Compatibility Layer](https://www.curseforge.com/minecraft/mc-mods/accessories-tc-layer) **instead** of Trinkets itself (this mod acts as a bridge to help mods with Accessories and Trinkets work together).
+Definitions live in `src/main/resources/data/vestige/runtime_spells/`. To regenerate both explicitly authored conversion batches and verify the Pathfinder snapshot:
 
-### Forge
+```bash
+python3 tools/convert_irons_spells.py
+python3 tools/convert_pathfinder_spells.py
+python3 tools/convert_pathfinder_spells.py --check
+```
 
-**Required:** Forge Loader 47.2.30+ (for Minecraft 1.20.1)
+The pinned source catalog is `tools/irons-spells.json`. Generation requires neither an Iron checkout nor a runtime dependency. See [CREDITS.md](CREDITS.md) for attribution.
 
-**Optional (Recommended):** Use [Accessories](https://www.curseforge.com/minecraft/mc-mods/accessories) or [Curios](https://www.curseforge.com/minecraft/mc-mods/curios) for a better experience with the trinkets.
-
-**Important (WHEN USING ACCESSORIES):** If any other mods in your modpack list use 'Curios' as a dependency for trinkets, download [Accessories Compatibility Layer](https://www.curseforge.com/minecraft/mc-mods/accessories-cc-layer) **instead** of Curios itself (this mod acts as a bridge to help mods with Accessories and Curios work together).
-
-## Credits
-
-**Electroblob:** The original author of Wizardry.
-
-**WinDanesz:** Maintainer of the 1.12.2 version.
-
-**Min01:** For the initial 1.19 WIP port and logic foundations.
-
-**19:** For the initial 1.20.1 official port work.
-
-**NinjaFrito:** For the beautiful new textures in this port.
-
-**Contributors:** A huge thanks to everyone providing bug reports, translations, and suggestions!
+For balance playtesting in Survival, use `/vestige_magic mana 200` then `/vestige_magic cast_balanced vestige:<spell>`. The ordinary `cast` development command bypasses mana and cooldowns. Wands, discovery and progression remain deferred.

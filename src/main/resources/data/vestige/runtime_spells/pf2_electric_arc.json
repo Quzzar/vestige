@@ -1,0 +1,144 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1509",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Electric Arc",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 328",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1509"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 24
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "chain",
+        "required": true,
+        "distance": {
+          "product": [
+            16,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 2,
+          "jump": 4
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                4,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "arc",
+            "color": "d7baff",
+            "alpha": 0.95,
+            "width": 0.065,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "arc",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.020800000000000003,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "helix",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 0.65,
+            "speed": 2.0,
+            "phase": 0,
+            "count": 3
+          },
+          {
+            "shape": "motes",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.45499999999999996,
+            "speed": -1.3,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ],
+        "sound": {
+          "id": "minecraft:block.amethyst_block.chime",
+          "volume": 0.6,
+          "pitch": 1.1
+        }
+      }
+    }
+  ]
+}

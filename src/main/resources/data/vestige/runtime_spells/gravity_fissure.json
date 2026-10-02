@@ -1,0 +1,160 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:gravity_fissure",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Gravity Fissure",
+    "cast_type": "long",
+    "cooldown_ticks": 900
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:ender": 4,
+    "vestige:void": 4,
+    "vestige:motion": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:area",
+        "duration": 100,
+        "values": {
+          "radius": {
+            "product": [
+              3.5,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "motion": 0.2
+        },
+        "identifiers": {
+          "particle": "minecraft:portal"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  3.5,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "relationship": "hostile",
+              "options": {
+                "count": 6
+              }
+            },
+            "effects": [
+              {
+                "type": "pull",
+                "values": {
+                  "strength": 0.25
+                }
+              },
+              {
+                "type": "damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      1.5,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  },
+                  "ignore_invulnerability": 1
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [],
+        "interval": 10,
+        "visual": {
+          "duration": 100,
+          "radius": {
+            "product": [
+              3.5,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "vortex",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.22,
+              "scale": 1.1,
+              "speed": -1.5,
+              "phase": 0,
+              "count": 4
+            },
+            {
+              "shape": "helix",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.77,
+              "speed": 0.9750000000000001,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

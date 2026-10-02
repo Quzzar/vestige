@@ -1,0 +1,1007 @@
+{
+  "status": "Historical design proposals for the latest 36 sources. All now have explicit native recipes in pathfinder_diverse_recipes.py. Actual limits, behavior and costs in the conversion ledger supersede these proposed forms; this file preserves design evidence.",
+  "scaling": "Descriptive trait units start at 1. Amplify, range and area only affect values explicitly identified in each plan. Source rank and rarity never set native costs or power.",
+  "plans": {
+    "wall_of_stone": {
+      "family": "Construction",
+      "traits": [
+        "earth",
+        "stone",
+        "conjuration",
+        "abjuration"
+      ],
+      "plan": "Aim within 20 blocks; raise a seven-block-wide, three-block-high solid panel for 15 seconds. Reject occupied cells, containers and protected terrain. No damage or harvestable conjured resources.",
+      "scaling_reads": "range: aim distance; area: panel width, subject to a block-count cap; amplify: panel durability rather than dimensions.",
+      "closest_native": [
+        "shield",
+        "wall_of_fire"
+      ],
+      "difference": "Actual terrain collision blocks creatures and sight; existing shields and the fire segment primarily intercept projectiles.",
+      "visuals": [
+        "ground ring",
+        "rising solid panel",
+        "stone dust",
+        "fracture fragments"
+      ],
+      "needs": [
+        "owned temporary solid geometry",
+        "placement/protection checks",
+        "no-drop removal and guarded restoration",
+        "overlapping lease cleanup"
+      ],
+      "balance": "Proposed rare construction utility: roughly 40 mana, one-second charge and 15-second recovery. Durability, usable cover and area matter more than trait totals."
+    },
+    "wall_of_ice": {
+      "family": "Construction",
+      "traits": [
+        "ice",
+        "conjuration",
+        "abjuration"
+      ],
+      "plan": "Aim within 18 blocks; create a five-by-three brittle solid panel for 10 seconds. Its destroyed sections leave brief cold hazards; cap combined fracture damage at 6 HP per creature per cast.",
+      "scaling_reads": "range: aim distance; area: capped panel width; amplify: fracture damage, with one shared hit budget.",
+      "closest_native": [
+        "ice_block",
+        "ice_tomb",
+        "wall_of_fire"
+      ],
+      "difference": "A navigable wall with section damage and break aftermath adds terrain decisions beyond an ice projectile or personal healing ward.",
+      "visuals": [
+        "crystal panel",
+        "cold mist",
+        "crack highlights",
+        "shard burst"
+      ],
+      "needs": [
+        "temporary panel sections",
+        "destruction callbacks",
+        "shared fracture budget",
+        "collision and harvesting cleanup"
+      ],
+      "balance": "Proposed rare cover/control: roughly 42 mana and 15-second recovery. Weaker durability pays for capped break aftermath; do not add uncapped damage to every broken block."
+    },
+    "wall_of_water": {
+      "family": "Construction",
+      "traits": [
+        "water",
+        "abjuration",
+        "conjuration"
+      ],
+      "plan": "Place a six-by-three traversable sheet for 10 seconds. Crossing arrows and thrown physical projectiles lose momentum; crossing burning entities are extinguished. Native magic projectiles pass according to authored delivery classification.",
+      "scaling_reads": "range: placement distance; area: capped sheet width; amplify: projectile momentum reduction, capped before reversal.",
+      "closest_native": [
+        "shield",
+        "wall_of_fire"
+      ],
+      "difference": "Selective physical-projectile interference and extinguishing leave creature passage open, unlike a universal projectile-removing ward.",
+      "visuals": [
+        "flowing translucent sheet",
+        "foam edges",
+        "crossing ripples",
+        "steam on extinguish"
+      ],
+      "needs": [
+        "finite plane crossing tests",
+        "delivery classification",
+        "non-flowing water presentation",
+        "momentum accounting"
+      ],
+      "balance": "Proposed uncommon tactical cover: around 28 mana and 10-second recovery. Its value depends on ammunition and fire, with no damage or solid obstruction."
+    },
+    "creation": {
+      "family": "Construction",
+      "traits": [
+        "wood",
+        "plant",
+        "conjuration"
+      ],
+      "plan": "Choose a finite preset of mundane plant-material objects, initially a step, small platform or low cover. Create at an aimed empty location for 20 seconds; never produce inventory items, containers, valuables or permanent resources.",
+      "scaling_reads": "range: placement; area: capped preset footprint; amplify: temporary object durability.",
+      "closest_native": [
+        "summon_ender_chest",
+        "shield"
+      ],
+      "difference": "Selectable mundane object geometry adds traversal and improvised cover without inventory access or creature summoning.",
+      "visuals": [
+        "assembly motes",
+        "preset object mesh",
+        "wood-grain reveal",
+        "leaf dissolution"
+      ],
+      "needs": [
+        "object preset selection",
+        "owned collision objects",
+        "anti-duplication cleanup",
+        "safe expiry near occupants"
+      ],
+      "balance": "Proposed uncommon utility: 24–32 mana depending on useful footprint, long charge and recovery. Compare traversal/cover value; do not price copied source material volume as trait points."
+    },
+    "shape_stone": {
+      "family": "Construction",
+      "traits": [
+        "earth",
+        "stone",
+        "transmutation"
+      ],
+      "plan": "Select a small existing stone volume and a nearby destination; move at most 12 ordinary stone cells into a ramp, doorway edge or cover shape. Preserve volume, reject ores/containers/protected blocks and validate both ends before commit.",
+      "scaling_reads": "range: edit reach; area: editable cell budget with a hard maximum; amplify: none in the initial utility plan.",
+      "closest_native": [
+        "touch_dig",
+        "spectral_hammer"
+      ],
+      "difference": "Reshapes material into usable geometry instead of mining blocks and awarding drops.",
+      "visuals": [
+        "source outline",
+        "flowing stone ribbons",
+        "destination preview",
+        "settling dust"
+      ],
+      "needs": [
+        "two-end edit capture",
+        "atomic permission/occupancy validation",
+        "volume conservation",
+        "explicit permanent-edit ownership policy"
+      ],
+      "balance": "Proposed rare world utility: roughly 40 mana, two-second charge and 20-second recovery. Permanent terrain editing needs exploit and permission review before tuning is final."
+    },
+    "magic_passage": {
+      "family": "Construction",
+      "traits": [
+        "space",
+        "stone",
+        "transmutation"
+      ],
+      "plan": "Aim at ordinary stone; open a two-block-high traversable passage through at most four blocks of depth for 12 seconds. Require a loaded safe exit; prevent container/ore edits and handle occupied passage cells before restoration.",
+      "scaling_reads": "range: wall reach; area: passage width under a cell budget; amplify: permitted depth under a hard cap.",
+      "closest_native": [
+        "teleport",
+        "portal",
+        "spectral_hammer"
+      ],
+      "difference": "Temporarily opens a route everyone can walk through; it neither mines resources nor simply moves the caster past a wall.",
+      "visuals": [
+        "doorway outline",
+        "receding stone surface",
+        "tunnel edge shimmer",
+        "closure warning"
+      ],
+      "needs": [
+        "temporary removal/restoration leases",
+        "wall material filters",
+        "safe-exit validation",
+        "non-entombing occupied expiry"
+      ],
+      "balance": "Proposed rare route utility: around 44 mana, one-second charge and 20-second recovery. Exit safety and maximum depth are principal constraints."
+    },
+    "illusory_object": {
+      "family": "Illusion",
+      "traits": [
+        "illusion",
+        "light"
+      ],
+      "plan": "Place a stationary object image from a small preset list within 16 blocks for 12 seconds. It has no collision, inventory or item drops. Contact/inspection exposes the image to that observer; do not give it attack damage or universal mob control.",
+      "scaling_reads": "range: placement; area: bounded image footprint; amplify: none until belief mechanics have a useful native interpretation.",
+      "closest_native": [
+        "pf2_figment",
+        "pf2_illusory_creature"
+      ],
+      "difference": "A nonphysical object with individual inspection state provides deceptive scenery, rather than another one-hit creature lure.",
+      "visuals": [
+        "object projection",
+        "materialization ring",
+        "observer reveal dissolve"
+      ],
+      "needs": [
+        "noncolliding object presets",
+        "per-observer inspection state",
+        "appearance/interaction separation"
+      ],
+      "balance": "Proposed uncommon deception: 18–24 mana with short charge. Information and plausible object choices determine usefulness; invented damage would erase the distinction."
+    },
+    "item_facade": {
+      "family": "Illusion",
+      "traits": [
+        "illusion",
+        "light"
+      ],
+      "plan": "Mask the apparent pristine or worn condition of a held or placed mundane object for 30 seconds. Durability, enchantments, inventory identity and functionality stay authoritative; inspection can reveal the facade.",
+      "scaling_reads": "range: object selection; amplify and area: none for the initial single-object cosmetic plan.",
+      "closest_native": [
+        "pf2_read_aura",
+        "pf2_figment"
+      ],
+      "difference": "Changes only perceived object condition; it does not identify, repair or create an object.",
+      "visuals": [
+        "surface repaint shimmer",
+        "condition overlay",
+        "inspection crackle"
+      ],
+      "needs": [
+        "cosmetic item/object override",
+        "identity-safe inventory synchronization",
+        "inspection feedback"
+      ],
+      "balance": "Proposed common social/deception utility: 8–12 mana, longer lifetime, low recovery. No selling-price, repair or equipment-stat bonus is assumed."
+    },
+    "mirror_image": {
+      "family": "Illusion",
+      "traits": [
+        "illusion",
+        "light",
+        "abjuration"
+      ],
+      "plan": "Create three visual body images around the caster for eight seconds. Eligible direct attacks can consume one image instead of striking the body; area and unavoidable damage bypass images. Use a documented finite native hit-selection rule.",
+      "scaling_reads": "amplify: image robustness or explicit interception probability, never implicit image count; range and area: none.",
+      "closest_native": [
+        "evasion",
+        "abyssal_shroud",
+        "pf2_protection"
+      ],
+      "difference": "Attacks select among finite apparent bodies; images disappear individually and area attacks bypass them. A generic three-charge immunity ward would duplicate existing defense.",
+      "visuals": [
+        "three body afterimages",
+        "orbital offset",
+        "individual impact dissolve"
+      ],
+      "needs": [
+        "eligible direct-hit classification",
+        "finite apparent-body state",
+        "observer-visible image removal",
+        "measured interception rule"
+      ],
+      "balance": "Proposed uncommon/rare deception defense; begin around 30 mana. Compare expected and worst-case prevented HP against evasion, with area bypass and eight-second expiry."
+    },
+    "wooden_double": {
+      "family": "Protection and reactions",
+      "traits": [
+        "wood",
+        "illusion",
+        "abjuration",
+        "motion"
+      ],
+      "plan": "Arm a six-second reaction to one large direct hit. A wooden substitute absorbs up to 6 HP, overflow remains on the caster, and a safe two-block escape leaves a breakable double at the old position.",
+      "scaling_reads": "amplify: absorption budget; range: escape distance with a safety cap; area: none.",
+      "closest_native": [
+        "pf2_glass_shield",
+        "frost_step"
+      ],
+      "difference": "Before-commit overflow accounting and hit-triggered escape differ from retaliatory glass or a manually cast teleport with a cold field.",
+      "visuals": [
+        "wooden body substitute",
+        "escape streak",
+        "splinters",
+        "overflow impact"
+      ],
+      "needs": [
+        "native heavy-hit trigger criteria",
+        "atomic mitigation/escape ordering",
+        "safe fallback without losing overflow",
+        "substitute lifecycle"
+      ],
+      "balance": "Proposed uncommon reactive escape: roughly 28 mana and 12-second recovery. One bounded block and escape; unsafe escape must not grant extra absorption or discard damage."
+    },
+    "protector_tree": {
+      "family": "Protection and reactions",
+      "traits": [
+        "wood",
+        "plant",
+        "abjuration",
+        "conjuration"
+      ],
+      "plan": "Raise a stationary guardian with 16 shared HP for 12 seconds. Eligible direct attacks against up to three adjacent allies consume guardian HP first; excess reaches the original victim. Destroying the tree ends every protection binding.",
+      "scaling_reads": "amplify: one shared health pool; area: ally adjacency radius under a cap; range: planting reach.",
+      "closest_native": [
+        "fortify",
+        "shield",
+        "pf2_protection"
+      ],
+      "difference": "All recipients draw on one destructible backing-health budget, rather than each receiving independent absorption.",
+      "visuals": [
+        "growing trunk",
+        "reaching branch ribbon",
+        "bark impact",
+        "leaf fade"
+      ],
+      "needs": [
+        "shared backing-health interception",
+        "adjacency at damage time",
+        "overflow accounting",
+        "group binding teardown"
+      ],
+      "balance": "Proposed uncommon team defense: about 30 mana and 15-second recovery. Total prevented HP is bounded by tree health across the whole team; permanent ordinary-tree growth is outside the first plan."
+    },
+    "share_life": {
+      "family": "Protection and reactions",
+      "traits": [
+        "life",
+        "abjuration"
+      ],
+      "plan": "Link the caster to one consenting ally within 12 blocks for eight seconds. Transfer half of eligible incoming damage to the caster, with an 8-HP total transfer budget; stop at low caster health, death, dispel or range break.",
+      "scaling_reads": "amplify: total transferable HP; range: selection/break distance; area: none.",
+      "closest_native": [
+        "heartstop",
+        "pf2_protection"
+      ],
+      "difference": "Immediately moves harm between two creatures instead of deleting it or accumulating a later repayment on the same caster.",
+      "visuals": [
+        "life ribbon between bodies",
+        "transfer pulse",
+        "budget fade"
+      ],
+      "needs": [
+        "ally consent",
+        "causal nonrecursive damage transfer",
+        "range/liveness checks",
+        "nonlethal transfer cap"
+      ],
+      "balance": "Proposed uncommon team support: around 24 mana and 12-second recovery. Preserves harm apart from independently documented native mitigation; prevention must not recurse through paired links."
+    },
+    "air_bubble": {
+      "family": "Protection and reactions",
+      "traits": [
+        "air",
+        "abjuration"
+      ],
+      "plan": "Arm one ally with a six-second response to drowning or suffocation. Supply breathable air for at most five seconds or until ordinary breathing resumes; provide no general combat ward.",
+      "scaling_reads": "range: recipient selection; amplify: capped breathable duration; area: none.",
+      "closest_native": [
+        "pf2_gentle_landing",
+        "pf2_resist_energy"
+      ],
+      "difference": "A condition-triggered environmental rescue protects breathing specifically, rather than reducing arbitrary damage or granting broad water exploration.",
+      "visuals": [
+        "head bubble",
+        "rising air motes",
+        "pop on breathable conditions"
+      ],
+      "needs": [
+        "drowning/suffocation facts",
+        "reactive breathable-air lease",
+        "early condition release"
+      ],
+      "balance": "Proposed common emergency utility: 10–14 mana and short recovery. Pay for one rescue; do not convert it into indefinite immunity or a global shield."
+    },
+    "collective_transposition": {
+      "family": "Movement and positioning",
+      "traits": [
+        "space",
+        "teleportation",
+        "conjuration"
+      ],
+      "plan": "Capture up to three consenting nearby creatures and individually selected destinations within 12 blocks. Validate all loaded collision-free landings and consent before moving any participant; release reservations on failure or cancellation.",
+      "scaling_reads": "range: destination reach; area: initial group search; amplify: none, keeping participant count explicitly bounded.",
+      "closest_native": [
+        "teleport",
+        "portal",
+        "pf2_translocate"
+      ],
+      "difference": "Plans several independent placements atomically; existing teleport moves one caster and portals require creatures to cross endpoints.",
+      "visuals": [
+        "paired position rings",
+        "participant ribbons",
+        "synchronized arrivals"
+      ],
+      "needs": [
+        "multi-target capture",
+        "per-participant destination input",
+        "ally consent",
+        "all-or-none placement reservations"
+      ],
+      "balance": "Proposed rare team positioning: 42–50 mana, visible charge and 20-second recovery. Consent, capped participant count and destination exposure limit tactical value."
+    },
+    "zephyr_slip": {
+      "family": "Movement and positioning",
+      "traits": [
+        "air",
+        "motion",
+        "abjuration"
+      ],
+      "plan": "Arm a six-second proximity reaction. The first hostile entering a two-block zone triggers one safe three-block retreat directly away from that creature; an obstructed route consumes no fictional movement.",
+      "scaling_reads": "range: retreat distance with a hard cap; area: trigger radius with a cap; amplify: none initially.",
+      "closest_native": [
+        "evasion",
+        "charge",
+        "pf2_flicker"
+      ],
+      "difference": "Responds to a hostile boundary entry and retreats away from that entrant; no random displacement, attack or damage immunity is assumed.",
+      "visuals": [
+        "curved wind ribbon",
+        "trailing motes",
+        "departure gust"
+      ],
+      "needs": [
+        "boundary-entry tracking",
+        "single reaction consumption",
+        "collision-checked directional escape"
+      ],
+      "balance": "Proposed uncommon reactive movement: around 24 mana and 10-second recovery. One predictable retreat with terrain failure; no automatic full-hit dodge."
+    },
+    "time_jump": {
+      "family": "Movement and positioning",
+      "traits": [
+        "time",
+        "motion",
+        "transmutation"
+      ],
+      "plan": "Perform a short movement interval while ordinary intervening interactions with the caster are suspended, then reappear at a validated destination. Cap temporal absence at one second and movement at six blocks; inventory and existing spell ownership remain intact.",
+      "scaling_reads": "range: capped displacement; amplify and area: none until temporal timing is verified.",
+      "closest_native": [
+        "pf2_haste",
+        "pf2_translocate",
+        "abyssal_shroud"
+      ],
+      "difference": "A bounded temporal absence skips intervening interactions; a speed buff or ordinary teleport would lose the source's defining timing.",
+      "visuals": [
+        "frozen departure silhouette",
+        "clock rings",
+        "arrival afterimage"
+      ],
+      "needs": [
+        "bounded interaction suspension",
+        "consistent simulation/network timeline",
+        "safe reappearance",
+        "in-progress cast ownership rules"
+      ],
+      "balance": "Proposed rare tempo movement: roughly 40 mana and 20-second recovery. Temporal invulnerability and denied interactions require measured encounter tests before setting exact costs."
+    },
+    "water_walk": {
+      "family": "Movement and positioning",
+      "traits": [
+        "water",
+        "transmutation",
+        "motion"
+      ],
+      "plan": "Allow a consenting recipient to stand and walk on water surfaces for 20 seconds. Keep fluids intact, permit deliberate immersion, and do not support lava or grant flight in ordinary air.",
+      "scaling_reads": "range: recipient selection; amplify: bounded duration; area: none.",
+      "closest_native": [
+        "angel_wing",
+        "ascension"
+      ],
+      "difference": "Surface-specific traversal preserves water and ordinary gravity, unlike free flight or upward launching.",
+      "visuals": [
+        "foot ripples",
+        "surface shimmer",
+        "wake motes"
+      ],
+      "needs": [
+        "fluid-surface movement/collision hook",
+        "deliberate descent input",
+        "leased recipient traversal cleanup"
+      ],
+      "balance": "Proposed uncommon exploration: around 20 mana, longer recovery than emergency rescue. Its narrow water-surface condition permits a useful duration without general flight power."
+    },
+    "gecko_grip": {
+      "family": "Movement and positioning",
+      "traits": [
+        "motion",
+        "polymorph",
+        "transmutation"
+      ],
+      "plan": "Give one consenting creature reliable wall climbing for 15 seconds, with an explicit ceiling policy and no free-air ascent. Clear the movement lease on expiry/dispel and preserve unrelated external climbing abilities.",
+      "scaling_reads": "range: recipient selection; amplify: climbing rate under a cap; area: none.",
+      "closest_native": [
+        "spider_aspect",
+        "angel_wing"
+      ],
+      "difference": "Iron's current Spider Aspect grants poison-conditioned attack reactions and has no climbing mechanic; gecko traversal actually uses wall contact.",
+      "visuals": [
+        "hand/foot contact sparks",
+        "subtle sticky trails",
+        "release motes"
+      ],
+      "needs": [
+        "contact-based climbing hook",
+        "recipient movement synchronization",
+        "safe movement lease release"
+      ],
+      "balance": "Proposed uncommon exploration: roughly 22 mana and 15-second recovery. Wall contact and climbing speed constrain it relative to unrestricted flight."
+    },
+    "enlarge": {
+      "family": "Body and environment",
+      "traits": [
+        "polymorph",
+        "transmutation"
+      ],
+      "plan": "Increase one consenting creature's physical scale to about 1.5 for 12 seconds. Increase contact/reach only where the native combat rules explicitly support it; check available volume and accept the larger body's exposure and tight-space penalties.",
+      "scaling_reads": "amplify: capped scale change; range: recipient reach; area: none, collision bounds derive from the body.",
+      "closest_native": [
+        "pf2_haste",
+        "blessing_of_life"
+      ],
+      "difference": "Changes body geometry, reach and passage clearance rather than merely adding health or movement speed.",
+      "visuals": [
+        "expanding body outline",
+        "growth rings",
+        "ground pressure dust"
+      ],
+      "needs": [
+        "owned scale/reach modifiers",
+        "available-volume validation",
+        "overlapping modifier cleanup",
+        "safe restoration after entering tight spaces"
+      ],
+      "balance": "Proposed uncommon transformation: around 26 mana. Price supported reach and geometry benefits together with exposure; do not grant an unmeasured independent damage multiplier."
+    },
+    "shrink": {
+      "family": "Body and environment",
+      "traits": [
+        "polymorph",
+        "transmutation"
+      ],
+      "plan": "Reduce a consenting creature's physical scale to about 0.5 for 12 seconds, enabling narrower passages while reducing effective reach. Validate restoration space and provide a safe exit if normal size cannot fit.",
+      "scaling_reads": "amplify: capped reduction; range: recipient selection; area: none.",
+      "closest_native": [
+        "pf2_invisibility",
+        "pf2_fleet_step"
+      ],
+      "difference": "Physical clearance and reduced reach change traversal and positioning; it is not an invisibility or speed buff.",
+      "visuals": [
+        "contracting silhouette",
+        "small concentric rings",
+        "restoration warning"
+      ],
+      "needs": [
+        "owned scale/reach modifiers",
+        "collision-aware restoration",
+        "normal-size fallback placement"
+      ],
+      "balance": "Proposed uncommon infiltration: around 24 mana. Reduced reach and restoration constraints are real tradeoffs; no damage immunity from small appearance."
+    },
+    "water_breathing": {
+      "family": "Body and environment",
+      "traits": [
+        "water",
+        "air",
+        "transmutation"
+      ],
+      "plan": "Give up to three consenting nearby creatures 30 seconds of water breathing. Apply the effect once per eligible recipient; respect existing longer effects and ordinary non-water hazards.",
+      "scaling_reads": "amplify: bounded duration; area: group selection radius; range: none in the nearby form.",
+      "closest_native": [
+        "pf2_gentle_landing",
+        "cleanse"
+      ],
+      "difference": "Enables underwater group exploration; it does not heal, cleanse or rescue every environmental damage type.",
+      "visuals": [
+        "gill-like neck shimmer",
+        "small breath motes",
+        "group cast ring"
+      ],
+      "needs": [
+        "ally consent",
+        "group environmental status tests",
+        "external-effect preservation"
+      ],
+      "balance": "Proposed common/uncommon exploration: around 20 mana for three recipients. Group utility and duration are explicitly bounded; source hours are not copied into Minecraft."
+    },
+    "create_water": {
+      "family": "Body and environment",
+      "traits": [
+        "water",
+        "conjuration"
+      ],
+      "plan": "Create a small measured amount of water in a valid targeted receptacle or a single owned water cell. Choose one supported form first; reject unsupported containers, duplication and infinite-flow resource loops.",
+      "scaling_reads": "amplify: bounded quantity; range: receptacle selection; area: none initially.",
+      "closest_native": [
+        "pf2_spout",
+        "pf2_hydraulic_push"
+      ],
+      "difference": "Provides usable water as world utility instead of dealing water-themed damage or knockback.",
+      "visuals": [
+        "coalescing droplets",
+        "filling stream",
+        "surface ripple"
+      ],
+      "needs": [
+        "receptacle/fluid semantics",
+        "finite quantity accounting",
+        "world modification permissions",
+        "water lifetime and flow policy"
+      ],
+      "balance": "Proposed common resource utility: 8–12 mana with a deliberate quantity/cooldown. Resource permanence must be decided before assigning a final cost."
+    },
+    "see_the_unseen": {
+      "family": "Sensing and information",
+      "traits": [
+        "divination",
+        "light"
+      ],
+      "plan": "For 12 seconds, provide the caster with private positional silhouettes of invisible creatures within 16 blocks and current line of sight. Do not strip invisibility or reveal those subjects to other players.",
+      "scaling_reads": "range: sensing distance; area: none; amplify: none until information fidelity is defined.",
+      "closest_native": [
+        "planar_sight",
+        "pf2_revealing_light"
+      ],
+      "difference": "Caster-only information preserves invisibility for everyone else; shared vanilla Glowing or removing invisibility would duplicate existing reveal spells.",
+      "visuals": [
+        "private silhouettes",
+        "caster-only sensing halo",
+        "fade on lost sight"
+      ],
+      "needs": [
+        "recipient-filtered visual synchronization",
+        "invisibility-aware selection",
+        "private observer cleanup"
+      ],
+      "balance": "Proposed uncommon information utility: around 24 mana. Privacy and invisibility eligibility differ from a stronger universal through-wall reveal."
+    },
+    "clairvoyance": {
+      "family": "Sensing and information",
+      "traits": [
+        "divination",
+        "space"
+      ],
+      "plan": "Place a stationary remote viewing sensor at a previously selected valid nearby location for 12 seconds. The caster sees through it while their body remains vulnerable; cancel on damage, logout, level change or explicit release.",
+      "scaling_reads": "range: sensor placement; area: none; amplify: bounded sensor lifetime if tested.",
+      "closest_native": [
+        "planar_sight",
+        "pf2_detect_magic"
+      ],
+      "difference": "Uses a remote viewpoint with exposed caster body rather than showing outlines around the caster or reporting a presence boolean.",
+      "visuals": [
+        "sensor lens",
+        "remote-view frame",
+        "caster channel shimmer"
+      ],
+      "needs": [
+        "safe client camera control",
+        "limited sensor chunk policy",
+        "camera restoration on every cancellation path",
+        "server/client input ownership"
+      ],
+      "balance": "Proposed uncommon/rare reconnaissance: roughly 30 mana, visible channel and 15-second recovery. Information reach and body vulnerability are principal balancing constraints."
+    },
+    "status": {
+      "family": "Sensing and information",
+      "traits": [
+        "life",
+        "divination"
+      ],
+      "plan": "Link up to three consenting allies for 30 seconds. Give only the caster coarse alive/injured/afflicted information and relative direction, under a finite same-dimension range; provide no shared glowing or automatic healing.",
+      "scaling_reads": "range: maximum link distance; area: initial group search; amplify: none in the first coarse-information form.",
+      "closest_native": [
+        "planar_sight",
+        "pf2_read_aura"
+      ],
+      "difference": "Tracks consenting allies' condition at a distance; it neither identifies objects nor marks every nearby creature for everyone.",
+      "visuals": [
+        "caster-only condition sigils",
+        "direction pulses",
+        "link-release fade"
+      ],
+      "needs": [
+        "consent-based target links",
+        "private coarse condition reporting",
+        "range/death/dimension cleanup"
+      ],
+      "balance": "Proposed common/uncommon support information: 16–24 mana. Cap linked subjects and avoid exposing full inventories or hidden opponent state."
+    },
+    "silence": {
+      "family": "Control and boundaries",
+      "traits": [
+        "sonic",
+        "illusion",
+        "abjuration"
+      ],
+      "plan": "Create a small sound-suppression volume around a selected subject for 10 seconds. Suppress only explicitly supported sound events and auditory spell actions; preserve movement, nonauditory actions and spells outside the volume.",
+      "scaling_reads": "area: capped sound volume; range: recipient/placement; amplify: none until supported suppression strength is meaningful.",
+      "closest_native": [
+        "counterspell",
+        "pf2_fear"
+      ],
+      "difference": "A continuing acoustic boundary has selective effects. Interrupting every cast or applying Blindness would replace its defining behavior with existing control.",
+      "visuals": [
+        "subtle boundary ring",
+        "muted sound-wave collapse",
+        "entry ripple"
+      ],
+      "needs": [
+        "explicit auditory action metadata",
+        "supported sound filtering",
+        "boundary crossing/lifetime cleanup",
+        "native/vanilla/modded sound scope decision"
+      ],
+      "balance": "Proposed uncommon selective utility: around 24 mana. Tune against actually affected actions and sounds; never assume universal spell shutdown without an authored rule."
+    },
+    "peaceful_bubble": {
+      "family": "Control and boundaries",
+      "traits": [
+        "illusion",
+        "dream",
+        "abjuration"
+      ],
+      "plan": "Create a traversable privacy boundary around a resting group for 20 seconds. Reduce supported perception/scrying across its edge and protect sleep from the supported disturbance channels; crossing remains possible and damage is not prevented.",
+      "scaling_reads": "area: capped resting-space radius; range: placement; amplify: bounded lifetime.",
+      "closest_native": [
+        "shield",
+        "pocket_dimension",
+        "pf2_invisibility"
+      ],
+      "difference": "Separates perception across a public-world boundary without solid collision, personal invisibility or moving players to a private room.",
+      "visuals": [
+        "soft bubble boundary",
+        "one-way obscuring surface",
+        "sleep motes"
+      ],
+      "needs": [
+        "perception boundary rules",
+        "native sensor filtering",
+        "observer-aware rendering",
+        "sleep disturbance integration"
+      ],
+      "balance": "Proposed rare campsite utility: around 36 mana and 20-second recovery. Limit privacy to supported perception systems, with physical entry and attacks still possible."
+    },
+    "gravity_well": {
+      "family": "Control and boundaries",
+      "traits": [
+        "motion",
+        "space",
+        "transmutation"
+      ],
+      "plan": "At an aimed location within 18 blocks, pull up to six eligible creatures once toward the center with a bounded displacement. No persistent field, periodic damage or freely chosen ally movement; respect a native resistance/consent rule.",
+      "scaling_reads": "amplify: bounded displacement; range: aim reach; area: selection radius.",
+      "closest_native": [
+        "black_hole",
+        "gravity_fissure"
+      ],
+      "difference": "An immediate zero-damage formation collapse adds precise one-shot positioning, whereas existing singularities continually pull and damage over time.",
+      "visuals": [
+        "inward radial arcs",
+        "center contraction ring",
+        "short particle sink"
+      ],
+      "needs": [
+        "bounded one-shot radial displacement",
+        "resistance/ally handling",
+        "terrain collision tests"
+      ],
+      "balance": "Proposed uncommon positioning: roughly 26 mana and 10-second recovery. Validate actual movement rather than impulse alone, especially against walls and vertical hazards."
+    },
+    "repulsion": {
+      "family": "Control and boundaries",
+      "traits": [
+        "force",
+        "abjuration",
+        "motion"
+      ],
+      "plan": "Maintain a three-block boundary around the caster for eight seconds. Eligible hostiles already outside cannot approach through it without satisfying an explicit native resistance rule; inside subjects can leave, allies can pass, and projectiles remain unaffected.",
+      "scaling_reads": "area: capped boundary radius; amplify: resistance strength under a defined rule; range: none in the personal form.",
+      "closest_native": [
+        "gust",
+        "shield",
+        "arcane_shackle"
+      ],
+      "difference": "Controls inward boundary crossing and permits outward passage, instead of delivering a knockback burst, destroying projectiles or tethering a selected creature.",
+      "visuals": [
+        "outward-facing force rings",
+        "boundary pressure ripples",
+        "resistance impact"
+      ],
+      "needs": [
+        "previous-position boundary tracking",
+        "entry-direction validation",
+        "bounded resistance",
+        "collision-safe rejection"
+      ],
+      "balance": "Proposed rare space control: around 42 mana and 18-second recovery. Inside attackers and ranged attacks bypass the boundary, creating meaningful counters."
+    },
+    "containment": {
+      "family": "Control and boundaries",
+      "traits": [
+        "force",
+        "abjuration"
+      ],
+      "plan": "Enclose one eligible creature in a stationary destructible sphere for six seconds. The subject cannot move through the boundary; attacks in either direction encounter one shared barrier durability pool. Use explicit resistance and escape rules.",
+      "scaling_reads": "amplify: shared durability; range: target selection; area: capped enclosure radius based on creature dimensions.",
+      "closest_native": [
+        "arcane_shackle",
+        "root",
+        "ice_tomb"
+      ],
+      "difference": "A two-way destructible enclosure affects movement and attack crossing, rather than just slowing/tethering the subject or protecting the caster.",
+      "visuals": [
+        "force sphere",
+        "shared crack pattern",
+        "break ring"
+      ],
+      "needs": [
+        "solid spherical boundary",
+        "incoming/outgoing attack crossing checks",
+        "shared durability",
+        "occupancy and resistance validation"
+      ],
+      "balance": "Proposed rare capture/cover: around 40 mana and 15-second recovery. Friendly use trades action access for protection; hostile use needs measured counterplay."
+    },
+    "freezing_rain": {
+      "family": "Control and boundaries",
+      "traits": [
+        "water",
+        "ice",
+        "conjuration"
+      ],
+      "plan": "Place a four-block storm patch for eight seconds. Maintain distinct airborne/rain obstruction and ground icing rules: obscure supported long sightlines and reduce traction only on contacted ground. No generic periodic damage is required in the first tactical plan.",
+      "scaling_reads": "area: capped storm footprint; range: placement; amplify: bounded traction penalty if supported.",
+      "closest_native": [
+        "blizzard",
+        "pf2_grease",
+        "pf2_mud_pit"
+      ],
+      "difference": "Combines sightline weather and actual slippery ground contact; another slow/damage field would duplicate existing patches and blizzard.",
+      "visuals": [
+        "rain streaks",
+        "cloud canopy",
+        "ground ice sheen",
+        "foot skids"
+      ],
+      "needs": [
+        "ground contact/friction rules",
+        "supported sightline obscuration",
+        "surface-specific storm lifetime",
+        "client/server movement agreement"
+      ],
+      "balance": "Proposed uncommon/rare terrain control: around 30 mana and 12-second recovery. Tune real traction and information obstruction, with no automatic stacking damage cloud."
+    },
+    "magnetic_attraction": {
+      "family": "Objects and companions",
+      "traits": [
+        "metal",
+        "motion",
+        "transmutation"
+      ],
+      "plan": "Pull a capped set of loose metal items within 12 blocks toward the caster once. Start with an explicit recognized metal-item set; preserve stack identity and existing pickup ownership. Equipped objects need a separate resisted extension.",
+      "scaling_reads": "range: loose-item search; amplify: bounded pull speed; area: none in the radial search form.",
+      "closest_native": [
+        "telekinesis",
+        "throw"
+      ],
+      "difference": "Selects and gathers material-qualified loose objects without gripping a creature, throwing inventory or copying stacks.",
+      "visuals": [
+        "metal-item tethers",
+        "magnetic arc paths",
+        "arrival sparks"
+      ],
+      "needs": [
+        "material-qualified item selection",
+        "item ownership/pickup preservation",
+        "bounded multi-item motion"
+      ],
+      "balance": "Proposed common/uncommon object utility: 12–18 mana. Item count, range and obstructed paths constrain usefulness; no automatic theft from another creature's equipment."
+    },
+    "pet_cache": {
+      "family": "Objects and companions",
+      "traits": [
+        "space",
+        "conjuration"
+      ],
+      "plan": "Temporarily shelter one consenting owned companion in an extradimensional cache and return the same living entity safely on release or expiry. Begin with a short finite duration; preserve UUID, owner, inventory, health and death semantics.",
+      "scaling_reads": "range: companion selection; amplify: bounded cache duration; area: none.",
+      "closest_native": [
+        "pocket_dimension",
+        "summon_horse",
+        "pf2_summon_animal"
+      ],
+      "difference": "Protects and returns an existing willing companion without creating a replacement creature, dismissing it permanently or giving the player a private-room trip.",
+      "visuals": [
+        "companion-sized folding aperture",
+        "cache tether sigil",
+        "safe return ring"
+      ],
+      "needs": [
+        "existing-companion consent/ownership",
+        "finite cross-dimension entity shelter",
+        "identity-preserving safe return",
+        "logout/reload/unload recovery"
+      ],
+      "balance": "Proposed uncommon companion utility: roughly 22 mana and 15-second recovery. The companion cannot attack or act while sheltered; destruction, logout and reload must never duplicate or lose it."
+    },
+    "summon_plant_or_fungus": {
+      "family": "Objects and companions",
+      "traits": [
+        "plant",
+        "wood",
+        "conjuration"
+      ],
+      "plan": "Choose a stationary plant or fungus ally from a small native roster for 20 seconds. First roster roles should differ: a root defender controls adjacent passage, while a restorative fungus supports nearby living allies with a shared finite heal budget.",
+      "scaling_reads": "amplify: selected body's health and authored role outcome; range: planting reach; area: capped support radius.",
+      "closest_native": [
+        "root",
+        "pf2_field_of_life",
+        "pf2_summon_animal"
+      ],
+      "difference": "A selectable destructible autonomous support body exposes a single shared resource pool and stationary counterplay, rather than another generic melee minion or immortal field.",
+      "visuals": [
+        "root growth",
+        "role-specific plant/fungus body",
+        "spore pulses",
+        "wither on dismissal"
+      ],
+      "needs": [
+        "explicit small native roster",
+        "stationary support AI",
+        "shared support budgets",
+        "owned summon/recast cleanup",
+        "original models"
+      ],
+      "balance": "Proposed uncommon/rare support summon: around 34 mana and recovery at least its 20-second lifetime. Define each roster member separately within comparable role value."
+    },
+    "summon_fey": {
+      "family": "Objects and companions",
+      "traits": [
+        "spirit",
+        "illusion",
+        "conjuration"
+      ],
+      "plan": "Choose one finite fey support role for 15 seconds. A first trickster should distract or redirect a single eligible hostile with limited charges; another may provide a bounded ally escape. Do not use the existing vex attacker with a new name.",
+      "scaling_reads": "amplify: body health or supported role strength; range: summon placement; area: limited role radius, explicitly read only where useful.",
+      "closest_native": [
+        "summon_vex",
+        "scapegoat",
+        "pf2_illusory_creature"
+      ],
+      "difference": "A living, vulnerable support ally uses limited tactical tricks; no generic flying damage reskin is accepted as this conversion.",
+      "visuals": [
+        "fey aperture",
+        "original small silhouette",
+        "trick ribbons",
+        "return motes"
+      ],
+      "needs": [
+        "role-specific support AI",
+        "finite trick charges",
+        "explicit fey roster",
+        "original appearance",
+        "owned dismissal"
+      ],
+      "balance": "Proposed uncommon/rare support: roughly 32–40 mana. Price limited autonomous tricks and body survival together; source creature level is not a damage multiplier."
+    },
+    "summon_elemental": {
+      "family": "Objects and companions",
+      "traits": [
+        "conjuration",
+        "earth",
+        "air",
+        "fire",
+        "water"
+      ],
+      "plan": "Offer a small roster of one-at-a-time elemental roles for 15 seconds: earth cover, air interception, water extinguishing or fire pressure. Give each a finite destructible body and comparable total role budget; casting replaces its previous owned body.",
+      "scaling_reads": "amplify: selected body's health and explicitly authored outcome; range: placement; area: only the selected role's radius. Descriptive elements do not activate roles automatically.",
+      "closest_native": [
+        "pf2_summon_animal",
+        "summon_polar_bear",
+        "wisp"
+      ],
+      "difference": "Elemental choice changes terrain/support behavior and counterplay, not just particle color around an identical melee attacker.",
+      "visuals": [
+        "elemental assembly",
+        "distinct role silhouettes",
+        "material motion",
+        "role-specific collapse"
+      ],
+      "needs": [
+        "explicit elemental role selection",
+        "comparable role budgets",
+        "specialized reusable support behavior",
+        "original models",
+        "owned replacement/dismissal"
+      ],
+      "balance": "Proposed rare flexible summon: around 44 mana and recovery no shorter than its 15-second body lifetime. Tune roster versatility as well as each member's output."
+    }
+  },
+  "excluded_overlap": [
+    {
+      "candidate": "Darkness",
+      "reason": "A generic Blindness volume would repeat existing control fields. Revisit only with actual visibility/light-volume behavior."
+    },
+    {
+      "candidate": "Scouting Eye",
+      "reason": "Clairvoyance supplies the first remote-camera design; a mobile reconnaissance sensor can follow once stationary camera ownership is solved."
+    },
+    {
+      "candidate": "Interposing Earth",
+      "reason": "An existing native example already provides its one-hit ward. Directional cover is an upgrade to that identity, not another count-padding entry."
+    },
+    {
+      "candidate": "More elemental bolts and blasts",
+      "reason": "The implemented64 Pathfinder spells and110 Iron adaptations already cover many basic attacks. New names/colors alone do not warrant more native spells."
+    }
+  ]
+}

@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#ebwizardry:spawns_crystal_flower",
-  "features": "ebwizardry:crystal_flower",
-  "step": "vegetal_decoration"
-}

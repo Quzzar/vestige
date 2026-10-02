@@ -1,0 +1,152 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1721",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Thunderstrike",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 363",
+      "rank": 1,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1721"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 1,
+    "vestige:air": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 12
+    },
+    {
+      "type": "mana",
+      "amount": 20
+    },
+    {
+      "type": "cooldown",
+      "ticks": 80
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            24,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                9,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {
+            "damage_type": "minecraft:lightning_bolt"
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 60,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:weakness"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "dfd9ff",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "5594ff",
+            "alpha": 0.85,
+            "width": 0.085,
+            "scale": 1.15,
+            "speed": 2.1,
+            "phase": 0,
+            "count": 7
+          },
+          {
+            "shape": "helix",
+            "color": "e5f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.8049999999999999,
+            "speed": -1.3650000000000002,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "e5f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

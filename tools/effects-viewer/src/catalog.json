@@ -1,0 +1,5941 @@
+[
+  {
+    "id": "vestige:abyssal_shroud",
+    "name": "Abyssal Shroud",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "Dodge up to three incoming hits within three seconds.",
+    "notes": "",
+    "traits": [
+      "vestige:void",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 72
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:acid_orb",
+    "name": "Acid Spit",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Spit acid into an area, weakening victims.",
+    "notes": "Weakness substitutes for source Rend armor reduction.",
+    "traits": [
+      "vestige:acid",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:acupuncture",
+    "name": "Acupuncture",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Five needles converge on the aimed creature and steal life.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:angel_wing",
+    "name": "Angel Wings",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Grant temporary flight; owned cleanup restores prior flight permission.",
+    "notes": "Native flight permissions replace the source elytra-style angel wing movement and visuals.",
+    "traits": [
+      "vestige:holy",
+      "vestige:air",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:arcane_lock",
+    "name": "Arcane Lock",
+    "rarity": "uncommon",
+    "origin": "Native",
+    "description": "Native composed example.",
+    "notes": "",
+    "traits": [
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 20
+      },
+      {
+        "type": "cooldown",
+        "ticks": 40
+      }
+    ]
+  },
+  {
+    "id": "vestige:arcane_shackle",
+    "name": "Arcane Shackle",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A projectile tethers up to three creatures for four seconds.",
+    "notes": "Native backing markers substitute for the source three-chain model.",
+    "traits": [
+      "vestige:ender",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:arrow_volley",
+    "name": "Arrow Volley",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Rain twelve arrows over the aimed area; each creature can take at most four impacts.",
+    "notes": "",
+    "traits": [
+      "vestige:evocation",
+      "vestige:metal",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:ascension",
+    "name": "Ascension",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Launch upward with slow falling while shocking nearby enemies.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:air",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:ball_lightning",
+    "name": "Ball Lightning",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A slow orb leaves a lingering electrical field on impact.",
+    "notes": "Persistent impact field replaces source bouncing orb movement.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:black_hole",
+    "name": "Black Hole",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "A fixed singularity pulls nearby creatures and pulses damage.",
+    "notes": "Pull is toward the field center, with native particles and fixed duration.",
+    "traits": [
+      "vestige:ender",
+      "vestige:void",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 88
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:blaze_storm",
+    "name": "Blaze Storm",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel a stream of ten burning firebolts.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:blessing_of_life",
+    "name": "Blessing of Life",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Heal an aimed allied creature.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 15
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:blight",
+    "name": "Blight",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Halve the victim’s incoming healing and apply poison.",
+    "notes": "",
+    "traits": [
+      "vestige:curse",
+      "vestige:poison",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:blizzard",
+    "name": "Blizzard",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A lingering blizzard freezes and slows creatures inside it.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 46
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:blood_needles",
+    "name": "Blood Needles",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A fan of five needles transfers a quarter of damage to the caster.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:blood_slash",
+    "name": "Blood Slash",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A piercing slash steals life from each struck creature.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:blood_step",
+    "name": "Blood Step",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Short teleport followed by invisibility and cleared pursuit.",
+    "notes": "Aim-point teleport; entity-behind positioning is available through the teleport action but is not auto-selected.",
+    "traits": [
+      "vestige:blood",
+      "vestige:teleportation",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:burning_dash",
+    "name": "Burning Dash",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Dash forward, burning each contacted creature once.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:chain_creeper",
+    "name": "Chain Creeper",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "An initial blast marks victims; their deaths propagate bounded nearby blasts.",
+    "notes": "Native death-bound blasts replace the source thrown creeper-head swarm.",
+    "traits": [
+      "vestige:evocation",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:chain_lightning",
+    "name": "Chain Lightning",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Lightning jumps between four visible nearby creatures.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 32
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:charge",
+    "name": "Charge",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A ten-second charge grants movement and mining speed.",
+    "notes": "Native status bonuses replace source school-power and attack-speed modifiers.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:motion",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:cleanse",
+    "name": "Cleanse",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Remove harmful status effects from nearby allies.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:cone_of_cold",
+    "name": "Cone of Cold",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel a freezing cone that slows victims.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:counterspell",
+    "name": "Counterspell",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Interrupt casting, dispel attached native effects, remove effects, or banish summons.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:devour",
+    "name": "Devour",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A bite pulls and drains its victim; a killing bite grants temporary maximum health.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:necromancy",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:divine_smite",
+    "name": "Divine Smite",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A holy melee strike adds half the held weapon’s damage.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:dragon_breath",
+    "name": "Dragon Breath",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel a damaging dragon cone.",
+    "notes": "Native pulses replace residual pools; secondary per-victim explosions are removed to prevent density multiplying damage.",
+    "traits": [
+      "vestige:ender",
+      "vestige:draconic",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:earthquake",
+    "name": "Earthquake",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A ground field repeatedly damages and slows creatures.",
+    "notes": "",
+    "traits": [
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 48
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:echoing_strikes",
+    "name": "Echoing Strikes",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Three ordinary attacks within ten seconds produce an extra hit worth 50% of their damage.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:evocation",
+      "vestige:time",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:eldritch_blast",
+    "name": "Eldritch Blast",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Three separately aimed piercing beams share a recast session with five seconds to aim each shot.",
+    "notes": "",
+    "traits": [
+      "vestige:void",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:electrocute",
+    "name": "Electrocute",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel an electrical cone.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:evasion",
+    "name": "Evasion",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A one-charge dodge protects against the next incoming hit for five seconds.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:abjuration",
+      "vestige:teleportation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:fang_strike",
+    "name": "Fang Strike",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A line of eight ground eruptions strikes ahead.",
+    "notes": "Particle eruptions replace fang models; authored damage avoids vanilla fang double hits.",
+    "traits": [
+      "vestige:evocation",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:fang_swirl",
+    "name": "Fang Swirl",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A ring of eruptions appears at the aimed position.",
+    "notes": "Uses particle eruptions instead of fang models; each creature is hit once.",
+    "traits": [
+      "vestige:conjuration",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:fang_ward",
+    "name": "Fang Ward",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A ring of ground eruptions defends the caster.",
+    "notes": "Uses native eruption particles instead of fang models; each creature is hit once.",
+    "traits": [
+      "vestige:evocation",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:fire_arrow",
+    "name": "Fire Arrow",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "An explosive burning arrow.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:fire_breath",
+    "name": "Fire Breath",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel a cone of damaging flame.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:fireball",
+    "name": "Fireball",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A charged fireball explodes on impact.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:firebolt",
+    "name": "Firebolt",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "A fast burning bolt.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 40
+      }
+    ]
+  },
+  {
+    "id": "vestige:firecracker",
+    "name": "Firecracker",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "A lobbed firework bursts with damage and knockback.",
+    "notes": "",
+    "traits": [
+      "vestige:evocation",
+      "vestige:force",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 14
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:firefly_swarm",
+    "name": "Firefly Swarm",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A damaging swarm follows its victim and spreads on death through two generations.",
+    "notes": "Native following particles replace individual firefly bodies.",
+    "traits": [
+      "vestige:plant",
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:flaming_barrage",
+    "name": "Flaming Barrage",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Five separately aimed fireballs share one recast session with six seconds to aim each shot.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:flaming_strike",
+    "name": "Flaming Strike",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A weapon-scaled burning melee sweep.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:force_arrow",
+    "name": "Force Arrow",
+    "rarity": "common",
+    "origin": "Native",
+    "description": "Native composed example.",
+    "notes": "",
+    "traits": [
+      "vestige:force",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 14
+      },
+      {
+        "type": "cooldown",
+        "ticks": 40
+      }
+    ]
+  },
+  {
+    "id": "vestige:fortify",
+    "name": "Fortify",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Up to four nearby allies gain four absorption HP for ten seconds.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:abjuration",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:frost_step",
+    "name": "Frost Step",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Teleport away while a freezing decoy field remains at the departure point.",
+    "notes": "Residual frost field replaces the source destructible ice clone and shatter shards.",
+    "traits": [
+      "vestige:ice",
+      "vestige:teleportation",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 140
+      }
+    ]
+  },
+  {
+    "id": "vestige:frostbite",
+    "name": "Frostbite",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Three ordinary attacks freeze targets; marked deaths shatter into nearby enemies.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:frostwave",
+    "name": "Frostwave",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A radial frost blast repels creatures.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:gluttony",
+    "name": "Gluttony",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Up to three foods consumed within ten seconds convert nutrition into native spell energy, capped at 200.",
+    "notes": "Temporary actor energy is a runtime resource seam; no discovery or progression system is installed.",
+    "traits": [
+      "vestige:life",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:gravity_fissure",
+    "name": "Gravity Fissure",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A moving singularity drags creatures along its path.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:void",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:greater_heal",
+    "name": "Greater Heal",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Restore up to twelve HP to the caster after a charge.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 40
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:guiding_bolt",
+    "name": "Guiding Bolt",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A bolt marks its target and bends nearby projectiles toward it.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:light",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:gust",
+    "name": "Gust",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A broad gust damages and pushes enemies away.",
+    "notes": "",
+    "traits": [
+      "vestige:air",
+      "vestige:motion",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:haste",
+    "name": "Haste",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Up to four nearby allies gain mining and movement speed.",
+    "notes": "Custom cast-speed bonus is outside the native status model.",
+    "traits": [
+      "vestige:holy",
+      "vestige:time",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 500
+      }
+    ]
+  },
+  {
+    "id": "vestige:heal",
+    "name": "Heal",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Restore a moderate amount of health to the caster.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 15
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:healing_circle",
+    "name": "Healing Circle",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A persistent circle heals up to four allied creatures inside it.",
+    "notes": "",
+    "traits": [
+      "vestige:holy",
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 48
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:heartstop",
+    "name": "Heartstop",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "Defer damage for six seconds, then suffer half the accumulated amount.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:abjuration",
+      "vestige:time",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 80
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:heat_surge",
+    "name": "Heat Surge",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "An outward burst burns and repels nearby enemies.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:ice_block",
+    "name": "Ice Block",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Throw a heavy block of ice that bursts on impact.",
+    "notes": "Projectile delivery substitutes for the source falling physical block entity.",
+    "traits": [
+      "vestige:ice",
+      "vestige:conjuration",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:ice_spikes",
+    "name": "Ice Spikes",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A ground line of eight eruptions freezes creatures.",
+    "notes": "Native particles replace ice spike models; each creature is hit once.",
+    "traits": [
+      "vestige:ice",
+      "vestige:earth",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:ice_tomb",
+    "name": "Ice Tomb",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A protective tomb heals while immobilizing the caster; the first hit breaks it.",
+    "notes": "A native attached ward replaces the source mounted tomb body.",
+    "traits": [
+      "vestige:ice",
+      "vestige:abjuration",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:icicle",
+    "name": "Icicle",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "A fast icicle freezes its victim.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 14
+      },
+      {
+        "type": "cooldown",
+        "ticks": 50
+      }
+    ]
+  },
+  {
+    "id": "vestige:interposing_earth",
+    "name": "Interposing Earth",
+    "rarity": "common",
+    "origin": "Native",
+    "description": "Native composed example.",
+    "notes": "",
+    "traits": [
+      "vestige:earth",
+      "vestige:stone",
+      "vestige:abjuration",
+      "vestige:conjuration",
+      "vestige:amplify"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:invisibility",
+    "name": "Invisibility",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Turn invisible and clear pursuit; attacking ends the effect.",
+    "notes": "",
+    "traits": [
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:lightning_bolt",
+    "name": "Lightning Bolt",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Strike the aimed point with an electrical burst.",
+    "notes": "Native particles/damage avoid vanilla lightning igniting unrelated terrain.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:lightning_lance",
+    "name": "Lightning Lance",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A piercing lightning projectile.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:lob_creeper",
+    "name": "Lob Creeper",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A gravity-driven creeper bomb damages an area.",
+    "notes": "",
+    "traits": [
+      "vestige:evocation",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:magic_arrow",
+    "name": "Magic Arrow",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Charged piercing arrow.",
+    "notes": "",
+    "traits": [
+      "vestige:force",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:magic_missile",
+    "name": "Magic Missile",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Homing missile steers toward the aimed creature.",
+    "notes": "",
+    "traits": [
+      "vestige:force",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 50
+      }
+    ]
+  },
+  {
+    "id": "vestige:magma_bomb",
+    "name": "Magma Bomb",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A lobbed bomb leaves a damaging magma field.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:oakskin",
+    "name": "Oakskin",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Reduce up to six ordinary non-fire hits by 25% within ten seconds.",
+    "notes": "Source fire vulnerability and bespoke bark visuals are deferred.",
+    "traits": [
+      "vestige:wood",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_air_bubble",
+    "name": "Air Bubble",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Breathe through water or suffocation until safe air resumes, with a five-second maximum.",
+    "notes": "A self-cast conditional rescue replaces a reaction targeting another creature. Only drowning/suffocation is prevented; ordinary attacks are unaffected.",
+    "traits": [
+      "vestige:air",
+      "vestige:life",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_arctic_rift",
+    "name": "Arctic Rift",
+    "rarity": "mythic",
+    "origin": "Pathfinder",
+    "description": "A wide cold rift deals twenty-two HP and heavily slows at most six enemies.",
+    "notes": "Freezing/Slowness replace enfeebling, slowed actions and exact line geometry; no physical terrain rift.",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 32
+      },
+      {
+        "type": "mana",
+        "amount": 64
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_bind_undead",
+    "name": "Bind Undead",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Temporarily control one existing undead mob for eight seconds.",
+    "notes": "Finite ownership replaces permanent obedience and spoken orders; players and native summons cannot be claimed. Existing AI follows/fights for the caster.",
+    "traits": [
+      "vestige:death",
+      "vestige:necromancy",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 16
+      },
+      {
+        "type": "mana",
+        "amount": 34
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_breathe_fire",
+    "name": "Breathe Fire",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Breathe a short cone of fire into at most four enemies.",
+    "notes": "A single native cone replaces saves and damage dice; burning is deterministic on contact.",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_cataclysm",
+    "name": "Cataclysm",
+    "rarity": "mythic",
+    "origin": "Pathfinder",
+    "description": "Channel four elemental surges into one fixed area for up to thirty-two direct HP per creature.",
+    "notes": "Four explicit native phases replace six simultaneous damage categories, massive terrain effects and flying-creature exceptions.",
+    "traits": [
+      "vestige:earth",
+      "vestige:fire",
+      "vestige:ice",
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 40
+      },
+      {
+        "type": "mana",
+        "amount": 90
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_caustic_blast",
+    "name": "Caustic Blast",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Splash acid over a small three-target area.",
+    "notes": "Three direct HP and brief Weakness replace acid dice and critical persistent damage; native damage is magic.",
+    "traits": [
+      "vestige:acid",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 30
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_chain_lightning",
+    "name": "Chain Lightning",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Lightning jumps through up to six visible enemies for twelve HP each.",
+    "notes": "A six-victim no-repeat chain replaces save-based chain continuation; each jump requires visibility.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_cinder_swarm",
+    "name": "Cinder Swarm",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A following firefly swarm burns its captured creature for ten direct HP over five seconds and briefly blinds it.",
+    "notes": "Only the firefly-inspired variant, with a breakable marker and fixed five pulses. The ant variant, insect models, saves and forced movement are omitted; nearby bystanders take no pulse damage.",
+    "traits": [
+      "vestige:fire",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 140
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_clairvoyance",
+    "name": "Clairvoyance",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "See through a stationary sensor up to twenty blocks away for eight seconds; damage immediately ends the view.",
+    "notes": "Client camera changes while the server body stays vulnerable. Fixed sensor facing and normal tracked chunks replace arbitrary remote locations/panning; casting and interaction are blocked while viewing.",
+    "traits": [
+      "vestige:divination",
+      "vestige:space",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 32
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_collective_transposition",
+    "name": "Collective Transposition",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Move three willing nearby allies into a supported formation at the aimed destination.",
+    "notes": "Automatic fixed formation replaces independently chosen destinations. Every destination validates before any creature moves; players opt in through the development consent control.",
+    "traits": [
+      "vestige:space",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_containment",
+    "name": "Containment",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Enclose the aimed enemy within a two-way movement boundary for five seconds; outside hits spend a shared sixteen-HP pool.",
+    "notes": "Movement boundary and finite outside-attack durability replace an invulnerable tabletop sphere. It is traversable after breaking; inside attacks and terrain are not blocked.",
+    "traits": [
+      "vestige:force",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_create_water",
+    "name": "Create Water",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Add one water layer to an aimed cauldron.",
+    "notes": "A finite Minecraft utility volume replaces a gallon pool. Full cauldrons fail; no fluid source block, item duplication or damaging water attack.",
+    "traits": [
+      "vestige:water",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_creation",
+    "name": "Creation",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Assemble a temporary wooden cover, step or platform for twenty seconds.",
+    "notes": "Finite presets replace arbitrary mundane objects. Geometry has collision and durability but produces no inventory items, containers or loot.",
+    "traits": [
+      "vestige:wood",
+      "vestige:plant",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 30
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_detect_magic",
+    "name": "Detect Magic",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Privately report whether native manifestations or equipped enchanted items are within sixteen blocks.",
+    "notes": "Presence only, from loaded native state/equipped items. It does not inspect other mods, inventories or blocks, reveal hidden locations, or unlock discovery/progression.",
+    "traits": [
+      "vestige:mind",
+      "vestige:divination",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 4
+      },
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_divine_lance",
+    "name": "Divine Lance",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Strike one creature with a five-HP spiritual lance.",
+    "notes": "Spirit damage uses native magic; deity sanctification and tabletop immunities are not imported.",
+    "traits": [
+      "vestige:spirit",
+      "vestige:holy",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_eclipse_burst",
+    "name": "Eclipse Burst",
+    "rarity": "mythic",
+    "origin": "Pathfinder",
+    "description": "An eclipse blast deals twenty HP and briefly blinds and weakens up to six enemies.",
+    "notes": "One cold impact replaces cold plus void rolls; undead take the cold component, with no permanent blindness or darkness terrain.",
+    "traits": [
+      "vestige:ice",
+      "vestige:void",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 30
+      },
+      {
+        "type": "mana",
+        "amount": 62
+      },
+      {
+        "type": "cooldown",
+        "ticks": 280
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_electric_arc",
+    "name": "Electric Arc",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Arc to the aimed creature and at most one nearby enemy, dealing four HP to each.",
+    "notes": "A visible four-block jump replaces independently selected Pathfinder targets; no Reflex save or heightening.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 24
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_enfeeble",
+    "name": "Enfeeble",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Weaken one creature’s melee attacks for six seconds.",
+    "notes": "Weakness II replaces save-dependent enfeebled degrees; no damage.",
+    "traits": [
+      "vestige:life",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_enlarge",
+    "name": "Enlarge",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Become physically one-and-a-half size for eight seconds, with one extra block of player reach.",
+    "notes": "Actual synced body scale and explicit reach replace tabletop size categories and weapon damage bonuses; occupied growth is rejected.",
+    "traits": [
+      "vestige:polymorph",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_falling_stars",
+    "name": "Falling Stars",
+    "rarity": "mythic",
+    "origin": "Pathfinder",
+    "description": "Channel twelve falling stars; each creature can take at most six five-HP impacts.",
+    "notes": "Rain projectiles replace four independently located elemental bursts; shared hit caps prevent overlap multiplication.",
+    "traits": [
+      "vestige:fire",
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 36
+      },
+      {
+        "type": "mana",
+        "amount": 70
+      },
+      {
+        "type": "cooldown",
+        "ticks": 360
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_false_vitality",
+    "name": "False Vitality",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Gain four temporary absorption HP for eight seconds.",
+    "notes": "Vanilla Absorption I replaces tabletop temporary HP; recasts follow vanilla status replacement instead of adding pools.",
+    "traits": [
+      "vestige:life",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_fear",
+    "name": "Fear",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Frighten one enemy, reducing its melee strength and movement briefly.",
+    "notes": "Weakness II and Slowness replace frightened values and critical fleeing; native AI does not run a fear state.",
+    "traits": [
+      "vestige:emotion",
+      "vestige:mind",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_field_of_life",
+    "name": "Field of Life",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A six-second life field heals living creatures and hurts undead each second.",
+    "notes": "Indiscriminate living healing/undead damage is retained; no sustain action, restores HP rather than limbs.",
+    "traits": [
+      "vestige:life",
+      "vestige:holy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 220
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_figment",
+    "name": "Figment",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A stationary four-second light-and-sound figment draws nearby hostile mobs toward its one-hit marker.",
+    "notes": "A fixed wisp/lure replaces arbitrary images or sounds, skill checks and per-viewer disbelief. It deals no damage and can be struck to end it.",
+    "traits": [
+      "vestige:mind",
+      "vestige:illusion",
+      "vestige:sonic",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 4
+      },
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_fire_shield",
+    "name": "Fire Shield",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "An eight-second fire shield blocks three hits and burns nearby attackers, with limited freezing resistance.",
+    "notes": "Automatic finite reactions replace choosing Shield Block and a physical held shield; only Minecraft freezing-tagged damage counts as cold.",
+    "traits": [
+      "vestige:fire",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 34
+      },
+      {
+        "type": "cooldown",
+        "ticks": 220
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_fireball",
+    "name": "Fireball",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A fireball bursts for fourteen direct HP and burning against up to five enemies.",
+    "notes": "Native capped hostile-only blast differs from indiscriminate tabletop area damage; no terrain destruction.",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_fleet_step",
+    "name": "Fleet Step",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Gain Speed III for five seconds.",
+    "notes": "Vanilla movement speed replaces the fixed tabletop speed bonus.",
+    "traits": [
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_flicker",
+    "name": "Flicker",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "For six seconds, reduce four nonmagical hits by a quarter and attempt a short safe random teleport every two seconds.",
+    "notes": "Native magical damage bypasses the finite mitigation, a broader exception than source force. Unsafe random destinations skip that pulse; no phased entity state or unseen geometry.",
+    "traits": [
+      "vestige:space",
+      "vestige:teleportation",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_floating_flame",
+    "name": "Floating Flame",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A fixed floating flame pulses fifteen direct HP over five seconds to each lingering enemy.",
+    "notes": "A stationary field replaces sustained manual movement; no tabletop action-per-round sustain.",
+    "traits": [
+      "vestige:fire",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_force_barrage",
+    "name": "Force Barrage",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Three homing force bolts deliver up to nine HP to an aimed enemy.",
+    "notes": "Fixed three-bolt version replaces one/two/three-action options; native projectiles can miss or be blocked.",
+    "traits": [
+      "vestige:force",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_freezing_rain",
+    "name": "Freezing Rain",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "An eight-second rain patch makes moving grounded creatures slide and obscures native perception across its edge.",
+    "notes": "A velocity traction approximation and scoped creature rendering replace general weather, tabletop concealment and all block visibility; no terrain freezing or damage.",
+    "traits": [
+      "vestige:ice",
+      "vestige:water",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_frostbite",
+    "name": "Frostbite",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Chill an aimed creature for four HP and briefly weaken it.",
+    "notes": "Weakness on hit replaces critical-save physical vulnerability; vanilla freezing replaces cold presentation.",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_gecko_grip",
+    "name": "Gecko Grip",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Climb when touching a wall for eight seconds; crouch to release the grip.",
+    "notes": "Client/server wall-contact velocity replaces arbitrary surface adhesion and ceiling crawling; no general flight.",
+    "traits": [
+      "vestige:plant",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_gentle_breeze",
+    "name": "Gentle Breeze",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A six-second restorative field heals each living visitor six HP once after three seconds of uninterrupted sampled occupancy.",
+    "notes": "A missing five-tick sample resets dwell; reentry cannot earn a second heal in the same cast. Undead are excluded; medical skill, affliction saves and temperature systems are omitted.",
+    "traits": [
+      "vestige:air",
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_gentle_landing",
+    "name": "Gentle Landing",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Gain five seconds of Slow Falling.",
+    "notes": "A self buff replaces the falling-target reaction; must be cast before impact.",
+    "traits": [
+      "vestige:air",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_glass_shield",
+    "name": "Glass Shield",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A three-second glass ward blocks three HP once and lashes a nearby attacker for three HP.",
+    "notes": "Automatic mitigation and magic retaliation replace raising/blocking a glass shield, saves, and critical shards; terrain is unchanged.",
+    "traits": [
+      "vestige:glass",
+      "vestige:force",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_gouging_claw",
+    "name": "Gouging Claw",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A short claw sweep wounds one enemy for six HP and a brief lingering injury.",
+    "notes": "Wither substitutes for persistent bleed; no weapon equipment change or attack roll.",
+    "traits": [
+      "vestige:polymorph",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_gravity_well",
+    "name": "Gravity Well",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Collapse the formation of at most four enemies toward one aimed anchor with a single inward impulse.",
+    "notes": "One zero-damage native impulse replaces Reflex saves and forced grid distance; no persistent vortex or repeating damage.",
+    "traits": [
+      "vestige:force",
+      "vestige:space",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_grease",
+    "name": "Grease",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A four-second patch slows and nudges up to three hostile creatures each half-second.",
+    "notes": "Slowness and small caster-relative impulses approximate slippery footing. No prone state, real friction changes, object greasing or permanent blocks.",
+    "traits": [
+      "vestige:oil",
+      "vestige:earth",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 6
+      },
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_grim_tendrils",
+    "name": "Grim Tendrils",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A narrow void line damages four creatures at most, leaving brief lingering injuries.",
+    "notes": "Wither replaces persistent bleed; eligible undead are excluded from void damage.",
+    "traits": [
+      "vestige:void",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_harm",
+    "name": "Harm",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A ranged void pulse heals undead for eight HP or harms one living creature for eight HP.",
+    "notes": "One ranged form only; eligibility uses the undead tag rather than a tabletop negative-healing rule. No area/touch variants or automatic heightening.",
+    "traits": [
+      "vestige:void",
+      "vestige:death",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_haste",
+    "name": "Haste",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Gain Speed II and Haste II for eight seconds.",
+    "notes": "Movement and mining speed replace a restricted extra action; no extra spell casts or attack timer bypass.",
+    "traits": [
+      "vestige:time",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_heal",
+    "name": "Heal",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A ranged vitality pulse heals one living creature for eight HP or harms undead for eight HP.",
+    "notes": "One ranged form only; no action-count variants, area form, self fallback, saves or automatic heightening. Living enemies can be healed.",
+    "traits": [
+      "vestige:life",
+      "vestige:holy",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_hydraulic_push",
+    "name": "Hydraulic Push",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A water jet deals seven HP and forcefully pushes one creature.",
+    "notes": "Native velocity replaces fixed-grid push distance and critical doubling.",
+    "traits": [
+      "vestige:water",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_ignition",
+    "name": "Ignition",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Burn one aimed creature; six direct HP within three blocks, four farther away, plus a short burn.",
+    "notes": "Melee reach gives a deterministic bonus; normal hits burn rather than using a critical-hit gate.",
+    "traits": [
+      "vestige:fire",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_illusory_creature",
+    "name": "Illusory Creature",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A stationary one-hit wolf-shaped decoy distracts hostile mobs for at most six seconds.",
+    "notes": "Uses a silent inert vanilla wolf silhouette with no attacks; movement, belief damage and per-observer disbelief are omitted. The proxy is targetable, not a fully nonphysical image.",
+    "traits": [
+      "vestige:mind",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_illusory_object",
+    "name": "Illusory Object",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Show a stationary, non-solid object silhouette for ten seconds.",
+    "notes": "An original translucent crate-sized preset replaces unrestricted object modeling; collision and resources stay unchanged and an attack removes the fragile image.",
+    "traits": [
+      "vestige:illusion",
+      "vestige:dream",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_invisibility",
+    "name": "Invisibility",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Stay invisible for eight seconds; dealing committed damage ends this cast and its two-tick refresh.",
+    "notes": "Uses vanilla invisibility: armor/held items remain visible. Only committed damage ends the buff; failed swings and other hostile actions are not detected. External longer invisibility is not removed.",
+    "traits": [
+      "vestige:shadow",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_item_facade",
+    "name": "Item Facade",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Overlay an illusory pristine-condition label and held-item glimmer for ten seconds.",
+    "notes": "The initial native facade is a clearly labeled cosmetic tooltip/glimmer, not a full model replacement. Actual item identity, durability, enchantments and inventory data remain authoritative.",
+    "traits": [
+      "vestige:illusion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_lightning_bolt",
+    "name": "Lightning Bolt",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A narrow lightning line deals fourteen HP to up to five enemies.",
+    "notes": "Native line and target cap replace Reflex saves and uncapped grid line; no terrain ignition.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 16
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 140
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_magic_passage",
+    "name": "Magic Passage",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Open a two-high, three-deep ordinary-stone passage for twelve seconds, then restore unchanged air cells.",
+    "notes": "Fixed tunnel geometry replaces arbitrary Pathfinder passage dimensions. Ores/containers are excluded; exit and permissions validate first, occupants move to a checked exit before restoration.",
+    "traits": [
+      "vestige:space",
+      "vestige:stone",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_magnetic_attraction",
+    "name": "Magnetic Attraction",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Pull up to eight nearby loose metal stacks toward your hand.",
+    "notes": "A concrete ingot/nugget/raw-metal whitelist replaces arbitrary metal-material rules. Existing item entities/stacks remain intact; no equipped-item theft or copying.",
+    "traits": [
+      "vestige:metal",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_mirror_image",
+    "name": "Mirror Image",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Three copies of the caster’s live model and equipment each absorb up to five HP of an eligible direct incoming attack.",
+    "notes": "Finite deterministic mitigation replaces random target redirection. Projectiles, environmental fire and explosions bypass this initial direct-melee form; images do not block area damage.",
+    "traits": [
+      "vestige:illusion",
+      "vestige:light",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_mud_pit",
+    "name": "Mud Pit",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A six-second mud patch strongly slows at most four hostile creatures, fading shortly after they leave.",
+    "notes": "Slowness III approximates difficult terrain; existing blocks and actual friction are unchanged. A destructible marker owns the finite field.",
+    "traits": [
+      "vestige:earth",
+      "vestige:water",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 140
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_needle_darts",
+    "name": "Needle Darts",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Three needles converge on one aimed creature for at most six direct HP.",
+    "notes": "Iron-looking delivery replaces held-metal material selection, weaknesses, and critical bleed; no material is consumed.",
+    "traits": [
+      "vestige:metal",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_peaceful_bubble",
+    "name": "Peaceful Bubble",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A traversable ten-second bubble conceals creatures across its edge from native targeting and rendering.",
+    "notes": "Scoped creature privacy replaces universal sound, weather, scrying and shelter rules. No damage prevention, solid wall, private-room teleport or general sleep guarantee.",
+    "traits": [
+      "vestige:dream",
+      "vestige:illusion",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_pet_cache",
+    "name": "Pet Cache",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Shelter your existing tame companion for ten seconds, returning the same UUID and inventory afterward.",
+    "notes": "Owned non-riding, non-leashed companions only. Uses an isolated private-dimension cell and persistent emergency-return journal; an unavailable private world rejects the cast.",
+    "traits": [
+      "vestige:space",
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 20
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_protection",
+    "name": "Protection",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Reduce four incoming hits by twenty percent within eight seconds.",
+    "notes": "Percentage damage prevention replaces AC and saving-throw bonuses; no alignment filtering.",
+    "traits": [
+      "vestige:holy",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_protector_tree",
+    "name": "Protector Tree",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Grow an oak tree from real temporary logs and leaves. Its sixteen-HP pool protects three consenting adjacent allies for ten seconds.",
+    "notes": "Loaded supported air and room for the entire canopy are required. Recipients are captured on placement and must stay within three blocks. Each missing trunk removes a quarter of the maximum protection; damage spends the shared pool. Only surviving owned blocks retract at expiry; edits, replacements and holes are preserved. No log or leaf loot.",
+    "traits": [
+      "vestige:plant",
+      "vestige:wood",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_puff_of_poison",
+    "name": "Puff of Poison",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A close poison puff deals three HP and poisons one creature for three seconds.",
+    "notes": "Native magic impact plus vanilla Poison replaces poison dice and critical persistent damage; vanilla immunities apply to the status.",
+    "traits": [
+      "vestige:poison",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 30
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_read_aura",
+    "name": "Read Aura",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "After two seconds of examination, privately report whether the currently held object is enchanted.",
+    "notes": "Main-hand item at completion is the inspection target; only vanilla enchantment presence is recognized. No full item identification, stored discovery or observer-wide result.",
+    "traits": [
+      "vestige:mind",
+      "vestige:divination",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 40
+      },
+      {
+        "type": "mana",
+        "amount": 10
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_regenerate",
+    "name": "Regenerate",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Regenerate twelve HP over eight seconds unless fire damage ends the effect.",
+    "notes": "Fire permanently ends this cast; source acid suppression, regrowing anatomy and death prevention are simplified.",
+    "traits": [
+      "vestige:life",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 16
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 260
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_repulsion",
+    "name": "Repulsion",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A six-second boundary rejects enemies crossing inward, while allies and outgoing movement pass.",
+    "notes": "A stationary boundary replaces save-based aura movement restrictions. Creatures already inside remain; ranged attacks pass. Position changes crossing the sampled boundary are rejected at the next tick.",
+    "traits": [
+      "vestige:force",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_resist_energy",
+    "name": "Resist Energy",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Halve six incoming fire hits within ten seconds.",
+    "notes": "This baseline selects fire; acid/cold/electricity/sonic choices are deferred. Uses Minecraft fire damage tags.",
+    "traits": [
+      "vestige:fire",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 220
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_revealing_light",
+    "name": "Revealing Light",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Reveal up to four creatures with Glowing and strip their invisibility.",
+    "notes": "Glowing/short Weakness replace concealed, dazzled and blinded degrees; does not create a true anti-stealth perimeter.",
+    "traits": [
+      "vestige:light",
+      "vestige:divination",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_rust_cloud",
+    "name": "Rust Cloud",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A five-second abrasive cloud deals at most ten direct HP per creature and briefly obscures four hostile occupants.",
+    "notes": "Blindness approximates obscured sight. Metal-specific expansion/weakness and item rust are omitted; no durability or terrain changes.",
+    "traits": [
+      "vestige:metal",
+      "vestige:air",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 16
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_scatter_scree",
+    "name": "Scatter Scree",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "An initial three-HP stone burst leaves a three-second slowing patch.",
+    "notes": "A particle field replaces persistent solid rubble and difficult-terrain blocks; does not change terrain.",
+    "traits": [
+      "vestige:earth",
+      "vestige:stone",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 30
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_see_the_unseen",
+    "name": "See the Unseen",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Privately outline nearby invisible creatures for ten seconds.",
+    "notes": "Caster-only silhouettes replace tabletop concealed checks; no invisibility removal or public glowing. Native perception boundaries still apply.",
+    "traits": [
+      "vestige:light",
+      "vestige:divination",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 20
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_shape_stone",
+    "name": "Shape Stone",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Capture one ordinary stone cell; recast within five seconds to move it to a nearby empty destination.",
+    "notes": "One permanent volume-conserving cell move replaces freeform reshaping. At most six blocks between ends; no ore, containers, drops, occupied destination or invented stone.",
+    "traits": [
+      "vestige:earth",
+      "vestige:stone",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_share_life",
+    "name": "Share Life",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Transfer half an ally’s incoming damage to yourself, up to eight actual HP total, while preserving one HP.",
+    "notes": "Only actual caster health/absorption loss reduces the original pending hit. Transfer cannot recursively transfer again; same dimension, consent and distance required.",
+    "traits": [
+      "vestige:life",
+      "vestige:blood",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_shield",
+    "name": "Shield",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A three-second ward reduces the next incoming hit by three HP.",
+    "notes": "Automatic one-hit reduction substitutes for AC, a chosen Shield Block reaction, and the tabletop recast lockout.",
+    "traits": [
+      "vestige:force",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_shrink",
+    "name": "Shrink",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Become physically half size for eight seconds, with reduced player reach.",
+    "notes": "Actual body clearance replaces tabletop Tiny rules. Expiry removes only its owned modifiers and searches above an obstructed restoring body; no stealth immunity.",
+    "traits": [
+      "vestige:polymorph",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_silence",
+    "name": "Silence",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Suppress positional sounds and explicitly vocal native delivery within a three-block region for eight seconds.",
+    "notes": "Scoped sound emission/playback and an executable utterance gate replace tabletop verbal components. Existing ambient loops and non-native spell systems are outside the gate.",
+    "traits": [
+      "vestige:sonic",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_slashing_gust",
+    "name": "Slashing Gust",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A narrow gust cuts at most two creatures in its path.",
+    "notes": "A narrow two-target corridor replaces independent attack rolls and one/two-free-hand selection.",
+    "traits": [
+      "vestige:air",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 24
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_slow",
+    "name": "Slow",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Slow one creature’s movement and block work for five seconds.",
+    "notes": "Slowness III and Mining Fatigue II replace action loss; casting channels are not automatically interrupted.",
+    "traits": [
+      "vestige:time",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_soothe",
+    "name": "Soothe",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Heal seven HP and remove Weakness from yourself.",
+    "notes": "Self healing and removing Weakness replace touch healing and the mental-save bonus.",
+    "traits": [
+      "vestige:emotion",
+      "vestige:life",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 90
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_spirit_blast",
+    "name": "Spirit Blast",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A spiritual detonation strikes up to five enemies for sixteen HP.",
+    "notes": "Native magic can strike ordinary living bodies; spirit-only interactions and possession-specific effects are deferred.",
+    "traits": [
+      "vestige:spirit",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 24
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_spiritual_armament",
+    "name": "Spiritual Armament",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A spirit weapon follows one target for ten one-and-a-half-HP strikes.",
+    "notes": "A target-following field replaces attack rolls, a shaped weapon, and manual sustained attacks.",
+    "traits": [
+      "vestige:spirit",
+      "vestige:holy",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_spout",
+    "name": "Spout",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "An aimed water spout damages and lifts up to three creatures.",
+    "notes": "Always uses the small splash variant; water-surface size changes and critical effects are simplified.",
+    "traits": [
+      "vestige:water",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 30
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_status",
+    "name": "Status",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Privately monitor three consenting nearby allies’ coarse health, affliction count, distance and direction for fifteen seconds.",
+    "notes": "Recipients captured at cast time; same-world loaded bodies only. No through-boundary public glowing, exact private health display or universal creature tracking.",
+    "traits": [
+      "vestige:life",
+      "vestige:divination",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_summon_animal",
+    "name": "Summon Animal",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Summon one sixteen-HP allied wolf for twenty seconds; recasting dismisses it.",
+    "notes": "A single curated vanilla wolf uses native ownership/follow/combat AI; no tabletop animal roster, source creature stats or automatic rank heightening.",
+    "traits": [
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_summon_elemental",
+    "name": "Summon Elemental",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Choose earth cover, air projectile drag, water firefighting or a fire-pressure body with twelve shared damage HP.",
+    "notes": "Four original, stationary elemental roles replace full summoned creature stat blocks. Every mode shares native costs and lifetime/budget constraints; no bestiary or automatic source-rank scaling.",
+    "traits": [
+      "vestige:earth",
+      "vestige:air",
+      "vestige:water",
+      "vestige:fire",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_summon_fey",
+    "name": "Summon Fey",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A fragile fey support silhouette spends four tricks briefly slowing nearby enemies.",
+    "notes": "A stationary four-use support role replaces bestiary selection, spell lists and independent initiative. No copied creature model or vex melee reskin.",
+    "traits": [
+      "vestige:mind",
+      "vestige:illusion",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_summon_plant_or_fungus",
+    "name": "Summon Plant or Fungus",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Summon a stationary healing plant with six shared healing HP, or a fungus with eight shared guard HP.",
+    "notes": "Two original support presets replace a bestiary. No melee minion AI; actual healed HP spends the plant budget, and destruction/expiry ends support.",
+    "traits": [
+      "vestige:plant",
+      "vestige:life",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_tangle_vine",
+    "name": "Tangle Vine",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A breakable vine marker tethers and slows one enemy for three seconds.",
+    "notes": "A six-HP backing marker replaces escape checks and critical immobilization; no terrain vines.",
+    "traits": [
+      "vestige:plant",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 40
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_telekinetic_projectile",
+    "name": "Telekinetic Projectile",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Hurl a six-HP telekinetic stone.",
+    "notes": "A native visual stone replaces choosing a loose physical object; no inventory consumption or damage-type selection.",
+    "traits": [
+      "vestige:force",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_thunderstrike",
+    "name": "Thunderstrike",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A thunderbolt deals nine HP and briefly weakens an aimed creature.",
+    "notes": "One typed lightning impact replaces separate electricity/sonic rolls and critical clumsy/deafened conditions.",
+    "traits": [
+      "vestige:lightning",
+      "vestige:air",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 20
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_time_jump",
+    "name": "Time Jump",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Briefly step out of time for one second, anchoring the body and suppressing attacks, uses and incoming damage.",
+    "notes": "A bounded one-second absence replaces advancing the whole world’s time. No global time stop, movement during absence, resource regeneration or guaranteed tabletop action economy.",
+    "traits": [
+      "vestige:time",
+      "vestige:space",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 34
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_translocate",
+    "name": "Translocate",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Teleport to a visible dry, supported empty position within twenty blocks.",
+    "notes": "Only local visible travel; loaded-space and collision validation can reject a paid cast. No distant memory destination or dimension transfer; arrival plays after success.",
+    "traits": [
+      "vestige:space",
+      "vestige:teleportation",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 8
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_vampiric_feast",
+    "name": "Vampiric Feast",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "A close draining touch deals eight HP and grants four temporary HP if it causes health loss.",
+    "notes": "Fixed Absorption I replaces temporary HP equal to half damage; it does not heal the caster. Undead are immune to the harmful drain.",
+    "traits": [
+      "vestige:void",
+      "vestige:blood",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 12
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_vitality_lash",
+    "name": "Vitality Lash",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "A vitality lash deals seven HP to undead and leaves living creatures unharmed.",
+    "notes": "Minecraft undead membership replaces negative-healing rules; no damage to living targets.",
+    "traits": [
+      "vestige:life",
+      "vestige:holy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_void_warp",
+    "name": "Void Warp",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Warp living flesh for five HP and a brief weakness; undead are unaffected.",
+    "notes": "Undead immunity uses the Minecraft undead entity-type tag; no Fortitude save.",
+    "traits": [
+      "vestige:void",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 6
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_wall_of_ice",
+    "name": "Wall of Ice",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Raise a five-by-three wall of individually breakable ice blocks, lifting occupants as rows emerge in a frost burst. After ten seconds, surviving conjured blocks sink and shatter.",
+    "notes": "A temporary one-block-thick wall replaces the former HP slab and fracture damage. Width scales with area up to nine blocks; loaded supported air cells and safe lifting headroom are required. Broken or replaced cells permanently lose ownership; expiry, dispel and unload preserve player replacements. Conjured ice yields no items or melting water.",
+    "traits": [
+      "vestige:ice",
+      "vestige:conjuration",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_wall_of_stone",
+    "name": "Wall of Stone",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "Raise a seven-by-three solid, 40-HP stone panel for fifteen seconds.",
+    "notes": "One rectangular entity collision panel replaces arbitrary permanent stone terrain; finite durability/lifetime, occupied placement rejected and no block drops. It also blocks native sight targeting.",
+    "traits": [
+      "vestige:earth",
+      "vestige:stone",
+      "vestige:conjuration",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_wall_of_water",
+    "name": "Wall of Water",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Raise a five-by-three traversable wall of real conjured water for ten seconds, extinguishing creatures and slowing physical projectiles in its cells.",
+    "notes": "Water uses native water rendering and immersion physics, confined to owned cells rather than spreading source blocks. Supported loaded air is required; broken or replaced cells lose their claims. Expiry drains surviving water, preserving player replacements. No harvested water; native spell projectiles bypass the additional drag.",
+    "traits": [
+      "vestige:water",
+      "vestige:abjuration",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_water_breathing",
+    "name": "Water Breathing",
+    "rarity": "common",
+    "origin": "Pathfinder",
+    "description": "Give up to three willing nearby allies thirty seconds of Water Breathing.",
+    "notes": "Finite group environmental adaptation replaces long tabletop duration. Vanilla status merging preserves longer external Water Breathing effects.",
+    "traits": [
+      "vestige:water",
+      "vestige:life",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_water_walk",
+    "name": "Water Walk",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "Stand and move on nearby water surfaces for eight seconds; crouch to enter the water.",
+    "notes": "Shared client/server contact support replaces fluid collision hooks. It does not lift submerged bodies or provide airborne flight; source/flowing-water heights are sampled.",
+    "traits": [
+      "vestige:water",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 18
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_weapon_storm",
+    "name": "Weapon Storm",
+    "rarity": "rare",
+    "origin": "Pathfinder",
+    "description": "A weapon storm sweeps up to five enemies with ten HP plus half the caster’s attack value.",
+    "notes": "Uses one cone instead of a cone/burst selection; flat additive weapon context replaces dice-size multiplication.",
+    "traits": [
+      "vestige:metal",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_wooden_double",
+    "name": "Wooden Double",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "The first hit of at least eight HP sheds up to six HP and attempts a safe sideways step.",
+    "notes": "Automatic finite interception replaces a chosen reaction and critical-hit trigger. Overflow remains; failed relocation never grants extra mitigation.",
+    "traits": [
+      "vestige:wood",
+      "vestige:illusion",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:pf2_zephyr_slip",
+    "name": "Zephyr Slip",
+    "rarity": "uncommon",
+    "origin": "Pathfinder",
+    "description": "The first enemy entering a two-block boundary triggers a safe three-block retreat away from it.",
+    "notes": "Finite proximity entry replaces a chosen reaction; no damage immunity and an obstructed retreat keeps the effect waiting until expiry.",
+    "traits": [
+      "vestige:air",
+      "vestige:motion",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 22
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:planar_sight",
+    "name": "Planar Sight",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Reveal up to sixteen nearby creatures through walls for twenty seconds.",
+    "notes": "Vanilla glowing is visible to all viewers; a caster-only outline renderer remains visual polish.",
+    "traits": [
+      "vestige:divination",
+      "vestige:void",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 32
+      },
+      {
+        "type": "cooldown",
+        "ticks": 500
+      }
+    ]
+  },
+  {
+    "id": "vestige:pocket_dimension",
+    "name": "Pocket Dimension",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "Enter a persistent private room; casting inside returns to the saved entry point.",
+    "notes": "Native isolated quartz rooms replace Iron templates, furniture, and ambient presentation.",
+    "traits": [
+      "vestige:space",
+      "vestige:void",
+      "vestige:conjuration",
+      "vestige:teleportation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 40
+      },
+      {
+        "type": "mana",
+        "amount": 60
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:poison_arrow",
+    "name": "Poison Arrow",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "A poison arrow leaves a brief poisonous cloud.",
+    "notes": "",
+    "traits": [
+      "vestige:poison",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 70
+      }
+    ]
+  },
+  {
+    "id": "vestige:poison_breath",
+    "name": "Poison Spray",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Channel a poisonous cone.",
+    "notes": "",
+    "traits": [
+      "vestige:poison",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:poison_splash",
+    "name": "Poison Splash",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Splash poison across an aimed area.",
+    "notes": "",
+    "traits": [
+      "vestige:poison",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:portal",
+    "name": "Portal",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Two casts place linked, bidirectional teleport endpoints.",
+    "notes": "Native particle endpoints replace portal models and oriented portal frames; duration is sixty seconds.",
+    "traits": [
+      "vestige:ender",
+      "vestige:space",
+      "vestige:teleportation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 48
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:raise_dead",
+    "name": "Raise Dead",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Three owned undead fight for the caster; recast dismisses them.",
+    "notes": "Vanilla zombie/skeleton bodies and AI replace Iron custom undead variants.",
+    "traits": [
+      "vestige:death",
+      "vestige:necromancy",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 30
+      },
+      {
+        "type": "mana",
+        "amount": 60
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:raise_hell",
+    "name": "Raise Hell",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A ground slam adds half the held weapon’s damage to a fiery eruption.",
+    "notes": "One native slam; future progression does not change its present outcome.",
+    "traits": [
+      "vestige:fire",
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:ray_of_frost",
+    "name": "Ray of Frost",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A piercing frost ray slows and freezes creatures.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:ray_of_siphoning",
+    "name": "Ray of Siphoning",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A single-target channeled ray heals half the actual damage dealt.",
+    "notes": "",
+    "traits": [
+      "vestige:blood",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:recall",
+    "name": "Recall",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Return to a valid respawn location or world spawn.",
+    "notes": "",
+    "traits": [
+      "vestige:space",
+      "vestige:teleportation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 40
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 400
+      }
+    ]
+  },
+  {
+    "id": "vestige:root",
+    "name": "Root",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Anchor and heavily slow an aimed creature for four seconds or until its ten-HP tether breaks.",
+    "notes": "Native marker tether substitutes for the source root body.",
+    "traits": [
+      "vestige:plant",
+      "vestige:abjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:sacrifice",
+    "name": "Sacrifice",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Detonate an owned summon, scaling damage with its remaining health.",
+    "notes": "Fixed native blast radius; source health-dependent radius is not reproduced.",
+    "traits": [
+      "vestige:death",
+      "vestige:blood",
+      "vestige:necromancy",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:scapegoat",
+    "name": "Scapegoat",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A goat decoy attracts nearby hostile mobs for fifteen seconds.",
+    "notes": "",
+    "traits": [
+      "vestige:conjuration",
+      "vestige:illusion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:scorch",
+    "name": "Scorch",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A delayed ground eruption burns the aimed area.",
+    "notes": "",
+    "traits": [
+      "vestige:fire",
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:sculk_tentacles",
+    "name": "Sculk Tentacles",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Tentacle pulses damage and briefly blind creatures in an aimed area.",
+    "notes": "Native particles substitute for custom tentacle bodies.",
+    "traits": [
+      "vestige:shadow",
+      "vestige:conjuration",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:shadow_slash",
+    "name": "Shadow Slash",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Blink behind the aimed target and slash nearby enemies with weapon scaling.",
+    "notes": "",
+    "traits": [
+      "vestige:shadow",
+      "vestige:teleportation",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 140
+      }
+    ]
+  },
+  {
+    "id": "vestige:shield",
+    "name": "Shield",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A stationary destructible ward intercepts projectiles.",
+    "notes": "Native marker collision does not form the source full solid wall.",
+    "traits": [
+      "vestige:abjuration",
+      "vestige:force",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 26
+      },
+      {
+        "type": "cooldown",
+        "ticks": 240
+      }
+    ]
+  },
+  {
+    "id": "vestige:shockwave",
+    "name": "Shockwave",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A wide electrical shockwave knocks enemies away.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:slow",
+    "name": "Slow",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Slow the aimed creature’s movement and digging for four seconds.",
+    "notes": "Uses vanilla movement/mining penalties; custom cast-time penalties are outside the native status model.",
+    "traits": [
+      "vestige:time",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:snowball",
+    "name": "Snowball",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "An explosive snowball freezes and slows an area for three seconds.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 14
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:sonic_boom",
+    "name": "Sonic Boom",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A piercing sonic beam passes through solid blocks.",
+    "notes": "",
+    "traits": [
+      "vestige:sonic",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 180
+      }
+    ]
+  },
+  {
+    "id": "vestige:spectral_hammer",
+    "name": "Spectral Hammer",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Mine a tool-aware 3×3 face of breakable blocks; honor block-break cancellation.",
+    "notes": "",
+    "traits": [
+      "vestige:force",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:spider_aspect",
+    "name": "Aspect of the Spider",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "The next three ordinary attacks within ten seconds add damage when the victim is poisoned.",
+    "notes": "",
+    "traits": [
+      "vestige:poison",
+      "vestige:enchantment",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 300
+      }
+    ]
+  },
+  {
+    "id": "vestige:starfall",
+    "name": "Starfall",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "Channel twenty exploding meteors; each creature can take at most ten impacts.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 88
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:stomp",
+    "name": "Stomp",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "A forward ground wave damages and launches enemies.",
+    "notes": "",
+    "traits": [
+      "vestige:earth",
+      "vestige:evocation",
+      "vestige:motion",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_ender_chest",
+    "name": "Summon Ender Chest",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Open the caster’s vanilla ender chest inventory.",
+    "notes": "",
+    "traits": [
+      "vestige:ender",
+      "vestige:space",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 16
+      },
+      {
+        "type": "cooldown",
+        "ticks": 100
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_horse",
+    "name": "Summon Horse",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Summon a tamed, saddled owned horse for two minutes; recast dismisses it.",
+    "notes": "",
+    "traits": [
+      "vestige:conjuration",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 24
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_polar_bear",
+    "name": "Summon Polar Bear",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "An owned polar bear follows and fights; recast dismisses it.",
+    "notes": "",
+    "traits": [
+      "vestige:ice",
+      "vestige:conjuration",
+      "vestige:life",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 30
+      },
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_swords",
+    "name": "Summon Swords",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Three owned flying weapon carriers fight until dismissed.",
+    "notes": "Vanilla vex carriers substitute for custom floating claymore, rapier, and sword entities.",
+    "traits": [
+      "vestige:ender",
+      "vestige:conjuration",
+      "vestige:metal",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 30
+      },
+      {
+        "type": "mana",
+        "amount": 54
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_vex",
+    "name": "Summon Vex",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Two owned flying minions fight and follow; recast dismisses them.",
+    "notes": "",
+    "traits": [
+      "vestige:conjuration",
+      "vestige:spirit",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 40
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:summon_zombie",
+    "name": "Summon Zombie",
+    "rarity": "uncommon",
+    "origin": "Native",
+    "description": "Native composed example.",
+    "notes": "",
+    "traits": [
+      "vestige:death",
+      "vestige:necromancy",
+      "vestige:conjuration",
+      "vestige:amplify"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 28
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:sunbeam",
+    "name": "Sunbeam",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A sustained piercing beam deals repeated holy damage.",
+    "notes": "Native beam pulses replace the source custom beam entity.",
+    "traits": [
+      "vestige:holy",
+      "vestige:light",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 44
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:telekinesis",
+    "name": "Telekinesis",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Hold the originally aimed creature for four seconds; at most three collisions inflict damage.",
+    "notes": "",
+    "traits": [
+      "vestige:force",
+      "vestige:motion",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 42
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:teleport",
+    "name": "Teleport",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Collision-checked short-range teleport.",
+    "notes": "",
+    "traits": [
+      "vestige:space",
+      "vestige:teleportation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 15
+      },
+      {
+        "type": "cooldown",
+        "ticks": 80
+      }
+    ]
+  },
+  {
+    "id": "vestige:throw",
+    "name": "Throw",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Throw one held item with weapon damage; recover it at impact or expiry.",
+    "notes": "",
+    "traits": [
+      "vestige:motion",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 12
+      },
+      {
+        "type": "cooldown",
+        "ticks": 60
+      }
+    ]
+  },
+  {
+    "id": "vestige:thunderstorm",
+    "name": "Thunderstorm",
+    "rarity": "mythic",
+    "origin": "Iron",
+    "description": "A ten-second storm follows the caster and strikes up to two visible nearby enemies per pulse.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 84
+      },
+      {
+        "type": "cooldown",
+        "ticks": 600
+      }
+    ]
+  },
+  {
+    "id": "vestige:touch_dig",
+    "name": "Touch Dig",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Break a hardness-limited aimed block using the held tool and normal drops.",
+    "notes": "",
+    "traits": [
+      "vestige:earth",
+      "vestige:transmutation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 8
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  },
+  {
+    "id": "vestige:volt_strike",
+    "name": "Volt Strike",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Dash through enemies, damaging each contacted creature once.",
+    "notes": "",
+    "traits": [
+      "vestige:lightning",
+      "vestige:motion",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 38
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:wall_of_fire",
+    "name": "Wall of Fire",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "Two casts draw a six-second burning segment that intercepts projectiles.",
+    "notes": "A two-point native segment replaces the source extendable multi-segment wall; maximum length is sixteen blocks.",
+    "traits": [
+      "vestige:fire",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "mana",
+        "amount": 48
+      },
+      {
+        "type": "cooldown",
+        "ticks": 200
+      }
+    ]
+  },
+  {
+    "id": "vestige:wisp",
+    "name": "Wisp",
+    "rarity": "rare",
+    "origin": "Iron",
+    "description": "A following wisp field repeatedly damages creatures near its target.",
+    "notes": "Native following field replaces the source autonomous wisp body and return animation.",
+    "traits": [
+      "vestige:holy",
+      "vestige:spirit",
+      "vestige:conjuration",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 36
+      },
+      {
+        "type": "cooldown",
+        "ticks": 160
+      }
+    ]
+  },
+  {
+    "id": "vestige:wither_skull",
+    "name": "Wither Skull",
+    "rarity": "uncommon",
+    "origin": "Iron",
+    "description": "Slow skull projectile inflicts a withering blast.",
+    "notes": "",
+    "traits": [
+      "vestige:death",
+      "vestige:unholy",
+      "vestige:evocation",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 10
+      },
+      {
+        "type": "mana",
+        "amount": 30
+      },
+      {
+        "type": "cooldown",
+        "ticks": 120
+      }
+    ]
+  },
+  {
+    "id": "vestige:wololo",
+    "name": "Wololo",
+    "rarity": "common",
+    "origin": "Iron",
+    "description": "Change an aimed sheep to a random wool color.",
+    "notes": "",
+    "traits": [
+      "vestige:transmutation",
+      "vestige:polymorph",
+      "vestige:amplify",
+      "vestige:range",
+      "vestige:area"
+    ],
+    "costs": [
+      {
+        "type": "time",
+        "ticks": 20
+      },
+      {
+        "type": "mana",
+        "amount": 3
+      },
+      {
+        "type": "cooldown",
+        "ticks": 20
+      }
+    ]
+  }
+]

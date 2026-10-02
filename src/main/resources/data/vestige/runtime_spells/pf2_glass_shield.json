@@ -1,0 +1,224 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1333",
+    "revision": "aon-2026-10-01; Rage of Elements errata 2.0 (2024-05-17)",
+    "name": "Glass Shield",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Rage of Elements p. 94",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1333"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:glass": 1,
+    "vestige:force": 1,
+    "vestige:abjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 16
+    },
+    {
+      "type": "cooldown",
+      "ticks": 80
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 60,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:pf2/glass_shield",
+            "duration": 60,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:pf2/glass_shield/trigger",
+                "event": "vestige:damage_calculating",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      3,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "event_attacker",
+                  "required": false,
+                  "distance": {
+                    "product": [
+                      3,
+                      {
+                        "trait": "vestige:range"
+                      }
+                    ]
+                  }
+                },
+                "effects": [
+                  {
+                    "type": "damage",
+                    "values": {
+                      "amount": {
+                        "product": [
+                          3,
+                          {
+                            "trait": "vestige:amplify"
+                          }
+                        ]
+                      },
+                      "ignore_invulnerability": 1
+                    }
+                  }
+                ],
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.85,
+                  "height": 1.1,
+                  "layers": [
+                    {
+                      "shape": "beam",
+                      "color": "d0f5ff",
+                      "alpha": 0.9,
+                      "width": 0.25,
+                      "scale": 1,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    },
+                    {
+                      "shape": "beam",
+                      "color": "ffffff",
+                      "alpha": 1,
+                      "width": 0.06,
+                      "scale": 1,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    },
+                    {
+                      "shape": "shards",
+                      "color": "99aabf",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 1.1,
+                      "speed": 0.6,
+                      "phase": 0,
+                      "count": 7
+                    },
+                    {
+                      "shape": "shield",
+                      "color": "eef5ff",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.77,
+                      "speed": -0.39,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "eef5ff",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 60,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "99aabf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.1,
+              "speed": 0.6,
+              "phase": 0,
+              "count": 7
+            },
+            {
+              "shape": "shield",
+              "color": "eef5ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.77,
+              "speed": -0.39,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "eef5ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

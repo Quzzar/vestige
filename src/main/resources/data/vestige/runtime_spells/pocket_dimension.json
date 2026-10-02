@@ -1,0 +1,88 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:pocket_dimension",
+    "school": "irons_spellbooks:eldritch",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Pocket Dimension",
+    "cast_type": "long",
+    "cooldown_ticks": 1200
+  },
+  "rarity": "mythic",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:space": 4,
+    "vestige:void": 4,
+    "vestige:conjuration": 4,
+    "vestige:teleportation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 40
+    },
+    {
+      "type": "mana",
+      "amount": 60
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "pocket_dimension"
+    },
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "vortex",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.22,
+            "scale": 1.3,
+            "speed": -0.5,
+            "phase": 0,
+            "count": 10
+          },
+          {
+            "shape": "sigil",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.9099999999999999,
+            "speed": 0.325,
+            "phase": 1.2,
+            "count": 5
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

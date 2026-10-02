@@ -1,0 +1,138 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:gust",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Gust",
+    "cast_type": "long",
+    "cooldown_ticks": 240
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:air": 4,
+    "vestige:motion": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "cone",
+        "required": false,
+        "distance": {
+          "product": [
+            8,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 4
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                6,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": 1.2
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "c4eeeb",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "ripple",
+            "color": "57d0c7",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.5,
+            "speed": 2.1,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "leaves",
+            "color": "e2fff3",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.0499999999999998,
+            "speed": -1.3650000000000002,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "e2fff3",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

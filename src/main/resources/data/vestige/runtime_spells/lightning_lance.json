@@ -1,0 +1,187 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:lightning_lance",
+    "school": "irons_spellbooks:lightning",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Lightning Lance",
+    "cast_type": "long",
+    "cooldown_ticks": 160
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 28
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 200,
+        "values": {
+          "speed": 3,
+          "distance": {
+            "product": [
+              48,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          },
+          "pierce": 2
+        },
+        "identifiers": {
+          "item": "minecraft:lightning_rod"
+        },
+        "bindings": [],
+        "on_hit": [
+          {
+            "type": "damage",
+            "values": {
+              "amount": {
+                "product": [
+                  8,
+                  {
+                    "trait": "vestige:amplify"
+                  }
+                ]
+              },
+              "ignore_invulnerability": 1
+            }
+          },
+          {
+            "type": "visual",
+            "visual": {
+              "duration": 24,
+              "radius": 0.9,
+              "height": 0.25,
+              "layers": [
+                {
+                  "shape": "shards",
+                  "color": "5594ff",
+                  "alpha": 0.85,
+                  "width": 0.045,
+                  "scale": 1.2,
+                  "speed": 2.5,
+                  "phase": 0,
+                  "count": 4
+                },
+                {
+                  "shape": "helix",
+                  "color": "e5f4ff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.84,
+                  "speed": -1.625,
+                  "phase": 1.2,
+                  "count": 3
+                },
+                {
+                  "shape": "sparks",
+                  "color": "e5f4ff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:entity.generic.explode",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        ],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "e5f4ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "shards",
+              "color": "5594ff",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.2,
+              "speed": 2.5,
+              "phase": 0,
+              "count": 4
+            },
+            {
+              "shape": "helix",
+              "color": "e5f4ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.84,
+              "speed": -1.625,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "e5f4ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

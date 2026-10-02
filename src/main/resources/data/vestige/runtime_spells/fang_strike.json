@@ -1,0 +1,99 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:fang_strike",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Fang Strike",
+    "cast_type": "long",
+    "cooldown_ticks": 100
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:evocation": 4,
+    "vestige:conjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 22
+    },
+    {
+      "type": "cooldown",
+      "ticks": 80
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "fangs",
+      "values": {
+        "max_targets": 6,
+        "amount": {
+          "product": [
+            6,
+            {
+              "trait": "vestige:amplify"
+            }
+          ]
+        },
+        "count": 8,
+        "line": 1
+      }
+    },
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "fangs",
+            "color": "99aabf",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 2.0,
+            "speed": 1.2,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "shards",
+            "color": "eef5ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.4,
+            "speed": -0.78,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "eef5ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

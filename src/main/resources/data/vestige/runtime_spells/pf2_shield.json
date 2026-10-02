@@ -1,0 +1,146 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1671",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Shield",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 356",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1671"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "divine",
+    "occult"
+  ],
+  "traits": {
+    "vestige:force": 1,
+    "vestige:abjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 6
+    },
+    {
+      "type": "cooldown",
+      "ticks": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 60,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:pf2/shield",
+            "duration": 60,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:pf2/shield/trigger",
+                "event": "vestige:damage_calculating",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      3,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 60,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shield",
+              "color": "ddd3ff",
+              "alpha": 0.8,
+              "width": 0.05,
+              "scale": 1,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "shield",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.0,
+              "speed": 0.6,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "sigil",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -0.39,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

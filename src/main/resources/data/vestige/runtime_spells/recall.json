@@ -1,0 +1,86 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:recall",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Recall",
+    "cast_type": "long",
+    "cooldown_ticks": 6000
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:space": 4,
+    "vestige:teleportation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 40
+    },
+    {
+      "type": "mana",
+      "amount": 30
+    },
+    {
+      "type": "cooldown",
+      "ticks": 400
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "recall"
+    },
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "sigil",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.2,
+            "speed": -0.9,
+            "phase": 0,
+            "count": 6
+          },
+          {
+            "shape": "rays",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.84,
+            "speed": 0.5850000000000001,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}
