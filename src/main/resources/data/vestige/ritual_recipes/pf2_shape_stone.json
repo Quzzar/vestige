@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_shape_stone",
+  "name": "Shape Stone",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Stone follows moldable Clay and Iron structure into a moved and reshaped block.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "clay motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clay_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    }
+  ],
+  "clues": [
+    "Stone motif follows blank inscription clockwise.",
+    "Clay motif follows stone motif clockwise.",
+    "Bound metal follows clay motif clockwise.",
+    "Blank inscription follows bound metal clockwise."
+  ]
+}

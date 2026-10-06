@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DXD",
+    "ADA"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:chiseled_deepslate"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "X": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "id": "vestige:runic_pedestal",
+    "count": 1
+  }
+}

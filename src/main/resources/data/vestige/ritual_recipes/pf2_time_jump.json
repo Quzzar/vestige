@@ -1,0 +1,95 @@
+{
+  "spell": "vestige:pf2_time_jump",
+  "name": "Time Jump",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "A Clock enters Ender passage; Compass anchors the return while Copper, Amethyst and a seal suspend a protected instant.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 5,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet, compass motif, clock motif; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Protection seal follows blank inscription clockwise, across an unused outer Plinth.",
+    "Resonant facet follows protection seal clockwise.",
+    "Lightning channel follows resonant facet clockwise.",
+    "Compass motif follows lightning channel clockwise.",
+    "Passage focus follows compass motif clockwise.",
+    "Clock motif follows passage focus clockwise.",
+    "Blank inscription follows clock motif clockwise."
+  ]
+}

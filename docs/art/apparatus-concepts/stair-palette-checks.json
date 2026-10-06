@@ -1,0 +1,155 @@
+{
+  "materials": [
+    {
+      "label": "Stone",
+      "value": "stone"
+    },
+    {
+      "label": "Cobblestone",
+      "value": "cobblestone"
+    },
+    {
+      "label": "Mossy Cobblestone",
+      "value": "mossy_cobblestone"
+    },
+    {
+      "label": "Stone Bricks",
+      "value": "stone_bricks"
+    },
+    {
+      "label": "Mossy Stone Bricks",
+      "value": "mossy_stone_bricks"
+    },
+    {
+      "label": "Granite",
+      "value": "granite"
+    },
+    {
+      "label": "Polished Granite",
+      "value": "polished_granite"
+    },
+    {
+      "label": "Diorite",
+      "value": "diorite"
+    },
+    {
+      "label": "Polished Diorite",
+      "value": "polished_diorite"
+    },
+    {
+      "label": "Andesite",
+      "value": "andesite"
+    },
+    {
+      "label": "Polished Andesite",
+      "value": "polished_andesite"
+    },
+    {
+      "label": "Sandstone",
+      "value": "sandstone"
+    },
+    {
+      "label": "Smooth Sandstone",
+      "value": "smooth_sandstone"
+    },
+    {
+      "label": "Red Sandstone",
+      "value": "red_sandstone"
+    },
+    {
+      "label": "Smooth Red Sandstone",
+      "value": "smooth_red_sandstone"
+    },
+    {
+      "label": "Bricks",
+      "value": "bricks"
+    },
+    {
+      "label": "Mud Bricks",
+      "value": "mud_bricks"
+    },
+    {
+      "label": "Quartz",
+      "value": "quartz"
+    },
+    {
+      "label": "Smooth Quartz Block",
+      "value": "smooth_quartz"
+    },
+    {
+      "label": "Prismarine",
+      "value": "prismarine"
+    },
+    {
+      "label": "Prismarine Bricks",
+      "value": "prismarine_bricks"
+    },
+    {
+      "label": "Dark Prismarine",
+      "value": "dark_prismarine"
+    },
+    {
+      "label": "Nether Bricks",
+      "value": "nether_bricks"
+    },
+    {
+      "label": "Red Nether Bricks",
+      "value": "red_nether_bricks"
+    },
+    {
+      "label": "Blackstone",
+      "value": "blackstone"
+    },
+    {
+      "label": "Polished Blackstone",
+      "value": "polished_blackstone"
+    },
+    {
+      "label": "Polished Blackstone Bricks",
+      "value": "polished_blackstone_bricks"
+    },
+    {
+      "label": "Cobbled Deepslate",
+      "value": "cobbled_deepslate"
+    },
+    {
+      "label": "Polished Deepslate",
+      "value": "polished_deepslate"
+    },
+    {
+      "label": "Deepslate Bricks",
+      "value": "deepslate_bricks"
+    },
+    {
+      "label": "Deepslate Tiles",
+      "value": "deepslate_tiles"
+    },
+    {
+      "label": "Tuff",
+      "value": "tuff"
+    },
+    {
+      "label": "Polished Tuff",
+      "value": "polished_tuff"
+    },
+    {
+      "label": "Tuff Bricks",
+      "value": "tuff_bricks"
+    },
+    {
+      "label": "End Stone Bricks",
+      "value": "end_stone_bricks"
+    },
+    {
+      "label": "Purpur",
+      "value": "purpur"
+    }
+  ],
+  "selectedEveryMaterial": true,
+  "consoleErrors": [],
+  "visuallyInspected": [
+    "quartz",
+    "end_stone_bricks"
+  ],
+  "source": "Browser model review; native-game adoption pending"
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:gust",
+  "name": "Gust",
+  "circle": 4,
+  "color": "c4eeeb",
+  "rationale": "A feather's broad airflow meets Emerald direction and a recovery membrane's brief motion motif.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 3,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Feather motif follows blank inscription clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Recovery veil follows evocation focus clockwise.",
+    "Blank inscription follows recovery veil clockwise."
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "stone": "minecraft:block/deepslate_tiles",
+    "particle": "minecraft:block/deepslate_tiles",
+    "column": "minecraft:block/deepslate_tiles",
+    "frame": "minecraft:block/deepslate_tiles"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        16,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#column",
+          "uv": [
+            3,
+            0.0,
+            13,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#column",
+          "uv": [
+            3,
+            0.0,
+            13,
+            16.0
+          ]
+        },
+        "west": {
+          "texture": "#column",
+          "uv": [
+            3,
+            0.0,
+            13,
+            16.0
+          ]
+        },
+        "east": {
+          "texture": "#column",
+          "uv": [
+            3,
+            0.0,
+            13,
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        0,
+        2.992
+      ],
+      "to": [
+        3.75,
+        16,
+        2.992
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frame",
+          "uv": [
+            12.25,
+            0,
+            13,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        12.25,
+        0,
+        2.992
+      ],
+      "to": [
+        13,
+        16,
+        2.992
+      ],
+      "faces": {
+        "north": {
+          "texture": "#frame",
+          "uv": [
+            3,
+            0,
+            3.75,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        3,
+        0,
+        13.008
+      ],
+      "to": [
+        3.75,
+        16,
+        13.008
+      ],
+      "faces": {
+        "south": {
+          "texture": "#frame",
+          "uv": [
+            3,
+            0,
+            3.75,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        12.25,
+        0,
+        13.008
+      ],
+      "to": [
+        13,
+        16,
+        13.008
+      ],
+      "faces": {
+        "south": {
+          "texture": "#frame",
+          "uv": [
+            12.25,
+            0,
+            13,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        2.992,
+        0,
+        3
+      ],
+      "to": [
+        2.992,
+        16,
+        3.75
+      ],
+      "faces": {
+        "west": {
+          "texture": "#frame",
+          "uv": [
+            3,
+            0,
+            3.75,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        2.992,
+        0,
+        12.25
+      ],
+      "to": [
+        2.992,
+        16,
+        13
+      ],
+      "faces": {
+        "west": {
+          "texture": "#frame",
+          "uv": [
+            12.25,
+            0,
+            13,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        13.008,
+        0,
+        3
+      ],
+      "to": [
+        13.008,
+        16,
+        3.75
+      ],
+      "faces": {
+        "east": {
+          "texture": "#frame",
+          "uv": [
+            12.25,
+            0,
+            13,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        13.008,
+        0,
+        12.25
+      ],
+      "to": [
+        13.008,
+        16,
+        13
+      ],
+      "faces": {
+        "east": {
+          "texture": "#frame",
+          "uv": [
+            3,
+            0,
+            3.75,
+            16
+          ],
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

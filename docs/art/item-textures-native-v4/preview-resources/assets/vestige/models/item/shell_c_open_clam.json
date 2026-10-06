@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/shell_c_open_clam"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.0,
+        0.21477272727272725,
+        0
+      ],
+      "scale": [
+        1.368181818181818,
+        1.1365056818181818,
+        1
+      ]
+    }
+  }
+}

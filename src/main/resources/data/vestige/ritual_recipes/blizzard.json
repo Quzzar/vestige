@@ -1,0 +1,83 @@
+{
+  "spell": "vestige:blizzard",
+  "name": "Blizzard",
+  "circle": 8,
+  "color": "48badf",
+  "rationale": "Snow and Ice establish cold, a feather carries the weather, and Powder spreads it through an Emerald-directed field.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 6,
+      "role": "ice motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ice"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold powder motif, cold focus; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Evocation focus follows blank inscription clockwise, across an unused outer Plinth.",
+    "Powder motif follows evocation focus clockwise.",
+    "Feather motif follows powder motif clockwise.",
+    "Ice motif follows feather motif clockwise, across an unused outer Plinth.",
+    "Cold focus follows ice motif clockwise.",
+    "Blank inscription follows cold focus clockwise."
+  ]
+}

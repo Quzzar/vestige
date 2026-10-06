@@ -1,0 +1,42 @@
+{
+  "mode": "built-in image generation",
+  "use": "concept previews",
+  "files": [
+    {
+      "name": "01-thin-strip.png",
+      "size": [
+        1606,
+        979
+      ],
+      "mode": "RGBA",
+      "sha256": "aff9894fe48488d5af3cb1ae265a9992a9d1a4ecd0e129eb07e6a7c9b4048850"
+    },
+    {
+      "name": "02-torn-corner.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "fe30049575575966062766e821c93517e08976fdaaf874158527ee005f5a8c18"
+    },
+    {
+      "name": "03-narrow-sliver.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "e3383015d9b14a9ec31109854dd5ad125e49f433d048ad2be1f5b08196225374"
+    },
+    {
+      "name": "04-ragged-shred.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "74cd7cabd6628d1b6fe36439118f3c5072c160553ec9dc4af3092156d9bfe8d1"
+    }
+  ]
+}

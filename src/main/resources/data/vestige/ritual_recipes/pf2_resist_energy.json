@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_resist_energy",
+  "name": "Resist Energy",
+  "circle": 4,
+  "color": "48badf",
+  "rationale": "Blaze is contained by a protection seal and Iron resistance; it marks the protected energy rather than a damaging output.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 1,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    }
+  ],
+  "clues": [
+    "Bound metal follows blank inscription clockwise.",
+    "Protection seal follows bound metal clockwise.",
+    "Flame focus follows protection seal clockwise.",
+    "Blank inscription follows flame focus clockwise."
+  ]
+}

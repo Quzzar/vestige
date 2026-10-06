@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:shadow_slash",
+  "name": "Shadow Slash",
+  "circle": 4,
+  "color": "57418f",
+  "rationale": "Dark Ink crosses Ender passage into a Flint blade, describing the blink and weapon-scaled slash.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 1,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flint motif follows blank inscription clockwise.",
+    "Passage focus follows flint motif clockwise.",
+    "Ink motif follows passage focus clockwise.",
+    "Blank inscription follows ink motif clockwise."
+  ]
+}

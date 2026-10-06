@@ -1,0 +1,84 @@
+{
+  "spell": "vestige:devour",
+  "name": "Devour",
+  "circle": 8,
+  "color": "c92551",
+  "rationale": "Draining focus draws from decaying flesh into living light; Bone supplies the bite and Bread represents stolen sustenance.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 6,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 3,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "bread motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bread"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold bone motif, draining focus; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Bread motif follows blank inscription clockwise, across an unused outer Plinth.",
+    "Bone motif follows bread motif clockwise.",
+    "Living light follows bone motif clockwise.",
+    "Enemy decay follows living light clockwise, across an unused outer Plinth.",
+    "Draining focus follows enemy decay clockwise.",
+    "Blank inscription follows draining focus clockwise."
+  ]
+}

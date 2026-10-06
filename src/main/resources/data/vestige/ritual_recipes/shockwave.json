@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:shockwave",
+  "name": "Shockwave",
+  "circle": 4,
+  "color": "5594ff",
+  "rationale": "Copper energizes a Slime-shaped wave that Emerald directs outward with knockback.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Lightning channel follows blank inscription clockwise.",
+    "Slime motif follows lightning channel clockwise.",
+    "Evocation focus follows slime motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:guiding_bolt",
+  "name": "Guiding Bolt",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Living light and Glowstone mark the target that an Arrow guides other projectiles toward.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Living light follows blank inscription clockwise.",
+    "Glow motif follows living light clockwise.",
+    "Arrow motif follows glow motif clockwise.",
+    "Blank inscription follows arrow motif clockwise."
+  ]
+}

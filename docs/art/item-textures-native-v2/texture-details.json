@@ -1,0 +1,130 @@
+[
+  {
+    "id": "eye_a_soft_flint",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      2,
+      15,
+      14
+    ],
+    "opaque_colors": 10,
+    "opaque_pixels": 92,
+    "sha256": "87f460614022fb81bedd2b3b59405a7fcd919a8379d49cedcbc81d366d635716"
+  },
+  {
+    "id": "eye_b_dark_pebble",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      2,
+      15,
+      13
+    ],
+    "opaque_colors": 10,
+    "opaque_pixels": 98,
+    "sha256": "71b173c3697b0b7694a3871e0a48a0c257d3312548150694ff92d15fd393b38c"
+  },
+  {
+    "id": "eye_c_chipped_face",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      3,
+      15,
+      13
+    ],
+    "opaque_colors": 10,
+    "opaque_pixels": 83,
+    "sha256": "cf5377407cc0d5930cf6fa29fe3afff5d3641beb8a4bb54d25425cc6727efc5f"
+  },
+  {
+    "id": "eye_d_simple_talisman",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      2,
+      15,
+      14
+    ],
+    "opaque_colors": 10,
+    "opaque_pixels": 108,
+    "sha256": "3d84ff56001240dc10724c1119b5bf93081a1fd9f88879cb24460d407648c0f3"
+  },
+  {
+    "id": "shell_a_soft_ash",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      15,
+      15
+    ],
+    "opaque_colors": 8,
+    "opaque_pixels": 95,
+    "sha256": "688aa6a83e577ce2958fa3ea22b37096539e333a6426e956a3b5f9d6b6ed7770"
+  },
+  {
+    "id": "shell_b_compact_conch",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      2,
+      15,
+      14
+    ],
+    "opaque_colors": 6,
+    "opaque_pixels": 90,
+    "sha256": "423fc9730e3de01b84759a29fd058a2e8f4e57da37a3a71a66ab8451a7175685"
+  },
+  {
+    "id": "shell_c_slate",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      2,
+      15,
+      15
+    ],
+    "opaque_colors": 7,
+    "opaque_pixels": 95,
+    "sha256": "b1dfaec533c548b9996ab53cac14490c46548bd7b03b29d88c280e4242a53e66"
+  },
+  {
+    "id": "shell_d_deep_dusk",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      15,
+      14
+    ],
+    "opaque_colors": 6,
+    "opaque_pixels": 99,
+    "sha256": "f5bf59f10dfafc6a07af7d4845e8ecffe326b5a781679bdec5b54903ebdbf7e2"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "verified_at_utc": "2026-10-05T18:03:14.349800+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "./gradlew build verifyKithkynCompatibility",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check",
+    "git diff --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 151,
+  "new_world_tests": [
+    "plinthOfferingsRequireAirOrUnobstructedFluidAbove",
+    "everyFinishPlacesInWaterAndBucketsPreserveItsContents",
+    "everyColumnSegmentCanBeImbuedWhileWetOrCovered",
+    "submergedSpellstoneAndPlinthsCraftNormally",
+    "ordinarySolidCoverCancelsReservedRecipeBeforeConsumption"
+  ],
+  "scope": "All 36 Plinth finishes / all 72 apparatus blocks; waterlogging, clearance, sockets, buckets and crafting",
+  "packaged_block_models_verified": 180,
+  "capture_only_packs_excluded": true,
+  "jar_sha256": "d37b1330505c1cc27970cb35c5f0bc1218773cc049339f0b3c78ba15a7404b7c",
+  "capture_fixture_correction": "Final native views resolve neighbor shapes before placement and verify actual cap states; no gameplay or model geometry changed after the world suite",
+  "native_visual_inspection": "Four final Quartz scenes with native state/socket/clearance snapshots and exact loaded-asset hashes",
+  "limitations": [
+    "Vanilla waterlogging; source/flowing placement becomes source water inside the apparatus",
+    "Client inspection covers Quartz; other cosmetic finishes share audited geometry and pass world tests",
+    "Prism NeoForge 21.1.248 remains pending owner restart/playtest"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "verified_at_utc": "2026-10-05T23:28:14.752047+00:00",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Native framebuffer images from registered block entities, loaded candidate JSON models and original native rune renderer. Pixels copied unchanged.",
+  "scope": "Capture-only alternatives; no production model or collision change and no Prism installation.",
+  "native_capture_builds": [
+    "build/spellstone-redesign-options.log",
+    "build/spellstone-redesign-options-refined.log"
+  ],
+  "author_source_sha256": "6453cb722c26a3b0debf576e12493d527f572d1cccf282320e36bd592e7c3f9f",
+  "capture_harness_source_sha256": "c33d2375623fcd16f6ce90363771aebbe48de5a36d76985f0f73e405b547873f",
+  "capture_scene_source_sha256": "609274419ae6861f684a85fdc26d9809e7d7775ce36bc1f6d07d5f226f748b8a",
+  "installed_jar_unchanged_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "captures": [
+    {
+      "design": "tablet",
+      "image": "native/tablet.png",
+      "metadata": "native/tablet-capture.json",
+      "frame_sha256": "b9fc89a815ad5e6cc6cb47d39395bdcf625a6518fca0b770c92ae34a38e204f1",
+      "asset_sha256": {
+        "models/block/spellstone.json": "4658b0da68dcf0176ed5a0ce41ee7cbd973e899602f4ecaaf09d7f32e691d3a0",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "d9c058258a0ddae86b7c09688efaad7a9da818d3e13fd0d47ed165ae93369ead",
+        "models/block/quartz_spellstone.json": "1fe93f24c2ee8cd634cae3a0a1f7c2a4b69942e9b84293199aa775124d625af7"
+      },
+      "actual_apparatus": {
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        }
+      },
+      "inspected": true,
+      "distinct_frame_hashes": 1
+    },
+    {
+      "design": "altar",
+      "image": "native/altar.png",
+      "metadata": "native/altar-capture.json",
+      "frame_sha256": "d44dd338d1bdd77519d26d16da4a939d672a6f9a44b1a8115cfd8c76c63aa93b",
+      "asset_sha256": {
+        "models/block/spellstone.json": "4658b0da68dcf0176ed5a0ce41ee7cbd973e899602f4ecaaf09d7f32e691d3a0",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "d9c058258a0ddae86b7c09688efaad7a9da818d3e13fd0d47ed165ae93369ead",
+        "models/block/quartz_spellstone.json": "1fe93f24c2ee8cd634cae3a0a1f7c2a4b69942e9b84293199aa775124d625af7"
+      },
+      "actual_apparatus": {
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:tuff_spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        }
+      },
+      "inspected": true,
+      "distinct_frame_hashes": 1
+    },
+    {
+      "design": "seal",
+      "image": "native/seal.png",
+      "metadata": "native/seal-capture.json",
+      "frame_sha256": "d951398caf153c57bd84820576aa8124d8d6cef70f69051a968277e096be71c8",
+      "asset_sha256": {
+        "models/block/spellstone.json": "4658b0da68dcf0176ed5a0ce41ee7cbd973e899602f4ecaaf09d7f32e691d3a0",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "d9c058258a0ddae86b7c09688efaad7a9da818d3e13fd0d47ed165ae93369ead",
+        "models/block/quartz_spellstone.json": "1fe93f24c2ee8cd634cae3a0a1f7c2a4b69942e9b84293199aa775124d625af7"
+      },
+      "actual_apparatus": {
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        }
+      },
+      "inspected": true,
+      "distinct_frame_hashes": 1
+    },
+    {
+      "design": "comparison",
+      "image": "native/comparison.png",
+      "metadata": "native/comparison-capture.json",
+      "frame_sha256": "fc29eaee32ea81b5ad00e8beec1bade6cb173e4cd603102217c6a920602a41b6",
+      "asset_sha256": {
+        "models/block/spellstone.json": "4658b0da68dcf0176ed5a0ce41ee7cbd973e899602f4ecaaf09d7f32e691d3a0",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "d9c058258a0ddae86b7c09688efaad7a9da818d3e13fd0d47ed165ae93369ead",
+        "models/block/quartz_spellstone.json": "1fe93f24c2ee8cd634cae3a0a1f7c2a4b69942e9b84293199aa775124d625af7"
+      },
+      "actual_apparatus": {
+        "BlockPos{x=-2, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:tuff_spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=2, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_spellstone}[part=single,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        }
+      },
+      "inspected": true,
+      "distinct_frame_hashes": 1
+    }
+  ]
+}

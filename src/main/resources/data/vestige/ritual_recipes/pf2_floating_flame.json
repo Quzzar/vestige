@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_floating_flame",
+  "name": "Floating Flame",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze and Fire Charge float in a Slime-shaped suspended body that pulses heat.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flame focus follows blank inscription clockwise.",
+    "Firecharge motif follows flame focus clockwise.",
+    "Slime motif follows firecharge motif clockwise.",
+    "Blank inscription follows slime motif clockwise."
+  ]
+}

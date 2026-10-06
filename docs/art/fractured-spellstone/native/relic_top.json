@@ -1,0 +1,78 @@
+{
+  "spell": "vestige:relic_top",
+  "phase": 0,
+  "label": "Fractured relic from above",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "fractured",
+  "apparatusCamera": {
+    "eye": [
+      1.25,
+      66.8,
+      1.5
+    ],
+    "fixed": true,
+    "yaw": 143.1301,
+    "pitch": 51.115505
+  },
+  "materialTextureSha256": {
+    "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "66301126e97e213d1a0ebe8d7eaa0a1c952854e44aa9ea6208e569ca5d9ef5c3",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+  },
+  "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+  "seconds": 5.046371583,
+  "times": [
+    0.016914125,
+    0.094822542,
+    0.178631083,
+    0.259024833,
+    0.341882708,
+    0.436679208,
+    0.532662958,
+    0.612687833,
+    0.692520792,
+    0.776572333,
+    0.855908208,
+    0.935133042,
+    1.014317167,
+    1.098813125,
+    1.20092375,
+    1.289357417,
+    1.368255,
+    1.444293667,
+    1.524373542,
+    1.607568208,
+    1.690856958,
+    1.764514375,
+    1.834751625,
+    1.908437083,
+    1.981994417,
+    4.807269458,
+    4.908377375,
+    4.978703083
+  ],
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": true
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Capture-only fractured relic: three substantial interlocking stone fragments with narrow breaks and the unchanged lowered Astral Seal. Existing construction recipes, production collision and Prism installation remain unchanged.",
+  "outcome": "PLACED"
+}

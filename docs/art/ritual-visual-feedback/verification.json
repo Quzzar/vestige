@@ -1,0 +1,32 @@
+{
+  "unitTests": 104,
+  "selectedWorldTests": 72,
+  "finalTargetedWorldTests": 2,
+  "uniqueWorldTests": 73,
+  "nameOnlyTooltipCases": 8,
+  "authorChecks": [
+    "36 finishes / 72 apparatus models and recipes",
+    "214 ritual recipes and rotational/alternative uniqueness"
+  ],
+  "nativeCaptures": {
+    "vestige-ritual_reference_success-ritual-0": {
+      "frames": 98,
+      "elapsedTicks": 161,
+      "outcome": "CRAFTING",
+      "output": "1 vestige:spell_scroll",
+      "reference": "1 vestige:spell_scroll"
+    },
+    "vestige-ritual_hints-ritual-0": {
+      "frames": 92,
+      "elapsedTicks": 162,
+      "outcome": "HINTS",
+      "output": "0 minecraft:air",
+      "reference": "1 vestige:spell_scroll"
+    }
+  },
+  "limitations": [
+    "The existing Prism 21.1.248 game was not restarted; native tests/captures run against 21.1.72.",
+    "Private sensing rings/status overlays compile and preserve sensing-state behavior; their full presentation was not separately captured."
+  ],
+  "correctedTestFailure": "The first combined cooldown/sensing run exposed a temporary Shield left alive by the new cooldown fixture. Explicit fixture cleanup fixed the interference; both affected tests pass together."
+}

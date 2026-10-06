@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/sandstone_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/sandstone_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/sandstone_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/sandstone_plinth_cap"
+    }
+  }
+}

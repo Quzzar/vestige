@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:throw",
+  "name": "Throw",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Slime's flexible launch meets a feather and Emerald, describing a directed recoverable held-item throw.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Feather motif follows slime motif clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

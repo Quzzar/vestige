@@ -1,0 +1,72 @@
+{
+  "spell": "vestige:summon_polar_bear",
+  "name": "Summon Polar Bear",
+  "circle": 8,
+  "color": "48badf",
+  "rationale": "Cold focus meets Fish, Bone and Leather to describe a living allied polar bear.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "fish motif",
+      "ingredient": {
+        "items": [
+          "minecraft:cod"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold cold focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Cold focus follows blank inscription clockwise.",
+    "Fish motif follows cold focus clockwise.",
+    "Bone motif follows fish motif clockwise, across an unused outer Plinth.",
+    "Leather motif follows bone motif clockwise, across an unused outer Plinth.",
+    "Blank inscription follows leather motif clockwise, across an unused outer Plinth."
+  ]
+}

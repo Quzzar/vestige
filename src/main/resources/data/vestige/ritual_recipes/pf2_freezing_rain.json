@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_freezing_rain",
+  "name": "Freezing Rain",
+  "circle": 4,
+  "color": "b7e4fa",
+  "rationale": "Cold focus meets water-bearing Kelp and a feather's weather motif to describe a slipping rain patch.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Cold focus follows blank inscription clockwise.",
+    "Kelp motif follows cold focus clockwise.",
+    "Feather motif follows kelp motif clockwise.",
+    "Blank inscription follows feather motif clockwise."
+  ]
+}

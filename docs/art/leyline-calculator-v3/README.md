@@ -1,0 +1,27 @@
+# Leyline matrix calculator inspection
+
+The owner accepted the current v3 design on October 4. Latest inspected [light](accepted-baseline-light.png), [dark](accepted-baseline-dark.png) and [phone-emulation](accepted-baseline-phone.png) captures show the **accepted design** label. Numerical cells, bounds, presets and response functions are unchanged by this status update. Browser checks verify canonical metadata parity, both response rows, unchanged modifiers, whole/absent costs, Nature/pyramid presets and 768/360/320 fit. **26 tests and the 3,616,938-evaluation audit pass**. Native integration remains future work; earlier captures below preserve the design's progression.
+
+October 4, 2026, refreshed after the school balance pass. These are browser captures of the proposal calculator, not Minecraft models or cast footage. The selected Fire/Evocation example was optimized for Amplify while preserving eight slots. The factor breakdown is expanded and includes all four modifier columns.
+
+- [Light calculator](light.png) and [factor detail](light-factors.png).
+- [Dark calculator](dark.png) and [factor detail](dark-factors.png).
+- [Phone-emulation calculator](phone.png) and [factor detail](phone-factors.png).
+
+Desktop captures use a 768-pixel viewport. Phone captures use Chromium's iPhone 13 screen/touch profile; this is not a native Safari or ChatGPT iPhone app capture. The light calculator, dark factor breakdown and phone factor breakdown were inspected after the balance pass. The table retains separate Spellstone-to-inner and inner-to-outer height rows.
+
+The subsequent Nature pass adds [light](nature-light.png), [dark](nature-dark.png) and [phone-emulation](nature-phone.png) captures. All three were inspected. The preset selects Life + Plant + Wood and a level 11×11 circle, retaining capacity, goal, costs and camera. A live node-footprint/height-span label makes build scale visible. These are schematic placements, not native Stonehenge structures or new block textures.
+
+The subsequent monument pass adds inspected [light](pyramid-light.png), [dark](pyramid-dark.png) and [phone-emulation](pyramid-phone.png) captures of the 33×33, 12-block-high Divination + Light Range optimum. The translucent pyramid is a visual building guide around schematic nodes, not a rendered Minecraft structure. Its checkbox changes only presentation. These latest captures include both presets and the expanded placement controls; earlier Fire/Nature captures retain their preceding states.
+
+Verification at the monument pass included 21 canonical evaluator/domain/audit tests and the [3,616,938-evaluation balance sweep](../../leyline-balance-audit.md), independent exhaustive best-layout checks for all four objectives at both capacities over 169/43,940 layouts, live factor-product reconstruction, saved-state migration, mixed/absent costs and preset persistence. The pyramid checks cover exact optimum parity, guide-only rendering, capacity/cost/camera retention, four-slot outer omission, returning to Nature and 768/360/320 light/dark/phone-profile layout. The prior native iPhone blank-display report remains unverified.
+
+See [current design](../../design/leyline-calculator.md), [v3 matrices](../../design/leyline-calculator-v3.json) and [development status](../../development-status.md).
+
+The first affordability pass adds inspected [light](affordability-light.png), [dark](affordability-dark.png) and [phone-emulation](affordability-phone.png) captures with the then-revised +10.3% pyramid cost factor and all seven rounded cost components visible. Final costs are whole amounts, while modifiers keep precision. The cost row labels increases as more expensive and reductions as cheaper. These images remain historical captures; the minor-offset pass below supersedes their cost values.
+
+Verification at the first affordability pass was **24 passing model/audit tests**, the 3,616,938-evaluation sweep with affordability guards, independent exhaustive browser checks for all four objectives at both capacities, factor reconstruction including the cost-increase adjustment, seven-unit rounding, zero-cost omission, state compatibility and 768/360/320 light/dark/phone-profile fit. All 82 audited examples then retained their outcome winners, efficiency winners and discounts. No native Minecraft presentation or gameplay verification is claimed.
+
+The latest minor-offset pass adds inspected [light](minor-offsets-light.png), [dark](minor-offsets-dark.png) and [phone-emulation](minor-offsets-phone.png) captures of Abjuration optimized for Range. The expanded table shows **Outcome downside adjustment** alongside the separate cost adjustment. That layout now gives +20.5% Range with −8.3% Amplify / −10.1% Area, rather than the former −25%/−30% losses. The shared cost response is softer again; the pyramid now costs +6.7%, with 20 mana rounding to 21.
+
+Current verification is **26 passing model/audit tests** and a fresh 3,616,938-evaluation audit with every guard passing. All 82 examples retain their outcome maxima and winning layouts; 158 cost minima change after smaller outcome refunds and offline school Cost-cell fitting. Independent exhaustive browser checks, canonical parity, factor reconstruction including both adjustment rows, whole final amounts, absent costs, migration and 768/360/320 light/dark/phone-profile fit pass. The three latest captures were inspected. Native Minecraft implementation and the native iPhone ChatGPT host remain outside this verification.

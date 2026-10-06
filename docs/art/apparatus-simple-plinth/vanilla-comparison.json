@@ -1,0 +1,53 @@
+{
+  "notes": "Base block models with inherited geometry resolved; separate book/moving renderer geometry excluded. Geometry counts are not frame-rate measurements.",
+  "models": [
+    {
+      "vanilla_model": "enchanting_table",
+      "elements": 1,
+      "faces": 6,
+      "model_chain": [
+        "assets/minecraft/models/block/enchanting_table.json"
+      ],
+      "source": "Minecraft 1.21.1 client assets",
+      "animated_additions_included": false
+    },
+    {
+      "vanilla_model": "lectern",
+      "elements": 3,
+      "faces": 16,
+      "model_chain": [
+        "assets/minecraft/models/block/lectern.json"
+      ],
+      "source": "Minecraft 1.21.1 client assets",
+      "animated_additions_included": false
+    },
+    {
+      "vanilla_model": "anvil",
+      "elements": 4,
+      "faces": 21,
+      "model_chain": [
+        "assets/minecraft/models/block/anvil.json",
+        "assets/minecraft/models/block/template_anvil.json"
+      ],
+      "source": "Minecraft 1.21.1 client assets",
+      "animated_additions_included": false
+    },
+    {
+      "vanilla_model": "hopper",
+      "elements": 7,
+      "faces": 32,
+      "model_chain": [
+        "assets/minecraft/models/block/hopper.json"
+      ],
+      "source": "Minecraft 1.21.1 client assets",
+      "animated_additions_included": false
+    }
+  ],
+  "plinth": {
+    "solid_cuboids": 3,
+    "flat_socket_faces": 4,
+    "static_baked_faces": 20,
+    "installed_material_faces": 20,
+    "material_protrusion_in_model_units": 0.5
+  }
+}

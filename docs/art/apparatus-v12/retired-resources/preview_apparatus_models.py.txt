@@ -1,0 +1,368 @@
+#!/usr/bin/env python3
+"""Render actual apparatus JSON cuboids with vanilla and Vestige textures.
+
+Requires Pillow and a Minecraft 1.21.1 client jar; nothing is downloaded.
+This is an asset-review render, not Minecraft footage or a lighting reference.
+"""
+
+import argparse
+import json
+import math
+from pathlib import Path
+from zipfile import ZipFile
+
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+ROOT = Path(__file__).resolve().parents[1]
+MODELS = ROOT / 'src/main/resources/assets/vestige/models/block'
+ENTRIES = (
+    ('spellstone', 'Spellstone', '½ block · etched stone'),
+    ('plinth', 'Plinth', '6/16 block · broad offering surface'),
+)
+
+
+def dot(a, b):
+    return sum(x*y for x, y in zip(a, b))
+
+
+def sub(a, b):
+    return tuple(x-y for x, y in zip(a, b))
+
+
+def cross(a, b):
+    return (a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0])
+
+
+def unit(a):
+    length = math.sqrt(dot(a, a))
+    return tuple(x/length for x in a)
+
+
+def rotate(point, rotation):
+    if not rotation:
+        return point
+    origin = rotation['origin']
+    p = sub(point, origin)
+    a = math.radians(rotation['angle'])
+    c, s = math.cos(a), math.sin(a)
+    axis = rotation['axis']
+    if axis == 'x':
+        out = (p[0], c*p[1]-s*p[2], s*p[1]+c*p[2])
+    elif axis == 'y':
+        out = (c*p[0]+s*p[2], p[1], -s*p[0]+c*p[2])
+    else:
+        out = (c*p[0]-s*p[1], s*p[0]+c*p[1], p[2])
+    return tuple(x+y for x, y in zip(out, origin))
+
+
+def corners(element):
+    x0, y0, z0 = element['from']
+    x1, y1, z1 = element['to']
+    faces = {
+        'north': [(x0,y1,z0),(x1,y1,z0),(x1,y0,z0),(x0,y0,z0)],
+        'south': [(x1,y1,z1),(x0,y1,z1),(x0,y0,z1),(x1,y0,z1)],
+        'west': [(x0,y1,z1),(x0,y1,z0),(x0,y0,z0),(x0,y0,z1)],
+        'east': [(x1,y1,z0),(x1,y1,z1),(x1,y0,z1),(x1,y0,z0)],
+        'up': [(x0,y1,z0),(x0,y1,z1),(x1,y1,z1),(x1,y1,z0)],
+        'down': [(x0,y0,z1),(x0,y0,z0),(x1,y0,z0),(x1,y0,z1)],
+    }
+    return {name: [rotate(p, element.get('rotation')) for p in vertices]
+            for name, vertices in faces.items()}
+
+
+def validate(model, jar):
+    assert model['parent'] == 'minecraft:block/block'
+    assert model['ambientocclusion'] is True
+    for value in model['textures'].values():
+        namespace, _ = value.split(':')
+        assert namespace in ('minecraft', 'vestige')
+        with texture_source(value, jar) as stream, Image.open(stream) as texture:
+            size = {'vestige:block/runic_pedestal_top':64,
+                    'vestige:block/spellstone_top':64}.get(value,16)
+            assert texture.size == (size,size), (value, texture.size)
+    for element in model['elements']:
+        assert all(-16 <= n <= 32 for point in (element['from'],element['to']) for n in point)
+        assert all(a < b for a,b in zip(element['from'],element['to']))
+        assert set(element['faces']) == {'up','down','north','south','west','east'}
+        for face in element['faces'].values():
+            assert face['texture'][1:] in model['textures']
+            assert all(0 <= n <= 16 for n in face['uv'])
+        if rotation := element.get('rotation'):
+            assert rotation['axis'] in ('x','y','z')
+            assert rotation['angle'] in (-45,-22.5,0,22.5,45)
+            assert not rotation['rescale']
+        assert all(0 <= n <= 16 for vertices in corners(element).values() for point in vertices for n in point)
+
+
+def texture_source(value, jar):
+    namespace, path = value.split(':')
+    location = f'assets/{namespace}/textures/{path}.png'
+    if namespace == 'minecraft':
+        return jar.open(location)
+    assert namespace == 'vestige', value
+    return (ROOT/'src/main/resources'/location).open('rb')
+
+
+def load_textures(model, jar):
+    textures = {}
+    for key, value in model['textures'].items():
+        with texture_source(value,jar) as stream:
+            textures[key] = Image.open(stream).convert('RGB')
+    return textures
+
+
+def texture_board(model, jar, output):
+    """Show the exact 16×16 source PNGs with an integer nearest-neighbor zoom."""
+    entries = (('stone', 'Chiseled Deepslate'),
+               ('mirrored', 'Mirrored pedestal top'),
+               ('gem', 'Fitted Amethyst'))
+    source_dir = output.parent/'source-textures'
+    source_dir.mkdir(parents=True, exist_ok=True)
+    canvas = Image.new('RGB', (1000,456), '#e5e3de')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((40,24), 'PEDESTAL TEXTURE ASSETS / 16 × 16',
+              font=font(26), fill='#27262c')
+    draw.text((40,64), 'Original stone · bottom half mirrored upward · native Amethyst inset',
+              font=font(17), fill='#66636b')
+    for i, (key, label) in enumerate(entries):
+        if key == 'mirrored':
+            with texture_source(model['textures']['stone'],jar) as stream:
+                stone = Image.open(stream).convert('RGB')
+            bottom = stone.crop((0,8,16,16))
+            texture = Image.new('RGB',(16,16))
+            texture.paste(bottom.transpose(Image.Transpose.FLIP_TOP_BOTTOM),(0,0))
+            texture.paste(bottom,(0,8))
+            texture.save(source_dir/'chiseled_deepslate_mirrored.png')
+        else:
+            _, path = model['textures'][key].split(':')
+            with texture_source(model['textures'][key],jar) as stream:
+                source = stream.read()
+            destination = source_dir/(path.split('/')[-1]+'.png')
+            destination.write_bytes(source)
+            with Image.open(destination) as image:
+                texture = image.convert('RGB')
+        assert texture.size == (16,16)
+        enlarged = texture.resize((256,256), Image.Resampling.NEAREST)
+        x = 40+i*324
+        canvas.paste(enlarged, (x,104))
+        draw.text((x,380), label, font=font(20), fill='#27262c')
+    draw.text((40,425), 'Pixels enlarged 16× without smoothing · native 16×16 textures · mirrored stone uses UVs',
+              font=font(16), fill='#66636b')
+    canvas.save(output)
+
+
+def rune_board(model, jar, output):
+    """Show the actual normal stone, transparent rune and baked runtime tile."""
+    with texture_source(model['textures']['stone'],jar) as stream:
+        stone = Image.open(stream).convert('RGB')
+    bottom = stone.crop((0,8,16,16))
+    base = Image.new('RGB',(16,16))
+    base.paste(bottom.transpose(Image.Transpose.FLIP_TOP_BOTTOM),(0,0))
+    base.paste(bottom,(0,8))
+    overlay_path = ROOT/'src/main/resources/assets/vestige/textures/block/runic_pedestal_runes.png'
+    with Image.open(overlay_path) as image:
+        overlay = image.convert('RGBA')
+    with texture_source(model['textures']['rune_top'],jar) as stream:
+        composite = Image.open(stream).convert('RGB')
+    source_dir = output.parent/'source-textures'
+    source_dir.mkdir(parents=True,exist_ok=True)
+    (source_dir/overlay_path.name).write_bytes(overlay_path.read_bytes())
+    with texture_source(model['textures']['rune_top'],jar) as stream:
+        (source_dir/'runic_pedestal_top.png').write_bytes(stream.read())
+    canvas = Image.new('RGB',(1000,456),'#e5e3de')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((40,24),'RUNIC PEDESTAL / FINER 64 × 64 INLAY',font=font(26),fill='#27262c')
+    draw.text((40,64),'Existing mirrored stone + cyan pixel inscription = the final flat top',
+              font=font(17),fill='#66636b')
+    assert overlay.size == composite.size == (64,64)
+    checker = Image.new('RGBA',overlay.size)
+    for y in range(overlay.height):
+        for x in range(overlay.width):
+            value = 110 if (x//8+y//8)%2 else 150
+            checker.putpixel((x,y),(value,value,value,255))
+    displayed_overlay = Image.alpha_composite(checker,overlay).convert('RGB')
+    for i,(image,label) in enumerate(((base,'16×16 existing stone'),
+                                     (displayed_overlay,'64×64 selected rune'),
+                                     (composite,'64×64 composite top'))):
+        x = 40+i*324
+        canvas.paste(image.resize((256,256),Image.Resampling.NEAREST),(x,104))
+        draw.text((x,380),label,font=font(20),fill='#27262c')
+    draw.text((40,425),'Only rune pixels change · stone pixels preserved exactly · no additional rune geometry',
+              font=font(16),fill='#66636b')
+    canvas.save(output)
+
+
+def render(model, textures, *, azimuth=45, elevation=30, size=420, span=25, center=(8,7,8)):
+    az, el = math.radians(azimuth), math.radians(elevation)
+    camera = (math.cos(el)*math.sin(az), math.sin(el), math.cos(el)*math.cos(az))
+    right = (math.cos(az), 0, -math.sin(az))
+    up = cross(camera, right)
+    scale = size/span
+    light = unit((-.4,.85,.3))
+    output = Image.new('RGBA', (size,size))
+    pixels = output.load()
+    depths = [[-math.inf]*size for _ in range(size)]
+
+    def project(point):
+        point = sub(point, center)
+        return (size/2 + dot(point,right)*scale, size/2-dot(point,up)*scale, dot(point,camera))
+
+    for element in model['elements']:
+        for name, points in corners(element).items():
+            normal = unit(cross(sub(points[1],points[0]),sub(points[2],points[0])))
+            if dot(normal,camera) <= 0:
+                continue
+            face = element['faces'][name]
+            texture = textures[face['texture'][1:]]
+            texels = texture.load()
+            u0,v0,u1,v1 = [n/16 for n in face['uv']]
+            # Match Java block-model face orientation. Horizontal faces map
+            # U along X; vertical faces run from the outside viewer's left.
+            uv = ([(u0,v0),(u0,v1),(u1,v1),(u1,v0)] if name in ('up','down')
+                  else [(u1,v0),(u0,v0),(u0,v1),(u1,v1)])
+            projected = [project(p) for p in points]
+            brightness = .73 + .43*max(0,dot(normal,light))
+            for indices in ((0,1,2),(0,2,3)):
+                a,b,c = [projected[i] for i in indices]
+                ta,tb,tc = [uv[i] for i in indices]
+                denom = (b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1])
+                if abs(denom) < 1e-8:
+                    continue
+                x0 = max(0,math.floor(min(a[0],b[0],c[0])))
+                x1 = min(size-1,math.ceil(max(a[0],b[0],c[0])))
+                y0 = max(0,math.floor(min(a[1],b[1],c[1])))
+                y1 = min(size-1,math.ceil(max(a[1],b[1],c[1])))
+                for y in range(y0,y1+1):
+                    for x in range(x0,x1+1):
+                        px,py = x+.5,y+.5
+                        wa = ((b[1]-c[1])*(px-c[0])+(c[0]-b[0])*(py-c[1]))/denom
+                        wb = ((c[1]-a[1])*(px-c[0])+(a[0]-c[0])*(py-c[1]))/denom
+                        wc = 1-wa-wb
+                        if min(wa,wb,wc) < -1e-7:
+                            continue
+                        depth = wa*a[2]+wb*b[2]+wc*c[2]
+                        if depth <= depths[y][x]:
+                            continue
+                        u = wa*ta[0]+wb*tb[0]+wc*tc[0]
+                        v = wa*ta[1]+wb*tb[1]+wc*tc[1]
+                        tx = min(texture.width-1,max(0,int(u*texture.width)))
+                        ty = min(texture.height-1,max(0,int(v*texture.height)))
+                        color = texels[tx,ty]
+                        pixels[x,y] = tuple(min(255,round(n*brightness)) for n in color)+(255,)
+                        depths[y][x] = depth
+    return output
+
+
+def font(size):
+    for path in ('/System/Library/Fonts/Supplemental/Arial.ttf',
+                 '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'):
+        if Path(path).exists():
+            return ImageFont.truetype(path,size)
+    return ImageFont.load_default(size=size)
+
+
+def board(models, textures, azimuth, output):
+    canvas = Image.new('RGB',(1440,780),'#e5e3de')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((56,42),'VESTIGE / APPARATUS',font=font(32),fill='#27262c')
+    draw.text((56,94),'16×16 stone and fitted gems · 64×64 engraved Spellstone crown and Runic inscription',
+              font=font(19),fill='#66636b')
+    draw.line((56,138,1384,138),fill='#c1bec7',width=1)
+    for i, ((name,label,caption),model,texture) in enumerate(zip(ENTRIES,models,textures)):
+        x = 30+i*470
+        image = render(model,texture,azimuth=azimuth)
+        shadow = Image.new('RGBA',image.size)
+        ImageDraw.Draw(shadow).ellipse((86,325,334,376),fill=(31,28,36,35))
+        shadow = shadow.filter(ImageFilter.GaussianBlur(16))
+        canvas.paste(shadow,(x,164),shadow)
+        canvas.paste(image,(x,164),image)
+        draw.text((x+24,604),label,font=font(24),fill='#2b2832')
+        draw.text((x+24,642),caption,font=font(17),fill='#66636b')
+    draw.line((56,698,1384,698),fill='#c1bec7',width=1)
+    draw.text((56,724),'Actual model files and texture assets · offline asset review · flat offering tops',
+              font=font(17),fill='#66636b')
+    canvas.save(output)
+
+
+def detail_board(models, textures, output):
+    canvas = Image.new('RGB',(1440,700),'#e5e3de')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((56,36),'VESTIGE / PEDESTAL DETAILS',font=font(30),fill='#27262c')
+    views = (
+        (1, 'Mirrored carving', 'Bottom half reflected upward · upper notches removed',
+         dict(azimuth=0,elevation=90,span=12,center=(8,7,8))),
+        (1, 'Fitted Amethyst', 'Native 16×16 inset · contrasting pixel facets',
+         dict(azimuth=0,elevation=0,span=4,center=(8,3.375,8))),
+        (2, 'Finer cyan rune', '64×64 inscription over the same 16×16 stone',
+         dict(azimuth=0,elevation=90,span=12,center=(8,5,8))),
+    )
+    for i, (index,label,caption,settings) in enumerate(views):
+        x = 24+i*472
+        picture = render(models[index],textures[index],**settings)
+        canvas.paste(picture,(x,106),picture)
+        draw.text((x+24,550),label,font=font(24),fill='#2b2832')
+        draw.text((x+24,590),caption,font=font(16),fill='#66636b')
+    draw.text((56,648),'Actual model geometry and texture assets · nearest pixel sampling · offline asset review',
+              font=font(17),fill='#66636b')
+    canvas.save(output)
+
+
+def spellstone_board(model, textures, output):
+    canvas = Image.new('RGB',(1440,700),'#e5e3de')
+    draw = ImageDraw.Draw(canvas)
+    draw.text((56,36),'VESTIGE / SPELLSTONE DETAILS',font=font(30),fill='#27262c')
+    views = (
+        ('Ancient stone supports', 'Recessed Amethyst core · four grounded Diamond-banded piers',
+         render(model,textures,azimuth=0,elevation=0,span=14,center=(8,6,8))),
+        ('Flat engraved crown', 'Two Diamond clasps · violet channels · Amethyst centerpiece',
+         render(model,textures,azimuth=0,elevation=90,span=14,center=(8,12,8))),
+        ('Actual 64×64 texture', 'Original 16×16 stone under the finer ornament',
+         textures['spellstone_top'].resize((384,384),Image.Resampling.NEAREST)),
+    )
+    for i,(label,caption,picture) in enumerate(views):
+        x = 24+i*472
+        if picture.mode == 'RGBA':
+            canvas.paste(picture,(x,106),picture)
+        else:
+            canvas.paste(picture,(x+18,124))
+        draw.text((x+24,550),label,font=font(24),fill='#2b2832')
+        draw.text((x+24,590),caption,font=font(15),fill='#66636b')
+    draw.text((56,648),'12/16-block height · level top · shallow side settings · offline asset review',
+              font=font(17),fill='#66636b')
+    canvas.save(output)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--minecraft-jar',type=Path,required=True)
+    parser.add_argument('--output',type=Path,default=ROOT/'docs/previews/apparatus-v12')
+    parser.add_argument('--check',action='store_true',help='validate model structure and texture references only')
+    args = parser.parse_args()
+    with ZipFile(args.minecraft_jar) as jar:
+        models = [json.loads((MODELS/(name+'.json')).read_text()) for name,_,_ in ENTRIES]
+        for (name,_,_),model in zip(ENTRIES,models):
+            validate(model,jar)
+            item = json.loads((MODELS.parent/'item'/(name+'.json')).read_text())
+            assert item == {'parent':'vestige:block/'+name}
+            print(name, len(model['elements']), 'valid cuboids; texture resolutions/references resolve')
+        if args.check:
+            return
+        textures = [load_textures(model,jar) for model in models]
+        args.output.mkdir(parents=True,exist_ok=True)
+        texture_board(models[1],jar,args.output/'source-textures.png')
+        rune_board(models[2],jar,args.output/'rune-textures.png')
+    args.output.mkdir(parents=True,exist_ok=True)
+    board(models,textures,45,args.output/'apparatus-models.png')
+    board(models,textures,225,args.output/'apparatus-models-reverse.png')
+    detail_board(models,textures,args.output/'pedestal-details.png')
+    spellstone_board(models[0],textures[0],args.output/'spellstone-details.png')
+    for (name,_,_),model,texture in zip(ENTRIES,models,textures):
+        render(model,texture).save(args.output/(name+'.png'))
+    render(models[2],textures[2],azimuth=0,elevation=85,size=640,span=11).save(args.output/'runic-runes-detail.png')
+    render(models[1],textures[1],azimuth=0,elevation=85,size=640,span=11).save(args.output/'stone-top-detail.png')
+    render(models[1],textures[1],azimuth=0,elevation=0,size=640,span=4.5,center=(8,3.375,8)).save(args.output/'stone-gem-detail.png')
+    print('Saved asset review renders:',args.output)
+
+
+if __name__ == '__main__':
+    main()

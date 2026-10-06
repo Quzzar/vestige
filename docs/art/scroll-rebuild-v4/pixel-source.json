@@ -1,0 +1,148 @@
+{
+  "minecraft": "1.21.1",
+  "status": "review drafts; not installed",
+  "vanillaHashes": {
+    "paper": "8ffee002bbc339552eb4d6be5948eb4eb66d016c19e7bbc55bc1cd4a575cc44a",
+    "name_tag": "320018673e5a4ed4246aa0599439a97c91df74dcb966d904e83b3589f496b0d9",
+    "bone": "f5f2a37e7466f2983c00550874a2a94d2d006eae52b0e73acb722fadeb9bdb3b",
+    "amethyst_shard": "24fa75f6b75202d890019ec7a901d525918cfacd3e8c0e6cb0580c7b7933b363",
+    "echo_shard": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "red_dye": "b35a1e3297e33a20548e0ab45098576706f543776a575cabd1128df2cf77e47a"
+  },
+  "previousDraftHashes": {
+    "previous_s1": "4531b32bb4e6f8a4f7b01cf09e811e49a0438e29609a1bc24551c18694805343",
+    "previous_r2": "4298ad053ff5fc7eaaca0ac12497ce96d0804af6d3b16c5924653b8187796f1d",
+    "electroblob": "71c1d3028af3d9debf869635fd61e506c1681ed0ee6f11cedd12e94c23653d00",
+    "rejected_r2a": "82d7602192b3f1f85f3d1a9fc51d4ff4ff6203e75c8c0d4ddea8fa27f72770eb"
+  },
+  "studies": {
+    "scroll_ribbon": {
+      "label": "R3a \u00b7 Ribbon Roll",
+      "kind": "scroll",
+      "palette": {
+        "X": "#5c4417",
+        "S": "#ceac6d",
+        "M": "#e6c78c",
+        "H": "#e8e5d2",
+        "I": "#fcfbed",
+        "D": "#791c27",
+        "R": "#d2443f",
+        "F": "#ef6d62",
+        "K": "#a82c47"
+      },
+      "rows": [
+        "................",
+        "...XSSX.........",
+        "..XMIHMS........",
+        ".XMIHHMSX.......",
+        ".XHMIHHMSX......",
+        ".XHSXMHMSDX.....",
+        "..XSMXMSDRRX....",
+        "...XXSSDRFRX....",
+        "....XSDRFRDSX...",
+        ".....DRFRDHMMS..",
+        "....DRFRDMIHMSX.",
+        "....RFRDSMHXMSX.",
+        "....RRD.XSXMHMX.",
+        ".....D...XSXMSX.",
+        "..........XSSX..",
+        "................"
+      ],
+      "colors": 8,
+      "dimensions": [
+        16,
+        16
+      ],
+      "sha256": "8c50ab048bfdbb6e6001353922cc493fa3c725fee13b4344312759e0896fa432"
+    },
+    "scroll_cord": {
+      "label": "R3b \u00b7 Bound Parchment",
+      "kind": "scroll",
+      "palette": {
+        "X": "#5c4417",
+        "S": "#ceac6d",
+        "M": "#e6c78c",
+        "H": "#e8e5d2",
+        "I": "#fcfbed",
+        "D": "#791c27",
+        "R": "#d2443f",
+        "F": "#ef6d62",
+        "K": "#a82c47"
+      },
+      "rows": [
+        "................",
+        "...XSSX.........",
+        "..XMIHMS........",
+        ".XMIHHMSX.......",
+        ".XHMIHHMSX......",
+        ".XHSXMHMSX......",
+        "..XSMXMSKDX.....",
+        "...XXSSKFRSX....",
+        "....XSKFRSHSX...",
+        ".....KFRSHHMMS..",
+        ".....DDXSMIHMSX.",
+        ".....RX.SMHXMSX.",
+        ".....D..XSXMHMX.",
+        ".........XSXMSX.",
+        "..........XSSX..",
+        "................"
+      ],
+      "colors": 9,
+      "dimensions": [
+        16,
+        16
+      ],
+      "sha256": "d59ba30270fcea11f1f708dc2c8c67bea314575f5cec86b2dffccccdab26429b"
+    },
+    "scroll_wide_roll": {
+      "label": "R3c \u00b7 Compact Roll",
+      "kind": "scroll",
+      "palette": {
+        "X": "#5c4417",
+        "S": "#ceac6d",
+        "M": "#e6c78c",
+        "H": "#e8e5d2",
+        "I": "#fcfbed",
+        "D": "#791c27",
+        "R": "#d2443f",
+        "F": "#ef6d62",
+        "K": "#a82c47"
+      },
+      "rows": [
+        "................",
+        "................",
+        ".........XXXXX..",
+        "........XHMIHMSX",
+        "......XXHMIHMSMX",
+        "....XXHMIRDSXMX.",
+        "...XHMIHRRDMSXX.",
+        "..XHMIHRFDSSXX..",
+        "..XHSXMRDDSX....",
+        "..XMSHMDSSX.....",
+        "...XSSRDXX......",
+        "....XXDX........",
+        "................",
+        "................",
+        "................",
+        "................"
+      ],
+      "colors": 8,
+      "dimensions": [
+        16,
+        16
+      ],
+      "sha256": "c9cbfb209c2f9b5f016bb329da3141e052c1001fe4076b7ab47aec70cd02155c"
+    }
+  },
+  "referenceProvenance": {
+    "electroblob": {
+      "url": "https://github.com/Electroblob77/Wizardry/blob/fe5d05a7a134836dd972e3680a900619c7e9c134/src/main/resources/assets/ebwizardry/textures/items/scroll.png",
+      "gitBlob": "13d56d1bad50f42b6283d9041ad4eacd01c3a572",
+      "dimensions": [
+        16,
+        16
+      ],
+      "use": "unchanged visual reference only; outside packaged resources"
+    }
+  }
+}

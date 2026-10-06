@@ -1,0 +1,23 @@
+{
+  "tool": "Built-in image_gen",
+  "source": "docs/art/spellstone-tent-table/side-gems/generated-gem.png",
+  "source_sha256": "774c514c537faa24a28955fd2674852d4463fe3c8d9cb02536553de409367b66",
+  "source_dimensions": [
+    1254,
+    1254
+  ],
+  "native": "src/main/resources/assets/vestige/textures/block/spellstone_diamond_gem.png",
+  "native_sha256": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+  "native_dimensions": [
+    32,
+    32
+  ],
+  "conversion": "Nearest-neighbor size conversion only, with alpha retained; ffmpeg scale=32:32:flags=neighbor",
+  "model_uv": [
+    3.5,
+    4,
+    12.5,
+    12
+  ],
+  "prompt": "generation-prompt.txt"
+}

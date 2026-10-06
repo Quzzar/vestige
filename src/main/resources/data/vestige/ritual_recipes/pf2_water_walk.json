@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_water_walk",
+  "name": "Water Walk",
+  "circle": 4,
+  "color": "239dcc",
+  "rationale": "Kelp's water surface meets a feather's light step and Slime's buoyant shape.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Feather motif follows slime motif clockwise.",
+    "Kelp motif follows feather motif clockwise.",
+    "Blank inscription follows kelp motif clockwise."
+  ]
+}

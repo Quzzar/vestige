@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_harm",
+  "name": "Harm",
+  "circle": 4,
+  "color": "c895ff",
+  "rationale": "Decay feeds living light and Bone in reversed order, describing a pulse that heals undead while harming living flesh.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 1,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bone motif follows blank inscription clockwise.",
+    "Living light follows bone motif clockwise.",
+    "Enemy decay follows living light clockwise.",
+    "Blank inscription follows enemy decay clockwise."
+  ]
+}

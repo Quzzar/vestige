@@ -1,0 +1,3403 @@
+{
+  "status": "Simple native Plinth and Astral Spellstone",
+  "models": [
+    {
+      "material": "stone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "stone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "stone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "stone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "stone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "part": "single",
+      "solid_cuboids": 3,
+      "flat_socket_faces": 4,
+      "total_elements": 7,
+      "baked_faces": 20,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "part": "base",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        16,
+        14.0
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "part": "shaft",
+      "solid_cuboids": 1,
+      "flat_socket_faces": 4,
+      "total_elements": 5,
+      "baked_faces": 8,
+      "physical_envelope": [
+        3,
+        0,
+        3,
+        13,
+        16,
+        13
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "part": "cap",
+      "solid_cuboids": 2,
+      "flat_socket_faces": 4,
+      "total_elements": 6,
+      "baked_faces": 14,
+      "physical_envelope": [
+        2.0,
+        0,
+        2.0,
+        14.0,
+        14,
+        14.0
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "spellstone",
+      "solid_cuboids": 7,
+      "flat_trim_faces": 8,
+      "diamond_top_faces": 4,
+      "diamond_side_faces": 4,
+      "total_elements": 23,
+      "baked_faces": 38,
+      "physical_height": 7,
+      "corner_cut": 4,
+      "physical_envelope": [
+        0.9999999999999991,
+        0,
+        1,
+        15,
+        7,
+        15
+      ]
+    }
+  ],
+  "column_seams": [
+    {
+      "material": "stone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/stone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "cobblestone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/cobblestone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "mossy_cobblestone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/mossy_cobblestone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "stone_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/stone_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/mossy_stone_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "granite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/granite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_granite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_granite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "diorite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/diorite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_diorite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_diorite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "andesite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/andesite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_andesite",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_andesite",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "sandstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/sandstone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "smooth_sandstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/sandstone_top",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "red_sandstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/red_sandstone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/red_sandstone_top",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "mud_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/mud_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "quartz",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/quartz_pillar",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "smooth_quartz",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/quartz_block_bottom",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "prismarine",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/prismarine",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "prismarine_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/prismarine_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "dark_prismarine",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/dark_prismarine",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "nether_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/nether_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "red_nether_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/red_nether_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "blackstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/blackstone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_blackstone",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_blackstone",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_blackstone_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "cobbled_deepslate",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/cobbled_deepslate",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_deepslate",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_deepslate",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "deepslate_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/deepslate_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "deepslate_tiles",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/deepslate_tiles",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "tuff",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/tuff",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "polished_tuff",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/polished_tuff",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "tuff_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/tuff_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "end_stone_bricks",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/end_stone_bricks",
+      "same_socket_on_all_parts": true
+    },
+    {
+      "material": "purpur",
+      "matched_side_faces": 4,
+      "shaft_texture": "minecraft:block/purpur_pillar",
+      "same_socket_on_all_parts": true
+    }
+  ],
+  "geometry": "Standalone: three stone cuboids; base/cap: two; shaft: one. Four flat carved socket faces on every form. No bevels, raised bars or corner strips.",
+  "socket": {
+    "center_y": 8,
+    "material_face_z": 2.5,
+    "material_back_z": 2.98,
+    "protrusion": 0.5,
+    "material_size": 4,
+    "quad_count_per_imbued_segment": 20
+  },
+  "spellstone": "One seven-cuboid octagonal body at y7/16; eight texture-only trim faces and four Diamond notches wrapping onto top/side. Collision includes solids only and retains the enclosing-box convention for rotations. No baked raster rune.",
+  "preservation": "Plinth geometry, offerings, independent stored sockets, recipes, waterlogging and shaping are unchanged. Plinth surface is flat at y14/16; foot/cap width 12/16 and shaft width 10/16.",
+  "textures": "Existing vanilla masonry/carved tiles; no raster changes. Fixed UV phase across joins; native Quartz/Purpur pillar shaft."
+}

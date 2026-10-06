@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_zephyr_slip",
+  "name": "Zephyr Slip",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "A feather and membrane move past Iron's knockback motif for a triggered defensive retreat.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 1,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    }
+  ],
+  "clues": [
+    "Bound metal follows blank inscription clockwise.",
+    "Recovery veil follows bound metal clockwise.",
+    "Feather motif follows recovery veil clockwise.",
+    "Blank inscription follows feather motif clockwise."
+  ]
+}

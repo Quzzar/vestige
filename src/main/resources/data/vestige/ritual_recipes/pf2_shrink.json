@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_shrink",
+  "name": "Shrink",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Leather, Mushroom and Slime reverse the growth recipe to describe a smaller flexible body.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "mushroom motif",
+      "ingredient": {
+        "items": [
+          "minecraft:brown_mushroom"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Mushroom motif follows slime motif clockwise.",
+    "Leather motif follows mushroom motif clockwise.",
+    "Blank inscription follows leather motif clockwise."
+  ]
+}

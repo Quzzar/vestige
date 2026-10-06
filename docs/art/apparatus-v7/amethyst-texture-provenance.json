@@ -1,0 +1,14 @@
+{
+  "method": "built-in imagegen",
+  "reference": "../apparatus-v6/amethyst-gem-reference.png",
+  "generated_source": "amethyst-generated-source.png",
+  "prompt": "amethyst-generation-prompt.txt",
+  "runtime_texture": "../../../src/main/resources/assets/vestige/textures/block/pedestal_amethyst.png",
+  "runtime_size": [
+    16,
+    16
+  ],
+  "preparation": "RGB conversion and nearest-neighbor reduction to the requested 16\u00d716 size",
+  "generated_source_sha256": "b7fb17ae277fab9576d64edbe617eb586969ca4d998fa861e195b4329b8e1385",
+  "runtime_texture_sha256": "c7d69c3708eb3c8bcab7c16b3da5e993fcddaf36bf76f844accc70155ccfe292"
+}

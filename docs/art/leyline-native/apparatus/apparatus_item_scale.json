@@ -1,0 +1,53 @@
+{
+  "spell": "vestige:apparatus_item_scale",
+  "phase": 0,
+  "label": "Offerings and real dropped items",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "assetSha256": {
+    "models/block/spellstone.json": "f5ed10c576b51ada18a9e5be075602da8054a625a1ba06ca242441023b99c022",
+    "models/block/plinth.json": "2c55a2f809b0aac72bffbe72af448730ee413c06a3a8143442e48a219106ddeb",
+    "textures/block/spellstone_runes.png": "4e725e0dabb2f1fc4c242dbcc3f44be911b638b155bd374f8971425061eeec6d"
+  },
+  "seconds": 2.000072417,
+  "times": [
+    0.01965425,
+    0.091762208,
+    0.168634083,
+    0.243565333,
+    0.319510708,
+    0.394593,
+    0.471684875,
+    0.5460955,
+    0.620943667,
+    0.696876917,
+    0.774790875,
+    0.855039125,
+    0.936350542,
+    1.018832667,
+    1.099200042,
+    1.180631,
+    1.259898167,
+    1.339169542,
+    1.420700917,
+    1.500021208,
+    1.580816833,
+    1.662072542,
+    1.742196333,
+    1.810139833,
+    1.88078425,
+    1.950211083
+  ],
+  "outcome": "PLACED",
+  "scenario": "Diamond and Amethyst Block offerings use unscaled native GROUND transforms; actual vanilla ItemEntity copies in front show the same model scale, with normal dropped-item orientation/bobbing.",
+  "blocks": {
+    "BlockPos{x=-1, y=65, z=0}": "vestige:plinth",
+    "BlockPos{x=1, y=65, z=0}": "vestige:plinth"
+  },
+  "archivedFrame": 15,
+  "frameSha256": "20cc0c6393c26d7d4b6c2799c7e2af143d5e78bbb3be686f566c0f184796490a"
+}

@@ -1,0 +1,83 @@
+{
+  "spell": "vestige:wall_of_fire",
+  "name": "Wall Of Fire",
+  "circle": 8,
+  "color": "f85b25",
+  "rationale": "Blaze and Fire Charge trace a Stone-bounded protection seal that Emerald directs into a burning segment.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold flame focus, protection seal; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Flame focus follows blank inscription clockwise.",
+    "Firecharge motif follows flame focus clockwise.",
+    "Stone motif follows firecharge motif clockwise, across an unused outer Plinth.",
+    "Protection seal follows stone motif clockwise.",
+    "Evocation focus follows protection seal clockwise.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

@@ -13,6 +13,9 @@ import java.net.URI;
 /** Reads the native runtime's authored JSON grammar with bounded nesting and strict scalar types. */
 public final class SpellJson {
     private SpellJson() { }
+    public static List<SpellEffect> readPlan(JsonArray json) { return effects(json,0); }
+    public static List<SpellCost> readCosts(JsonArray json) { return costs(json); }
+    public static SpellValue readValue(JsonElement json) { return value(json,0); }
     public static SpellDefinition read(ResourceLocation id, JsonObject json) {
         SpellRarity rarity = json.has("rarity")
                 ? SpellRarity.fromId(text(json, "rarity")).orElseThrow(() -> new JsonParseException("Unknown spell rarity: " + json.get("rarity")))
@@ -91,6 +94,8 @@ public final class SpellJson {
                         effects(array(effect, "then"), depth + 1), effects(array(effect, "else"), depth + 1));
                 case "delay" -> new SpellEffects.Delay(integer(effect, "ticks"));
                 case "repeat" -> new SpellEffects.Repeat(integer(effect, "count"), integer(effect, "interval"), effects(array(effect, "effects"), depth + 1));
+                case "secondary" -> new SpellEffects.Secondary(effects(array(effect,"effects"),depth+1));
+                case "limited" -> new SpellEffects.Limited(identifier(text(effect,"group")),integer(effect,"per_target"),integer(effect,"total"),effects(array(effect,"effects"),depth+1));
                 case "for_each" -> new SpellEffects.ForEach(target(object(effect, "target"), depth + 1), effects(array(effect, "effects"), depth + 1), optionalVisual(effect, depth + 1));
                 case "visual" -> new SpellEffects.Visual(visual(object(effect, "visual"), depth + 1));
                 case "set_value" -> new SpellEffects.SetValue(identifier(text(effect, "key")), scalar(required(effect, "value")));
@@ -177,6 +182,7 @@ public final class SpellJson {
         if (object.size() != 1) throw new JsonParseException("A value expression needs one operator");
         if (object.has("trait")) return new SpellValue.Trait(identifier(text(object, "trait")));
         if (object.has("fact")) return new SpellValue.Fact(identifier(text(object, "fact")));
+        if (object.has("clamp")) { var bounds=object.getAsJsonObject("clamp"); return new SpellValue.Clamp(value(required(bounds,"value"),depth+1),number(required(bounds,"minimum")),number(required(bounds,"maximum"))); }
         List<SpellValue> terms = new ArrayList<>();
         if (object.has("sum")) {
             for (JsonElement term : object.getAsJsonArray("sum")) terms.add(value(term, depth + 1));

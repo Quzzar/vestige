@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:pf2_status",
+  "name": "Status",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "Living light and Compass report on Amethyst-bound allied health and direction.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Living light follows blank inscription clockwise.",
+    "Compass motif follows living light clockwise.",
+    "Resonant facet follows compass motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

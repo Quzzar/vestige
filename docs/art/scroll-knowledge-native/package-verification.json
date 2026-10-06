@@ -1,0 +1,16 @@
+{
+  "jar": "/Users/quzzar/Projects/vestige/build/scroll-knowledge/vestige-0.1.0.jar",
+  "sha256": "5b74e8c893c03f48e4a436a01e34c75cff23cb764785a8551f758a761fdc6b32",
+  "zipIntegrity": true,
+  "modDisplayName": "Vestige",
+  "subtitle": "Traditions of Lost Magic",
+  "unidentifiedScrollName": "Unknown Scroll",
+  "allCompiledClassesAgree": 320,
+  "allSourceResourcesAgree": 2888,
+  "capturedKnowledgeClassesAgree": 31,
+  "otherCapturedClassChanged": [
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class"
+  ],
+  "captureDifferenceExplanation": "The general effects-capture driver changed concurrently. It excludes scroll_knowledge mode; all actual scroll knowledge, diagram, payload and viewer classes agree.",
+  "installedIntoPrism": false
+}

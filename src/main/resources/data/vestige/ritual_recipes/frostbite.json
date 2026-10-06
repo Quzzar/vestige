@@ -1,0 +1,60 @@
+{
+  "spell": "vestige:frostbite",
+  "name": "Frostbite",
+  "circle": 4,
+  "color": "48badf",
+  "rationale": "Cold and draining motifs turn resonant Amethyst into the mark for repeated attacks and a death-triggered shatter.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Draining focus follows resonant facet clockwise.",
+    "Cold focus follows draining focus clockwise.",
+    "Blank inscription follows cold focus clockwise."
+  ]
+}

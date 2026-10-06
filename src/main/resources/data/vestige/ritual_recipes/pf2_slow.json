@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_slow",
+  "name": "Slow",
+  "circle": 4,
+  "color": "c9beff",
+  "rationale": "A Clock loses motion to sticky Slime and Iron's native weight motif; its immunity parameter is not a slowing bonus.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    }
+  ],
+  "clues": [
+    "Bound metal follows blank inscription clockwise.",
+    "Slime motif follows bound metal clockwise.",
+    "Clock motif follows slime motif clockwise.",
+    "Blank inscription follows clock motif clockwise."
+  ]
+}

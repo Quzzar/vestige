@@ -1,0 +1,85 @@
+{
+  "scrollNames": [
+    {
+      "color": "white",
+      "label": "Unknown",
+      "name": "Unknown Scroll",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "color": "white",
+      "label": "Common",
+      "name": "Scroll of Firebolt",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "color": "yellow",
+      "label": "Uncommon",
+      "name": "Scroll of Burning Dash",
+      "rgb": "#FFFF55"
+    },
+    {
+      "color": "aqua",
+      "label": "Rare",
+      "name": "Scroll of Ball Lightning",
+      "rgb": "#55FFFF"
+    },
+    {
+      "color": "light_purple",
+      "label": "Mythic",
+      "name": "Scroll of Black Hole",
+      "rgb": "#FF55FF"
+    },
+    {
+      "color": "white",
+      "label": "Identified",
+      "name": "Scroll of Magnetic Attraction",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "color": "aqua",
+      "label": "Augmented",
+      "name": "Scroll of Reaching Ball Lightning",
+      "rgb": "#55FFFF"
+    }
+  ],
+  "lookups": [
+    {
+      "guiHeight": 360,
+      "registeredRituals": 216,
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "crafted_fireball"
+    },
+    {
+      "guiHeight": 360,
+      "registeredRituals": 216,
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "identified_magnetic_attraction"
+    },
+    {
+      "guiHeight": 720,
+      "registeredRituals": 216,
+      "guiWidth": 1280,
+      "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+      "guiScale": 2,
+      "recipe": "scroll_names"
+    }
+  ],
+  "viewer": "jei",
+  "source": "Minecraft main render target in actual recipe viewer",
+  "indexing": {
+    "paperSpellUses": 0,
+    "lapisUses": 1,
+    "blazeRodSpellUses": 0,
+    "rarityColorTooltipCases": 20,
+    "baseFireball": 1,
+    "craftedPaperUses": 1,
+    "shapedFireball": 1,
+    "nameOnlyTooltipCases": 20,
+    "attunedShard": 1
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "spell": "vestige:sonic_boom",
+  "name": "Sonic Boom",
+  "circle": 8,
+  "color": "cad7e5",
+  "rationale": "A Note Block sends air through Echo, Powder and Emerald, describing the piercing sonic beam.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "note motif",
+      "ingredient": {
+        "items": [
+          "minecraft:note_block"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 5,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold note motif, powder motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Note motif follows blank inscription clockwise.",
+    "Feather motif follows note motif clockwise.",
+    "Lost echo follows feather motif clockwise, across an unused outer Plinth.",
+    "Powder motif follows lost echo clockwise.",
+    "Evocation focus follows powder motif clockwise.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

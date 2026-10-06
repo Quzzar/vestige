@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-05T21:25:56.743567+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 151,
+  "packaged_apparatus_block_models_verified": 180,
+  "unchanged_plinth_block_item_models": 180,
+  "unchanged_construction_recipes": 72,
+  "all_spellstone_elements_above_foundation_unchanged": true,
+  "raster_assets_unchanged": true,
+  "jar_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "scope": "Four clipped corners in the single-height Spellstone foundation, shared by all 36 finishes. Other apparatus art and gameplay unchanged.",
+  "native_visual_inspection": "Fresh Tuff and Quartz Minecraft views inspected. Four clean diagonal cuts follow the body, without the prior square corners. Loaded asset hashes match packaged/source models; unchanged native framebuffer images archived."
+}

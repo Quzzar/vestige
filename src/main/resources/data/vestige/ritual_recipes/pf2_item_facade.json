@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_item_facade",
+  "name": "Item Facade",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Ink dresses a Leather surface with an Amethyst-focused pristine appearance.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Ink motif follows blank inscription clockwise.",
+    "Leather motif follows ink motif clockwise.",
+    "Resonant facet follows leather motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

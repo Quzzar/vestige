@@ -1,0 +1,242 @@
+{
+  "verified_utc": "2026-10-06T20:07:17.336820+00:00",
+  "engine": "Minecraft Java 1.21.1 / NeoForge 21.1.72",
+  "checks": {
+    "source_grid_export": "PASS",
+    "binary_alpha_full_border_connected_silhouettes": "PASS",
+    "44_loaded_assets_match_sources": "PASS",
+    "18_native_models_match": "PASS",
+    "six_native_views_visually_inspected": "PASS",
+    "one_focused_minecraft_craft_check": "PASS",
+    "production_build": "PASS",
+    "original_textures_preserved": "PASS",
+    "preview_assets_excluded_from_production": "PASS"
+  },
+  "unit_tests": {
+    "tests": 105,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "variants": [
+    {
+      "id": "eye_a_flint_inset",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        2,
+        2,
+        15,
+        15
+      ],
+      "opaque_colors": 14,
+      "opaque_pixels": 110,
+      "sha256": "df660f0f848f645f8587e60648647ce25b8fead8623788c0885f8e7a9a3712c9"
+    },
+    {
+      "id": "eye_b_split_flake",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        2,
+        2,
+        15,
+        15
+      ],
+      "opaque_colors": 14,
+      "opaque_pixels": 108,
+      "sha256": "6efcd7b92655d6f2ac5da758d7df9940ffa1453fc4cac6d18bd68005b9141266"
+    },
+    {
+      "id": "eye_c_long_chip",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        15,
+        15
+      ],
+      "opaque_colors": 14,
+      "opaque_pixels": 99,
+      "sha256": "8517faa528e2296326d19bceed359a7fcc9402b4b59db8448b245de530f1ea9d"
+    },
+    {
+      "id": "eye_d_knapped_core",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        2,
+        2,
+        15,
+        15
+      ],
+      "opaque_colors": 14,
+      "opaque_pixels": 107,
+      "sha256": "10793519aa738efa157e056cd230edf4462945a778b016b632f44a8ee4d95ec6"
+    },
+    {
+      "id": "shell_a_old_ridges",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        14,
+        15
+      ],
+      "opaque_colors": 8,
+      "opaque_pixels": 87,
+      "sha256": "27ab9b5bd51b850e9ac562a44c802e2dd80ab75ba65d376425441379bc7d8051"
+    },
+    {
+      "id": "shell_b_broken_ribs",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        14,
+        15
+      ],
+      "opaque_colors": 8,
+      "opaque_pixels": 86,
+      "sha256": "5dcd09591d85a5b019a5061c50164fbfbb921ed67767c5cadb1b391a07a0b649"
+    },
+    {
+      "id": "shell_c_slate_coils",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        14,
+        15
+      ],
+      "opaque_colors": 8,
+      "opaque_pixels": 83,
+      "sha256": "299ed16eff09de225660080a16eb196654f27d6ba150d37b9faa85a5a6c00c91"
+    },
+    {
+      "id": "shell_d_shadow_lip",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        14,
+        15
+      ],
+      "opaque_colors": 8,
+      "opaque_pixels": 87,
+      "sha256": "6f16b1608c23f307b67263137fd2c43f80019a5b672f353c7a33eb51369a290e"
+    }
+  ],
+  "asset_sha256": {
+    "vestige:textures/item/eye_a_flint_inset.png": "df660f0f848f645f8587e60648647ce25b8fead8623788c0885f8e7a9a3712c9",
+    "vestige:models/item/eye_a_flint_inset.json": "51c2ff8cd6031c90eacba50ed2300528f9884d5155be12047dfddf4a8acc8c39",
+    "vestige:textures/item/eye_b_split_flake.png": "6efcd7b92655d6f2ac5da758d7df9940ffa1453fc4cac6d18bd68005b9141266",
+    "vestige:models/item/eye_b_split_flake.json": "9f7b4bc0e5453b853dabe404e77eba4d6f23f6ce489ddd7bfcce57e916ed2720",
+    "vestige:textures/item/eye_c_long_chip.png": "8517faa528e2296326d19bceed359a7fcc9402b4b59db8448b245de530f1ea9d",
+    "vestige:models/item/eye_c_long_chip.json": "2d3b2878562986b096b9211cfd7b2bdab7984ed2275a53e3764ac116b3c05ca6",
+    "vestige:textures/item/eye_d_knapped_core.png": "10793519aa738efa157e056cd230edf4462945a778b016b632f44a8ee4d95ec6",
+    "vestige:models/item/eye_d_knapped_core.json": "61385651101da476998d1fbecd4706a3f45bfa2762ba3a760d27e106a81d23d5",
+    "vestige:textures/item/shell_a_old_ridges.png": "27ab9b5bd51b850e9ac562a44c802e2dd80ab75ba65d376425441379bc7d8051",
+    "vestige:models/item/shell_a_old_ridges.json": "2f802a318b7afc80e81c743ba6aee7058f8622ce13fac0b7e80291173088ff60",
+    "vestige:textures/item/shell_b_broken_ribs.png": "5dcd09591d85a5b019a5061c50164fbfbb921ed67767c5cadb1b391a07a0b649",
+    "vestige:models/item/shell_b_broken_ribs.json": "78bc50fe56e88fd1ac935eb7e82595f808eb3ff7e88ea0d6b117146fcda79fdd",
+    "vestige:textures/item/shell_c_slate_coils.png": "299ed16eff09de225660080a16eb196654f27d6ba150d37b9faa85a5a6c00c91",
+    "vestige:models/item/shell_c_slate_coils.json": "07f85dd88d82b10ce9ca8ba5ff704de628ec545b2cb09978b8411c0ba3625696",
+    "vestige:textures/item/shell_d_shadow_lip.png": "6f16b1608c23f307b67263137fd2c43f80019a5b672f353c7a33eb51369a290e",
+    "vestige:models/item/shell_d_shadow_lip.json": "afcb6a10f7e1dbcfa83e63e2d21d579c05a98e4400cd2e8e284a1992867f327b",
+    "vestige:textures/item/previous_eye.png": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+    "vestige:models/item/previous_eye.json": "fcdfe002311f7d58ab65b71bcb020783bc1db124da42c1a69d3557a32f017252",
+    "vestige:textures/item/previous_shell.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "vestige:models/item/previous_shell.json": "888f18f8d04de81b070bd5166f35dfa495f6fb45aacf8938295e0f30586a7504",
+    "vestige:textures/item/smooth_eye_a_soft_flint.png": "87f460614022fb81bedd2b3b59405a7fcd919a8379d49cedcbc81d366d635716",
+    "vestige:models/item/smooth_eye_a_soft_flint.json": "f260920c0da12d25e753a9f73e5c23cd097bafb3b04df06bfa1ba5d35d699c28",
+    "vestige:textures/item/smooth_eye_b_dark_pebble.png": "71b173c3697b0b7694a3871e0a48a0c257d3312548150694ff92d15fd393b38c",
+    "vestige:models/item/smooth_eye_b_dark_pebble.json": "9ae47bb1b7722f7d4dd101e0ae4c368387ed995c11440a6aaa44277de546c65e",
+    "vestige:textures/item/smooth_eye_c_chipped_face.png": "cf5377407cc0d5930cf6fa29fe3afff5d3641beb8a4bb54d25425cc6727efc5f",
+    "vestige:models/item/smooth_eye_c_chipped_face.json": "11b477539a1caf102ba3a74cc1add85e5de7ff273e3b667f1ba896f1cb6e939e",
+    "vestige:textures/item/smooth_eye_d_simple_talisman.png": "3d84ff56001240dc10724c1119b5bf93081a1fd9f88879cb24460d407648c0f3",
+    "vestige:models/item/smooth_eye_d_simple_talisman.json": "3aa58ecf3c9d77a2b399e34f028b211676b5e90d67bc3e3e4ebd2f6fd90a8e3a",
+    "vestige:textures/item/smooth_shell_a_soft_ash.png": "688aa6a83e577ce2958fa3ea22b37096539e333a6426e956a3b5f9d6b6ed7770",
+    "vestige:models/item/smooth_shell_a_soft_ash.json": "070b3ed18d79345b0e3c9cb5337679b61a15245b42203bd439befe2e0cb495f1",
+    "vestige:textures/item/smooth_shell_b_compact_conch.png": "423fc9730e3de01b84759a29fd058a2e8f4e57da37a3a71a66ab8451a7175685",
+    "vestige:models/item/smooth_shell_b_compact_conch.json": "a8670f66336658a48e6b40450c3298a681e9b3ee40124a664e3705c8c8346020",
+    "vestige:textures/item/smooth_shell_c_slate.png": "b1dfaec533c548b9996ab53cac14490c46548bd7b03b29d88c280e4242a53e66",
+    "vestige:models/item/smooth_shell_c_slate.json": "750cf0dbfc3361ab5ca2c6af8fc18e5d31ca03b8f428d8531788517c3471f7d4",
+    "vestige:textures/item/smooth_shell_d_deep_dusk.png": "f5bf59f10dfafc6a07af7d4845e8ecffe326b5a781679bdec5b54903ebdbf7e2",
+    "vestige:models/item/smooth_shell_d_deep_dusk.json": "4e8531336f053fb895d01f63f7f96a3f2093fa46730677da0c06acd245733a6f",
+    "minecraft:models/item/paper.json": "55fdada61a58019cd404fc00eda454ed6922260bdea3e6c282e6652b9e44a4d7",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/flint.png": "ba7c3c7a261bfcbc2f1d8c67b808d8bce73ff8f7445aa76d8dc62a7f28198fc0",
+    "minecraft:textures/item/spider_eye.png": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/ink_sac.png": "0b6afc3bedf39949e7a59821e8d0e4bbf1a9617d8e751fc23ddd9b05fe16756d"
+  },
+  "source_capture_sha256": {
+    "docs/art/item-textures-native-v3/texture-sources.json": "2c00b61503fd542aec91ed352b27482dc0f9d5f2a0b743cfc1d4b0df8efc3ba2",
+    "docs/art/item-textures-native-v3/author_textures.py": "736b4a5237c84f031a86260269c477f737ed7538e1a178abaf9ae8c834eef738",
+    "docs/art/item-textures-native-v3/verify_review.py": "fbc3f755c59a6f7aa28dc46cffe65793a32537e6d686010b34fac519c473e478",
+    "docs/art/item-textures-native-v3/isolated-preview.gradle": "a9d4f74e8526f106fb2f670a1c1a639267ac802e362a5c69de4cc03a4af85481",
+    "docs/art/item-textures-native-v3/production-build.gradle": "c35fe52f9a142b574b395308c331ae42a37bdef8709a04985346fc80a9067456",
+    "docs/art/item-textures-native-v3/captures/capture.json": "5915eb6ce44bbee65cda174253aedbd46b704f167ed67a74585f4223ba4a5cc8",
+    "docs/art/item-textures-native-v3/preview-source/com/quzzar/vestige/gametest/EchoShardCraftReview.java": "a12065a93edd93b32d5e509e7e4e47ef444667a42fed47b7b4d9457bf5518d0d",
+    "docs/art/item-textures-native-v3/preview-source/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture.java": "962c1ab4220d986b45ca4372b06cf72a6d7dcfb88fda3f8d738bba24fae8a78a",
+    "docs/art/item-textures-native-v3/captures/gui-2.png": "f0919593457d990681ccc852b683667880d69d0faba5f48c96f86554c024e2a3",
+    "docs/art/item-textures-native-v3/captures/gui-3.png": "5c83746c6ebf7446c03278189229526877775901e6ef1edd25a970492ba6d042",
+    "docs/art/item-textures-native-v3/captures/eye-hover.png": "5fea06bca0a0a72f3aa8fa5272eb5fe082aef67b4ab137ab91cf52d0aab4ddd8",
+    "docs/art/item-textures-native-v3/captures/shell-hover.png": "88c34079efaca7a41d02ac836bcf056bb989889921017db4c57e4e6eed86c786",
+    "docs/art/item-textures-native-v3/captures/eye-comparison.png": "38eb722b694e679245ec3f117d2fe19307b471b6e46f174a1ea83493b6fade56",
+    "docs/art/item-textures-native-v3/captures/shell-comparison.png": "b218ebf7568960b92fa90e3d54e2de8f4242d5b9b08d212a2b3030a121ae03b1",
+    "src/main/resources/data/vestige/recipe/echo_shard.json": "df39fb7c15023bb309f02ddd7e8d7728d40f2c6f6485f8863d11e803e945e016",
+    "src/main/resources/data/vestige/advancement/recipes/echo_shard.json": "ca3ede0272dacb21988f80b0b56f1eaf75917f92a6f232eea9f00d856fe8d4af",
+    "src/main/resources/assets/vestige/textures/item/homebound_eye.png": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc"
+  },
+  "compiled_review_sha256": {
+    "run/item-textures-native-v3-build/classes/java/main/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture.class": "f6ec68cdd692df51b7d5521ae90bb266914e13bfa0c6a3820c133b2088f0b31a",
+    "run/item-textures-native-v3-build/classes/java/main/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture$ReviewScreen.class": "f7e77417edfc3d8feb012febe2548e8685a94014d968c2687a8c3606639109ad",
+    "run/item-textures-native-v3-build/classes/java/main/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture$CaptureHost.class": "ea91cc7db17f43fcda7d6e53da7906905b09674c2f1ec9f6f5693823ab722540",
+    "run/item-textures-native-v3-build/classes/java/main/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture$NativeGallery.class": "3b73374f2b96510425040ef24bf20b8fe52f256fe30246b1804466a76ee806b2",
+    "run/item-textures-native-v3-build/classes/java/main/com/quzzar/vestige/gametest/EchoShardCraftReview.class": "75e24e3ee1826f79883f25377604de4e7cc3d7f32d4226f7e9a982316fbbf738"
+  },
+  "production_jar": {
+    "path": "run/echo-shard-production-build/libs/vestige-0.1.0.jar",
+    "sha256": "c8d89dbcb81f8bae96fecccdbdbce8d1d12a5cd671a46c7d1e90663ab5bb35c6"
+  },
+  "recipe_verified": [
+    "six unordered ingredient permutations",
+    "extra ingredient rejected",
+    "Pearl recipe rejected",
+    "2x2 InventoryMenu collection consumes one of each",
+    "3x3 CraftingMenu collection consumes one of each",
+    "fresh player Ghast Tear advancement and recipe-book unlock before crafting"
+  ],
+  "limits": [
+    "Art options await selection; production Eye unchanged",
+    "Appearance-only carriers omit attunement marks and bound-item glint",
+    "Held/offhand effects and Shell gameplay unverified by this study",
+    "Full world suite and multiplayer not rerun",
+    "No installed game files replaced"
+  ]
+}

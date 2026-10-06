@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/smooth_quartz_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/smooth_quartz_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/smooth_quartz_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/smooth_quartz_plinth_cap"
+    }
+  }
+}

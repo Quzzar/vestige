@@ -1,0 +1,19 @@
+{
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "unitTests": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": 164,
+  "worldFailures": 0,
+  "log": "build/spellstone-a-isolated-final-verification.log",
+  "isolatedBuild": "build/spellstone-a-isolated",
+  "jarSha256": "bdc6e4e90685c63bde1b74c23753e6f29ad0fe500bf16f1e7f0776b3ff57de60",
+  "packagedModels": 72,
+  "rejectedGemSpriteAbsent": true,
+  "preservedAssets": 254
+}

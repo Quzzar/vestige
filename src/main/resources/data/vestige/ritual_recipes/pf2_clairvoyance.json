@@ -1,0 +1,72 @@
+{
+  "spell": "vestige:pf2_clairvoyance",
+  "name": "Clairvoyance",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Amethyst and Glass form the sensing eye, while Ender focus and Compass separate its view from the body.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 6,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise.",
+    "Glass motif follows resonant facet clockwise.",
+    "Passage focus follows glass motif clockwise, across an unused outer Plinth.",
+    "Compass motif follows passage focus clockwise, across an unused outer Plinth.",
+    "Blank inscription follows compass motif clockwise, across an unused outer Plinth."
+  ]
+}

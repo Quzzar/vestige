@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/eye_c_chipped_face"
+  }
+}

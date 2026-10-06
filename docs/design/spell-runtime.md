@@ -1,6 +1,6 @@
 # Native spell runtime
 
-Status: standalone spell catalog with two Pathfinder batches, October 1, 2026. The inherited gameplay layer has been removed; native wands, discovery, and progression are deferred by the project owner.
+Status: standalone 214-spell catalog with native scroll casting, persistent identification, discovery and leyline crafting, October 4, 2026. The inherited gameplay layer remains removed. Native wands and equipment progression remain deferred.
 
 The [glossary](../../CONTEXT.md) and [trait catalog](trait-catalog.md) define the vocabulary. The [Iron ledger](iron-spell-conversions.md) describes 110 native adaptations, and the [Pathfinder ledger](pathfinder-spell-conversions.md) adds 100 independently authored PF2 adaptations. Historical prototypes remain design evidence.
 
@@ -36,9 +36,17 @@ Traits are descriptive unless an effect or condition explicitly interprets them.
 - Container lock ownership is serialized on the block entity. Private-space room allocations and player return points are persistent. These persistence seams are independent of discovery/progression.
 - Causal lineage follows synchronous actions, projectiles, and summons. Repeated activation keys are bounded within a branch, preventing reaction loops.
 
-Resource costs are checked/spent atomically after charging. Time, cooldown, mana, health, hunger, and material consume/damage costs are supported. Failed payment spends nothing; effect/target failure after payment has no refund policy yet. The actor's temporary native energy budget is a resource seam, not a progression system. Original Iron cooldowns remain provenance. Authored `cooldown` costs are per-actor, per-spell recovery timers starting at initial payment; recasts share payment and recovery. Failed payment and cancelled charges do not start recovery, while paid failures and interruption retain it. Recovery is session state and resets on reload/restart. One active charge/channel per actor is permitted; dormant recasts do not block other spells.
+Resource costs are checked/spent atomically after charging. Time, cooldown, mana, health, hunger, and material consume/damage costs are supported. Failed payment spends nothing; effect/target failure after payment has no refund policy yet. Players have a persistent 100-mana pool, full on first spawn and death/respawn. Recovery is 2 mana per second after five seconds without successful mana expenditure; spell and device payments share this delay. Login and nondeath clones retain the current balance. Server snapshots drive a client gauge visible only below full. Capacity progression remains deferred. Original Iron cooldowns remain provenance. Authored `cooldown` costs are per-actor, per-spell recovery timers starting at initial payment; recasts share payment and recovery. Failed payment and cancelled charges do not start recovery, while paid failures and interruption retain it. Recovery is session state and resets on reload/restart. One active charge/channel per actor is permitted; dormant recasts do not block other spells.
 
 Incoming damage and healing adapters emit calculating events before commit. Reactive wards, deferred damage, and healing suppression modify `PendingOutcome`; a committed outcome rejects further mutation. Other reserved trigger IDs in `SpellTriggerTypes` remain vocabulary until an adapter emits them.
+
+## Native scroll and leyline integration
+
+[Scroll discovery](spell-discovery.md) implements exactly two player states: unknown and identified. Single-use scrolls identify a spell only after a successful cast; crafting and receiving one do not. Crafting-table dismantling rolls three independent trait fragments. Shared Spellstone/Plinth discovery requires at least four occupied fragment slots, filters to spells containing every supplied trait, and weights eligible spells by the average base trait rating across those slots. Duplicates emphasize their trait. Discovery returns an unshaped base scroll.
+
+All 214 spells have explicit ingredient recipes. A recipe's four/eight-slot capacity chooses active rings; a quarter-turn preserves relative ordering. The accepted leyline matrices resolve the output's descriptive traits into Amplify, Range, Area and Casting Cost. Crafted scrolls store these modifiers rather than scanning the structure when cast. Effects read only authored scaling axes, while one cost factor independently applies to existing mana, hunger, health, material/durability, charge and recovery components. Recasts, bindings and manifestation callbacks retain the original shaping and pay once. Final quantity expressions and composed cost components round once; health costs round in whole hearts, damage/healing in HP, and ratios/velocities retain precision. Ordinary unshaped casts keep their prior behavior. See [playtesting](../leyline-playtesting.md) for exact bounds and examples.
+
+Persistent identification, atomic ingredient crafting, references and failure feedback are implemented in the native apparatus. Material sockets save and render but have no authored numeric bonuses. The forfeit policy still takes the maximum of unknown and volatile risk; a stronger combination policy remains a separate decision. Native gear, wands and passive/free-item handling remain deferred.
 
 ## Authoring
 
@@ -64,12 +72,14 @@ Data packs load `data/<namespace>/runtime_spells/<path>.json`. Reload parses the
 }
 ```
 
-Unqualified identifiers resolve to `vestige`. Numbers are literals or single-operator `trait`, `fact`, `sum`, and `product` expressions. Facts resolve from manifestation/cast state, event data, or the world adapter. Missing numerical facts fail execution explicitly. Scalar identifier values use `{"id":"namespace:path"}`; ordinary strings remain text.
+Unqualified identifiers resolve to `vestige`. Numbers are literals or single-operator `trait`, `fact`, `sum`, `product`, and `clamp` expressions. Clamp has an expression plus finite inclusive minimum/maximum bounds. Facts resolve from manifestation/cast state, event data, or the world adapter. Missing numerical facts fail execution explicitly. Scalar identifier values use `{"id":"namespace:path"}`; ordinary strings remain text.
 
 | Composition | Fields / behavior |
 |---|---|
 | `sequence` / `branch` | Ordered effects / condition plus `then` and `else` |
 | `delay` / `repeat` | Positive tick delay / finite `count`, `interval`, and effects |
+| `limited` | Cast-owned group budget: at most `per_target` entity contacts and `total` contacts across callbacks/pulses |
+| `secondary` | Independent owned task, copied contact facts and retained secondary causal lineage; Spellshaping riders do not retrigger from it |
 | `for_each` | Target selector and per-subject effects |
 | `set_value` / `capture_value` / `store_target` | Stored scalar / snapshot of a resolved number / captured subject anchor |
 | `await_recast` | Positive timeout for the remaining plan |
@@ -78,6 +88,8 @@ Unqualified identifiers resolve to `vestige`. Numbers are literals or single-ope
 | `end_manifestation` | End the currently executing manifestation |
 
 Targets: self, current, event target, stored target, entity ray, any-entity ray, block ray, aimed position, nearby entities, near target, beam, cone, chain, and melee. Selections can require a subject or permit an empty result. Relationships select any, allied, hostile, or owned creatures. Options include ray radius, cone angle, chained count/jump distance, query count, line of sight, and explicit through-block behavior. Distances are bounded to 128 blocks. Nearby queries use spherical distance.
+
+Material Spellshaping compiles trusted packaged rules into a temporary immutable cast definition; scrolls store bounded IDs/degrees alongside leyline shaping. Typed cost factors and added costs compose before one final layout multiplier and rounding. Mana exchanges use adjusted mana, share at most 75%, and add whole-heart/hunger channels; the complete payment remains atomic. An optional positive `lifetime` value on a finite manifestation resolves into its backing definition and runtime expiry together. Persistent manifestations and separately owned binding lifetimes remain outside Enduring. See [the executable rules](../spellshaping-recipes.md) for current limits and the proposal boundary.
 
 Leaf outcomes are listed in `SpellActionTypes` and implemented in `SpellActions` (calculating reductions execute in the runtime). Families include damage/weapon damage/leech, healing/status/cleanse, movement/teleport/recall, explosions, mining/replacement, aggro/decoys, attributes/flight, inventory/private space, tether/grip, projectile steering, food energy, and dispel/dismissal.
 
@@ -127,7 +139,7 @@ Limits are 33 points per cue, 256 simultaneous server/client cues, 4,096 rendere
 
 ## Balance controls and outcome limits
 
-`/vestige_magic cast_balanced <spell>` exercises native mana and recovery; `/vestige_magic mana [0..200]` inspects or sets test energy. Survival spends mana; Creative bypasses resource payment but retains cooldowns. The existing `cast` command bypasses both resources and recovery, retaining charge/channel timing and recasts. Neither command implements progression or discovery.
+`/vestige_magic cast_balanced <spell>` exercises native mana and recovery; `/vestige_magic mana [0..100]` inspects or sets player mana. Survival spends mana; Creative bypasses resource payment but retains cooldowns. The existing `cast` command bypasses both resources and recovery, retaining charge/channel timing and recasts. Neither command implements progression or discovery.
 
 Numerical damage actions can author `max_hits_per_target` and an optional namespaced `hit_group`. The counter belongs to the cast and is shared by all of its projectiles, fields, and continuations. Suppressed hits record zero actual damage so leech cannot manufacture healing. Fangs hit each creature once per action and honor `max_targets`; beam, cone, melee and nearby selectors honor `count`. Grip collisions have a finite per-cast hit cap. Summons accept authored `health` and `attack_damage`; vanilla equipment, ranged AI, difficulty and attack cadence still affect actual combat throughput. Recasting a completed summon spell replaces its prior cohort using the original selected subject, even when its backing is a new entity.
 
@@ -149,7 +161,7 @@ The reusable `control` action temporarily assigns an existing Mob to a caster; a
 
 `random_teleport` attempts up to sixteen supported dry landings within a resolved horizontal `radius` of 1–16 blocks. It uses loaded space and collision checks; failed attempts skip that pulse and record `vestige:last_teleport=0`, successful placement records 1. The ordinary `teleport` action opts into the same landing checks through `grounded=1`. Both retain the caster's inventory and clear fall distance.
 
-`detect_magic` privately reports presence within `radius` (0–64) using live native manifestation handles and equipped vanilla enchantments. Closed handles are removed on cleanup; cosmetic cues are excluded. `inspect_item` reports enchantment presence on the caster's main-hand item at completion. Both store `vestige:magic_found` as 0/1 and send feedback only to a player caster. They do not inspect unloaded space, arbitrary mod systems, containers or narrative magic, and never unlock discovery/progression.
+`detect_magic` privately reports presence within `radius` (0–64) using live native manifestation handles and equipped vanilla enchantments. Closed handles are removed on cleanup; cosmetic cues are excluded. `inspect_item` reports enchantment presence on the caster's main-hand item at completion. Both store `vestige:magic_found` as 0/1 and send feedback only to a player caster: a bright pink-white ring for recognized magic and a dim gray ring otherwise. No chat or actionbar text is sent. Status sensing similarly uses health-colored outlines (green/amber/red) with bounded condition motes at the sensed creature, rather than written health/direction summaries. They do not inspect unloaded space, arbitrary mod systems, containers or narrative magic, and never unlock discovery/progression.
 
 Invisibility uses an attached status with `particles=0`, interval-one refreshes of a two-tick vanilla status and one committed-damage release binding. When its lease ends, the refresh expires within two ticks; a stronger external status is preserved. Standard vanilla visibility of armor, equipment and effect particles applies. Silent inert decoys use `inert=1`; summon taming finishes before authored health/attack values are applied. Following fields release when their captured creature leaves the dimension.
 
@@ -185,3 +197,8 @@ A tree contains four vertical temporary logs and seventeen canopy leaves. Its ex
 The `images` guard creates up to eight bounded visual copies (Mirror Image authors three). Each synchronizes a source entity ID plus UUID, follows its source, and reuses the source renderer. Copies cannot be targeted as actors, acquire AI or inventory, or serialize. A qualifying direct melee hit consumes exactly one; environmental fire, explosions and projectiles bypass the existing deterministic mitigation. Guard cleanup discards all copies. This is a finite native adaptation, not random tabletop target redirection.
 
 Summoned tame creatures owned by NPCs remove the vanilla sit goal: it resolves only player owners and otherwise treats the owner as absent. Native ownership still identifies the living caster; shared threat selection and navigation support NPC combat/follow behavior. Player-owned tame creatures retain vanilla sitting behavior.
+
+
+## Bounded reveal and projectile return primitives
+
+`reveal_hidden` scans an existing target position for invisible living creatures. Radius is 1–16 blocks, duration 20–200 ticks and the shared cast contact budget is at most eight unique subjects. It applies Glowing without removing Invisibility, in nearest-first deterministic order. `reflect_projectiles` runs around a living protective recipient: radius 0.5–4 blocks and at most four unique incoming vanilla arrows/spectral arrows/tridents per cast. It preserves speed, returns toward a living shooter or reverses without one, changes projectile ownership to the protected recipient, and excludes friendly, outgoing, stationary/embedded and native/foreign spell deliveries. Repeated reflections preserve secondary lineage and activation limits; tracked causal entries are pruned on projectile removal and world close. Spellshaping's concrete durations and degree limits are in its executable ledger.

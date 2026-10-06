@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:fang_strike",
+  "name": "Fang Strike",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Emerald evokes a Bone fang sharpened by Flint into a forward ground eruption.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 2,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Evocation focus follows blank inscription clockwise.",
+    "Bone motif follows evocation focus clockwise.",
+    "Flint motif follows bone motif clockwise.",
+    "Blank inscription follows flint motif clockwise."
+  ]
+}

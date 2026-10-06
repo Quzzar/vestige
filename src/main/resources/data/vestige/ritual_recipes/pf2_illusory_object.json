@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_illusory_object",
+  "name": "Illusory Object",
+  "circle": 4,
+  "color": "c7a8ef",
+  "rationale": "Dark Ink and Glass depict a visible but non-solid Amethyst-focused object.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Glass motif follows resonant facet clockwise.",
+    "Ink motif follows glass motif clockwise.",
+    "Blank inscription follows ink motif clockwise."
+  ]
+}

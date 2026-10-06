@@ -1,0 +1,55 @@
+{
+  "jar": "run/scroll-fragments-package-selected-v2/vestige-0.1.0.jar",
+  "jarSha256": "bd7f5c24a00334649d0bcf00a9b50db2280bf88b19741eed0a1810a23503f33c",
+  "source": "owner-approved options-v1/02-torn-corner-v2.png; nearest-neighbor native import",
+  "texture": {
+    "size": [
+      16,
+      16
+    ],
+    "opaqueBounds": [
+      4,
+      4,
+      11,
+      12
+    ],
+    "opaquePixels": 41,
+    "binaryAlpha": true
+  },
+  "symbols": 52,
+  "symbolColor": "#d6b46a",
+  "name": "Scroll Fragment: [symbol]",
+  "unitTests": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "loadedAssetsMatchJar": {
+    "assets/vestige/textures/item/scroll_fragment.png": "bf086cd6ec11365ada33247c14d080eaeb9aaeed35d53c765d736d5ca60b50bf",
+    "assets/vestige/models/item/scroll_fragment.json": "636181cc7432e890a7d77bf20b865303ce34d8eb2d3ffdc57699ca1409ef1839",
+    "assets/vestige/font/fragment_symbols.json": "036573c5fe56f87c0dd8b46453971e854dd39a38792584f0bbf780cd72411c3c",
+    "assets/vestige/textures/font/fragment_symbols.png": "8064660abe2c435a3632c6955bf82d01849d57419c05fefb98609c676f623622",
+    "assets/vestige/fragment_symbols.json": "5f1d47d22eeb1aa211f583f4039df7112dfe89b86f0703907906746c577d7675"
+  },
+  "inspectedClassesMatchJar": {
+    "com/quzzar/vestige/apparatus/FragmentSymbols.class": "964f6bb405e9988138efed4b7d62f1279e91efceab39e0a295080a24b19a39ff",
+    "com/quzzar/vestige/apparatus/ScrollFragmentItem.class": "c851ae28201328dfbcf4c265b216b9083f1c95ae0dcdc8b4b94b6d2f5647f237",
+    "com/quzzar/vestige/apparatus/client/NativeFragmentCapture.class": "ed0146e031e2dcfc8446fcca01ac05e77e0fc1519a37689b114927224eb349f1",
+    "com/quzzar/vestige/apparatus/client/NativeFragmentCapture$FragmentScreen.class": "e7431695aa516d3e73e204919baf009f9f6f95a3c385a9acebbb8fb765bc3613"
+  },
+  "verified": [
+    "Java 21 build",
+    "Kithkyn platform compatibility",
+    "all unit tests",
+    "fragment authoring/import drift checks",
+    "Standing Stone authoring drift check",
+    "native Minecraft visual inspection",
+    "package integrity and inspected resource/class hashes"
+  ],
+  "limitations": [
+    "World behavior tests were not repeated for the presentation-only fragment change.",
+    "No Prism installation in this task."
+  ],
+  "buildRepair": "Split generated Standing Stone collision data into one initializer per profile to avoid Java method-size limits; all 1882 ordered band coordinate tuples were unchanged at the repair step. Concurrent Standing Stone authoring/tests then completed; the final full unit suite passes."
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_air_bubble",
+  "name": "Air Bubble",
+  "circle": 4,
+  "color": "239dcc",
+  "rationale": "A feather's air is enclosed in Glass and protected by a seal for temporary emergency breathing.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Feather motif follows blank inscription clockwise.",
+    "Glass motif follows feather motif clockwise.",
+    "Protection seal follows glass motif clockwise.",
+    "Blank inscription follows protection seal clockwise."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "scope": "Rejected intermediate capture: apparatus renderer bypassed block tint",
+  "views": [
+    {
+      "view": "plinth_frame_corner_edges",
+      "image": "diagnostic-corner-edges-middle.png",
+      "imageSource": "native-middle-edges-tint-bypass/vestige-plinth_frame_corner_edges-apparatus-0/frame-00054.png",
+      "imageSha256": "221030a9cb37fe0591514bea863ce230a0f5035b4204bac6114a372084268134",
+      "frames": 55,
+      "seconds": 4.035310375,
+      "loadedModelHashes": {
+        "models/block/cobblestone_plinth.json": "df491765e0abd50ae2d0555d3cb4018182262d71083eaba600774c97ac10f3cd",
+        "models/block/cobblestone_plinth_base.json": "10a28e6b4fb1a20b827f34d85396818d02c239b3bdf8f85e2ad3ccf0645ecb20",
+        "models/block/cobblestone_plinth_shaft.json": "61d371180c7d787e5d688c14137186d303494993d7be7c82a875d5d0bbdd4416",
+        "models/block/cobblestone_plinth_cap.json": "b0fb274d9b85872bbf14d01b124b778aa925f01e55a813be750010eaf752c9f4"
+      },
+      "camera": {
+        "yaw": 141.6325,
+        "fixed": true,
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "pitch": 21.406317
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "trim": {
+        "tintIndex": 31,
+        "texture": "minecraft:block/stone",
+        "brightness": 0.8509803921568627,
+        "tintColor": "#d9d9d9"
+      },
+      "tintCodeSha256": "f54b5cea6e07fef2577b69bf9571345024963c1c587898b0d11d5cd6ab394a8e"
+    },
+    {
+      "view": "spellstone_frame_edges",
+      "image": "diagnostic-spellstone-edges-middle.png",
+      "imageSource": "native-middle-edges-tint-bypass/vestige-spellstone_frame_edges-apparatus-0/frame-00053.png",
+      "imageSha256": "246008af242857ad4a52d381451236f4f7a33833465df0a5d69fa440b917afec",
+      "frames": 54,
+      "seconds": 4.062068958,
+      "loadedModelHashes": {
+        "models/block/stone_spellstone.json": "42b253db37a76f6b573e005796dd3c72ca72faf4ccf5a474a175b69ec78c3876"
+      },
+      "camera": {
+        "yaw": 148.67131,
+        "fixed": true,
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "trim": {
+        "tintIndex": 31,
+        "texture": "minecraft:block/stone",
+        "brightness": 0.8509803921568627,
+        "tintColor": "#d9d9d9"
+      },
+      "tintCodeSha256": "f54b5cea6e07fef2577b69bf9571345024963c1c587898b0d11d5cd6ab394a8e"
+    }
+  ],
+  "change": {
+    "beforeBrightness": 0.9411764705882353,
+    "afterBrightness": 0.8509803921568627,
+    "texture": "minecraft:block/stone",
+    "modelFilesByteIdenticalToFaintVersion": true,
+    "geometryAndWidthsUnchanged": true,
+    "originalBodiesAndDiamondDetailsUnchanged": true
+  },
+  "verified": [
+    "Java 21 compilation and resource processing passed",
+    "All 22 framing author models pass checks",
+    "Five framed models byte-identical to the preceding faint version",
+    "Five native loaded model hashes match their capture-only sources",
+    "Loaded native tint class hash matches its compiled source",
+    "Native tint metadata matches the author ledger",
+    "Reference cameras match the preceding study"
+  ],
+  "separatelyCapturedStackedOrImbuedAppearance": false,
+  "logs": {
+    "compile": "/private/tmp/vestige-apparatus-middle-edges-build.log",
+    "capture": "/private/tmp/vestige-apparatus-middle-edges-capture.log"
+  },
+  "rejected": {
+    "reason": "The Plinth framebuffer is pixel-identical to the preceding untinted preview despite the intended 217/255 tint.",
+    "correction": "Feed native block tint into renderModel and re-capture; do not publish these images as the revised contrast."
+  }
+}

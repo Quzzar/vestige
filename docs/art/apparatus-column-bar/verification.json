@@ -1,0 +1,19 @@
+{
+  "verified_at_utc": "2026-10-05T18:57:02.049808+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 151,
+  "packaged_apparatus_block_models_verified": 180,
+  "capture_only_packs_excluded": true,
+  "jar_sha256": "8e2828332951d79125a506cc31ca6da7d62f75e0ba229fbacf295b3450da5717",
+  "scope": "Only four lower large-panel rails removed from each stacked cap; retained imbuement outlines and all other cap detail; standalone, Spellstone, base and shaft unchanged. Generated collision matches models."
+}

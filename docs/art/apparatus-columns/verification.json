@@ -1,0 +1,26 @@
+{
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 docs/art/apparatus-concepts/author_models.py --check",
+    "python3 tools/author_apparatus_comparison.py --check",
+    "python3 tools/author_ritual_recipes.py --check",
+    "python3 tools/author_spellshaping.py --check",
+    "node tools/sync_leyline_rules.mjs --check"
+  ],
+  "result": "PASS",
+  "unit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 146,
+  "minecraft_failures": 0,
+  "validated_current_and_candidate_models": 252,
+  "verified_packaged_plinth_state_models": 144,
+  "canonical_leyline_fixtures": 490,
+  "native_visual_inspection": "Matched Tuff before/after models; one-, two-, four-block columns; unchanged source framebuffer captures",
+  "review_scope": "Standalone simplification is not adopted; column states are native",
+  "jar_sha256": "1fee6f012340f976c91ac8e1cb0138c389da3bc605b1ff29b73f654dda363b56"
+}

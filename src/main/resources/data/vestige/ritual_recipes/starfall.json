@@ -1,0 +1,103 @@
+{
+  "spell": "vestige:starfall",
+  "name": "Starfall",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender and Glowstone direct Emerald-guided explosive stars through Amethyst, falling Stone and Echo.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 4,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 6,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold passage focus, evocation focus, resonant facet, lost echo; the other required ingredients use Inner Plinths.",
+    "Passage focus follows blank inscription clockwise.",
+    "Glow motif follows passage focus clockwise.",
+    "Evocation focus follows glow motif clockwise.",
+    "Powder motif follows evocation focus clockwise.",
+    "Resonant facet follows powder motif clockwise.",
+    "Stone motif follows resonant facet clockwise.",
+    "Lost echo follows stone motif clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

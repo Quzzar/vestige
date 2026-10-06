@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_void_warp",
+  "name": "Void Warp",
+  "circle": 4,
+  "color": "b397e0",
+  "rationale": "Echo and draining focus distort the Bone body's vitality, while leaving undead outside the motif.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 2,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 1,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bone motif follows blank inscription clockwise.",
+    "Draining focus follows bone motif clockwise.",
+    "Lost echo follows draining focus clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

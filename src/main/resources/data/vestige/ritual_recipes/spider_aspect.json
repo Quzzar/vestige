@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:spider_aspect",
+  "name": "Aspect of the Spider",
+  "circle": 4,
+  "color": "8bac29",
+  "rationale": "A harmful eye, String web and Leather body describe poisonous spider attacks applied to the caster.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Leather motif follows blank inscription clockwise.",
+    "String motif follows leather motif clockwise.",
+    "Poison motif follows string motif clockwise.",
+    "Blank inscription follows poison motif clockwise."
+  ]
+}

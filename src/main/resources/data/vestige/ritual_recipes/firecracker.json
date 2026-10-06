@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:firecracker",
+  "name": "Firecracker",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Emerald evokes a Powder-and-Flint firework; the reversed sequence distinguishes its lobbed knockback burst.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 2,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flint motif follows blank inscription clockwise.",
+    "Powder motif follows flint motif clockwise.",
+    "Evocation focus follows powder motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

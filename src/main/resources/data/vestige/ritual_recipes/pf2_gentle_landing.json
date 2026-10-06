@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_gentle_landing",
+  "name": "Gentle Landing",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "A feather and recovery membrane descend behind a protection seal for safe slow falling.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Feather motif follows blank inscription clockwise.",
+    "Recovery veil follows feather motif clockwise.",
+    "Protection seal follows recovery veil clockwise.",
+    "Blank inscription follows protection seal clockwise."
+  ]
+}

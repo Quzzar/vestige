@@ -24,12 +24,110 @@ A recognized way of accessing magic. The four traditions are arcane, primal, div
 A namespaced word in the shared magical repertoire, such as fire, evocation, or amplify. Except for volatile, the core engine assigns no behavior to a trait name; effects, conditions, equipment, and adapters decide how to interpret its rating.
 
 **Volatile**:
-The sole trait with inherent engine semantics. Its rating expresses a spell's unavoidable forfeit risk, which remains even after the spell is discovered; adding any other semantic trait requires an explicit design decision with the project owner.
+The sole trait with inherent engine semantics. Its rating expresses a spell's unavoidable forfeit risk, which remains even after the spell is identified; adding any other semantic trait requires an explicit design decision with the project owner.
 _Avoid_: Wild, unstable
 
 **Forfeit**:
-A failed cast replaced by a randomly selected chaotic outcome. Undiscovered spells have a baseline forfeit risk, while a volatile spell carries its own inherent risk whether discovered or not.
+A failed cast replaced by a randomly selected chaotic outcome. Unknown spells and volatile spells each carry risk; an unknown volatile spell is especially prone to forfeiting.
 _Avoid_: Fizzle, ordinary cast failure
+
+**Scroll**:
+A single-use item containing one spell, available to cast whether or not the caster has identified it. It can instead be dismantled into trait fragments.
+
+**Scroll Fragment**:
+A piece of a dismantled scroll associated with one of its spell's traits. Placed fragments can be reconstructed into a scroll whose spell contains all their traits.
+
+**Unknown Spell**:
+A spell the player has not yet identified. Attempting to cast it carries additional chaos risk.
+
+**Identified Spell**:
+A spell the player has successfully cast from a scroll, removing its unknown-spell chaos risk while retaining inherent volatility. This is the sole known state; casting through wands or other sources does not identify it.
+_Avoid_: Learned state, unlocked tier
+
+**Scroll Reconstruction**:
+The creation of a random spell scroll from trait fragments, requiring every supplied trait and favoring spells with a higher average rating across the placed fragments.
+
+**Spell Discovery**:
+The reconstruction of at least four placed trait fragments into a random spell scroll containing all their traits. Producing a scroll does not identify its spell for the player.
+
+**Spell Crafting**:
+The construction or augmentation of spells into scrolls. It is a distinct operation from random discovery, even if both use a shared station system.
+
+**Reference Scroll**:
+A scroll placed on the Spellstone to select a spell's crafting puzzle. It remains intact while the player investigates, reproduces or fails that recipe.
+
+**Ritual Arrangement**:
+The placement of ingredients in relative Plinth recipe slots. Turning the whole arrangement retains its relationships; reflection reverses its order.
+
+**Ritual Failure**:
+A completed incorrect arrangement that provides placement clues and may explode according to the reference spell's knowledge and volatility risk. An explosion destroys participating offerings and damages nearby creatures while preserving terrain and the reference scroll.
+
+**Equipment Crafting**:
+The planned construction of magical gear using ingredients and recipes.
+
+**Runic Circle**:
+A structure for spell discovery, crafting and attunement, centered on a Spellstone and four inner Plinth slots, with up to four outer slots. Its active layout includes distances, height differences and connections between nodes.
+_Usage_: Internal code and documentation only; never surface this term in UI, tooltips, messages or recipe viewers.
+_Avoid_: Crafting Structure, Leyline Structure
+
+**Spellstone**:
+The central control and item surface of a Runic Circle, holding a retained reference scroll and collectible output. Its role is distinct from the surrounding ingredient slots.
+_Avoid_: Center Stone
+
+**Cosmetic Apparatus Finish**:
+One of 36 stone/masonry stair materials used for Plinth or Spellstone construction and appearance. It never supplies an imbuement, shaping modifier or attunement identity component. All finishes have matching full blocks and slabs.
+
+**Plinth**:
+A leyline node with an offering surface and a separately embedded imbuement material. The same kind of Plinth can occupy either ritual layer and can form part of a structure without holding an offering.
+Vertically stacked Plinths connect into a column. Only the exposed cap is an active ritual surface; supporting segments retain contents without contributing additional nodes or modifiers.
+_Avoid_: Stone Pedestal, Runic Pedestal, advanced pedestal
+
+**Ritual Layer**:
+A group of four relative Plinth positions around a Spellstone. The inner layer provides four recipe slots; the outer layer supplies additional slots only when the operation uses it.
+_Avoid_: Apparatus quality tier
+
+**Ritual Shape**:
+The Cross or Diagonal positioning of each active Plinth layer. An inner-only ritual has two shape choices; a ritual using both layers has four combinations.
+
+**Ritual Distance**:
+The spacing between successive stages: Spellstone to inner layer, then inner layer to outer layer when active. The two spacings are separate influences on Spellshaping.
+
+**Height Ratio**:
+The relative heights of Spellstone, inner layer and active outer layer, expressed through their two signed height steps. It describes a build's height profile independently of its absolute elevation in the world.
+
+**Offering**:
+The ingredient placed on a Plinth's top surface for a ritual. It is separate from the Plinth's installed material.
+
+**Imbuement**:
+A material embedded in a Plinth, intended to alter its offering through an authored material/ingredient interaction. Sockets persist and render; supported offering/material pairs select native Spellshaping.
+_Avoid_: Slot Base, foundation bonus
+
+**Spellshaping**:
+The modification of a base spell through resolved traits, composed effects and typed costs, preserving its identity. Local offering–imbuement pairs select automatic rules; complete compounds replace their constituent contributions. Secondary plans have shared finite budgets. Only implemented rules appear in the executable ledger.
+
+**Leyline Shaping**:
+The contribution of active ritual geometry to Amplify, Range, Area and Casting Cost, conditioned by the output's descriptive traits. Outcome modifiers affect only properties the output explicitly uses; Casting Cost scales its existing payment components independently.
+
+**Nature Focus**:
+A grouping of the existing Life, Plant and Wood traits used to describe grove or henge-oriented shaping. It is not an additional trait or a fixed bonus for every nature-themed spell.
+
+**Crafting Pattern**:
+A recipe blueprint describing ingredient roles and the properties or effects they contribute. Iron's patterns provide inspiration rather than a required assembly system.
+
+**Crafting Part**:
+An ingredient role in a crafting recipe that accepts particular materials and contributes selected properties or effects.
+
+**Crafting Material**:
+An ingredient identity associated with distinct properties, effects and crafting roles. The recipe determines which contributions are used.
+
+**Material Quality**:
+Iron's measure of material-based bonus scaling, retained as source reference. Vestige does not use it to rank materials or multiply crafted effects.
+
+**Ingredient Alternative**:
+An additional ingredient accepted for a recipe's construction role. Acceptance does not make its material properties identical to those of another accepted ingredient.
+
+**Optional Integration**:
+Support for another mod's items or behavior when that mod is present. Vestige's core spells, crafting and progression remain available without it.
 
 **Amplify**:
 The general potency scaling trait. Amplify represents how strongly a spell expresses its primary outcome. Its authored baseline is 1, and each effect explicitly defines which of its values respond to amplification. Amplify does not implicitly change range, duration, area, target count, cast time, cooldown, or cost.
@@ -83,7 +181,10 @@ A named fact exposed by the cast context for conditions to inspect, such as an a
 A magical outcome produced during a cast. An effect can use values from the resolved trait profile and can be guarded by conditions.
 
 **Cost**:
-Time or a resource required to complete a cast. The initial cost kinds are time, material, mana, health, and hunger.
+Time, recovery or a resource required by a cast. Cost components can include casting time, cooldown, material consumption or durability, mana, health and hunger.
+
+**Casting Cost Modifier**:
+A shared multiplier applied separately to every existing component of a cast's cost. It preserves each component's units and leaves absent costs absent.
 
 **Cast Context**:
 The caster, triggering event, source item, targets, world state, and other situational facts available while a cast is evaluated.
@@ -120,3 +221,20 @@ An independently authored Vestige spell that preserves a source spell’s recogn
 
 **Target Anchor**:
 A subject captured in a cast session for a later effect or recast, such as a portal endpoint or telekinetically held creature.
+
+
+**Attunement Shard**:
+A six-offering ritual component on eight active Plinths, retaining a versioned physical blueprint and its full reproducible key. Its fixed recipe is 2 Amethyst Shards, 1 Echo Shard, 1 Iron Ingot, 1 Diamond and 1 Lapis Lazuli. It records both active layers, the two empty offering positions and local offering–imbuement pairings, canonicalized under whole quarter-turns. Its short display prefix is not the identity. Standing Stones and planned attuned devices inherit this key.
+
+**Crane Bag**:
+A shared Bundle whose full attunement signature identifies one limited pool of mixed items, accessible through every matching Crane Bag. Matching bags share contents and the same capacity rather than each adding more storage.
+_Avoid_: Linked Bundle, Kindred Scrip, Echo Pouch
+
+**Whispering Shell**:
+A planned communication item whose attunement signature selects the channel shared with matching Whispering Shells.
+_Avoid_: Echo Shell, Macalla Shell, Rune Shell
+
+**Homebound Eye**:
+A reusable handheld item that teleports its user back to its crafting Spellstone when right-clicked. Each return wears its durability; the imbuement in the Spider Eye's Plinth selects a stored health, hunger, mana or experience payment with reduced wear. An empty selector gives durability-only payment.
+Its accepted recipe is Attunement Shard + Spider Eye + Ender Pearl + Flint. The selected appearance is a chipped grey flint talisman with an Ender Pearl teal-green eye recess and a red center.
+_Avoid_: Hearth Charm, Homeward Stone, Recall Stone

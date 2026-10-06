@@ -1,0 +1,459 @@
+{
+  "minecraft_version": "1.21.1",
+  "source": "Vanilla Minecraft bundled block tag, shaped recipes, block models and English names",
+  "source_tag": "data/minecraft/tags/block/stairs.json",
+  "source_tag_sha256": "02b39ae8f3e2d36ed0018b3513ee39bbf1f3688450d9864c5bef576e6be0b4c7",
+  "excluded_wood_tag": "minecraft:wooden_stairs",
+  "excluded_explicit_stairs": [
+    "minecraft:bamboo_mosaic_stairs",
+    "minecraft:oxidized_cut_copper_stairs",
+    "minecraft:weathered_cut_copper_stairs",
+    "minecraft:exposed_cut_copper_stairs",
+    "minecraft:cut_copper_stairs",
+    "minecraft:waxed_weathered_cut_copper_stairs",
+    "minecraft:waxed_exposed_cut_copper_stairs",
+    "minecraft:waxed_cut_copper_stairs",
+    "minecraft:waxed_oxidized_cut_copper_stairs"
+  ],
+  "stone_and_masonry": [
+    {
+      "stairs": "minecraft:cobblestone_stairs",
+      "body_item": "minecraft:cobblestone",
+      "accepted_recipe_items": [
+        "minecraft:cobblestone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/cobblestone",
+        "side": "minecraft:block/cobblestone",
+        "top": "minecraft:block/cobblestone"
+      }
+    },
+    {
+      "stairs": "minecraft:sandstone_stairs",
+      "body_item": "minecraft:sandstone",
+      "accepted_recipe_items": [
+        "minecraft:sandstone",
+        "minecraft:chiseled_sandstone",
+        "minecraft:cut_sandstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/sandstone_bottom",
+        "side": "minecraft:block/sandstone",
+        "top": "minecraft:block/sandstone_top"
+      }
+    },
+    {
+      "stairs": "minecraft:nether_brick_stairs",
+      "body_item": "minecraft:nether_bricks",
+      "accepted_recipe_items": [
+        "minecraft:nether_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/nether_bricks",
+        "side": "minecraft:block/nether_bricks",
+        "top": "minecraft:block/nether_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:stone_brick_stairs",
+      "body_item": "minecraft:stone_bricks",
+      "accepted_recipe_items": [
+        "minecraft:stone_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/stone_bricks",
+        "side": "minecraft:block/stone_bricks",
+        "top": "minecraft:block/stone_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:brick_stairs",
+      "body_item": "minecraft:bricks",
+      "accepted_recipe_items": [
+        "minecraft:bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/bricks",
+        "side": "minecraft:block/bricks",
+        "top": "minecraft:block/bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:purpur_stairs",
+      "body_item": "minecraft:purpur_block",
+      "accepted_recipe_items": [
+        "minecraft:purpur_block",
+        "minecraft:purpur_pillar"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/purpur_block",
+        "side": "minecraft:block/purpur_block",
+        "top": "minecraft:block/purpur_block"
+      }
+    },
+    {
+      "stairs": "minecraft:quartz_stairs",
+      "body_item": "minecraft:quartz_block",
+      "accepted_recipe_items": [
+        "minecraft:chiseled_quartz_block",
+        "minecraft:quartz_block",
+        "minecraft:quartz_pillar"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/quartz_block_top",
+        "side": "minecraft:block/quartz_block_side",
+        "top": "minecraft:block/quartz_block_top"
+      }
+    },
+    {
+      "stairs": "minecraft:red_sandstone_stairs",
+      "body_item": "minecraft:red_sandstone",
+      "accepted_recipe_items": [
+        "minecraft:red_sandstone",
+        "minecraft:chiseled_red_sandstone",
+        "minecraft:cut_red_sandstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/red_sandstone_bottom",
+        "side": "minecraft:block/red_sandstone",
+        "top": "minecraft:block/red_sandstone_top"
+      }
+    },
+    {
+      "stairs": "minecraft:prismarine_brick_stairs",
+      "body_item": "minecraft:prismarine_bricks",
+      "accepted_recipe_items": [
+        "minecraft:prismarine_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/prismarine_bricks",
+        "side": "minecraft:block/prismarine_bricks",
+        "top": "minecraft:block/prismarine_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:prismarine_stairs",
+      "body_item": "minecraft:prismarine",
+      "accepted_recipe_items": [
+        "minecraft:prismarine"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/prismarine",
+        "side": "minecraft:block/prismarine",
+        "top": "minecraft:block/prismarine"
+      }
+    },
+    {
+      "stairs": "minecraft:dark_prismarine_stairs",
+      "body_item": "minecraft:dark_prismarine",
+      "accepted_recipe_items": [
+        "minecraft:dark_prismarine"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/dark_prismarine",
+        "side": "minecraft:block/dark_prismarine",
+        "top": "minecraft:block/dark_prismarine"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_granite_stairs",
+      "body_item": "minecraft:polished_granite",
+      "accepted_recipe_items": [
+        "minecraft:polished_granite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_granite",
+        "side": "minecraft:block/polished_granite",
+        "top": "minecraft:block/polished_granite"
+      }
+    },
+    {
+      "stairs": "minecraft:smooth_red_sandstone_stairs",
+      "body_item": "minecraft:smooth_red_sandstone",
+      "accepted_recipe_items": [
+        "minecraft:smooth_red_sandstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/red_sandstone_top",
+        "side": "minecraft:block/red_sandstone_top",
+        "top": "minecraft:block/red_sandstone_top"
+      }
+    },
+    {
+      "stairs": "minecraft:mossy_stone_brick_stairs",
+      "body_item": "minecraft:mossy_stone_bricks",
+      "accepted_recipe_items": [
+        "minecraft:mossy_stone_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/mossy_stone_bricks",
+        "side": "minecraft:block/mossy_stone_bricks",
+        "top": "minecraft:block/mossy_stone_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_diorite_stairs",
+      "body_item": "minecraft:polished_diorite",
+      "accepted_recipe_items": [
+        "minecraft:polished_diorite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_diorite",
+        "side": "minecraft:block/polished_diorite",
+        "top": "minecraft:block/polished_diorite"
+      }
+    },
+    {
+      "stairs": "minecraft:mossy_cobblestone_stairs",
+      "body_item": "minecraft:mossy_cobblestone",
+      "accepted_recipe_items": [
+        "minecraft:mossy_cobblestone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/mossy_cobblestone",
+        "side": "minecraft:block/mossy_cobblestone",
+        "top": "minecraft:block/mossy_cobblestone"
+      }
+    },
+    {
+      "stairs": "minecraft:end_stone_brick_stairs",
+      "body_item": "minecraft:end_stone_bricks",
+      "accepted_recipe_items": [
+        "minecraft:end_stone_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/end_stone_bricks",
+        "side": "minecraft:block/end_stone_bricks",
+        "top": "minecraft:block/end_stone_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:stone_stairs",
+      "body_item": "minecraft:stone",
+      "accepted_recipe_items": [
+        "minecraft:stone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/stone",
+        "side": "minecraft:block/stone",
+        "top": "minecraft:block/stone"
+      }
+    },
+    {
+      "stairs": "minecraft:smooth_sandstone_stairs",
+      "body_item": "minecraft:smooth_sandstone",
+      "accepted_recipe_items": [
+        "minecraft:smooth_sandstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/sandstone_top",
+        "side": "minecraft:block/sandstone_top",
+        "top": "minecraft:block/sandstone_top"
+      }
+    },
+    {
+      "stairs": "minecraft:smooth_quartz_stairs",
+      "body_item": "minecraft:smooth_quartz",
+      "accepted_recipe_items": [
+        "minecraft:smooth_quartz"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/quartz_block_bottom",
+        "side": "minecraft:block/quartz_block_bottom",
+        "top": "minecraft:block/quartz_block_bottom"
+      }
+    },
+    {
+      "stairs": "minecraft:granite_stairs",
+      "body_item": "minecraft:granite",
+      "accepted_recipe_items": [
+        "minecraft:granite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/granite",
+        "side": "minecraft:block/granite",
+        "top": "minecraft:block/granite"
+      }
+    },
+    {
+      "stairs": "minecraft:andesite_stairs",
+      "body_item": "minecraft:andesite",
+      "accepted_recipe_items": [
+        "minecraft:andesite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/andesite",
+        "side": "minecraft:block/andesite",
+        "top": "minecraft:block/andesite"
+      }
+    },
+    {
+      "stairs": "minecraft:red_nether_brick_stairs",
+      "body_item": "minecraft:red_nether_bricks",
+      "accepted_recipe_items": [
+        "minecraft:red_nether_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/red_nether_bricks",
+        "side": "minecraft:block/red_nether_bricks",
+        "top": "minecraft:block/red_nether_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_andesite_stairs",
+      "body_item": "minecraft:polished_andesite",
+      "accepted_recipe_items": [
+        "minecraft:polished_andesite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_andesite",
+        "side": "minecraft:block/polished_andesite",
+        "top": "minecraft:block/polished_andesite"
+      }
+    },
+    {
+      "stairs": "minecraft:diorite_stairs",
+      "body_item": "minecraft:diorite",
+      "accepted_recipe_items": [
+        "minecraft:diorite"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/diorite",
+        "side": "minecraft:block/diorite",
+        "top": "minecraft:block/diorite"
+      }
+    },
+    {
+      "stairs": "minecraft:blackstone_stairs",
+      "body_item": "minecraft:blackstone",
+      "accepted_recipe_items": [
+        "minecraft:blackstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/blackstone_top",
+        "side": "minecraft:block/blackstone",
+        "top": "minecraft:block/blackstone_top"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_blackstone_brick_stairs",
+      "body_item": "minecraft:polished_blackstone_bricks",
+      "accepted_recipe_items": [
+        "minecraft:polished_blackstone_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_blackstone_bricks",
+        "side": "minecraft:block/polished_blackstone_bricks",
+        "top": "minecraft:block/polished_blackstone_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_blackstone_stairs",
+      "body_item": "minecraft:polished_blackstone",
+      "accepted_recipe_items": [
+        "minecraft:polished_blackstone"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_blackstone",
+        "side": "minecraft:block/polished_blackstone",
+        "top": "minecraft:block/polished_blackstone"
+      }
+    },
+    {
+      "stairs": "minecraft:cobbled_deepslate_stairs",
+      "body_item": "minecraft:cobbled_deepslate",
+      "accepted_recipe_items": [
+        "minecraft:cobbled_deepslate"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/cobbled_deepslate",
+        "side": "minecraft:block/cobbled_deepslate",
+        "top": "minecraft:block/cobbled_deepslate"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_deepslate_stairs",
+      "body_item": "minecraft:polished_deepslate",
+      "accepted_recipe_items": [
+        "minecraft:polished_deepslate"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_deepslate",
+        "side": "minecraft:block/polished_deepslate",
+        "top": "minecraft:block/polished_deepslate"
+      }
+    },
+    {
+      "stairs": "minecraft:deepslate_tile_stairs",
+      "body_item": "minecraft:deepslate_tiles",
+      "accepted_recipe_items": [
+        "minecraft:deepslate_tiles"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/deepslate_tiles",
+        "side": "minecraft:block/deepslate_tiles",
+        "top": "minecraft:block/deepslate_tiles"
+      }
+    },
+    {
+      "stairs": "minecraft:deepslate_brick_stairs",
+      "body_item": "minecraft:deepslate_bricks",
+      "accepted_recipe_items": [
+        "minecraft:deepslate_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/deepslate_bricks",
+        "side": "minecraft:block/deepslate_bricks",
+        "top": "minecraft:block/deepslate_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:mud_brick_stairs",
+      "body_item": "minecraft:mud_bricks",
+      "accepted_recipe_items": [
+        "minecraft:mud_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/mud_bricks",
+        "side": "minecraft:block/mud_bricks",
+        "top": "minecraft:block/mud_bricks"
+      }
+    },
+    {
+      "stairs": "minecraft:tuff_stairs",
+      "body_item": "minecraft:tuff",
+      "accepted_recipe_items": [
+        "minecraft:tuff"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/tuff",
+        "side": "minecraft:block/tuff",
+        "top": "minecraft:block/tuff"
+      }
+    },
+    {
+      "stairs": "minecraft:polished_tuff_stairs",
+      "body_item": "minecraft:polished_tuff",
+      "accepted_recipe_items": [
+        "minecraft:polished_tuff"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/polished_tuff",
+        "side": "minecraft:block/polished_tuff",
+        "top": "minecraft:block/polished_tuff"
+      }
+    },
+    {
+      "stairs": "minecraft:tuff_brick_stairs",
+      "body_item": "minecraft:tuff_bricks",
+      "accepted_recipe_items": [
+        "minecraft:tuff_bricks"
+      ],
+      "model_textures": {
+        "bottom": "minecraft:block/tuff_bricks",
+        "side": "minecraft:block/tuff_bricks",
+        "top": "minecraft:block/tuff_bricks"
+      }
+    }
+  ]
+}

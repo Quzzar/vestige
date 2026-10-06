@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-05",
+  "scope": "Four gilded material previews, no selection or production integration",
+  "nativeCaptureBuild": "passed",
+  "deterministicAuthorCheck": "passed",
+  "modelUvBoundsRotations": "passed",
+  "nativeViews": 5,
+  "matchedIndividualCamera": [
+    1.35,
+    66.1,
+    1.7
+  ],
+  "videosEncodedAndDecoded": 5,
+  "identicalGeometryAcrossFinishes": true,
+  "originalVanilla16x16Tiles": 5,
+  "actualLoadedTextureHashesMatchOriginals": true,
+  "unchangedProductionBlockModels": 180,
+  "unchangedInventoryModels": 72,
+  "unchangedConstructionRecipes": 72,
+  "acceptedRendererMatchesInstalledClass": true,
+  "installedJarSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSha256": "d598d152b2997312e11ddd3825f4e4320c3947141bb2faab82750c97fe18a048",
+  "review": "All five final native framebuffer views inspected; gilded edge and different finishes visible",
+  "gameplayBoundary": "Development resource-pack art only; carriers retain existing collision and interactions"
+}

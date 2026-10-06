@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/shell_d_broken_whorl"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        -0.4535637149028078,
+        0.7786177105831533,
+        0
+      ],
+      "scale": [
+        1.2397408207343412,
+        1.132964362850972,
+        1
+      ]
+    }
+  }
+}

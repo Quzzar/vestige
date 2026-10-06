@@ -1,0 +1,23 @@
+{
+  "newerJar": "/private/tmp/vestige-standing-list-20261006/libs/vestige-0.1.0.jar",
+  "newerJarSha256": "2cd4a31461e8ca8943ae5a5e947ec4a2bdc72881075136323535df9e8812eca5",
+  "approvedJarSha256": "caa02ebb439257ead82d4678d3264f84a4c93c47eeedd42fca2257d2c7057f98",
+  "zipIntegrity": true,
+  "approvedApparatusModelsByteIdentical": 252,
+  "approvedProductionClasses": {
+    "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254",
+    "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+    "com/quzzar/vestige/apparatus/ApparatusShapes.class": "fe76bc79d681de23dcd05c12cb196d382593da2854dd9c27163c42c2b7ba9478"
+  },
+  "retiredPreviewTintClassPackaged": false,
+  "changedClassFiles": [
+    "com/quzzar/vestige/storage/CraneBagWorldTest$1.class",
+    "com/quzzar/vestige/storage/CraneBagItem.class",
+    "com/quzzar/vestige/storage/CraneBagStorage.class",
+    "com/quzzar/vestige/storage/CraneBagAccess.class",
+    "com/quzzar/vestige/storage/CraneBagStorage$Pool.class",
+    "com/quzzar/vestige/storage/CraneBagWorldTest.class",
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class"
+  ]
+}

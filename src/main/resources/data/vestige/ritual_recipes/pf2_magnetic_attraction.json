@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_magnetic_attraction",
+  "name": "Magnetic Attraction",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Iron and Copper face a Compass, expressing a directed pull on loose metal.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 2,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 1,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Compass motif follows blank inscription clockwise.",
+    "Lightning channel follows compass motif clockwise.",
+    "Bound metal follows lightning channel clockwise.",
+    "Blank inscription follows bound metal clockwise."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "ef04ce63666ee84b9b4423f848a34b9cabe3606bbb387d94da69452e6f10a884",
+  "productionInstallationUnchanged": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "spellstone_astral",
+      "capture": "build/astral-spellstone/vestige-spellstone_astral-apparatus-0/capture.json",
+      "posterFrame": 29,
+      "posterSha256": "24cb3879a249182ca3821099a1a1223199a657349f4ae2ac039fff03d24eef74",
+      "videoSha256": "880561baa20ab95eb80772de63695588c6c852601c2f998a94bbcd8eb5018f7b",
+      "nativeFrames": 78,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "13fb061716ec56dcc09c40c95029e22b14d227cbae2c62e830461cfbbb3fdb6d",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_finishes",
+      "capture": "build/astral-spellstone/vestige-spellstone_astral_finishes-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "9a911dfb887a9922f6cf1c38c2675b4b8c21f67686eb0c3a4380e126a48189b9",
+      "videoSha256": "e8c717469d4d7dd69eace567b0bfcabf972fab2c283bcba8f2b848591cb6923a",
+      "nativeFrames": 76,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "13fb061716ec56dcc09c40c95029e22b14d227cbae2c62e830461cfbbb3fdb6d",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_night",
+      "capture": "build/astral-spellstone/vestige-spellstone_astral_night-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "ba97a8de1a93dcd6537ce76575d62fe4ac28b6dfbd00ca06b8b8548c1355ddea",
+      "videoSha256": "81e1c828c7cc055a3f8c77ca043827ea83696a4464410dd8f6073a41d30a39b4",
+      "nativeFrames": 80,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "13fb061716ec56dcc09c40c95029e22b14d227cbae2c62e830461cfbbb3fdb6d",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_scrolls",
+      "capture": "build/astral-spellstone/vestige-spellstone_astral_scrolls-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "62586a2681afece6730386ef663d9c4631fe3f1cbf78dea1a177e45bb6d8c3c1",
+      "videoSha256": "1f4978caa8a5e5a206cc42b10fffba9381362a52750756ca6f5dbcc720a4dc19",
+      "nativeFrames": 74,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "13fb061716ec56dcc09c40c95029e22b14d227cbae2c62e830461cfbbb3fdb6d",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_underwater",
+      "capture": "build/astral-spellstone/vestige-spellstone_astral_underwater-apparatus-0/capture.json",
+      "posterFrame": 29,
+      "posterSha256": "0850ba0d0a2fd08efa2f97925aa562d999ebeb1cf415e7dcf70423f03d274016",
+      "videoSha256": "82aed1c654db3a3d50e09e00462fc19b18d87885985c2fa7d3ab6afbf4fae9ae",
+      "nativeFrames": 69,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "13fb061716ec56dcc09c40c95029e22b14d227cbae2c62e830461cfbbb3fdb6d",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    }
+  ]
+}

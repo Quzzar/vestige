@@ -1,0 +1,102 @@
+{
+  "spell": "vestige:black_hole",
+  "name": "Black Hole",
+  "circle": 8,
+  "color": "57418f",
+  "rationale": "Ender and Echo converge on Obsidian; Chorus folds space while Iron and a Compass draw matter toward one anchor.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 6,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 5,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "chorus motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chorus_fruit"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 2,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet, bound metal, obsidian motif, passage focus; the other required ingredients use Inner Plinths.",
+    "Resonant facet follows blank inscription clockwise.",
+    "Compass motif follows resonant facet clockwise.",
+    "Bound metal follows compass motif clockwise.",
+    "Chorus motif follows bound metal clockwise.",
+    "Obsidian motif follows chorus motif clockwise.",
+    "Lost echo follows obsidian motif clockwise.",
+    "Passage focus follows lost echo clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

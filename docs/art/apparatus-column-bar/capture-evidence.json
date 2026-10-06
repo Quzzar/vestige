@@ -1,0 +1,37 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "images": "Unchanged native framebuffer captures, same camera and Gold socket.",
+  "changes": "Only the four lower large-panel rails are removed from stacked caps; small socket outline intact.",
+  "captures": [
+    {
+      "material": "tuff",
+      "image": "after/tuff.png",
+      "frame_sha256": "9e3fc5f96f32ae888a6ad35246bb986420e1971574204a1174ee874bf12edc96",
+      "metadata": "after/tuff-capture.json",
+      "changed_model": "models/block/tuff_plinth_cap.json",
+      "loaded_assets_match_source": true,
+      "actual_cap": {
+        "offeringSpace": true,
+        "state": "Block{vestige:tuff_plinth}[part=cap,waterlogged=false]",
+        "socket": "minecraft:gold_block",
+        "offering": "minecraft:air"
+      },
+      "inspected": true
+    },
+    {
+      "material": "quartz",
+      "image": "after/quartz.png",
+      "frame_sha256": "10b4297818f5fc4c9d24d2a9199244b4e460db14b8f4c5622831605bc2ccf271",
+      "metadata": "after/quartz-capture.json",
+      "changed_model": "models/block/quartz_plinth_cap.json",
+      "loaded_assets_match_source": true,
+      "actual_cap": {
+        "offering": "minecraft:air",
+        "offeringSpace": true,
+        "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+        "socket": "minecraft:gold_block"
+      },
+      "inspected": true
+    }
+  ]
+}

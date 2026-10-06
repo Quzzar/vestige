@@ -1,0 +1,107 @@
+{
+  "spell": "vestige:plinth_columns",
+  "phase": 0,
+  "label": "Connected Plinth columns",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "tuff",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/tuff_plinth.json": "036597e0f9d1a6ced5c85625a25d80237aec569e60c3744cb88b73047dffed67",
+    "models/block/tuff_spellstone.json": "b48d3aa0ef670fa0c6fe43d3d0e965a77d0317fb6e22b9b3610c0a443a4dc329",
+    "models/block/tuff_plinth_base.json": "9cf77d985200157a3d1045eaffe41eaee14718846d024a62930eea5c4ac9a5de",
+    "models/block/tuff_plinth_shaft.json": "a288eb11fb407e5bf8003a5b80a11bba8cb9a82da9872defd6c84ccf4398996a",
+    "models/block/tuff_plinth_cap.json": "cb5279feb6fcef3da54950ba5587d96d63c47775fb760a74acd0e76368b56ef4"
+  },
+  "seconds": 2.040069917,
+  "times": [
+    0.016028167,
+    0.092682209,
+    0.166218417,
+    0.247282584,
+    0.328009,
+    0.408118209,
+    0.487719792,
+    0.562519167,
+    0.637840584,
+    0.712435792,
+    0.78670425,
+    0.862947959,
+    0.943811,
+    1.023751292,
+    1.104895834,
+    1.18426675,
+    1.266150834,
+    1.348630834,
+    1.4287745,
+    1.509451584,
+    1.592918209,
+    1.674450542,
+    1.755317042,
+    1.834958875,
+    1.914414167,
+    1.996028542
+  ],
+  "outcome": "PLACED",
+  "scenario": "One, two and four stacked Plinth blocks. Neighbor-derived foot/shaft/cap forms join without internal caps or vertical gaps. Actual Diamond offerings on exposed caps and independent Gold sockets.",
+  "blocks": {
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d2, y\u003d68, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d2, y\u003d67, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d2, y\u003d66, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": "vestige:tuff_plinth"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": {
+      "offeringSpace": true,
+      "offering": "minecraft:diamond",
+      "socket": "minecraft:gold_block",
+      "state": "Block{vestige:tuff_plinth}[part\u003dsingle,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dbase,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": {
+      "offeringSpace": true,
+      "offering": "minecraft:diamond",
+      "socket": "minecraft:gold_block",
+      "state": "Block{vestige:tuff_plinth}[part\u003dcap,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dbase,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d2, y\u003d66, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d2, y\u003d67, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d2, y\u003d68, z\u003d0}": {
+      "offeringSpace": true,
+      "offering": "minecraft:diamond",
+      "socket": "minecraft:gold_block",
+      "state": "Block{vestige:tuff_plinth}[part\u003dcap,waterlogged\u003dfalse]"
+    }
+  }
+}

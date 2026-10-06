@@ -1,0 +1,15 @@
+# Shared stone artwork with exact circular placement
+
+Built-in imagegen edits/extractions from `archaeological-four-v6.png`. The accepted archaeological artwork is split into reusable illustrations so UI coordinates control both drawn Plinths and item slots. Circular guides and inward lines are UI overlays; this avoids relying on generated bitmap geometry for exact spacing.
+
+## Parchment (`transparent_background: false`)
+
+> Use case: precise-object-edit. Asset type: parchment background texture for Minecraft mod Vestige's archaeological recipe UI. Edit the reference by removing ALL four plinths, the central Spellstone, purple rim, and ALL inward arrows. Fill those areas with the same quiet warm parchment. Preserve the exact color family, subtle broad paper variation and worn dark pixel edges of the reference. Return ONE square EMPTY parchment texture only. Absolutely no circles, outlines, objects, arrows, ticks, writing, runes or symbols. This will be the background below separately placed stone illustrations, so keep the middle quiet and unobstructed.
+
+## Plinth (`transparent_background: true`)
+
+> Use case: background-extraction / precise-object-edit. Asset type: transparent reusable plinth illustration for the same archaeological Minecraft recipe UI. Isolate ONLY the single north/top plinth from the reference image. Preserve its square empty pale stone top, dark brown outlines, tiny worn corner chips, subtle stone texture and the diamond-shaped angled foot outline behind it. Preserve the source's exact top-down flat diagram style, not a perspective 3D rendering. Make the square cap and diamond foot symmetric about the same center, in a square canvas. The cap is centered and its width is about 60 percent of canvas width; the diamond foot reaches about 88 percent of canvas width. There is ONE plinth only. Remove all parchment outside its stone silhouette; the four canvas corners MUST be actually transparent, no beige square background. Remove the downward arrow beneath this plinth and all other diagrams, circles, stones, shadows, symbols and text. The square cap stays empty so a native item icon can be placed there. Output one isolated plinth with true alpha transparency.
+
+## Spellstone (`transparent_background: true`)
+
+> Use case: background-extraction / precise-object-edit. Asset type: transparent central Spellstone illustration for Minecraft mod Vestige's archaeological recipe UI. Isolate ONLY the circular central Spellstone from the reference. Preserve the pale empty stone recess, stone ring, dark brown irregular ink outline, faint lavender inner rim and restrained stone texture. Center the complete round stone in a square canvas, diameter about 88 percent of canvas width. Preserve the flat top-down archaeological diagram style. Remove every inward arrow, plinth, parchment background and all other marks. Outside the circular stone silhouette is genuinely transparent, including all four corners. No residual arrows or lines outside the rim. No runes, text, glyphs or item icons; the central recess stays empty for the output item. One isolated stone only, true alpha transparency.

@@ -1,0 +1,81 @@
+{
+  "spell": "vestige:chain_creeper",
+  "name": "Chain Creeper",
+  "circle": 8,
+  "color": "8bac29",
+  "rationale": "Emerald shapes the conjured blast, Powder explodes, and Slime and Chain suggest bounded death-triggered propagation.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 2,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "chain motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chain"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold evocation focus, chain motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Evocation focus follows blank inscription clockwise.",
+    "Powder motif follows evocation focus clockwise.",
+    "Slime motif follows powder motif clockwise, across an unused outer Plinth.",
+    "Chain motif follows slime motif clockwise.",
+    "Flint motif follows chain motif clockwise.",
+    "Blank inscription follows flint motif clockwise, across an unused outer Plinth."
+  ]
+}

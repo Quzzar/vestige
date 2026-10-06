@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:scorch",
+  "name": "Scorch",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze heats Magma Cream beneath Stone, describing the delayed ground eruption.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "magma motif",
+      "ingredient": {
+        "items": [
+          "minecraft:magma_cream"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flame focus follows blank inscription clockwise.",
+    "Magma motif follows flame focus clockwise.",
+    "Stone motif follows magma motif clockwise.",
+    "Blank inscription follows stone motif clockwise."
+  ]
+}

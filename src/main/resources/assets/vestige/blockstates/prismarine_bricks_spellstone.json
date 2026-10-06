@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/prismarine_bricks_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/prismarine_bricks_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/prismarine_bricks_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/prismarine_bricks_spellstone"
+    }
+  }
+}

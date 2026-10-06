@@ -1,0 +1,83 @@
+{
+  "spell": "vestige:spellstone_astral_night",
+  "phase": 0,
+  "label": "Astral Spellstone at night",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": 144.68878,
+    "pitch": 30.028658,
+    "eye": [
+      1.35,
+      66.1,
+      1.7
+    ],
+    "fixed": true
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+  },
+  "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+  "seconds": 4.043238375,
+  "times": [
+    0.069814167,
+    0.167538,
+    0.261404709,
+    0.346838292,
+    0.42571125,
+    0.5206305,
+    0.60573925,
+    0.688835625,
+    0.781889959,
+    0.868456542,
+    0.958420375,
+    1.05402975,
+    1.223311084,
+    1.379880125,
+    1.517334375,
+    1.67301475,
+    1.76063825,
+    1.839990084,
+    1.935619459,
+    2.080876042,
+    2.169384084,
+    2.318474292,
+    2.398628209,
+    2.535026875,
+    2.614611042,
+    2.74842125,
+    2.839159792,
+    2.971662042,
+    3.129370167,
+    3.27643125,
+    3.423105875,
+    3.56955975,
+    3.661679834,
+    3.814493542,
+    3.963710375
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Production compact Spellstone: two thick inward-leaning supports and one smaller thick cap at y8/16, four isolated cut gemstones on its vertical rim sides and the lowered native Astral Seal. Bare stone between gems and on the top; no connected trim. Astral Spellstone at night No resource-pack override."
+}

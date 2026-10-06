@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_summon_animal",
+  "name": "Summon Animal",
+  "circle": 4,
+  "color": "4bba6b",
+  "rationale": "Bone, Bread and Leather describe the body, feeding and companionship of the allied wolf.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "bread motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bread"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bone motif follows blank inscription clockwise.",
+    "Bread motif follows bone motif clockwise.",
+    "Leather motif follows bread motif clockwise.",
+    "Blank inscription follows leather motif clockwise."
+  ]
+}

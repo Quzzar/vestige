@@ -1,0 +1,7 @@
+> Task :processResources
+> Task :classes
+> Task :jarJar NO-SOURCE
+> Task :jar
+
+BUILD SUCCESSFUL in 6s
+2 actionable tasks: 2 executed

@@ -1,0 +1,142 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "ef04ce63666ee84b9b4423f848a34b9cabe3606bbb387d94da69452e6f10a884",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "astral_body_comparison",
+      "capture": "build/astral-body-options-review/vestige-astral_body_comparison-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "5c0c0e836e65ddfe94593952ec6da21824b5bbe1defa21ed1ab028dc21de655c",
+      "videoSha256": "49d4c959871480b8fcf37d4e638447871deddabbf03aa8a0ae5d4b25447b15b8",
+      "nativeFrames": 53,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "fixed": true,
+        "yaw": 156.0375,
+        "pitch": 14.242943,
+        "eye": [
+          2.5,
+          66.5,
+          5.0
+        ]
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "6ebc8fad27d8c350758f914e72cebe6fd1c3aa55032088964b65e7061be93898",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "016a17c23b1b5bb1f66f99d1022e433ea318f65d17c39d61c8430233d3b01818",
+        "models/block/quartz_spellstone.json": "de0ae0f9567a5385c2ae3d616ac5dfd6c09c497eaa6e5f115e27b43fd1f211bc"
+      }
+    },
+    {
+      "name": "astral_body_relic",
+      "capture": "build/astral-body-options-review/vestige-astral_body_relic-apparatus-0/capture.json",
+      "posterFrame": 28,
+      "posterSha256": "90c2e83c6b3a07ff562cc88a891a3085aea277b01e189240c9dd3f887438f128",
+      "videoSha256": "99cd76789cce3de28e0bbb31dd0cd0b24c062ab28c7f5288693ca1f2e8e2b69d",
+      "nativeFrames": 48,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ]
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "6ebc8fad27d8c350758f914e72cebe6fd1c3aa55032088964b65e7061be93898",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "016a17c23b1b5bb1f66f99d1022e433ea318f65d17c39d61c8430233d3b01818",
+        "models/block/quartz_spellstone.json": "de0ae0f9567a5385c2ae3d616ac5dfd6c09c497eaa6e5f115e27b43fd1f211bc"
+      }
+    },
+    {
+      "name": "astral_body_tablet",
+      "capture": "build/astral-body-options-review/vestige-astral_body_tablet-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "1e13bf4e31d4aab13c27df066a4e7b7a482d0a2b76ecb51a923b2c5f9ebe3f87",
+      "videoSha256": "d7e3d3850a592bc9a6d405398cb6785142772f43d288a1c66252e324dfba3dcb",
+      "nativeFrames": 48,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ]
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "6ebc8fad27d8c350758f914e72cebe6fd1c3aa55032088964b65e7061be93898",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "016a17c23b1b5bb1f66f99d1022e433ea318f65d17c39d61c8430233d3b01818",
+        "models/block/quartz_spellstone.json": "de0ae0f9567a5385c2ae3d616ac5dfd6c09c497eaa6e5f115e27b43fd1f211bc"
+      }
+    },
+    {
+      "name": "astral_body_vault",
+      "capture": "build/astral-body-options-review/vestige-astral_body_vault-apparatus-0/capture.json",
+      "posterFrame": 26,
+      "posterSha256": "d6431a75170f13eb2f6f2f688c76b8691528abe36db73c7d7e5dff62d0a990a8",
+      "videoSha256": "e6e64d2ff845ff7c7d3c8d5b440bde46c432ef40b99132b0408a83799508c222",
+      "nativeFrames": 48,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ]
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "6ebc8fad27d8c350758f914e72cebe6fd1c3aa55032088964b65e7061be93898",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "016a17c23b1b5bb1f66f99d1022e433ea318f65d17c39d61c8430233d3b01818",
+        "models/block/quartz_spellstone.json": "de0ae0f9567a5385c2ae3d616ac5dfd6c09c497eaa6e5f115e27b43fd1f211bc"
+      }
+    }
+  ]
+}

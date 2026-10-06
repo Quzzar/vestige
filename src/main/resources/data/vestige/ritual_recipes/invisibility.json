@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:invisibility",
+  "name": "Invisibility",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Dark Ink, clear Glass and a recovery membrane describe a temporary body hidden from sight.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Recovery veil follows blank inscription clockwise.",
+    "Glass motif follows recovery veil clockwise.",
+    "Ink motif follows glass motif clockwise.",
+    "Blank inscription follows ink motif clockwise."
+  ]
+}

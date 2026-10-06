@@ -1,0 +1,15 @@
+// Pair with a dedicated --project-cache-dir so another chat's build cannot
+// classify these runtime files as stale outputs of the same Gradle tasks.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.layout.projectDirectory.dir('build/ritual-node-blasts-final'))
+    }
+}
+
+gradle.projectsEvaluated {
+    gradle.rootProject.tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+        options.incremental = false
+        outputs.upToDateWhen { false }
+        outputs.cacheIf { false }
+    }
+}

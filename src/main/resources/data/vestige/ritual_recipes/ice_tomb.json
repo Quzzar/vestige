@@ -1,0 +1,86 @@
+{
+  "spell": "vestige:ice_tomb",
+  "name": "Ice Tomb",
+  "circle": 8,
+  "color": "48badf",
+  "rationale": "Cold and Ice enclose a protection seal; draining and healing-associated Amethyst describe the immobilized recovery.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 6,
+      "role": "ice motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ice"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold draining focus, cold focus; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise, across an unused outer Plinth.",
+    "Draining focus follows resonant facet clockwise.",
+    "Protection seal follows draining focus clockwise.",
+    "Ice motif follows protection seal clockwise, across an unused outer Plinth.",
+    "Cold focus follows ice motif clockwise.",
+    "Blank inscription follows cold focus clockwise."
+  ]
+}

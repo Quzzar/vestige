@@ -1,0 +1,138 @@
+{
+  "spell": "vestige:ritual_spellshaping",
+  "phase": 0,
+  "label": "Automatic material Spellshaping",
+  "kind": "ritual",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Minecraft main render target",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "assetSha256": {
+    "models/block/spellstone.json": "f5ed10c576b51ada18a9e5be075602da8054a625a1ba06ca242441023b99c022",
+    "models/block/plinth.json": "2c55a2f809b0aac72bffbe72af448730ee413c06a3a8143442e48a219106ddeb",
+    "textures/block/spellstone_runes.png": "4e725e0dabb2f1fc4c242dbcc3f44be911b638b155bd374f8971425061eeec6d"
+  },
+  "seconds": 5.128869625,
+  "times": [
+    0.08283025,
+    0.176652292,
+    0.244042084,
+    0.317994709,
+    0.386604875,
+    0.454718959,
+    0.523587125,
+    0.60429875,
+    0.673552042,
+    0.742150917,
+    0.825061917,
+    0.904675667,
+    0.973361584,
+    1.040092625,
+    1.121281417,
+    1.201125167,
+    1.280250417,
+    1.361528084,
+    1.430562167,
+    1.510642584,
+    1.590078209,
+    1.671558334,
+    1.752840709,
+    1.825635125,
+    1.902225334,
+    1.971038334,
+    2.052035292,
+    2.119913,
+    2.199861625,
+    2.266648625,
+    2.34721675,
+    2.4143395,
+    2.492008625,
+    2.558832959,
+    2.630388584,
+    2.701422042,
+    2.772488667,
+    2.839672459,
+    2.912775167,
+    2.979883625,
+    3.066434167,
+    3.144199417,
+    3.226548417,
+    3.293500209,
+    3.360729292,
+    3.430241875,
+    3.502160834,
+    3.571992875,
+    3.653708959,
+    3.730065959,
+    3.813707917,
+    3.884847,
+    3.95800625,
+    4.03186,
+    4.10426275,
+    4.17909875,
+    4.2517975,
+    4.327756834,
+    4.404173334,
+    4.479578334,
+    4.554292917,
+    4.626046875,
+    4.704537875,
+    4.77599475,
+    4.916123125,
+    4.986853667
+  ],
+  "subjects": [],
+  "attunement": {},
+  "elapsedTicks": 103,
+  "offerings": [
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air",
+    "0 minecraft:air"
+  ],
+  "shaping": {
+    "modifiers": [
+      {
+        "multiplier": 1.0,
+        "trait": "vestige:amplify"
+      },
+      {
+        "multiplier": 1.0,
+        "trait": "vestige:range"
+      },
+      {
+        "multiplier": 1.0,
+        "trait": "vestige:area"
+      }
+    ],
+    "augments": [
+      {
+        "id": "vestige:bleeding",
+        "degree": 1
+      },
+      {
+        "id": "vestige:reaching",
+        "degree": 1
+      },
+      {
+        "id": "vestige:shocking",
+        "degree": 1
+      }
+    ],
+    "spell": "vestige:fireball",
+    "roundAmounts": true,
+    "castingCost": 1.0
+  },
+  "scenario": "Unchanged Fireball recipe automatically creates Bleeding Reaching Shocking Fireball; installed materials and the flat reference remain.",
+  "outcome": "CRAFTING",
+  "reference": "1 vestige:spell_scroll",
+  "geometry": "Geometry[slots=4, innerShape=CROSS, inner=2, innerHeight=0, outerShape=CROSS, outer=0, outerStep=0]",
+  "output": "1 vestige:spell_scroll",
+  "videoSha256": "f2840a74ae153f77651568ab1afa9eafdb05b690a61894951c2a2a208ec3d5bb",
+  "audio": false
+}

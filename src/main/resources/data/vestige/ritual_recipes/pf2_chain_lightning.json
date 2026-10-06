@@ -1,0 +1,83 @@
+{
+  "spell": "vestige:pf2_chain_lightning",
+  "name": "Chain Lightning",
+  "circle": 8,
+  "color": "4bafff",
+  "rationale": "Copper and Chain link Iron contacts; Emerald and Glowstone describe the longer lightning chain.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "chain motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chain"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 5,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 6,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold lightning channel, evocation focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Lightning channel follows blank inscription clockwise.",
+    "Chain motif follows lightning channel clockwise.",
+    "Bound metal follows chain motif clockwise, across an unused outer Plinth.",
+    "Evocation focus follows bound metal clockwise.",
+    "Glow motif follows evocation focus clockwise.",
+    "Blank inscription follows glow motif clockwise, across an unused outer Plinth."
+  ]
+}

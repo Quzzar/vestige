@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/smooth_eye_a_soft_flint"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_wall_of_water",
+  "name": "Wall of Water",
+  "circle": 4,
+  "color": "9de4ff",
+  "rationale": "Water-bearing Kelp stands beside a seal and Clay, describing the bounded traversable water wall.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "clay motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clay_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Kelp motif follows blank inscription clockwise.",
+    "Protection seal follows kelp motif clockwise.",
+    "Clay motif follows protection seal clockwise.",
+    "Blank inscription follows clay motif clockwise."
+  ]
+}

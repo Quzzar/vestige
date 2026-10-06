@@ -46,6 +46,7 @@ public final class NativeMagic {
         Session session=SERVERS.get(level.getServer());if(session!=null) session.world.features.blockChanged(level,pos);
     }
     public static void reload() {
+        com.quzzar.vestige.apparatus.ScrollCasting.cancelAll();
         SERVERS.values().forEach(session -> { session.runtime.close(); session.world.close(); });
         SERVERS.clear();
     }
@@ -104,6 +105,13 @@ public final class NativeMagic {
                     context.getSource().sendSuccess(() -> Component.literal("Native spells: " + loader.spells().keySet().stream().sorted().toList()), false);
                     return loader.spells().size();
                 }))
+                .then(Commands.literal("scroll").then(Commands.argument("spell",StringArgumentType.word())
+                        .suggests((context,builder) -> net.minecraft.commands.SharedSuggestionProvider.suggestResource(loader.spells().keySet(),builder))
+                        .executes(context -> {
+                            var spell=findSpell(StringArgumentType.getString(context,"spell")); if (spell==null) return 0;
+                            var player=context.getSource().getPlayerOrException(); var scroll=com.quzzar.vestige.apparatus.ScrollItems.scroll(spell.id());
+                            if (!player.getInventory().add(scroll)) player.drop(scroll,false); return 1;
+                        })))
                 .then(Commands.literal("cast").then(Commands.argument("spell", StringArgumentType.word())
                         .suggests((context, builder) -> net.minecraft.commands.SharedSuggestionProvider.suggestResource(loader.spells().keySet(), builder))
                         .executes(context -> executeCast(context, Optional.empty(), true))
@@ -122,11 +130,11 @@ public final class NativeMagic {
                         }))))
                 .then(Commands.literal("mana").executes(context -> {
                     var player = context.getSource().getPlayerOrException();
-                    context.getSource().sendSuccess(() -> Component.literal("Native test mana: " + player.getPersistentData().getDouble("vestige:mana") + "/200"), false);
+                    context.getSource().sendSuccess(() -> Component.literal("Mana: " + NativeMana.amount(player) + "/" + NativeMana.MAX), false);
                     return 1;
-                }).then(Commands.argument("amount", IntegerArgumentType.integer(0, 200)).executes(context -> {
+                }).then(Commands.argument("amount", IntegerArgumentType.integer(0, NativeMana.MAX)).executes(context -> {
                     var player = context.getSource().getPlayerOrException();
-                    player.getPersistentData().putDouble("vestige:mana", IntegerArgumentType.getInteger(context, "amount"));
+                    NativeMana.set(player, IntegerArgumentType.getInteger(context, "amount"));
                     return 1;
                 })))
                 .then(Commands.literal("dispel").executes(context -> {

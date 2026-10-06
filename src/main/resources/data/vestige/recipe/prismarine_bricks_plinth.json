@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:prismarine_bricks"
+    },
+    "S": {
+      "item": "minecraft:prismarine_brick_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:prismarine_bricks_plinth",
+    "count": 2
+  }
+}

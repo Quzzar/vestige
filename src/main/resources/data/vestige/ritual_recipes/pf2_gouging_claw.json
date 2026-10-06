@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_gouging_claw",
+  "name": "Gouging Claw",
+  "circle": 4,
+  "color": "c92551",
+  "rationale": "Leather shapes the transformed limb, Flint its edge, and Bone its claw.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bone motif follows blank inscription clockwise.",
+    "Flint motif follows bone motif clockwise.",
+    "Leather motif follows flint motif clockwise.",
+    "Blank inscription follows leather motif clockwise."
+  ]
+}

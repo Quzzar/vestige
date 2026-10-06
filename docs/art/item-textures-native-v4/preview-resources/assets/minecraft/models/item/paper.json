@@ -1,0 +1,56 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/paper"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 261200
+      },
+      "model": "vestige:item/eye_a_stone_lids"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261201
+      },
+      "model": "vestige:item/eye_b_pearl_heart"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261202
+      },
+      "model": "vestige:item/eye_c_split_flakes"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261203
+      },
+      "model": "vestige:item/eye_d_crimson_eye"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261204
+      },
+      "model": "vestige:item/shell_a_coiled_spiral"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261205
+      },
+      "model": "vestige:item/shell_b_trumpet"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261206
+      },
+      "model": "vestige:item/shell_c_open_clam"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261207
+      },
+      "model": "vestige:item/shell_d_broken_whorl"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:blaze_storm",
+  "name": "Blaze Storm",
+  "circle": 8,
+  "color": "f85b25",
+  "rationale": "Blaze and Fire Charge feed repeated burning bolts; Powder and a feather spread the channeled barrage.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold flame focus, feather motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Flame focus follows blank inscription clockwise.",
+    "Firecharge motif follows flame focus clockwise.",
+    "Powder motif follows firecharge motif clockwise, across an unused outer Plinth.",
+    "Feather motif follows powder motif clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

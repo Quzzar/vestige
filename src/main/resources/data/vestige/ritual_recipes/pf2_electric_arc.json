@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:pf2_electric_arc",
+  "name": "Electric Arc",
+  "circle": 4,
+  "color": "d7baff",
+  "rationale": "Copper crosses String's short link before Emerald directs the two-target arc.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Lightning channel follows blank inscription clockwise.",
+    "String motif follows lightning channel clockwise.",
+    "Evocation focus follows string motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

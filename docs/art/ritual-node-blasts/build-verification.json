@@ -1,0 +1,49 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "jar": "/Users/quzzar/Projects/vestige/build/ritual-node-blasts-final/libs/vestige-0.1.0.jar",
+  "jarSha256": "8027a7e059ed42f2248de91e00e4ee4b66fc3a8e9d2f6f813ced492c67bc372c",
+  "unitTests": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": 186,
+  "resourcesChecked": 1444,
+  "compiledClassesChecked": 318,
+  "resourceMapSha256": "30c21ed55579e6484af8fb4ecc9e3147445639bf2385c2d5b3aae3b49d533b2b",
+  "classMapSha256": "e4f85d3d6fda3930bb336b990aba12b342bf8864788e0f136fcff14aa1fc51c0",
+  "selectedClassSha256": {
+    "com/quzzar/vestige/apparatus/RitualCrafting.class": "c2c65b69af49cf5e2743cf29d721344a1340faca21c8e13eca76cd17e567e101",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Layout.class": "5cb9d5d5893292c551e113f0b03115b7119ce6362dea3f83b967851e42a8cbd9",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Pending.class": "bec8d9f14e84c4813704513493847f2736bb1ed5894a337437998beeda5704c1",
+    "com/quzzar/vestige/apparatus/RitualTestOutput.class": "792486c70de4b8aa16c404393fcee50e14457753d593d6606866c92358e32c9a",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Outcome.class": "9604bef48a16ce37f7284c99628a6c10a3b686a7b6c65fffe8fae59d3be2e478",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Match.class": "57a67b6317c3a6d47fd15d579cba18ea4d4919427697d02c95de8f7055aec3a4",
+    "com/quzzar/vestige/apparatus/RitualTest$1.class": "a1e4f658c74a1a36beef312cf05ae86cbe00eaff7074e9cb3f294181d62c4379",
+    "com/quzzar/vestige/apparatus/RitualCrafting$BlastImpact.class": "b9c624d4a4130fcd5b1160cfd295ceb0eddc7a5d5d8cc427b33ec06986cf882d",
+    "com/quzzar/vestige/apparatus/LeylineTest.class": "82912f7ea946f4b4f4ce0f75586496cda5dadae2978af3584b7fc8b6bccfb658",
+    "com/quzzar/vestige/apparatus/RitualTest.class": "a9e6aa45ad4950692a621af765d99ff7c8ef25a796d5be35a6f8cfbf937f387c",
+    "com/quzzar/vestige/magic/world/NativeCaptureScene$CameraPose.class": "1e53604e99a3c3a303da4ace445bf185c420d2483269acd800c0c963d7448ca8",
+    "com/quzzar/vestige/magic/world/NativeCaptureScene$Job.class": "c96ccb189868c034e1f7661dd4e5452d4ca68b72edbeeaa648f92ccd8bc8d2c6",
+    "com/quzzar/vestige/magic/world/NativeCaptureScene.class": "f12dffa4683a649b56bbf2cb65625c09f7903b01cac2d5e710a5ec375147eece",
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class": "eb2b4ffe0c2f7c1704023f0b5afb15e2118fe68cbcd457f545b99195d585419a"
+  },
+  "leylineParityFixtures": 490,
+  "buildLogSha256": "b2c5ef4c49ff2a227d883a206e3bdd223f8f3df792c9468d3e949e0eb8ab28e1",
+  "checks": [
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer",
+    "sync_leyline_rules --check",
+    "apparatus author/model audits",
+    "git diff --check"
+  ],
+  "newWorldTests": [
+    "fourSlotBackfireReachesDistantInnerNodesAndIgnoresEveryOuterNode",
+    "eightSlotBackfireReachesAllRaisedAndDistantNodesWithLocalRadiusAndOcclusion",
+    "overlappingNodeBurstsDealOnlyTheStrongestSingleHit",
+    "changedActiveNodeCancelsFailureBeforeAnyBurstOrConsumption"
+  ],
+  "isolation": "Dedicated build output and Gradle project-cache directory; incremental compilation and configuration/build caches disabled"
+}

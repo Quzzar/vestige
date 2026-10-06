@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_water_breathing",
+  "name": "Water Breathing",
+  "circle": 4,
+  "color": "239dcc",
+  "rationale": "Kelp marks submerged life, Glass encloses its breath, and a protection seal sustains air for allies.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Kelp motif follows blank inscription clockwise.",
+    "Glass motif follows kelp motif clockwise.",
+    "Protection seal follows glass motif clockwise.",
+    "Blank inscription follows protection seal clockwise."
+  ]
+}

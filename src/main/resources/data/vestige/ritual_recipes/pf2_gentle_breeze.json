@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:pf2_gentle_breeze",
+  "name": "Gentle Breeze",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "A feather carries Nature and living light into a restorative airflow.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    }
+  ],
+  "clues": [
+    "Living light follows blank inscription clockwise.",
+    "Nature focus follows living light clockwise.",
+    "Feather motif follows nature focus clockwise.",
+    "Blank inscription follows feather motif clockwise."
+  ]
+}

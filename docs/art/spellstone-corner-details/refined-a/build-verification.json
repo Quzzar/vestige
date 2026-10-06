@@ -1,0 +1,28 @@
+{
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "unitTests": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": 165,
+  "worldFailures": 0,
+  "log": "build/spellstone-a-final-verification.log",
+  "isolatedBuild": "build/spellstone-a-final-package",
+  "jarSha256": "9d4066c066b7e7806dcdef72f6dcf46070544886831f87c5f81a4df7093da4d8",
+  "verifiedBlockModels": 180,
+  "rejectedGemSpriteAbsent": true,
+  "cleanOutlineRendererPackaged": true,
+  "walkingRegression": "Slab steps successfully; all 36 Spellstones block walking from four cardinal directions",
+  "outlineSourceSha256": "5660443c0798c91953874c83493795a3dc8bb433c7133699965d161aa054b7b5",
+  "maximumRuneHeightAboveSurface": 0.00795,
+  "flatItemRestingOffset": 0.02,
+  "currentPackagedAssetsAndData": 1438,
+  "recipeViewerPackaged": true,
+  "apparatusClassesMatchInspectedCaptures": true,
+  "leylineParityFixtures": 490,
+  "finalInstallationSha256": "9d4066c066b7e7806dcdef72f6dcf46070544886831f87c5f81a4df7093da4d8"
+}

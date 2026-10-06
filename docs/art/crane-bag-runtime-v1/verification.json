@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-06",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "jar": "build/crane-bag-runtime/libs/vestige-0.1.0.jar",
+  "jarSha256": "9f40a9b478fbdf1fd6fed9c20f43c70ec3ea42becfa808fdfb207541ae5e05c9",
+  "zipIntegrity": true,
+  "unitTests": {
+    "tests": 105,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gameTests": {
+    "required": 11,
+    "passed": 11,
+    "failed": 0,
+    "filter": "crane_bag",
+    "fullNativeSuiteRepeated": false,
+    "log": "build/crane-bag-runtime/release-checks.log",
+    "logSha256": "5650b7f897022eab1882a863040e9f2b91645cbb0bf02ad5167ba4403f055805"
+  },
+  "compiledClasses": {
+    "com/quzzar/vestige/storage/CraneBagAccess.class": "7d1fe779b6c60452f2ca4171e2f34a9d4a2b8e1f52a8d0bef078f91c3b25825d",
+    "com/quzzar/vestige/storage/CraneBagItem.class": "9408e02d2f71024178c07939f30a51b6aedce0e27539260d95de712c720654ff",
+    "com/quzzar/vestige/storage/CraneBagStorage$Pool.class": "04d3ed8ea413229394ebdcc2408bd148def53aae81197bb61c66a6828c0b0213",
+    "com/quzzar/vestige/storage/CraneBagStorage.class": "78dac9771e80f485c86d73dda8aba9bc7eb95c675dd775b6a591887d7b3c1905",
+    "com/quzzar/vestige/storage/CraneBagWorldTest$1.class": "4cae38057c43203f9c025242d3736a687d77e100048576c5a058618e43a9c4a9",
+    "com/quzzar/vestige/storage/CraneBagWorldTest$2.class": "93e48e0055c37b7e9286d5a2e96c4b37640dddce3f830717728986c208e1813a",
+    "com/quzzar/vestige/storage/CraneBagWorldTest.class": "21ea6e49c48ca30d647f2b8775e4d9f1f622c951546dd09b6dfee7f8e888bceb",
+    "com/quzzar/vestige/storage/client/CraneBagTooltip.class": "d8337c6b9e91ed15da632c3b253d3e0e6261fd6bade84c47c7d0e16eebafc31d",
+    "com/quzzar/vestige/storage/client/NativeCraneBagCapture$BagScreen.class": "5e8fa43d71453dcda6ac903360bd1ec505db111f83c64d7f13138b52b3be1a7a",
+    "com/quzzar/vestige/storage/client/NativeCraneBagCapture.class": "7b0139dcf272b474327eaba93cd3af795c6d7f569be8e6d6829d11a541231d38"
+  },
+  "sources": {
+    "src/main/java/com/quzzar/vestige/storage/CraneBagAccess.java": "26ec9e2068addd671cad49ea35eb2a874eef82bfc30ffe38b694413c8e6c6368",
+    "src/main/java/com/quzzar/vestige/storage/CraneBagItem.java": "e8be173085398f325ca6c4f1bc17c52041715c1d8fb4e4268aeefadf5613178d",
+    "src/main/java/com/quzzar/vestige/storage/CraneBagStorage.java": "9476f2cb24b0b741afb1e0d8987497831c7877759a882a2b356588b086f04caf",
+    "src/main/java/com/quzzar/vestige/storage/CraneBagWorldTest.java": "66a490e24494f5738bee753f004f86e9c88bbe356952fd8a6f59f18f5120e1d9",
+    "src/main/java/com/quzzar/vestige/storage/client/CraneBagTooltip.java": "ce0ff59d96996154de285ba4b7653aa4435c553be73164eb7f9f7de7bee871ae",
+    "src/main/java/com/quzzar/vestige/storage/client/NativeCraneBagCapture.java": "a6dc20d7e8fb47cad4aa7336b964eb8e0afdd0162875ebbd43f4919b56b86ade"
+  },
+  "nativeCapture": {
+    "image": "crane-bag/native-tooltips.png",
+    "width": 1920,
+    "height": 1080,
+    "sha256": "01d6d7aabf4840ee8bdf44b5c9217a8e8b30df525db53d29d91045db4c53b870",
+    "visuallyInspected": true,
+    "fixtureOnly": true,
+    "gatherOrder": "name, four runes, bundle contents, fullness, optional advanced details",
+    "loadedModelMatchesJar": true,
+    "log": "build/crane-bag-runtime/final-native-capture.log"
+  },
+  "temporaryTexture": "minecraft:item/bundle",
+  "survivalRecipe": null,
+  "installed": false,
+  "limitations": [
+    "Native GUI capture uses fixture snapshots; gameplay/menu/click-packet behavior is verified independently in server tests.",
+    "No held/offhand or full multiplayer client UI capture.",
+    "Hard-crash atomicity across separate Minecraft save files and third-party bypasses are not guaranteed."
+  ],
+  "expectedNegativeLog": "Corruption test intentionally logs an unsupported saved-data load; the file remains unchanged and access fails."
+}

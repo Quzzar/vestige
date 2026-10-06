@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/polished_andesite_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/polished_andesite_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/polished_andesite_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/polished_andesite_plinth_cap"
+    }
+  }
+}

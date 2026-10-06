@@ -1,0 +1,92 @@
+{
+  "spell": "vestige:pf2_collective_transposition",
+  "name": "Collective Transposition",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender and Chorus move a Compass-led formation; String, allied sustenance and Amethyst preserve the shared destination.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 6,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "chorus motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chorus_fruit"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold ally sustenance, chorus motif, passage focus; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise, across an unused outer Plinth.",
+    "Ally sustenance follows resonant facet clockwise.",
+    "String motif follows ally sustenance clockwise.",
+    "Chorus motif follows string motif clockwise.",
+    "Compass motif follows chorus motif clockwise.",
+    "Passage focus follows compass motif clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

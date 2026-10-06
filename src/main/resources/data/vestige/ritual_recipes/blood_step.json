@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:blood_step",
+  "name": "Blood Step",
+  "circle": 4,
+  "color": "c92551",
+  "rationale": "Draining focus, Ender passage and dark Ink describe a short blood-themed blink followed by concealment.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 1,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Ink motif follows blank inscription clockwise.",
+    "Passage focus follows ink motif clockwise.",
+    "Draining focus follows passage focus clockwise.",
+    "Blank inscription follows draining focus clockwise."
+  ]
+}

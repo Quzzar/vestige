@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:poison_breath",
+  "name": "Poison Spray",
+  "circle": 8,
+  "color": "a4cc64",
+  "rationale": "A harmful eye follows feather-breath and Emerald direction; Mushroom and a membrane describe the sustained toxic cone.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 5,
+      "role": "mushroom motif",
+      "ingredient": {
+        "items": [
+          "minecraft:brown_mushroom"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold poison motif, mushroom motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Poison motif follows blank inscription clockwise.",
+    "Feather motif follows poison motif clockwise.",
+    "Evocation focus follows feather motif clockwise, across an unused outer Plinth.",
+    "Mushroom motif follows evocation focus clockwise.",
+    "Recovery veil follows mushroom motif clockwise.",
+    "Blank inscription follows recovery veil clockwise, across an unused outer Plinth."
+  ]
+}

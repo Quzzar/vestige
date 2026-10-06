@@ -1,0 +1,16 @@
+{
+  "status": "owner-approved and locked",
+  "date": "2026-10-06",
+  "scope": "Scroll Fragment presentation",
+  "source": "docs/art/scroll-fragments/options-v1/02-torn-corner-v2.png",
+  "sourceSha256": "b3780607b74899d87e76442a3b1b8af2c0612123e2e10afacbdee9cd13e6f18e",
+  "nativeTextureSha256": "bf086cd6ec11365ada33247c14d080eaeb9aaeed35d53c765d736d5ca60b50bf",
+  "name": "Scroll Fragment: [trait symbol]",
+  "symbolColor": "#d6b46a",
+  "symbols": 52,
+  "nativeInspection": "native.png",
+  "nativeInspectionSha256": "2f00a8e563d71a90beb46e1ab6bcfc37c345b57d2cbab9039d0c8e4705666f90",
+  "verifiedPackage": "run/scroll-fragments-package-selected-v2/vestige-0.1.0.jar",
+  "verifiedPackageSha256": "bd7f5c24a00334649d0bcf00a9b50db2280bf88b19741eed0a1810a23503f33c",
+  "verification": "package-verification.json"
+}

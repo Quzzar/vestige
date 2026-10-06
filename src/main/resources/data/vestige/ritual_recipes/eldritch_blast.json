@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:eldritch_blast",
+  "name": "Eldritch Blast",
+  "circle": 8,
+  "color": "b397e0",
+  "rationale": "Echo focuses the otherworldly beam; Emerald, Obsidian, Powder and Amethyst describe directed piercing releases.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 4,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold powder motif, lost echo; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise, across an unused outer Plinth.",
+    "Powder motif follows resonant facet clockwise.",
+    "Obsidian motif follows powder motif clockwise.",
+    "Evocation focus follows obsidian motif clockwise, across an unused outer Plinth.",
+    "Lost echo follows evocation focus clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

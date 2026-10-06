@@ -1,0 +1,104 @@
+{
+  "spell": "vestige:thunderstorm",
+  "name": "Thunderstorm",
+  "circle": 8,
+  "color": "5594ff",
+  "rationale": "Copper, a feather and Emerald surround Powder, Iron, Glowstone and Amethyst for the repeated following electrical storm.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 4,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 6,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold lightning channel, evocation focus, bound metal, resonant facet; the other required ingredients use Inner Plinths.",
+    "Lightning channel follows blank inscription clockwise.",
+    "Feather motif follows lightning channel clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Powder motif follows evocation focus clockwise.",
+    "Bound metal follows powder motif clockwise.",
+    "Glow motif follows bound metal clockwise.",
+    "Resonant facet follows glow motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

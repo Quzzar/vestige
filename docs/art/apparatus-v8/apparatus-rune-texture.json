@@ -1,0 +1,53 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "palette": {
+    ".": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "c": [
+      53,
+      214,
+      235,
+      255
+    ],
+    "a": [
+      110,
+      239,
+      245,
+      255
+    ],
+    "h": [
+      160,
+      255,
+      247,
+      255
+    ]
+  },
+  "rows": [
+    "................",
+    "......acca......",
+    "....caa..aac....",
+    "...aa..aaa.aa...",
+    "..ch.a.caa..hc..",
+    "..a..c.hh.ac.a..",
+    ".ccach.hh..accc.",
+    ".c....h..h.cc.c.",
+    ".c..a.h..h....c.",
+    ".aahch.hh..a.aa.",
+    "..a..c.hh.aa.c..",
+    "..ch...ca.h.ac..",
+    "...aa..aaa.ha...",
+    "....caa..aac....",
+    "......acca......",
+    "................"
+  ],
+  "reference": "docs/art/apparatus-v8/cyan-rune-reference.png",
+  "generation_source": "docs/art/apparatus-v8/rune-generated-source.png",
+  "preparation": "Area-reduced to 16\u00d716 with alpha cutoff 48/255 and three cyan colors; a centered 2\u00d72 aperture keeps the diamond hollow."
+}

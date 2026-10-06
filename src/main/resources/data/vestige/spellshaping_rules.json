@@ -1,0 +1,3533 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "reaching",
+      "name": "Reaching",
+      "description": "Range \u00d71.3 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:end_stone"
+        },
+        {
+          "offering": "minecraft:blaze_rod",
+          "material": "minecraft:end_stone"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:end_stone"
+        },
+        {
+          "offering": "irons_spellbooks:fire_rune",
+          "material": "minecraft:end_stone"
+        }
+      ],
+      "reads": [
+        "range"
+      ],
+      "traits": [
+        {
+          "trait": "range",
+          "operation": "MULTIPLY",
+          "amount": 1.3
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.1
+      }
+    },
+    {
+      "id": "widening",
+      "name": "Widening",
+      "description": "Area \u00d71.2 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:gunpowder",
+          "material": "minecraft:quartz_block"
+        }
+      ],
+      "reads": [
+        "area"
+      ],
+      "traits": [
+        {
+          "trait": "area",
+          "operation": "MULTIPLY",
+          "amount": 1.2
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.15
+      }
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "description": "Amplify \u00d71.12 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:diamond_block"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.12
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "piercing",
+      "name": "Piercing",
+      "description": "Extra native projectile penetration, limited to four pierces.",
+      "pairs": [
+        {
+          "offering": "minecraft:arrow",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "capabilities": [
+        "projectile"
+      ],
+      "kinds": [
+        "projectile"
+      ],
+      "defaults": {
+        "pierce": 1
+      },
+      "parameters": {
+        "pierce": {
+          "clamp": {
+            "value": {
+              "trait": "vestige:metal"
+            },
+            "minimum": 1,
+            "maximum": 4
+          }
+        }
+      },
+      "seeds": [
+        "metal"
+      ],
+      "traits": [
+        {
+          "trait": "metal",
+          "operation": "MULTIPLY",
+          "amount": 2
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.3
+      },
+      "max_degree": 2
+    },
+    {
+      "id": "seeking",
+      "name": "Seeking",
+      "description": "Native projectiles steer toward an eligible target found at release.",
+      "pairs": [
+        {
+          "offering": "minecraft:compass",
+          "material": "minecraft:lodestone"
+        },
+        {
+          "offering": "minecraft:arrow",
+          "material": "minecraft:lodestone"
+        }
+      ],
+      "capabilities": [
+        "projectile"
+      ],
+      "kinds": [
+        "projectile"
+      ],
+      "defaults": {
+        "homing": 0.08
+      },
+      "parameters": {
+        "homing": {
+          "clamp": {
+            "value": {
+              "trait": "vestige:motion"
+            },
+            "minimum": 1,
+            "maximum": 3
+          }
+        }
+      },
+      "seeds": [
+        "motion"
+      ],
+      "traits": [
+        {
+          "trait": "motion",
+          "operation": "ADD",
+          "amount": 0.35
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.15
+      }
+    },
+    {
+      "id": "forked",
+      "name": "Forked",
+      "description": "Increase a native projectile fan; existing hit and rider budgets remain shared.",
+      "pairs": [
+        {
+          "offering": "minecraft:string",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "minecraft:chain",
+          "material": "minecraft:quartz_block"
+        }
+      ],
+      "capabilities": [
+        "projectile"
+      ],
+      "kinds": [
+        "projectile"
+      ],
+      "defaults": {
+        "count": 1
+      },
+      "parameters": {
+        "count": {
+          "clamp": {
+            "value": {
+              "trait": "vestige:motion"
+            },
+            "minimum": 1,
+            "maximum": 4
+          }
+        }
+      },
+      "seeds": [
+        "motion"
+      ],
+      "traits": [
+        {
+          "trait": "motion",
+          "operation": "MULTIPLY",
+          "amount": 2
+        },
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 0.85
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.4
+      },
+      "max_degree": 3
+    },
+    {
+      "id": "enduring",
+      "name": "Enduring",
+      "description": "Extend finite supported manifestations without independently extending event bindings.",
+      "pairs": [
+        {
+          "offering": "minecraft:clock",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:phantom_membrane",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "lifetime": true,
+      "seeds": [
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.2
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "patient",
+      "name": "Patient",
+      "description": "Twenty extra charge ticks per contribution reduce mana payment.",
+      "pairs": [
+        {
+          "offering": "minecraft:clock",
+          "material": "minecraft:stone"
+        }
+      ],
+      "costs": [
+        {
+          "type": "time",
+          "ticks": 20
+        }
+      ],
+      "cost_factors": {
+        "mana": 0.9
+      }
+    },
+    {
+      "id": "hurried",
+      "name": "Hurried",
+      "description": "Shorter charge at a higher mana price.",
+      "pairs": [
+        {
+          "offering": "minecraft:feather",
+          "material": "minecraft:copper_block"
+        }
+      ],
+      "cost_factors": {
+        "time": 0.85,
+        "mana": 1.12
+      },
+      "capabilities": [],
+      "max_degree": 4
+    },
+    {
+      "id": "delayed",
+      "name": "Delayed",
+      "description": "A visible cue precedes a two-second delayed release.",
+      "pairs": [
+        {
+          "offering": "minecraft:clock",
+          "material": "minecraft:redstone_block"
+        }
+      ],
+      "attachment": "before",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "ring",
+                "color": "e49d45",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ],
+      "delay": 40,
+      "cost_factors": {
+        "mana": 0.9
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "bleeding",
+      "name": "Bleeding",
+      "description": "Positive primary damage opens one bounded wound.",
+      "pairs": [
+        {
+          "offering": "minecraft:gunpowder",
+          "material": "minecraft:bone_block"
+        },
+        {
+          "offering": "minecraft:fermented_spider_eye",
+          "material": "minecraft:bone_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "ae365a",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "repeat",
+          "count": 3,
+          "interval": 20,
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.75,
+                        {
+                          "trait": "vestige:blood"
+                        },
+                        {
+                          "trait": "vestige:amplify"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 4
+                  }
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {}
+            }
+          ]
+        }
+      ],
+      "seeds": [
+        "blood",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "blood",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "shocking",
+      "name": "Shocking",
+      "description": "Add a small electrical rider after an eligible hit.",
+      "pairs": [
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "minecraft:iron_ingot",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:copper_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "arc",
+                "color": "79dfff",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    1.5,
+                    {
+                      "trait": "vestige:lightning"
+                    },
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 4
+              }
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "lightning",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "lightning",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "kindled",
+      "name": "Kindled",
+      "description": "Ignite a compatible damaged recipient.",
+      "pairs": [
+        {
+          "offering": "minecraft:blaze_rod",
+          "material": "minecraft:gold_block"
+        },
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:gold_block"
+        },
+        {
+          "offering": "irons_spellbooks:fire_rune",
+          "material": "minecraft:gold_block"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:gold_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "f4963e",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "ignite",
+          "values": {
+            "seconds": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    6,
+                    {
+                      "trait": "vestige:fire"
+                    },
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 1,
+                "maximum": 12
+              }
+            }
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "fire",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "fire",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "chilling",
+      "name": "Chilling",
+      "description": "Cold contact leaves brief movement impairment.",
+      "pairs": [
+        {
+          "offering": "minecraft:ice",
+          "material": "minecraft:blue_ice"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "b0e7ff",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    40,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:slowness"
+          }
+        },
+        {
+          "type": "freeze",
+          "values": {
+            "ticks": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    30,
+                    {
+                      "trait": "vestige:ice"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 80
+              }
+            }
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "ice",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "ice",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "freezing",
+      "name": "Freezing",
+      "description": "A sufficiently qualified cold impact builds a finite frozen state.",
+      "pairs": [
+        {
+          "offering": "minecraft:snowball",
+          "material": "minecraft:blue_ice"
+        },
+        {
+          "offering": "minecraft:slime_ball",
+          "material": "minecraft:blue_ice"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "84d7fa",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "freeze",
+          "values": {
+            "ticks": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    120,
+                    {
+                      "trait": "vestige:ice"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 250
+              }
+            }
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "ice",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "ice",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.16
+      }
+    },
+    {
+      "id": "hindering",
+      "name": "Hindering",
+      "description": "Apply brief Slow after a qualifying outcome.",
+      "pairs": [
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:lapis_block"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:lapis_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    100,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:slowness"
+          }
+        },
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "8e91ee",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ],
+      "seeds": [
+        "motion",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "motion",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "envenomed",
+      "name": "Envenomed",
+      "description": "Add bounded poison to an eligible damaged recipient.",
+      "pairs": [
+        {
+          "offering": "minecraft:spider_eye",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "minecraft:poisonous_potato",
+          "material": "minecraft:moss_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "81b942",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    80,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:poison"
+          }
+        }
+      ],
+      "seeds": [
+        "poison",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "poison",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "interrupting",
+      "name": "Interrupting",
+      "description": "A qualifying impact interrupts one active supported channel.",
+      "pairs": [
+        {
+          "offering": "minecraft:chain",
+          "material": "minecraft:lapis_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "ring",
+                "color": "dbccaa",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "interrupt",
+          "values": {},
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "sonic",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "sonic",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.2
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "marking",
+      "name": "Marking",
+      "description": "Leave a visible tracking mark after a qualified contact.",
+      "pairs": [
+        {
+          "offering": "minecraft:glowstone_dust",
+          "material": "minecraft:sea_lantern"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    120,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:glowing"
+          }
+        },
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "ebd48c",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ],
+      "seeds": [
+        "light",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "light",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "repelling",
+      "name": "Repelling",
+      "description": "Drive a hit recipient away from the declared impact origin.",
+      "pairs": [
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:iron_block"
+        },
+        {
+          "offering": "minecraft:gunpowder",
+          "material": "minecraft:iron_block"
+        },
+        {
+          "offering": "irons_spellbooks:evocation_rune",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "b2babf",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    0.45,
+                    {
+                      "trait": "vestige:force"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 1.5
+              }
+            },
+            "up": 0.1
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "force",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "force",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "drawing",
+      "name": "Drawing",
+      "description": "Bring a qualified recipient toward an explicit anchor.",
+      "pairs": [
+        {
+          "offering": "minecraft:chain",
+          "material": "minecraft:slime_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "ring",
+                "color": "ad74cd",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "pull",
+          "values": {
+            "strength": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    0.35,
+                    {
+                      "trait": "vestige:motion"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 1.2
+              }
+            },
+            "up": 0
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "motion",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "motion",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "lifting",
+      "name": "Lifting",
+      "description": "Briefly lift a qualified subject.",
+      "pairs": [
+        {
+          "offering": "minecraft:feather",
+          "material": "minecraft:quartz_pillar"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "d3e8ed",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "launch",
+          "values": {
+            "strength": 0,
+            "up": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    0.35,
+                    {
+                      "trait": "vestige:air"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 0.8
+              }
+            }
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "air",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "air",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "unbalancing",
+      "name": "Unbalancing",
+      "description": "Apply a short physical stumble after contact.",
+      "pairs": [
+        {
+          "offering": "minecraft:feather",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    40,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:weakness"
+          }
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    0.2,
+                    {
+                      "trait": "vestige:force"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 0.6
+              }
+            },
+            "up": 0.05
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "force",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "force",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.08
+      }
+    },
+    {
+      "id": "echoing",
+      "name": "Echoing",
+      "description": "A supported direct outcome repeats at reduced strength.",
+      "pairs": [
+        {
+          "offering": "minecraft:echo_shard",
+          "material": "minecraft:sculk"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "ring",
+                "color": "a1b8e8",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    {
+                      "fact": "vestige:last_damage"
+                    },
+                    0.25,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 4
+              }
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "amplify",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.2
+      }
+    },
+    {
+      "id": "mending",
+      "name": "Mending",
+      "description": "Add finite regeneration after an eligible heal.",
+      "pairs": [
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:glistering_melon_slice",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "irons_spellbooks:divine_pearl",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "irons_spellbooks:holy_rune",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "93e7bb",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "repeat",
+          "count": 3,
+          "interval": 20,
+          "effects": [
+            {
+              "type": "heal",
+              "values": {
+                "amount": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.75,
+                        {
+                          "trait": "vestige:life"
+                        },
+                        {
+                          "trait": "vestige:amplify"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 3
+                  }
+                }
+              },
+              "identifiers": {}
+            }
+          ]
+        }
+      ],
+      "seeds": [
+        "life",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "life",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "restoring",
+      "name": "Restoring",
+      "description": "Strengthen or replace a specifically eligible recovery outcome.",
+      "pairs": [
+        {
+          "offering": "minecraft:glistering_melon_slice",
+          "material": "minecraft:diamond_block"
+        },
+        {
+          "offering": "irons_spellbooks:divine_pearl",
+          "material": "minecraft:diamond_block"
+        },
+        {
+          "offering": "irons_spellbooks:holy_rune",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "e3b6fa",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "heal",
+          "values": {
+            "amount": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    2,
+                    {
+                      "trait": "vestige:life"
+                    },
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 4
+              }
+            }
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "life",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "life",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.15
+      }
+    },
+    {
+      "id": "cleansing",
+      "name": "Cleansing",
+      "description": "Couple eligible healing to a limited removal of harmful statuses.",
+      "pairs": [
+        {
+          "offering": "minecraft:milk_bucket",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "minecraft:glistering_melon_slice",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "irons_spellbooks:divine_pearl",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "irons_spellbooks:holy_rune",
+          "material": "minecraft:moss_block"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "a9e7ca",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:poison"
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:wither"
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:slowness"
+          }
+        }
+      ],
+      "seeds": [
+        "life",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "life",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.16
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "purifying",
+      "name": "Purifying",
+      "description": "Remove explicitly selected harmful statuses after an eligible protective/healing result.",
+      "pairs": [
+        {
+          "offering": "minecraft:milk_bucket",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:amethyst_shard",
+          "material": "minecraft:glowstone"
+        },
+        {
+          "offering": "irons_spellbooks:arcane_essence",
+          "material": "minecraft:glowstone"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "ecd698",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:blindness"
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:darkness"
+          }
+        },
+        {
+          "type": "remove_status",
+          "values": {},
+          "identifiers": {
+            "effect": "minecraft:weakness"
+          }
+        }
+      ],
+      "seeds": [
+        "holy",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "holy",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.14
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "invigorating",
+      "name": "Invigorating",
+      "description": "Healing briefly energizes a recipient.",
+      "pairs": [
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:copper_block"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "c0ec91",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    100,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 400
+              }
+            },
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:speed"
+          }
+        }
+      ],
+      "seeds": [
+        "motion",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "motion",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "quieting",
+      "name": "Quieting",
+      "description": "Suppress authored casting cues that own a sound.",
+      "pairs": [
+        {
+          "offering": "minecraft:white_wool",
+          "material": "minecraft:white_wool"
+        },
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:white_wool"
+        }
+      ],
+      "quiet": true,
+      "cost_factors": {
+        "mana": 1.08
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "veiled",
+      "name": "Veiled",
+      "description": "A compatible non-damaging utility cast grants brief invisibility.",
+      "pairs": [
+        {
+          "offering": "minecraft:ink_sac",
+          "material": "minecraft:white_wool"
+        },
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:white_concrete"
+        }
+      ],
+      "attachment": "before",
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "self"
+          },
+          "effects": [
+            {
+              "type": "status",
+              "values": {
+                "duration": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        60,
+                        {
+                          "trait": "vestige:time"
+                        }
+                      ]
+                    },
+                    "minimum": 20,
+                    "maximum": 400
+                  }
+                },
+                "amplifier": 0
+              },
+              "identifiers": {
+                "effect": "minecraft:invisibility"
+              }
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        "inspect_item",
+        "detect_magic",
+        "unlock",
+        "gather_items"
+      ],
+      "seeds": [
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "excavating",
+      "name": "Excavating",
+      "description": "Increase the supported mining hardness threshold.",
+      "pairs": [
+        {
+          "offering": "minecraft:flint",
+          "material": "minecraft:gold_block"
+        },
+        {
+          "offering": "minecraft:gravel",
+          "material": "minecraft:gold_block"
+        }
+      ],
+      "traits": [
+        {
+          "trait": "metal",
+          "operation": "MULTIPLY",
+          "amount": 1.25
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.1
+      },
+      "capabilities": [
+        "break_block",
+        "break_blocks"
+      ],
+      "kinds": [
+        "break_block",
+        "break_blocks"
+      ],
+      "parameters": {
+        "hardness": {
+          "trait": "vestige:metal"
+        }
+      },
+      "seeds": [
+        "metal"
+      ]
+    },
+    {
+      "id": "gathering",
+      "name": "Gathering",
+      "description": "Range \u00d71.2 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:compass",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "reads": [
+        "range"
+      ],
+      "traits": [
+        {
+          "trait": "range",
+          "operation": "MULTIPLY",
+          "amount": 1.2
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.1
+      },
+      "capabilities": [
+        "gather_items"
+      ]
+    },
+    {
+      "id": "shaping",
+      "name": "Shaping",
+      "description": "Range \u00d71.2 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:clay_ball",
+          "material": "minecraft:stone"
+        },
+        {
+          "offering": "minecraft:stone",
+          "material": "minecraft:stone"
+        }
+      ],
+      "reads": [
+        "range"
+      ],
+      "traits": [
+        {
+          "trait": "range",
+          "operation": "MULTIPLY",
+          "amount": 1.2
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.1
+      },
+      "capabilities": [
+        "shape_stone"
+      ]
+    },
+    {
+      "id": "warded",
+      "name": "Warded",
+      "description": "After successful entity protection, add an owned four-second ward with 2 charges and 1 base mitigation per hit.",
+      "pairs": [
+        {
+          "offering": "minecraft:pufferfish",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "capabilities": [
+        "guard",
+        "barrier",
+        "reduce_pending_damage",
+        "defer_pending_damage"
+      ],
+      "seeds": [
+        "abjuration"
+      ],
+      "traits": [
+        {
+          "trait": "abjuration",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      },
+      "attachment": "protection",
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current"
+          },
+          "manifestation": {
+            "kind": "status",
+            "duration": 80,
+            "values": {},
+            "identifiers": {},
+            "bindings": [
+              {
+                "id": "vestige:spellshaping/warded/guard",
+                "duration": 80,
+                "charges": 2,
+                "triggers": [
+                  {
+                    "id": "vestige:spellshaping/warded/guard_hit",
+                    "event": "vestige:damage_calculating"
+                  }
+                ],
+                "effects": [
+                  {
+                    "type": "reduce_pending_damage",
+                    "values": {
+                      "amount": {
+                        "clamp": {
+                          "value": {
+                            "product": [
+                              1,
+                              {
+                                "trait": "vestige:abjuration"
+                              },
+                              {
+                                "trait": "vestige:amplify"
+                              }
+                            ]
+                          },
+                          "minimum": 0,
+                          "maximum": 6
+                        }
+                      }
+                    },
+                    "identifiers": {}
+                  }
+                ]
+              }
+            ],
+            "on_hit": [],
+            "on_tick": [],
+            "on_end": [],
+            "visual": {
+              "duration": 80,
+              "radius": 1,
+              "height": 1,
+              "ends_with_bindings": true,
+              "layers": [
+                {
+                  "shape": "shield",
+                  "color": "b5d8eb",
+                  "alpha": 0.4,
+                  "width": 0.025,
+                  "scale": 1
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "absorbing",
+      "name": "Absorbing",
+      "description": "After successful entity protection, add an owned four-second ward with 1 charges and 4 base mitigation per hit.",
+      "pairs": [
+        {
+          "offering": "minecraft:obsidian",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "capabilities": [
+        "guard",
+        "barrier",
+        "reduce_pending_damage",
+        "defer_pending_damage"
+      ],
+      "seeds": [
+        "abjuration"
+      ],
+      "traits": [
+        {
+          "trait": "abjuration",
+          "operation": "MULTIPLY",
+          "amount": 1.3
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.18
+      },
+      "attachment": "protection",
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current"
+          },
+          "manifestation": {
+            "kind": "status",
+            "duration": 80,
+            "values": {},
+            "identifiers": {},
+            "bindings": [
+              {
+                "id": "vestige:spellshaping/absorbing/guard",
+                "duration": 80,
+                "charges": 1,
+                "triggers": [
+                  {
+                    "id": "vestige:spellshaping/absorbing/guard_hit",
+                    "event": "vestige:damage_calculating"
+                  }
+                ],
+                "effects": [
+                  {
+                    "type": "reduce_pending_damage",
+                    "values": {
+                      "amount": {
+                        "clamp": {
+                          "value": {
+                            "product": [
+                              4,
+                              {
+                                "trait": "vestige:abjuration"
+                              },
+                              {
+                                "trait": "vestige:amplify"
+                              }
+                            ]
+                          },
+                          "minimum": 0,
+                          "maximum": 6
+                        }
+                      }
+                    },
+                    "identifiers": {}
+                  }
+                ]
+              }
+            ],
+            "on_hit": [],
+            "on_tick": [],
+            "on_end": [],
+            "visual": {
+              "duration": 80,
+              "radius": 1,
+              "height": 1,
+              "ends_with_bindings": true,
+              "layers": [
+                {
+                  "shape": "shield",
+                  "color": "b5d8eb",
+                  "alpha": 0.4,
+                  "width": 0.025,
+                  "scale": 1
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "conjuring",
+      "name": "Conjuring",
+      "description": "Increase explicitly authored construct or summon health.",
+      "pairs": [
+        {
+          "offering": "minecraft:amethyst_shard",
+          "material": "minecraft:diamond_block"
+        },
+        {
+          "offering": "irons_spellbooks:arcane_essence",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "kinds": [
+        "construct",
+        "summon"
+      ],
+      "capabilities": [
+        "construct",
+        "summon"
+      ],
+      "parameters": {
+        "health": {
+          "trait": "vestige:conjuration"
+        }
+      },
+      "seeds": [
+        "conjuration"
+      ],
+      "traits": [
+        {
+          "trait": "conjuration",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.12
+      }
+    },
+    {
+      "id": "revealing",
+      "name": "Revealing",
+      "description": "After detection or illumination, briefly outline up to eight nearby invisible creatures per cast without removing their invisibility.",
+      "pairs": [
+        {
+          "offering": "minecraft:glowstone_dust",
+          "material": "minecraft:glowstone"
+        },
+        {
+          "offering": "minecraft:compass",
+          "material": "minecraft:glowstone"
+        }
+      ],
+      "attachment": "after",
+      "after_actions": [
+        "detect_magic"
+      ],
+      "after_statuses": [
+        "minecraft:glowing"
+      ],
+      "effects": [
+        {
+          "type": "reveal_hidden",
+          "values": {
+            "radius": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    4,
+                    {
+                      "trait": "vestige:light"
+                    },
+                    {
+                      "trait": "vestige:range"
+                    }
+                  ]
+                },
+                "minimum": 1,
+                "maximum": 16
+              }
+            },
+            "duration": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    80,
+                    {
+                      "trait": "vestige:time"
+                    }
+                  ]
+                },
+                "minimum": 20,
+                "maximum": 200
+              }
+            },
+            "count": 8
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "light",
+        "range",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "light",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.2
+      },
+      "max_degree": 2
+    },
+    {
+      "id": "anchored",
+      "name": "Anchored",
+      "description": "Freeze a moving field whose actual pulses query around its own position; target-locked and already stationary fields are incompatible.",
+      "pairs": [
+        {
+          "offering": "minecraft:ender_pearl",
+          "material": "minecraft:lodestone"
+        }
+      ],
+      "anchor": true,
+      "cost_factors": {
+        "mana": 1.08
+      },
+      "max_degree": 1
+    },
+    {
+      "id": "reflecting",
+      "name": "Reflecting",
+      "description": "Add a three-second protective halo that returns up to two incoming vanilla arrows or tridents; native spell deliveries are excluded.",
+      "pairs": [
+        {
+          "offering": "minecraft:glass",
+          "material": "minecraft:diamond_block"
+        }
+      ],
+      "attachment": "protection",
+      "capabilities": [
+        "guard",
+        "barrier",
+        "reduce_pending_damage",
+        "defer_pending_damage"
+      ],
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current"
+          },
+          "manifestation": {
+            "kind": "status",
+            "duration": 60,
+            "interval": 1,
+            "values": {},
+            "identifiers": {},
+            "bindings": [],
+            "on_hit": [],
+            "on_end": [],
+            "on_tick": [
+              {
+                "type": "reflect_projectiles",
+                "values": {
+                  "radius": 2,
+                  "count": {
+                    "clamp": {
+                      "value": {
+                        "product": [
+                          2,
+                          {
+                            "trait": "vestige:abjuration"
+                          }
+                        ]
+                      },
+                      "minimum": 1,
+                      "maximum": 4
+                    }
+                  }
+                },
+                "identifiers": {}
+              }
+            ],
+            "visual": {
+              "duration": 60,
+              "radius": 1,
+              "height": 1,
+              "layers": [
+                {
+                  "shape": "shield",
+                  "color": "a4e8f4",
+                  "alpha": 0.5,
+                  "width": 0.035,
+                  "scale": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "seeds": [
+        "abjuration"
+      ],
+      "traits": [
+        {
+          "trait": "abjuration",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.25
+      },
+      "max_degree": 2
+    },
+    {
+      "id": "frugal",
+      "name": "Frugal",
+      "description": "Amplify \u00d70.85 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:stone"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 0.85
+        }
+      ],
+      "cost_factors": {
+        "mana": 0.8
+      }
+    },
+    {
+      "id": "reckless",
+      "name": "Reckless",
+      "description": "Amplify \u00d71.15 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:gunpowder",
+          "material": "minecraft:magma_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "volatile",
+          "operation": "ADD",
+          "amount": 1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      }
+    },
+    {
+      "id": "votive",
+      "name": "Votive",
+      "description": "Amplify \u00d71.12 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:gold_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.12
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "costs": [
+        {
+          "type": "material",
+          "item": "minecraft:coal",
+          "operation": "consume",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "greedy",
+      "name": "Greedy",
+      "description": "Amplify \u00d71.15 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:emerald_block"
+        },
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:emerald_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "costs": [
+        {
+          "type": "material",
+          "item": "minecraft:emerald",
+          "operation": "consume",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "sacrificial",
+      "name": "Sacrificial",
+      "description": "Amplify \u00d71.1 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:iron_ingot",
+          "material": "minecraft:soul_sand"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "costs": [
+        {
+          "type": "material",
+          "item": "minecraft:iron_pickaxe",
+          "operation": "damage",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "id": "famished",
+      "name": "Famished",
+      "description": "Amplify \u00d71.1 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:moss_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "bloodbound",
+      "name": "Bloodbound",
+      "description": "Amplify \u00d71.05 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:fermented_spider_eye",
+          "material": "minecraft:soul_sand"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.05
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "health_exchange": 0.25
+    },
+    {
+      "id": "fasting",
+      "name": "Fasting",
+      "description": "Exchange a quarter of adjusted mana for one hunger point per five mana, rounded up.",
+      "pairs": [
+        {
+          "offering": "minecraft:bread",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "hunger_exchange": 0.25,
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "max_degree": 3
+    },
+    {
+      "id": "exhausting",
+      "name": "Exhausting",
+      "description": "Amplify \u00d71.05 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:phantom_membrane",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.05
+        }
+      ],
+      "cost_factors": {
+        "mana": 0.94,
+        "cooldown": 1.2
+      }
+    },
+    {
+      "id": "charged",
+      "name": "Charged",
+      "description": "Amplify \u00d71.15 per contribution.",
+      "pairs": [
+        {
+          "offering": "minecraft:copper_ingot",
+          "material": "minecraft:redstone_block"
+        }
+      ],
+      "reads": [
+        "amplify"
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.1
+      },
+      "costs": [
+        {
+          "type": "time",
+          "ticks": 15
+        }
+      ]
+    },
+    {
+      "id": "vampiric",
+      "name": "Vampiric",
+      "description": "One owned wound whose qualifying ticks return a bounded restoration portion to the caster.",
+      "pairs": [
+        {
+          "offering": "minecraft:fermented_spider_eye",
+          "material": "minecraft:bone_block"
+        },
+        {
+          "offering": "minecraft:amethyst_shard",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:soul_sand"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "b73b76",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "repeat",
+          "count": 3,
+          "interval": 20,
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.75,
+                        {
+                          "trait": "vestige:blood"
+                        },
+                        {
+                          "trait": "vestige:amplify"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 4
+                  }
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {}
+            },
+            {
+              "type": "leech",
+              "values": {
+                "fraction": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.5,
+                        {
+                          "trait": "vestige:life"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 0.75
+                  }
+                },
+                "maximum": 1
+              },
+              "identifiers": {}
+            }
+          ]
+        }
+      ],
+      "seeds": [
+        "blood",
+        "time",
+        "life"
+      ],
+      "traits": [
+        {
+          "trait": "blood",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.22
+      },
+      "compound": true,
+      "max_degree": 2
+    },
+    {
+      "id": "hemorrhagic",
+      "name": "Hemorrhagic",
+      "description": "One finite wound reserves a calibrated portion for a normal-expiry terminal pulse.",
+      "pairs": [
+        {
+          "offering": "minecraft:fermented_spider_eye",
+          "material": "minecraft:bone_block"
+        },
+        {
+          "offering": "minecraft:bone",
+          "material": "minecraft:soul_sand"
+        },
+        {
+          "offering": "minecraft:paper",
+          "material": "minecraft:bookshelf"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "d04158",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "repeat",
+          "count": 2,
+          "interval": 20,
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.6,
+                        {
+                          "trait": "vestige:blood"
+                        },
+                        {
+                          "trait": "vestige:amplify"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 4
+                  }
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {}
+            }
+          ]
+        },
+        {
+          "type": "delay",
+          "ticks": 40
+        },
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    2,
+                    {
+                      "trait": "vestige:blood"
+                    },
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 4
+              }
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "blood",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "blood",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.22
+      },
+      "compound": true,
+      "max_degree": 2
+    },
+    {
+      "id": "tempestuous",
+      "name": "Tempestuous",
+      "description": "One charged windburst deals a calibrated electrical outcome and pushes eligible recipients from its center.",
+      "pairs": [
+        {
+          "offering": "minecraft:copper_ingot",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "minecraft:feather",
+          "material": "minecraft:quartz_block"
+        },
+        {
+          "offering": "minecraft:gunpowder",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "arc",
+                "color": "86dbef",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    2,
+                    {
+                      "trait": "vestige:lightning"
+                    },
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 4
+              }
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {}
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": {
+              "clamp": {
+                "value": {
+                  "product": [
+                    0.5,
+                    {
+                      "trait": "vestige:air"
+                    }
+                  ]
+                },
+                "minimum": 0,
+                "maximum": 1.2
+              }
+            },
+            "up": 0.2
+          },
+          "identifiers": {}
+        }
+      ],
+      "seeds": [
+        "lightning",
+        "time",
+        "air"
+      ],
+      "traits": [
+        {
+          "trait": "lightning",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.24
+      },
+      "compound": true,
+      "costs": [
+        {
+          "type": "time",
+          "ticks": 10
+        }
+      ],
+      "max_degree": 2
+    },
+    {
+      "id": "glacial",
+      "name": "Glacial",
+      "description": "One lingering cold field slows or builds freeze on qualified occupants.",
+      "pairs": [
+        {
+          "offering": "minecraft:snowball",
+          "material": "minecraft:blue_ice"
+        },
+        {
+          "offering": "minecraft:ice",
+          "material": "minecraft:honey_block"
+        },
+        {
+          "offering": "minecraft:phantom_membrane",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current"
+          },
+          "manifestation": {
+            "kind": "area",
+            "duration": 65,
+            "interval": 20,
+            "values": {
+              "radius": {
+                "clamp": {
+                  "value": {
+                    "product": [
+                      2,
+                      {
+                        "trait": "vestige:area"
+                      }
+                    ]
+                  },
+                  "minimum": 1,
+                  "maximum": 4
+                }
+              }
+            },
+            "identifiers": {},
+            "bindings": [],
+            "on_hit": [],
+            "on_end": [],
+            "on_tick": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "near_target",
+                  "distance": {
+                    "clamp": {
+                      "value": {
+                        "product": [
+                          2,
+                          {
+                            "trait": "vestige:area"
+                          }
+                        ]
+                      },
+                      "minimum": 1,
+                      "maximum": 4
+                    }
+                  },
+                  "relationship": "hostile",
+                  "options": {
+                    "count": 4
+                  }
+                },
+                "effects": [
+                  {
+                    "type": "limited",
+                    "group": "vestige:spellshaping_contacts/glacial",
+                    "per_target": 2,
+                    "total": 8,
+                    "effects": [
+                      {
+                        "type": "visual",
+                        "visual": {
+                          "duration": 16,
+                          "radius": 0.65,
+                          "height": 0.5,
+                          "layers": [
+                            {
+                              "shape": "sparks",
+                              "color": "83dafa",
+                              "alpha": 0.8,
+                              "width": 0.035,
+                              "scale": 1,
+                              "count": 8
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "status",
+                        "values": {
+                          "duration": {
+                            "clamp": {
+                              "value": {
+                                "product": [
+                                  40,
+                                  {
+                                    "trait": "vestige:time"
+                                  }
+                                ]
+                              },
+                              "minimum": 20,
+                              "maximum": 400
+                            }
+                          },
+                          "amplifier": 0
+                        },
+                        "identifiers": {
+                          "effect": "minecraft:slowness"
+                        }
+                      },
+                      {
+                        "type": "freeze",
+                        "values": {
+                          "ticks": {
+                            "clamp": {
+                              "value": {
+                                "product": [
+                                  40,
+                                  {
+                                    "trait": "vestige:ice"
+                                  }
+                                ]
+                              },
+                              "minimum": 0,
+                              "maximum": 100
+                            }
+                          }
+                        },
+                        "identifiers": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "seeds": [
+        "ice",
+        "time",
+        "area"
+      ],
+      "traits": [
+        {
+          "trait": "ice",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.25
+      },
+      "compound": true,
+      "max_degree": 2
+    },
+    {
+      "id": "stormbound",
+      "name": "Stormbound",
+      "description": "One temporary electrical relay field joins a bounded set of selected contacts.",
+      "pairs": [
+        {
+          "offering": "minecraft:copper_ingot",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "minecraft:chain",
+          "material": "minecraft:copper_block"
+        },
+        {
+          "offering": "minecraft:emerald",
+          "material": "minecraft:end_stone"
+        }
+      ],
+      "attachment": "damage",
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current"
+          },
+          "manifestation": {
+            "kind": "area",
+            "duration": 65,
+            "interval": 20,
+            "values": {
+              "radius": {
+                "clamp": {
+                  "value": {
+                    "product": [
+                      2,
+                      {
+                        "trait": "vestige:area"
+                      }
+                    ]
+                  },
+                  "minimum": 1,
+                  "maximum": 4
+                }
+              }
+            },
+            "identifiers": {},
+            "bindings": [],
+            "on_hit": [],
+            "on_end": [],
+            "on_tick": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "near_target",
+                  "distance": {
+                    "clamp": {
+                      "value": {
+                        "product": [
+                          2,
+                          {
+                            "trait": "vestige:area"
+                          }
+                        ]
+                      },
+                      "minimum": 1,
+                      "maximum": 4
+                    }
+                  },
+                  "relationship": "hostile",
+                  "options": {
+                    "count": 4
+                  }
+                },
+                "effects": [
+                  {
+                    "type": "limited",
+                    "group": "vestige:spellshaping_contacts/stormbound",
+                    "per_target": 2,
+                    "total": 8,
+                    "effects": [
+                      {
+                        "type": "visual",
+                        "visual": {
+                          "duration": 16,
+                          "radius": 0.65,
+                          "height": 0.5,
+                          "layers": [
+                            {
+                              "shape": "sparks",
+                              "color": "8cdbfa",
+                              "alpha": 0.8,
+                              "width": 0.035,
+                              "scale": 1,
+                              "count": 8
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "damage",
+                        "values": {
+                          "amount": {
+                            "clamp": {
+                              "value": {
+                                "product": [
+                                  1,
+                                  {
+                                    "trait": "vestige:lightning"
+                                  },
+                                  {
+                                    "trait": "vestige:amplify"
+                                  }
+                                ]
+                              },
+                              "minimum": 0,
+                              "maximum": 4
+                            }
+                          },
+                          "ignore_invulnerability": 1
+                        },
+                        "identifiers": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "seeds": [
+        "lightning",
+        "time",
+        "area"
+      ],
+      "traits": [
+        {
+          "trait": "lightning",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.28
+      },
+      "compound": true,
+      "max_degree": 2
+    },
+    {
+      "id": "sustaining",
+      "name": "Sustaining",
+      "description": "One recovery plan uses a declared hunger payment to support calibrated ongoing restoration.",
+      "pairs": [
+        {
+          "offering": "minecraft:glistering_melon_slice",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "minecraft:amethyst_shard",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "attachment": "heal",
+      "effects": [
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 16,
+            "radius": 0.65,
+            "height": 0.5,
+            "layers": [
+              {
+                "shape": "sparks",
+                "color": "bce997",
+                "alpha": 0.8,
+                "width": 0.035,
+                "scale": 1,
+                "count": 8
+              }
+            ]
+          }
+        },
+        {
+          "type": "delay",
+          "ticks": 20
+        },
+        {
+          "type": "repeat",
+          "count": 5,
+          "interval": 20,
+          "effects": [
+            {
+              "type": "heal",
+              "values": {
+                "amount": {
+                  "clamp": {
+                    "value": {
+                      "product": [
+                        0.75,
+                        {
+                          "trait": "vestige:life"
+                        },
+                        {
+                          "trait": "vestige:amplify"
+                        }
+                      ]
+                    },
+                    "minimum": 0,
+                    "maximum": 3
+                  }
+                }
+              },
+              "identifiers": {}
+            }
+          ]
+        }
+      ],
+      "seeds": [
+        "life",
+        "time"
+      ],
+      "traits": [
+        {
+          "trait": "life",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.08
+      },
+      "compound": true,
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 2
+        }
+      ],
+      "max_degree": 2
+    }
+  ]
+}

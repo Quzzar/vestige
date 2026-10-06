@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_summon_fey",
+  "name": "Summon Fey",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Nature focus, Ink and honey describe the fragile woodland illusion that hinders enemies.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 2,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Honey motif follows blank inscription clockwise.",
+    "Ink motif follows honey motif clockwise.",
+    "Nature focus follows ink motif clockwise.",
+    "Blank inscription follows nature focus clockwise."
+  ]
+}

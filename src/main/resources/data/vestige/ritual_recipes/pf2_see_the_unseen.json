@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_see_the_unseen",
+  "name": "See the Unseen",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "Glowstone, Glass and Amethyst reverse revealing light's order to describe private perception through concealment.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Glass motif follows resonant facet clockwise.",
+    "Glow motif follows glass motif clockwise.",
+    "Blank inscription follows glow motif clockwise."
+  ]
+}

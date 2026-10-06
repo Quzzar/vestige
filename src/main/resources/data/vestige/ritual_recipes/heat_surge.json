@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:heat_surge",
+  "name": "Heat Surge",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze heats Magma Cream before Emerald shapes the outward burning burst.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "magma motif",
+      "ingredient": {
+        "items": [
+          "minecraft:magma_cream"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Flame focus follows blank inscription clockwise.",
+    "Magma motif follows flame focus clockwise.",
+    "Evocation focus follows magma motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

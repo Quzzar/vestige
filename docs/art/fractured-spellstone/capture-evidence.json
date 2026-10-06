@@ -1,0 +1,146 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "ef04ce63666ee84b9b4423f848a34b9cabe3606bbb387d94da69452e6f10a884",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "relic_night",
+      "capture": "build/fractured-spellstone-final/vestige-relic_night-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "354e35f1f9ce315b8298c25739e44587af91cc57266ffbe0a00160bc7a83d345",
+      "videoSha256": "54d484e65834cde86403c870cc41f52d3bac0907296320bfa9e32a8b75a8a0be",
+      "nativeFrames": 63,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658
+      },
+      "materialTextureSha256": {
+        "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "66301126e97e213d1a0ebe8d7eaa0a1c952854e44aa9ea6208e569ca5d9ef5c3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "relic_scrolls",
+      "capture": "build/fractured-spellstone-final/vestige-relic_scrolls-apparatus-0/capture.json",
+      "posterFrame": 28,
+      "posterSha256": "ad048c03c4a0ec0668aeadc3e296f865259b3610cc6d34f255a07daee62a37b5",
+      "videoSha256": "2c05bab255e78ed44a23ae67fb9dafc721438835603b8506cc38f6dc2fd0bb71",
+      "nativeFrames": 60,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658
+      },
+      "materialTextureSha256": {
+        "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "66301126e97e213d1a0ebe8d7eaa0a1c952854e44aa9ea6208e569ca5d9ef5c3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "relic_stone",
+      "capture": "build/fractured-spellstone-final/vestige-relic_stone-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "219e1bd925b205bf0818e7b763448af803e0f4eabaf3307aa4a9ab254834c5b7",
+      "videoSha256": "14223a1376ecdf9dac7486c2d9005b6b5b120e7e6a879a3b6cd903ea01566208",
+      "nativeFrames": 62,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true,
+        "yaw": 144.68878,
+        "pitch": 30.028658
+      },
+      "materialTextureSha256": {
+        "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "66301126e97e213d1a0ebe8d7eaa0a1c952854e44aa9ea6208e569ca5d9ef5c3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "relic_top",
+      "capture": "build/fractured-spellstone-final/vestige-relic_top-apparatus-0/capture.json",
+      "posterFrame": 24,
+      "posterSha256": "53b613a0e4684824ae78cac01ae5d6d99eb80e9b3bb066617483835604bbfb2b",
+      "videoSha256": "7caeb34f8051ee3054ffe75bd6f333961b49c889a6be187bbb9e2bf033690b4a",
+      "nativeFrames": 28,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.25,
+          66.8,
+          1.5
+        ],
+        "fixed": true,
+        "yaw": 143.1301,
+        "pitch": 51.115505
+      },
+      "materialTextureSha256": {
+        "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "66301126e97e213d1a0ebe8d7eaa0a1c952854e44aa9ea6208e569ca5d9ef5c3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    }
+  ]
+}

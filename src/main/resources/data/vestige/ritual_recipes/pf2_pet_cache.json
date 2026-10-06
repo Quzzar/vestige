@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_pet_cache",
+  "name": "Pet Cache",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Ender passage shelters a Leather body beside Bread's feeding motif, representing the existing companion rather than a new summon.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bread motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bread"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Passage focus follows blank inscription clockwise.",
+    "Leather motif follows passage focus clockwise.",
+    "Bread motif follows leather motif clockwise.",
+    "Blank inscription follows bread motif clockwise."
+  ]
+}

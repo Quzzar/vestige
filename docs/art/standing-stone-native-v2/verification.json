@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-06",
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "checks": [
+    "build",
+    "verifyKithkynCompatibility",
+    "author_standing_stones.py --check",
+    "author_apparatus_models.py --check",
+    "test_standing_stone_geometry.py",
+    "git diff --check"
+  ],
+  "unitTests": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldSuiteRerun": false,
+  "previousMinecraftRequiredTests": 164,
+  "previousMinecraftEvidence": "../standing-stone-native-v1/verification.json",
+  "packagedStandingStoneResources": 444,
+  "package": "build/libs/vestige-0.1.0.jar",
+  "packageSha256": "45e3e82d73de35595e41f826cffe4fdaa1f6a717dde47c73c64f99bfd8ae096c",
+  "capturedTravelClassesMatchPackage": 26,
+  "capturedMeshHashesMatchSourceAndPackage": 9,
+  "renderedSource": "Minecraft main render target",
+  "comparisonViewsKeysFinishesIdentical": true,
+  "authoredFacesBefore": 24,
+  "authoredFacesAfter": 17,
+  "bakedFacesBefore": {
+    "blade": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    },
+    "shoulder": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    },
+    "leaning": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    }
+  },
+  "bakedFacesAfter": {
+    "blade": {
+      "lower": 15,
+      "upper": 10,
+      "whole": 25
+    },
+    "shoulder": {
+      "lower": 15,
+      "upper": 10,
+      "whole": 25
+    },
+    "leaning": {
+      "lower": 15,
+      "upper": 10,
+      "whole": 25
+    }
+  },
+  "bodyFaceReductionPercent": 26.470588235294116,
+  "outlineAndDepthUnchanged": true,
+  "collisionSourceUnchangedSha256": "3718a5022103afc90a76e0b323dd0a183eacd18c1ee16e39eac086ab22af349e",
+  "runeRendererUnchangedSha256": "919974b74eda23e0e32d29f63a2ccdf37855b9bff6d794b9acc6ac4d453c2e39",
+  "images": {
+    "matching-key-three-finishes.png": "4f6383677c3a9f51bdc26b7a1baabd26fcecc4f0054145433a52b1280f45db51",
+    "shouldered-stone-close.png": "b3132ce3b1340e9fbe290e66d5688f9d398ce7bc5ea7e14a57674535a730ede3",
+    "three-shapes-day.png": "d924de7d5b324524797d74d1ed121bcc2fcd71f3bce1989e0863ae270c547062",
+    "three-shapes-night.png": "92097cbeecd6489e53df4898ab4487e0175ce8ae275883e633fc61ed36dea57e"
+  },
+  "limitations": [
+    "Collision uses conservative quarter-model-unit bands, not exact triangle collision",
+    "Full-bright rune ink does not emit block light or add shader bloom",
+    "Physical inspection covers Tuff, Stone Bricks and Sandstone; all 36 finishes share validated packaged meshes",
+    "Further silhouettes, travel payments, terrain maps and Prism installation are outside this art revision"
+  ]
+}

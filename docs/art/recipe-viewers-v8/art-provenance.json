@@ -1,0 +1,10 @@
+{
+  "assets": {
+    "parchment": "08fdc873540a153b0f62358f285c66b8c9c16fd4814032ca40cb99c4dc97e359",
+    "plinth": "0edf40ea9130797c0545ee4cfdf375a0bb61599993ff7d4a730457c3bd8c7b44",
+    "spellstone": "ec5ea7129ab8b8583d2a86a0c6fe39ee3cf53f8d96267e5b02454f599098edc1"
+  },
+  "source": "Unchanged generated v7 artwork; see docs/previews/ritual-image-concepts/assets-v7.json",
+  "nativeGui": "184 x 150; EMI scales drawing/icons/hover bounds to actual holder height",
+  "geometry": "Symmetric integer GUI coordinates shared by slot centers and guide circles"
+}

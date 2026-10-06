@@ -1,0 +1,483 @@
+{
+  "schema_version": 1,
+  "minecraft_version": "1.21.1",
+  "roles": [
+    "plinth",
+    "spellstone"
+  ],
+  "decision_date": "2026-10-05",
+  "construction_recipes": {
+    "spellstone": {
+      "pattern": [
+        "DSD",
+        "BAB",
+        "BBB"
+      ],
+      "count": 1,
+      "common_items": {
+        "D": "minecraft:diamond",
+        "A": "minecraft:amethyst_block"
+      },
+      "variant_items": {
+        "B": "body_item",
+        "S": "slab_item"
+      }
+    },
+    "plinth": {
+      "pattern": [
+        "SBS",
+        " B ",
+        "SBS"
+      ],
+      "count": 2,
+      "variant_items": {
+        "B": "body_item",
+        "S": "slab_item"
+      }
+    }
+  },
+  "selection": {
+    "family": "minecraft:stairs",
+    "include": "stone_and_masonry",
+    "exclude": [
+      "wood",
+      "bamboo_mosaic",
+      "copper"
+    ],
+    "source": "../research/vanilla-stair-materials-1.21.1.json"
+  },
+  "materials": [
+    {
+      "id": "stone",
+      "name": "Stone",
+      "body_item": "minecraft:stone",
+      "source_stairs": "minecraft:stone_stairs",
+      "textures": {
+        "stone": "minecraft:block/stone",
+        "carving": "minecraft:block/stone",
+        "trim": "minecraft:block/stone"
+      },
+      "slab_item": "minecraft:stone_slab"
+    },
+    {
+      "id": "cobblestone",
+      "name": "Cobblestone",
+      "body_item": "minecraft:cobblestone",
+      "source_stairs": "minecraft:cobblestone_stairs",
+      "textures": {
+        "stone": "minecraft:block/cobblestone",
+        "carving": "minecraft:block/cobblestone",
+        "trim": "minecraft:block/cobblestone"
+      },
+      "slab_item": "minecraft:cobblestone_slab"
+    },
+    {
+      "id": "mossy_cobblestone",
+      "name": "Mossy Cobblestone",
+      "body_item": "minecraft:mossy_cobblestone",
+      "source_stairs": "minecraft:mossy_cobblestone_stairs",
+      "textures": {
+        "stone": "minecraft:block/mossy_cobblestone",
+        "carving": "minecraft:block/mossy_cobblestone",
+        "trim": "minecraft:block/mossy_cobblestone"
+      },
+      "slab_item": "minecraft:mossy_cobblestone_slab"
+    },
+    {
+      "id": "stone_bricks",
+      "name": "Stone Bricks",
+      "body_item": "minecraft:stone_bricks",
+      "source_stairs": "minecraft:stone_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/stone_bricks",
+        "carving": "minecraft:block/chiseled_stone_bricks",
+        "trim": "minecraft:block/polished_andesite"
+      },
+      "slab_item": "minecraft:stone_brick_slab"
+    },
+    {
+      "id": "mossy_stone_bricks",
+      "name": "Mossy Stone Bricks",
+      "body_item": "minecraft:mossy_stone_bricks",
+      "source_stairs": "minecraft:mossy_stone_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/mossy_stone_bricks",
+        "carving": "minecraft:block/mossy_stone_bricks",
+        "trim": "minecraft:block/mossy_stone_bricks"
+      },
+      "slab_item": "minecraft:mossy_stone_brick_slab"
+    },
+    {
+      "id": "granite",
+      "name": "Granite",
+      "body_item": "minecraft:granite",
+      "source_stairs": "minecraft:granite_stairs",
+      "textures": {
+        "stone": "minecraft:block/granite",
+        "carving": "minecraft:block/polished_granite",
+        "trim": "minecraft:block/polished_granite"
+      },
+      "slab_item": "minecraft:granite_slab"
+    },
+    {
+      "id": "polished_granite",
+      "name": "Polished Granite",
+      "body_item": "minecraft:polished_granite",
+      "source_stairs": "minecraft:polished_granite_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_granite",
+        "carving": "minecraft:block/polished_granite",
+        "trim": "minecraft:block/polished_granite"
+      },
+      "slab_item": "minecraft:polished_granite_slab"
+    },
+    {
+      "id": "diorite",
+      "name": "Diorite",
+      "body_item": "minecraft:diorite",
+      "source_stairs": "minecraft:diorite_stairs",
+      "textures": {
+        "stone": "minecraft:block/diorite",
+        "carving": "minecraft:block/polished_diorite",
+        "trim": "minecraft:block/polished_diorite"
+      },
+      "slab_item": "minecraft:diorite_slab"
+    },
+    {
+      "id": "polished_diorite",
+      "name": "Polished Diorite",
+      "body_item": "minecraft:polished_diorite",
+      "source_stairs": "minecraft:polished_diorite_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_diorite",
+        "carving": "minecraft:block/polished_diorite",
+        "trim": "minecraft:block/polished_diorite"
+      },
+      "slab_item": "minecraft:polished_diorite_slab"
+    },
+    {
+      "id": "andesite",
+      "name": "Andesite",
+      "body_item": "minecraft:andesite",
+      "source_stairs": "minecraft:andesite_stairs",
+      "textures": {
+        "stone": "minecraft:block/andesite",
+        "carving": "minecraft:block/polished_andesite",
+        "trim": "minecraft:block/polished_andesite"
+      },
+      "slab_item": "minecraft:andesite_slab"
+    },
+    {
+      "id": "polished_andesite",
+      "name": "Polished Andesite",
+      "body_item": "minecraft:polished_andesite",
+      "source_stairs": "minecraft:polished_andesite_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_andesite",
+        "carving": "minecraft:block/polished_andesite",
+        "trim": "minecraft:block/polished_andesite"
+      },
+      "slab_item": "minecraft:polished_andesite_slab"
+    },
+    {
+      "id": "sandstone",
+      "name": "Sandstone",
+      "body_item": "minecraft:sandstone",
+      "source_stairs": "minecraft:sandstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/sandstone",
+        "carving": "minecraft:block/chiseled_sandstone",
+        "trim": "minecraft:block/sandstone_top"
+      },
+      "slab_item": "minecraft:sandstone_slab"
+    },
+    {
+      "id": "smooth_sandstone",
+      "name": "Smooth Sandstone",
+      "body_item": "minecraft:smooth_sandstone",
+      "source_stairs": "minecraft:smooth_sandstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/sandstone_top",
+        "carving": "minecraft:block/sandstone_top",
+        "trim": "minecraft:block/sandstone_top"
+      },
+      "slab_item": "minecraft:smooth_sandstone_slab"
+    },
+    {
+      "id": "red_sandstone",
+      "name": "Red Sandstone",
+      "body_item": "minecraft:red_sandstone",
+      "source_stairs": "minecraft:red_sandstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/red_sandstone",
+        "carving": "minecraft:block/red_sandstone",
+        "trim": "minecraft:block/red_sandstone_top"
+      },
+      "slab_item": "minecraft:red_sandstone_slab"
+    },
+    {
+      "id": "smooth_red_sandstone",
+      "name": "Smooth Red Sandstone",
+      "body_item": "minecraft:smooth_red_sandstone",
+      "source_stairs": "minecraft:smooth_red_sandstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/red_sandstone_top",
+        "carving": "minecraft:block/red_sandstone_top",
+        "trim": "minecraft:block/red_sandstone_top"
+      },
+      "slab_item": "minecraft:smooth_red_sandstone_slab"
+    },
+    {
+      "id": "bricks",
+      "name": "Bricks",
+      "body_item": "minecraft:bricks",
+      "source_stairs": "minecraft:brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/bricks",
+        "carving": "minecraft:block/bricks",
+        "trim": "minecraft:block/bricks"
+      },
+      "slab_item": "minecraft:brick_slab"
+    },
+    {
+      "id": "mud_bricks",
+      "name": "Mud Bricks",
+      "body_item": "minecraft:mud_bricks",
+      "source_stairs": "minecraft:mud_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/mud_bricks",
+        "carving": "minecraft:block/mud_bricks",
+        "trim": "minecraft:block/mud_bricks"
+      },
+      "slab_item": "minecraft:mud_brick_slab"
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz",
+      "body_item": "minecraft:quartz_block",
+      "source_stairs": "minecraft:quartz_stairs",
+      "textures": {
+        "stone": "minecraft:block/quartz_block_side",
+        "carving": "minecraft:block/chiseled_quartz_block",
+        "trim": "minecraft:block/quartz_block_top"
+      },
+      "slab_item": "minecraft:quartz_slab"
+    },
+    {
+      "id": "smooth_quartz",
+      "name": "Smooth Quartz Block",
+      "body_item": "minecraft:smooth_quartz",
+      "source_stairs": "minecraft:smooth_quartz_stairs",
+      "textures": {
+        "stone": "minecraft:block/quartz_block_bottom",
+        "carving": "minecraft:block/quartz_block_bottom",
+        "trim": "minecraft:block/quartz_block_bottom"
+      },
+      "slab_item": "minecraft:smooth_quartz_slab"
+    },
+    {
+      "id": "prismarine",
+      "name": "Prismarine",
+      "body_item": "minecraft:prismarine",
+      "source_stairs": "minecraft:prismarine_stairs",
+      "textures": {
+        "stone": "minecraft:block/prismarine",
+        "carving": "minecraft:block/prismarine",
+        "trim": "minecraft:block/prismarine"
+      },
+      "slab_item": "minecraft:prismarine_slab"
+    },
+    {
+      "id": "prismarine_bricks",
+      "name": "Prismarine Bricks",
+      "body_item": "minecraft:prismarine_bricks",
+      "source_stairs": "minecraft:prismarine_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/prismarine_bricks",
+        "carving": "minecraft:block/prismarine_bricks",
+        "trim": "minecraft:block/prismarine_bricks"
+      },
+      "slab_item": "minecraft:prismarine_brick_slab"
+    },
+    {
+      "id": "dark_prismarine",
+      "name": "Dark Prismarine",
+      "body_item": "minecraft:dark_prismarine",
+      "source_stairs": "minecraft:dark_prismarine_stairs",
+      "textures": {
+        "stone": "minecraft:block/dark_prismarine",
+        "carving": "minecraft:block/dark_prismarine",
+        "trim": "minecraft:block/dark_prismarine"
+      },
+      "slab_item": "minecraft:dark_prismarine_slab"
+    },
+    {
+      "id": "nether_bricks",
+      "name": "Nether Bricks",
+      "body_item": "minecraft:nether_bricks",
+      "source_stairs": "minecraft:nether_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/nether_bricks",
+        "carving": "minecraft:block/chiseled_nether_bricks",
+        "trim": "minecraft:block/nether_bricks"
+      },
+      "slab_item": "minecraft:nether_brick_slab"
+    },
+    {
+      "id": "red_nether_bricks",
+      "name": "Red Nether Bricks",
+      "body_item": "minecraft:red_nether_bricks",
+      "source_stairs": "minecraft:red_nether_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/red_nether_bricks",
+        "carving": "minecraft:block/red_nether_bricks",
+        "trim": "minecraft:block/red_nether_bricks"
+      },
+      "slab_item": "minecraft:red_nether_brick_slab"
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone",
+      "body_item": "minecraft:blackstone",
+      "source_stairs": "minecraft:blackstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/blackstone",
+        "carving": "minecraft:block/chiseled_polished_blackstone",
+        "trim": "minecraft:block/polished_blackstone"
+      },
+      "slab_item": "minecraft:blackstone_slab"
+    },
+    {
+      "id": "polished_blackstone",
+      "name": "Polished Blackstone",
+      "body_item": "minecraft:polished_blackstone",
+      "source_stairs": "minecraft:polished_blackstone_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_blackstone",
+        "carving": "minecraft:block/polished_blackstone",
+        "trim": "minecraft:block/polished_blackstone"
+      },
+      "slab_item": "minecraft:polished_blackstone_slab"
+    },
+    {
+      "id": "polished_blackstone_bricks",
+      "name": "Polished Blackstone Bricks",
+      "body_item": "minecraft:polished_blackstone_bricks",
+      "source_stairs": "minecraft:polished_blackstone_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_blackstone_bricks",
+        "carving": "minecraft:block/polished_blackstone_bricks",
+        "trim": "minecraft:block/polished_blackstone_bricks"
+      },
+      "slab_item": "minecraft:polished_blackstone_brick_slab"
+    },
+    {
+      "id": "cobbled_deepslate",
+      "name": "Cobbled Deepslate",
+      "body_item": "minecraft:cobbled_deepslate",
+      "source_stairs": "minecraft:cobbled_deepslate_stairs",
+      "textures": {
+        "stone": "minecraft:block/cobbled_deepslate",
+        "carving": "minecraft:block/cobbled_deepslate",
+        "trim": "minecraft:block/cobbled_deepslate"
+      },
+      "slab_item": "minecraft:cobbled_deepslate_slab"
+    },
+    {
+      "id": "polished_deepslate",
+      "name": "Polished Deepslate",
+      "body_item": "minecraft:polished_deepslate",
+      "source_stairs": "minecraft:polished_deepslate_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_deepslate",
+        "carving": "minecraft:block/polished_deepslate",
+        "trim": "minecraft:block/polished_deepslate"
+      },
+      "slab_item": "minecraft:polished_deepslate_slab"
+    },
+    {
+      "id": "deepslate_bricks",
+      "name": "Deepslate Bricks",
+      "body_item": "minecraft:deepslate_bricks",
+      "source_stairs": "minecraft:deepslate_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/deepslate_bricks",
+        "carving": "minecraft:block/deepslate_bricks",
+        "trim": "minecraft:block/deepslate_bricks"
+      },
+      "slab_item": "minecraft:deepslate_brick_slab"
+    },
+    {
+      "id": "deepslate_tiles",
+      "name": "Deepslate Tiles",
+      "body_item": "minecraft:deepslate_tiles",
+      "source_stairs": "minecraft:deepslate_tile_stairs",
+      "textures": {
+        "stone": "minecraft:block/deepslate_tiles",
+        "carving": "minecraft:block/deepslate_tiles",
+        "trim": "minecraft:block/deepslate_tiles"
+      },
+      "slab_item": "minecraft:deepslate_tile_slab"
+    },
+    {
+      "id": "tuff",
+      "name": "Tuff",
+      "body_item": "minecraft:tuff",
+      "source_stairs": "minecraft:tuff_stairs",
+      "textures": {
+        "stone": "minecraft:block/tuff",
+        "carving": "minecraft:block/chiseled_tuff",
+        "trim": "minecraft:block/polished_tuff"
+      },
+      "slab_item": "minecraft:tuff_slab"
+    },
+    {
+      "id": "polished_tuff",
+      "name": "Polished Tuff",
+      "body_item": "minecraft:polished_tuff",
+      "source_stairs": "minecraft:polished_tuff_stairs",
+      "textures": {
+        "stone": "minecraft:block/polished_tuff",
+        "carving": "minecraft:block/polished_tuff",
+        "trim": "minecraft:block/polished_tuff"
+      },
+      "slab_item": "minecraft:polished_tuff_slab"
+    },
+    {
+      "id": "tuff_bricks",
+      "name": "Tuff Bricks",
+      "body_item": "minecraft:tuff_bricks",
+      "source_stairs": "minecraft:tuff_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/tuff_bricks",
+        "carving": "minecraft:block/tuff_bricks",
+        "trim": "minecraft:block/tuff_bricks"
+      },
+      "slab_item": "minecraft:tuff_brick_slab"
+    },
+    {
+      "id": "end_stone_bricks",
+      "name": "End Stone Bricks",
+      "body_item": "minecraft:end_stone_bricks",
+      "source_stairs": "minecraft:end_stone_brick_stairs",
+      "textures": {
+        "stone": "minecraft:block/end_stone_bricks",
+        "carving": "minecraft:block/end_stone_bricks",
+        "trim": "minecraft:block/end_stone_bricks"
+      },
+      "slab_item": "minecraft:end_stone_brick_slab"
+    },
+    {
+      "id": "purpur",
+      "name": "Purpur",
+      "body_item": "minecraft:purpur_block",
+      "source_stairs": "minecraft:purpur_stairs",
+      "textures": {
+        "stone": "minecraft:block/purpur_block",
+        "carving": "minecraft:block/purpur_block",
+        "trim": "minecraft:block/purpur_block"
+      },
+      "slab_item": "minecraft:purpur_slab"
+    }
+  ]
+}

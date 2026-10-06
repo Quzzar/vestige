@@ -6,7 +6,7 @@ The direct columns are ideal per-creature ceilings from the current effect graph
 
 Paid casting enforces native cooldowns from initial payment and permits recasts without paying again. Cancelled charges and failed payment do not start recovery; paid casts retain recovery when an effect fails or is interrupted. One charge/channel per actor prevents stacking active channels. Same-spell summon replacement removes the previous cohort, including backing bodies created on a different subject. Reload/restart resets recovery and active sessions; persistent progression remains deferred.
 
-To test the costs, use `/vestige_magic mana 200` and `/vestige_magic cast_balanced vestige:<id>` in Survival. Energy has a 200 test cap and no passive regeneration; Gluttony can convert food. The ordinary `cast` development command bypasses both costs and recovery. These are initial tested gameplay baselines, not a claim that AI, PvP, terrain, optional mods, or every multiplayer encounter have been exhaustively playtested.
+To test the costs, use `/vestige_magic mana 100` and `/vestige_magic cast_balanced vestige:<id>` in Survival. Players have 100 mana, full on first spawn and death/respawn, with recovery of 2 mana per second after a five-second expenditure delay; Gluttony can convert food. The ordinary `cast` development command bypasses both costs and recovery. These are initial tested gameplay baselines, not a claim that AI, PvP, terrain, optional mods, or every multiplayer encounter have been exhaustively playtested.
 
 | Rarity | Spells |
 |---|---:|
@@ -24,7 +24,7 @@ To test the costs, use `/vestige_magic mana 200` and `/vestige_magic cast_balanc
 | [firebolt](../src/main/resources/data/vestige/runtime_spells/firebolt.json) | single attack | 12 | 0 / 2 | 5 / — | 5 HP plus two seconds of fire; short recovery and no area. |
 | [firecracker](../src/main/resources/data/vestige/runtime_spells/firecracker.json) | area attack | 14 | 0 / 3 | 4 / — | 4 HP in radius 2 with knockback; lobbed travel trades reliability for area. |
 | [force_arrow](../src/main/resources/data/vestige/runtime_spells/force_arrow.json) | single attack | 14 | 0 / 2 | 7 / — | 7 HP without secondary status; compensates for Firebolt's burning and Icicle's freezing. |
-| [gluttony](../src/main/resources/data/vestige/runtime_spells/gluttony.json) | resource utility | 10 | 0 / 20 | — / — | Three food conversions in ten seconds at 6 mana per nutrition; food and hunger gates, 200 mana cap. |
+| [gluttony](../src/main/resources/data/vestige/runtime_spells/gluttony.json) | resource utility | 10 | 0 / 20 | — / — | Three food conversions in ten seconds at 6 mana per nutrition; food and hunger gates, 100 mana cap. |
 | [heal](../src/main/resources/data/vestige/runtime_spells/heal.json) | self healing | 15 | 1 / 5 | — / 5 | 5 HP after a one-second charge; no instant sustained healing loop. |
 | [icicle](../src/main/resources/data/vestige/runtime_spells/icicle.json) | single attack | 14 | 0 / 2.5 | 6 / — | 6 HP with freezing; slightly slower recovery than pure Force Arrow. |
 | [interposing_earth](../src/main/resources/data/vestige/runtime_spells/interposing_earth.json) | reactive protection | 8 | 0 / 3 | — / — | 2 HP reduction on one hit within three seconds; cheap, brief common defense. |

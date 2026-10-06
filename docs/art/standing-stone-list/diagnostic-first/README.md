@@ -1,0 +1,1 @@
+First native inspection: all interactions passed, but the single-endpoint count read “1 stones”. Final captures correct that label. The capture also moves the cursor away while retaining ordinary native focus/hover tooltips. These first frames are historical diagnostic evidence.

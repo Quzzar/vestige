@@ -1,0 +1,40 @@
+{
+  "verified_at_utc": "2026-10-05T17:24:30.409794+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check",
+    "python3 docs/art/apparatus-concepts/author_models.py --check",
+    "python3 tools/author_apparatus_middle.py --check",
+    "python3 tools/author_apparatus_comparison.py --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 146,
+  "gradle_proof": [
+    "[13:23:24] [Server thread/INFO] [minecraft/GameTestServer]: 146 tests are now running at position 842678, -59, -5277337!",
+    "[13:23:44] [Server thread/INFO] [minecraft/GameTestServer]: All 146 required tests passed :)",
+    "BUILD SUCCESSFUL in 44s"
+  ],
+  "packaged_block_models_verified": 180,
+  "packaged_baseline_element_counts": {
+    "plinth": 51,
+    "spellstone": 31,
+    "plinth_base": 7,
+    "plinth_shaft": 5,
+    "plinth_cap": 49
+  },
+  "spellstone_inventory_elements_including_rune": 32,
+  "capture_only_packs_excluded": true,
+  "jar_sha256": "fca222dc6fb975f269c5dcd16aa29ec86d4f23a47871921287a3d12cb60dedcf",
+  "actual_client_inspection": "Six scenes, Tuff standalone/columns and Quartz columns; loaded asset hashes match source",
+  "limitations": [
+    "Model counts are not an FPS benchmark",
+    "All geometry/UV mappings are audited; visual inspection covers Tuff and Quartz",
+    "Prism NeoForge 21.1.248 remains pending owner restart and gameplay test"
+  ]
+}

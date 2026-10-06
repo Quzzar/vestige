@@ -1,0 +1,19 @@
+{
+  "tool": "Built-in image_gen",
+  "source": "docs/art/spellstone-tent-table/diamond-edge/generated-frame.png",
+  "source_sha256": "ecb2d4e6f3070147d796d6b3635ed012f1b61a9c11213b90aac93afc2b0bc9db",
+  "source_dimensions": [
+    1254,
+    1254
+  ],
+  "native": "src/main/resources/assets/vestige/textures/block/spellstone_diamond_edge.png",
+  "native_sha256": "bed3d3deb3b03323f44586a1077c76ddb9dee16947fdf6b61dcba8d81aa59913",
+  "native_dimensions": [
+    64,
+    64
+  ],
+  "conversion": "Nearest-neighbor size conversion only, with alpha retained; ffmpeg scale=64:64:flags=neighbor",
+  "prompt": "generation-prompt.txt",
+  "status": "Rejected connected-line interpretation; excluded from production",
+  "archived_native": "docs/art/spellstone-tent-table/diamond-edge/native-frame.png"
+}

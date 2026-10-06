@@ -1,0 +1,112 @@
+{
+  "scope": "Preview-only intermediate Stone trim; no production models or testing-pack installation",
+  "views": [
+    {
+      "view": "plinth_frame_corner_edges",
+      "image": "corner-edges-middle.png",
+      "imageSource": "native-middle-edges/vestige-plinth_frame_corner_edges-apparatus-0/frame-00050.png",
+      "imageSha256": "43eef2ebbcdd7552e4dec6fdc80ac4955c44d582223827341a455fbeb2c0b7cf",
+      "frames": 51,
+      "seconds": 4.04936275,
+      "loadedModelHashes": {
+        "models/block/cobblestone_plinth.json": "a8072adcffb272586b7a8a84f002e2b7f627449011edc0dcfee2307b4adc364c",
+        "models/block/cobblestone_plinth_base.json": "08b89a12ab619b7f979011ead9426166378f23747ac2c25bc14bad99d2e3471f",
+        "models/block/cobblestone_plinth_shaft.json": "edefb3f3ce7483543c58fc348ef1ed7efeaa7219fac1d95c1282e39c8e379d04",
+        "models/block/cobblestone_plinth_cap.json": "65a01a466ac06be1d65b3065858d628b362d6f6e1ba6e328458f30dd78f45469"
+      },
+      "camera": {
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "pitch": 21.406317,
+        "yaw": 141.6325,
+        "fixed": true
+      },
+      "trim": {
+        "brightness": 0.8509803921568627,
+        "tintColor": "#d9d9d9",
+        "tintIndex": 0,
+        "texture": "minecraft:block/stone"
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "tintCodeSha256": "5ea3c841a1a01d8a5e953db73316f715581825d32aa5197c5784f5f4b0bd30cf",
+      "rendererCodeSha256": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b"
+    },
+    {
+      "view": "spellstone_frame_edges",
+      "image": "spellstone-edges-middle.png",
+      "imageSource": "native-middle-edges/vestige-spellstone_frame_edges-apparatus-0/frame-00049.png",
+      "imageSha256": "b08b457d8d44ee698fe383838beae9b7218628030b11ec93ce8554a2d23c0549",
+      "frames": 50,
+      "seconds": 4.046487417,
+      "loadedModelHashes": {
+        "models/block/stone_spellstone.json": "bba176f25ed56d865ba9a7fdc44d1b7317e6823213a62249b609678021d07f2b"
+      },
+      "camera": {
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626,
+        "yaw": 148.67131,
+        "fixed": true
+      },
+      "trim": {
+        "brightness": 0.8509803921568627,
+        "tintColor": "#d9d9d9",
+        "tintIndex": 0,
+        "texture": "minecraft:block/stone"
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "tintCodeSha256": "5ea3c841a1a01d8a5e953db73316f715581825d32aa5197c5784f5f4b0bd30cf",
+      "rendererCodeSha256": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b"
+    }
+  ],
+  "change": {
+    "beforeActualBrightness": 1,
+    "afterBrightness": 0.8509803921568627,
+    "texture": "minecraft:block/stone",
+    "trimTintIndex": 0,
+    "geometryAndWidthsUnchanged": true,
+    "originalBodiesAndDiamondDetailsUnchanged": true
+  },
+  "verified": [
+    "Java 21 compilation and resource processing passed",
+    "All 22 framing author models pass checks",
+    "Five framed models differ only in trim tint index",
+    "Five native loaded model hashes match their capture-only sources",
+    "Loaded native tint and OfferingRenderer hashes match compiled sources",
+    "Native tint metadata matches the author ledger",
+    "Reference cameras match the preceding study",
+    "Both final native Minecraft views visually inspected; trim is now visibly rendered",
+    "Updated comparison page visually inspected at narrow and desktop widths"
+  ],
+  "pixelComparison": {
+    "reference": "corner-edges-faint.png",
+    "changedPixels": 22616,
+    "darkenedPixels": 22349,
+    "minorPositivePixels": 267,
+    "maxPositiveChannelDifference": 1
+  },
+  "rejectedInitialAttempt": "diagnostic-middle-edges-verification.json",
+  "separatelyCapturedStackedOrImbuedAppearance": false,
+  "logs": {
+    "compile": "/private/tmp/vestige-apparatus-middle-edges-build-fixed.log",
+    "capture": "/private/tmp/vestige-apparatus-middle-edges-capture-fixed.log"
+  },
+  "browserReview": {
+    "testedContentWidths": [
+      536,
+      1185
+    ],
+    "allImagesLoaded": true,
+    "horizontalOverflow": false,
+    "temporaryViewportReset": true,
+    "desktopScreenshot": "middle-edges-preview-browser.jpg",
+    "narrowScreenshot": "middle-edges-preview-narrow-browser.jpg",
+    "desktopScreenshotSha256": "7ffb575ea1e05d357e973a2b39d4612fdc1faa98ea516639a9d02dc5cb588e46"
+  }
+}

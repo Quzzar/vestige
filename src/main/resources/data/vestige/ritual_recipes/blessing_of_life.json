@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:blessing_of_life",
+  "name": "Blessing Of Life",
+  "circle": 4,
+  "color": "fff0b6",
+  "rationale": "A healing focus faces Amethyst across the inscription while a Golden Carrot represents the allied recipient.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Living light follows blank inscription clockwise.",
+    "Ally sustenance follows living light clockwise.",
+    "Resonant facet follows ally sustenance clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

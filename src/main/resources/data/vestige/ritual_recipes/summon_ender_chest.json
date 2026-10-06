@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:summon_ender_chest",
+  "name": "Summon Ender Chest",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Ender focus opens the Chest through a native Amethyst inscription.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "chest motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chest"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Passage focus follows blank inscription clockwise.",
+    "Chest motif follows passage focus clockwise.",
+    "Resonant facet follows chest motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

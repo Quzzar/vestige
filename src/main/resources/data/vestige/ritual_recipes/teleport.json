@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:teleport",
+  "name": "Teleport",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Ender passage follows Compass direction and a feather's movement into the short safe blink.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Passage focus follows blank inscription clockwise.",
+    "Compass motif follows passage focus clockwise.",
+    "Feather motif follows compass motif clockwise.",
+    "Blank inscription follows feather motif clockwise."
+  ]
+}

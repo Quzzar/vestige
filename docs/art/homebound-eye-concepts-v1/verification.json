@@ -1,0 +1,119 @@
+{
+  "generation": "Eight separate built-in imagegen calls, one per concept. Original PNG files copied without modifying pixels.",
+  "scope": "Exploratory art only; no native texture, recipe or gameplay changes.",
+  "art_limitations": "High-resolution pixel-art concepts. The generated files contain more shading/detail than a final 16-by-16 texture and have not been tested in Minecraft. The selected direction will need a dedicated production texture pass.",
+  "images": [
+    {
+      "letter": "A",
+      "file": "A-carved-stone.png",
+      "width": 1305,
+      "height": 1206,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "8a03bc6e9136b91565f0ac24dc2ff3d162b6bd5e6ee1698317ef4e0165711261",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "B",
+      "file": "B-forged-iron.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "30f288fb00c531eebfc8ba960d50a48c70c8c7c16e6b74157f1379442e263aa1",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "C",
+      "file": "C-obsidian.png",
+      "width": 1230,
+      "height": 1278,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "90222b270e513cb3fc4acc4a78398e3d4e493722f411667ed434d9d8f13f6617",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "D",
+      "file": "D-fired-clay.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "a1c302ef70eb04bf46628a8dc184912b324f1fb57ebfc5cfe48b66bff55e545e",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "E",
+      "file": "E-bone.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "17fe4b9f16ad38ba680330ac0c3a2e9f103bc5e5b0e200aa2b58b5df2ed9c653",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "F",
+      "file": "F-rootwood.png",
+      "width": 1218,
+      "height": 1291,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "56bcd132c19594f21aa44337844f37febe4eb8d817b7b8e2fa2e2a0b318e9141",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "G",
+      "file": "G-hammered-gold.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "0aeda20b1f07c02441c52fbca89f93eab87d9956a7fc6c7c8f96baa5c2c9b426",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    },
+    {
+      "letter": "H",
+      "file": "H-flint.png",
+      "width": 1234,
+      "height": 1274,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "85a5b85d31401bebc31acba46d90456a5731598eae27ba86f4e8c9891f1aff9e",
+      "original_copy_verified": true,
+      "visual_review": "reviewed as a concept; native inventory appearance not tested"
+    }
+  ]
+}

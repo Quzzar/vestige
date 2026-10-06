@@ -1,0 +1,114 @@
+{
+  "revision": 9,
+  "date": "2026-10-03",
+  "sources": [
+    {
+      "file": "rune-selected-source.png",
+      "origin_filename": "exec-550a90e7-adc4-4439-91a3-d7798ecdd4a3.png",
+      "method": "Reuse owner-selected first output from earlier built-in imagegen call",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "2d863b96d6d0ddf9152e6ace796d40e75fc8112ba8a64d278a6f859dca29bbc0"
+    },
+    {
+      "file": "diamond-generated-source.png",
+      "origin_filename": "exec-45061ed8-1a14-40d6-b9ff-40a9acc78c19.png",
+      "method": "built-in imagegen; new generation",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "a69fae184c25d6cdf61873a70655c248ff142d4f7cad25a984ecd30ac55454a5",
+      "prompt": "diamond-generation-prompt.txt",
+      "prompt_sha256": "d0d21209520603098ff9fd21ed089c21c10477facdfd06b18ea10638c457a04a"
+    },
+    {
+      "file": "spellstone-top-generated-source.png",
+      "origin_filename": "exec-03cdc1d5-4371-4956-8cac-a530b494bb76.png",
+      "method": "built-in imagegen; new transparent generation",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "2b84b3e1301362836dbc8c64b0c92925d08fac946e4d5e232e24e13760960ec2",
+      "prompt": "spellstone-top-generation-prompt.txt",
+      "prompt_sha256": "a28f6b8ab433542e8e91a7f2eb85bafc055da1fdb1c340a973c41c85bc7d649f"
+    }
+  ],
+  "preparation": {
+    "rune": "RGBA BOX reduction to 64x64; alpha >=128 becomes 255, otherwise 0; original colors retained; no redrawn glyphs",
+    "diamond": "RGB nearest reduction to 16x16",
+    "spellstone_top": "RGBA BOX reduction to 32x32; alpha >=96 becomes 255, otherwise 0; original colors retained",
+    "stone": "Original 16x16 Chiseled Deepslate bottom eight rows mirrored upward, nearest enlarged 4x for Rune and 2x for Spellstone; overlays baked to RGB",
+    "amethyst": "Unchanged seventh-draft runtime texture; original source and exact prompt in ../apparatus-v7/"
+  },
+  "vanilla_stone": {
+    "minecraft": "1.21.1",
+    "entry": "assets/minecraft/textures/block/chiseled_deepslate.png",
+    "sha256": "e537542f8ffa02ed350216f479836ce5d1ee119e1870252b77d7d3e1344c5ee2",
+    "attribution": "Mojang"
+  },
+  "outputs": [
+    {
+      "file": "diamond_inlay.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB",
+      "sha256": "ef3b076f4a6555eeb9d4f2bd9a3f935b9dfc580c8b0d6bc753202eee51464d08"
+    },
+    {
+      "file": "pedestal_amethyst.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB",
+      "sha256": "c7d69c3708eb3c8bcab7c16b3da5e993fcddaf36bf76f844accc70155ccfe292"
+    },
+    {
+      "file": "runic_pedestal_runes.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "sha256": "4e725e0dabb2f1fc4c242dbcc3f44be911b638b155bd374f8971425061eeec6d",
+      "opaque_cells": 598,
+      "transparent_cells": 3498
+    },
+    {
+      "file": "runic_pedestal_top.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGB",
+      "sha256": "6d43ffeec2ff8ba438aa8f229f85440a82f3359e5e70a854c53b0b601417fc7b"
+    },
+    {
+      "file": "spellstone_top.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "RGB",
+      "sha256": "89d167f0d9e7203234558ae19e062562d4c62faaf8d5b53895f24423b9a92fcc"
+    },
+    {
+      "file": "spellstone_top_inlay.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "RGBA",
+      "sha256": "d082714fc0e15fbdfa7408b4f2d653d060d46f3260b372cb8416d16474c69ece",
+      "opaque_cells": 160,
+      "transparent_cells": 864
+    }
+  ],
+  "authoring_tool": "../../../tools/author_apparatus_textures.py"
+}

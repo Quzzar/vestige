@@ -1,0 +1,42 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Unchanged native framebuffer images; registered blocks and synchronized block entities.",
+  "jar_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "captures": [
+    {
+      "material": "tuff",
+      "image": "native/tuff.png",
+      "metadata": "native/tuff-capture.json",
+      "frame_sha256": "620f2ace46ffa60a41c3e4ace1ad48e2f6c10068191429d37c9ff1e27f0b4ab7",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7ffe5aea26ee06523404f49f585a8ca5490f2b8b1b700e70b6819d1955001ebe",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "036597e0f9d1a6ced5c85625a25d80237aec569e60c3744cb88b73047dffed67",
+        "models/block/tuff_spellstone.json": "ff0ab67b31cd23c4a699e2aeaa491bbd40ed04f076d2876585ff86d0265c7843",
+        "models/block/tuff_plinth_base.json": "9cf77d985200157a3d1045eaffe41eaee14718846d024a62930eea5c4ac9a5de",
+        "models/block/tuff_plinth_shaft.json": "a288eb11fb407e5bf8003a5b80a11bba8cb9a82da9872defd6c84ccf4398996a",
+        "models/block/tuff_plinth_cap.json": "cb5279feb6fcef3da54950ba5587d96d63c47775fb760a74acd0e76368b56ef4"
+      },
+      "inspected": true
+    },
+    {
+      "material": "quartz",
+      "image": "native/quartz.png",
+      "metadata": "native/quartz-capture.json",
+      "frame_sha256": "8b18fb8f95ec6009d40b9a30991242a72b6513f980f2e1a3f3c9169565908868",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7ffe5aea26ee06523404f49f585a8ca5490f2b8b1b700e70b6819d1955001ebe",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/quartz_plinth.json": "4be48d4d6059fdaad62992287c063bc35fc029915d03ca42ac475020cdc49bff",
+        "models/block/quartz_spellstone.json": "0653ceba71efac1a92af2a32522326679605ccb24fcab8c2ab005d70dc39c8e1",
+        "models/block/quartz_plinth_base.json": "d08d446a72bf73e020d586584cb84f64bad0df5fc56381b5652feb2c64129eaa",
+        "models/block/quartz_plinth_shaft.json": "8b7f98ba525b0f672e99b61cc331e2cfe02bcb5ab2cd7f6b45a2e18199672b48",
+        "models/block/quartz_plinth_cap.json": "d9d0ec57f6e18455bf62687f78864a0305e5595326d29d10371b0a7eda8e4b48"
+      },
+      "inspected": true
+    }
+  ],
+  "author_source_sha256": "efe3cd671a55fd7a453c1dfbb5be1b7c5c20d34e4d5501ccd1108f914a59a4f3"
+}

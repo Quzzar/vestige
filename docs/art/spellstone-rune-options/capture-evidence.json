@@ -1,0 +1,202 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "6822ac86dc7d37c17db107fb82cc395a356fa448935385073abf5bbf9ded91f3",
+  "productionInstallationUnchanged": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "rune_astral",
+      "capture": "build/spellstone-rune-options/vestige-rune_astral-apparatus-0/capture.json",
+      "posterFrame": 29,
+      "posterSha256": "d2a8728561157b0903e079bd57dbde511dce3d0734f93b404f96dc840f6c0255",
+      "videoSha256": "8bb09e455ce49663c5c985ecf6b1a264a5d721cdfd2867c7570975b34e2a72ed",
+      "nativeFrames": 66,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_astral_night",
+      "capture": "build/spellstone-rune-options/vestige-rune_astral_night-apparatus-0/capture.json",
+      "posterFrame": 28,
+      "posterSha256": "0023d000f18eb1b4a70dc70a3153bdae2ac1ba910191831ca5b66b66b1b4307c",
+      "videoSha256": "1daf56e0bcfd3931b46935e52b3286984dc07299168ac16999c9f2656ab82637",
+      "nativeFrames": 71,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_comparison",
+      "capture": "build/spellstone-rune-options/vestige-rune_comparison-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "eed859b81aa832eb86681b6112a6dfdf7fff746c36e9090cbb9ea067e17c683b",
+      "videoSha256": "fca55b01305ac3737a363fe49ae10d74f090af70bb2f7dee92d81bd623c4ae6f",
+      "nativeFrames": 75,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_comparison_night",
+      "capture": "build/spellstone-rune-options/vestige-rune_comparison_night-apparatus-0/capture.json",
+      "posterFrame": 27,
+      "posterSha256": "8fbd66cbcd84db1c789587f2f791a1254a0190c36e09b73a437304db9d77ed33",
+      "videoSha256": "b127532cfbcd04a826a3e23c15ddc09c999b60ed6c50ddca5f38ecd4f846efc5",
+      "nativeFrames": 56,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_engraving",
+      "capture": "build/spellstone-rune-options/vestige-rune_engraving-apparatus-0/capture.json",
+      "posterFrame": 27,
+      "posterSha256": "715cb8170c21e67045675b0ff4e7aab02fc8f095f7bbe259100888147b639deb",
+      "videoSha256": "40a95f10fd0acc18cf7f3fa80df7c60a60becc0f55f596faca955c89d0f3dab7",
+      "nativeFrames": 73,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_engraving_night",
+      "capture": "build/spellstone-rune-options/vestige-rune_engraving_night-apparatus-0/capture.json",
+      "posterFrame": 22,
+      "posterSha256": "12c8e7c1ebd3b322d76428e0b44403a303caae8d6818b6c5eda2a231eba75d38",
+      "videoSha256": "6fb91713ff4cdeddb8e52b23dec147b831963513a854e445726d5b2fdcb6f2b8",
+      "nativeFrames": 58,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_living",
+      "capture": "build/spellstone-rune-options/vestige-rune_living-apparatus-0/capture.json",
+      "posterFrame": 26,
+      "posterSha256": "e341e0193648ea4b4add3c83f9f7bc2c82be025c4b92e714ce3cb367f2876df1",
+      "videoSha256": "4a187193749ce1c272d270d836b81fd55f2582bd4140a2d64843d27be444d31c",
+      "nativeFrames": 75,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    },
+    {
+      "name": "rune_living_night",
+      "capture": "build/spellstone-rune-options/vestige-rune_living_night-apparatus-0/capture.json",
+      "posterFrame": 22,
+      "posterSha256": "a20c98e49253aa2ad9c5dd21d357bc66b609b5183d0c40692befec25c76aa5fc",
+      "videoSha256": "e7ef9765a18422cca65b3d4eb20c81404eabd75cd5ef514ef2bad5b18edf49d8",
+      "nativeFrames": 65,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "runeRendererSha256": "852ba8e49fb919e35efd84768a57ac34aa738181012cb632ea2484dba4ded9c2",
+      "assetSha256": {
+        "models/block/spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c",
+        "models/block/quartz_spellstone.json": "cd709c71afdf10c2fff3d7ca367ebb8410a2102fb643dc708f5f7b64e7ff085c"
+      }
+    }
+  ]
+}

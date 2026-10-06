@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:frost_step",
+  "name": "Frost Step",
+  "circle": 4,
+  "color": "48badf",
+  "rationale": "Cold focus meets Ender passage and dark Ink, leaving a concealing freezing field behind the blink.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 1,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Ink motif follows blank inscription clockwise.",
+    "Passage focus follows ink motif clockwise.",
+    "Cold focus follows passage focus clockwise.",
+    "Blank inscription follows cold focus clockwise."
+  ]
+}

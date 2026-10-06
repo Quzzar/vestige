@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/shell_b_trumpet"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.0,
+        0.20095693779904306,
+        0
+      ],
+      "scale": [
+        1.0717703349282297,
+        0.7145135566188198,
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "instance": "Kithkyn Testing",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "6fa6b757f165edbb152e15b88202147d7c3cc1a308a7c55fff46eea71f0116de",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "stage": "broader grounded pedestals; sideways shaking, ingredient-only lift and flat reference/result scrolls; all 214 ritual recipes retained",
+  "previous_sha256": "6a75aecb9a491eedd1053d529354770ad616d93fe457e4feb96f280494f4d738"
+}

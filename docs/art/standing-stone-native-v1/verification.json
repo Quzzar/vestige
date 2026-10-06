@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-06",
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "checks": [
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer",
+    "author_standing_stones.py --check",
+    "author_apparatus_models.py --check",
+    "test_standing_stone_geometry.py",
+    "git diff --check"
+  ],
+  "unitTests": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "minecraftRequiredTests": 164,
+  "minecraftFailures": 0,
+  "packagedStandingStoneResources": 444,
+  "package": "build/libs/vestige-0.1.0.jar",
+  "packageSha256": "b5c3108ad54d095e1eafb2431ec25cd8d872a42fe56ccc4bb95881d964526dc7",
+  "renderedSource": "Minecraft main render target; no shaders or comparison packs",
+  "meshes": {
+    "blade": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    },
+    "shoulder": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    },
+    "leaning": {
+      "lower": 20,
+      "upper": 14,
+      "whole": 34
+    }
+  },
+  "images": {
+    "three-shapes-night.png": "90ccad275ea649907730f264b0a0bac894d46d585682468f16c0946a7ec92c82",
+    "three-shapes-day.png": "d005d909b7669b00b18274287e461365398509a0a7bb26d1323d58470b77d857",
+    "matching-key-three-finishes.png": "3177dcfc8174eff02c73f1348025214eac1c2145ece00ce96c95641cfceecb23",
+    "shouldered-stone-close.png": "e86c96fc565fd0bd26dc3017fcf1ca677266968b8f9d761b736f1e2612f71cff"
+  },
+  "limitations": [
+    "First three cosmetic silhouettes; future family expansion remains design work",
+    "Collision uses conservative quarter-model-unit bands, not exact triangle collision",
+    "Full-bright rune ink does not emit block light or add shader bloom",
+    "Physical client inspection covers Tuff, Stone Bricks and Sandstone; remaining finishes share validated packaged meshes",
+    "Travel payment selection/charging, terrain maps and Prism installation remain unfinished"
+  ],
+  "capturedTravelClassesMatchPackage": 26
+}

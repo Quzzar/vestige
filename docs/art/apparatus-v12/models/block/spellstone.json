@@ -1,0 +1,3327 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "textures": {
+    "stone": "minecraft:block/chiseled_deepslate",
+    "amethyst": "minecraft:block/amethyst_block",
+    "diamond": "minecraft:block/diamond_block",
+    "particle": "minecraft:block/chiseled_deepslate",
+    "gem": "vestige:block/pedestal_amethyst",
+    "diamond_gem": "vestige:block/diamond_inlay",
+    "spellstone_top": "vestige:block/spellstone_top"
+  },
+  "elements": [
+    {
+      "name": "chamfered ancient foundation",
+      "from": [
+        2.75,
+        0,
+        1.25
+      ],
+      "to": [
+        13.25,
+        0.75,
+        2.75
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "chamfered ancient foundation",
+      "from": [
+        1.25,
+        0,
+        2.75
+      ],
+      "to": [
+        14.75,
+        0.75,
+        13.25
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "chamfered ancient foundation",
+      "from": [
+        2.75,
+        0,
+        13.25
+      ],
+      "to": [
+        13.25,
+        0.75,
+        14.75
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "stepped foundation bevel",
+      "from": [
+        3.0,
+        0.75,
+        1.75
+      ],
+      "to": [
+        13.0,
+        1.5,
+        3.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "stepped foundation bevel",
+      "from": [
+        1.75,
+        0.75,
+        3.0
+      ],
+      "to": [
+        14.25,
+        1.5,
+        13.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "stepped foundation bevel",
+      "from": [
+        3.0,
+        0.75,
+        13.0
+      ],
+      "to": [
+        13.0,
+        1.5,
+        14.25
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "raised carved neck",
+      "from": [
+        3.5,
+        1.5,
+        2.625
+      ],
+      "to": [
+        12.5,
+        2,
+        3.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "raised carved neck",
+      "from": [
+        2.625,
+        1.5,
+        3.5
+      ],
+      "to": [
+        13.375,
+        2,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "raised carved neck",
+      "from": [
+        3.5,
+        1.5,
+        12.5
+      ],
+      "to": [
+        12.5,
+        2,
+        13.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "solid carved core",
+      "from": [
+        3.625,
+        2,
+        3.625
+      ],
+      "to": [
+        12.375,
+        10,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "north carved face",
+      "from": [
+        3.5,
+        8.0,
+        3.5
+      ],
+      "to": [
+        12.5,
+        10.0,
+        3.625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "north carved face",
+      "from": [
+        9.6875,
+        4.0,
+        3.5
+      ],
+      "to": [
+        12.5,
+        8.0,
+        3.625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            0,
+            6,
+            5,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "north flush gem emblem",
+      "from": [
+        6.3125,
+        4.0,
+        3.53125
+      ],
+      "to": [
+        9.6875,
+        8.0,
+        3.625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        }
+      }
+    },
+    {
+      "name": "north carved face",
+      "from": [
+        3.5,
+        4.0,
+        3.5
+      ],
+      "to": [
+        6.3125,
+        8.0,
+        3.625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            11,
+            6,
+            16,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "north carved face",
+      "from": [
+        3.5,
+        2.0,
+        3.5
+      ],
+      "to": [
+        12.5,
+        4.0,
+        3.625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            0,
+            9,
+            16,
+            16
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "south carved face",
+      "from": [
+        3.5,
+        8.0,
+        12.375
+      ],
+      "to": [
+        12.5,
+        10.0,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "south carved face",
+      "from": [
+        3.5,
+        4.0,
+        12.375
+      ],
+      "to": [
+        6.3125,
+        8.0,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            0,
+            6,
+            5,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "south flush gem emblem",
+      "from": [
+        6.3125,
+        4.0,
+        12.375
+      ],
+      "to": [
+        9.6875,
+        8.0,
+        12.46875
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        }
+      }
+    },
+    {
+      "name": "south carved face",
+      "from": [
+        9.6875,
+        4.0,
+        12.375
+      ],
+      "to": [
+        12.5,
+        8.0,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            11,
+            6,
+            16,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "south carved face",
+      "from": [
+        3.5,
+        2.0,
+        12.375
+      ],
+      "to": [
+        12.5,
+        4.0,
+        12.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            0,
+            9,
+            16,
+            16
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "west carved face",
+      "from": [
+        3.5,
+        8.0,
+        3.625
+      ],
+      "to": [
+        3.625,
+        10.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "west carved face",
+      "from": [
+        3.5,
+        4.0,
+        3.625
+      ],
+      "to": [
+        3.625,
+        8.0,
+        6.359375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            0,
+            6,
+            5,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "west flush gem emblem",
+      "from": [
+        3.53125,
+        4.0,
+        6.359375
+      ],
+      "to": [
+        3.625,
+        8.0,
+        9.640625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        }
+      }
+    },
+    {
+      "name": "west carved face",
+      "from": [
+        3.5,
+        4.0,
+        9.640625
+      ],
+      "to": [
+        3.625,
+        8.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            11,
+            6,
+            16,
+            9
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "west carved face",
+      "from": [
+        3.5,
+        2.0,
+        3.625
+      ],
+      "to": [
+        3.625,
+        4.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            0,
+            9,
+            16,
+            16
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "east carved face",
+      "from": [
+        12.375,
+        8.0,
+        3.625
+      ],
+      "to": [
+        12.5,
+        10.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "east carved face",
+      "from": [
+        12.375,
+        4.0,
+        9.640625
+      ],
+      "to": [
+        12.5,
+        8.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            0,
+            6,
+            5,
+            9
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "east flush gem emblem",
+      "from": [
+        12.375,
+        4.0,
+        6.359375
+      ],
+      "to": [
+        12.46875,
+        8.0,
+        9.640625
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#gem"
+        }
+      }
+    },
+    {
+      "name": "east carved face",
+      "from": [
+        12.375,
+        4.0,
+        3.625
+      ],
+      "to": [
+        12.5,
+        8.0,
+        6.359375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            11,
+            6,
+            16,
+            9
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "east carved face",
+      "from": [
+        12.375,
+        2.0,
+        3.625
+      ],
+      "to": [
+        12.5,
+        4.0,
+        12.375
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            0,
+            9,
+            16,
+            16
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier lower stone",
+      "from": [
+        2.5,
+        1.5,
+        2.5
+      ],
+      "to": [
+        4.0,
+        8.25,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier diamond band",
+      "from": [
+        2.5,
+        8.25,
+        2.5
+      ],
+      "to": [
+        4.0,
+        9,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        }
+      }
+    },
+    {
+      "name": "corner pier upper stone",
+      "from": [
+        2.5,
+        9,
+        2.5
+      ],
+      "to": [
+        4.0,
+        10.5,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier lower stone",
+      "from": [
+        2.5,
+        1.5,
+        12
+      ],
+      "to": [
+        4.0,
+        8.25,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier diamond band",
+      "from": [
+        2.5,
+        8.25,
+        12
+      ],
+      "to": [
+        4.0,
+        9,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        }
+      }
+    },
+    {
+      "name": "corner pier upper stone",
+      "from": [
+        2.5,
+        9,
+        12
+      ],
+      "to": [
+        4.0,
+        10.5,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier lower stone",
+      "from": [
+        12,
+        1.5,
+        2.5
+      ],
+      "to": [
+        13.5,
+        8.25,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier diamond band",
+      "from": [
+        12,
+        8.25,
+        2.5
+      ],
+      "to": [
+        13.5,
+        9,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        }
+      }
+    },
+    {
+      "name": "corner pier upper stone",
+      "from": [
+        12,
+        9,
+        2.5
+      ],
+      "to": [
+        13.5,
+        10.5,
+        4.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier lower stone",
+      "from": [
+        12,
+        1.5,
+        12
+      ],
+      "to": [
+        13.5,
+        8.25,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "corner pier diamond band",
+      "from": [
+        12,
+        8.25,
+        12
+      ],
+      "to": [
+        13.5,
+        9,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#diamond_gem"
+        }
+      }
+    },
+    {
+      "name": "corner pier upper stone",
+      "from": [
+        12,
+        9,
+        12
+      ],
+      "to": [
+        13.5,
+        10.5,
+        13.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "chamfered crown apron",
+      "from": [
+        3.0,
+        10,
+        1.75
+      ],
+      "to": [
+        13.0,
+        10.75,
+        3.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "chamfered crown apron",
+      "from": [
+        1.75,
+        10,
+        3.0
+      ],
+      "to": [
+        14.25,
+        10.75,
+        13.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "chamfered crown apron",
+      "from": [
+        3.0,
+        10,
+        13.0
+      ],
+      "to": [
+        13.0,
+        10.75,
+        14.25
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "flat engraved offering crown",
+      "from": [
+        2.75,
+        10.75,
+        1.25
+      ],
+      "to": [
+        13.25,
+        12,
+        2.75
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "texture": "#spellstone_top",
+          "uv": [
+            1.7777777777777777,
+            0.0,
+            14.222222222222221,
+            1.7777777777777777
+          ]
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "flat engraved offering crown",
+      "from": [
+        1.25,
+        10.75,
+        2.75
+      ],
+      "to": [
+        14.75,
+        12,
+        13.25
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "texture": "#spellstone_top",
+          "uv": [
+            0.0,
+            1.7777777777777777,
+            16.0,
+            14.222222222222221
+          ]
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    },
+    {
+      "name": "flat engraved offering crown",
+      "from": [
+        2.75,
+        10.75,
+        13.25
+      ],
+      "to": [
+        13.25,
+        12,
+        14.75
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "up": {
+          "texture": "#spellstone_top",
+          "uv": [
+            1.7777777777777777,
+            14.222222222222221,
+            14.222222222222221,
+            16.0
+          ]
+        },
+        "north": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            5,
+            6
+          ],
+          "texture": "#stone"
+        }
+      }
+    }
+  ]
+}

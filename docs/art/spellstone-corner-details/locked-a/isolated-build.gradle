@@ -1,0 +1,13 @@
+// Keep this review's runtime classes stable while other workspace tasks compile.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.layout.projectDirectory.dir(project.findProperty('review_build_directory') ?: 'build/spellstone-a-isolated'))
+    }
+}
+
+gradle.projectsEvaluated {
+    gradle.rootProject.tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+        outputs.upToDateWhen { false }
+        outputs.cacheIf { false }
+    }
+}

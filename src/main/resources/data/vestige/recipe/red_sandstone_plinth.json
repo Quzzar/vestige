@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:red_sandstone"
+    },
+    "S": {
+      "item": "minecraft:red_sandstone_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:red_sandstone_plinth",
+    "count": 2
+  }
+}

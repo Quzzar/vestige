@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:magic_missile",
+  "name": "Magic Missile",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Amethyst feeds a Flint point that Emerald directs as a homing force missile.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Flint motif follows resonant facet clockwise.",
+    "Evocation focus follows flint motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

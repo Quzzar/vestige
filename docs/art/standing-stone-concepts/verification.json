@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-06",
+  "scope": "Standing Stone finish foundation and silhouette sketches",
+  "material_count": 36,
+  "unit_tests": {
+    "tests": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 160,
+  "checks": [
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer",
+    "author_standing_stones.py --check",
+    "author_apparatus_models.py --check",
+    "git diff --check"
+  ],
+  "log": "build/standing-stone-variants-verification.log",
+  "log_sha256": "b555abe7864b3e17d5f67b7d612c4808427ce4631b8a51804a6bedc301900213",
+  "packaged_finish_resources_matched": 144,
+  "jar_sha256": "4239734be88181104054bc215c193ef83d0d29b4e50cdcd205a386c9be28ac57",
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/travel/StandingStones.java": "495dc552809a5f58977906c29c3ec31f20a1b8c7d2fa0c7041d823a4616fc445",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneBlock.java": "5dad4e1508537135f606315e3a8b3e1dc97332ee4d68c5bb6bba7cec190e36f5",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneRecipe.java": "66620df661adba9dfba7627a863382061368721881451ba196f2048794f5d9d9",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java": "34ebff05a19a13a591e3efbbd44955ece2a029e61efec250f1bd18d4818a45b2",
+    "tools/author_standing_stones.py": "7fc4d9b3fa00b1392156f5542f7389699856e27aafad65fb3b05fe5aaab64fe6",
+    "tools/sketch_standing_stones.py": "b5f0c5ccfa6b10b8d6cc100cad16b762b5340351d5ee43ebe62c8c816fdf2da0",
+    "docs/design/apparatus-materials.json": "d3cca1c1ffca4f39b2e27abf7f02d237615603232f555e54178c8849cb784d3a",
+    "docs/art/standing-stone-concepts/upright-silhouettes-v1.png": "8b4d86a4d2f0f8ae53cdd9aadf55ed0b4213ef5a5206b2c633c620de106accee"
+  },
+  "presentation": "SVG/PNG sketches inspected; no new native monolith appearance claimed",
+  "limitations": [
+    "temporary cube models",
+    "physical rune rendering pending",
+    "payment selection and charging pending",
+    "no Prism installation"
+  ]
+}

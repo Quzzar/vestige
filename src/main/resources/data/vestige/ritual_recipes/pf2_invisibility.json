@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_invisibility",
+  "name": "Invisibility",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Dark Ink, a membrane and Glass describe concealment; their order distinguishes it from the other invisibility recipe.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Ink motif follows blank inscription clockwise.",
+    "Recovery veil follows ink motif clockwise.",
+    "Glass motif follows recovery veil clockwise.",
+    "Blank inscription follows glass motif clockwise."
+  ]
+}

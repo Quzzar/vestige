@@ -1,0 +1,6 @@
+// Keep this inspection's compiled classes separate from other workspace builds.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file(project.findProperty('fragment_build_directory') ?: 'run/scroll-fragments-build'))
+    }
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_false_vitality",
+  "name": "False Vitality",
+  "circle": 4,
+  "color": "c92551",
+  "rationale": "Draining focus and Bone surround allied sustenance to suggest temporary borrowed health.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bone motif follows blank inscription clockwise.",
+    "Ally sustenance follows bone motif clockwise.",
+    "Draining focus follows ally sustenance clockwise.",
+    "Blank inscription follows draining focus clockwise."
+  ]
+}

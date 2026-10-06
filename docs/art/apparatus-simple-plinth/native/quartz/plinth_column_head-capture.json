@@ -1,0 +1,89 @@
+{
+  "spell": "vestige:plinth_column_head",
+  "phase": 0,
+  "label": "Close-up of column-head framing",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "quartz",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/quartz_plinth.json": "4be48d4d6059fdaad62992287c063bc35fc029915d03ca42ac475020cdc49bff",
+    "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+    "models/block/quartz_plinth_base.json": "d08d446a72bf73e020d586584cb84f64bad0df5fc56381b5652feb2c64129eaa",
+    "models/block/quartz_plinth_shaft.json": "8b7f98ba525b0f672e99b61cc331e2cfe02bcb5ab2cd7f6b45a2e18199672b48",
+    "models/block/quartz_plinth_cap.json": "d9d0ec57f6e18455bf62687f78864a0305e5595326d29d10371b0a7eda8e4b48"
+  },
+  "seconds": 2.04368925,
+  "times": [
+    0.016312375,
+    0.086390167,
+    0.155762542,
+    0.224484417,
+    0.295114709,
+    0.366921834,
+    0.4368535,
+    0.508715042,
+    0.578669584,
+    0.651826292,
+    0.721350625,
+    0.792624167,
+    0.867761625,
+    0.937338667,
+    1.007601792,
+    1.077453709,
+    1.148292125,
+    1.217906459,
+    1.287011375,
+    1.357949459,
+    1.427288,
+    1.497772792,
+    1.566340084,
+    1.636118875,
+    1.707663959,
+    1.777162459,
+    1.85062125,
+    1.921397125,
+    1.992951334
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dbase,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d0, y\u003d67, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d0, y\u003d68, z\u003d0}": {
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dcap,waterlogged\u003dfalse]",
+      "socket": "minecraft:gold_block",
+      "offering": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d68, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d0, y\u003d67, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:quartz_plinth"
+  },
+  "scenario": "Close native view of the simplified column cap and centered Gold inset protruding half a model unit. The same carved socket and raised material plate appear on every column segment."
+}

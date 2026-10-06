@@ -1,0 +1,84 @@
+{
+  "spell": "vestige:pf2_regenerate",
+  "name": "Regenerate",
+  "circle": 8,
+  "color": "57d0c7",
+  "rationale": "Living light, honey and allied sustenance meet Amethyst's regeneration association and Nature for sustained healing.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 6,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold living light, resonant facet; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Living light follows blank inscription clockwise.",
+    "Honey motif follows living light clockwise.",
+    "Ally sustenance follows honey motif clockwise, across an unused outer Plinth.",
+    "Resonant facet follows ally sustenance clockwise.",
+    "Nature focus follows resonant facet clockwise.",
+    "Blank inscription follows nature focus clockwise, across an unused outer Plinth."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_caustic_blast",
+  "name": "Caustic Blast",
+  "circle": 4,
+  "color": "8bac29",
+  "rationale": "A harmful eye feeds Powder and Emerald in reversed order to describe the small acid splash.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Evocation focus follows blank inscription clockwise.",
+    "Powder motif follows evocation focus clockwise.",
+    "Poison motif follows powder motif clockwise.",
+    "Blank inscription follows poison motif clockwise."
+  ]
+}

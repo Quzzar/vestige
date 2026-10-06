@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:pf2_heal",
+  "name": "Heal",
+  "circle": 4,
+  "color": "a8ffc9",
+  "rationale": "Living light separates allied sustenance from opposing decay, expressing healing living bodies and harming undead.",
+  "parts": [
+    {
+      "seat": 3,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 0,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Living light follows enemy decay clockwise.",
+    "Ally sustenance follows living light clockwise.",
+    "Blank inscription follows ally sustenance clockwise.",
+    "Enemy decay follows blank inscription clockwise.",
+    "Ally sustenance stands opposite enemy decay."
+  ]
+}

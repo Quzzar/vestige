@@ -1,0 +1,1233 @@
+{
+  "status": "Historical middle-ground candidate; superseded by detailed models with foot-only simplification",
+  "models": [
+    {
+      "material": "stone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "stone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "cobblestone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "granite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_granite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "diorite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_diorite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "andesite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_andesite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "red_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "mud_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "quartz",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "prismarine",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "nether_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "blackstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "tuff",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "polished_tuff",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "original_elements": 52,
+      "middle_elements": 24,
+      "middle_faces": 144,
+      "middle_rotated_elements": 0
+    },
+    {
+      "material": "purpur",
+      "role": "spellstone",
+      "original_elements": 33,
+      "middle_elements": 25,
+      "middle_faces": 125,
+      "middle_rotated_elements": 12
+    }
+  ],
+  "continuous_mapping": [
+    {
+      "material": "stone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/stone",
+      "corner_texture": "minecraft:block/stone",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "cobblestone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/cobblestone",
+      "corner_texture": "minecraft:block/cobblestone",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "mossy_cobblestone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/mossy_cobblestone",
+      "corner_texture": "minecraft:block/mossy_cobblestone",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "stone_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/stone_bricks",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/mossy_stone_bricks",
+      "corner_texture": "minecraft:block/mossy_stone_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "granite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/granite",
+      "corner_texture": "minecraft:block/polished_granite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_granite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_granite",
+      "corner_texture": "minecraft:block/polished_granite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "diorite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/diorite",
+      "corner_texture": "minecraft:block/polished_diorite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_diorite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_diorite",
+      "corner_texture": "minecraft:block/polished_diorite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "andesite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/andesite",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_andesite",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_andesite",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "sandstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/sandstone",
+      "corner_texture": "minecraft:block/sandstone_top",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "smooth_sandstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/sandstone_top",
+      "corner_texture": "minecraft:block/sandstone_top",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "red_sandstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/red_sandstone",
+      "corner_texture": "minecraft:block/red_sandstone_top",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/red_sandstone_top",
+      "corner_texture": "minecraft:block/red_sandstone_top",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/bricks",
+      "corner_texture": "minecraft:block/bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "mud_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/mud_bricks",
+      "corner_texture": "minecraft:block/mud_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "quartz",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/quartz_pillar",
+      "corner_texture": "minecraft:block/quartz_block_top",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "smooth_quartz",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/quartz_block_bottom",
+      "corner_texture": "minecraft:block/quartz_block_bottom",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "prismarine",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/prismarine",
+      "corner_texture": "minecraft:block/prismarine",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "prismarine_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/prismarine_bricks",
+      "corner_texture": "minecraft:block/prismarine_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "dark_prismarine",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/dark_prismarine",
+      "corner_texture": "minecraft:block/dark_prismarine",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "nether_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/nether_bricks",
+      "corner_texture": "minecraft:block/nether_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "red_nether_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/red_nether_bricks",
+      "corner_texture": "minecraft:block/red_nether_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "blackstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/blackstone",
+      "corner_texture": "minecraft:block/polished_blackstone",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_blackstone",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_blackstone",
+      "corner_texture": "minecraft:block/polished_blackstone",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_blackstone_bricks",
+      "corner_texture": "minecraft:block/polished_blackstone_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "cobbled_deepslate",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/cobbled_deepslate",
+      "corner_texture": "minecraft:block/cobbled_deepslate",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_deepslate",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_deepslate",
+      "corner_texture": "minecraft:block/polished_deepslate",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "deepslate_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/deepslate_bricks",
+      "corner_texture": "minecraft:block/deepslate_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "deepslate_tiles",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/deepslate_tiles",
+      "corner_texture": "minecraft:block/deepslate_tiles",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "tuff",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/tuff",
+      "corner_texture": "minecraft:block/polished_tuff",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "polished_tuff",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/polished_tuff",
+      "corner_texture": "minecraft:block/polished_tuff",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "tuff_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/tuff_bricks",
+      "corner_texture": "minecraft:block/tuff_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "end_stone_bricks",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/end_stone_bricks",
+      "corner_texture": "minecraft:block/end_stone_bricks",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    },
+    {
+      "material": "purpur",
+      "vertical_scale": "fixed V phase; sixteen rows for masonry/pillars, fourteen interior rows for bordered polished tiles",
+      "matched_face_sections_per_join": 20,
+      "joins": [
+        "base \u2192 shaft",
+        "shaft \u2192 shaft",
+        "shaft \u2192 cap",
+        "base \u2192 cap"
+      ],
+      "shaft_texture": "minecraft:block/purpur_pillar",
+      "corner_texture": "minecraft:block/purpur_block",
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 22
+      }
+    }
+  ],
+  "textures": "Unchanged vanilla 16\u00d716 tiles; fixed-scale UVs, bordered polished tiles use interior rows; Quartz/Purpur use native pillar shafts",
+  "spellstone": "Octagonal silhouette, original rune, four near-flush Diamond decals; no raster asset changes"
+}

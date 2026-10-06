@@ -1,0 +1,81 @@
+{
+  "spell": "vestige:sculk_tentacles",
+  "name": "Sculk Tentacles",
+  "circle": 8,
+  "color": "216278",
+  "rationale": "Echo and Sculk grow String-like tendrils; Emerald and Obsidian direct their dark pulsing field.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 6,
+      "role": "sculk motif",
+      "ingredient": {
+        "items": [
+          "minecraft:sculk"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 2,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold evocation focus, lost echo; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Obsidian motif follows blank inscription clockwise, across an unused outer Plinth.",
+    "Evocation focus follows obsidian motif clockwise.",
+    "String motif follows evocation focus clockwise.",
+    "Sculk motif follows string motif clockwise, across an unused outer Plinth.",
+    "Lost echo follows sculk motif clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

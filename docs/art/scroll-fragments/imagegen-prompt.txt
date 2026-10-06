@@ -1,0 +1,6 @@
+Use case: stylized-concept
+Asset type: Minecraft inventory item sprite, transparent background.
+Primary request: one small ripped fragment of an old magical scroll, a flat broken piece of parchment, clearly smaller than a whole sheet.
+Style/medium: authentic very low resolution 16 by 16 pixel art, hard square pixels, limited palette, no antialiasing. Enlarge each source pixel uniformly for presentation, the composition should fit a 16x16 source grid.
+Subject: irregular angled torn parchment scrap with several jagged missing edge pixels, warm ivory interior, tan edge shadows and a restrained dark brown outline. Two or three tiny dark faded ink strokes near the middle suggest incomplete writing. No crystal, no rolled ends, no ribbon or seal, no complete readable rune, no lettering.
+Composition: centered single scrap occupying about 11x12 pixels on a 16x16 grid, free transparent margin. Flat inventory view, no perspective scene, no background shadow, no frame, no glow. Preserve a genuinely transparent background.

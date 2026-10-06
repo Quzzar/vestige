@@ -1,0 +1,210 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "e117ba9f87cfd4a956ffeef9bba9a6f278fec3588a13af5880231c9e55f8f0aa",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "spellstone_astral",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral-apparatus-0/capture.json",
+      "posterFrame": 20,
+      "posterSha256": "56ec6f86bcf058d77b9d821e7122d3edc1bf9daac2e02420e14f5a801fd48ecf",
+      "videoSha256": "301034da99b44a9e5bba815580ab8a04c7efa8554bd9b9fe989d9e7c9fb01ee4",
+      "nativeFrames": 34,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_finishes",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral_finishes-apparatus-0/capture.json",
+      "posterFrame": 13,
+      "posterSha256": "e234e48b34299b972f0754f808fb26ff0d35e7b91f2f8076cba518f3f5491043",
+      "videoSha256": "855a777515aca0d92a408810a534edd80ec2518e948e3e8c4ee17c6b6636b44a",
+      "nativeFrames": 24,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "yaw": 156.0375,
+        "pitch": 14.242943,
+        "eye": [
+          2.5,
+          66.5,
+          5.0
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "dfcdf9d6d8ea782a4870e84481a0f3bad495842b085b0ab24981f21b162ef1c6",
+        "models/block/quartz_spellstone.json": "9785e6a8a787c447d532ec5edbee0ad7f99f2a7a7fd60a9628673f591b51e2d9"
+      }
+    },
+    {
+      "name": "spellstone_astral_night",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral_night-apparatus-0/capture.json",
+      "posterFrame": 22,
+      "posterSha256": "337991a1d548b80e922b82b70400eb88243c33c1114a19ab6293b4f0967cb993",
+      "videoSha256": "1598cbe7f8af8666bdcc2310c6df2fc7da361ce0174bce2016baa7d003fb8156",
+      "nativeFrames": 35,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "camera": {
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_scrolls",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral_scrolls-apparatus-0/capture.json",
+      "posterFrame": 24,
+      "posterSha256": "96bba5361af95db951ef41d8297a60964ab968c459b9c30e83721e03e8404ad7",
+      "videoSha256": "19af2d2536f52f8086c8a8e131c85cbb50c30f8f41644be766d19102a0e9fa12",
+      "nativeFrames": 40,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_side",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral_side-apparatus-0/capture.json",
+      "posterFrame": 27,
+      "posterSha256": "7c30a9bdde4aac8b1e136024c0a60fa7d53bd8fcead9782558738aaf8dbd4a28",
+      "videoSha256": "a43b5a579f8474e7eb440179e0c1bfc6d768cfb9521c273d2960c677e7c2dcb1",
+      "nativeFrames": 45,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "yaw": -180.0,
+        "pitch": 8.615648,
+        "eye": [
+          0.5,
+          65.5,
+          2.15
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "spellstone_astral_underwater",
+      "capture": "build/spellstone-compact-side-gems-native/vestige-spellstone_astral_underwater-apparatus-0/capture.json",
+      "posterFrame": 19,
+      "posterSha256": "11b7c6117ce75d1b239d4bcc048a43302e18257f6bba71594e97d81add6a1d27",
+      "videoSha256": "a3b79368c40b3a3f08e770822b856567cda681661495bce8891eaa5980fe5e63",
+      "nativeFrames": 32,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "yaw": 144.68878,
+        "pitch": 30.028658,
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "fixed": true
+      },
+      "materialTextureSha256": {},
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "3429bfc45e48397e139f2bea942c6a073bd2761073fbd8f6c9037fc89c77db20",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "textures/block/spellstone_diamond_gem.png": "49c6f31ece8c9c806e8a4a7184bbc24759157ccbaf7561a3fc96d78d7ae1c54e",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    }
+  ]
+}

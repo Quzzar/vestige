@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/mossy_stone_bricks_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/mossy_stone_bricks_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/mossy_stone_bricks_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/mossy_stone_bricks_spellstone"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "minecraft_version": "1.21.1",
+  "source": "Pinned vanilla resources shipped with NeoForge 21.1.72",
+  "metric": "Resolved block-model elements/faces; excludes block-entity extras such as enchanting books and campfire food",
+  "models": [
+    {
+      "model": "block/stone",
+      "sha256": "c0734082e7f1e2f44809737b2fbe1136fc7304bde7232e45fbe921884a4a327e",
+      "inherited_from": [
+        "block/cube_all",
+        "block/cube"
+      ],
+      "elements": 1,
+      "faces": 6,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/lodestone",
+      "sha256": "b3b7825312eb97f5fca6363b0af3739ea61aa644bc95694dbef836cd50d69b9b",
+      "inherited_from": [
+        "block/cube_column",
+        "block/cube"
+      ],
+      "elements": 1,
+      "faces": 6,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/stone_brick_stairs",
+      "sha256": "3e7bf703d8b4ac12b5394da91d471ca7b6f15e496176cf2fb2b272872601a279",
+      "inherited_from": [
+        "block/stairs"
+      ],
+      "elements": 2,
+      "faces": 11,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/anvil",
+      "sha256": "9a58a547d9e8266669b49316c892c18fc4fcfa836f534d1e68bc2e916b57235b",
+      "inherited_from": [
+        "block/template_anvil"
+      ],
+      "elements": 4,
+      "faces": 21,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/enchanting_table",
+      "sha256": "d308d836feccce517b11acbc6ad20b2c230fb59b14df776fb54f1381f907060b",
+      "inherited_from": [],
+      "elements": 1,
+      "faces": 6,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/lectern",
+      "sha256": "23a7ee8e0567f69bd480e24411dd7470929957cab4fc66ae68f116236f555840",
+      "inherited_from": [],
+      "elements": 3,
+      "faces": 16,
+      "rotated_elements": 1
+    },
+    {
+      "model": "block/grindstone",
+      "sha256": "ccf94b958801bfe35eaf006e275922797ecb1ac498862bbb93a24006dcbef3ac",
+      "inherited_from": [],
+      "elements": 5,
+      "faces": 26,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/stonecutter",
+      "sha256": "79ceaec2618ed0c78d5b7e06e4e680355a47b37b5fa6874085465ae304b8aa78",
+      "inherited_from": [],
+      "elements": 2,
+      "faces": 8,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/brewing_stand",
+      "sha256": "8337d242a97c15709e35458a43ab5af63bbb127d1c0cc184cfb2c8e2aebd9a37",
+      "inherited_from": [],
+      "elements": 4,
+      "faces": 24,
+      "rotated_elements": 0
+    },
+    {
+      "model": "block/campfire",
+      "sha256": "c426e97ea0884dc323b1ee529e67b5c8dcf153c4420b7ec1f5c9117caf7ba2d3",
+      "inherited_from": [
+        "block/template_campfire"
+      ],
+      "elements": 7,
+      "faces": 32,
+      "rotated_elements": 2
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:flaming_barrage",
+  "name": "Flaming Barrage",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze, Arrow and Powder describe separately aimed explosive shots in a reversed recast sequence.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Powder motif follows blank inscription clockwise.",
+    "Arrow motif follows powder motif clockwise.",
+    "Flame focus follows arrow motif clockwise.",
+    "Blank inscription follows flame focus clockwise."
+  ]
+}

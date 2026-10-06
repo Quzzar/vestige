@@ -1,0 +1,38 @@
+[
+  {
+    "design": "A",
+    "status": "Original dark shell concept, not approved or packaged; not a literal 16x16 texture",
+    "generation_mode": "Built-in image_gen, new generation without source images",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-19cc836f-6ef5-431b-8f2d-2c9b531b5ff9.png",
+    "workspace_copy": "/Users/quzzar/Projects/vestige/docs/art/whispering-shell-dark-v1/shell-a.png",
+    "unchanged_copy": true,
+    "sha256": "30df05b92c1e716b8ad353ffd7ad5398f9eb5d6dc7dcd62578d66c347ff5c230",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_values": 256,
+    "transparent_pixels": 1193367,
+    "partially_transparent_pixels": 376780,
+    "opaque_colors": 413,
+    "prompt": "prompt-a.txt"
+  },
+  {
+    "design": "B",
+    "status": "Original dark shell concept, not approved or packaged; not a literal 16x16 texture",
+    "generation_mode": "Built-in image_gen, new generation without source images",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-57966557-100b-4661-90d3-c8b600e80945.png",
+    "workspace_copy": "/Users/quzzar/Projects/vestige/docs/art/whispering-shell-dark-v1/shell-b.png",
+    "unchanged_copy": true,
+    "sha256": "53145c60afa40a0868560dc681420e041db4bf5277160e2afde2f87b953ca66d",
+    "size": [
+      1254,
+      1254
+    ],
+    "alpha_values": 256,
+    "transparent_pixels": 964556,
+    "partially_transparent_pixels": 605753,
+    "opaque_colors": 261,
+    "prompt": "prompt-b.txt"
+  }
+]

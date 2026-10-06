@@ -19,7 +19,22 @@ java {
 repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+        url = 'https://maven.blamejared.com'
+        content { includeGroup 'mezz.jei' }
+    }
+    maven {
+        url = 'https://repo.sleeping.town'
+        content { includeGroup 'dev.emi' }
+    }
 }
+
+def recipeViewer = providers.gradleProperty('recipe_viewer').getOrElse('none')
+if (!(recipeViewer in ['none', 'jei', 'emi', 'both'])) {
+    throw new GradleException('recipe_viewer must be none, jei, emi or both')
+}
+def jeiVersion = '19.22.1.316'
+def emiVersion = '1.1.24+1.21.1'
 
 def withKithkyn = providers.gradleProperty('with_kithkyn').map { it.toBoolean() }.getOrElse(true)
 def kithkynProjectDirectory = file(findProperty('kithkyn_project_dir') ?: '../kithkyn')
@@ -61,11 +76,15 @@ neoForge {
 
         effectsCapture {
             client()
-            gameDirectory = project.file('run/effects-capture')
+            gameDirectory = project.file(findProperty('capture_directory') ?: 'run/effects-capture')
             programArguments.addAll '--width', '960', '--height', '540'
             systemProperty 'vestige.capture.output', project.file(findProperty('capture_output') ?: 'build/native-capture').absolutePath
             systemProperty 'vestige.capture.spells', findProperty('capture_spells') ?: ''
             systemProperty 'vestige.capture.kind', findProperty('capture_kind') ?: 'cast'
+            systemProperty 'vestige.capture.augments', findProperty('capture_augments') ?: ''
+            systemProperty 'vestige.capture.material', findProperty('capture_material') ?: 'stone_bricks'
+            systemProperty 'vestige.capture.apparatus_preview', findProperty('apparatus_preview') ?: 'current'
+            systemProperty 'vestige.capture.review', findProperty('capture_review') ?: 'false'
             systemProperty 'vestige.capture.seconds', findProperty('capture_seconds') ?: '8'
         }
 
@@ -77,7 +96,9 @@ neoForge {
 
         gameTestServer {
             type = 'gameTestServer'
+            gameDirectory = project.file(findProperty('gametest_directory') ?: 'run')
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            if (findProperty('gametest_filter')) systemProperty 'vestige.gametest.filter', findProperty('gametest_filter')
         }
 
         configureEach {
@@ -103,6 +124,11 @@ configurations {
 }
 
 dependencies {
+    // Viewer APIs compile the optional adapters; neither viewer is bundled or required.
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jeiVersion}"
+    compileOnly "dev.emi:emi-neoforge:${emiVersion}:api"
+    if (recipeViewer in ['jei', 'both']) localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jeiVersion}"
+    if (recipeViewer in ['emi', 'both']) localRuntime "dev.emi:emi-neoforge:${emiVersion}"
     if (withKithkyn) {
         localRuntime files(kithkynJar)
     }
@@ -153,7 +179,7 @@ def buildKithkyn = tasks.register('buildKithkyn', Exec) {
 }
 
 def prepareEffectsCapture = tasks.register('prepareEffectsCapture') {
-    def captureDirectory = project.file('run/effects-capture')
+    def captureDirectory = project.file(findProperty('capture_directory') ?: 'run/effects-capture')
     group = 'development'
     description = 'Configures the isolated footage client without altering normal development worlds.'
     doLast {

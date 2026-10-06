@@ -1,0 +1,16 @@
+{
+  "installed_at_utc": "2026-10-05T21:26:00.016752+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "destination_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "previous_sha256": "aea995fb27f9b9e6eafa848dcfa54b5ecfa192432fc3a6ac3d28d702f6583178",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-spellstone-corners.jar",
+  "replacement": "Atomic rename; existing running session retains its previous open jar until restart.",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "changes": "Four clipped corners in the Spellstone foundation across all 36 finishes. Body/crown/rune and current simple Plinth unchanged.",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

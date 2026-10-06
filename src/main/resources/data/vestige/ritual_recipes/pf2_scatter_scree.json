@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_scatter_scree",
+  "name": "Scatter Scree",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Stone fractures into Gravel and Flint, describing the burst and remaining slowing rubble.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "gravel motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gravel"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flint motif follows blank inscription clockwise.",
+    "Gravel motif follows flint motif clockwise.",
+    "Stone motif follows gravel motif clockwise.",
+    "Blank inscription follows stone motif clockwise."
+  ]
+}

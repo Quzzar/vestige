@@ -1,0 +1,103 @@
+{
+  "spell": "vestige:abyssal_shroud",
+  "name": "Abyssal Shroud",
+  "circle": 8,
+  "color": "57418f",
+  "rationale": "Echo, darkness and spatial escape enclose a protection seal; the membrane recalls its finite dodges.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 6,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 5,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "chorus motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chorus_fruit"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet, ink motif, obsidian motif, lost echo; the other required ingredients use Inner Plinths.",
+    "Resonant facet follows blank inscription clockwise.",
+    "Chorus motif follows resonant facet clockwise.",
+    "Ink motif follows chorus motif clockwise.",
+    "Recovery veil follows ink motif clockwise.",
+    "Obsidian motif follows recovery veil clockwise.",
+    "Protection seal follows obsidian motif clockwise.",
+    "Lost echo follows protection seal clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

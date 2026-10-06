@@ -1,0 +1,15 @@
+{
+  "installedAtUtc": "2026-10-06T17:55:53.978360+00:00",
+  "instance": "Kithkyn Testing",
+  "source": "/Users/quzzar/Projects/vestige/build/ritual-node-blasts-final/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "8027a7e059ed42f2248de91e00e4ee4b66fc3a8e9d2f6f813ced492c67bc372c",
+  "previousSha256": "9d4066c066b7e7806dcdef72f6dcf46070544886831f87c5f81a4df7093da4d8",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-vestige-before-node-blasts-9d4066c066b7.jar",
+  "installation": "Verified staged copy and atomic replacement; ZIP integrity passed",
+  "profileMinecraft": "1.21.1",
+  "profileNeoForge": "21.1.248",
+  "nativeVerificationNeoForge": "21.1.72",
+  "profileLaunchVerified": false,
+  "restartRequired": true
+}

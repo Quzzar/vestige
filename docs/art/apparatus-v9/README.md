@@ -1,0 +1,19 @@
+# Finer Runic inscription and fitted Spellstone
+
+Historical ninth draft, superseded by the [native tenth revision](../apparatus-v10/README.md). Its saved bundle remains unchanged; live runtime resources now follow the tenth design.
+
+October 3, 2026. The owner selected the **first finer generated rune**, replacing the chunky 16-by-16 eighth draft. The original [selected source](rune-selected-source.png) is a 1254-by-1254 imagegen output. Its layout is retained as a native **64-by-64 RGBA overlay**, composited over the existing **16-by-16 mirrored Chiseled Deepslate**, enlarged four times without smoothing. It keeps the broken ring, hollow central diamond and surrounding angular markings. This deliberately relaxes the previous 16-by-16 limit for finer decoration while preserving the stone's original pixel scale.
+
+Spellstone now has **two fitted Diamonds in the upper carved cuts and purple Amethyst in the center cut, on every side**. The owner confirmed Amethyst rather than Andesite. The side Diamond texture is native 16-by-16; the Amethyst is unchanged from the seventh draft. Each setting lies 1/32 model unit behind the stone. The new flat crown uses a native **32-by-32** overlay with Diamond corner clasps, a thin angular frame with gaps and a central Amethyst. Existing mirrored stone remains visible beneath it at its original 16-by-16 scale.
+
+Built-in imagegen supplied the new [Diamond source](diamond-generated-source.png) and [crown source](spellstone-top-generated-source.png). Their exact prompts are saved in [Diamond generation prompt](diamond-generation-prompt.txt) and [crown generation prompt](spellstone-top-generation-prompt.txt). The selected Runic source is reused from the earlier first output; no new rune generation was requested in this revision. All three large source files are preserved unchanged and kept separate from native textures. The [original cyan reference](../apparatus-v8/cyan-rune-reference.png) and [Amethyst source/prompt](../apparatus-v7/README.md) remain in their historical archives.
+
+The [texture preparation tool](../apparatus-v12/retired-resources/author_apparatus_textures.py.txt) is deterministic: Diamond uses RGB nearest reduction; Runic uses area reduction and an alpha cutoff of 128/255; the crown uses area reduction and a cutoff of 96/255 to preserve its thin frame. Runtime overlays have hard alpha edges. Both opaque top composites preserve every unmarked stone pixel exactly. [Preparation and SHA-256 records](texture-provenance.json) record sources, prompts and outputs. The eighth draft's simplified grid is archived in that draft and is no longer active authoring input.
+
+Stone Pedestal and Runic Pedestal model JSON, along with fitted Amethyst, are byte-identical to the eighth bundle. Spellstone's major shape and all three 12/9/7-unit heights are preserved. Models now contain 45, 28 and 27 cuboids, 100 total. All tops remain flat; there is no additional rune/crown geometry or emissive layer.
+
+[Current design and previews](../../design/apparatus-models.md) · [Download model/texture bundle](apparatus-models.zip).
+
+The bundle contains six model JSONs under `assets/vestige/models`, six native PNGs under `assets/vestige/textures/block`, three unchanged inert recipe-authoring files, this README, the two new prompts and the provenance record. Large generated source files are preserved here and excluded from that bundle. The top composites include modified Minecraft 1.21.1 Chiseled Deepslate texels by Mojang; other vanilla textures resolve through Minecraft. No Iron assets are imported.
+
+These are offline renders of actual saved model and texture assets. Block/item registration, placement, displayed items, crafting and station operations remain future work; in-game appearance is not verified by these previews.

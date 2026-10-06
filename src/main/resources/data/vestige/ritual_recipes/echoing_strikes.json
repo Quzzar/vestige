@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:echoing_strikes",
+  "name": "Echoing Strikes",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender focus repeats the Iron-and-Flint weapon motif through a Clock and resonant Amethyst.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 5,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 6,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold passage focus, resonant facet; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Passage focus follows blank inscription clockwise.",
+    "Clock motif follows passage focus clockwise.",
+    "Bound metal follows clock motif clockwise, across an unused outer Plinth.",
+    "Resonant facet follows bound metal clockwise.",
+    "Flint motif follows resonant facet clockwise.",
+    "Blank inscription follows flint motif clockwise, across an unused outer Plinth."
+  ]
+}

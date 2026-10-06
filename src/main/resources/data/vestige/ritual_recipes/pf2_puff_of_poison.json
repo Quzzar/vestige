@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_puff_of_poison",
+  "name": "Puff of Poison",
+  "circle": 4,
+  "color": "a4cc64",
+  "rationale": "A harmful eye follows a feather's breath and Emerald's direction into a close poison puff.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Poison motif follows blank inscription clockwise.",
+    "Feather motif follows poison motif clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

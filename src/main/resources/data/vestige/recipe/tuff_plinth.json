@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:tuff"
+    },
+    "S": {
+      "item": "minecraft:tuff_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:tuff_plinth",
+    "count": 2
+  }
+}

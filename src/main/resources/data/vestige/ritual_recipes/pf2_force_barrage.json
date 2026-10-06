@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_force_barrage",
+  "name": "Force Barrage",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Amethyst's force motif, Emerald and an Arrow describe repeated homing projectiles in a reversed sequence.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 1,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Arrow motif follows blank inscription clockwise.",
+    "Evocation focus follows arrow motif clockwise.",
+    "Resonant facet follows evocation focus clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

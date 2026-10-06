@@ -257,7 +257,7 @@ Use an operator account in a development world:
 /vestige_magic dispel
 ```
 
-`cast` explicitly bypasses resource costs and native cooldowns for development, while preserving charge/channel timing, recasts, and volatility. To exercise balance, use `/vestige_magic mana 200` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival. Paid casts enforce authored mana and per-spell recovery; Creative bypasses resource payment but retains recovery. Recasts pay once and can resume during their existing cooldown. One active charge/channel per caster prevents simultaneous channel stacking; dormant recast sessions permit other spells. Native energy has no passive regeneration or progression policy. Reload/restart resets active sessions and recovery timers. Normal wand controls, discovery, and progression remain deferred.
+`cast` explicitly bypasses resource costs and native cooldowns for development, while preserving charge/channel timing, recasts, and volatility. To exercise balance, use `/vestige_magic mana 100` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival. Paid casts enforce authored mana and per-spell recovery; Creative bypasses resource payment but retains recovery. Recasts pay once and can resume during their existing cooldown. One active charge/channel per caster prevents simultaneous channel stacking; dormant recast sessions permit other spells. Players have 100 mana, full on first spawn and death/respawn, and recover 2 mana per second after a five-second expenditure delay. The mana gauge is visible only below full. Capacity progression remains deferred. Reload/restart resets active sessions and recovery timers. Normal wand controls, discovery, and progression remain deferred.
 
 For Portal, aim at one position and cast, then aim somewhere else and cast again. For Raise Dead, cast once to summon and again to dismiss the waiting cohort. Interrupt stops unfinished casting work; dispel removes owned active manifestations. Spell-specific callbacks can make ending a spell consequential, as with Heartstop.
 
@@ -7044,7 +7044,7 @@ Select aimed living creature; hostile only; reach/radius 32 × range blocks; req
 
 ### Gluttony
 
-Up to three foods consumed within ten seconds convert nutrition into native spell energy, capped at 200.
+Up to three foods consumed within ten seconds convert nutrition into native mana, capped at 100.
 
 | Property | Current definition |
 |---|---|
@@ -7068,12 +7068,12 @@ Create status, 200 ticks (10 s); target: caster; required
     React on item_use_finished
     Select caster; required
       Cosmetic selection cue: leaves (#4bba6b) + helix (#d7ff9d) + sparks (#d7ff9d); radius 0.8 blocks; 24 ticks (1.2 s)
-      Add 6 × fact(event/food_nutrition) native energy; stored actor energy capped at 200
+      Add 6 × fact(event/food_nutrition) native energy; restoration capped at 100 mana
 ```
 
 **Current appearance:** Status uses minecraft:enchant particles; backing marker, where needed, is invisible. Attached native presentation: leaves (#4bba6b) + helix (#d7ff9d) + sparks (#d7ff9d); radius 1.15 blocks; 200 ticks (10 s); ends when all owned reactions are spent/expired; sound minecraft:block.amethyst_block.resonate. Composed native cue: leaves (#4bba6b) + helix (#d7ff9d) + sparks (#d7ff9d); radius 1.15 blocks; 200 ticks (10 s); ends when all owned reactions are spent/expired; sound minecraft:block.amethyst_block.resonate. Composed native cue: leaves (#4bba6b) + helix (#d7ff9d) + sparks (#d7ff9d); radius 0.8 blocks; 24 ticks (1.2 s).
 
-**Adaptation notes:** Temporary actor energy is a runtime resource seam; no discovery or progression system is installed.
+**Adaptation notes:** Uses the native player mana pool; capacity progression remains deferred.
 
 ### Oakskin
 

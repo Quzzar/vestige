@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:pf2_containment",
+  "name": "Containment",
+  "circle": 8,
+  "color": "99aabf",
+  "rationale": "Amethyst's force motif closes a warded Chain-and-Iron boundary around a visible Glass interior.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 4,
+      "role": "chain motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chain"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 6,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet, bound metal; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise.",
+    "Protection seal follows resonant facet clockwise.",
+    "Chain motif follows protection seal clockwise, across an unused outer Plinth.",
+    "Bound metal follows chain motif clockwise.",
+    "Glass motif follows bound metal clockwise.",
+    "Blank inscription follows glass motif clockwise, across an unused outer Plinth."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "installedAt": "2026-10-06T18:02:31.182252+00:00",
+  "instance": "Kithkyn Testing",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "artifact": "/Users/quzzar/Projects/vestige/build/apparatus-fixes-review/vestige-0.1.0.jar",
+  "artifactSha256": "61a8c7c955bd610f955d309b5cf6b2b55f1a8f17159c845333b30c1cd55574c4",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "previousSha256": "8027a7e059ed42f2248de91e00e4ee4b66fc3a8e9d2f6f813ced492c67bc372c",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/apparatus-fixes-20261006T180231Z/vestige-0.1.0.jar",
+  "unitTests": 104,
+  "focusedWorldTests": 64,
+  "previewFramingInstalled": false,
+  "gameRestarted": false,
+  "normalOutputs": "ordinary centered ItemEntity, zero initial velocity, reference preserved",
+  "fixes": [
+    "covered Plinth offering ejected once; embedded material retained",
+    "item-frame offering sounds; amethyst imbuement sounds",
+    "Spellstone cap raised 1/64 block with support coordinates unchanged"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "method": "Unchanged after-level framebuffer PNGs; matched scene, camera, Tuff textures and lighting",
+  "preview_scope": "Simplified standalone models loaded only by isolated capture resource pack",
+  "captures": [
+    {
+      "presentation": "before",
+      "scene": "plinth",
+      "image": "native/before/plinth.png",
+      "image_sha256": "7158d34d1c50fb558474c75bdd1d7054a9513d42184b85e25e3ee6873656943f",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "42eb63c3af0fc1be435a957cf0957045477eea0d079757a5f3bbadef3047dc60",
+        "models/block/plinth.json": "241b78b91e7a65d43b2d5154d2a119333f3aa8200a23540b0bf33702dbc8d0ba",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "f398336742d9d62f60aece2fe2babaa3a9759cdbed521940f256c5c124378cc4",
+        "models/block/tuff_spellstone.json": "3288eb860e9e4a10b28c5d3888a8b729a71230d9c80189a99d4cf1abaabf0017",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 28,
+      "inspected": true
+    },
+    {
+      "presentation": "before",
+      "scene": "spellstone",
+      "image": "native/before/spellstone.png",
+      "image_sha256": "a89f9f82e289963e0ee2614a97041cfc92f78dd104bbf9fbff510c87264f57da",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "42eb63c3af0fc1be435a957cf0957045477eea0d079757a5f3bbadef3047dc60",
+        "models/block/plinth.json": "241b78b91e7a65d43b2d5154d2a119333f3aa8200a23540b0bf33702dbc8d0ba",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "f398336742d9d62f60aece2fe2babaa3a9759cdbed521940f256c5c124378cc4",
+        "models/block/tuff_spellstone.json": "3288eb860e9e4a10b28c5d3888a8b729a71230d9c80189a99d4cf1abaabf0017",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 28,
+      "inspected": true
+    },
+    {
+      "presentation": "before",
+      "scene": "plinth_columns",
+      "image": "native/before/plinth_columns.png",
+      "image_sha256": "934cbd660fe665f4ac1f2fe5976d2abde090dd4f885f1a2543b030c0f3ad5a12",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "42eb63c3af0fc1be435a957cf0957045477eea0d079757a5f3bbadef3047dc60",
+        "models/block/plinth.json": "241b78b91e7a65d43b2d5154d2a119333f3aa8200a23540b0bf33702dbc8d0ba",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "f398336742d9d62f60aece2fe2babaa3a9759cdbed521940f256c5c124378cc4",
+        "models/block/tuff_spellstone.json": "3288eb860e9e4a10b28c5d3888a8b729a71230d9c80189a99d4cf1abaabf0017",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 26,
+      "inspected": true
+    },
+    {
+      "presentation": "after",
+      "scene": "plinth",
+      "image": "native/after/plinth.png",
+      "image_sha256": "f66026e1f4f5f3f5be774407fa64968463263bfa858426402514b81cb48ef75b",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "0f1b34536d0c0201a59bb7633ddf321a20e03ec46533b1195276ca378be44c4b",
+        "models/block/plinth.json": "423ec1cbc3a86bd035b4ab20715d81d0d23a36b5156daee601dde51c1ec333fb",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "dc9e72170a0d404915053aa4b779e6a49c2c780ebd50f299e27b7795156d0f64",
+        "models/block/tuff_spellstone.json": "123612e4531e94823793a64c079c240a49e362257f56d81f8dcc96a9652a16a6",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 27,
+      "inspected": true
+    },
+    {
+      "presentation": "after",
+      "scene": "spellstone",
+      "image": "native/after/spellstone.png",
+      "image_sha256": "38bc524d60d65993520bda2c3bd9d8db3d47097ef23bb43b3a5e0ca5c07e0a45",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "0f1b34536d0c0201a59bb7633ddf321a20e03ec46533b1195276ca378be44c4b",
+        "models/block/plinth.json": "423ec1cbc3a86bd035b4ab20715d81d0d23a36b5156daee601dde51c1ec333fb",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "dc9e72170a0d404915053aa4b779e6a49c2c780ebd50f299e27b7795156d0f64",
+        "models/block/tuff_spellstone.json": "123612e4531e94823793a64c079c240a49e362257f56d81f8dcc96a9652a16a6",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 28,
+      "inspected": true
+    },
+    {
+      "presentation": "after",
+      "scene": "plinth_columns",
+      "image": "native/after/plinth_columns.png",
+      "image_sha256": "1234da7f516cffd4585f5b03de2d7f6b4eae0030860cfc7fbf21ba7e84f9d977",
+      "frame": 12,
+      "asset_sha256": {
+        "models/block/spellstone.json": "0f1b34536d0c0201a59bb7633ddf321a20e03ec46533b1195276ca378be44c4b",
+        "models/block/plinth.json": "423ec1cbc3a86bd035b4ab20715d81d0d23a36b5156daee601dde51c1ec333fb",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/tuff_plinth.json": "dc9e72170a0d404915053aa4b779e6a49c2c780ebd50f299e27b7795156d0f64",
+        "models/block/tuff_spellstone.json": "123612e4531e94823793a64c079c240a49e362257f56d81f8dcc96a9652a16a6",
+        "models/block/tuff_plinth_base.json": "cc5a14494b3e11ee5534a61723d11cd9031c8dcd4819a3a35c6fd2eb22cbcf92",
+        "models/block/tuff_plinth_shaft.json": "3cdb4a709da22070da9520f3882b5d1dc1a4f2adffe5666d3f718a1ad96b859a",
+        "models/block/tuff_plinth_cap.json": "b893e9377aac4689a41bc67d6904c7fd51002f0b02cdec18d1ef797c0d55f26a"
+      },
+      "native_frames": 28,
+      "inspected": true
+    }
+  ]
+}

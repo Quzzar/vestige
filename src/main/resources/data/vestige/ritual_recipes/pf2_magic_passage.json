@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:pf2_magic_passage",
+  "name": "Magic Passage",
+  "circle": 8,
+  "color": "bbd1e9",
+  "rationale": "Stone crosses Ender passage, Compass and Obsidian; Amethyst binds the temporary opening and restoration.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 4,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold obsidian motif, stone motif; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Resonant facet follows blank inscription clockwise, across an unused outer Plinth.",
+    "Obsidian motif follows resonant facet clockwise.",
+    "Compass motif follows obsidian motif clockwise.",
+    "Passage focus follows compass motif clockwise, across an unused outer Plinth.",
+    "Stone motif follows passage focus clockwise.",
+    "Blank inscription follows stone motif clockwise."
+  ]
+}

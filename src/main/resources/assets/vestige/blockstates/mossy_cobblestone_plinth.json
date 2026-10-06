@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/mossy_cobblestone_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/mossy_cobblestone_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/mossy_cobblestone_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/mossy_cobblestone_plinth_cap"
+    }
+  }
+}

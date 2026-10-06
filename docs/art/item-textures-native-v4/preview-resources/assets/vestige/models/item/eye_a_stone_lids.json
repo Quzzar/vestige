@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/eye_a_stone_lids"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.0,
+        0.07216494845360824,
+        0
+      ],
+      "scale": [
+        2.0003221649484533,
+        1.0001610824742266,
+        1
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": true,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "stone": "minecraft:block/tuff_bricks",
+    "carving": "minecraft:block/tuff_bricks",
+    "trim": "minecraft:block/tuff_bricks",
+    "particle": "minecraft:block/tuff_bricks",
+    "amethyst": "minecraft:block/amethyst_block",
+    "diamond": "minecraft:block/diamond_block",
+    "runes": "vestige:block/spellstone_runes_purple"
+  },
+  "elements": [
+    {
+      "from": [
+        4.052,
+        0,
+        4.052
+      ],
+      "to": [
+        11.948,
+        16,
+        11.948
+      ],
+      "faces": {
+        "up": {
+          "texture": "#carving",
+          "uv": [
+            4.052,
+            4.052,
+            11.948,
+            11.948
+          ]
+        },
+        "down": {
+          "texture": "#carving",
+          "uv": [
+            4.052,
+            4.052,
+            11.948,
+            11.948
+          ]
+        },
+        "north": {
+          "texture": "#carving",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#carving",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#carving",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#carving",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "spell": "vestige:arrow_volley",
+  "name": "Arrow Volley",
+  "circle": 8,
+  "color": "99aabf",
+  "rationale": "Emerald directs real arrows; String supplies the bow motif and a feather spreads their downward flight.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold evocation focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Evocation focus follows blank inscription clockwise.",
+    "Arrow motif follows evocation focus clockwise.",
+    "String motif follows arrow motif clockwise, across an unused outer Plinth.",
+    "Feather motif follows string motif clockwise, across an unused outer Plinth.",
+    "Blank inscription follows feather motif clockwise, across an unused outer Plinth."
+  ]
+}

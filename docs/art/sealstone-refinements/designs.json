@@ -1,0 +1,43 @@
+{
+  "status": "Sealstone direction preferred; owner requested more character",
+  "brief": "Retain the clean octagonal silhouette; explore one controlled addition per variant rather than restore the rejected moldings and gems.",
+  "signature": {
+    "rimmed": "A narrow eight-sided stone crown framing the rune.",
+    "engraved": "Four inset-looking carved medallions on the long sides; existing cube count unchanged.",
+    "banded": "One shallow recessed belt between two octagonal masses, with no separate footing."
+  },
+  "shared": "Same vanilla Stone Brick finish, Polished Andesite top, intact purple rune, flat scroll bed at y7/16.",
+  "scope": "Capture-only options; production models, collision, recipes and installed Prism jar unchanged.",
+  "designs": [
+    {
+      "design": "rimmed",
+      "name": "Rimmed Sealstone",
+      "capture_carrier": "vestige:spellstone",
+      "solid_cuboids": 15,
+      "flat_engraving_faces": 0,
+      "inventory_elements": 16,
+      "scroll_surface": 7,
+      "rune_height": 7.12
+    },
+    {
+      "design": "engraved",
+      "name": "Engraved Sealstone",
+      "capture_carrier": "vestige:tuff_spellstone",
+      "solid_cuboids": 7,
+      "flat_engraving_faces": 4,
+      "inventory_elements": 12,
+      "scroll_surface": 7,
+      "rune_height": 7.12
+    },
+    {
+      "design": "banded",
+      "name": "Banded Sealstone",
+      "capture_carrier": "vestige:quartz_spellstone",
+      "solid_cuboids": 21,
+      "flat_engraving_faces": 0,
+      "inventory_elements": 22,
+      "scroll_surface": 7,
+      "rune_height": 7.12
+    }
+  ]
+}

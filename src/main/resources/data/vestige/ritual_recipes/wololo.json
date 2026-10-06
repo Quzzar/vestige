@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:wololo",
+  "name": "Wololo",
+  "circle": 4,
+  "color": "bbc6f2",
+  "rationale": "Wool receives allied sustenance and Amethyst to describe a harmless change to a living sheep's appearance.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "wool motif",
+      "ingredient": {
+        "items": [
+          "minecraft:white_wool"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Ally sustenance follows resonant facet clockwise.",
+    "Wool motif follows ally sustenance clockwise.",
+    "Blank inscription follows wool motif clockwise."
+  ]
+}

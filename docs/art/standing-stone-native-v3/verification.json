@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-06",
+  "java": 21,
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "checks": [
+    "test",
+    "jar",
+    "verifyKithkynCompatibility",
+    "test_standing_stone_geometry.py",
+    "author_standing_stones.py --check",
+    "git diff --check"
+  ],
+  "unitTests": {
+    "tests": 103,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldSuiteRerunForRuneEffects": false,
+  "package": "build/standing-rune-review/vestige-0.1.0.jar",
+  "packageSha256": "a661b85020db57cdf82639544e8d4647904f81c525aa71334db2aa08ea832893",
+  "capturedTravelClassesMatchPackage": 28,
+  "capturedBodyMeshesMatchApprovedV2": 9,
+  "runeRendererClassSha256": "0b2bf73e7fd6fc23fd965cd44fe8a7f76cd4f66e3549b3b2bc3595abb25203b3",
+  "runeRendererSourceSha256": "dd0d7db0d01cddf6de2880553208c5e9bb9553ca9de2388b5fc20c3c8a9a71e0",
+  "nativeCaptureSucceeded": true,
+  "clientHeap": "2G",
+  "gradleHeap": "768M",
+  "images": {
+    "matching-key-three-finishes.png": "79a455e9c0f4aa8c82b513f0042b5b74c71b1f6a25af221f241e247be3b40a9d",
+    "runes-night-close.png": "b70265e0da66c78fec7eb5fa50aaa5828333897aafbf29e7df9b60a445f9dd4e",
+    "runes-night-decreased.png": "c3baae52a7adf17f5ac15e5c43da7c45a1e776cef17eb97448307bd177c0e9c8",
+    "runes-night-minimal.png": "5be29b2c11506fcead8760661a4e53586cc2bae7441bcf0d536cc4629a021031",
+    "shouldered-stone-close.png": "4b8825e4a73b17fd7de88dcca37a23a98793a117473dfe1f10218fd5949bc917",
+    "three-shapes-day.png": "9196b88d39bae27dca56a0d9f6bc5670f865ec17cf36abc9941864d7281cfb45",
+    "three-shapes-night.png": "658b82d519537a6f1bc0a39ebd85be5588a0d2b60654c33e0b9aa54d46b0fa9a"
+  },
+  "video": {
+    "path": "rune-drift.mp4",
+    "sha256": "3ae6f6a45bf40ca07fb390706e08297d0eac9388a65897ad65591cb84547b70d",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1920,
+    "height": 1080,
+    "duration": 5.933333,
+    "nativeFrames": 30,
+    "measuredFrameSpan": 5.838685,
+    "fullDecodePassed": true,
+    "audio": false,
+    "interpolation": false
+  },
+  "limitations": [
+    "Glow is full-bright native ink, not terrain lighting or shader bloom",
+    "Physical client inspection covers three profiles and three finishes; other finishes share the renderer and meshes",
+    "World mechanics and Prism installation are outside this client presentation change",
+    "Initial capture revealed depth speckling; foreground now uses native polygon-offset text",
+    "An unbounded-heap recorder was killed before completing the final night views; the final recording uses a bounded isolated client"
+  ]
+}

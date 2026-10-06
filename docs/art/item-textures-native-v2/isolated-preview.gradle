@@ -1,0 +1,13 @@
+// Study-only sources/assets; ordinary builds retain the existing production textures.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/item-textures-native-v2-build'))
+        project.afterEvaluate {
+            project.sourceSets.main.java.srcDir(project.file('docs/art/item-textures-native-v2/preview-source'))
+            project.sourceSets.main.resources.srcDir(project.file('docs/art/item-textures-native-v2/preview-resources'))
+            project.neoForge.runs.effectsCapture.programArguments.set(['--width', '640', '--height', '480'])
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+            project.tasks.named('runEffectsCapture').configure { maxHeapSize = '2G' }
+        }
+    }
+}

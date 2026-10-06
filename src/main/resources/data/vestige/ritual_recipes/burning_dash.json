@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:burning_dash",
+  "name": "Burning Dash",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze feeds a feather's forward motion, ending at Fire Charge to describe the burning contact trail.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Flame focus follows blank inscription clockwise.",
+    "Feather motif follows flame focus clockwise.",
+    "Firecharge motif follows feather motif clockwise.",
+    "Blank inscription follows firecharge motif clockwise."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:magma_bomb",
+  "name": "Magma Bomb",
+  "circle": 8,
+  "color": "f85b25",
+  "rationale": "Blaze heats Magma Cream and Stone; Powder and Emerald describe the lobbed blast and persistent ground field.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "magma motif",
+      "ingredient": {
+        "items": [
+          "minecraft:magma_cream"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "powder motif",
+      "ingredient": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold flame focus, powder motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Flame focus follows blank inscription clockwise.",
+    "Magma motif follows flame focus clockwise.",
+    "Stone motif follows magma motif clockwise, across an unused outer Plinth.",
+    "Powder motif follows stone motif clockwise.",
+    "Evocation focus follows powder motif clockwise.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

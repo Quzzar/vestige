@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DBD",
+    "IDI",
+    "ADA"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:chiseled_deepslate"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "B": {
+      "item": "minecraft:amethyst_block"
+    },
+    "I": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "vestige:spellstone",
+    "count": 1
+  }
+}

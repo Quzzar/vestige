@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_wooden_double",
+  "name": "Wooden Double",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Oak and Ink make the false wooden body that a protection seal sheds on a strong hit.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "oak motif",
+      "ingredient": {
+        "items": [
+          "minecraft:oak_log"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Protection seal follows blank inscription clockwise.",
+    "Ink motif follows protection seal clockwise.",
+    "Oak motif follows ink motif clockwise.",
+    "Blank inscription follows oak motif clockwise."
+  ]
+}

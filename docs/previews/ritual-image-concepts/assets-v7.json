@@ -1,0 +1,27 @@
+{
+  "mode": "built-in imagegen",
+  "promptFile": "v7-prompts.md",
+  "assets": [
+    {
+      "path": "parchment-v7.png",
+      "source": "/Users/quzzar/.codex/generated_images/01a0fe8e-212b-7190-97fd-162454bd02aa/exec-b893dbc2-1fa2-4f39-840c-309aef0d1e40.png",
+      "sha256": "08fdc873540a153b0f62358f285c66b8c9c16fd4814032ca40cb99c4dc97e359",
+      "copiedUnchanged": true,
+      "transparentBackground": false
+    },
+    {
+      "path": "plinth-v7.png",
+      "source": "/Users/quzzar/.codex/generated_images/01a0fe8e-212b-7190-97fd-162454bd02aa/exec-096bd201-952f-4edb-8651-b0a2fc7cd31d.png",
+      "sha256": "0edf40ea9130797c0545ee4cfdf375a0bb61599993ff7d4a730457c3bd8c7b44",
+      "copiedUnchanged": true,
+      "transparentBackground": true
+    },
+    {
+      "path": "spellstone-v7.png",
+      "source": "/Users/quzzar/.codex/generated_images/01a0fe8e-212b-7190-97fd-162454bd02aa/exec-358a2acd-cb3f-43ad-8404-ca16756da03a.png",
+      "sha256": "ec5ea7129ab8b8583d2a86a0c6fe39ee3cf53f8d96267e5b02454f599098edc1",
+      "copiedUnchanged": true,
+      "transparentBackground": true
+    }
+  ]
+}

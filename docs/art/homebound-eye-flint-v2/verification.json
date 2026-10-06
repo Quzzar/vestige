@@ -1,0 +1,87 @@
+{
+  "jar": "/Users/quzzar/Projects/vestige/build/homebound-eye-flint/vestige-0.1.0.jar",
+  "jar_sha256": "476cdafedfda3f838c9328f60f41e12d1adf13f865085f97d2e3930cbd6b0bc4",
+  "build": "pass",
+  "kithkyn_compatibility": "pass",
+  "unit_tests": {
+    "tests": 105,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "minecraft_behavior_tests": {
+    "suite": "Focused Homebound Eye crafting, cancellation, payments, rejection/fallback, XP cancellation and dimensions",
+    "passed": 6,
+    "failed": 0,
+    "full_native_suite_repeated": false
+  },
+  "texture": {
+    "source_size": [
+      16,
+      16
+    ],
+    "generated_art_source": "homebound-eye-flint-red-teal.png",
+    "export": "nearest neighbor game-resource export",
+    "homebound_mip_limit_warning_in_final_client": false
+  },
+  "files": {
+    "assets/vestige/textures/item/homebound_eye.png": {
+      "sha256": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+      "matches_source": true
+    },
+    "assets/vestige/models/item/homebound_eye.json": {
+      "sha256": "8fc7d212c11406603c7b5117c499dbc54095277b31712b484c83cce70af0145a",
+      "matches_source": true
+    },
+    "com/quzzar/vestige/apparatus/HomeboundEyeRecipe.class": {
+      "matches_compiled_output": true,
+      "sha256": "d0d22eb48b820b672820a2e527a6e99fad78b5e5b75ca61c774a5e3860b14bcd"
+    },
+    "com/quzzar/vestige/magic/world/client/NativeManaCapture.class": {
+      "matches_compiled_output": true,
+      "sha256": "73f2e59e38fe4a2e7dfd2e8e9fe6bae0d6eea54038672e4263c469e8360dfb84"
+    }
+  },
+  "native_capture": {
+    "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+    "checks": [
+      {
+        "mana": 100.0,
+        "barVisible": false,
+        "guiScale": 4,
+        "view": "flint-scale-four"
+      },
+      {
+        "mana": 100.0,
+        "barVisible": false,
+        "guiScale": 2,
+        "view": "flint-scale-two"
+      }
+    ],
+    "source": "Minecraft main render target"
+  },
+  "frames": [
+    {
+      "name": "flint-scale-four",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "4948479d2d94e689aafb6de29955469ff04e37b0d87badce511e8c7346d46ab5",
+      "visually_inspected": true
+    },
+    {
+      "name": "flint-scale-two",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "aa4a45e958d7e6d8d7ec9b8d70e6ab62020f636ba5347ca424c713fc19e05ec2",
+      "visually_inspected": true
+    }
+  ],
+  "limitations": [
+    "Appearance inspected in the isolated native client; no Prism or remote multiplayer installation.",
+    "Final sprite is a faithful 16-pixel export; original imagegen artwork and prompts are retained."
+  ]
+}

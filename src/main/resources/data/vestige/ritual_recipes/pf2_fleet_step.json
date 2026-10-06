@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_fleet_step",
+  "name": "Fleet Step",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "Allied sustenance, a feather and Copper's speed association describe a brief burst of movement.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    }
+  ],
+  "clues": [
+    "Ally sustenance follows blank inscription clockwise.",
+    "Feather motif follows ally sustenance clockwise.",
+    "Lightning channel follows feather motif clockwise.",
+    "Blank inscription follows lightning channel clockwise."
+  ]
+}

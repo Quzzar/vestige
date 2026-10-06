@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-06",
+  "jar": "/Users/quzzar/Projects/vestige/build/standing-list-review/vestige-0.1.0.jar",
+  "jarSha256": "da405fb78ffbcf411f688a2df5e39bdaebc5705cf2c9caa2fe2cf35e47896f6e",
+  "zipIntegrity": true,
+  "unitTests": {
+    "tests": 105,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "standingStoneWorldTests": {
+    "required": 15,
+    "failed": 0
+  },
+  "nativeChecks": 8,
+  "guiSizes": [
+    [
+      640,
+      360
+    ],
+    [
+      480,
+      270
+    ]
+  ],
+  "framebuffer": [
+    1920,
+    1080
+  ],
+  "screenshotsInspected": [
+    "last-page.png",
+    "list-narrow.png",
+    "list-wide.png",
+    "only-current-stone.png",
+    "renamed-wide.png",
+    "second-page.png"
+  ],
+  "screenshotSha256": {
+    "list-narrow.png": "a8fd18419b1a5c44726fd5911fb4579901d28e38b7aa03ebd5ca3bfcc2510320",
+    "list-wide.png": "c7266cd7b25e55402e6d77bae99cf6c145c2b4c03bb4255fff4bd5a148345d5d",
+    "second-page.png": "fa5f3a37c66922645d592abc2a38a9e958600f4eefa8e9b6a3174868903347f3",
+    "last-page.png": "f6e57ca3fc2708a6a30230e7e53bbc1c38f2a8056b088eb0d07ae6d5edd2ebaa",
+    "only-current-stone.png": "27be657eace6d002f8aa74bca9e01a58e161aabf9c13092be9e3e5d3ace98ba5",
+    "renamed-wide.png": "9175290a7abaf54c923e3614311ed0dddc979ab7567547a94651df2ead432fbf"
+  },
+  "loadedClassSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "619ebd6e5c22cf0407541b35c11c67878f52f1bba212c768b741299108b4a7d8",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "ff37eba43f5b14fd5712c5c6da348387e5d783b4bdecf7be70cc8382527bedb1",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "8518fe88f0b459294f826425146caaf7d61774998565ec89a2d4804e5273badf",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "1543258c7228313066fa1bb07e05ae8fd97223c256cff760f67953db1f55a445",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "329afab4bb7721eae6f67b0e1181c3ef255246b947ac44db6dcd30b065e250b4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "f88875b4ecf9622420ac999e666d6da2af100b312da717808efb86823c10d53d",
+    "com/quzzar/vestige/travel/StoneTravel.class": "6ceb6c96816b211cd97d9c7fba97e6558561a75f1e180064a031f9a646fc542f",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "0602c1e23f3d2190369a35d9b73411d4e65bacc46fc5a9b46db47290be614bd8"
+  },
+  "packagedResourcesMatchSource": 2891,
+  "approvedApparatusColorsParity": true,
+  "approvedApparatusModelsParity": 252,
+  "gameplayClassParityAfterCountLabelCorrection": true,
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneRecipe.java": "66620df661adba9dfba7627a863382061368721881451ba196f2048794f5d9d9",
+    "src/main/java/com/quzzar/vestige/travel/NearbyTeleportTest.java": "d7e75792ddf57dcc7fb0bbe1152ebb0e4acc24d4a0d16fa910433f4ca4e1290c",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneBlock.java": "0815d1f40e219db69049c764cad75c2a0f50863b8c54294a76de75a71ff76cba",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneShape.java": "5a38794f8b8cd4791292fa12a86cddee1090260908d4cff5ee21465fbbb5dbd5",
+    "src/main/java/com/quzzar/vestige/travel/StoneNetwork.java": "b03f21191197ec1b2bb3376aa0499669973388027156854751e198261ebfdd42",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneEntity.java": "2a842129662b39c2e75cd25a3fa03b494d0ac8713c4ca291b48d54b46fd76b3d",
+    "src/main/java/com/quzzar/vestige/travel/StoneTravel.java": "b955e3c5d33bb584a793dba29747d4c7a11307445eadb1bed7ce7b656667e8ff",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java": "6f280d49299425b620892b1a6e950ec17ac5540685fd5a98749e9fbdc0e6f800",
+    "src/main/java/com/quzzar/vestige/travel/StoneTravelPayloads.java": "a97a1c624e043c78f049f1020851010bf7103b0179abe94621a50db7b1451bd5",
+    "src/main/java/com/quzzar/vestige/travel/PlayerExperience.java": "6da601d5b4355b5fba43dc0c49507940c3286c89a3fe764575a0d9858991c487",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneCollision.java": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+    "src/main/java/com/quzzar/vestige/travel/StoneDirectory.java": "d00bc0a059a6f593adc02762cb1ba7fa7a64ca0c2ab34b064c5f15f4ae4c2f7a",
+    "src/main/java/com/quzzar/vestige/travel/NearbyTeleport.java": "00bfccb654f0b65a1ecda7ef9999e4d4f9422e5ab79d9641235f319c8eaadf29",
+    "src/main/java/com/quzzar/vestige/travel/StandingStones.java": "495dc552809a5f58977906c29c3ec31f20a1b8c7d2fa0c7041d823a4616fc445",
+    "src/main/java/com/quzzar/vestige/travel/client/NativeStandingStoneModelCapture.java": "61df702f0c920fba0fbc667ce23bce72eb2316dea5f09e98fe4f3222e57895ce",
+    "src/main/java/com/quzzar/vestige/travel/client/StandingStoneRenderer.java": "1bd92e64dadb82999668d38c666c01c52bb3b7fe5bf80a8f2a3376ca57c9d143",
+    "src/main/java/com/quzzar/vestige/travel/client/StandingStoneClient.java": "dc3161e98d2ecc342eee088c1fd83065b1af5364b140093bdefc5b17f58316b7",
+    "src/main/java/com/quzzar/vestige/travel/client/StoneNetworkScreen.java": "1ce2eb5bf5051ee72d572d3cd7c73ca53ff0328806ed981c666adb3e9e99a64c",
+    "src/main/java/com/quzzar/vestige/travel/client/NativeStoneCapture.java": "acdcf0056e0d39f19c56fae70a5e0724f10973d33f9cadcc3bc3330197a18f18"
+  },
+  "limits": [
+    "Native UI inspection uses an integrated server; remote multiplayer was not captured.",
+    "Travel is tested by world behavior assertions; this menu gallery does not record a trip.",
+    "Standing Stone payment selection and distance pricing remain unfinished.",
+    "No Atlas, Surveyor or Waystones adapter/dependency is implemented.",
+    "The full world-test suite was not repeated; Standing Stone tests are the targeted gameplay checks.",
+    "The final UI-only singular-count correction was recompiled and inspected natively; the server payload/identity classes are byte-identical to the earlier passing checks."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "installed_at_utc": "2026-10-05T16:03:33.951373+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "c8215e2715e27fbff3f390353abff3ee6908725d1656b196fa0d0ee91af1ba75",
+  "destination_sha256": "c8215e2715e27fbff3f390353abff3ee6908725d1656b196fa0d0ee91af1ba75",
+  "previous_sha256": "baad9b14765d0a1a503e697cba8fa41556dd3f5db5a920c9a75ad0102d979028",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-variants.jar",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "prism_instance": "Kithkyn Testing",
+  "prism_neoforge": "21.1.248",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_gecko_grip",
+  "name": "Gecko Grip",
+  "circle": 4,
+  "color": "4bba6b",
+  "rationale": "Slime's adhesion binds Nature focus to the Leather body for wall climbing.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 1,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Leather motif follows blank inscription clockwise.",
+    "Nature focus follows leather motif clockwise.",
+    "Slime motif follows nature focus clockwise.",
+    "Blank inscription follows slime motif clockwise."
+  ]
+}

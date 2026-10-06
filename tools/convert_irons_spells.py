@@ -174,7 +174,7 @@ recipe('oakskin', [buff(200,bindings=[oak])], ['wood','abjuration'], 'Reduce up 
 recipe('earthquake', [aim(24,field(120,5,near(5,damage(2),status('slowness',25)),particle='crit',interval=10))], ['earth','evocation'], 'A ground field repeatedly damages and slows creatures.')
 recipe('stomp', [each(target('cone',rng(8),'hostile',False,angle=35),damage(8),action('knockback',strength=1,up=.5))], ['earth','evocation','motion'], 'A forward ground wave damages and launches enemies.')
 gluttony = binding('gluttony','item_use_finished',[self_(action('food_mana',amount=mul(6,fact('event/food_nutrition'))))],200,3)
-recipe('gluttony', [buff(200,bindings=[gluttony])], ['life','transmutation'], 'Up to three foods consumed within ten seconds convert nutrition into native spell energy, capped at 200.', 'Temporary actor energy is a runtime resource seam; no discovery or progression system is installed.')
+recipe('gluttony', [buff(200,bindings=[gluttony])], ['life','transmutation'], 'Up to three foods consumed within ten seconds convert nutrition into native mana, capped at 100.', 'Uses the native player mana pool; capacity progression remains deferred.')
 recipe('touch_dig', [each(target('block_ray',rng(8)),action('break_block',hardness=10))], ['earth','transmutation'], 'Break a hardness-limited aimed block using the held tool and normal drops.')
 
 # Eldritch: perception, force, causal beams, and an owned private dimension.

@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:arcane_shackle",
+  "name": "Arcane Shackle",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender focus fixes an anchor, Chain tethers the victim, and protective stonework contains the moving body.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 6,
+      "role": "chain motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chain"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 3,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 2,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold protection seal, passage focus; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Obsidian motif follows blank inscription clockwise, across an unused outer Plinth.",
+    "Protection seal follows obsidian motif clockwise.",
+    "Bound metal follows protection seal clockwise.",
+    "Chain motif follows bound metal clockwise, across an unused outer Plinth.",
+    "Passage focus follows chain motif clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

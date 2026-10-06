@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/plinth_cap"
+    }
+  }
+}

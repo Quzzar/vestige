@@ -1,0 +1,26 @@
+{
+  "installedAt": "2026-10-05T10:57:57.322338+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "baad9b14765d0a1a503e697cba8fa41556dd3f5db5a920c9a75ad0102d979028",
+  "previousSha256": "7ea657e413eae9aca2eeb0bd44ade89d61dfd3f6bbfc14a1688e72b4415ee64d",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-attunement-six.jar",
+  "instance": "Kithkyn Testing",
+  "minecraft": "1.21.1",
+  "automatedNeoForge": "21.1.72",
+  "prismNeoForge": "21.1.248",
+  "shardRecipe": {
+    "amethyst_shard": 2,
+    "echo_shard": 1,
+    "iron_ingot": 1,
+    "diamond": 1,
+    "lapis_lazuli": 1
+  },
+  "apparatusNodes": 8,
+  "emptyOfferingSeats": 2,
+  "verification": {
+    "unitTests": 82,
+    "minecraftTests": 135,
+    "clientCaptureKind": "ritual_attunement"
+  }
+}

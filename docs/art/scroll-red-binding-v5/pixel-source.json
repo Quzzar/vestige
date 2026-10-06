@@ -1,0 +1,96 @@
+{
+  "palette": {
+    "A": "#00000000",
+    "B": "#791c27ff",
+    "C": "#a82c47ff",
+    "D": "#17050500",
+    "E": "#d2443fff",
+    "F": "#26080900",
+    "G": "#380c0d00",
+    "H": "#55131300",
+    "I": "#5b5b5b00",
+    "J": "#65171700",
+    "K": "#99999900",
+    "L": "#a06d0000",
+    "M": "#a58747ff",
+    "N": "#b1790c00",
+    "O": "#b7b7b700",
+    "P": "#c9bb8900",
+    "Q": "#cab374ff",
+    "R": "#d6d6d600",
+    "S": "#eaddae00",
+    "T": "#edeeb6ff"
+  },
+  "rows": [
+    "AAAAAAAAAAAAAAAA",
+    "AAAAAAAAFFFAAAAA",
+    "AAAAAAFFJJJFAPPA",
+    "AAAAFFJJJGJPPPSP",
+    "AAFFJJJGJPPMMMPP",
+    "FFJJJGPJJMMTTTMP",
+    "FHPPPPMEEETTTQMP",
+    "FPMMMMTQEECQQQMI",
+    "FMQTMTTTQCCMMMKI",
+    "DMMMQMTQQBBKOKGD",
+    "AMTMQMQMMKKOGGDD",
+    "NNMTTMMOKOGGDDAA",
+    "ALAMMRKKGGDDAAAA",
+    "AAAADHGGDDAAAAAA",
+    "AAAAADDDAAAAAAAA",
+    "AAAAAAAAAAAAAAAA"
+  ],
+  "status": "owner-selected native texture; not installed",
+  "dimensions": [
+    16,
+    16
+  ],
+  "changedPixels": [
+    [
+      7,
+      6
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      9
+    ]
+  ],
+  "changedPixelCount": 10,
+  "sourceGitBlob": "13d56d1bad50f42b6283d9041ad4eacd01c3a572",
+  "sourceSha256": "71c1d3028af3d9debf869635fd61e506c1681ed0ee6f11cedd12e94c23653d00",
+  "sha256": "f1837f6809a109430241c2afc64308a34f7bf65c69799af0048003265ad48aac",
+  "attribution": "Electroblob; binding recolor for Vestige by Quzzar/Codex",
+  "license": "../../../LICENSE.md",
+  "generation": "Literal native RGBA grid; generated enlarged preview excluded"
+}

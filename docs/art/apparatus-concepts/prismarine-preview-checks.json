@@ -1,0 +1,49 @@
+{
+  "minecraft_version": "1.21.1",
+  "material_count": 36,
+  "all_materials_have_stairs_and_slabs": true,
+  "animation_sampling": {
+    "prismarine-stone": {
+      "repeat": [
+        1.0,
+        0.25
+      ],
+      "offset": [
+        0.0,
+        0.75
+      ]
+    },
+    "prismarine-carving": {
+      "repeat": [
+        1.0,
+        0.25
+      ],
+      "offset": [
+        0.0,
+        0.75
+      ]
+    },
+    "prismarine-trim": {
+      "repeat": [
+        1.0,
+        0.25
+      ],
+      "offset": [
+        0.0,
+        0.75
+      ]
+    }
+  },
+  "prismarine_bricks_body_carving_trim": "minecraft:block/prismarine_bricks",
+  "browser_views_checked": [
+    "prismarine_three_quarter",
+    "prismarine_bricks_three_quarter",
+    "prismarine_bricks_top"
+  ],
+  "browser_error_logs": [],
+  "captures": [
+    "review-prismarine-corrected.png",
+    "review-prismarine-bricks-corrected.png"
+  ],
+  "scope": "Browser preview and review exports; native integration owned by the other chat."
+}

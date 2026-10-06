@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:slow",
+  "name": "Slow",
+  "circle": 4,
+  "color": "c9beff",
+  "rationale": "A Clock meets Amethyst and sticky Slime in reversed order to retard movement and work.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Resonant facet follows slime motif clockwise.",
+    "Clock motif follows resonant facet clockwise.",
+    "Blank inscription follows clock motif clockwise."
+  ]
+}

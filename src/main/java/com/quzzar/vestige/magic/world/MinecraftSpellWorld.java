@@ -30,6 +30,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
     final MinecraftServer server;
     final Map<UUID, UUID> owners = new HashMap<>();
     final Map<UUID, CausalChain> causedEntities = new HashMap<>();
+    private final Map<UUID, WeakReference<Entity>> returnedProjectiles = new HashMap<>();
     private final Map<UUID, WeakReference<LivingEntity>> actors = new HashMap<>();
     final SpellActions actions;
     private final SpellManifestations manifestations;
@@ -49,8 +50,12 @@ public final class MinecraftSpellWorld implements SpellWorld {
                 || source.is(net.minecraft.tags.DamageTypeTags.WITCH_RESISTANT_TO);
     }
     public CausalChain cause(Entity source) {
-        return source != null && causedEntities.containsKey(source.getUUID()) ? causedEntities.get(source.getUUID())
-                : executingCause == null ? CausalChain.start() : executingCause;
+        if(executingCause!=null)return executingCause;
+        return source!=null && causedEntities.containsKey(source.getUUID()) ? causedEntities.get(source.getUUID()) : CausalChain.start();
+    }
+    void returnedProjectile(Entity projectile,CausalChain cause) {
+        causedEntities.put(projectile.getUUID(),cause);
+        returnedProjectiles.put(projectile.getUUID(),new WeakReference<>(projectile));
     }
     Entity entity(UUID id) {
         WeakReference<LivingEntity> reference = actors.get(id);
@@ -114,7 +119,9 @@ public final class MinecraftSpellWorld implements SpellWorld {
                 if (path.equals(ConditionPaths.SOURCE_ITEM)) return identifier(BuiltInRegistries.ITEM.getKey(caster.getMainHandItem().getItem()));
                 if (path.equals(ConditionPaths.SOURCE_COUNT)) return decimal(caster.getMainHandItem().getCount());
                 if (path.equals(ConditionPaths.SOURCE_CUSTOM_NAME) && caster.getMainHandItem().has(net.minecraft.core.component.DataComponents.CUSTOM_NAME)) return Optional.of(new ConditionValue.Text(caster.getMainHandItem().getHoverName().getString()));
-                if (path.equals(ConditionPaths.ACTOR_MANA)) return decimal(caster.getPersistentData().getDouble("vestige:mana"));
+                if (path.equals(ConditionPaths.ACTOR_MANA)) return decimal(NativeMana.amount(caster));
+                if (path.equals(ConditionPaths.ACTOR_MAX_MANA)) return decimal(NativeMana.MAX);
+                if (path.equals(ConditionPaths.ACTOR_MANA_PERCENT)) return decimal(NativeMana.amount(caster) / NativeMana.MAX);
                 if (path.equals(ConditionPaths.TARGET_ENTITY_TYPE) && subject != null) return identifier(BuiltInRegistries.ENTITY_TYPE.getKey(subject.getType()));
                 if (path.equals(ConditionPaths.TARGET_HEALTH) && subject instanceof LivingEntity living) return decimal(living.getHealth());
                 if (name.equals("vestige:target/max_health") && subject instanceof LivingEntity living) return decimal(living.getMaxHealth());
@@ -151,7 +158,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
     }
     @Override public List<SpellSubject> select(TargetSpec spec, SpellRuntime.Context context) {
         LivingEntity caster = actor(context); if (caster == null) return List.of();
-        double distance = context.number(spec.distance());
+        double distance = context.amount(context.number(spec.distance()));
         if (distance < 0 || distance > 128) throw new IllegalArgumentException("Target distance must be between 0 and 128");
         ServerLevel level = (ServerLevel) caster.level(); Vec3 start = caster.getEyePosition(); Vec3 end = start.add(caster.getLookAngle().scale(distance));
         BlockHitResult blockHit = level.clip(new ClipContext(start, end, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, caster));
@@ -215,7 +222,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
         }
     }
     private static double option(TargetSpec spec, SpellRuntime.Context context, String key, double fallback) {
-        return spec.options().containsKey(key) ? context.number(spec.options().get(key)) : fallback;
+        return spec.options().containsKey(key) ? context.gameplayValue(key,spec.options().get(key)) : fallback;
     }
     @Override public boolean pay(List<SpellCost> costs, SpellRuntime.Context context) {
         LivingEntity caster = actor(context); if (caster == null) return false;
@@ -241,10 +248,10 @@ public final class MinecraftSpellWorld implements SpellWorld {
                 }
             }
         }
-        if (!Double.isFinite(health) || caster.getHealth() <= health || !Double.isFinite(mana) || caster.getPersistentData().getDouble("vestige:mana") < mana || hunger > 0 && (!(caster instanceof Player p) || p.getFoodData().getFoodLevel() < hunger)) return false;
+        if (!Double.isFinite(health) || caster.getHealth() <= health || !Double.isFinite(mana) || NativeMana.amount(caster) < mana || hunger > 0 && (!(caster instanceof Player p) || p.getFoodData().getFoodLevel() < hunger)) return false;
         if (caster instanceof Player p) for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
         if (health > 0) caster.setHealth((float) (caster.getHealth() - health));
-        if (mana > 0) caster.getPersistentData().putDouble("vestige:mana", caster.getPersistentData().getDouble("vestige:mana") - mana);
+        if (mana > 0) NativeMana.spend(caster, mana);
         if (hunger > 0 && caster instanceof Player p) p.getFoodData().setFoodLevel(p.getFoodData().getFoodLevel() - (int) hunger);
         return true;
     }
@@ -302,6 +309,11 @@ public final class MinecraftSpellWorld implements SpellWorld {
     public void tick() {
         visuals.tick();
         features.tickAnimations();
+        returnedProjectiles.entrySet().removeIf(entry->{
+            Entity projectile=entry.getValue().get();
+            if(projectile!=null && !projectile.isRemoved())return false;
+            causedEntities.remove(entry.getKey());return true;
+        });
         for (var entry : List.copyOf(owners.entrySet())) {
             if (!(entity(entry.getKey()) instanceof Mob minion) || !(entity(entry.getValue()) instanceof LivingEntity owner)) continue;
             if (minion.getTarget() != null && ally(owner, minion.getTarget())) minion.setTarget(null);
@@ -322,7 +334,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
                         && e.getAllSlots().iterator().hasNext()
                         && java.util.stream.StreamSupport.stream(e.getAllSlots().spliterator(), false).anyMatch(ItemStack::isEnchanted)).size() > 0;
     }
-    public void close() { magicHandles.clear(); features.close(); visuals.close(); actions.close(); }
+    public void close() { magicHandles.clear(); features.close(); visuals.close(); actions.close(); returnedProjectiles.clear(); causedEntities.clear(); }
     private static Optional<ConditionValue> decimal(double value) { return Optional.of(new ConditionValue.Decimal(value)); }
     private static Optional<ConditionValue> flag(boolean value) { return Optional.of(new ConditionValue.Flag(value)); }
     private static Optional<ConditionValue> identifier(ResourceLocation value) { return Optional.of(new ConditionValue.Identifier(value)); }

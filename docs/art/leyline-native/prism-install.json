@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-04T23:59:35.548166+00:00",
+  "instance": "Kithkyn Testing",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "4845bd0e55075143c81976992c54cfa92f18842244decd172ddcf7e572f06fc5",
+  "previous_sha256": "6fa6b757f165edbb152e15b88202147d7c3cc1a308a7c55fff46eea71f0116de",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "stage": "Fresh-world-only Spellstone/Plinth leyline system. Legacy IDs, arbitrary old augmentation and migrations removed; old test worlds/backups deleted."
+}

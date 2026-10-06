@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:evasion",
+  "name": "Evasion",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Ender passage stands between a recovery membrane and a protection seal, describing a single escape from a hit.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 1,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Protection seal follows blank inscription clockwise.",
+    "Recovery veil follows protection seal clockwise.",
+    "Passage focus follows recovery veil clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-06",
+  "java": 21,
+  "build": "passed",
+  "kithkynCompatibility": "passed",
+  "unitTests": {
+    "tests": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeCapture": "passed",
+  "inspectedFrame": 20,
+  "tooltip": "Attunement Shard followed by bare colored rune signature",
+  "hoverLabelsCodeHintsBlueprintRemoved": true,
+  "source": "unchanged Minecraft framebuffer image",
+  "imageSha256": "a3d69550786e020028d83e08b2cd4af0dc62ce194aa6ab7437dec0648c333aa9",
+  "jarSha256": "0b046ab85b871d57b946c1867dc0db9e6a89a99741c9a36084e8a1512636e364",
+  "loadedAssetsMatchSourceAndJar": true,
+  "spritesModelsKeysAndGlintMatchPreviousCapture": true,
+  "worldTests": "not rerun; tooltip-only change",
+  "prismInstallation": "unchanged"
+}

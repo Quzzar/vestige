@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:scapegoat",
+  "name": "Scapegoat",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Wool marks the animal decoy, dark Ink its false body, and Amethyst its attracting illusion.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "wool motif",
+      "ingredient": {
+        "items": [
+          "minecraft:white_wool"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Ink motif follows resonant facet clockwise.",
+    "Wool motif follows ink motif clockwise.",
+    "Blank inscription follows wool motif clockwise."
+  ]
+}

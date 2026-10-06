@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_cinder_swarm",
+  "name": "Cinder Swarm",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze lights Honeycomb's swarm and String binds that swarm to its chosen target.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "String motif follows blank inscription clockwise.",
+    "Honey motif follows string motif clockwise.",
+    "Flame focus follows honey motif clockwise.",
+    "Blank inscription follows flame focus clockwise."
+  ]
+}

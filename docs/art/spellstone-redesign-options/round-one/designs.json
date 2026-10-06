@@ -1,0 +1,41 @@
+{
+  "status": "Three alternatives requested after owner rejected the detailed Spellstone",
+  "rejected": "The many-piece altar, square footing and subsequent clipped-foot edit still looked bad in game. These start from new silhouettes.",
+  "constraints": "Half-block scale, broad flat scroll bed at y7/16, original intact rune overlay, vanilla Stone Brick/carved textures. No tiers, bevels, miniature gems or extra animation.",
+  "scope": "Three existing registered variants act as carriers in one isolated resource pack; all preview textures use Stone Bricks. Production resources and Prism jar are untouched.",
+  "designs": [
+    {
+      "design": "tablet",
+      "name": "Runic Tablet",
+      "capture_carrier": "vestige:spellstone",
+      "finish": "Stone Bricks for all options",
+      "solid_cuboids": 5,
+      "inventory_elements": 6,
+      "rune_height": 7.12,
+      "scroll_surface": 7,
+      "role": "Capture-only art candidate; collision/production integration awaits owner choice."
+    },
+    {
+      "design": "altar",
+      "name": "Twin-Pier Altar",
+      "capture_carrier": "vestige:tuff_spellstone",
+      "finish": "Stone Bricks for all options",
+      "solid_cuboids": 7,
+      "inventory_elements": 8,
+      "rune_height": 7.12,
+      "scroll_surface": 7,
+      "role": "Capture-only art candidate; collision/production integration awaits owner choice."
+    },
+    {
+      "design": "seal",
+      "name": "Sealstone",
+      "capture_carrier": "vestige:quartz_spellstone",
+      "finish": "Stone Bricks for all options",
+      "solid_cuboids": 7,
+      "inventory_elements": 8,
+      "rune_height": 7.12,
+      "scroll_surface": 7,
+      "role": "Capture-only art candidate; collision/production integration awaits owner choice."
+    }
+  ]
+}

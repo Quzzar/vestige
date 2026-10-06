@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/cobblestone_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/cobblestone_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/cobblestone_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/cobblestone_spellstone"
+    }
+  }
+}

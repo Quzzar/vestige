@@ -1,0 +1,105 @@
+{
+  "spell": "vestige:heartstop",
+  "name": "Heartstop",
+  "circle": 8,
+  "color": "c92551",
+  "rationale": "Draining focus and a Clock delay harm behind warded Iron; living light, decay and Echo describe the eventual reckoning.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 6,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 4,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 3,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold lost echo, living light, protection seal, draining focus; the other required ingredients use Inner Plinths.",
+    "Lost echo follows blank inscription clockwise.",
+    "Enemy decay follows lost echo clockwise.",
+    "Living light follows enemy decay clockwise.",
+    "Bound metal follows living light clockwise.",
+    "Protection seal follows bound metal clockwise.",
+    "Clock motif follows protection seal clockwise.",
+    "Draining focus follows clock motif clockwise.",
+    "Blank inscription follows draining focus clockwise."
+  ]
+}

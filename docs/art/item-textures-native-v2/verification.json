@@ -1,0 +1,307 @@
+{
+  "verified_utc": "2026-10-06T19:32:55.115911+00:00",
+  "engine": "Minecraft Java 1.21.1 / NeoForge 21.1.72",
+  "checks": {
+    "author_drift": "PASS",
+    "pixel_grid_binary_alpha_full_padding_one_connected_silhouette": "PASS",
+    "isolated_compile_resources_native_capture": "PASS",
+    "28_loaded_assets_match_sources": "PASS",
+    "10_native_model_resolutions_match_variants": "PASS",
+    "five_native_screens_inspected": "PASS"
+  },
+  "variants": [
+    {
+      "id": "eye_a_soft_flint",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        2,
+        15,
+        14
+      ],
+      "opaque_colors": 10,
+      "opaque_pixels": 92,
+      "sha256": "87f460614022fb81bedd2b3b59405a7fcd919a8379d49cedcbc81d366d635716"
+    },
+    {
+      "id": "eye_b_dark_pebble",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        2,
+        15,
+        13
+      ],
+      "opaque_colors": 10,
+      "opaque_pixels": 98,
+      "sha256": "71b173c3697b0b7694a3871e0a48a0c257d3312548150694ff92d15fd393b38c"
+    },
+    {
+      "id": "eye_c_chipped_face",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        3,
+        15,
+        13
+      ],
+      "opaque_colors": 10,
+      "opaque_pixels": 83,
+      "sha256": "cf5377407cc0d5930cf6fa29fe3afff5d3641beb8a4bb54d25425cc6727efc5f"
+    },
+    {
+      "id": "eye_d_simple_talisman",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        2,
+        15,
+        14
+      ],
+      "opaque_colors": 10,
+      "opaque_pixels": 108,
+      "sha256": "3d84ff56001240dc10724c1119b5bf93081a1fd9f88879cb24460d407648c0f3"
+    },
+    {
+      "id": "shell_a_soft_ash",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        15,
+        15
+      ],
+      "opaque_colors": 8,
+      "opaque_pixels": 95,
+      "sha256": "688aa6a83e577ce2958fa3ea22b37096539e333a6426e956a3b5f9d6b6ed7770"
+    },
+    {
+      "id": "shell_b_compact_conch",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        2,
+        15,
+        14
+      ],
+      "opaque_colors": 6,
+      "opaque_pixels": 90,
+      "sha256": "423fc9730e3de01b84759a29fd058a2e8f4e57da37a3a71a66ab8451a7175685"
+    },
+    {
+      "id": "shell_c_slate",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        2,
+        15,
+        15
+      ],
+      "opaque_colors": 7,
+      "opaque_pixels": 95,
+      "sha256": "b1dfaec533c548b9996ab53cac14490c46548bd7b03b29d88c280e4242a53e66"
+    },
+    {
+      "id": "shell_d_deep_dusk",
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        3,
+        1,
+        15,
+        14
+      ],
+      "opaque_colors": 6,
+      "opaque_pixels": 99,
+      "sha256": "f5bf59f10dfafc6a07af7d4845e8ecffe326b5a781679bdec5b54903ebdbf7e2"
+    }
+  ],
+  "screens": {
+    "gui-2.png": {
+      "sha256": "86de77b9dd837b3e93351d6c945ae43239969d031e2a63d68f66b6551d41556d",
+      "size": [
+        1280,
+        960
+      ],
+      "visually_inspected": true,
+      "type": "Actual vanilla ContainerScreen"
+    },
+    "gui-3.png": {
+      "sha256": "cb265f189a06e4e125fb82dcffd03eca3401e189355e7444edb71cee90c8949a",
+      "size": [
+        1280,
+        960
+      ],
+      "visually_inspected": true,
+      "type": "Actual vanilla ContainerScreen"
+    },
+    "eye-hover.png": {
+      "sha256": "c8946e6dac39a2becb6c53f0d4c91fdd6cd6af3811b8e546f518f9a8cd1ebe70",
+      "size": [
+        1280,
+        960
+      ],
+      "visually_inspected": true,
+      "type": "Actual vanilla ContainerScreen"
+    },
+    "shell-hover.png": {
+      "sha256": "70107138e6a1fe91c051064f435bb78fb01ff6230bd281265a55a0a3e76c0d66",
+      "size": [
+        1280,
+        960
+      ],
+      "visually_inspected": true,
+      "type": "Actual vanilla ContainerScreen"
+    },
+    "close-ups.png": {
+      "sha256": "aca787fa771912fd37203c86778da60172ccf122e5e0627afedafdeb17c009a0",
+      "size": [
+        1280,
+        960
+      ],
+      "visually_inspected": true,
+      "type": "Native item-renderer close-ups"
+    }
+  },
+  "actual_loaded_assets_sha256": {
+    "vestige:textures/item/eye_a_soft_flint.png": "87f460614022fb81bedd2b3b59405a7fcd919a8379d49cedcbc81d366d635716",
+    "vestige:models/item/eye_a_soft_flint.json": "d86ba3b0825c76343b60738cf439706b38363ba0a3eaf6da4a58010d5fef9b3d",
+    "vestige:textures/item/eye_b_dark_pebble.png": "71b173c3697b0b7694a3871e0a48a0c257d3312548150694ff92d15fd393b38c",
+    "vestige:models/item/eye_b_dark_pebble.json": "b7ef431379f9c6d5c27092e121c53c6969c03f939ea8929b2a9b8c2681037ef8",
+    "vestige:textures/item/eye_c_chipped_face.png": "cf5377407cc0d5930cf6fa29fe3afff5d3641beb8a4bb54d25425cc6727efc5f",
+    "vestige:models/item/eye_c_chipped_face.json": "5424ce598eec99636bffc7ea03b69be839b35f816f2b679e38afd9eaf5544cc4",
+    "vestige:textures/item/eye_d_simple_talisman.png": "3d84ff56001240dc10724c1119b5bf93081a1fd9f88879cb24460d407648c0f3",
+    "vestige:models/item/eye_d_simple_talisman.json": "027c042912306314e7d6e68f7d93afa1825fc3ea02db565765836368719c53d9",
+    "vestige:textures/item/shell_a_soft_ash.png": "688aa6a83e577ce2958fa3ea22b37096539e333a6426e956a3b5f9d6b6ed7770",
+    "vestige:models/item/shell_a_soft_ash.json": "c243edc92b79af510b66a2af283adcc90ac9404408e035b4ce29dad38b4e8e3f",
+    "vestige:textures/item/shell_b_compact_conch.png": "423fc9730e3de01b84759a29fd058a2e8f4e57da37a3a71a66ab8451a7175685",
+    "vestige:models/item/shell_b_compact_conch.json": "3a0e699a322fe88731f46721495e4c20c660bb7b43ccf6d5218c24c5c2163370",
+    "vestige:textures/item/shell_c_slate.png": "b1dfaec533c548b9996ab53cac14490c46548bd7b03b29d88c280e4242a53e66",
+    "vestige:models/item/shell_c_slate.json": "569e23f898e86f0382b2eaaf5559213456eb5fe620d9404242f7ff7232f861d5",
+    "vestige:textures/item/shell_d_deep_dusk.png": "f5bf59f10dfafc6a07af7d4845e8ecffe326b5a781679bdec5b54903ebdbf7e2",
+    "vestige:models/item/shell_d_deep_dusk.json": "e539b62b929fc757adcdf6960b004c6217d0d37f31d75023f7789da826784a8b",
+    "vestige:textures/item/previous_eye.png": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+    "vestige:models/item/previous_eye.json": "fcdfe002311f7d58ab65b71bcb020783bc1db124da42c1a69d3557a32f017252",
+    "vestige:textures/item/previous_shell.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "vestige:models/item/previous_shell.json": "888f18f8d04de81b070bd5166f35dfa495f6fb45aacf8938295e0f30586a7504",
+    "minecraft:models/item/paper.json": "fbf4c92b8713d676f19e6c8e95e05d4d540a3d3d7e62a52c4f426e0fc611e517",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/flint.png": "ba7c3c7a261bfcbc2f1d8c67b808d8bce73ff8f7445aa76d8dc62a7f28198fc0",
+    "minecraft:textures/item/spider_eye.png": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/ink_sac.png": "0b6afc3bedf39949e7a59821e8d0e4bbf1a9617d8e751fc23ddd9b05fe16756d"
+  },
+  "resolved_models": {
+    "Eye A \u00b7 Soft Flint": "vestige:item/eye_a_soft_flint",
+    "Eye B \u00b7 Dark Pebble": "vestige:item/eye_b_dark_pebble",
+    "Eye C \u00b7 Chipped Face": "vestige:item/eye_c_chipped_face",
+    "Eye D \u00b7 Simple Talisman": "vestige:item/eye_d_simple_talisman",
+    "Shell A \u00b7 Soft Ash": "vestige:item/shell_a_soft_ash",
+    "Shell B \u00b7 Compact Conch": "vestige:item/shell_b_compact_conch",
+    "Shell C \u00b7 Slate": "vestige:item/shell_c_slate",
+    "Shell D \u00b7 Deep Dusk": "vestige:item/shell_d_deep_dusk",
+    "Previous Homebound Eye": "vestige:item/previous_eye",
+    "Previous Whispering Shell": "vestige:item/previous_shell"
+  },
+  "source_sha256": {
+    "texture-sources.json": "a94f2158c471740bd49e02735ad475df1dc214fc051d47f5f51574c08e53ffb2",
+    "texture-details.json": "5934a6b9e47c44e969b71413c19c8d72a7e59f15ecd89e5c7099a499eab5083f",
+    "author_textures.py": "b876f91dea68a04371d86bcc6a5991f93ce4b36fa529119ff8f0dc10f49311bb",
+    "isolated-preview.gradle": "0c258f53b2697d7f69e085049607c69a68b448b39f5513fe42e495e043428be1",
+    "preview-source/com/quzzar/vestige/apparatus/client/ItemTextureStudiesCapture.java": "c98516fdc94669c9224733c9964e6c1e376109a99629e225a556428a304c5644",
+    "preview-resources/assets/minecraft/models/item/paper.json": "fbf4c92b8713d676f19e6c8e95e05d4d540a3d3d7e62a52c4f426e0fc611e517",
+    "captures/capture.json": "650fde2bc8708eee783ee110f507ff80b635efdad6b9ae96bd83da218d8d04e6",
+    "imagegen-prompts.json": "8eebfc89fd89c3e1eb507a13fed49b347180552746980e802e0f314639c2a3b9",
+    "native-client.log": "ee2c397f83af13d2ffe32688817bcb5ea8736160db098918549a0b5ecbb8d4e3"
+  },
+  "compiled_capture_sha256": {
+    "ItemTextureStudiesCapture.class": "446f4c11dcf89f970a82f830489054cb0fbfcf6594b9630f923eaa86f3917594",
+    "ItemTextureStudiesCapture$ReviewScreen.class": "1e56b57577d0ed52ce84467c11cad141bd035214da71377be36c99fb2ded0873",
+    "ItemTextureStudiesCapture$CaptureHost.class": "d18972d943e645c566477b95a4d151c6db6a49c26747b08b2e55a3eb5da9a82e",
+    "ItemTextureStudiesCapture$NativeGallery.class": "37cfb31ea50bb1ecd60118102a7c283424f9483bd8c4d6eba11f010db3b52a5d"
+  },
+  "concepts": {
+    "eye-a-soft-flint": {
+      "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-e15edbf5-1c9c-4243-bd7d-b51f1dd47741.png",
+      "sha256": "41b4c105a9c3e5d2aee7e14046702de3e8a893fd57e282168e6deb0b0b1a24eb",
+      "size": [
+        1254,
+        1254
+      ],
+      "preserved_unchanged": true,
+      "role": "Creative reference; not the native sprite"
+    },
+    "eye-b-dark-pebble": {
+      "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-3910a789-4f8c-4b1f-82a2-a143f820c819.png",
+      "sha256": "b6f469fd6fc5b7243dc2fcb14d42526152f480ddd7be74b6636c83358769d0ab",
+      "size": [
+        1254,
+        1254
+      ],
+      "preserved_unchanged": true,
+      "role": "Creative reference; not the native sprite"
+    },
+    "eye-c-chipped-face": {
+      "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-85425840-3e7b-46bf-a697-645809eae900.png",
+      "sha256": "bd85430001e74702bf79d3ee440e2ea0b2ee9f9e5c77b97bdd8f9c06824d7f48",
+      "size": [
+        1254,
+        1254
+      ],
+      "preserved_unchanged": true,
+      "role": "Creative reference; not the native sprite"
+    },
+    "eye-d-simple-talisman": {
+      "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-9e797a56-b16e-450b-9dca-c3551db18802.png",
+      "sha256": "bea3f9f6c13b18e11c2b662b8c8626dce9fbfcd5283b7ec18c68a004509e02e3",
+      "size": [
+        1254,
+        1254
+      ],
+      "preserved_unchanged": true,
+      "role": "Creative reference; not the native sprite"
+    }
+  },
+  "vanilla_archive": {
+    "path": "/Users/quzzar/Projects/vestige/run/item-textures-native-v2-build/moddev/artifacts/neoforge-21.1.72-minecraft-resources-aka-client-extra.jar",
+    "sha256": "8e9cf6f4b6eafb1c6bf745a67a61dd1736f31865cad409e5b2bec918667dab5e"
+  },
+  "production_preserved": {
+    "homebound_eye_sha256": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+    "previous_shell_sha256": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d"
+  },
+  "initial_issue": "Preview identifiers 202610070\u2013202610079 collided after vanilla float conversion. Diagnostic run archived, then identifiers changed to exact integers 261070\u2013261079 and every native resolved model asserted.",
+  "world_opened": false,
+  "limits": [
+    "All eight options await owner selection",
+    "Appearance-only Paper carriers, no native binding marks or bound-item glint",
+    "No held/offhand or effects review",
+    "No production texture replacement or installed-game change",
+    "No recipe/gameplay changes or world/multiplayer tests"
+  ]
+}

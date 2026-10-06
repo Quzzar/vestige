@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-06",
+  "kind": "actual Minecraft screen with destination fixtures; not a teleportation gameplay recording",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "framebuffer": "1920x1080",
+  "gui_sizes": [
+    "640x360",
+    "480x270"
+  ],
+  "files": {
+    "network-wide.png": "06c17a1fe1a1e385a9a4ac902441a12dcc51ee2d9feeec21029a80ca34e33f20",
+    "selected-map-pin.png": "bfc0a503d4e98ed0b82391dee1b14d75a5e14557093804bc792e8102fc551d29",
+    "network-narrow.png": "9df70a81be95fc83532a2f8bb046e06da2e0892f4818c0d18e258ecc315d0fb7",
+    "last-destination-selection.png": "2dd0637a2c47aec3d4d67fd77a1544e287f94991f133f984d270ea161e76b29c",
+    "checks.json": "a43ce54d02045e82ef6ec26792c9a990d96a594b634d55bf43c2613493c1dbf3"
+  },
+  "source": {
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneRecipe.java": "0188adcfe96b939fc214332eadd1fad69732f23eb998282b1f7fe1a0be217bd0",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneBlock.java": "780360012990181df568483628f3695efeea0c6b7a6951d4cb87b543f7c7a584",
+    "src/main/java/com/quzzar/vestige/travel/StoneNetwork.java": "b03f21191197ec1b2bb3376aa0499669973388027156854751e198261ebfdd42",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneEntity.java": "0d32f9a6717ebd0a6176f686c431b7c92eef04140f3471a0e5d11ddec022fee3",
+    "src/main/java/com/quzzar/vestige/travel/StoneTravel.java": "3f0d99e7b4cb8053f93b98c4c40bf10c3ccc3b2fda3be6fa9d40b1561502d951",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java": "938f8fb73c5698d97621122588a18951d8357e9eefce704aee910f94b8e52af4",
+    "src/main/java/com/quzzar/vestige/travel/StoneTravelPayloads.java": "8f12fcabd3223b80eb19b7526fe98b4c1d0bde9d2e1039a2f32d05a7bcdd92d3",
+    "src/main/java/com/quzzar/vestige/travel/StoneDirectory.java": "d00bc0a059a6f593adc02762cb1ba7fa7a64ca0c2ab34b064c5f15f4ae4c2f7a",
+    "src/main/java/com/quzzar/vestige/travel/StandingStones.java": "c8cc4dab31345178d153d2a8a96c9b39c3584cceaea2cf66a3d91531c3b7ab66",
+    "src/main/java/com/quzzar/vestige/travel/client/StoneNetworkScreen.java": "c64c168912a74c6106bb322a323dd13f923ba3ee28707ba4e9fd210d27ceec83",
+    "src/main/java/com/quzzar/vestige/travel/client/NativeStoneCapture.java": "863e4f404693ba9db394a88b9029abebb72adb4d0ad961ff08743ddaae0d222d"
+  },
+  "inspected": true,
+  "checks": [
+    "network-wide: actual GUI size 640x360",
+    "map pin selects Desert Pyramid and synchronizes the destination row",
+    "selected-map-pin: actual GUI size 640x360",
+    "network-narrow: actual GUI size 480x270",
+    "eighth list row selects Forest Shrine at the narrow GUI scale",
+    "last-destination-selection: actual GUI size 480x270"
+  ],
+  "remaining": [
+    "travel payment and payment imbuement",
+    "final Standing Stone model",
+    "terrain map adapter",
+    "Prism installation"
+  ]
+}

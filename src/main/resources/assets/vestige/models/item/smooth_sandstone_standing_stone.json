@@ -1,0 +1,182 @@
+{
+  "loader": "neoforge:obj",
+  "model": "vestige:models/block/standing_stone_blade_whole.obj",
+  "automatic_culling": false,
+  "shade_quads": true,
+  "flip_v": false,
+  "emissive_ambient": false,
+  "ambientocclusion": false,
+  "textures": {
+    "body": "minecraft:block/sandstone_top",
+    "particle": "minecraft:block/sandstone_top"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        -3,
+        0
+      ],
+      "scale": [
+        0.38,
+        0.38,
+        0.38
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.18,
+        0.18,
+        0.18
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -4,
+        0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        0.24,
+        0.24,
+        0.24
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        -3,
+        0
+      ],
+      "scale": [
+        0.35,
+        0.35,
+        0.35
+      ]
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "vestige:stone_shape": 1
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_shoulder"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 2
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_leaning"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 3
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_spire"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 4
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_wedge"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 5
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_crown"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 6
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_fang"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 7
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_cleft"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 8
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_hunched"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 9
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_taper"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 10
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_slant"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 11
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_tablet"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 12
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_chisel"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 13
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_saddle"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 14
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_obelisk"
+    },
+    {
+      "predicate": {
+        "vestige:stone_shape": 15
+      },
+      "model": "vestige:item/smooth_sandstone_standing_stone_keel"
+    }
+  ]
+}

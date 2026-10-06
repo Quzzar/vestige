@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:blood_needles",
+  "name": "Blood Needles",
+  "circle": 4,
+  "color": "c92551",
+  "rationale": "Draining focus flows into Iron and an Arrow, describing a fan of piercing needles that returns life.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 3,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Draining focus follows blank inscription clockwise.",
+    "Bound metal follows draining focus clockwise.",
+    "Arrow motif follows bound metal clockwise.",
+    "Blank inscription follows arrow motif clockwise."
+  ]
+}

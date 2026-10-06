@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-06",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "checks": [
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer (standing_stone filter)",
+    "author_standing_stones.py --check",
+    "test_standing_stone_geometry.py",
+    "git diff --check"
+  ],
+  "forms": 16,
+  "finishes": 36,
+  "cosmeticCombinations": 576,
+  "wholeBodyFaceBounds": [
+    17,
+    25
+  ],
+  "unitTests": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "selectedWorldTests": 12,
+  "fullWorldSuiteRerun": false,
+  "package": "build/standing-family-review/vestige-0.1.0.jar",
+  "packageSha256": "aa341bc7cb7b70fc3629d4ac2fcfd2b2557992772fa71a797e7c2cccdfa68dbb",
+  "standingStoneResourcesMatchedPackage": 1887,
+  "capturedTravelClassesMatchPackage": 30,
+  "capturedMeshesMatchPackage": 48,
+  "originalMeshesUnchanged": 9,
+  "runeRendererClassSha256": "64a839137a9b2c06dbcae15158b1592c8ad93c8190bd17ad8445d6af7b0ecd83",
+  "sourceChangesSinceSnapshot": [
+    "src/main/java/com/quzzar/vestige/magic/world/NativeCaptureScene.java",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java"
+  ],
+  "nativeCaptureSucceeded": true,
+  "nativeViews": 7,
+  "clientHeap": "2G",
+  "gradleHeap": "768M",
+  "images": {
+    "family-matching-finishes.png": "edb4d862299832fd19f97aeb08a8950a8c357b7be9885871d7c7478c819170bf",
+    "family-overview-day.png": "e279c13ac6c8493d07a80642116fcaceffc5a1fb9cbf733021da46a2eea72b1a",
+    "family-overview-night.png": "71ba250c9861764bdd22c9c22a025c30b0f551d9615f6561589029aa72ec4182",
+    "family-row-1.png": "b120e2e2cfbf60b5128b6e27d0b0f074fc0984c713188ea705d2695dce090c81",
+    "family-row-2.png": "fdabb4be135f5f60889e9509255eb78f74adce74dfd3ba1798a32e232b208bb1",
+    "family-row-3.png": "076f203a7929571e8051d8dd67438cdc2441bd05b16444bfc3ef14eaa915a176",
+    "family-row-4.png": "f761924e18a4142641b8ac96682c06fe3d511ea5ab2b96fa4210b75d7bfbfec0"
+  },
+  "video": {
+    "path": "rune-drift.mp4",
+    "sha256": "391111e63173d855d90173a552580ba8643236482b01d3be4991e8d32c0901d1",
+    "width": 1920,
+    "height": 1080,
+    "duration": 5.966667,
+    "nativeFrames": 22,
+    "fullDecodePassed": true,
+    "interpolation": false
+  },
+  "limitations": [
+    "Native inspection covers every form in Tuff and a shared Cleft key in four finishes; all 36 finishes share the audited resources",
+    "Glow is full-bright ink rather than terrain lighting or shader bloom",
+    "The first capture attempt routed the new mode into the general spell recorder; the successful pass follows the routing fix",
+    "Standing Stone payments and optional terrain maps are outside this model expansion"
+  ],
+  "visuallyInspectedNativeViews": [
+    "family-matching-finishes.png",
+    "family-overview-day.png",
+    "family-overview-night.png",
+    "family-row-1.png",
+    "family-row-2.png",
+    "family-row-3.png",
+    "family-row-4.png"
+  ],
+  "captureKeysSource": "Reproducible native Attunement Shard blueprints and StandingStones.fromShard",
+  "installedInPrism": "prism-install.json"
+}

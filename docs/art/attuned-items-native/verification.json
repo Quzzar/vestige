@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-06",
+  "java": 21,
+  "build": "passed",
+  "kithkynCompatibility": "passed",
+  "unitTests": {
+    "tests": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeFrames": 48,
+  "nativeDimensions": [
+    1920,
+    1080
+  ],
+  "source": "unchanged Minecraft framebuffer images",
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p"
+      }
+    ],
+    "format": {
+      "duration": "9.960000"
+    }
+  },
+  "videoFullDecode": "passed",
+  "inventoryScrollScale": 1.125,
+  "scrollOpaqueBounds": [
+    1,
+    4,
+    15,
+    13
+  ],
+  "selectedSpritesUnchanged": true,
+  "loadedAssetsMatchSourceAndJar": true,
+  "jarSha256": "2bb79e4dd2f84ef2ba2114894cdd60cb9789e9fae3ad716c3889dce3f2c34821",
+  "frameHashes": {
+    "frame-00000.png": "5309861f5e8a0c391f95c8e8bdc9afa0d8957a65a168e0ee05dc04bb6f317f89",
+    "frame-00001.png": "fe3c8e0ebd61a814be5d00bf6ca095ed97b5be64fc1248a46db089c2450b6f67",
+    "frame-00002.png": "9ddfe5edd23f716a046625ca5ea42b73a36df69bddcba28b7da1a32fcd1b37ed",
+    "frame-00003.png": "1f8f8c78482fca4e88511cfccde5733c3b2c0d196b29d50c03f0253be9fb3ce8",
+    "frame-00004.png": "cea240924d5916ec37f8db4cccba28a79c7f661138447eb893359aed7e2151c3",
+    "frame-00005.png": "575436a6aaeba98bc2687f512e414b736210b874120de3caef6fe608c1ad6de0",
+    "frame-00006.png": "a98340f6ee0cb0a701759fe9fd3e56e882cbf8b379725e5d442865bbc66c4fbc",
+    "frame-00007.png": "e9cdf6b76493a2b93c18dfcf389fa1e5f8131b8a0866e8f4c6447ade97ac45b8",
+    "frame-00008.png": "17ff43c819bd15ab33a978acfb2ae10f4909acdea688c3c0d173e226b9a573ea",
+    "frame-00009.png": "30b9b8e78d91747145111aa5a495b52c9fcb63cab3e1a4c1f5a19ab28c8f27da",
+    "frame-00010.png": "39e19a5aefbae19de4ec5dfefee458028c86c90852c99191aa5983b607e53ea0",
+    "frame-00011.png": "4759eb48a9b295a66ca88df132fbd00b4ef1155192c8e3ae63f35cb5c78f83ce",
+    "frame-00012.png": "1a3ddf692565a2aec2ec055e282dcfbb56ad49a6429291f73a44a15c47ae2ef0",
+    "frame-00013.png": "8bfa03b96fe821de8d180e172c7d669dd3de32005b9e73b7ff0cb705923c6c47",
+    "frame-00014.png": "14e4539a1c9138535dc7e3005e820aa0ff86eebf7e237803edd70c5d9b3f61ec",
+    "frame-00015.png": "d6089017ecf3d4ef7e3acd01ab0c82942990c5f39906b6d3361b57d8fcde5655",
+    "frame-00016.png": "7bf3270e504fdcee880e1dbaf6a488f3f14062c5831af3226653be8abadbe1a0",
+    "frame-00017.png": "293ea5525457be7037a10e02cd88e9a3573960581902adc3ad7d90a9624e84a8",
+    "frame-00018.png": "f69be5e3a42ddef96a81741628c92d22f83ec0a7b3d5a347f20f659948009946",
+    "frame-00019.png": "56c9507a1cbcf6db03694f004da559629624871929d8e8ef0bda49575045ae57",
+    "frame-00020.png": "c9e0d1d5bd580b2325873efe5c522afbb2d2175ce46420613e23c1d24fc664ad",
+    "frame-00021.png": "a6941747a65440e767e811037cfe01694cd25a204452a421e466b3288968983c",
+    "frame-00022.png": "f42c2707523502c71f02586e890dc1e73821c43ebf874faab3209657117797ee",
+    "frame-00023.png": "87bd378ce04c1820d9c6b9ff1ab61f9352b7a4afa66cc6cba57b0dc3738057b6",
+    "frame-00024.png": "ac28a7be0f4e0599d00557bc21da5ca8188fba4f92451bda68d560345c2bedb1",
+    "frame-00025.png": "f256e32ca410b38a44c71fe865265ec4f8822c3f88913df64be961fb28172c2b",
+    "frame-00026.png": "18253f5977a9aa8935685da53a9fb6f41a3339f1b5b2ffa4e6ba6b28afb5c463",
+    "frame-00027.png": "23642860ea1dcdff6ef3843df6b435e4eac27e45e05e567ef93efe0ea237031b",
+    "frame-00028.png": "9f3837daf70015e935521cf29b3b17108c0a6e2f49ddf5f8e02a991a971df6d0",
+    "frame-00029.png": "ef4eda63053a70a3345c6be9f1d5fa913d2000fdda98089b40b1ad00998fb699",
+    "frame-00030.png": "b9bc8827c31c851c4ae8090aa6b378bf78c2ec5af6d6c1fe3102b050738e18b6",
+    "frame-00031.png": "a00f0a2e67fa23cb0491fb1b1318f43a26d6130b2ef3b69b7c198e03d4c2aa3c",
+    "frame-00032.png": "260ee306fe0f1bb3f824f3e07521ed0f0fc4e663bd3fc9fd6525a8cdde57c873",
+    "frame-00033.png": "d8b6362a963fdb3ae9836a7a14b815194b63f4bc7b9c011454f2d704b79d5b73",
+    "frame-00034.png": "0d6ec96c8a8f6d412ebd11b491952e43acc584f93967e2c3a9d0e67709945645",
+    "frame-00035.png": "361f0af0baf465190b48d673de8a2707939c885f53c11a111cda7262acf5b544",
+    "frame-00036.png": "caa163a1b91e51e7667ab30cafc60fac57ea292c77ca8042436b5ae0aaab5958",
+    "frame-00037.png": "62003f7b866f3c73b72c72d806581aac7b2a956e195297d97ba630fce88f4fdd",
+    "frame-00038.png": "8b6b806f4418dc52743c363bc1e5c931cf4bdd7751519d20a10b4472bbcbe76e",
+    "frame-00039.png": "523bb91b88724a94ab5df0b4e2355bf35ac71e645d4ea6caf45237929eeccce1",
+    "frame-00040.png": "a4f3e51ed340d9be53fc08577f708efccde6dbc05aabed47054b6d2528abcacd",
+    "frame-00041.png": "625b9101eeff2d6d67e67c9438aaeaf97ae344707f3c39dff61a7a1c8133e4d3",
+    "frame-00042.png": "72ca6ed588864becfdca341b241058b006738595a86d91a3df7bceee875efa7c",
+    "frame-00043.png": "8a38fe19aa712bbb945d4a88d8f2181cf12890fcce6435f2e0d23e707cf61a20",
+    "frame-00044.png": "314323ae0c9aa884103c71737c27c9124415f829af33eba3a8ff4a42313d5048",
+    "frame-00045.png": "a1fb9761ef78dd2c487d3dabfb7ee7d71a8a91a7d6deeb0eba254788e2f1b45e",
+    "frame-00046.png": "2b636fb02ddc4ec978e695fca768d6b5edf1e6e18a9bae2cd2e219a9900da2cd",
+    "frame-00047.png": "642830f5b9b586c0312551e90efad7977ba60878b92e2e57f0e3fee6e5632536"
+  },
+  "artifactHashes": {
+    "items.png": "c9e0d1d5bd580b2325873efe5c522afbb2d2175ce46420613e23c1d24fc664ad",
+    "glint.mp4": "6d56f23751a4a51277dd94de028bec3a2cfb0a8d8945a2563acaf915983d6766",
+    "native-frames.zip": "e918535b59f7fba8e1a7ed3c1fb2fc56d6254ba74e15efab5761583fbebd0848"
+  },
+  "inspectedFrames": [
+    20,
+    40
+  ],
+  "font": "minecraft:alt",
+  "keyFormatChanged": false,
+  "worldTests": "not rerun; no server crafting or identity mechanics changed; prior full run 151 passing",
+  "prismInstallation": "not changed in this task"
+}

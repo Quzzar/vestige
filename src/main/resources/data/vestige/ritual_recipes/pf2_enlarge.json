@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_enlarge",
+  "name": "Enlarge",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Leather represents a body, Mushroom suggests growth, and Slime its enlarged flexible shape.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "mushroom motif",
+      "ingredient": {
+        "items": [
+          "minecraft:brown_mushroom"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Leather motif follows blank inscription clockwise.",
+    "Mushroom motif follows leather motif clockwise.",
+    "Slime motif follows mushroom motif clockwise.",
+    "Blank inscription follows slime motif clockwise."
+  ]
+}

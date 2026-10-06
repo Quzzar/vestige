@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/granite_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/granite_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/granite_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/granite_plinth_cap"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:fire_arrow",
+  "name": "Fire Arrow",
+  "circle": 4,
+  "color": "f85b25",
+  "rationale": "Blaze ignites an Arrow that Emerald directs into an explosive burning shot.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Flame focus follows blank inscription clockwise.",
+    "Arrow motif follows flame focus clockwise.",
+    "Evocation focus follows arrow motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

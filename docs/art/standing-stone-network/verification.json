@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-06",
+  "build": "build verifyKithkynCompatibility passed",
+  "unit_tests": {
+    "tests": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "minecraft_required_tests": 158,
+  "minecraft_failures": 0,
+  "native_ui_capture": "four final unchanged screenshots, real pin/list selections, two actual GUI dimensions",
+  "packaged_travel_classes_match_current_compile": true,
+  "jar": "build/libs/vestige-0.1.0.jar",
+  "jar_sha256": "416c0b04151e058fb5ea11423e09d5190175e78de147e9dad0179224fba20314",
+  "logs": {
+    "build/standing-stone-build.log": "ee53cc2cad326b2046b4a19e0da933944743bb82c51827670bc4192190158dbd",
+    "build/standing-stone-gametest.log": "4ff10c8684b6e59d4cf44804170ba6d0888828398977afdc23b588d0204c808d",
+    "build/standing-stone-ui-v3.log": "15c819ad5066b2fc887ece3979eb3015a26d6eb6679dbb22f04239e178652b0b"
+  },
+  "installed_in_prism": false,
+  "payment": "development draft is free; required paid-travel rule and payment socket remain discussion proposals",
+  "stone_model": "temporary vanilla Chiseled Stone Bricks",
+  "map_background": "coordinate grid, without an Atlas/terrain adapter"
+}

@@ -1,0 +1,64 @@
+{
+  "spell": "vestige:spellstone_design_tablet",
+  "phase": 0,
+  "label": "Runic Tablet",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "spellstone-designs",
+  "assetSha256": {
+    "models/block/spellstone.json": "4658b0da68dcf0176ed5a0ce41ee7cbd973e899602f4ecaaf09d7f32e691d3a0",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+    "models/block/tuff_spellstone.json": "d9c058258a0ddae86b7c09688efaad7a9da818d3e13fd0d47ed165ae93369ead",
+    "models/block/quartz_spellstone.json": "1fe93f24c2ee8cd634cae3a0a1f7c2a4b69942e9b84293199aa775124d625af7"
+  },
+  "seconds": 2.009175625,
+  "times": [
+    0.018182125,
+    0.101260916,
+    0.184223,
+    0.264540041,
+    0.344442083,
+    0.423039208,
+    0.503558125,
+    0.582964958,
+    0.66120625,
+    0.741984958,
+    0.820215583,
+    0.901242166,
+    0.97932225,
+    1.060137708,
+    1.139761041,
+    1.21793825,
+    1.298220333,
+    1.380551583,
+    1.462778708,
+    1.54208375,
+    1.6207255,
+    1.699295458,
+    1.77841075,
+    1.858524208,
+    1.937754041
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offeringSpace": true,
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Capture-only Spellstone alternatives with the same Stone Brick textures and original native rune. Runic Tablet at the same camera and scale. Production models, collision, recipes and Prism installation are unchanged."
+}

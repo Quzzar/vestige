@@ -1,0 +1,89 @@
+{
+  "spell": "vestige:spellstone_cap_clearance",
+  "phase": 0,
+  "label": "Raised Spellstone cap",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "feedbackCodeSha256": {
+    "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+    "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+    "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+    "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+    "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+  },
+  "apparatusTrim": {
+    "tintIndex": 0,
+    "brightness": 0.8509803921568627,
+    "tintColor": "#d9d9d9"
+  },
+  "apparatusMaterial": "stone",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": 148.67131,
+    "fixed": true,
+    "eye": [
+      1.2,
+      65.8,
+      1.65
+    ],
+    "pitch": 17.32626
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "e3c6fac486bf85424b5ffa198e02900dd5399ec53af324f437bc8875895e3db0",
+    "models/block/plinth.json": "53977ef0a356ba87a3b0c14e1b8b600d05c5020f4d997f2ca57c9984019682de",
+    "models/block/stone_plinth.json": "a8072adcffb272586b7a8a84f002e2b7f627449011edc0dcfee2307b4adc364c",
+    "models/block/stone_spellstone.json": "bba176f25ed56d865ba9a7fdc44d1b7317e6823213a62249b609678021d07f2b",
+    "models/block/stone_plinth_base.json": "08b89a12ab619b7f979011ead9426166378f23747ac2c25bc14bad99d2e3471f",
+    "models/block/stone_plinth_shaft.json": "edefb3f3ce7483543c58fc348ef1ed7efeaa7219fac1d95c1282e39c8e379d04",
+    "models/block/stone_plinth_cap.json": "65a01a466ac06be1d65b3065858d628b362d6f6e1ba6e328458f30dd78f45469"
+  },
+  "ritualCraftingSha256": "62a2fc53eb9c0cfbe38ddc139f71eed23835e3be3e05f1ce5f9d37f4b27de889",
+  "astralRendererSha256": "3055870bfa86343b37b72325959368b080311201aa43697988b3a9696b9e9cca",
+  "seconds": 4.054548291,
+  "times": [
+    0.023323666,
+    0.166324208,
+    0.281638583,
+    0.400674375,
+    0.520558291,
+    0.644481791,
+    0.780551416,
+    0.896771875,
+    1.091377791,
+    1.260267916,
+    1.389881375,
+    1.581282416,
+    1.760802041,
+    1.877345416,
+    2.051610458,
+    2.216130958,
+    2.330209041,
+    2.515187125,
+    2.693569875,
+    2.812782791,
+    3.173310083,
+    3.2926605,
+    3.468154791,
+    3.660846833,
+    3.779872416,
+    3.891701458
+  ],
+  "scenario": "Production Spellstone: cap lifted 0.25 model units with both support coordinates unchanged; flat Diamond corner pixels and hovering Astral Seal follow the top.",
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:stone_spellstone"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true
+    }
+  },
+  "outcome": "PLACED"
+}

@@ -1,0 +1,21 @@
+{
+  "installed_at_utc": "2026-10-06T00:16:55.645833+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "destination_sha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "previous_sha256": "dfeedc862c28603643569cba9c7d351d21219c633c6c0aa47fd1b323de8a22c8",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-astral-spellstone.jar",
+  "replacement": "Atomic rename; restart Minecraft to load the selected Astral Spellstone.",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "changes": "Lowered native Astral Seal, simple octagonal Spellstone, carved texture trim and four Diamond corner notches across all 36 finishes.",
+  "verification": {
+    "unit_tests": 85,
+    "required_world_tests": 151,
+    "failed": 0
+  },
+  "manual_instance_test": "Pending owner restart and playtest"
+}

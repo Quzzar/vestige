@@ -1,0 +1,18 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": [
+    {
+      "mana": 100.0,
+      "barVisible": false,
+      "guiScale": 4,
+      "view": "flint-scale-four"
+    },
+    {
+      "mana": 100.0,
+      "barVisible": false,
+      "guiScale": 2,
+      "view": "flint-scale-two"
+    }
+  ],
+  "source": "Minecraft main render target"
+}

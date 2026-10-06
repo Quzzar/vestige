@@ -1,0 +1,36 @@
+{
+  "verified_at_utc": "2026-10-05T20:17:59.378215+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer (initial simple-geometry revision)",
+    "./gradlew build verifyKithkynCompatibility (final raised-inset client rendering)",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 151,
+  "packaged_apparatus_block_models_verified": 180,
+  "unchanged_spellstone_finishes": 36,
+  "all_construction_recipes_unchanged": true,
+  "raster_assets_unchanged": true,
+  "capture_only_packs_excluded": true,
+  "jar_sha256": "aea995fb27f9b9e6eafa848dcfa54b5ecfa192432fc3a6ac3d28d702f6583178",
+  "scope": "Simple three-cuboid Plinth geometry, centered carved sockets on every segment, and thin material plates protruding half a model unit. Spellstone and gameplay semantics unchanged.",
+  "native_visual_inspection": "Eight fresh raised-inset Tuff/Quartz native views: standalone, one/two/four columns, empty versus independently imbued columns, and close head. All inspected; loaded asset hashes and actual parts/sockets match. Renderer source hash pins the procedural plates.",
+  "limitations": [
+    "Client inspection covers Tuff and Quartz; all 36 finishes share audited geometry and world-tested behavior.",
+    "Prism NeoForge 21.1.248 requires owner restart/playtest; automated baseline is 21.1.72.",
+    "Geometry counts are not an FPS benchmark."
+  ],
+  "required_minecraft_tests_basis": {
+    "jar_sha256": "89986c3305395f8e7c0b09aec55405a5a31d680c3690de4376196de97a1730b3",
+    "log": "build/apparatus-simple-plinth-verification.log",
+    "later_change": "Client material plate rendering and shared socket coordinates only; static model/collision geometry unchanged."
+  },
+  "renderer_source_sha256": "805dd02356d4680c1331a66ad475e946e23066e6aa7371937cf41126bf9e357d",
+  "material_protrusion_blocks": 0.03125
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-06",
+  "scope": "Existing native menu capture rechecked against current source and installed sixteen-model build",
+  "unchangedScreenSourceSha256": "c64c168912a74c6106bb322a323dd13f923ba3ee28707ba4e9fd210d27ceec83",
+  "nativeCapture": "capture-evidence.json",
+  "sampleDestinations": true,
+  "travelDisabledInCaptureFixture": true,
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedJarSha256": "aa341bc7cb7b70fc3629d4ac2fcfd2b2557992772fa71a797e7c2cccdfa68dbb",
+  "screenClassSha256": "8833e21b8586d9f5aaa6bd80daf036c5795fe5906ac643bc3bce2fe53b21d010",
+  "classMatchesTestedSixteenModelPackage": true,
+  "terrainIntegration": false,
+  "freshClientCapture": false
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/granite_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/granite_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/granite_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/granite_spellstone"
+    }
+  }
+}

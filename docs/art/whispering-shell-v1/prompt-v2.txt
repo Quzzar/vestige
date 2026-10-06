@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Asset type: second Minecraft item texture concept for Vestige's Whispering Shell.
+Edit target: the provided ivory nautilus shell sprite.
+Primary request: revise it for a simpler proposed recipe: Nautilus Shell + Attunement Shard + Soul Sand. Remove the copper clasp and purple amethyst jewel entirely, restoring the underlying shell edge. Keep the dominant ivory/peach nautilus silhouette, its broad dark spiral and its small mouth at the lower right. Darken the mouth to a dusky charcoal-brown recess and put only two or three chunky soul-sand-brown grains along its inner rim, suggesting an old shell holding whispered voices. The shell must look quietly eerie and organic, with no jewelry or machinery.
+Style: simplify to coarse, flat, opaque Minecraft item pixels. Strict 16 x 16 logical pixel grid with an item around 12 to 14 pixels wide. Each logical pixel is a single flat uniform-color square; use eight opaque colors total with binary transparency. Enlarge the logical pixels compared with the current image; simplify contour and spiral to fit. Dark outlines only where needed for readable form. Keep the shell body light and the mouth dark.
+Invariants: one centered side-view shell, transparent empty background, no text or multiple items.
+Avoid: new gems, metal, cuffs, straps, realistic texture, smooth gradients, subpixel speckles, anti-aliasing, partially transparent shell pixels, light rays, bloom, sparkles, floating faces, flame, cartoon ghosts, captions or border. This is an inventory icon, not an illustration.

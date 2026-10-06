@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vestige · Ritual manuscript studies</title>
+<style>
+:root{color-scheme:dark;--zoom:2;--ink:#eee8da;--muted:#a8a29a}
+*{box-sizing:border-box}
+body{margin:0;padding:36px 40px 48px;background:#1c1b20;color:var(--ink);font-family:Georgia,serif}
+header{display:flex;align-items:end;justify-content:space-between;gap:24px;border-bottom:1px solid #403c43;padding-bottom:24px;margin-bottom:32px}
+.eyebrow{font:11px system-ui,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#beacd1;margin-bottom:12px}
+h1{font-size:30px;font-weight:400;margin:0 0 10px}
+p{font:14px/1.6 system-ui,sans-serif;color:var(--muted);margin:0;max-width:620px}
+.controls{display:flex;gap:8px;flex-shrink:0}
+.controls button{font:13px system-ui,sans-serif;border:1px solid #4b4552;border-radius:5px;padding:9px 13px;color:#c5bdce;background:transparent;cursor:pointer}
+.controls button[aria-pressed=true]{background:#51425f;color:#fff;border-color:#9d81b8}
+main{display:grid;grid-template-columns:repeat(3,max-content);justify-content:safe center;gap:26px}
+.style{width:calc(202px * var(--zoom))}
+h2{font-size:20px;font-weight:400;min-height:48px;margin:0 0 5px}
+h2 span{color:#bd9fe2;margin-right:8px}
+.description{font:12px/1.5 system-ui,sans-serif;min-height:42px;color:var(--muted);margin-bottom:20px}
+.preview{position:relative;width:calc(202px * var(--zoom));height:calc(208px * var(--zoom));margin-bottom:26px}
+.frame{width:202px;height:208px;transform:scale(var(--zoom));transform-origin:top left;background:#c7c7c7;border:3px solid;border-color:#f4f4f4 #515151 #515151 #f4f4f4;padding:7px 6px 5px;box-shadow:0 0 0 1px #121212}
+.recipe-title{height:18px;color:#343434;font:10px/14px monospace;text-align:center;letter-spacing:.15px}
+.diagram{position:relative;width:184px;height:174px;background-image:url('concepts.png');background-repeat:no-repeat}
+.item{position:absolute;width:16px;height:16px;padding:0;border:0;background:none;cursor:default;transform:translate(-50%,-50%);z-index:1}
+.item img{display:block;width:16px;height:16px;image-rendering:pixelated;filter:drop-shadow(0 1px 0 #0004)}
+.item:hover,.item:focus-visible{outline:1px solid #cab2e9;outline-offset:2px;background:#cbb8e64a}
+.tooltip{position:absolute;display:none;bottom:22px;left:8px;white-space:nowrap;pointer-events:none;padding:4px 6px;font:9px/12px monospace;color:white;background:#170f21ed;border:1px solid #6f4697;box-shadow:0 1px 2px #0005}
+.item:hover .tooltip,.item:focus-visible .tooltip{display:block}
+.footnote{margin-top:22px;font-size:12px;max-width:none}
+.sheet-link{color:#cfbae5;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1300px){body{padding:28px 24px}main{gap:20px;overflow-x:auto;padding:1px 1px 14px}}
+@media(max-width:700px){header{align-items:start;flex-direction:column}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<header>
+ <div><div class="eyebrow">Vestige · Art direction studies</div><h1>Ritual manuscripts</h1><p>Four offerings or eight, surrounding a central Spellstone. Hover the items to see the recipes.</p></div>
+ <div class="controls" aria-label="Preview scale"><button data-zoom="1" aria-pressed="false">Game size</button><button data-zoom="2" aria-pressed="true">2× preview</button></div>
+</header>
+<main id="studies"></main>
+<p class="footnote">First-pass artwork studies. <a class="sheet-link" href="concepts.png" target="_blank">Open the full concept sheet</a>.</p>
+<script>
+const studies=[
+ {name:'Archaeological sketch',letter:'A',description:'Light graphite, worn vellum, faint amethyst.',
+  four:{crop:[31,47,439,439],center:[248,258],slots:[[248,123],[389,259],[249,395],[110,260]]},
+  eight:{crop:[31,509,439,471],center:[248,721],slots:[[248,588],[344,632],[386,721],[344,812],[248,854],[153,817],[111,717],[145,637]]}},
+ {name:'Engraved manuscript',letter:'B',description:'Dark ink, carved stone, restrained purple energy.',
+  four:{crop:[550,47,437,439],center:[768,257],slots:[[769,120],[910,258],[770,393],[630,259]]},
+  eight:{crop:[550,509,437,471],center:[768,721],slots:[[768,587],[864,631],[910,720],[869,807],[766,849],[674,811],[629,720],[668,629]]}},
+ {name:'Violet chalkwork',letter:'C',description:'Silver chalk and luminous sigils on charcoal.',
+  four:{crop:[1068,47,438,439],center:[1285,258],slots:[[1287,119],[1427,255],[1287,391],[1144,260]]},
+  eight:{crop:[1068,509,438,471],center:[1285,720],slots:[[1287,587],[1383,632],[1427,724],[1380,811],[1287,853],[1193,816],[1146,725],[1193,635]]}}
+];
+const recipes={
+ four:{name:'Fireball',items:[['paper','Paper'],['blaze_rod','Blaze Rod'],['gunpowder','Gunpowder'],['emerald','Emerald']]},
+ eight:{name:'Starfall',items:[['paper','Paper'],['ender_pearl','Ender Pearl'],['glowstone_dust','Glowstone Dust'],['emerald','Emerald'],['gunpowder','Gunpowder'],['amethyst_shard','Amethyst Shard'],['stone','Stone'],['echo_shard','Echo Shard']]}
+};
+function item(diagram,point,crop,id,label){
+ const button=document.createElement('button');button.className='item';button.setAttribute('aria-label',label);
+ button.style.left=((point[0]-crop[0])*184/crop[2])+'px';button.style.top=((point[1]-crop[1])*174/crop[3])+'px';
+ const img=document.createElement('img');img.src='icons/'+id+'.png';img.alt='';button.append(img);
+ const tip=document.createElement('span');tip.className='tooltip';tip.textContent=label;button.append(tip);diagram.append(button);
+}
+for(const study of studies){
+ const section=document.createElement('section');section.className='style';
+ const heading=document.createElement('h2');heading.innerHTML='<span>'+study.letter+'</span>'+study.name;section.append(heading);
+ const description=document.createElement('p');description.className='description';description.textContent=study.description;section.append(description);
+ for(const type of ['four','eight']){
+  const layout=study[type],recipe=recipes[type],crop=layout.crop,sx=184/crop[2],sy=174/crop[3];
+  const preview=document.createElement('div');preview.className='preview';
+  const frame=document.createElement('div');frame.className='frame';
+  const title=document.createElement('div');title.className='recipe-title';title.textContent='Spellstone Rituals';frame.append(title);
+  const diagram=document.createElement('div');diagram.className='diagram';diagram.setAttribute('aria-label',study.name+' · '+recipe.name+' ritual');
+  diagram.style.backgroundSize=(1536*sx)+'px '+(1024*sy)+'px';diagram.style.backgroundPosition=(-crop[0]*sx)+'px '+(-crop[1]*sy)+'px';
+  recipe.items.forEach((offering,index)=>item(diagram,layout.slots[index],crop,offering[0],offering[1]));
+  item(diagram,layout.center,crop,'spell_scroll','Scroll of '+recipe.name);frame.append(diagram);preview.append(frame);section.append(preview);
+ }
+ document.querySelector('#studies').append(section);
+}
+for(const button of document.querySelectorAll('[data-zoom]'))button.addEventListener('click',()=>{
+ document.documentElement.style.setProperty('--zoom',button.dataset.zoom);
+ document.querySelectorAll('[data-zoom]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+});
+</script>
+</body>
+</html>

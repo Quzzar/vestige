@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:quartz_block"
+    },
+    "S": {
+      "item": "minecraft:quartz_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:quartz_plinth",
+    "count": 2
+  }
+}

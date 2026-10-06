@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_needle_darts",
+  "name": "Needle Darts",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Iron forms Arrow-shaped needles sharpened with Flint for the converging metal volley.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bound metal follows blank inscription clockwise.",
+    "Arrow motif follows bound metal clockwise.",
+    "Flint motif follows arrow motif clockwise.",
+    "Blank inscription follows flint motif clockwise."
+  ]
+}

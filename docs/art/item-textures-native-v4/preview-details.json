@@ -1,0 +1,202 @@
+[
+  {
+    "id": "eye_a_stone_lids",
+    "originalDimensions": [
+      1774,
+      887
+    ],
+    "solidBounds": [
+      499,
+      237,
+      1275,
+      658
+    ],
+    "guiScale": [
+      2.0003221649484533,
+      1.0001610824742266,
+      1
+    ],
+    "guiTranslation": [
+      0.0,
+      0.07216494845360824,
+      0
+    ],
+    "sha256": "3d89a1331480d8a38789aa73323d0fc2f77cd58d9fff161e871c8fd6c41fc490",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "eye_b_pearl_heart",
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "solidBounds": [
+      327,
+      295,
+      922,
+      998
+    ],
+    "guiScale": [
+      1.5608108108108107,
+      1.5608108108108107,
+      1
+    ],
+    "guiTranslation": [
+      0.049786628733997154,
+      0.3883357041251778,
+      0
+    ],
+    "sha256": "e09e5d8fe5333c897a6d7c298763761ad7fc10e84473a945dbc00bce55c5bbf4",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "eye_c_split_flakes",
+    "originalDimensions": [
+      1448,
+      1086
+    ],
+    "solidBounds": [
+      334,
+      194,
+      1119,
+      900
+    ],
+    "guiScale": [
+      1.614012738853503,
+      1.2105095541401274,
+      1
+    ],
+    "guiTranslation": [
+      -0.044585987261146494,
+      0.07133757961783439,
+      0
+    ],
+    "sha256": "287b97a98b3db4391112932b1349090c6d82d1de5cde41f57fe577cf94788924",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "eye_d_crimson_eye",
+    "originalDimensions": [
+      1263,
+      1245
+    ],
+    "solidBounds": [
+      259,
+      178,
+      1017,
+      1099
+    ],
+    "guiScale": [
+      1.1999185667752443,
+      1.1828175895765471,
+      1
+    ],
+    "guiTranslation": [
+      -0.0988056460369164,
+      0.24321389793702497,
+      0
+    ],
+    "sha256": "310a194d7875e77e2b5121478dd9fe40e8c451ce72f3d4c78624ad1674331443",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "shell_a_coiled_spiral",
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "solidBounds": [
+      278,
+      284,
+      1011,
+      982
+    ],
+    "guiScale": [
+      1.4969304229195088,
+      1.4969304229195088,
+      1
+    ],
+    "guiTranslation": [
+      -0.33424283765347884,
+      0.1145975443383356,
+      0
+    ],
+    "sha256": "6125e6bedfd87233261346afc980d1e399970ac00ae25ed29666cd4c2fbbe9a8",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "shell_b_trumpet",
+    "originalDimensions": [
+      1536,
+      1024
+    ],
+    "solidBounds": [
+      141,
+      273,
+      1395,
+      787
+    ],
+    "guiScale": [
+      1.0717703349282297,
+      0.7145135566188198,
+      1
+    ],
+    "guiTranslation": [
+      0.0,
+      0.20095693779904306,
+      0
+    ],
+    "sha256": "e1cd68c6161e63cfc02b02548653a9564db6d6baccdf3f8432146c08a75250c1",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "shell_c_open_clam",
+    "originalDimensions": [
+      1376,
+      1143
+    ],
+    "solidBounds": [
+      248,
+      165,
+      1128,
+      1005
+    ],
+    "guiScale": [
+      1.368181818181818,
+      1.1365056818181818,
+      1
+    ],
+    "guiTranslation": [
+      0.0,
+      0.21477272727272725,
+      0
+    ],
+    "sha256": "6c68824c275ed9f954c708b536e987d42e5269b41e82cfc10f8d445183c1099b",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  },
+  {
+    "id": "shell_d_broken_whorl",
+    "originalDimensions": [
+      1312,
+      1199
+    ],
+    "solidBounds": [
+      223,
+      252,
+      1149,
+      1050
+    ],
+    "guiScale": [
+      1.2397408207343412,
+      1.132964362850972,
+      1
+    ],
+    "guiTranslation": [
+      -0.4535637149028078,
+      0.7786177105831533,
+      0
+    ],
+    "sha256": "0c9094011447c2f5131c18cd57bcea36a8fbdc70799fa242fc32925b82c60e70",
+    "note": "Original generated PNG bytes and alpha preserved. Native GUI model fits the solid body within 14 menu pixels and preserves its natural aspect ratio."
+  }
+]

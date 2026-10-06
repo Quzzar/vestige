@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-05",
+  "scope": "Four stone-border and Diamond-top previews, no selection or production integration",
+  "nativeCaptureBuild": "passed",
+  "deterministicAuthorCheck": "passed",
+  "productionApparatusAuthorCheck": "passed",
+  "modelUvBoundsRotations": "passed",
+  "nativeViews": 5,
+  "matchedIndividualCamera": [
+    1.35,
+    66.1,
+    1.7
+  ],
+  "videosEncodedAndDecoded": 5,
+  "identicalGeometryAcrossFinishes": true,
+  "originalVanilla16x16Tiles": 7,
+  "actualLoadedTextureHashesMatchOriginals": true,
+  "unchangedProductionBlockModels": 180,
+  "unchangedInventoryModels": 72,
+  "unchangedConstructionRecipes": 72,
+  "acceptedRendererMatchesInstalledClass": true,
+  "installedJarSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSha256": "5c2bfddc801bb397b777ecc7265c3c9ff5a8e59c7c9da858e35768699f6b4b7c",
+  "review": "All five native framebuffer views inspected; narrow stone edging and two Diamond top inlays visible",
+  "gameplayBoundary": "Development resource-pack art only; carriers retain existing collision and interactions"
+}

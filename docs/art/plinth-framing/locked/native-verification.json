@@ -1,0 +1,186 @@
+{
+  "resourcePack": "None; production models and color registration",
+  "jarSha256": "caa02ebb439257ead82d4678d3264f84a4c93c47eeedd42fca2257d2c7057f98",
+  "views": [
+    {
+      "name": "plinth",
+      "view": "apparatus_trim_plinth",
+      "image": "plinth.png",
+      "imageSource": "native-world/vestige-apparatus_trim_plinth-apparatus-0/frame-00030.png",
+      "imageSha256": "43eef2ebbcdd7552e4dec6fdc80ac4955c44d582223827341a455fbeb2c0b7cf",
+      "frames": 31,
+      "seconds": 4.001205375,
+      "modelHashesVerified": 252,
+      "loadedCodeSha256": {
+        "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+        "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+        "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+        "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+        "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+        "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+      },
+      "camera": {
+        "yaw": 141.6325,
+        "fixed": true,
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "pitch": 21.406317
+      },
+      "scenario": "Production Plinth model and color registration, without a preview resource pack; approved corner and outer rim strips."
+    },
+    {
+      "name": "spellstone",
+      "view": "apparatus_trim_spellstone",
+      "image": "spellstone.png",
+      "imageSource": "native-world/vestige-apparatus_trim_spellstone-apparatus-0/frame-00031.png",
+      "imageSha256": "f37860fb918165eebfa643d33f900a56bfbc219b91026f1bb299cdc23ab99663",
+      "frames": 32,
+      "seconds": 4.032521333,
+      "modelHashesVerified": 252,
+      "loadedCodeSha256": {
+        "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+        "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+        "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+        "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+        "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+        "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+      },
+      "camera": {
+        "yaw": 148.67131,
+        "fixed": true,
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626
+      },
+      "scenario": "Production Spellstone model and color registration, without a preview resource pack; approved cap and support strips with original Diamond corners and Astral Seal."
+    },
+    {
+      "name": "variants",
+      "view": "apparatus_trim_variants",
+      "image": "variants.png",
+      "imageSource": "native-world/vestige-apparatus_trim_variants-apparatus-0/frame-00026.png",
+      "imageSha256": "b926f494030228645e1c86d290d300d96a33ce70ad5472c74cdf8a74c4b2b069",
+      "frames": 27,
+      "seconds": 4.133689917,
+      "modelHashesVerified": 252,
+      "loadedCodeSha256": {
+        "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+        "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+        "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+        "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+        "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+        "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+      },
+      "camera": {
+        "yaw": 150.84308,
+        "fixed": true,
+        "eye": [
+          5.8,
+          70.0,
+          10.0
+        ],
+        "pitch": 21.110853
+      },
+      "scenario": "Production Stone, Quartz and Polished Deepslate Spellstones and two-block Plinths. The approved shade follows each native finish; Quartz corner strips follow its pillar shaft."
+    },
+    {
+      "name": "columns",
+      "view": "plinth_columns",
+      "image": "columns.png",
+      "imageSource": "native-world/vestige-plinth_columns-apparatus-0/frame-00026.png",
+      "imageSha256": "040375b3ac137c2998b459fb060bb26c07f4b49db48176980034dbe25aadd333",
+      "frames": 27,
+      "seconds": 4.13791725,
+      "modelHashesVerified": 7,
+      "loadedCodeSha256": {
+        "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+        "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+        "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+        "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+        "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+        "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+      },
+      "camera": {
+        "yaw": 141.3402,
+        "fixed": true,
+        "eye": [
+          6.5,
+          70.2,
+          8.0
+        ],
+        "pitch": 20.022017
+      },
+      "scenario": "One, two and four stacked Plinth blocks. Neighbor-derived foot/shaft/cap forms join without internal caps or vertical gaps. Actual Diamond offerings on exposed caps and independent Gold sockets."
+    },
+    {
+      "name": "imbuements",
+      "view": "plinth_column_imbuements",
+      "image": "imbuements.png",
+      "imageSource": "native-world/vestige-plinth_column_imbuements-apparatus-0/frame-00027.png",
+      "imageSha256": "31e2d706ca3a4605b312022e86629635252bcbe41a8a05e732267173dc4b5a6b",
+      "frames": 28,
+      "seconds": 4.14666125,
+      "modelHashesVerified": 7,
+      "loadedCodeSha256": {
+        "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+        "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+        "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+        "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+        "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+        "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+      },
+      "camera": {
+        "yaw": 145.6849,
+        "fixed": true,
+        "eye": [
+          4.8,
+          69.3,
+          6.8
+        ],
+        "pitch": 17.466055
+      },
+      "scenario": "Identical empty and fully imbued columns. The right column holds separate Amethyst, Iron, Lapis and Gold sockets from bottom to top; stone geometry/texture is identical. All segments remain imbueable, including covered shafts."
+    }
+  ],
+  "worldCaptureCompleted": true,
+  "worldLog": "/private/tmp/vestige-apparatus-framing-locked-world.log",
+  "items": {
+    "image": "items.png",
+    "imageSource": "native-items/items/frame-00047.png",
+    "imageSha256": "f9195ee5f386d0ff4acc7c5b16758ea452b46738092b763813f9471ccc190fef",
+    "frames": 48,
+    "seconds": 11.725967,
+    "apparatusModelsVerified": 144,
+    "totalAssetHashesVerified": 148,
+    "all72InventoryIconsInspected": true,
+    "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+    "log": "/private/tmp/vestige-apparatus-framing-locked-items.log",
+    "completed": true
+  },
+  "worldViewsActuallyInspected": [
+    "plinth",
+    "spellstone",
+    "variants",
+    "columns",
+    "imbuements"
+  ],
+  "comparisonPage": {
+    "url": "http://127.0.0.1:8773/",
+    "image": "browser.jpg",
+    "sha256": "e6899b623f00e45bd205d71c8bbd8fc05b836628b8890a83d97ce5630cca2019",
+    "narrowWidth": 551,
+    "expandedNarrowWidth": 536,
+    "desktopWidth": 1200,
+    "height": 900,
+    "horizontalOverflow": false,
+    "allImagesLoadedAfterReload": true,
+    "viewportReset": true,
+    "actuallyInspected": true
+  }
+}

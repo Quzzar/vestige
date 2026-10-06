@@ -1,0 +1,84 @@
+{
+  "spell": "vestige:ray_of_frost",
+  "name": "Ray Of Frost",
+  "circle": 8,
+  "color": "a7ddff",
+  "rationale": "Cold focus follows an Arrow line through Ice; Emerald and a membrane sustain the piercing freezing ray.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "ice motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ice"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 6,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold cold focus, evocation focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Cold focus follows blank inscription clockwise.",
+    "Arrow motif follows cold focus clockwise.",
+    "Ice motif follows arrow motif clockwise, across an unused outer Plinth.",
+    "Evocation focus follows ice motif clockwise.",
+    "Recovery veil follows evocation focus clockwise.",
+    "Blank inscription follows recovery veil clockwise, across an unused outer Plinth."
+  ]
+}

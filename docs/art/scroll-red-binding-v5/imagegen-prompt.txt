@@ -1,0 +1,7 @@
+Tool: built-in image_gen.imagegen
+Reference: docs/art/scroll-rebuild-v4/references/electroblob-scroll.png
+transparent_background: true
+Result: excluded enlarged preview; native texture comes from the literal 16x16 source grid.
+
+Exact prompt:
+Edit this supplied Electroblob scroll sprite: replace ONLY the three visible blue binding colors with red, preserving the original parchment, silhouette, positions, exact hard pixel edges, and transparency. This is an actual native Minecraft 16 by 16 sprite, not a painted concept. Keep the native 16 by 16 logical grid and preferably exact output dimensions 16x16; no interpolation, antialiasing, blur, glow, additional detail, text, new background, or new bow. Required visible recolor: RGB #173e65 -> #d2443f, RGB #133455 -> #a82c47, RGB #0c2338 -> #791c27. Exactly ten opaque blue pixels form the band: y6 x7,8,9; y7 x8,9,10; y8 x9,10; y9 x9,10, coordinates zero-based. Every other native pixel, including all parchment and transparent pixels, must remain identical. Display the unchanged diagonal short broad parchment roll with just its red binding.

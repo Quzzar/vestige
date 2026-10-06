@@ -1,0 +1,857 @@
+{
+  "minecraft_version": "1.21.1",
+  "source": "Pinned Minecraft resource jar used by NeoForge 21.1.72",
+  "materials": [
+    {
+      "material": "stone",
+      "body_item": "minecraft:stone",
+      "slab_item": "minecraft:stone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/stone_slab.json",
+      "recipe_sha256": "237b876d3f800dacb0e8ac56303708b2e9fc41064feae7c2a07380b55e7f93f5",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:stone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:stone_slab"
+        }
+      }
+    },
+    {
+      "material": "cobblestone",
+      "body_item": "minecraft:cobblestone",
+      "slab_item": "minecraft:cobblestone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/cobblestone_slab.json",
+      "recipe_sha256": "01ba1964f4a15cb7d4bd74f3b2195cbd05b23f85b91a4ea93485ac9877ebf2f1",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:cobblestone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:cobblestone_slab"
+        }
+      }
+    },
+    {
+      "material": "mossy_cobblestone",
+      "body_item": "minecraft:mossy_cobblestone",
+      "slab_item": "minecraft:mossy_cobblestone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/mossy_cobblestone_slab.json",
+      "recipe_sha256": "14c740643805d74efbcf9376b29de8e305dc56247adcb0ea32fc26f756303701",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:mossy_cobblestone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:mossy_cobblestone_slab"
+        }
+      }
+    },
+    {
+      "material": "stone_bricks",
+      "body_item": "minecraft:stone_bricks",
+      "slab_item": "minecraft:stone_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/stone_brick_slab.json",
+      "recipe_sha256": "b172a94c4c90e252a489a298a1ed92b716beb257afc0b41c850c8ea24bda6570",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:stone_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:stone_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "body_item": "minecraft:mossy_stone_bricks",
+      "slab_item": "minecraft:mossy_stone_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/mossy_stone_brick_slab.json",
+      "recipe_sha256": "f09fa894763255fe358c0394ef231ea05e9de7a36f421cf92dce0c78d26959d1",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:mossy_stone_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:mossy_stone_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "granite",
+      "body_item": "minecraft:granite",
+      "slab_item": "minecraft:granite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/granite_slab.json",
+      "recipe_sha256": "281e889c36c48faafd64dad077bd22a37ab2b5f6636424d122ae1d0619260959",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:granite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:granite_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_granite",
+      "body_item": "minecraft:polished_granite",
+      "slab_item": "minecraft:polished_granite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_granite_slab.json",
+      "recipe_sha256": "dbc9a7a35808d663f90184477662792d9b4c0bf78de4c4b33d1b8fcc74b616e1",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_granite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_granite_slab"
+        }
+      }
+    },
+    {
+      "material": "diorite",
+      "body_item": "minecraft:diorite",
+      "slab_item": "minecraft:diorite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/diorite_slab.json",
+      "recipe_sha256": "9dbc80b15d8d9c4aa0ddbd7ade650aa2a4eb76ac0bad8da9f71bdb0bd9713dd1",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:diorite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:diorite_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_diorite",
+      "body_item": "minecraft:polished_diorite",
+      "slab_item": "minecraft:polished_diorite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_diorite_slab.json",
+      "recipe_sha256": "79bc038d31a3c86a3602847a32a7c0ff2343c5eb97f873505186235e9d9d0f83",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_diorite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_diorite_slab"
+        }
+      }
+    },
+    {
+      "material": "andesite",
+      "body_item": "minecraft:andesite",
+      "slab_item": "minecraft:andesite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/andesite_slab.json",
+      "recipe_sha256": "f02c2276c321668ccb99e63a15036b898cbb5fa3084372770985f62b6fae20ac",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:andesite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:andesite_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_andesite",
+      "body_item": "minecraft:polished_andesite",
+      "slab_item": "minecraft:polished_andesite_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_andesite_slab.json",
+      "recipe_sha256": "6ecba89b49ec4fc9b017b7efd67cb0cb6c6eda993102f8457044287c0aaf7b26",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_andesite"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_andesite_slab"
+        }
+      }
+    },
+    {
+      "material": "sandstone",
+      "body_item": "minecraft:sandstone",
+      "slab_item": "minecraft:sandstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/sandstone_slab.json",
+      "recipe_sha256": "cdbd938b542f48aea91b2f6aa1f351a73ad478568f3f9372604d9d3c2186eeaa",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": [
+            {
+              "item": "minecraft:sandstone"
+            },
+            {
+              "item": "minecraft:chiseled_sandstone"
+            }
+          ]
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:sandstone_slab"
+        }
+      }
+    },
+    {
+      "material": "smooth_sandstone",
+      "body_item": "minecraft:smooth_sandstone",
+      "slab_item": "minecraft:smooth_sandstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/smooth_sandstone_slab.json",
+      "recipe_sha256": "c1bf0b8d8140b4f29d4a0dd6e5f236418f8158d61ede236d93b73272241d0ce5",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:smooth_sandstone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:smooth_sandstone_slab"
+        }
+      }
+    },
+    {
+      "material": "red_sandstone",
+      "body_item": "minecraft:red_sandstone",
+      "slab_item": "minecraft:red_sandstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/red_sandstone_slab.json",
+      "recipe_sha256": "9ad3815c5e4067f4bc1b1725bd972e6b0c49e141130c94ceb5fc1191978b9f53",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": [
+            {
+              "item": "minecraft:red_sandstone"
+            },
+            {
+              "item": "minecraft:chiseled_red_sandstone"
+            }
+          ]
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:red_sandstone_slab"
+        }
+      }
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "body_item": "minecraft:smooth_red_sandstone",
+      "slab_item": "minecraft:smooth_red_sandstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/smooth_red_sandstone_slab.json",
+      "recipe_sha256": "fc3f3823cbaf87c081fa40a5dd0b59b3957530703357a2d5da921fed1f713e0f",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:smooth_red_sandstone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:smooth_red_sandstone_slab"
+        }
+      }
+    },
+    {
+      "material": "bricks",
+      "body_item": "minecraft:bricks",
+      "slab_item": "minecraft:brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/brick_slab.json",
+      "recipe_sha256": "d4d78c7d9c5d6b5ced48edd7d555fef821e1a99eeefcf42cec64f4ea8d488302",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:brick_slab"
+        }
+      }
+    },
+    {
+      "material": "mud_bricks",
+      "body_item": "minecraft:mud_bricks",
+      "slab_item": "minecraft:mud_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/mud_brick_slab.json",
+      "recipe_sha256": "2538ed86a446e97656fb6687ebf0f87a5e4672134a7853067b3111e5d10f3091",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:mud_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:mud_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "quartz",
+      "body_item": "minecraft:quartz_block",
+      "slab_item": "minecraft:quartz_slab",
+      "vanilla_recipe": "data/minecraft/recipe/quartz_slab.json",
+      "recipe_sha256": "14bee1624414d74bb64386887fe0b128d4692dda1786339d0dd4860a0bad13fc",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": [
+            {
+              "item": "minecraft:chiseled_quartz_block"
+            },
+            {
+              "item": "minecraft:quartz_block"
+            },
+            {
+              "item": "minecraft:quartz_pillar"
+            }
+          ]
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:quartz_slab"
+        }
+      }
+    },
+    {
+      "material": "smooth_quartz",
+      "body_item": "minecraft:smooth_quartz",
+      "slab_item": "minecraft:smooth_quartz_slab",
+      "vanilla_recipe": "data/minecraft/recipe/smooth_quartz_slab.json",
+      "recipe_sha256": "176676204794c31763f40ee8fc44f6e84599ce2d2c49e08c910b3ae39f51a294",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:smooth_quartz"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:smooth_quartz_slab"
+        }
+      }
+    },
+    {
+      "material": "prismarine",
+      "body_item": "minecraft:prismarine",
+      "slab_item": "minecraft:prismarine_slab",
+      "vanilla_recipe": "data/minecraft/recipe/prismarine_slab.json",
+      "recipe_sha256": "dcc52433c58a38441958684ceaaf8c6e8f0224010114ca4fe746a25b0fad069f",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:prismarine"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:prismarine_slab"
+        }
+      }
+    },
+    {
+      "material": "prismarine_bricks",
+      "body_item": "minecraft:prismarine_bricks",
+      "slab_item": "minecraft:prismarine_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/prismarine_brick_slab.json",
+      "recipe_sha256": "e5f03cbfa24508a2d86fb55e1744d873656914b7e9d8cc79e9dd78fc45e732e5",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:prismarine_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:prismarine_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "dark_prismarine",
+      "body_item": "minecraft:dark_prismarine",
+      "slab_item": "minecraft:dark_prismarine_slab",
+      "vanilla_recipe": "data/minecraft/recipe/dark_prismarine_slab.json",
+      "recipe_sha256": "b7eac6c88b5f4c90842c9f4589fd9e67a1eeb035ecc6a011ec5e0d168603e459",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:dark_prismarine"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:dark_prismarine_slab"
+        }
+      }
+    },
+    {
+      "material": "nether_bricks",
+      "body_item": "minecraft:nether_bricks",
+      "slab_item": "minecraft:nether_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/nether_brick_slab.json",
+      "recipe_sha256": "6f2fa118122643feae745c4e21f97f05da70a96b707d2adeea2074087e273312",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:nether_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:nether_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "red_nether_bricks",
+      "body_item": "minecraft:red_nether_bricks",
+      "slab_item": "minecraft:red_nether_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/red_nether_brick_slab.json",
+      "recipe_sha256": "2bc2d61349b85834f9acb0f00190512d5a88ec35ca6ec0d418e2a0f483beb703",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:red_nether_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:red_nether_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "blackstone",
+      "body_item": "minecraft:blackstone",
+      "slab_item": "minecraft:blackstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/blackstone_slab.json",
+      "recipe_sha256": "ded904665751e044ff6378cdb635b844cda15677d69cbccceabc625a065a920f",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:blackstone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:blackstone_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_blackstone",
+      "body_item": "minecraft:polished_blackstone",
+      "slab_item": "minecraft:polished_blackstone_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_blackstone_slab.json",
+      "recipe_sha256": "b17224574f6c2297bb6580eb1c2eb164d92defb947c60fb7e2555632f0642d43",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_blackstone"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_blackstone_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "body_item": "minecraft:polished_blackstone_bricks",
+      "slab_item": "minecraft:polished_blackstone_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_blackstone_brick_slab.json",
+      "recipe_sha256": "21c915d65b050409bd030481b4bf501fb4c955af919c2bb63f5311ac08f38d31",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_blackstone_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_blackstone_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "cobbled_deepslate",
+      "body_item": "minecraft:cobbled_deepslate",
+      "slab_item": "minecraft:cobbled_deepslate_slab",
+      "vanilla_recipe": "data/minecraft/recipe/cobbled_deepslate_slab.json",
+      "recipe_sha256": "bb52085dfa105fd39d0f79898dfdf10827b1eae0803eb6adef629807e5123be7",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:cobbled_deepslate"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:cobbled_deepslate_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_deepslate",
+      "body_item": "minecraft:polished_deepslate",
+      "slab_item": "minecraft:polished_deepslate_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_deepslate_slab.json",
+      "recipe_sha256": "57dc816d0ba0726308c56480c20e7a763e5bc14c7f1b777559f56be2ed34f2ac",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_deepslate"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_deepslate_slab"
+        }
+      }
+    },
+    {
+      "material": "deepslate_bricks",
+      "body_item": "minecraft:deepslate_bricks",
+      "slab_item": "minecraft:deepslate_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/deepslate_brick_slab.json",
+      "recipe_sha256": "01451a1ddbfad47ac90b7fe8d1d47ab738da7e4e5fde75e8c8af5e814c6026e1",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:deepslate_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:deepslate_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "deepslate_tiles",
+      "body_item": "minecraft:deepslate_tiles",
+      "slab_item": "minecraft:deepslate_tile_slab",
+      "vanilla_recipe": "data/minecraft/recipe/deepslate_tile_slab.json",
+      "recipe_sha256": "0c02cfd6c4177fc328d64317294b527dc1e80dc03fef5dab69168ccdb3fe75f0",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:deepslate_tiles"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:deepslate_tile_slab"
+        }
+      }
+    },
+    {
+      "material": "tuff",
+      "body_item": "minecraft:tuff",
+      "slab_item": "minecraft:tuff_slab",
+      "vanilla_recipe": "data/minecraft/recipe/tuff_slab.json",
+      "recipe_sha256": "e42d0cb4b4c1fca06bd4fac6477c2772c5ec211b99a7c7c6cdcef5b057601f25",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:tuff"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:tuff_slab"
+        }
+      }
+    },
+    {
+      "material": "polished_tuff",
+      "body_item": "minecraft:polished_tuff",
+      "slab_item": "minecraft:polished_tuff_slab",
+      "vanilla_recipe": "data/minecraft/recipe/polished_tuff_slab.json",
+      "recipe_sha256": "b9744952faeb9f0c58f66812b283dd90e82641418e106ec353add90605873be8",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:polished_tuff"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:polished_tuff_slab"
+        }
+      }
+    },
+    {
+      "material": "tuff_bricks",
+      "body_item": "minecraft:tuff_bricks",
+      "slab_item": "minecraft:tuff_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/tuff_brick_slab.json",
+      "recipe_sha256": "3597008e26ca4a1898cf41ce858b6360eed8ca21135f39868c2ccae0cdee4a6a",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:tuff_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:tuff_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "end_stone_bricks",
+      "body_item": "minecraft:end_stone_bricks",
+      "slab_item": "minecraft:end_stone_brick_slab",
+      "vanilla_recipe": "data/minecraft/recipe/end_stone_brick_slab.json",
+      "recipe_sha256": "5233fcd8ba8519d98b62943be4dfec007ecb3e821733f6837f6d5412010b25ce",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": {
+            "item": "minecraft:end_stone_bricks"
+          }
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:end_stone_brick_slab"
+        }
+      }
+    },
+    {
+      "material": "purpur",
+      "body_item": "minecraft:purpur_block",
+      "slab_item": "minecraft:purpur_slab",
+      "vanilla_recipe": "data/minecraft/recipe/purpur_slab.json",
+      "recipe_sha256": "abdbd58a382231e93dc3079f01811924550809e131b3f7e42c03902c8c1f25a6",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "key": {
+          "#": [
+            {
+              "item": "minecraft:purpur_block"
+            },
+            {
+              "item": "minecraft:purpur_pillar"
+            }
+          ]
+        },
+        "pattern": [
+          "###"
+        ],
+        "result": {
+          "count": 6,
+          "id": "minecraft:purpur_slab"
+        }
+      }
+    }
+  ]
+}

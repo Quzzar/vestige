@@ -1,0 +1,8 @@
+[
+  "network-wide: actual GUI size 640x360",
+  "map pin selects Desert Pyramid and synchronizes the destination row",
+  "selected-map-pin: actual GUI size 640x360",
+  "network-narrow: actual GUI size 480x270",
+  "eighth list row selects Forest Shrine at the narrow GUI scale",
+  "last-destination-selection: actual GUI size 480x270"
+]

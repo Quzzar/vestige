@@ -1,0 +1,130 @@
+[
+  {
+    "id": "eye_a_flint_inset",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      2,
+      2,
+      15,
+      15
+    ],
+    "opaque_colors": 14,
+    "opaque_pixels": 110,
+    "sha256": "df660f0f848f645f8587e60648647ce25b8fead8623788c0885f8e7a9a3712c9"
+  },
+  {
+    "id": "eye_b_split_flake",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      2,
+      2,
+      15,
+      15
+    ],
+    "opaque_colors": 14,
+    "opaque_pixels": 108,
+    "sha256": "6efcd7b92655d6f2ac5da758d7df9940ffa1453fc4cac6d18bd68005b9141266"
+  },
+  {
+    "id": "eye_c_long_chip",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      15,
+      15
+    ],
+    "opaque_colors": 14,
+    "opaque_pixels": 99,
+    "sha256": "8517faa528e2296326d19bceed359a7fcc9402b4b59db8448b245de530f1ea9d"
+  },
+  {
+    "id": "eye_d_knapped_core",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      2,
+      2,
+      15,
+      15
+    ],
+    "opaque_colors": 14,
+    "opaque_pixels": 107,
+    "sha256": "10793519aa738efa157e056cd230edf4462945a778b016b632f44a8ee4d95ec6"
+  },
+  {
+    "id": "shell_a_old_ridges",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      14,
+      15
+    ],
+    "opaque_colors": 8,
+    "opaque_pixels": 87,
+    "sha256": "27ab9b5bd51b850e9ac562a44c802e2dd80ab75ba65d376425441379bc7d8051"
+  },
+  {
+    "id": "shell_b_broken_ribs",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      14,
+      15
+    ],
+    "opaque_colors": 8,
+    "opaque_pixels": 86,
+    "sha256": "5dcd09591d85a5b019a5061c50164fbfbb921ed67767c5cadb1b391a07a0b649"
+  },
+  {
+    "id": "shell_c_slate_coils",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      14,
+      15
+    ],
+    "opaque_colors": 8,
+    "opaque_pixels": 83,
+    "sha256": "299ed16eff09de225660080a16eb196654f27d6ba150d37b9faa85a5a6c00c91"
+  },
+  {
+    "id": "shell_d_shadow_lip",
+    "size": [
+      16,
+      16
+    ],
+    "bounds": [
+      3,
+      1,
+      14,
+      15
+    ],
+    "opaque_colors": 8,
+    "opaque_pixels": 87,
+    "sha256": "6f16b1608c23f307b67263137fd2c43f80019a5b672f353c7a33eb51369a290e"
+  }
+]

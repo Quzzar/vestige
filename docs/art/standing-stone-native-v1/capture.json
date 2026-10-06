@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "view": "three-shapes-day",
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "three-shapes-day",
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "three-shapes-day",
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "dayTime": 5500,
+      "yaw": 26.565052,
+      "capture": "three-shapes-day"
+    },
+    {
+      "view": "shouldered-stone-close",
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "shouldered-stone-close",
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "shouldered-stone-close",
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "pitch": 10.416332,
+      "camera": [
+        2.4,
+        66.7,
+        -2.8
+      ],
+      "dayTime": 5500,
+      "yaw": 29.93151,
+      "capture": "shouldered-stone-close"
+    },
+    {
+      "view": "matching-key-three-finishes",
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "matching-key-three-finishes",
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "stone_bricks",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "matching-key-three-finishes",
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "sandstone",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "dayTime": 5500,
+      "yaw": 26.565052,
+      "capture": "matching-key-three-finishes"
+    },
+    {
+      "view": "three-shapes-night",
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "three-shapes-night",
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false
+    },
+    {
+      "view": "three-shapes-night",
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false
+    },
+    {
+      "height": 1080,
+      "width": 1920,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "dayTime": 18000,
+      "yaw": 26.565052,
+      "capture": "three-shapes-night"
+    }
+  ],
+  "meshSha256": {
+    "assets/vestige/models/block/standing_stone_blade_lower.obj": "c6c189cf8c831a1c2fb51ac3f9c910f90ef1620a4000465755d2cc3563aa4d68",
+    "assets/vestige/models/block/standing_stone_blade_upper.obj": "0d334ab99ad18378663e659ec944d26c9440faacb54e203cb692a0fdad7ace15",
+    "assets/vestige/models/block/standing_stone_blade_whole.obj": "8ccbfd909817c6d036429615018309150c7ce58043b963034423480c388a48b7",
+    "assets/vestige/models/block/standing_stone_shoulder_lower.obj": "3eab671d3d5186a048a5d198fa22068ea7c9787c45b9edc2304436ed2e3b8daa",
+    "assets/vestige/models/block/standing_stone_shoulder_upper.obj": "a14c87017ba0ebfc3a5cb725b4c145d69393073465abae4237bd80b910516e3a",
+    "assets/vestige/models/block/standing_stone_shoulder_whole.obj": "0a0814c5fab47b1e2e19ba1fe3de9964dcc847511c05562aca5eacdd6d040e8b",
+    "assets/vestige/models/block/standing_stone_leaning_lower.obj": "2f4f296987629ca9c725a80e0538eab87870f8fcd06a87f4c80445fd35795436",
+    "assets/vestige/models/block/standing_stone_leaning_upper.obj": "710a16752c2987127c82e6df6571a296f0a7b6ccaec04832a7a57deb69c29e8f",
+    "assets/vestige/models/block/standing_stone_leaning_whole.obj": "fff3d37b63dccb835567e9484a551665422b51e2235bb818888f1344e044e60a"
+  },
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Minecraft main render target"
+}

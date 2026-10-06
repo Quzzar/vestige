@@ -1,0 +1,83 @@
+{
+  "spell": "vestige:ice_spikes",
+  "name": "Ice Spikes",
+  "circle": 8,
+  "color": "a7ddff",
+  "rationale": "Cold focus hardens Stone and Flint into Ice points; Emerald directs their ground line.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "ice motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ice"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold cold focus, ice motif; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Cold focus follows blank inscription clockwise.",
+    "Stone motif follows cold focus clockwise.",
+    "Flint motif follows stone motif clockwise, across an unused outer Plinth.",
+    "Ice motif follows flint motif clockwise.",
+    "Evocation focus follows ice motif clockwise.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

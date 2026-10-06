@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vestige · Inner and outer ritual layers</title>
+<style>
+:root{color-scheme:dark;--zoom:2;--background:#1c1b20;--ink:#eee8da;--muted:#aaa59d;--accent:#b9a5cc;--line:#403c43}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 32px 40px;background:var(--background);color:var(--ink);font-family:Georgia,serif}
+header{display:flex;align-items:end;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.eyebrow{font:11px system-ui,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+h1{font-size:29px;font-weight:400;margin:0 0 9px}
+p{font:13px/1.6 system-ui,sans-serif;color:var(--muted);margin:0;max-width:650px}
+.controls{display:flex;gap:7px;flex-shrink:0}
+button{font:13px system-ui,sans-serif;cursor:pointer}
+.controls button{border:1px solid var(--line);border-radius:4px;padding:9px 12px;color:var(--ink);background:transparent}
+.controls button[aria-pressed=true]{background:#51425f;border-color:var(--accent)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+main{display:grid;grid-template-columns:repeat(2,calc(202px * var(--zoom))) minmax(260px,310px);justify-content:safe center;gap:25px}
+.study{width:calc(202px * var(--zoom))}
+h2{font-size:19px;font-weight:400;min-height:44px;margin:0 0 6px}
+.description{min-height:44px;margin-bottom:15px;font-size:12px}
+.preview{position:relative;width:calc(202px * var(--zoom));height:calc(150px * var(--zoom));margin-bottom:21px}
+.drawing{width:202px;height:150px;padding:0 9px;transform:scale(var(--zoom));transform-origin:top left}
+.diagram{position:relative;width:184px;height:150px}
+.paper{position:absolute;left:17px;top:0;width:150px;height:150px;background-repeat:no-repeat}
+.guides{position:absolute;left:17px;top:0;width:150px;height:150px;pointer-events:none;overflow:visible}
+.plinth-art,.stone-art{position:absolute;transform:translate(-50%,-50%);pointer-events:none;z-index:1}
+.plinth-art{width:34px;height:34px}.stone-art{width:33px;height:33px}
+.item{position:absolute;width:16px;height:16px;padding:0;border:0;background:none;cursor:default;transform:translate(-50%,-50%);z-index:2}
+.item .unknown{display:block;color:#503722;font:bold 11px/16px monospace;text-align:center}
+.item img{display:block;width:16px;height:16px;image-rendering:pixelated;filter:drop-shadow(0 1px 0 #0004)}
+.item:hover,.item:focus-visible{outline:1px solid var(--accent);outline-offset:2px;background:#cbb8e64a}
+.tooltip{position:absolute;display:none;bottom:22px;left:8px;white-space:nowrap;pointer-events:none;padding:4px 6px;font:9px/12px monospace;color:white;background:#170f21ed;border:1px solid #6f4697;box-shadow:0 1px 2px #0005}
+.item:hover .tooltip,.item:focus-visible .tooltip{display:block}
+.references{width:100%;max-width:310px;min-width:0}
+.reference{margin:0 0 20px;min-width:0}
+.reference a{display:block;color:var(--accent);text-decoration:none}
+.reference img{display:block;width:100%;max-height:220px;object-fit:contain;background:#27252b;border:1px solid var(--line);image-rendering:pixelated}
+figcaption{font:11px/1.5 system-ui,sans-serif;color:var(--muted);margin-top:7px}
+figcaption strong{color:var(--ink);font-weight:500}
+.source-note{font-size:11px}
+footer{border-top:1px solid var(--line);padding-top:16px;margin-top:8px}
+footer a{color:var(--accent);text-underline-offset:3px}
+@media(max-width:1240px){main{grid-template-columns:repeat(2,calc(202px * var(--zoom)))}.references{grid-column:1/-1;max-width:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.references h2,.references>.description,.source-note{grid-column:1/-1}.references h2{min-height:0;margin:0}.references>.description{min-height:0;margin:0}}
+@media(max-width:860px){header{align-items:start;flex-direction:column}main{grid-template-columns:max-content}.references{grid-template-columns:1fr;max-width:404px}.references img{max-height:220px}.study{justify-self:center}}
+@media(max-width:450px){body{padding:22px 18px}.study{--zoom:1}.controls button[data-zoom="2"]{display:none}.references{max-width:calc(100vw - 36px)}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<header>
+ <div><div class="eyebrow">Vestige · Archaeological ritual diagrams</div><h1>Four inner. Four outer.</h1><p>Just the paper and ritual sketch. Spell ingredients stay a mystery; public recipes show their ingredients and leave unused plinths empty.</p></div>
+ <div class="controls" aria-label="Preview scale"><button data-zoom="1" aria-pressed="false">Game size</button><button data-zoom="2" aria-pressed="true">2× preview</button></div>
+</header>
+<main>
+ <div id="four" class="study"></div>
+ <div id="eight" class="study"></div>
+ <aside class="references">
+  <h2>Existing Minecraft UI references</h2>
+  <p class="description">Quiet parchment works alongside native icons and pixel text.</p>
+  <figure class="reference"><a href="https://www.curseforge.com/minecraft/mc-mods/antique-atlas" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/Stereowalker/AntiqueAtlas/5b8740d17576872edee8d019d595ecb4fca07b46/src/main/resources/assets/antiqueatlas/textures/gui/book.png" alt="Antique Atlas's pale book background and brown pixel frame"></a><figcaption><strong>Antique Atlas · book background asset.</strong> Pale paper, quiet texture, brown pixel edges. This is its UI asset, without map content.</figcaption></figure>
+  <figure class="reference"><a href="https://vazkiimods.github.io/Patchouli/docs/patchouli-basics/getting-started/" target="_blank" rel="noopener"><img src="https://vazkiimods.github.io/Patchouli/assets/images/gettingStarted-caaf8854655999ab1d54fbc867649446.png" alt="Patchouli's book menu with Minecraft icons and text"></a><figcaption><strong>Patchouli · actual book screen.</strong> Illustrated paper with familiar game icons and restrained controls.</figcaption></figure>
+  <figure class="reference"><a href="https://www.minecraft.net/en-us/article/brush" target="_blank" rel="noopener"><img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/brush-ingame.jpg" alt="Minecraft's crafting menu showing the brush recipe"></a><figcaption><strong>Minecraft · brush crafting screen.</strong> The normal grey frame and clear item slots remain the useful baseline.</figcaption></figure>
+  <p class="source-note">Reference artwork belongs to its respective creators and is loaded from their sources. The refined ritual backdrop is a new generated art study.</p>
+ </aside>
+</main>
+<footer><p>Spell plinths conceal their ingredients; hover the result scroll for its name. <a href="v7-prompts.md" target="_blank">Artwork and alignment notes</a> · <a href="studies-v1.html">Earlier art studies</a> (superseded layouts). This shows Vestige's recipe artwork; JEI and EMI provide their own surrounding window and controls in-game.</p></footer>
+<script>
+const layouts={
+ four:{name:'Four-slot ritual',description:'Four inner plinths around the Spellstone.',image:'parchment-v7.png',width:1254,height:1254,crop:[0,0,1254,1254],center:[627,627],slots:[[627,237],[1017,627],[627,1017],[237,627]],layers:[[0,1,2,3]]},
+ eight:{name:'Eight-slot ritual',description:'Four inner plinths, plus four outer plinths at the corners.',image:'parchment-v7.png',width:1254,height:1254,crop:[0,0,1254,1254],center:[627,627],slots:[[627,345],[985,269],[909,627],[985,985],[627,909],[269,985],[345,627],[269,269]],layers:[[0,2,4,6],[1,3,5,7]]}
+};
+const recipes={four:{name:'Fireball',concealed:true,items:[]},eight:{name:'Starfall',concealed:true,items:[]}};
+// Native icon bytes are embedded unchanged so the temporary preview does not depend on cached asset requests.
+const iconSources={"paper":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAd0lEQVQ4y9WRSwrAIAxEvX1u4x28RO7Qdte1YJnCgFZTP4tCA0EQ35sQnftFee8Tehne9iOp6pyEqQBjPO+GaEjCVIJ5QygiaTi11XhTSQhayc8pCskMzF1UE+CiJ+FvmDt4kzDVhC0JzhBCH2xJCE7BuWQJ/Lwu2PhVdE0qW9YAAAAASUVORK5CYII=","blaze_rod":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVR42mNgoDfYnC35f3YY+3+yNK/Ilf7//7Pu/52TZf5PNWb4T7LN/3/UgTWvsyFRM9hmoOYb69T+748ix2aos0nWjOxn8jRD/UyRs0kOMLDmgwwUhPaA2LwxWoD80IbZTlYigQFQuibZ2dQCAG4MefYDQI0dAAAAAElFTkSuQmCC","gunpowder":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEUAAACKiopycnJUVFRQUFBJSUk+Pj4tLS2khWRQAAAAAXRSTlMAQObYZgAAAElJREFUeNpjwA9YHKAMZxWogKJqAZjhJGQYDhZQUlR1BQk5C5kKB6WDZIyETENAcqWKykGhIBH2IFPXMLC28tSwcgYwKC/HaiEAtf4MFvnbFVwAAAAASUVORK5CYII=","emerald":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEUAAADb/+uv/c2C9q1B84QX3WIAqiwAlSkAexgAUwAALQC5+lfcAAAAAXRSTlMAQObYZgAAAENJREFUeNpjwApmzoTQnCKuE8CMiSpuUWABIRW31AUghmqQWhmUYdaGxgg2a4UyPEpBDIZpFe1WEAPTgTJgsGoVVpsBDRwS6h42ddsAAAAASUVORK5CYII=","ender_pearl":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEUAAACM9OIszbE0mYglhHQbe2sQXlELTUIMNzAGOTEDJiC5a2thAAAAAXRSTlMAQObYZgAAAFtJREFUeNpjwAo4OqB0swmE1WyS5rIAJGAiVJ7mBWIYas4szwLJOM1aNb0MKLc4HchwAzKWgBhmQAaXe+XMIisGIMOtvFwRpJhhabozUAYktCxtFZACsVYh2wwA2BYa2KT1S0MAAAAASUVORK5CYII=","glowstone_dust":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEUAAAD51Jz/vF7rqk60cUCOVi5+SCFaORxHN0c3AAAAAXRSTlMAQObYZgAAAElJREFUeNpjwA/YEqCMZDWogKJKAZiRJGToDhZQUlRJAQklC5kIO4aDZIyETNxAciWKzs4uIBF2J5MUZ7C28hDXcgYwKC/HaiEA2vEMUqfTCnYAAAAASUVORK5CYII=","amethyst_shard":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEUAAAD//dX+y+bPoPOzjvONasxvT6tUOYoaPFOGAAAAAXRSTlMAQObYZgAAAE5JREFUeNpjwA7Y0tIgjCQldYiAk6I5RMBFOBwsYOScCmakGJmmFoAEXAxT00ECqaEqYAGGspAQsABDeVlIAYSRHs4ABuylCQwQkIZqMQDBkg6s9kncBgAAAABJRU5ErkJggg==","stone":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAZElEQVR42jWNsQ0AMQjEGJcB3HsEr/xSkncBOgkfUyXIguoo4mEXGdkFFvBdlGmpwKCAWIWOeYFladCK4n2BXZZn6vR3dsXRfLnKWfFoXmtUrX81AiboaZ9u4I1G8KdqPICl6AdyLn2NfcJFIAAAAABJRU5ErkJggg==","echo_shard":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGFBMVEUAAAAp3+sAkpUKUGADQVAFKjIRGyENEhflIjUTAAAAAXRSTlMAQObYZgAAAFZJREFUeNpjQIBQKM3qnAZlGCsnQBhOQmZgBluYsmsChJHqEgYWSk0LdikAMdjNnEzcwUKlKSkhEKGw1NBwsFBJmqs5A0RVsnIBmFXkagJhsJeXIxwBAPgZD+HK8EObAAAAAElFTkSuQmCC","spell_scroll":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4nGNgoBAwElKgxsEJZ9/68R1DnoWQRnt+PhRxkCEnd3eC2eau5ZguwKbx8tdvDLrcXAwpS4rgYopKqgz3791GuACfxonra8D8O2f2/UeyC2w5Cy6NIE1zYvpQNHqk58PV7Jg58b+KiRMj2AX6aM6DacrV1YBw9v5gkF5VDpe7e3QfwhlqHJwMizc3oDsPbBtIIcfE02D+tRccDErtunD521cuM2y7IgJxAUizqo4ug7K1E8hpcKeC+HcZGBjuVV6Ga4KBL0JBjAwMhxhYPv79A5cEYZBBMENgTr344QGYVhAqYpSTk2N49OgRw/ziEob7P38wsLz8/RvuZJBGZH/CbFSoLQKHOEhzY2gYWAykGRwGGyt5IE7is/4PczrMICGDAkaQbdg0wixmBBELchkYEiYzMCxtdwcHpKF/P+Phw4fBCkBOxaYRJTEgA3FWVgY7Pj6Gxz9/4dWI0wCYITCASyPVAACAtKlxG5gHIwAAAABJRU5ErkJggg=="};
+function item(diagram,point,crop,id,label){
+ const button=document.createElement('button');button.className='item';button.setAttribute('aria-label',label);
+ button.style.left=(17+(point[0]-crop[0])*150/crop[2])+'px';button.style.top=((point[1]-crop[1])*150/crop[3])+'px';
+ if(id){const img=document.createElement('img');img.src=iconSources[id];img.alt='';button.append(img);}
+ else{const mark=document.createElement('span');mark.className='unknown';mark.textContent='?';button.append(mark);}
+ const tip=document.createElement('span');tip.className='tooltip';tip.textContent=label;button.append(tip);diagram.append(button);
+}
+function guides(diagram,layout){
+ const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.classList.add('guides');svg.setAttribute('viewBox','0 0 150 150');svg.setAttribute('aria-hidden','true');
+ const project=point=>[(point[0]-layout.crop[0])*150/layout.crop[2],(point[1]-layout.crop[1])*150/layout.crop[3]];
+ const center=project(layout.center),tau=Math.PI*2;
+ const at=(radius,angle)=>[center[0]+radius*Math.cos(angle),center[1]+radius*Math.sin(angle)];
+ layout.layers.forEach((seats,layer)=>{
+  const points=seats.map(seat=>project(layout.slots[seat])),radius=Math.hypot(points[0][0]-center[0],points[0][1]-center[1]);
+  if(points.some(point=>Math.abs(Math.hypot(point[0]-center[0],point[1]-center[1])-radius)>1e-8))throw new Error('Ritual layer seats must share one circle');
+  const group=document.createElementNS(ns,'g');group.dataset.layer=layer===0?'inner':'outer';group.dataset.radius=radius;group.dataset.centerX=center[0];group.dataset.centerY=center[1];
+  group.setAttribute('fill','none');group.setAttribute('stroke','#806344');group.setAttribute('stroke-width','.6');group.setAttribute('stroke-opacity','.52');group.setAttribute('stroke-linecap','round');
+  // The transparent stone illustrations cover the circles at their exact slot centers.
+  const circle=document.createElementNS(ns,'circle');circle.setAttribute('cx',center[0]);circle.setAttribute('cy',center[1]);circle.setAttribute('r',radius);circle.setAttribute('stroke-dasharray','2.2 1.3');group.append(circle);
+  const angles=points.map(point=>(Math.atan2(point[1]-center[1],point[0]-center[0])+tau)%tau).sort((a,b)=>a-b);
+  angles.forEach((angle,index)=>{
+   const start=angle,end=angles[(index+1)%angles.length]+(index===angles.length-1?tau:0);
+   const middle=(start+end)/2,p=at(radius,middle),u=[Math.cos(middle),Math.sin(middle)],t=[-u[1],u[0]],tick=document.createElementNS(ns,'path');
+   const offset=(radial,tangent)=>[p[0]+u[0]*radial+t[0]*tangent,p[1]+u[1]*radial+t[1]*tangent];
+   if(index%2===0){
+    const direction=index===0?1:-1;
+    tick.setAttribute('d',`M ${offset(1,-.7*direction)} L ${offset(0,1.1*direction)} L ${offset(-.7,-.25*direction)}`);
+   }else tick.setAttribute('d',`M ${offset(-.9,0)} L ${offset(.9,0)}`);
+   tick.setAttribute('stroke-width','.55');group.append(tick);
+  });
+  svg.append(group);
+ });
+ const arrows=document.createElementNS(ns,'g');arrows.setAttribute('stroke','#503722');arrows.setAttribute('stroke-width','.65');arrows.setAttribute('fill','#503722');
+ layout.slots.forEach(point=>{
+  const slot=project(point),distance=Math.hypot(slot[0]-center[0],slot[1]-center[1]),u=[(slot[0]-center[0])/distance,(slot[1]-center[1])/distance],t=[-u[1],u[0]];
+  const start=[slot[0]-u[0]*14.5,slot[1]-u[1]*14.5],tip=[center[0]+u[0]*14.8,center[1]+u[1]*14.8];
+  const line=document.createElementNS(ns,'line');line.setAttribute('x1',start[0]);line.setAttribute('y1',start[1]);line.setAttribute('x2',tip[0]);line.setAttribute('y2',tip[1]);arrows.append(line);
+  const head=document.createElementNS(ns,'path');head.setAttribute('stroke','none');head.setAttribute('d',`M ${tip} L ${[tip[0]+u[0]*2.7+t[0]*1.6,tip[1]+u[1]*2.7+t[1]*1.6]} L ${[tip[0]+u[0]*2.7-t[0]*1.6,tip[1]+u[1]*2.7-t[1]*1.6]} Z`);arrows.append(head);
+ });
+ svg.append(arrows);
+ diagram.append(svg);
+}
+function illustration(diagram,point,crop,type){
+ const img=document.createElement('img');img.className=type==='plinth'?'plinth-art':'stone-art';img.src=type+'-v7.png';img.alt='';
+ img.style.left=(17+(point[0]-crop[0])*150/crop[2])+'px';img.style.top=((point[1]-crop[1])*150/crop[3])+'px';diagram.append(img);
+}
+for(const type of ['four','eight']){
+  const layout=layouts[type],section=document.getElementById(type),recipe=recipes[type],crop=layout.crop,sx=150/crop[2],sy=150/crop[3];
+  const heading=document.createElement('h2');heading.textContent=layout.name;section.append(heading);
+  const description=document.createElement('p');description.className='description';description.textContent=layout.description;section.append(description);
+  const preview=document.createElement('div');preview.className='preview';
+  const drawing=document.createElement('div');drawing.className='drawing';
+  const diagram=document.createElement('div');diagram.className='diagram';diagram.setAttribute('aria-label',layout.name+' · '+recipe.name+' ritual');
+  const paper=document.createElement('div');paper.className='paper';paper.style.backgroundImage='url('+layout.image+')';
+  paper.style.backgroundSize=(layout.width*sx)+'px '+(layout.height*sy)+'px';paper.style.backgroundPosition=(-crop[0]*sx)+'px '+(-crop[1]*sy)+'px';diagram.append(paper);
+  guides(diagram,layout);
+  layout.slots.forEach(point=>illustration(diagram,point,crop,'plinth'));
+  illustration(diagram,layout.center,crop,'spellstone');
+  if(recipe.concealed)layout.slots.forEach(point=>item(diagram,point,crop,null,'Unknown ingredient'));
+ else recipe.items.forEach((offering,index)=>item(diagram,layout.slots[index],crop,offering[0],offering[1]));
+  item(diagram,layout.center,crop,'spell_scroll','Scroll of '+recipe.name);drawing.append(diagram);preview.append(drawing);section.append(preview);
+}
+for(const button of document.querySelectorAll('[data-zoom]'))button.addEventListener('click',()=>{
+ document.documentElement.style.setProperty('--zoom',button.dataset.zoom);
+ document.querySelectorAll('[data-zoom]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+});
+</script>
+</body>
+</html>

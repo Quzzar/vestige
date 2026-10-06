@@ -1,0 +1,78 @@
+{
+  "spell": "vestige:spellstone_astral_night",
+  "phase": 0,
+  "label": "Astral Spellstone at night",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": 144.68878,
+    "pitch": 30.028658,
+    "eye": [
+      1.35,
+      66.1,
+      1.7
+    ],
+    "fixed": true
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "59b7e1e35d2dd9e309ac8de6012519efd5d56e3fd8f76bcfbe94a191ad07d1b7",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+  },
+  "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+  "seconds": 4.115265083,
+  "times": [
+    0.19110725,
+    0.284653583,
+    0.387301083,
+    0.47756825,
+    0.556559083,
+    0.659908292,
+    0.769703417,
+    0.941288125,
+    1.146027708,
+    1.249404958,
+    1.409267625,
+    1.560538167,
+    1.6400345,
+    1.781367333,
+    1.874071875,
+    2.013673958,
+    2.090759083,
+    2.219932042,
+    2.293690542,
+    2.432781208,
+    2.519420208,
+    2.656695083,
+    2.733432625,
+    2.858094708,
+    2.941304833,
+    3.083245083,
+    3.160610583,
+    3.262335583,
+    3.393312125,
+    3.590724958,
+    3.857443917
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Production Spellstone: two thicker inward-leaning supports and one thicker flat tabletop, four flush faceted Diamond corner chips and the lowered native Astral Seal. Astral Spellstone at night No resource-pack override."
+}

@@ -1,0 +1,106 @@
+{
+  "scope": "Preview-only faint Stone trim; no production models or testing-pack installation",
+  "views": [
+    {
+      "view": "plinth_frame_corner_edges",
+      "image": "corner-edges-faint.png",
+      "imageSource": "native-faint-edges/vestige-plinth_frame_corner_edges-apparatus-0/frame-00049.png",
+      "imageSha256": "221030a9cb37fe0591514bea863ce230a0f5035b4204bac6114a372084268134",
+      "frames": 50,
+      "seconds": 4.033309583,
+      "loadedModelHashes": {
+        "models/block/cobblestone_plinth.json": "df491765e0abd50ae2d0555d3cb4018182262d71083eaba600774c97ac10f3cd",
+        "models/block/cobblestone_plinth_base.json": "10a28e6b4fb1a20b827f34d85396818d02c239b3bdf8f85e2ad3ccf0645ecb20",
+        "models/block/cobblestone_plinth_shaft.json": "61d371180c7d787e5d688c14137186d303494993d7be7c82a875d5d0bbdd4416",
+        "models/block/cobblestone_plinth_cap.json": "b0fb274d9b85872bbf14d01b124b778aa925f01e55a813be750010eaf752c9f4"
+      },
+      "camera": {
+        "yaw": 141.6325,
+        "pitch": 21.406317,
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "fixed": true
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "trim": {
+        "tintIndex": 31,
+        "tintColor": "#f0f0f0",
+        "brightness": 0.9411764705882353,
+        "texture": "minecraft:block/stone"
+      },
+      "tintCodeSha256": "5e334f666368e7177250e5917be754c81a5aac74349ffdaa54dffe62082feed3"
+    },
+    {
+      "view": "spellstone_frame_edges",
+      "image": "spellstone-edges-faint.png",
+      "imageSource": "native-faint-edges/vestige-spellstone_frame_edges-apparatus-0/frame-00046.png",
+      "imageSha256": "a72734c17a4f2afd2ecd8e66df6be541eb6041ec34d9bba9194acdbc77f2f015",
+      "frames": 47,
+      "seconds": 4.05311225,
+      "loadedModelHashes": {
+        "models/block/stone_spellstone.json": "42b253db37a76f6b573e005796dd3c72ca72faf4ccf5a474a175b69ec78c3876"
+      },
+      "camera": {
+        "yaw": 148.67131,
+        "pitch": 17.32626,
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "fixed": true
+      },
+      "trimTextureSha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+      "trim": {
+        "tintIndex": 31,
+        "tintColor": "#f0f0f0",
+        "brightness": 0.9411764705882353,
+        "texture": "minecraft:block/stone"
+      },
+      "tintCodeSha256": "5e334f666368e7177250e5917be754c81a5aac74349ffdaa54dffe62082feed3"
+    }
+  ],
+  "change": {
+    "before": "minecraft:block/polished_tuff",
+    "after": "minecraft:block/stone",
+    "brightness": 0.9411764705882353,
+    "geometryAndWidthsUnchanged": true,
+    "originalBodiesAndDiamondDetailsUnchanged": true
+  },
+  "verified": [
+    "Java 21 compilation and resource processing passed",
+    "All 22 framing author models pass checks",
+    "Five framed models differ only in trim texture and tint index",
+    "Five native loaded model hashes match their capture-only sources",
+    "Loaded native tint class hash matches its compiled source",
+    "Reference cameras match the preceding study",
+    "Both final Minecraft views visually inspected",
+    "Updated comparison page visually inspected at narrow and desktop widths"
+  ],
+  "separatelyCapturedStackedOrImbuedAppearance": false,
+  "browserReview": {
+    "testedContentWidths": [
+      536,
+      1185
+    ],
+    "allImagesLoaded": true,
+    "horizontalOverflow": false,
+    "temporaryViewportReset": true,
+    "desktopScreenshot": "faint-edges-preview-browser.jpg",
+    "narrowScreenshot": "faint-edges-preview-narrow-browser.jpg",
+    "desktopScreenshotSha256": "40fff3a7df810cef88080bdef9f2c711636b1e91a4d47e6ed8f2fb31b196cdc8"
+  },
+  "logs": {
+    "compile": "/private/tmp/vestige-apparatus-faint-edges-build.log",
+    "capture": "/private/tmp/vestige-apparatus-faint-edges-capture.log"
+  },
+  "correction": {
+    "date": "2026-10-06",
+    "actualTrimTintApplied": false,
+    "reason": "OfferingRenderer passed white RGB into renderModel, bypassing the registered native block tint. The intended 240/255 value was recorded but not applied to world faces.",
+    "status": "Superseded unshaded preview; native images and hashes remain valid records of the observed appearance."
+  }
+}

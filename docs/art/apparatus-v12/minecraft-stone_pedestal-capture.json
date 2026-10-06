@@ -1,0 +1,52 @@
+{
+  "spell": "vestige:stone_pedestal",
+  "phase": 0,
+  "label": "Stone Pedestal",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "assetSha256": {
+    "models/block/spellstone.json": "19740189363743cf8ce6b2ecf4a650b33545536ea07b04e196723eacf0001843",
+    "models/block/stone_pedestal.json": "01715cdd3f6c571f22f17113527712e8f930424a8cd719c0e975d7b85cfb8ca7",
+    "models/block/runic_pedestal.json": "7aafbd1b3f64eff227e0706c6576cceb54076088fc3187169bd0409463d90454",
+    "textures/block/pedestal_amethyst.png": "c7d69c3708eb3c8bcab7c16b3da5e993fcddaf36bf76f844accc70155ccfe292",
+    "textures/block/diamond_inlay.png": "ef3b076f4a6555eeb9d4f2bd9a3f935b9dfc580c8b0d6bc753202eee51464d08",
+    "textures/block/spellstone_top.png": "99e99eba6c228dc6024e5e39e4af6dde9930e09a9d133cbcc8e38f4e58e0259c",
+    "textures/block/runic_pedestal_top.png": "6d43ffeec2ff8ba438aa8f229f85440a82f3359e5e70a854c53b0b601417fc7b"
+  },
+  "seconds": 2.078014042,
+  "times": [
+    0.018686042,
+    0.111832083,
+    0.179785542,
+    0.252684417,
+    0.325396375,
+    0.398778167,
+    0.481722042,
+    0.564532542,
+    0.697847292,
+    0.771162458,
+    0.897623125,
+    1.018120208,
+    1.088947167,
+    1.224721375,
+    1.30078825,
+    1.371355292,
+    1.495620792,
+    1.570198625,
+    1.6914005,
+    1.816541833,
+    1.899579208,
+    1.969335458
+  ],
+  "scenario": "Registered Stone Pedestal placed on ordinary terrain, viewed with native Minecraft lighting.",
+  "blocks": {
+    "BlockPos{x=0, y=65, z=0}": "vestige:stone_pedestal"
+  },
+  "outcome": "PLACED",
+  "selectedFrame": 11,
+  "selectedTime": 1.018120208
+}

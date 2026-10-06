@@ -1,0 +1,89 @@
+> Task :createArtifactManifest
+
+> Task :createMinecraftArtifacts
+Loaded 116 artifacts from /Users/quzzar/Projects/vestige/run/whispering-shell-native-build/moddev/nfrt_artifact_manifest.properties
+*** Started working on downloadJson
+ ✓ Completed downloadJson in 0.04s
+*** Started working on downloadServer
+*** Started working on downloadClient
+*** Started working on downloadClientMappings
+*** Started working on listLibraries
+ ♻ Used cache of listLibraries in 0.00s
+ ✓ Completed downloadServer in 0.04s
+ ✓ Completed downloadClient in 0.04s
+ ✓ Completed downloadClientMappings in 0.04s
+*** Started working on mergeMappings
+ ♻ Used cache of mergeMappings in 0.00s
+*** Started working on stripClient
+ ♻ Used cache of stripClient in 0.00s
+*** Started working on extractServer
+ ♻ Used cache of extractServer in 0.00s
+*** Started working on stripServer
+ ♻ Used cache of stripServer in 0.00s
+*** Started working on merge
+ ♻ Used cache of merge in 0.00s
+*** Started working on rename
+ ♻ Used cache of rename in 0.00s
+*** Started working on decompile
+ ♻ Used cache of decompile in 0.00s
+*** Started working on inject
+ ♻ Used cache of inject in 0.00s
+*** Started working on patch
+ ♻ Used cache of patch in 0.00s
+*** Started working on applyNeoforgePatches
+ ♻ Used cache of applyNeoforgePatches in 0.00s
+*** Started working on transformSources
+ ♻ Used cache of transformSources in 0.00s
+*** Started working on recompile
+ ♻ Used cache of recompile in 0.00s
+*** Started working on sourcesWithNeoForge
+ ♻ Used cache of sourcesWithNeoForge in 0.00s
+*** Started working on compiledWithNeoForge
+ ♻ Used cache of compiledWithNeoForge in 0.00s
+*** Started working on sourcesAndCompiledWithNeoForge
+ ♻ Used cache of sourcesAndCompiledWithNeoForge in 0.00s
+Total runtime: 1.23s
+
+
+> Task :compileJava
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                        ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                                                                         ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:91: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:238: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:256: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:276: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/docs/art/whispering-shell-native-v1/preview-source/com/quzzar/vestige/apparatus/client/WhisperingShellTextureCapture.java:120: error: tick() in ReviewScreen cannot override tick() in AbstractContainerScreen
+        @Override public void tick() { }
+                              ^
+  overridden method is final
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 error
+6 warnings
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 8s
+3 actionable tasks: 3 executed

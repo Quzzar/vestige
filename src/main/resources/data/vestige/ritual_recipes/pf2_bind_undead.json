@@ -1,0 +1,72 @@
+{
+  "spell": "vestige:pf2_bind_undead",
+  "name": "Bind Undead",
+  "circle": 8,
+  "color": "57418f",
+  "rationale": "Bone and decay identify an undead body, while Chain and draining focus describe temporary control.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "chain motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chain"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold bone motif; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Enemy decay follows blank inscription clockwise, across an unused outer Plinth.",
+    "Draining focus follows enemy decay clockwise, across an unused outer Plinth.",
+    "Chain motif follows draining focus clockwise, across an unused outer Plinth.",
+    "Bone motif follows chain motif clockwise.",
+    "Blank inscription follows bone motif clockwise."
+  ]
+}

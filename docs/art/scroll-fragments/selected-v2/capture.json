@@ -1,0 +1,14 @@
+{
+  "source": "Minecraft main render target after native item/font/tooltip rendering",
+  "font": "vestige:fragment_symbols",
+  "unknownFallback": "Scroll Fragment: addon:fire",
+  "symbolColor": "#d6b46a",
+  "assetSha256": {
+    "textures/item/scroll_fragment.png": "bf086cd6ec11365ada33247c14d080eaeb9aaeed35d53c765d736d5ca60b50bf",
+    "models/item/scroll_fragment.json": "636181cc7432e890a7d77bf20b865303ce34d8eb2d3ffdc57699ca1409ef1839",
+    "font/fragment_symbols.json": "036573c5fe56f87c0dd8b46453971e854dd39a38792584f0bbf780cd72411c3c",
+    "textures/font/fragment_symbols.png": "8064660abe2c435a3632c6955bf82d01849d57419c05fefb98609c676f623622",
+    "fragment_symbols.json": "5f1d47d22eeb1aa211f583f4039df7112dfe89b86f0703907906746c577d7675"
+  },
+  "symbols": 52
+}

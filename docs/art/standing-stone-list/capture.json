@@ -1,0 +1,125 @@
+{
+  "menu": "real server-backed endpoints and payloads",
+  "source": "Minecraft main render target",
+  "world": "isolated creative flat world",
+  "classSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "619ebd6e5c22cf0407541b35c11c67878f52f1bba212c768b741299108b4a7d8",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "ff37eba43f5b14fd5712c5c6da348387e5d783b4bdecf7be70cc8382527bedb1",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "8518fe88f0b459294f826425146caaf7d61774998565ec89a2d4804e5273badf",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "1543258c7228313066fa1bb07e05ae8fd97223c256cff760f67953db1f55a445",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "329afab4bb7721eae6f67b0e1181c3ef255246b947ac44db6dcd30b065e250b4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "f88875b4ecf9622420ac999e666d6da2af100b312da717808efb86823c10d53d",
+    "com/quzzar/vestige/travel/StoneTravel.class": "6ceb6c96816b211cd97d9c7fba97e6558561a75f1e180064a031f9a646fc542f",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "0602c1e23f3d2190369a35d9b73411d4e65bacc46fc5a9b46db47290be614bd8"
+  },
+  "checks": [
+    {
+      "capture": "list-wide",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "3729cc2c-12ca-40aa-ad94-87348dc0d3b0",
+      "gui": [
+        640,
+        360
+      ]
+    },
+    {
+      "passed": true,
+      "check": "Unchanged name disables Save"
+    },
+    {
+      "passed": true,
+      "check": "Blank name disables Save"
+    },
+    {
+      "passed": true,
+      "check": "Destination selection preserves the unsaved name and enables Save"
+    },
+    {
+      "passed": true,
+      "check": "Real rename keeps endpoint, network and rune signature unchanged"
+    },
+    {
+      "passed": true,
+      "check": "Server rename refreshes the native menu and keeps Travel available"
+    },
+    {
+      "capture": "renamed-wide",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "4b83d61b-78f2-41bd-8fba-8d156ea6fd51",
+      "gui": [
+        640,
+        360
+      ]
+    },
+    {
+      "capture": "list-narrow",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "4b83d61b-78f2-41bd-8fba-8d156ea6fd51",
+      "gui": [
+        480,
+        270
+      ]
+    },
+    {
+      "passed": true,
+      "check": "Second page retains the current stone name independently of destination rows"
+    },
+    {
+      "capture": "second-page",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "62e01e72-b193-4dd6-ac84-8042c4ca7fdb",
+      "gui": [
+        480,
+        270
+      ]
+    },
+    {
+      "passed": true,
+      "check": "All 21 live endpoints are reachable on three bounded pages"
+    },
+    {
+      "capture": "last-page",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "4fdc6a68-55c3-43e3-856e-0ef6c8d33964",
+      "gui": [
+        480,
+        270
+      ]
+    },
+    {
+      "passed": true,
+      "check": "A network containing only the current endpoint disables Travel"
+    },
+    {
+      "capture": "only-current-stone",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "selected": "8ba854ac-c7c1-456b-aec8-6c0d29a4413b",
+      "gui": [
+        480,
+        270
+      ]
+    }
+  ],
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}
