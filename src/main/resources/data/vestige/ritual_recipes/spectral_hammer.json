@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:spectral_hammer",
+  "name": "Spectral Hammer",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Iron and Amethyst shape a Slime-broad spectral tool face for tool-aware mining.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 3,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bound metal follows blank inscription clockwise.",
+    "Resonant facet follows bound metal clockwise.",
+    "Slime motif follows resonant facet clockwise.",
+    "Blank inscription follows slime motif clockwise."
+  ]
+}

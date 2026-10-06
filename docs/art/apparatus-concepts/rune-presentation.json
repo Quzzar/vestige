@@ -1,0 +1,11 @@
+{
+  "hover_y": 7.12,
+  "core_brightness": 1.2,
+  "halo_radius_texels": 1.0,
+  "halo_opacity": 0.5,
+  "halo_color": [
+    0.66,
+    0.24,
+    1.0
+  ]
+}

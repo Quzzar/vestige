@@ -1,0 +1,31 @@
+{
+  "build": "Java 21 Gradle --offline build runEffectsCapture: successful",
+  "unitTests": {
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeViewer": "JEI 19.22.1.316, standalone; all six actual framebuffer captures visually inspected",
+  "change": "Public category needsRecipeBorder=false; additional per-recipe border is absent",
+  "remainingHostUi": "JEI still owns the surrounding gray window, tabs, controls, workstation sidebar and item list",
+  "emi": "Adapter unchanged; pinned EMI public recipe API has no corresponding background-removal switch. Previous native EMI/both/none evidence remains in recipe-viewers-v8.",
+  "captureSource": "Minecraft main render target; originals copied unchanged",
+  "captureHashes": {
+    "0-fireball.png": "b0a8263128f309a8e98bbb5784cf2a91cd0296b8084f9570e3bff42a44260073",
+    "1-starfall.png": "19ba50931dc6d2f75eddb853b65a2f725b1219e370be4248f80a8553e6e40922",
+    "2-attunement_shard.png": "4f701080ea4e7db673335c23200a2518c162cd4d1aa506a39897779c1d348d80",
+    "3-fireball.png": "e755bd93dca2a1e42f3efd5d2f09db81b6f0fa574cdfeec9f39853e81e6735b4",
+    "4-attunement_shard.png": "3469126e82fddd190c797b906b959926d3de503dc9aa2ac06e1343021ccd225e",
+    "5-reloaded_fireball.png": "5c0c96244f374e05fc31993fd748bd45ea88f0fe64b27d0742e9efd27c933a59"
+  },
+  "packagedArtwork": {
+    "assets/vestige/textures/gui/ritual/parchment.png": "08fdc873540a153b0f62358f285c66b8c9c16fd4814032ca40cb99c4dc97e359",
+    "assets/vestige/textures/gui/ritual/plinth.png": "0edf40ea9130797c0545ee4cfdf375a0bb61599993ff7d4a730457c3bd8c7b44",
+    "assets/vestige/textures/gui/ritual/spellstone.png": "ec5ea7129ab8b8583d2a86a0c6fe39ee3cf53f8d96267e5b02454f599098edc1"
+  },
+  "packagedCategoryMatchesInspectedCompile": true,
+  "browser": "Offline paper-only SVG export inspected; no new browser inspection claimed",
+  "worldTests": "Not repeated; presentation-only change, actual crafting unchanged",
+  "deployment": "Not installed into Prism by this chat"
+}

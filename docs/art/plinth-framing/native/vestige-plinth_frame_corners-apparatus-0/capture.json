@@ -1,0 +1,89 @@
+{
+  "spell": "vestige:plinth_frame_corners",
+  "phase": 0,
+  "label": "B — Corner strips",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone",
+  "apparatusPresentation": "plinth-framing",
+  "apparatusCamera": {
+    "eye": [
+      1.45,
+      66.05,
+      1.7
+    ],
+    "pitch": 21.406317,
+    "yaw": 141.6325,
+    "fixed": true
+  },
+  "materialTextureSha256": {
+    "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+    "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744"
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "35898f06140f31df4d8065c2553beb229587448310cbbf0046701e6b1e963162",
+    "models/block/plinth.json": "08928f2a4dfc6a55bf6a3c264fed4bc3778d4ee79ae9d44597d21727ea86a306",
+    "models/block/stone_plinth.json": "7875f1296537636a8e42c709bddcb9829bb05486649ef84b3d2a70ae036d879a",
+    "models/block/stone_spellstone.json": "61bc0d28c11c8fb2270407302a21bf85921d216863ae4708844a874fdd6f58f1",
+    "models/block/stone_plinth_base.json": "ca6fa9889e2ff64c15c91e7a781ad2877ee628eb53cfe38925afef27df74c06e",
+    "models/block/stone_plinth_shaft.json": "0ea5f93009886e2a3719805120df975f137d66a48159ec86268c052610f89cbf",
+    "models/block/stone_plinth_cap.json": "1d3d8e0b12b68c314349a0c0f3f966adc08d1664565df177ac361d584d344b59",
+    "models/block/andesite_plinth.json": "3a560337d3d374073503a03948cfe24504abbcfd534b3d910dcd1645c5a4dde0",
+    "models/block/andesite_plinth_base.json": "97849069de4daeed12fc23bc81b472e48da54f0c02b4cf25b23be87fbd1b8a76",
+    "models/block/andesite_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+    "models/block/andesite_plinth_cap.json": "d68d443f8a5b4f5d030f7465783e86a04a904d1f2a44a6bf00455949c993f72a",
+    "models/block/diorite_plinth.json": "a65742c1304d1da0153fb318f548e831a271cf09b2c87f77a57b33429d84769a",
+    "models/block/diorite_plinth_base.json": "df9bf1fd29011a34c3da8ed6e06251a335c8d210cdc9ee4d6927d4d0f7e38f3e",
+    "models/block/diorite_plinth_shaft.json": "36bd3727d964716b9e42dd2f9fd0737fd50a88034f1d9c70b7f0b4f4eba749cf",
+    "models/block/diorite_plinth_cap.json": "618509dd11fe597608c15ca2ceeffbc7afc84482ad72b70e25a75d4d0470bd0a"
+  },
+  "ritualCraftingSha256": "c2c65b69af49cf5e2743cf29d721344a1340faca21c8e13eca76cd17e567e101",
+  "astralRendererSha256": "21a53fb10d55f09191075de968f3f544afa882fa78e780afc1910e2b18295a4b",
+  "seconds": 2.037945833,
+  "times": [
+    0.015009916,
+    0.082535041,
+    0.151506541,
+    0.219550708,
+    0.286635,
+    0.3538915,
+    0.430546333,
+    0.497872666,
+    0.5789175,
+    0.659038875,
+    0.742907875,
+    0.82394325,
+    0.893119833,
+    0.973217,
+    1.050053416,
+    1.129325083,
+    1.19860525,
+    1.277021333,
+    1.344787041,
+    1.424136166,
+    1.504589416,
+    1.583634,
+    1.658606125,
+    1.743028583,
+    1.823142583,
+    1.903742708,
+    1.979465166
+  ],
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:andesite_plinth"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "state": "Block{vestige:andesite_plinth}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air"
+    }
+  },
+  "outcome": "PLACED",
+  "scenario": "Capture-only Stone Plinth with subtle Polished Deepslate edge framing. Three alternatives share identical solid geometry, original Minecraft textures, camera and native lighting. No production frame was applied."
+}

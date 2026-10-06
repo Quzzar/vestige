@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:cleanse",
+  "name": "Cleanse",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Living light surrounds Milk's cleansing motif and the Protective Rune's Pufferfish ingredient.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "milk motif",
+      "ingredient": {
+        "items": [
+          "minecraft:milk_bucket"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Protection seal follows blank inscription clockwise.",
+    "Milk motif follows protection seal clockwise.",
+    "Living light follows milk motif clockwise.",
+    "Blank inscription follows living light clockwise."
+  ]
+}

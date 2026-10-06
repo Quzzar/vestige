@@ -1,0 +1,71 @@
+{
+  "spell": "vestige:firefly_swarm",
+  "name": "Firefly Swarm",
+  "circle": 8,
+  "color": "ffd45a",
+  "rationale": "Nature focus, luminous dust, Honeycomb and String describe a living swarm that follows and propagates.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 2,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold nature focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Nature focus follows blank inscription clockwise.",
+    "Glow motif follows nature focus clockwise.",
+    "Honey motif follows glow motif clockwise, across an unused outer Plinth.",
+    "String motif follows honey motif clockwise, across an unused outer Plinth.",
+    "Blank inscription follows string motif clockwise, across an unused outer Plinth."
+  ]
+}

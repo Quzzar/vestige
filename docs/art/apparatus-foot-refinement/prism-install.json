@@ -1,0 +1,17 @@
+{
+  "installed_at_utc": "2026-10-05T17:25:12.664657+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "fca222dc6fb975f269c5dcd16aa29ec86d4f23a47871921287a3d12cb60dedcf",
+  "destination_sha256": "fca222dc6fb975f269c5dcd16aa29ec86d4f23a47871921287a3d12cb60dedcf",
+  "previous_sha256": "a04aff2673aae3571b12fe759f63cec472adbbfe3e4617e8a5b2253ae5b8d6ce",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-foot-refinement.jar",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "installed_models": "Detailed Plinth 51; Spellstone 32 including intact rune; column base/shaft/cap 7/5/49",
+  "scope": "One fewer foot tier per model; every original standalone element above the foot restored, including all socket frames",
+  "textures": "Continuous masonry/trim mapping and native Quartz/Purpur pillar shafts",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "Preview-only contrast refinement; no production models or testing-pack installation",
+  "views": [
+    {
+      "view": "plinth_frame_corner_edges",
+      "image": "corner-edges-soft.png",
+      "imageSource": "native-soft-edges-ready/vestige-plinth_frame_corner_edges-apparatus-0/frame-00049.png",
+      "imageSha256": "2c7638300ec3e60381a39aad0fddf499d4ed1b4c35c5e09402ee6b5312de274b",
+      "frames": 50,
+      "seconds": 4.067317125,
+      "loadedModelHashes": {
+        "models/block/cobblestone_plinth.json": "2fe6f695a6269aad1d2e631c7cb89d9e787dbb5e548076ee05eb5b396730f648",
+        "models/block/cobblestone_plinth_base.json": "34ca2ed46102a09b9564ecb31792c5ad1758e6b8279fcf62f8c8c67672d5cb72",
+        "models/block/cobblestone_plinth_shaft.json": "16960485139b535cb4605a9327bf6f517920b5b32f3436f9eb41492a8ee27f55",
+        "models/block/cobblestone_plinth_cap.json": "9bd79a6d44b91b733d4856b5e0a14a604f4ebfe362b45959230f0cb474e5e94a"
+      },
+      "camera": {
+        "fixed": true,
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "pitch": 21.406317,
+        "yaw": 141.6325
+      },
+      "trimTextureSha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a"
+    },
+    {
+      "view": "spellstone_frame_edges",
+      "image": "spellstone-edges-soft.png",
+      "imageSource": "native-soft-edges-ready/vestige-spellstone_frame_edges-apparatus-0/frame-00049.png",
+      "imageSha256": "5109ddabd90609a17b137420dcead5eeee478554806b4fa62b28e52bc20bbc7a",
+      "frames": 50,
+      "seconds": 4.065410667,
+      "loadedModelHashes": {
+        "models/block/stone_spellstone.json": "4020b8ce6150d18b158f3c175a8b39b5b11135c347637e9b99a0cfdaca12b390"
+      },
+      "camera": {
+        "fixed": true,
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626,
+        "yaw": 148.67131
+      },
+      "trimTextureSha256": "e3f921460e17b5bf539a754798bcb56b037c98209dc0f594888f128a152bce5a"
+    }
+  ],
+  "change": {
+    "before": "minecraft:block/polished_deepslate",
+    "after": "minecraft:block/polished_tuff",
+    "geometryAndWidthsUnchanged": true,
+    "originalBodiesAndDiamondDetailsUnchanged": true
+  },
+  "verified": [
+    "Java 21 compilation and resource processing passed",
+    "All 22 framing author models pass checks",
+    "Five framed model files differ from the preceding study only in trim texture",
+    "Five native loaded model hashes match their capture-only sources",
+    "Both final Minecraft views inspected; reference cameras match the preceding study"
+  ],
+  "initialAttempt": {
+    "path": "native-soft-edges",
+    "plinthRejected": "All 15 Plinth frames showed only sky while the client scene loaded",
+    "correction": "Repeat with a loading pass before the Plinth and four-second captures"
+  },
+  "separatelyCapturedStackedOrImbuedAppearance": false,
+  "browserReview": {
+    "testedContentWidths": [
+      536,
+      1185
+    ],
+    "allImagesLoaded": true,
+    "horizontalOverflow": false,
+    "temporaryViewportReset": true,
+    "desktopScreenshot": "soft-edges-preview-browser.jpg",
+    "narrowScreenshot": "soft-edges-preview-narrow-browser.jpg",
+    "desktopScreenshotSha256": "a82bd64938397eb661814af739b7aa3d7d7a7586c57ae9d18d50d4d1d7640d51"
+  }
+}

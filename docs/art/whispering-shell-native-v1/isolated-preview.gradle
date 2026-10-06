@@ -1,0 +1,13 @@
+// This init script adds preview-only sources/assets; ordinary builds do not include them.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/whispering-shell-native-build'))
+        project.afterEvaluate {
+            project.sourceSets.main.java.srcDir(project.file('docs/art/whispering-shell-native-v1/preview-source'))
+            project.sourceSets.main.resources.srcDir(project.file('docs/art/whispering-shell-native-v1/preview-resources'))
+            project.neoForge.runs.effectsCapture.programArguments.set(['--width', '640', '--height', '480'])
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+            project.tasks.named('runEffectsCapture').configure { maxHeapSize = '2G' }
+        }
+    }
+}

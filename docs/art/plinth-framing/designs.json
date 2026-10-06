@@ -1,0 +1,72 @@
+{
+  "scope": "Preview-only alternatives; no production apparatus art or collision changes",
+  "studies": [
+    {
+      "id": "bands",
+      "name": "Rim bands",
+      "carrier": "vestige:stone_plinth",
+      "body": "minecraft:block/stone",
+      "frame": "minecraft:block/polished_deepslate",
+      "solidCuboids": 3,
+      "bakedFaces": 24
+    },
+    {
+      "id": "corners",
+      "name": "Corner lines",
+      "carrier": "vestige:andesite_plinth",
+      "body": "minecraft:block/stone",
+      "frame": "minecraft:block/polished_deepslate",
+      "solidCuboids": 3,
+      "bakedFaces": 24
+    },
+    {
+      "id": "panels",
+      "name": "Framed sides",
+      "carrier": "vestige:diorite_plinth",
+      "body": "minecraft:block/stone",
+      "frame": "minecraft:block/polished_deepslate",
+      "solidCuboids": 3,
+      "bakedFaces": 32
+    },
+    {
+      "id": "corner_ribs",
+      "name": "Corner strips + ribs",
+      "carrier": "vestige:granite_plinth",
+      "body": "minecraft:block/stone",
+      "frame": "minecraft:block/polished_deepslate",
+      "solidCuboids": 19,
+      "bakedFaces": 72
+    },
+    {
+      "id": "corner_edges",
+      "name": "Corner strips + rim edges",
+      "carrier": "vestige:cobblestone_plinth",
+      "body": "minecraft:block/stone",
+      "frame": "minecraft:block/stone",
+      "solidCuboids": 3,
+      "bakedFaces": 32
+    }
+  ],
+  "spellstones": [
+    {
+      "id": "spellstone_plain",
+      "carrier": "vestige:andesite_spellstone",
+      "frame": null,
+      "solidCuboids": 3,
+      "bakedFaces": 58
+    },
+    {
+      "id": "spellstone_edges",
+      "carrier": "vestige:stone_spellstone",
+      "frame": "minecraft:block/stone",
+      "solidCuboids": 3,
+      "bakedFaces": 90
+    }
+  ],
+  "currentTrim": {
+    "texture": "minecraft:block/stone",
+    "tintIndex": 0,
+    "tintColor": "#d9d9d9",
+    "brightness": 0.8509803921568627
+  }
+}

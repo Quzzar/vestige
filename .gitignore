@@ -31,3 +31,7 @@ dist/
 # Python authoring caches
 __pycache__/
 *.py[cod]
+
+# Native art review frame sequences stay local; final images, clips and audit records ship.
+/docs/art/**/frame-*.png
+/docs/art/**/frame-*.jpg

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/nether_bricks_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/nether_bricks_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/nether_bricks_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/nether_bricks_plinth_cap"
+    }
+  }
+}

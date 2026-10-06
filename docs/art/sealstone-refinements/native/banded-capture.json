@@ -1,0 +1,65 @@
+{
+  "spell": "vestige:spellstone_design_seal",
+  "phase": 0,
+  "label": "Banded Sealstone",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "seal-refinements",
+  "assetSha256": {
+    "models/block/spellstone.json": "12dfb7563a1232e79292f67e08dbd7477efcb7f2b624168f0372bb7558826724",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+    "models/block/tuff_spellstone.json": "fb592f0ba282f986018197d8eb06986aee10cf8c78e590a659740c9b7467d93b",
+    "models/block/quartz_spellstone.json": "36f101dcf637f88d617c4f0f6beac6b80f69c71be7341c8b0698b85300b1b8b8"
+  },
+  "seconds": 2.023644209,
+  "times": [
+    0.018308667,
+    0.099535834,
+    0.182248917,
+    0.262642959,
+    0.33112,
+    0.411549959,
+    0.490615542,
+    0.581022334,
+    0.661963209,
+    0.750559334,
+    0.823094417,
+    0.900104084,
+    0.98084,
+    1.058243667,
+    1.140006209,
+    1.215356459,
+    1.2968245,
+    1.379899959,
+    1.449070917,
+    1.519801167,
+    1.597702084,
+    1.668369709,
+    1.735934,
+    1.810997125,
+    1.881562709,
+    1.950077709
+  ],
+  "scenario": "Capture-only Spellstone alternatives with the same Stone Brick textures and original native rune. Banded Sealstone at the same camera and scale. Production models, collision, recipes and Prism installation are unchanged.",
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:quartz_spellstone"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:quartz_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true
+    }
+  },
+  "outcome": "PLACED"
+}

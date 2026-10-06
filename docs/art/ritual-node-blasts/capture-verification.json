@@ -1,0 +1,124 @@
+{
+  "source": "Actual Minecraft framebuffer and ordinary seeded server gameplay",
+  "captures": [
+    {
+      "spell": "vestige:ritual_failure",
+      "geometry": "Geometry[slots=4, innerShape=CROSS, inner=2, innerHeight=0, outerShape=CROSS, outer=0, outerStep=0]",
+      "outcome": "EXPLOSION_PENDING",
+      "serverTicks": 131,
+      "nativeFrames": 50,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [
+        {
+          "role": "Within blast",
+          "before": 20.0,
+          "after": 9.469904,
+          "alive": true
+        },
+        {
+          "role": "Outside blast",
+          "before": 20.0,
+          "after": 20.0,
+          "alive": true
+        }
+      ],
+      "loadedGameplaySha256": "c2c65b69af49cf5e2743cf29d721344a1340faca21c8e13eca76cd17e567e101",
+      "videoSha256": "af589672eb9a3c7dd4e6c2cbeba62bca2e11c18e52b88308b539ad5dbf874812"
+    },
+    {
+      "spell": "vestige:ritual_failure_eight",
+      "geometry": "Geometry[slots=8, innerShape=CROSS, inner=2, innerHeight=0, outerShape=DIAGONAL, outer=3, outerStep=0]",
+      "outcome": "EXPLOSION_PENDING",
+      "serverTicks": 121,
+      "nativeFrames": 55,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [
+        {
+          "role": "Center blast",
+          "before": 20.0,
+          "after": 9.469904,
+          "alive": true
+        },
+        {
+          "role": "Empty outer Plinth",
+          "before": 20.0,
+          "after": 17.594473,
+          "alive": true
+        },
+        {
+          "role": "Outside all bursts",
+          "before": 20.0,
+          "after": 20.0,
+          "alive": true
+        }
+      ],
+      "loadedGameplaySha256": "c2c65b69af49cf5e2743cf29d721344a1340faca21c8e13eca76cd17e567e101",
+      "videoSha256": "23d6c5c224f1912b04c718f663628ed88f71b8a7cc62b35f468d6ad91d16ecc8"
+    },
+    {
+      "spell": "vestige:ritual_failure_spread",
+      "geometry": "Geometry[slots=8, innerShape=CROSS, inner=8, innerHeight=3, outerShape=CROSS, outer=16, outerStep=3]",
+      "outcome": "EXPLOSION_PENDING",
+      "serverTicks": 120,
+      "nativeFrames": 69,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [
+        {
+          "role": "Center blast",
+          "before": 20.0,
+          "after": 9.469904,
+          "alive": true
+        },
+        {
+          "role": "Empty outer Plinth",
+          "before": 20.0,
+          "after": 17.594473,
+          "alive": true
+        },
+        {
+          "role": "Safe gap",
+          "before": 20.0,
+          "after": 20.0,
+          "alive": true
+        }
+      ],
+      "loadedGameplaySha256": "c2c65b69af49cf5e2743cf29d721344a1340faca21c8e13eca76cd17e567e101",
+      "videoSha256": "e5eb7e48fba9315e05e2e137682d525128c990883e4c1c170b71f4e058899e27"
+    }
+  ],
+  "visualInspection": "Compact four/eight-node blast frames and all nine elevated nodes inspected; silent reel fully decoded",
+  "notMovementEvidence": "Ritual capture fixtures do not initialize startingPositions; displacement in raw metadata is not used as a knockback measurement."
+}

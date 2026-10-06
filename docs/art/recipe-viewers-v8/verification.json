@@ -1,0 +1,28 @@
+{
+  "build": "Java 21 Gradle --offline test build: successful",
+  "unitTests": 97,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "ritualDisplayTests": 5,
+  "nativeViewers": [
+    "JEI standalone",
+    "EMI standalone",
+    "JEI + EMI",
+    "neither viewer startup"
+  ],
+  "registeredRituals": 215,
+  "concealedSpells": 214,
+  "publicShardOfferings": 6,
+  "publicShardEmptySeats": 2,
+  "paperAndBlazeRodRitualUses": 0,
+  "reload": "Isolated valid datapack changes Fireball from four to eight slots; ingredients remain concealed",
+  "worldTests": "Not repeated; this change affects viewer presentation and display networking, not gameplay crafting",
+  "packagedArtwork": {
+    "assets/vestige/textures/gui/ritual/parchment.png": "08fdc873540a153b0f62358f285c66b8c9c16fd4814032ca40cb99c4dc97e359",
+    "assets/vestige/textures/gui/ritual/plinth.png": "0edf40ea9130797c0545ee4cfdf375a0bb61599993ff7d4a730457c3bd8c7b44",
+    "assets/vestige/textures/gui/ritual/spellstone.png": "ec5ea7129ab8b8583d2a86a0c6fe39ee3cf53f8d96267e5b02454f599098edc1"
+  },
+  "nativeEvidence": "Actual Minecraft framebuffer captures, copied unchanged",
+  "browser": "Preview exported offline; no new browser verification claimed"
+}

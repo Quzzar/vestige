@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-05",
+  "scope": "One fractured relic native art preview, not approved or installed",
+  "nativeCaptureBuild": "passed",
+  "deterministicAuthorCheck": "passed",
+  "productionApparatusAuthorCheck": "passed",
+  "modelUvBoundsRotations": "passed",
+  "fragments": 3,
+  "solidCuboids": 6,
+  "staticBakedFaces": 36,
+  "nativeViews": 4,
+  "videosEncodedAndDecoded": 4,
+  "originalVanilla16x16Tiles": 1,
+  "actualLoadedTextureHashesMatchOriginals": true,
+  "unchangedProductionBlockModels": 180,
+  "unchangedInventoryModels": 72,
+  "unchangedConstructionRecipes": 72,
+  "acceptedRendererMatchesInstalledClass": true,
+  "installedJarSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSha256": "3249aa012771c89cc53fca5a87b98e165d4637dd2e61e2a99fb327c9d518b67f",
+  "review": "All four final native framebuffer views inspected: daylight, higher view, night, and native reference/result scrolls resting on the central piece.",
+  "gameplayBoundary": "Preview resource pack on existing registered carrier; production collision/interactions unchanged. Production integration and world behavior are not newly verified."
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/tuff_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/tuff_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/tuff_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/tuff_plinth_cap"
+    }
+  }
+}

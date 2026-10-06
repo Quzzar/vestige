@@ -1,0 +1,31 @@
+{
+  "purpose": "Closer native camera for identifying the line; geometry and texture assets unchanged.",
+  "views": [
+    {
+      "material": "tuff",
+      "image": "tuff.png",
+      "metadata": "tuff-capture.json",
+      "frameSha256": "827e5e59262baddc3975ad530264f2e73d43e1dd2b4bef05690ef5a9a4d614a5",
+      "verifiedCurrentAssetHashes": true,
+      "cap": {
+        "socket": "minecraft:gold_block",
+        "offering": "minecraft:air",
+        "offeringSpace": true,
+        "state": "Block{vestige:tuff_plinth}[part=cap,waterlogged=false]"
+      }
+    },
+    {
+      "material": "quartz",
+      "image": "quartz.png",
+      "metadata": "quartz-capture.json",
+      "frameSha256": "e35f44a6255f6395c57e53f258bf7f266bef6d71caf74779600c5d4a21781780",
+      "verifiedCurrentAssetHashes": true,
+      "cap": {
+        "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+        "offeringSpace": true,
+        "offering": "minecraft:air",
+        "socket": "minecraft:gold_block"
+      }
+    }
+  ]
+}

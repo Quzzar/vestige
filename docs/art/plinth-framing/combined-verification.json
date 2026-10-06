@@ -1,0 +1,61 @@
+{
+  "scope": "Preview only; no production assets or testing-pack installation",
+  "nativeCapture": "native-combined/vestige-plinth_frame_corner_ribs-apparatus-0/capture.json",
+  "imageSource": "native-combined/vestige-plinth_frame_corner_ribs-apparatus-0/frame-00019.png",
+  "nativeFrames": 22,
+  "seconds": 2.070196666,
+  "imageSha256": "240b37c39224932e78bf01a57091b1a3d8c11934eaaf98f43323e7d7f2fdf437",
+  "loadedModels": {
+    "models/block/granite_plinth.json": "14582eb2b88f78cf19970f69a78dd27edf149103d93206f87ed8d363e46e22ad",
+    "models/block/granite_plinth_base.json": "8a0f5b7aa309dfc6e7bbf636777f252610d29f925bd3cc1df822c7c1c2302a7d",
+    "models/block/granite_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+    "models/block/granite_plinth_cap.json": "8f9f79843c9d8d224bf6dcea5bcd4fd88e12cfcb51ad9d34a459deb218685594"
+  },
+  "geometry": {
+    "cornerStripWidthModelUnits": 0.75,
+    "ribProjectionModelUnits": 0.18,
+    "ribHeightModelUnits": 0.35,
+    "pairedRibGapModelUnits": 0.5,
+    "lowerRibs": [
+      [
+        2.65,
+        3
+      ],
+      [
+        3.5,
+        3.85
+      ]
+    ],
+    "upperRibs": [
+      [
+        10.15,
+        10.5
+      ],
+      [
+        11,
+        11.35
+      ]
+    ],
+    "originalBodyUnchanged": true,
+    "centerSocketClear": true,
+    "columnShaftRepeatsCollars": false
+  },
+  "verification": [
+    "Java 21 compileJava and processResources passed in isolated build output",
+    "author_plinth_framing.py --check passed for all 16 preview models",
+    "Loaded single/base/shaft/cap combined model hashes match the capture pack",
+    "Actual Minecraft frame visually inspected"
+  ],
+  "browserReview": {
+    "testedContentWidths": [
+      536,
+      1185
+    ],
+    "allFourImagesLoaded": true,
+    "horizontalOverflow": false,
+    "temporaryViewportReset": true,
+    "desktopScreenshot": "combined-preview-browser.jpg",
+    "narrowScreenshot": "combined-preview-narrow-browser.jpg",
+    "desktopScreenshotSha256": "d4f580ec69511f70eb01c203edd8a5968eea6407b505f1cfd96b9f2c31d0f0b5"
+  }
+}

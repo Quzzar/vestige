@@ -22,9 +22,11 @@ The conventional authored baseline for these traits is `1`. An effect must expli
 
 - `volatile`
 
-`volatile` is the only trait with semantics baked into the spell engine. Its rating creates an inherent chance for the cast to forfeit, even after the caster has discovered the spell. No second special trait may be introduced as an implementation convenience: adding one requires an explicit design conversation and decision with the project owner.
+`volatile` is the only trait with semantics baked into the spell engine. Its rating creates an inherent chance for the cast to forfeit, even after the caster has identified the spell. No second special trait may be introduced as an implementation convenience: adding one requires an explicit design conversation and decision with the project owner.
 
-The initial tuning uses a 20% forfeit baseline for an undiscovered spell, preserving Electroblob's default. Each `volatile` point represents another 5 percentage points of inherent risk. A cast uses the higher of its undiscovered baseline and inherent volatile risk, capped at 100%. This makes `volatile: 4` a 20% risk whether known or unknown, while a discovered nonvolatile spell has no forfeit risk. These numbers are balance policy and may later become configuration; `volatile` being the sole semantic trait is the architectural rule.
+The current executable tuning uses a 20% forfeit baseline for an unknown spell, preserving Electroblob's default. Each `volatile` point represents another 5 percentage points of inherent risk. A cast uses the higher of its unknown-spell baseline and inherent volatile risk, capped at 100%. This makes `volatile: 4` a 20% risk whether identified or unknown, while an identified nonvolatile spell has no forfeit risk. These numbers are balance policy and may later become configuration; `volatile` being the sole semantic trait is the architectural rule.
+
+The October 2 [scroll discovery decision](spell-discovery.md#chaos-and-identification) requires unknown volatile spells to be especially likely to produce chaos. The current maximum-of-two-risks formula does not provide that combined danger and must be revised when discovery is implemented; its replacement formula and probabilities remain undecided. Identification requires a successful scroll cast and does not remove volatility. Unknown and identified are the only knowledge states; there is no separate learned state.
 
 ### Essence and metaphysical (11)
 
@@ -103,7 +105,7 @@ The revised built-in catalog therefore contains **50 traits**.
 
 ## Rarity and relative ratings
 
-Spell rarity is separate metadata: common, uncommon, rare, or mythic. Ratings and their proportions provide inputs to authored formulas; their raw magnitudes and totals do not measure spell power. The [balance guide](spell-balance.md) explains equivalent scales and compensated formulas. The [catalog audit](../spell-balance-audit.md) records resolved parameters, spatial coverage, and individual or combined boost responses. Outcomes, costs, timing, and constraints determine gameplay balance within rarity. Profiles are not automatically normalized; fixed additions, thresholds, and volatile's inherent risk have unit-sensitive interpretations.
+Spell rarity is separate metadata: common, uncommon, rare, or mythic. Ratings and their proportions provide inputs to authored formulas; their raw magnitudes and totals do not measure spell power. The [balance guide](spell-balance.md) explains equivalent scales and compensated formulas. The [catalog audit](../spell-balance-audit.md) records resolved parameters, spatial coverage, and individual or combined boost responses. Outcomes, costs, timing, and constraints determine gameplay balance within rarity. Profiles are not automatically normalized; fixed additions, thresholds, and volatile's inherent risk have unit-sensitive interpretations. The planned [scroll reconstruction pool](spell-discovery.md#reconstruction-ratings-across-spells) requires every fragment-supplied trait to be present and weights eligible spells by their average base rating across the placed fragments, counting duplicates. Dismantling uses proportions within one spell.
 
 ## Deliberate exclusions
 

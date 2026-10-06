@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:lightning_bolt",
+  "name": "Lightning Bolt",
+  "circle": 4,
+  "color": "5594ff",
+  "rationale": "Copper feeds a Flint spark before Emerald directs the electrical burst.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Lightning channel follows blank inscription clockwise.",
+    "Flint motif follows lightning channel clockwise.",
+    "Evocation focus follows flint motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

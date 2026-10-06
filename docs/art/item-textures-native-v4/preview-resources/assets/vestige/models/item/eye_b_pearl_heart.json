@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/eye_b_pearl_heart"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0.049786628733997154,
+        0.3883357041251778,
+        0
+      ],
+      "scale": [
+        1.5608108108108107,
+        1.5608108108108107,
+        1
+      ]
+    }
+  }
+}

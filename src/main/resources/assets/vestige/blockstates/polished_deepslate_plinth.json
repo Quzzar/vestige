@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/polished_deepslate_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/polished_deepslate_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/polished_deepslate_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/polished_deepslate_plinth_cap"
+    }
+  }
+}

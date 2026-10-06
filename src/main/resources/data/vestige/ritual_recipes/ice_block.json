@@ -1,0 +1,84 @@
+{
+  "spell": "vestige:ice_block",
+  "name": "Ice Block",
+  "circle": 8,
+  "color": "48badf",
+  "rationale": "Cold focus and Ice form the heavy body; Stone adds weight and a warded Amethyst circuit bounds its impact.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    },
+    {
+      "seat": 2,
+      "role": "ice motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ice"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 6,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold cold focus, protection seal; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Cold focus follows blank inscription clockwise.",
+    "Ice motif follows cold focus clockwise.",
+    "Stone motif follows ice motif clockwise, across an unused outer Plinth.",
+    "Protection seal follows stone motif clockwise.",
+    "Resonant facet follows protection seal clockwise.",
+    "Blank inscription follows resonant facet clockwise, across an unused outer Plinth."
+  ]
+}

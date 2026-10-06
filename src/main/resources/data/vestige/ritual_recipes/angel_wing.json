@@ -1,0 +1,73 @@
+{
+  "spell": "vestige:angel_wing",
+  "name": "Angel Wings",
+  "circle": 8,
+  "color": "ffd45a",
+  "rationale": "Living light and a feather describe flight, a membrane its temporary duration, and Gold the Holy construction family.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    },
+    {
+      "seat": 6,
+      "role": "gilded metal",
+      "ingredient": {
+        "items": [
+          "minecraft:gold_ingot"
+        ]
+      },
+      "rationale": "Iron ignition material and Divine Pearl/Holy construction ingredient; selected recipe role only"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold living light; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Living light follows blank inscription clockwise.",
+    "Feather motif follows living light clockwise.",
+    "Recovery veil follows feather motif clockwise, across an unused outer Plinth.",
+    "Gilded metal follows recovery veil clockwise, across an unused outer Plinth.",
+    "Blank inscription follows gilded metal clockwise, across an unused outer Plinth."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "artifact": "/Users/quzzar/Projects/vestige/build/visual-feedback-review/vestige-0.1.0.jar",
+  "sha256": "c62bf52ada44aa96829dbe2a76dec7edafca249ef715d90991582927a6c8b168",
+  "captureCodeAndAssetMatches": {
+    "vestige-ritual_reference_success-ritual-0": 14,
+    "vestige-ritual_hints-ritual-0": 14
+  },
+  "tooltipCases": 8
+}

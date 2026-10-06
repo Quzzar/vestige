@@ -1,0 +1,68 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/paper"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 261070
+      },
+      "model": "vestige:item/eye_a_soft_flint"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261071
+      },
+      "model": "vestige:item/eye_b_dark_pebble"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261072
+      },
+      "model": "vestige:item/eye_c_chipped_face"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261073
+      },
+      "model": "vestige:item/eye_d_simple_talisman"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261074
+      },
+      "model": "vestige:item/shell_a_soft_ash"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261075
+      },
+      "model": "vestige:item/shell_b_compact_conch"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261076
+      },
+      "model": "vestige:item/shell_c_slate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261077
+      },
+      "model": "vestige:item/shell_d_deep_dusk"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261078
+      },
+      "model": "vestige:item/previous_eye"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261079
+      },
+      "model": "vestige:item/previous_shell"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_spout",
+  "name": "Spout",
+  "circle": 4,
+  "color": "239dcc",
+  "rationale": "Water-bearing Kelp and Slime's lift meet Emerald to shape the aimed spout.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Kelp motif follows blank inscription clockwise.",
+    "Slime motif follows kelp motif clockwise.",
+    "Evocation focus follows slime motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

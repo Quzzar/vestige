@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:magic_arrow",
+  "name": "Magic Arrow",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Resonant Amethyst and an Arrow meet Ender focus for the charged piercing projectile.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    }
+  ],
+  "clues": [
+    "Passage focus follows blank inscription clockwise.",
+    "Arrow motif follows passage focus clockwise.",
+    "Resonant facet follows arrow motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

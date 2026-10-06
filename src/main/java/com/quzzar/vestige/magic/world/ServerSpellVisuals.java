@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.network.registration.NetworkRegistry;
 import java.util.*;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
@@ -38,7 +39,7 @@ final class ServerSpellVisuals {
         SpellVisualPayload payload = cue.payload(true, burst);
         for (UUID observer : cue.observers) {
             ServerPlayer player = cue.level.getServer().getPlayerList().getPlayer(observer);
-            if (player != null && player.level() == cue.level) PacketDistributor.sendToPlayer(player, payload);
+            if (player != null && player.level() == cue.level && NetworkRegistry.hasChannel(player.connection, SpellVisualPayload.TYPE.id())) PacketDistributor.sendToPlayer(player, payload);
         }
     }
     void tick() {
@@ -55,6 +56,7 @@ final class ServerSpellVisuals {
         double range = 64 + cue.visual.radius();
         boolean snapshotDue = cue.follow && cue.age() >= cue.nextSnapshot;
         for (ServerPlayer player : cue.level.players()) {
+            if (!NetworkRegistry.hasChannel(player.connection, SpellVisualPayload.TYPE.id())) continue;
             if (cue.observer.isPresent() && !cue.observer.get().equals(player.getUUID())) continue;
             if (points.stream().noneMatch(point -> point.position().distanceToSqr(player.position()) <= range * range)) continue;
             visible.add(player.getUUID());
@@ -63,7 +65,7 @@ final class ServerSpellVisuals {
         for (UUID observer : cue.observers) {
             if (visible.contains(observer)) continue;
             ServerPlayer player = cue.level.getServer().getPlayerList().getPlayer(observer);
-            if (player != null && player.level() == cue.level) PacketDistributor.sendToPlayer(player, cue.payload(true, false));
+            if (player != null && player.level() == cue.level && NetworkRegistry.hasChannel(player.connection, SpellVisualPayload.TYPE.id())) PacketDistributor.sendToPlayer(player, cue.payload(true, false));
         }
         cue.observers = visible;
         if (snapshotDue) cue.nextSnapshot = cue.age() + 20;

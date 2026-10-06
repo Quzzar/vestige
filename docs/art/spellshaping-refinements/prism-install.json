@@ -1,0 +1,23 @@
+{
+  "installedAt": "2026-10-05T02:38:05.330022+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "7ea657e413eae9aca2eeb0bd44ade89d61dfd3f6bbfc14a1688e72b4415ee64d",
+  "previousSha256": "0597abcd21926cf8477c48e179218546df5db69a4eba6ab7aba953fcb07d7935",
+  "instance": "Kithkyn Testing",
+  "minecraft": "1.21.1",
+  "automatedNeoForge": "21.1.72",
+  "prismNeoForge": "21.1.248",
+  "spellshapingRules": 56,
+  "shardRecipe": "one each Amethyst Shard, Copper Ingot, Iron Ingot, Ender Pearl, Quartz, Lapis Lazuli, Redstone Dust, Diamond",
+  "verification": {
+    "unitTests": 81,
+    "minecraftTests": 134,
+    "clientCaptureKinds": [
+      "revealing",
+      "reflecting",
+      "anchored",
+      "attunement"
+    ]
+  }
+}

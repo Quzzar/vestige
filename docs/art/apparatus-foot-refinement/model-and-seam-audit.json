@@ -1,0 +1,1737 @@
+{
+  "status": "Native detailed models with foot-only simplification; supersedes middle-ground preview",
+  "models": [
+    {
+      "material": "stone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "stone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "cobblestone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "granite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_granite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "diorite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_diorite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "andesite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_andesite",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "red_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "mud_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "quartz",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "prismarine",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "nether_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "blackstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "tuff",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "polished_tuff",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "original_elements": 52,
+      "current_elements": 51,
+      "current_faces": 306,
+      "original_foot_steps": 3,
+      "current_foot_steps": 2,
+      "unchanged_elements_above_foot": 49,
+      "physical_envelope": [
+        1.8900000000000006,
+        0,
+        1.8900000000000006,
+        14.11,
+        14.3,
+        14.11
+      ]
+    },
+    {
+      "material": "purpur",
+      "role": "spellstone",
+      "original_elements": 33,
+      "current_elements": 32,
+      "current_faces": 187,
+      "original_foot_steps": 2,
+      "current_foot_steps": 1,
+      "unchanged_elements_above_foot": 31,
+      "physical_envelope": [
+        0.7847456736183394,
+        0,
+        0.7847456736183389,
+        15.21525432638166,
+        8,
+        15.215254326381661
+      ]
+    }
+  ],
+  "column_seams": [
+    {
+      "material": "stone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/stone",
+      "corner_texture": "minecraft:block/stone",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "cobblestone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/cobblestone",
+      "corner_texture": "minecraft:block/cobblestone",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "mossy_cobblestone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/mossy_cobblestone",
+      "corner_texture": "minecraft:block/mossy_cobblestone",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "stone_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/stone_bricks",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/mossy_stone_bricks",
+      "corner_texture": "minecraft:block/mossy_stone_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "granite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/granite",
+      "corner_texture": "minecraft:block/polished_granite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_granite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_granite",
+      "corner_texture": "minecraft:block/polished_granite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "diorite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/diorite",
+      "corner_texture": "minecraft:block/polished_diorite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_diorite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_diorite",
+      "corner_texture": "minecraft:block/polished_diorite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "andesite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/andesite",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_andesite",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_andesite",
+      "corner_texture": "minecraft:block/polished_andesite",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "sandstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/sandstone",
+      "corner_texture": "minecraft:block/sandstone_top",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "smooth_sandstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/sandstone_top",
+      "corner_texture": "minecraft:block/sandstone_top",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "red_sandstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/red_sandstone",
+      "corner_texture": "minecraft:block/red_sandstone_top",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/red_sandstone_top",
+      "corner_texture": "minecraft:block/red_sandstone_top",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/bricks",
+      "corner_texture": "minecraft:block/bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "mud_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/mud_bricks",
+      "corner_texture": "minecraft:block/mud_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "quartz",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/quartz_pillar",
+      "corner_texture": "minecraft:block/quartz_block_top",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "smooth_quartz",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/quartz_block_bottom",
+      "corner_texture": "minecraft:block/quartz_block_bottom",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "prismarine",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/prismarine",
+      "corner_texture": "minecraft:block/prismarine",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "prismarine_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/prismarine_bricks",
+      "corner_texture": "minecraft:block/prismarine_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "dark_prismarine",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/dark_prismarine",
+      "corner_texture": "minecraft:block/dark_prismarine",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "nether_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/nether_bricks",
+      "corner_texture": "minecraft:block/nether_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "red_nether_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/red_nether_bricks",
+      "corner_texture": "minecraft:block/red_nether_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "blackstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/blackstone",
+      "corner_texture": "minecraft:block/polished_blackstone",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_blackstone",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_blackstone",
+      "corner_texture": "minecraft:block/polished_blackstone",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_blackstone_bricks",
+      "corner_texture": "minecraft:block/polished_blackstone_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "cobbled_deepslate",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/cobbled_deepslate",
+      "corner_texture": "minecraft:block/cobbled_deepslate",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_deepslate",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_deepslate",
+      "corner_texture": "minecraft:block/polished_deepslate",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "deepslate_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/deepslate_bricks",
+      "corner_texture": "minecraft:block/deepslate_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "deepslate_tiles",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/deepslate_tiles",
+      "corner_texture": "minecraft:block/deepslate_tiles",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "tuff",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/tuff",
+      "corner_texture": "minecraft:block/polished_tuff",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "polished_tuff",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/polished_tuff",
+      "corner_texture": "minecraft:block/polished_tuff",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "tuff_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/tuff_bricks",
+      "corner_texture": "minecraft:block/tuff_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "end_stone_bricks",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/end_stone_bricks",
+      "corner_texture": "minecraft:block/end_stone_bricks",
+      "unchanged_frame_and_crown_elements": 44
+    },
+    {
+      "material": "purpur",
+      "matched_side_face_sections": 20,
+      "column_elements": {
+        "base": 7,
+        "shaft": 5,
+        "cap": 49
+      },
+      "shaft_texture": "minecraft:block/purpur_pillar",
+      "corner_texture": "minecraft:block/purpur_block",
+      "unchanged_frame_and_crown_elements": 44
+    }
+  ],
+  "preservation": "All 49 Plinth and 31 Spellstone elements above their feet are identical to the original reviewed exports. Plinth keeps all 32 architectural/socket-frame bars. Cap keeps the original 44 frame/crown elements.",
+  "textures": "Original standalone vanilla pixels/UVs and purple rune; fixed-phase columns with interior polished rows and native Quartz/Purpur pillars"
+}

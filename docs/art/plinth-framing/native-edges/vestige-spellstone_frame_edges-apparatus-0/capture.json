@@ -1,0 +1,104 @@
+{
+  "spell": "vestige:spellstone_frame_edges",
+  "phase": 0,
+  "label": "Spellstone with matching edge trim",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "feedbackCodeSha256": {
+    "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+    "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class": "6d2c0b17cacb0f65905942b1106fdd4b94775f548e1682d4f0743ccbb98af4e6",
+    "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "3e54e2bcf1fa474cf5640492f340a1843923ed010c93ab576d868f6e5312180b",
+    "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264"
+  },
+  "apparatusMaterial": "stone",
+  "apparatusPresentation": "plinth-framing",
+  "apparatusCamera": {
+    "eye": [
+      1.2,
+      65.8,
+      1.65
+    ],
+    "pitch": 17.32626,
+    "yaw": 148.67131,
+    "fixed": true
+  },
+  "materialTextureSha256": {
+    "textures/block/stone.png": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b",
+    "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+    "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "35898f06140f31df4d8065c2553beb229587448310cbbf0046701e6b1e963162",
+    "models/block/plinth.json": "08928f2a4dfc6a55bf6a3c264fed4bc3778d4ee79ae9d44597d21727ea86a306",
+    "models/block/stone_plinth.json": "7875f1296537636a8e42c709bddcb9829bb05486649ef84b3d2a70ae036d879a",
+    "models/block/stone_spellstone.json": "18c0813c2fd46cbd6af623d66ebff2da4ed5f6f0c994a38e26cb6d3b19637b2d",
+    "models/block/stone_plinth_base.json": "ca6fa9889e2ff64c15c91e7a781ad2877ee628eb53cfe38925afef27df74c06e",
+    "models/block/stone_plinth_shaft.json": "0ea5f93009886e2a3719805120df975f137d66a48159ec86268c052610f89cbf",
+    "models/block/stone_plinth_cap.json": "1d3d8e0b12b68c314349a0c0f3f966adc08d1664565df177ac361d584d344b59",
+    "models/block/andesite_plinth.json": "3a560337d3d374073503a03948cfe24504abbcfd534b3d910dcd1645c5a4dde0",
+    "models/block/andesite_plinth_base.json": "97849069de4daeed12fc23bc81b472e48da54f0c02b4cf25b23be87fbd1b8a76",
+    "models/block/andesite_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+    "models/block/andesite_plinth_cap.json": "d68d443f8a5b4f5d030f7465783e86a04a904d1f2a44a6bf00455949c993f72a",
+    "models/block/diorite_plinth.json": "a65742c1304d1da0153fb318f548e831a271cf09b2c87f77a57b33429d84769a",
+    "models/block/diorite_plinth_base.json": "df9bf1fd29011a34c3da8ed6e06251a335c8d210cdc9ee4d6927d4d0f7e38f3e",
+    "models/block/diorite_plinth_shaft.json": "36bd3727d964716b9e42dd2f9fd0737fd50a88034f1d9c70b7f0b4f4eba749cf",
+    "models/block/diorite_plinth_cap.json": "618509dd11fe597608c15ca2ceeffbc7afc84482ad72b70e25a75d4d0470bd0a",
+    "models/block/granite_plinth.json": "14582eb2b88f78cf19970f69a78dd27edf149103d93206f87ed8d363e46e22ad",
+    "models/block/granite_plinth_base.json": "8a0f5b7aa309dfc6e7bbf636777f252610d29f925bd3cc1df822c7c1c2302a7d",
+    "models/block/granite_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+    "models/block/granite_plinth_cap.json": "8f9f79843c9d8d224bf6dcea5bcd4fd88e12cfcb51ad9d34a459deb218685594",
+    "models/block/cobblestone_plinth.json": "7ef2666d2092114f5294a7614d6587b5aaeb0431446e96bd02eb4e59c85bf1c1",
+    "models/block/cobblestone_plinth_base.json": "2cf205f587accfeeed0302a992b8ac32411b451b171dc10910eae12298582474",
+    "models/block/cobblestone_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+    "models/block/cobblestone_plinth_cap.json": "9c31dfbaf970d7fb8f73a634fc602d80c974666c69a02f4c4ebf640f5f8b4822",
+    "models/block/andesite_spellstone.json": "61bc0d28c11c8fb2270407302a21bf85921d216863ae4708844a874fdd6f58f1"
+  },
+  "ritualCraftingSha256": "62a2fc53eb9c0cfbe38ddc139f71eed23835e3be3e05f1ce5f9d37f4b27de889",
+  "astralRendererSha256": "3055870bfa86343b37b72325959368b080311201aa43697988b3a9696b9e9cca",
+  "seconds": 2.063159959,
+  "times": [
+    0.011141209,
+    0.100645667,
+    0.183756084,
+    0.26489625,
+    0.350074375,
+    0.436204167,
+    0.512483917,
+    0.583928417,
+    0.674367375,
+    0.751532625,
+    0.880988167,
+    0.955776209,
+    1.0832765,
+    1.157717334,
+    1.232744792,
+    1.316066792,
+    1.401200584,
+    1.4725725,
+    1.550735167,
+    1.626444375,
+    1.703063209,
+    1.7812265,
+    1.850634334,
+    1.922349084,
+    1.99961375
+  ],
+  "scenario": "Capture-only Stone Spellstone framing comparison with unchanged thick cap, tilted supports, Diamond corner pixels and native Astral Seal. The framed view adds flat Polished Deepslate strips at cap edges and along the supports. No production art was applied.",
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:stone_spellstone"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true,
+      "offering": "minecraft:air"
+    }
+  },
+  "outcome": "PLACED"
+}

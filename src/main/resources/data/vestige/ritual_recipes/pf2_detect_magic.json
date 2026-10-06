@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_detect_magic",
+  "name": "Detect Magic",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Amethyst, Compass and Book describe sensing nearby inscriptions and native magical presences.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "book motif",
+      "ingredient": {
+        "items": [
+          "minecraft:book"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Resonant facet follows blank inscription clockwise.",
+    "Compass motif follows resonant facet clockwise.",
+    "Book motif follows compass motif clockwise.",
+    "Blank inscription follows book motif clockwise."
+  ]
+}

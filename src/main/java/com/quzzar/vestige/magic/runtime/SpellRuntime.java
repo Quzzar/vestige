@@ -40,6 +40,11 @@ public final class SpellRuntime implements AutoCloseable {
     /** Resource bypass is restricted to explicit development callers; time still executes normally. */
     public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode, boolean freeResources) {
+        return cast(spell,event,modifiers,discovered,mode,freeResources,CastShaping.NONE);
+    }
+    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+                     boolean discovered, Optional<ResourceLocation> mode, boolean freeResources, CastShaping shaping) {
+        Objects.requireNonNull(shaping);
         ensureOpen();
         if (!world.canActivate(event.actor(),spell)) return rejected(spell,event,Status.CONDITIONS_FAILED);
         if (mode.isPresent() && !spell.modes().containsKey(mode.get())) return rejected(spell, event, Status.CONDITIONS_FAILED);
@@ -72,7 +77,8 @@ public final class SpellRuntime implements AutoCloseable {
         Cast cast = new Cast(spell, event.actor(), spell.traits().resolve(modifiers), discovered);
         cast.mode = mode;
         cast.freeResources = freeResources;
-        cast.costs = mode.map(spell.modes()::get).map(SpellMode::costs).orElse(spell.costs());
+        cast.shaping = shaping;
+        cast.costs = shaping.costs(mode.map(spell.modes()::get).map(SpellMode::costs).orElse(spell.costs()));
         List<SpellEffect> effects = mode.map(spell.modes()::get).map(SpellMode::effects).orElse(spell.effects());
         Context triggerContext = new Context(cast, event, new SpellSubject.Entity(event.actor()), event.cause(), null);
         Optional<SpellTrigger> trigger = spell.triggers().stream()
@@ -204,14 +210,16 @@ public final class SpellRuntime implements AutoCloseable {
     }
 
     private void fire(ActiveBinding binding, SpellEvent event) {
-        Context context = new Context(binding.context.cast, event, binding.target, event.cause(), binding.context.manifestation);
+        CausalChain cause=binding.context.chain.secondary() ? event.cause().asSecondary() : event.cause();
+        Context context = new Context(binding.context.cast, event, binding.target, cause, binding.context.manifestation);
+        context.local=binding.context.local;
         for (SpellTrigger trigger : binding.definition.triggers()) {
             if (!trigger.event().equals(event.type()) || !trigger.conditions().stream().allMatch(c -> c.matches(context))) continue;
-            Optional<CausalChain> branch = event.cause().enter(new CausalChain.ActivationKey(context.cast.spell.id(), trigger.id()));
+            Optional<CausalChain> branch = cause.enter(new CausalChain.ActivationKey(context.cast.spell.id(), trigger.id()));
             if (branch.isEmpty()) continue;
             binding.charges--;
             Context activation = new Context(context.cast, event, binding.target, branch.get(), context.manifestation);
-            activation.binding = binding;
+            activation.binding = binding; activation.local=context.local;
             Task task = task(context.cast, binding.definition.effects(), activation);
             task.binding = binding;
             binding.work++;
@@ -241,6 +249,7 @@ public final class SpellRuntime implements AutoCloseable {
             if (task.needsPayment) {
                 task.needsPayment = false;
                 if (!task.cast.freeResources && !world.pay(task.cast.costs, first)) { end(task.cast, Status.COST_FAILED); finish(task); return; }
+                task.cast.paymentCommitted = true;
                 if (!task.cast.freeResources) {
                     long recovery = task.cast.costs.stream().filter(SpellCost.Cooldown.class::isInstance)
                             .map(SpellCost.Cooldown.class::cast).mapToLong(SpellCost.Cooldown::ticks).sum();
@@ -281,6 +290,11 @@ public final class SpellRuntime implements AutoCloseable {
                         });
                         for (int i = targets.size() - 1; i >= 0; i--) append(task, each.effects(), context.withTarget(targets.get(i)));
                     }
+                    case SpellEffects.Secondary secondary -> process(task(task.cast,secondary.effects(),context.secondary()));
+                    case SpellEffects.Limited limited -> {
+                        if (context.target instanceof SpellSubject.Entity entity && context.claimContact(entity.id(),limited.group(),limited.perTarget(),limited.total()))
+                            append(task,limited.effects(),context);
+                    }
                     case SpellEffects.Visual visual -> world.present(visual.visual(), List.of(context.target), context);
                     case SpellEffects.SetValue value -> context.state().put(value.key(), value.value());
                     case SpellEffects.CaptureValue value -> context.setNumber(value.key(), context.number(value.value()));
@@ -295,7 +309,7 @@ public final class SpellRuntime implements AutoCloseable {
                     case SpellEffects.Action action -> {
                         if (action.type().equals(id("reduce_pending_damage")) || action.type().equals(id("defer_pending_damage")) || action.type().equals(id("reduce_pending_heal"))) {
                             SpellEvent.PendingOutcome pending = context.event.pending().orElseThrow(() -> new IllegalStateException("No calculating-phase outcome"));
-                            double reduction = Math.min(pending.amount(), context.number(action.values().get("amount")));
+                            double reduction = Math.min(pending.amount(), context.amount(context.number(action.values().get("amount"))));
                             if (action.type().equals(id("defer_pending_damage"))) context.add(id("deferred_damage"), reduction);
                             pending.reduce(reduction);
                         } else if (!world.execute(action, context)) throw new IllegalStateException("Leaf effect failed: " + action.type());
@@ -342,14 +356,21 @@ public final class SpellRuntime implements AutoCloseable {
             }
         }
         Map<String, Double> values = new LinkedHashMap<>();
-        definition.values().forEach((key, value) -> values.put(key, context.number(value)));
+        definition.values().forEach((key, value) -> values.put(key, context.gameplayValue(key,value)));
+        if (values.containsKey("lifetime")) {
+            if (definition.durationTicks()<0) throw new IllegalArgumentException("Persistent manifestations cannot be reshaped into timed ones");
+            int lifetime=(int)Math.max(1,Math.min(240000,context.amount(values.get("lifetime"))));
+            definition=new SpellEffects.Manifestation(definition.kind(),lifetime,definition.values(),definition.identifiers(),definition.bindings(),definition.onHit(),definition.onTick(),definition.onEnd(),definition.interval(),definition.visual());
+        }
+        ResourceLocation kind=definition.kind();
         SpellWorld.ManifestationHandle handle = world.manifest(definition, Map.copyOf(values), context)
-                .orElseThrow(() -> new IllegalStateException("Cannot create manifestation: " + definition.kind()));
+                .orElseThrow(() -> new IllegalStateException("Cannot create manifestation: " + kind));
         ActiveManifestation manifestation = new ActiveManifestation(definition, handle,
                 definition.durationTicks() == -1 ? Long.MAX_VALUE : Math.addExact(tick, definition.durationTicks()));
         manifestation.originTarget = context.target;
         manifestation.nextPulse = Math.addExact(tick, definition.interval());
         manifestation.context = new Context(context.cast, context.event, handle.subject(), context.chain, manifestation);
+        manifestation.context.local=context.local;
         values.forEach((key, value) -> manifestation.state.put(id("manifestation/" + key), new ConditionValue.Decimal(value)));
         manifestations.put(manifestation.id, manifestation);
         for (SpellEffects.Binding binding : definition.bindings()) bind(binding, manifestation.context);
@@ -409,9 +430,11 @@ public final class SpellRuntime implements AutoCloseable {
         private final TraitProfile traits;
         private final boolean discovered;
         private List<SpellCost> costs;
+        private CastShaping shaping = CastShaping.NONE;
         private Optional<ResourceLocation> mode = Optional.empty();
         private final Map<ResourceLocation, ConditionValue> state = new LinkedHashMap<>();
         private final Map<ResourceLocation, SpellSubject> anchors = new LinkedHashMap<>();
+        private final Map<ResourceLocation,Integer> contactBudgets = new HashMap<>();
         private Status status = Status.RUNNING;
         private String failure;
         private Task continuation;
@@ -419,11 +442,14 @@ public final class SpellRuntime implements AutoCloseable {
         private long recastDeadline;
         private int work;
         private boolean freeResources;
+        private boolean paymentCommitted;
         private Cast(SpellDefinition spell, UUID actor, TraitProfile traits, boolean discovered) {
             this.spell = spell; this.actor = actor; this.traits = traits; this.discovered = discovered;
         }
         public UUID id() { return id; }
         public Status status() { return status; }
+        /** True after successful resource commitment, including a subsequent chaotic forfeit. */
+        public boolean paymentCommitted() { return paymentCommitted; }
         public Optional<String> failure() { return Optional.ofNullable(failure); }
         public Map<ResourceLocation, ConditionValue> state() { return Map.copyOf(state); }
     }
@@ -436,6 +462,7 @@ public final class SpellRuntime implements AutoCloseable {
         private final CausalChain chain;
         private final ActiveManifestation manifestation;
         private ActiveBinding binding;
+        private Map<ResourceLocation,ConditionValue> local;
         private Context(Cast cast, SpellEvent event, SpellSubject target, CausalChain chain, ActiveManifestation manifestation) {
             this.cast = cast; this.event = event; this.target = target; this.chain = chain; this.manifestation = manifestation;
         }
@@ -454,16 +481,28 @@ public final class SpellRuntime implements AutoCloseable {
             cast.state.put(key, new ConditionValue.Decimal(previous + 1));
             return true;
         }
+        /** One budget across the entire cast, including overlapping fields and their secondary callbacks. */
+        public boolean claimContact(UUID target, ResourceLocation group, int perTarget, int total) {
+            if (perTarget<1 || total<1 || total>1024) throw new IllegalArgumentException("Invalid contact budget");
+            int spent=cast.contactBudgets.getOrDefault(group,0);
+            if (spent>=total || !claimHit(target,group,perTarget)) return false;
+            cast.contactBudgets.put(group,spent+1);
+            return true;
+        }
         public double number(com.quzzar.vestige.magic.expression.SpellValue value) {
             double result = switch (Objects.requireNonNull(value, "effect value")) {
                 case com.quzzar.vestige.magic.expression.SpellValue.Fact fact -> ((ConditionValue.Decimal) value(fact.path()).orElseThrow(() -> new IllegalStateException("Missing numerical fact: " + fact.path()))).value();
                 case com.quzzar.vestige.magic.expression.SpellValue.Sum sum -> sum.terms().stream().mapToDouble(this::number).sum();
                 case com.quzzar.vestige.magic.expression.SpellValue.Product product -> product.factors().stream().mapToDouble(this::number).reduce(1, (a, b) -> a * b);
+                case com.quzzar.vestige.magic.expression.SpellValue.Clamp clamp -> Math.max(clamp.minimum(),Math.min(clamp.maximum(),number(clamp.value())));
                 default -> value.resolve(cast.traits);
             };
             if (!Double.isFinite(result)) throw new IllegalArgumentException("Resolved spell values must be finite");
             return result;
         }
+        /** Complete expressions keep precision; world leaves quantize final amounts only. */
+        public double amount(double resolved) { return cast.shaping.amount(resolved); }
+        public double gameplayValue(String key, com.quzzar.vestige.magic.expression.SpellValue value) { return cast.shaping.value(key,number(value)); }
         public void add(ResourceLocation key, double amount) {
             double previous = state().get(key) instanceof ConditionValue.Decimal number ? number.value() : 0;
             state().put(key, new ConditionValue.Decimal(previous + amount));
@@ -473,18 +512,27 @@ public final class SpellRuntime implements AutoCloseable {
         public Optional<SpellSubject> origin() { return manifestation == null ? Optional.empty() : Optional.of(manifestation.context.target); }
         public void execute(List<SpellEffect> effects, SpellSubject target) { process(task(cast, effects, withTarget(target))); }
         private Context withTarget(SpellSubject target) {
-            Context context = new Context(cast, event, target, chain, manifestation); context.binding = binding; return context;
+            Context context = new Context(cast, event, target, chain, manifestation); context.binding = binding; context.local=local; return context;
         }
         private Context withEvent(SpellEvent event) {
-            Context context = new Context(cast, event, target, chain, manifestation); context.binding = binding; return context;
+            Context context = new Context(cast, event, target, chain, manifestation); context.binding = binding; context.local=local; return context;
         }
-        private Map<ResourceLocation, ConditionValue> state() { return manifestation == null ? cast.state : manifestation.state; }
+        private Context secondary() {
+            Context context=new Context(cast,event,target,chain.asSecondary(),manifestation); context.binding=binding;
+            context.local=new LinkedHashMap<>(cast.state);
+            if (manifestation!=null) context.local.putAll(manifestation.state);
+            if (local!=null) context.local.putAll(local);
+            return context;
+        }
+        private Map<ResourceLocation, ConditionValue> state() { return local!=null ? local : manifestation == null ? cast.state : manifestation.state; }
         private boolean live() {
             return (cast.status == Status.RUNNING || cast.status == Status.CHARGING || cast.status == Status.AWAITING_RECAST || cast.status == Status.COMPLETED)
                     && (manifestation == null || manifestation.closing || manifestations.containsKey(manifestation.id))
                     && (binding == null || binding.valid && tick < binding.expires);
         }
         @Override public Optional<ConditionValue> value(ResourceLocation path) {
+            if (path.equals(id("event/secondary"))) return Optional.of(new ConditionValue.Flag(chain.secondary()));
+            if (manifestation!=null && manifestation.state.containsKey(path) && (local==null || !local.containsKey(path))) return Optional.of(manifestation.state.get(path));
             if (path.equals(ConditionPaths.SPELL_RARITY)) return Optional.of(new ConditionValue.Text(cast.spell.rarity().id()));
             if (state().containsKey(path)) return Optional.of(state().get(path));
             if (cast.state.containsKey(path)) return Optional.of(cast.state.get(path));

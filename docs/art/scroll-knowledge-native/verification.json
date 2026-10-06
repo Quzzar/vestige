@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-06",
+  "platform": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21,
+    "jei": "19.22.1.316",
+    "emi": "1.1.24+1.21.1"
+  },
+  "commandsPassed": [
+    "test",
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer"
+  ],
+  "unitTests": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": {
+    "tests": 187,
+    "failures": 0
+  },
+  "viewers": {
+    "jei": {
+      "indexing": {
+        "blazeRodSpellUses": 0,
+        "lapisUses": 1,
+        "attunedShard": 1,
+        "baseFireball": 1,
+        "nameOnlyTooltipCases": 8,
+        "paperSpellUses": 0,
+        "craftedPaperUses": 1,
+        "shapedFireball": 1
+      },
+      "lookups": [
+        {
+          "recipe": "crafted_fireball",
+          "guiScale": 4,
+          "screen": "mezz.jei.gui.recipes.RecipesGui",
+          "guiWidth": 640,
+          "registeredRituals": 216,
+          "guiHeight": 360
+        },
+        {
+          "recipe": "identified_magnetic_attraction",
+          "guiScale": 4,
+          "screen": "mezz.jei.gui.recipes.RecipesGui",
+          "guiWidth": 640,
+          "registeredRituals": 216,
+          "guiHeight": 360
+        },
+        {
+          "recipe": "scroll_names",
+          "guiScale": 4,
+          "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+          "guiWidth": 640,
+          "registeredRituals": 216,
+          "guiHeight": 360
+        }
+      ],
+      "viewer": "jei",
+      "source": "Minecraft main render target in actual recipe viewer"
+    },
+    "emi": {
+      "viewer": "emi",
+      "source": "Minecraft main render target in actual recipe viewer",
+      "indexing": {
+        "attunedShard": 1,
+        "baseFireball": 1,
+        "nameOnlyTooltipCases": 8,
+        "shapedFireball": 1,
+        "craftedPaperUses": 1,
+        "paperSpellUses": 0,
+        "blazeRodSpellUses": 0,
+        "lapisUses": 1
+      },
+      "lookups": [
+        {
+          "registeredRituals": 216,
+          "guiHeight": 360,
+          "recipe": "crafted_fireball",
+          "guiScale": 4,
+          "screen": "dev.emi.emi.screen.RecipeScreen",
+          "guiWidth": 640
+        },
+        {
+          "registeredRituals": 216,
+          "guiHeight": 360,
+          "recipe": "identified_magnetic_attraction",
+          "guiScale": 4,
+          "screen": "dev.emi.emi.screen.RecipeScreen",
+          "guiWidth": 640
+        },
+        {
+          "registeredRituals": 216,
+          "guiHeight": 360,
+          "recipe": "scroll_names",
+          "guiScale": 4,
+          "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+          "guiWidth": 640
+        }
+      ]
+    },
+    "both": {
+      "source": "Minecraft main render target in actual recipe viewer",
+      "viewer": "emi",
+      "lookups": [
+        {
+          "guiHeight": 360,
+          "registeredRituals": 216,
+          "guiWidth": 640,
+          "screen": "dev.emi.emi.screen.RecipeScreen",
+          "guiScale": 4,
+          "recipe": "crafted_fireball"
+        },
+        {
+          "guiHeight": 360,
+          "registeredRituals": 216,
+          "guiWidth": 640,
+          "screen": "dev.emi.emi.screen.RecipeScreen",
+          "guiScale": 4,
+          "recipe": "identified_magnetic_attraction"
+        },
+        {
+          "guiHeight": 360,
+          "registeredRituals": 216,
+          "guiWidth": 640,
+          "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+          "guiScale": 4,
+          "recipe": "scroll_names"
+        }
+      ],
+      "indexing": {
+        "craftedPaperUses": 1,
+        "shapedFireball": 1,
+        "nameOnlyTooltipCases": 8,
+        "baseFireball": 1,
+        "attunedShard": 1,
+        "lapisUses": 1,
+        "blazeRodSpellUses": 0,
+        "paperSpellUses": 0
+      }
+    }
+  },
+  "jeiNameSearchAssertions": {
+    "beforeIdentification": 0,
+    "afterIdentification": 1
+  },
+  "presentation": "Actual Minecraft framebuffer captures; viewer recipe screens plus a native tooltip test screen. All nine PNGs were visually inspected.",
+  "clientHarness": "Updates the actual integrated-server player records to test live synchronization. World tests independently verify actual ritual/cast transitions, atomic cancellation and separate persisted/clone history.",
+  "limits": [
+    "No retroactive craft history exists; memory begins with new successful ingredient crafts.",
+    "EMI tooltip footer is disabled only in the isolated EMI/both test profiles (ui.append-item-mod-id: false); its default mixin appends a mod-name footer after NeoForge tooltip events.",
+    "Both viewers together retain pinned JEMI startup/runtime and duplicate tag-display recipe warnings. Native Vestige ritual lookups, 216-entry uniqueness and knowledge refresh assertions pass; general bridge compatibility is not claimed.",
+    "Earlier full runs saw a cancellation failure that passed in isolation and both reruns, then stale Standing Stone fixtures during concurrent sixteen-form updates. The final full run passes against the updated tests.",
+    "No Prism deployment, ordinary survival session or remote multiplayer presentation test occurred."
+  ],
+  "package": {
+    "jar": "/Users/quzzar/Projects/vestige/build/scroll-knowledge/vestige-0.1.0.jar",
+    "sha256": "5b74e8c893c03f48e4a436a01e34c75cff23cb764785a8551f758a761fdc6b32",
+    "zipIntegrity": true,
+    "modDisplayName": "Vestige",
+    "subtitle": "Traditions of Lost Magic",
+    "unidentifiedScrollName": "Unknown Scroll",
+    "allCompiledClassesAgree": 320,
+    "allSourceResourcesAgree": 2888,
+    "capturedKnowledgeClassesAgree": 31,
+    "otherCapturedClassChanged": [
+      "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class"
+    ],
+    "captureDifferenceExplanation": "The general effects-capture driver changed concurrently. It excludes scroll_knowledge mode; all actual scroll knowledge, diagram, payload and viewer classes agree.",
+    "installedIntoPrism": false
+  },
+  "evidenceSha256": {
+    "both/emi/6-crafted_fireball.png": "747b3b15cccef5e9be0c92971c8c2b0cdbf4058f0b539af408d723eeb1953db8",
+    "both/emi/7-identified_magnetic_attraction.png": "cb0a6d452f4b005a93444e5be9afcdf4ef26bb0ce069a77c92196c1f4fa72b92",
+    "both/emi/8-scroll_names.png": "794993fb6491af02be5d4affba5437207c766aa6d0c6e77c02f59bd2f9ef4eef",
+    "both/emi/capture.json": "da2f9f1abb7a310d87b1ff427ea6acbd86d8ab252fbf97c08cd400f0bbf89dd4",
+    "emi/6-crafted_fireball.png": "106c431e847e7f1141bc37b8107f88c4d52e9a3f83a2dc36ea671d28df5b8836",
+    "emi/7-identified_magnetic_attraction.png": "f19a9ed72d9f69b5a56c11157ec51e6886bbbe4e29ed98a13a3cc7b0f4cc6bd6",
+    "emi/8-scroll_names.png": "794993fb6491af02be5d4affba5437207c766aa6d0c6e77c02f59bd2f9ef4eef",
+    "emi/capture.json": "dd0e4ccd113c53a3e3078477a0428b7576a6f172606e0776ca5fa71ed51bcdce",
+    "jei/6-crafted_fireball.png": "758f5be116bd8f4ee29c8a7ee18e26340183d9b36e66f887a8e80834057fdd7f",
+    "jei/7-identified_magnetic_attraction.png": "74fe7870aebfb068f52f2d50c733151a256f02285c5ea98468fcb7892b932c37",
+    "jei/8-scroll_names.png": "794993fb6491af02be5d4affba5437207c766aa6d0c6e77c02f59bd2f9ef4eef",
+    "jei/capture.json": "4e0617d32ec3ccd406d5a8826c76ed3c495c9a48c37c9ff471fc056b0b89d017",
+    "loaded-classes.json": "376f9bc5af88a7a4412fab2126ea4a62561dc3e59b13bd621e644e023785a23e",
+    "logs/both.log": "86a2b22987fe7977f1ede31203db341b84dfbd03fd911d1a3e8000ac10c2bdad",
+    "logs/build-world.log": "a00d2d77cd4b6d33b3fd526877b1ff583ff44303e7ac09c97f80d115030d10d8",
+    "logs/cancel-focused.log": "7c00f75aeed5426fc494e15ce1d12f0fc94ad9ff0ce62f8b758a4fb0ec2a734a",
+    "logs/emi.log": "66a240a10b265ce368221ffafc1409f11ca476d2bd6cb637cb875873dd722202",
+    "logs/jei.log": "cdc1cf9536c7dae73c67f06a6bc4464e619ead8c926b6df43a16c38459c013e4",
+    "package-verification.json": "afbb5a4196e70150af6321e1d8e2d322620edda80c7582ae1cde39bebba28816"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source": "Minecraft main render target in actual recipe viewer",
+  "viewer": "jei",
+  "lookups": [
+    {
+      "guiHeight": 360,
+      "registeredRituals": 216,
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "crafted_fireball"
+    },
+    {
+      "guiHeight": 360,
+      "registeredRituals": 216,
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "identified_magnetic_attraction"
+    },
+    {
+      "guiHeight": 360,
+      "registeredRituals": 216,
+      "guiWidth": 640,
+      "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+      "guiScale": 4,
+      "recipe": "scroll_names"
+    }
+  ],
+  "indexing": {
+    "nameOnlyTooltipCases": 8,
+    "baseFireball": 1,
+    "attunedShard": 1,
+    "lapisUses": 1,
+    "blazeRodSpellUses": 0,
+    "paperSpellUses": 0,
+    "craftedPaperUses": 1,
+    "shapedFireball": 1
+  }
+}

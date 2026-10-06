@@ -1,0 +1,20 @@
+{
+  "status": "Revised three-offering Soul Sand concept; third ingredient and art not approved, not native 16x16, not packaged",
+  "generation_mode": "Built-in image_gen edit",
+  "edit_target": "whispering-shell-concept-v1.png",
+  "generated_source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-5a33d376-14bc-47ac-b560-876f5c28de4f.png",
+  "project_copy": "/Users/quzzar/Projects/vestige/docs/art/whispering-shell-v1/whispering-shell-concept-v2.png",
+  "sha256": "746951f92a19613febf54d1efd0aaddda19db172a2d536f31cea2ea31d55a489",
+  "size": [
+    1254,
+    1254
+  ],
+  "source_mode": "RGBA",
+  "alpha_values": 256,
+  "transparent_pixels": 996538,
+  "partially_transparent_pixels": 574285,
+  "opaque_colors": 372,
+  "unchanged_copy": true,
+  "prompt": "prompt-v2.txt",
+  "inspection": "Copper and violet jewel removed; ivory/peach shell preserved, dark mouth has three coarse brown grains. Generated gradients/partial alpha remain. This is an art direction study, not a production inventory sprite."
+}

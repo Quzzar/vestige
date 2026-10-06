@@ -27,6 +27,8 @@ public final class SpellEffectGallery {
             case SpellEffects.ForEach each -> { each.visual().ifPresent(v -> phases.add(new Phase(path+" / selection",v))); walk(each.effects(),path,phases); }
             case SpellEffects.Sequence sequence -> walk(sequence.effects(),path,phases);
             case SpellEffects.Repeat repeat -> walk(repeat.effects(),path+" / repeated",phases);
+            case SpellEffects.Secondary secondary -> walk(secondary.effects(),path+" / secondary",phases);
+            case SpellEffects.Limited limited -> walk(limited.effects(),path+" / bounded contacts",phases);
             case SpellEffects.Branch branch -> { walk(branch.whenTrue(),path+" / conditional",phases); walk(branch.whenFalse(),path+" / otherwise",phases); }
             case SpellEffects.InstallBinding binding -> walk(binding.binding().effects(),path+" / reaction",phases);
             case SpellEffects.CreateManifestation create -> {

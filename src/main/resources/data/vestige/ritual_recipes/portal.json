@@ -1,0 +1,92 @@
+{
+  "spell": "vestige:portal",
+  "name": "Portal",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender passage links Obsidian boundaries through Compass and Chorus, with Amethyst and Iron preserving the paired anchors.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "chorus motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chorus_fruit"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 6,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold passage focus, compass motif, resonant facet; the other required ingredients use Inner Plinths.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Passage focus follows blank inscription clockwise.",
+    "Obsidian motif follows passage focus clockwise.",
+    "Compass motif follows obsidian motif clockwise.",
+    "Chorus motif follows compass motif clockwise.",
+    "Resonant facet follows chorus motif clockwise.",
+    "Bound metal follows resonant facet clockwise.",
+    "Blank inscription follows bound metal clockwise, across an unused outer Plinth."
+  ]
+}

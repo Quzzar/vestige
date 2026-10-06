@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Prepare selected apparatus artwork and bake it over mirrored vanilla stone.
+
+The archived imagegen sources are authoritative. Vanilla stone resolves
+from the supplied local Minecraft jar; no downloads or world state are used.
+"""
+
+import argparse
+from pathlib import Path
+from zipfile import ZipFile
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parents[1]
+TEXTURES = ROOT/'src/main/resources/assets/vestige/textures/block'
+ART = ROOT/'docs/art/apparatus-v9'
+
+
+def inlay(source, size, *, cutoff=128, archive=ART):
+    """Area-reduce selected art, retaining hard transparent pixel boundaries."""
+    with Image.open(archive/source) as image:
+        image = image.convert('RGBA').resize((size,size),Image.Resampling.BOX)
+    pixels = []
+    for y in range(size):
+        for x in range(size):
+            r,g,b,a = image.getpixel((x,y))
+            pixels.append((r,g,b,255) if a >= cutoff else (0,0,0,0))
+    image.putdata(pixels)
+    return image
+
+
+def textures(jar):
+    rune = inlay('rune-selected-source.png',64)
+    # Preserve the slender frame where it crosses native pixel boundaries.
+    top = inlay('spellstone-crown-source.png',64,cutoff=96,archive=ROOT/'docs/art/apparatus-v10')
+    with Image.open(ART/'diamond-generated-source.png') as source:
+        diamond = source.convert('RGB').resize((16,16),Image.Resampling.NEAREST)
+    with jar.open('assets/minecraft/textures/block/chiseled_deepslate.png') as stream:
+        stone = Image.open(stream).convert('RGBA')
+    assert stone.size == (16,16)
+    bottom = stone.crop((0,8,16,16))
+    base = Image.new('RGBA',(16,16))
+    base.paste(bottom.transpose(Image.Transpose.FLIP_TOP_BOTTOM),(0,0))
+    base.paste(bottom,(0,8))
+    def composite(overlay):
+        stone = base.resize(overlay.size,Image.Resampling.NEAREST)
+        return Image.alpha_composite(stone,overlay).convert('RGB')
+    return {'runic_pedestal_runes':rune, 'runic_pedestal_top':composite(rune),
+            'diamond_inlay':diamond, 'spellstone_top_inlay':top,
+            'spellstone_top':composite(top)}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--minecraft-jar',type=Path,required=True)
+    parser.add_argument('--check',action='store_true',help='check texture pixel drift without rewriting')
+    args = parser.parse_args()
+    with ZipFile(args.minecraft_jar) as jar:
+        authored = textures(jar)
+    for name,image in authored.items():
+        path = TEXTURES/(name+'.png')
+        if args.check:
+            with Image.open(path) as existing:
+                assert existing.size == image.size and existing.mode == image.mode
+                assert existing.tobytes() == image.tobytes(), f'Apparatus texture drift: {path}'
+        else:
+            path.parent.mkdir(parents=True,exist_ok=True)
+            image.save(path)
+        print(name, f'{image.width}×{image.height}', image.mode)
+
+
+if __name__ == '__main__':
+    main()

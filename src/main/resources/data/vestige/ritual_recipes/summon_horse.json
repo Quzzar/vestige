@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:summon_horse",
+  "name": "Summon Horse",
+  "circle": 4,
+  "color": "57d0c7",
+  "rationale": "Leather, allied sustenance and Bone describe the tamed mount's saddle, feeding and body.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "leather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:leather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Leather motif follows blank inscription clockwise.",
+    "Ally sustenance follows leather motif clockwise.",
+    "Bone motif follows ally sustenance clockwise.",
+    "Blank inscription follows bone motif clockwise."
+  ]
+}

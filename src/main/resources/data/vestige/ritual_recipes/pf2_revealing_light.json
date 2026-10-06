@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_revealing_light",
+  "name": "Revealing Light",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Glowstone leads Amethyst and Glass to reveal concealed creatures with visible light.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 3,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Glow motif follows blank inscription clockwise.",
+    "Resonant facet follows glow motif clockwise.",
+    "Glass motif follows resonant facet clockwise.",
+    "Blank inscription follows glass motif clockwise."
+  ]
+}

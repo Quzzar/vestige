@@ -1,0 +1,731 @@
+{
+  "status": "Standalone simplification is a review alternative; connected column states are native",
+  "rune": "Original intact 64x64 overlay at y7.12/16, native emissive renderer unchanged",
+  "materials": [
+    {
+      "material": "stone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "stone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "cobblestone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "cobblestone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "mossy_cobblestone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "stone_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "stone_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "mossy_stone_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "granite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "granite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_granite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_granite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "diorite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "diorite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_diorite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_diorite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "andesite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "andesite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_andesite",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_andesite",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "sandstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "sandstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_sandstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "red_sandstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "red_sandstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_red_sandstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "mud_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "mud_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "quartz",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "quartz",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "smooth_quartz",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "prismarine",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "prismarine",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "prismarine_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "dark_prismarine",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "nether_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "nether_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "red_nether_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "blackstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "blackstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_blackstone",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_blackstone_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "cobbled_deepslate",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_deepslate",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "deepslate_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "deepslate_tiles",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "tuff",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "tuff",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_tuff",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "polished_tuff",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "tuff_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "end_stone_bricks",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    },
+    {
+      "material": "purpur",
+      "role": "plinth",
+      "before_elements": 52,
+      "after_elements": 9,
+      "before_faces": 312,
+      "after_faces": 54,
+      "before_rotations": 4,
+      "after_rotations": 0
+    },
+    {
+      "material": "purpur",
+      "role": "spellstone",
+      "before_elements": 33,
+      "after_elements": 15,
+      "before_faces": 193,
+      "after_faces": 85,
+      "before_rotations": 20,
+      "after_rotations": 0
+    }
+  ],
+  "column_element_counts": {
+    "base": 3,
+    "shaft": 1,
+    "cap": 7
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_creation",
+  "name": "Creation",
+  "circle": 4,
+  "color": "b58f60",
+  "rationale": "Oak and Nature focus supply the wooden construction, with Amethyst describing its temporary conjured form.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "oak motif",
+      "ingredient": {
+        "items": [
+          "minecraft:oak_log"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Oak motif follows blank inscription clockwise.",
+    "Nature focus follows oak motif clockwise.",
+    "Resonant facet follows nature focus clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

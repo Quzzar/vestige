@@ -1,0 +1,63 @@
+{
+  "indexing": {
+    "paperSpellUses": 0,
+    "blazeRodSpellUses": 0,
+    "baseFireball": 1,
+    "lapisUses": 1,
+    "shapedFireball": 1,
+    "reloadedFireballCapacity": 8,
+    "attunedShard": 1
+  },
+  "source": "Minecraft main render target in actual recipe viewer",
+  "viewer": "jei",
+  "lookups": [
+    {
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "fireball",
+      "guiHeight": 360,
+      "registeredRituals": 215
+    },
+    {
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "starfall",
+      "guiHeight": 360,
+      "registeredRituals": 215
+    },
+    {
+      "guiWidth": 640,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 4,
+      "recipe": "attunement_shard",
+      "guiHeight": 360,
+      "registeredRituals": 215
+    },
+    {
+      "guiWidth": 320,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 6,
+      "recipe": "fireball",
+      "guiHeight": 240,
+      "registeredRituals": 215
+    },
+    {
+      "guiWidth": 320,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 6,
+      "recipe": "attunement_shard",
+      "guiHeight": 240,
+      "registeredRituals": 215
+    },
+    {
+      "guiWidth": 320,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "guiScale": 6,
+      "recipe": "reloaded_fireball",
+      "guiHeight": 240,
+      "registeredRituals": 215
+    }
+  ]
+}

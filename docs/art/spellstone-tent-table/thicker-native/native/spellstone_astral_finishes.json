@@ -1,0 +1,99 @@
+{
+  "spell": "vestige:spellstone_astral_finishes",
+  "phase": 0,
+  "label": "Stone Brick, Tuff and Quartz Spellstones",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": 156.0375,
+    "pitch": 14.242943,
+    "eye": [
+      2.5,
+      66.5,
+      5.0
+    ],
+    "fixed": true
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "59b7e1e35d2dd9e309ac8de6012519efd5d56e3fd8f76bcfbe94a191ad07d1b7",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+    "models/block/tuff_spellstone.json": "b094a3dbdc1eba54de916e7428494e666f13a1ef28ba6074610369b09d917cf4",
+    "models/block/quartz_spellstone.json": "58f0f634459303ee581ffe63652d45d1be0be5e308aa3822aa2990e10af2bdab"
+  },
+  "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+  "seconds": 4.06753625,
+  "times": [
+    0.107771333,
+    0.205703042,
+    0.290159625,
+    0.379278708,
+    0.475324542,
+    0.558427792,
+    0.653461083,
+    0.75001025,
+    0.954537667,
+    1.049305542,
+    1.221549208,
+    1.303436292,
+    1.466626083,
+    1.559394667,
+    1.715661417,
+    1.809161167,
+    1.959373625,
+    2.037551333,
+    2.185921625,
+    2.255925125,
+    2.338663833,
+    2.478914875,
+    2.558143958,
+    2.640466042,
+    2.790416292,
+    2.926518208,
+    3.006286333,
+    3.153167,
+    3.285881208,
+    3.361089833,
+    3.441395667,
+    3.586033875,
+    3.666888917,
+    3.75008075,
+    3.9076845,
+    3.990174833
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    },
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:tuff_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    },
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:tuff_spellstone",
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": "vestige:quartz_spellstone",
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Production Spellstone: two thicker inward-leaning supports and one thicker flat tabletop, four flush faceted Diamond corner chips and the lowered native Astral Seal. Left to right: Stone Bricks, Tuff, Quartz. No resource-pack override."
+}

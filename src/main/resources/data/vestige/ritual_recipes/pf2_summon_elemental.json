@@ -1,0 +1,93 @@
+{
+  "spell": "vestige:pf2_summon_elemental",
+  "name": "Summon Elemental",
+  "circle": 8,
+  "color": "bc9977",
+  "rationale": "Stone, Blaze, Kelp and a feather encode the four elemental bodies; Amethyst and a seal bind their finite manifestation.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 3,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 6,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold stone motif, kelp motif, resonant facet; the other required ingredients use Inner Plinths.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Stone motif follows blank inscription clockwise.",
+    "Flame focus follows stone motif clockwise.",
+    "Kelp motif follows flame focus clockwise.",
+    "Feather motif follows kelp motif clockwise.",
+    "Resonant facet follows feather motif clockwise.",
+    "Protection seal follows resonant facet clockwise.",
+    "Blank inscription follows protection seal clockwise, across an unused outer Plinth."
+  ]
+}

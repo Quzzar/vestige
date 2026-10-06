@@ -16,6 +16,9 @@ public final class SpellCapabilities {
         spell.modes().values().forEach(mode -> collect(mode.effects(), result));
         return Set.copyOf(result);
     }
+    public static Set<ResourceLocation> ofPlan(List<SpellEffect> effects) {
+        Set<ResourceLocation> result=new HashSet<>();collect(effects,result);return Set.copyOf(result);
+    }
     private static void collect(List<SpellEffect> effects, Set<ResourceLocation> result) {
         for (SpellEffect effect : effects) {
             if (!(effect instanceof SpellEffects plan)) continue;
@@ -31,6 +34,8 @@ public final class SpellCapabilities {
                 case SpellEffects.Branch branch -> { collect(branch.whenTrue(), result); collect(branch.whenFalse(), result); }
                 case SpellEffects.ForEach each -> collect(each.effects(), result);
                 case SpellEffects.Repeat repeat -> collect(repeat.effects(), result);
+                case SpellEffects.Secondary secondary -> collect(secondary.effects(), result);
+                case SpellEffects.Limited limited -> collect(limited.effects(), result);
                 case SpellEffects.InstallBinding binding -> collect(binding.binding().effects(), result);
                 case SpellEffects.CreateManifestation manifestation -> {
                     String kind = manifestation.manifestation().kind().toString();

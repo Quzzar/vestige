@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-06",
+  "jar": "/Users/quzzar/Projects/vestige/build/spellstone-category-name/vestige-0.1.0.jar",
+  "sha256": "1472401a1a683a99711a6dd10f434dc97bc61f54c125d0259786b07630549dbc",
+  "zipIntegrity": true,
+  "jeiTitle": "Spellstone",
+  "emiTitle": "Spellstone",
+  "unitTests": 104,
+  "unitFailures": 0,
+  "nativeJeiCapture": "jei/6-crafted_fireball.png",
+  "scope": "Both translation keys renamed; JEI title visually inspected in Minecraft. No rarity color implementation is included.",
+  "worldTests": "Resource-only category rename; world tests not repeated. Earlier scroll knowledge suite passed all 187 required tests.",
+  "installedIntoPrism": false
+}

@@ -1,0 +1,47 @@
+{
+  "jarSha256": "458f68ccc57fe119fa8129181fb8b9f857bf2eb2bd37d6d3befa7f2cca303b01",
+  "assetSha256": {
+    "assets/vestige/textures/item/scroll_fragment.png": "202d101b2f8e0f90d335473b4b1c7568e86457f102e9127d5b25146c592b0ce0",
+    "assets/vestige/models/item/scroll_fragment.json": "636181cc7432e890a7d77bf20b865303ce34d8eb2d3ffdc57699ca1409ef1839",
+    "assets/vestige/fragment_symbols.json": "5f1d47d22eeb1aa211f583f4039df7112dfe89b86f0703907906746c577d7675",
+    "assets/vestige/font/fragment_symbols.json": "036573c5fe56f87c0dd8b46453971e854dd39a38792584f0bbf780cd72411c3c",
+    "assets/vestige/textures/font/fragment_symbols.png": "8064660abe2c435a3632c6955bf82d01849d57419c05fefb98609c676f623622"
+  },
+  "classSha256": {
+    "com/quzzar/vestige/apparatus/FragmentSymbols.class": "4d119d539a8f6b14f6b590224c28e4671291d53805b024000830eccc30ed5d3e",
+    "com/quzzar/vestige/apparatus/ScrollFragmentItem.class": "c851ae28201328dfbcf4c265b216b9083f1c95ae0dcdc8b4b94b6d2f5647f237",
+    "com/quzzar/vestige/apparatus/client/NativeFragmentCapture.class": "9907b26454f48b0dca6f5b103770386043d08f292cfbcd0592365ec655f73b00",
+    "com/quzzar/vestige/apparatus/client/NativeFragmentCapture$FragmentScreen.class": "cb90ce0aef430e2b9d895b01df5d1a57741f20e108cbc40fa3b4c4179b8a99c7"
+  },
+  "symbolCount": 52,
+  "focusedJUnit": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeInspection": {
+    "image": "native.png",
+    "imageSha256": "920ed9df41341ee2f905769323d69d62d60500e8ab1a0325ec03ee9f85c4cf0c",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "visuallyInspected": true,
+    "allLoadedAssetsMatchJar": true,
+    "unknownFallback": "Scroll Fragment: addon:fire"
+  },
+  "checks": [
+    "Java 21 build",
+    "verifyKithkynCompatibility",
+    "two focused FragmentSymbolsTest tests",
+    "author_fragment_symbols.py --check",
+    "prepare_scroll_fragment_texture.py --check",
+    "actual Minecraft framebuffer visually inspected"
+  ],
+  "limitations": [
+    "Broader unit/world suites not rerun to completion for this presentation-only change",
+    "No Prism installation"
+  ],
+  "artifact": "run/scroll-fragments-package/vestige-0.1.0.jar"
+}

@@ -1,0 +1,72 @@
+{
+  "spell": "vestige:fire_breath",
+  "name": "Fire Breath",
+  "circle": 8,
+  "color": "ff9d42",
+  "rationale": "Blaze and a feather describe fiery breath, with Fire Charge and Emerald directing the sustained cone.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold flame focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Flame focus follows blank inscription clockwise.",
+    "Feather motif follows flame focus clockwise.",
+    "Firecharge motif follows feather motif clockwise, across an unused outer Plinth.",
+    "Evocation focus follows firecharge motif clockwise, across an unused outer Plinth.",
+    "Blank inscription follows evocation focus clockwise, across an unused outer Plinth."
+  ]
+}

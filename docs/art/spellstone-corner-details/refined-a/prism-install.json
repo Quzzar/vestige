@@ -1,0 +1,18 @@
+{
+  "installedAtUtc": "2026-10-06T16:47:15.997387+00:00",
+  "instance": "Kithkyn Testing",
+  "source": "/Users/quzzar/Projects/vestige/build/spellstone-a-final-package/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "9d4066c066b7e7806dcdef72f6dcf46070544886831f87c5f81a4df7093da4d8",
+  "previousSha256": "45e3e82d73de35595e41f826cffe4fdaa1f6a717dde47c73c64f99bfd8ae096c",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-spellstone-a-final-45e3e82d73de.jar",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "method": "Atomic replacement with verified backup",
+  "changes": "Current shared source including all four apparatus refinements, current Standing Stone art and current ritual recipe-viewer classes/assets",
+  "manualReview": "Fresh refined creative review remains open with matching apparatus classes and assets; Prism requires restart",
+  "reason": "Another workspace task installed an older apparatus jar after the initial refined install; this final build combines the current shared changes"
+}

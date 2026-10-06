@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:poison_arrow",
+  "name": "Poison Arrow",
+  "circle": 4,
+  "color": "8bac29",
+  "rationale": "A harmful eye feeds an Arrow directed by Emerald into its poisonous impact cloud.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "arrow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:arrow"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Poison motif follows blank inscription clockwise.",
+    "Arrow motif follows poison motif clockwise.",
+    "Evocation focus follows arrow motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

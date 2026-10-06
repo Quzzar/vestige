@@ -1,0 +1,26 @@
+{
+  "design": "A: Hollow conch",
+  "status": "Native pixel draft for menu review; no gameplay item registered",
+  "palette": {
+    "D": "#1c1e2c", "N": "#0f121b", "S": "#313148", "P": "#494662",
+    "M": "#686584", "H": "#9290ac", "T": "#155a64", "C": "#5bcacd"
+  },
+  "rows": [
+    "................",
+    "....D...........",
+    "....DHD.........",
+    ".....DHM........",
+    ".....DSPD.......",
+    "......DHMD......",
+    "......DPMD......",
+    ".....DHMPDD.....",
+    "....DHPPDHMD....",
+    "...DMPDDHNNHD...",
+    "...DPPDHNNNNHD..",
+    "....DPSHTCNNHD..",
+    ".....DPSHNCNHD..",
+    "......DPSHNHMD..",
+    ".......DPMHMD...",
+    ".........DDD...."
+  ]
+}

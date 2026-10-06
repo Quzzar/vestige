@@ -1,0 +1,253 @@
+{
+  "status": "review drafts; no production item texture selected",
+  "minecraft": "1.21.1",
+  "authorship": "independently authored explicit pixel grids; no generated image downsampling",
+  "vanillaHashes": {
+    "paper": "8ffee002bbc339552eb4d6be5948eb4eb66d016c19e7bbc55bc1cd4a575cc44a",
+    "map": "22e0f1856b995aa6a3f71525bba330ec31e739506d5565f52c05a0c60f93db42",
+    "book": "e9f710d62e16776df7e5bf05dcaa187d40cc1428f4fd18644e3ff67062f9fff2",
+    "bone": "f5f2a37e7466f2983c00550874a2a94d2d006eae52b0e73acb722fadeb9bdb3b",
+    "name_tag": "320018673e5a4ed4246aa0599439a97c91df74dcb966d904e83b3589f496b0d9",
+    "amethyst_shard": "24fa75f6b75202d890019ec7a901d525918cfacd3e8c0e6cb0580c7b7933b363",
+    "echo_shard": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "prismarine_shard": "592fae36549fcc7cd28e49f9670cb8831265eccb4131d9a1cc13a8f06a306f60",
+    "lapis_lazuli": "261b626e66fc29d6a28990ac36c74a04afa2e1d03daff00c5f3b3e5a79463a14",
+    "diamond": "b27b081fde6a794dfb52d37f4ab2a86931ce127323f786a27cea41d2dbe913a2"
+  },
+  "studies": {
+    "scroll_clean": {
+      "label": "R1 \u00b7 Clean Roll",
+      "kind": "scroll",
+      "palette": {
+        "X": "#878787",
+        "S": "#aeaeae",
+        "M": "#d6d6d6",
+        "H": "#e9eaeb",
+        "I": "#fcfcf2",
+        "P": "#6f4fab",
+        "L": "#b38ef3",
+        "D": "#54398a"
+      },
+      "rows": [
+        "................",
+        "..........XXXX..",
+        ".........XIIIHX.",
+        ".........XISXSX.",
+        "........XIIHMSX.",
+        ".......XIIHMSX..",
+        "......XIIHMSX...",
+        ".....XIPLDSX....",
+        "....XIPLDSX.....",
+        "...XIIHMSX......",
+        "..XIIHMSX.......",
+        ".XIIHMSX........",
+        ".XISXSX.........",
+        "..XMISX.........",
+        "...XXX..........",
+        "................"
+      ],
+      "colors": 8,
+      "sha256": "54406e8d3e834de452bac3a07780f347b4b8db52177b782a4089d7ae16bf1729",
+      "dimensions": [
+        16,
+        16
+      ]
+    },
+    "scroll_aged": {
+      "label": "R2 \u00b7 Parchment Roll",
+      "kind": "scroll",
+      "palette": {
+        "X": "#5c4417",
+        "S": "#ceac6d",
+        "M": "#e6c78c",
+        "H": "#e8e5d2",
+        "I": "#fcfbed",
+        "P": "#6f4fab",
+        "L": "#b38ef3",
+        "D": "#54398a"
+      },
+      "rows": [
+        "................",
+        "..........XXXX..",
+        ".........XIIIHX.",
+        ".........XISXSX.",
+        "........XIIHMSX.",
+        ".......XIIHMSX..",
+        "......XIPDMSX...",
+        ".....XILPMSX....",
+        "....XIIDPSX.....",
+        "...XIIHMSX......",
+        "..XIIHMSX.......",
+        ".XIIHMSX........",
+        ".XISXSX.........",
+        "..XMISX.........",
+        "...XXX..........",
+        "................"
+      ],
+      "colors": 8,
+      "sha256": "4298ad053ff5fc7eaaca0ac12497ce96d0804af6d3b16c5924653b8187796f1d",
+      "dimensions": [
+        16,
+        16
+      ]
+    },
+    "scroll_inscribed": {
+      "label": "R3 \u00b7 Inscribed Roll",
+      "kind": "scroll",
+      "palette": {
+        "X": "#878787",
+        "S": "#aeaeae",
+        "M": "#d6d6d6",
+        "H": "#e9eaeb",
+        "I": "#fcfcf2",
+        "P": "#6f4fab",
+        "L": "#b38ef3",
+        "D": "#54398a"
+      },
+      "rows": [
+        "................",
+        "............XX..",
+        "..........XXIIX.",
+        ".........XIIIHX.",
+        "........XIIISIX.",
+        "......XIIHMSX...",
+        ".....XIIHMSX....",
+        "....XIIPLMSX....",
+        "...XIIIPMSX.....",
+        "..XIIIPMSX......",
+        ".XIIHMSXX.......",
+        ".XIHMSX.........",
+        ".XISXSX.........",
+        "..XMISX.........",
+        "...XXX..........",
+        "................"
+      ],
+      "colors": 7,
+      "sha256": "5c4801f82c2b66132f0d1a1d797afdeb7bbe8311b885eb61c48bb74558965e1e",
+      "dimensions": [
+        16,
+        16
+      ]
+    },
+    "shard_bound": {
+      "label": "S1 \u00b7 Bound Shard",
+      "kind": "shard",
+      "palette": {
+        "D": "#54398a",
+        "P": "#6f4fab",
+        "M": "#8d6acc",
+        "L": "#b38ef3",
+        "H": "#cfa0f3",
+        "I": "#fecbe6",
+        "E": "#052a32",
+        "B": "#034150",
+        "T": "#0a5060",
+        "C": "#009295"
+      },
+      "rows": [
+        "................",
+        "...........D....",
+        "..........DID...",
+        ".........DIHMD..",
+        "........DIHMPD..",
+        ".......DLHMPPD..",
+        "......DLHMEPD...",
+        ".....DLHMBEPD...",
+        "....DLHMBEPD....",
+        "...DLMBBEPD.....",
+        "..DPMBTEPD......",
+        "..DMBTEPD.......",
+        "..DBTEPD........",
+        "..DEEPD.........",
+        "...DD...........",
+        "................"
+      ],
+      "colors": 9,
+      "sha256": "4531b32bb4e6f8a4f7b01cf09e811e49a0438e29609a1bc24551c18694805343",
+      "dimensions": [
+        16,
+        16
+      ]
+    },
+    "shard_paired": {
+      "label": "S2 \u00b7 Paired Shard",
+      "kind": "shard",
+      "palette": {
+        "D": "#54398a",
+        "P": "#6f4fab",
+        "M": "#8d6acc",
+        "L": "#b38ef3",
+        "H": "#cfa0f3",
+        "I": "#fecbe6",
+        "E": "#052a32",
+        "B": "#034150",
+        "T": "#0a5060",
+        "C": "#009295"
+      },
+      "rows": [
+        "................",
+        "......D.........",
+        ".....DID........",
+        ".....DHLDD......",
+        "....DLHMPD..D...",
+        "....DLMMPD.DID..",
+        "....DLMPPD.DHLD.",
+        ".....DMPPD.LMPD.",
+        ".....DMPPDLMPD..",
+        ".....DMPDLMMPD..",
+        ".....DBTBDMPD...",
+        ".....EBBTBEPD...",
+        "......EBTEE.....",
+        ".......EEE......",
+        "................",
+        "................"
+      ],
+      "colors": 9,
+      "sha256": "0bf7ce7b3433864cc0cdb115c4f9a5496e42a3537467d73968dbc3f7eb1fb3c6",
+      "dimensions": [
+        16,
+        16
+      ]
+    },
+    "shard_inscribed": {
+      "label": "S3 \u00b7 Etched Shard",
+      "kind": "shard",
+      "palette": {
+        "D": "#54398a",
+        "P": "#6f4fab",
+        "M": "#8d6acc",
+        "L": "#b38ef3",
+        "H": "#cfa0f3",
+        "I": "#fecbe6",
+        "E": "#052a32",
+        "B": "#034150",
+        "T": "#0a5060",
+        "C": "#009295"
+      },
+      "rows": [
+        "................",
+        ".........D......",
+        "........DID.....",
+        ".......DIHMD....",
+        "......DLHMMPD...",
+        ".....EDMMLPPD...",
+        ".....EBMLMLPD...",
+        "....EBTMMLPPD...",
+        "....EBTMPLPD....",
+        "....EBTMPLPD....",
+        "....EBTMPPD.....",
+        ".....EEMPD......",
+        ".....EEPD.......",
+        "......DD........",
+        "................",
+        "................"
+      ],
+      "colors": 9,
+      "sha256": "4334cc8030ac86d86c54cc82d494762b20b71ee753679f23b7f85c8ce41a90fa",
+      "dimensions": [
+        16,
+        16
+      ]
+    }
+  }
+}

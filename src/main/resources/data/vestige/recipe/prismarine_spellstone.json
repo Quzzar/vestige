@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_spellstone",
+  "pattern": [
+    "DSD",
+    "BAB",
+    "BBB"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "A": {
+      "item": "minecraft:amethyst_block"
+    },
+    "B": {
+      "item": "minecraft:prismarine"
+    },
+    "S": {
+      "item": "minecraft:prismarine_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:prismarine_spellstone",
+    "count": 1
+  }
+}

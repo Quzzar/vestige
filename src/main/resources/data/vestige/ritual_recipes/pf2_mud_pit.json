@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_mud_pit",
+  "name": "Mud Pit",
+  "circle": 4,
+  "color": "af8057",
+  "rationale": "Clay meets water-bearing Kelp and Slime in reversed order for a sticky slowing patch.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "clay motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clay_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Kelp motif follows slime motif clockwise.",
+    "Clay motif follows kelp motif clockwise.",
+    "Blank inscription follows clay motif clockwise."
+  ]
+}

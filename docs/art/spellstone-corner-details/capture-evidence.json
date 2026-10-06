@@ -1,0 +1,318 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "e117ba9f87cfd4a956ffeef9bba9a6f278fec3588a13af5880231c9e55f8f0aa",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "corner_blackstone",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_blackstone-apparatus-0/capture.json",
+      "posterFrame": 32,
+      "posterSha256": "6dac8539fddeedafa949581f6677e6f6129579e634559335d2b8420c794e6323",
+      "videoSha256": "0ad826f70be7496fb466003659f76e585c877038d4faedd325ebaa05a21a05b4",
+      "nativeFrames": 41,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_chip",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_chip-apparatus-0/capture.json",
+      "posterFrame": 27,
+      "posterSha256": "c11a980dad48215cbad7e30de7c0ab41d1999b8b627ad55845ef3d05538216de",
+      "videoSha256": "2e9af3117bea81ddd6d0f15f36fd963796c8b9f02b3afe0456c06526c20a05b1",
+      "nativeFrames": 34,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_crust",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_crust-apparatus-0/capture.json",
+      "posterFrame": 33,
+      "posterSha256": "0ffeabb0b6355b83e1dac59eb1c5a748fd0f7753d2f196e47dedacb1fac4c7db",
+      "videoSha256": "3e3955edd85f6e15558114a8a995073da1455d287d4bbbc2f44661f222aa4171",
+      "nativeFrames": 41,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_notch",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_notch-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "83e0d00bdc4120892eeb1a353fdbcf142163407c2b4cfc05a775f177fcd88294",
+      "videoSha256": "0ddaf5382517e53ed9e5fdf70431e8bf478293e308bd2eb2e00484ba12541edb",
+      "nativeFrames": 39,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_quartz",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_quartz-apparatus-0/capture.json",
+      "posterFrame": 29,
+      "posterSha256": "b459e72e80bf838156a4721a2bf6b54cf55bebb3b47f7f12d9719c3b72b9b1fc",
+      "videoSha256": "1a5e481bb61ba5972bb0c5fc0311e0397bc61883d391eb47c839f15a479d4ec9",
+      "nativeFrames": 38,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_sandstone",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_sandstone-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "cc752f6b991becd32dac78351bef42e4c34603153f5b415e4e6431f47e3cb828",
+      "videoSha256": "293829ccef2397a0e0af1b0c4257790a98c4aafd5bc76527490a1d5dc54a3a6e",
+      "nativeFrames": 37,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    },
+    {
+      "name": "corner_vein",
+      "capture": "build/spellstone-corner-details-fresh/vestige-corner_vein-apparatus-0/capture.json",
+      "posterFrame": 33,
+      "posterSha256": "c7d0293518c3555cd58c10adfdc223813ce15991c7f3ef664a613479e02a70a0",
+      "videoSha256": "b26fd0b0a613e7a662c39a8edb685e3e51b011508274be27284bfa72dabebf09",
+      "nativeFrames": 41,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.22,
+          65.92,
+          1.46
+        ],
+        "pitch": 27.32389,
+        "yaw": 143.1301,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+      "assetSha256": {
+        "models/block/spellstone.json": "f9d59e37e70920d1b457244b87c00d338c8f9f27f08d8cf14475f1848e56fb28",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "78e98d566e85ba783d1f4aacaea7859172f0b80efadf1b35acf6e50bd59aa2a5",
+        "models/block/quartz_spellstone.json": "43fb833eb85d8407211f0488ebce50c7136b31a98d0f06a023abe52383797edb",
+        "models/block/sandstone_spellstone.json": "7ab06f736ef5510632647b62e4257d08c8a5490396e4963f1f7bbe0a95455bf4",
+        "models/block/polished_blackstone_spellstone.json": "9453b599439ee2b6bce4a14a203eddb500c39708b994370188673eb4b9ba62ab",
+        "models/block/smooth_quartz_spellstone.json": "ee724ac37d968a79653181e4cab37ac96fb7fd8f0c781e242e28fd71d3d80531",
+        "models/block/smooth_sandstone_spellstone.json": "4535f7b81670a4f13ec11c094353bafcb188868868ee56000e1dfb672edac29e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_silence",
+  "name": "Silence",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "A Note Block's sound is smothered by Wool behind a protection seal.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "note motif",
+      "ingredient": {
+        "items": [
+          "minecraft:note_block"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "wool motif",
+      "ingredient": {
+        "items": [
+          "minecraft:white_wool"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Protection seal follows blank inscription clockwise.",
+    "Wool motif follows protection seal clockwise.",
+    "Note motif follows wool motif clockwise.",
+    "Blank inscription follows note motif clockwise."
+  ]
+}

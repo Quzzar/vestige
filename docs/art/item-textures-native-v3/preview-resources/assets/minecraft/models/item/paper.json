@@ -1,0 +1,116 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/paper"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 261100
+      },
+      "model": "vestige:item/eye_a_flint_inset"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261101
+      },
+      "model": "vestige:item/eye_b_split_flake"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261102
+      },
+      "model": "vestige:item/eye_c_long_chip"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261103
+      },
+      "model": "vestige:item/eye_d_knapped_core"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261104
+      },
+      "model": "vestige:item/shell_a_old_ridges"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261105
+      },
+      "model": "vestige:item/shell_b_broken_ribs"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261106
+      },
+      "model": "vestige:item/shell_c_slate_coils"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261107
+      },
+      "model": "vestige:item/shell_d_shadow_lip"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261108
+      },
+      "model": "vestige:item/previous_eye"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261109
+      },
+      "model": "vestige:item/previous_shell"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261110
+      },
+      "model": "vestige:item/smooth_eye_a_soft_flint"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261111
+      },
+      "model": "vestige:item/smooth_eye_b_dark_pebble"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261112
+      },
+      "model": "vestige:item/smooth_eye_c_chipped_face"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261113
+      },
+      "model": "vestige:item/smooth_eye_d_simple_talisman"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261114
+      },
+      "model": "vestige:item/smooth_shell_a_soft_ash"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261115
+      },
+      "model": "vestige:item/smooth_shell_b_compact_conch"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261116
+      },
+      "model": "vestige:item/smooth_shell_c_slate"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 261117
+      },
+      "model": "vestige:item/smooth_shell_d_deep_dusk"
+    }
+  ]
+}

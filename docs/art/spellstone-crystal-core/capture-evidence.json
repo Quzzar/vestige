@@ -1,0 +1,118 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "ef04ce63666ee84b9b4423f848a34b9cabe3606bbb387d94da69452e6f10a884",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "crystal_night",
+      "capture": "build/spellstone-crystal-edges/vestige-crystal_night-apparatus-0/capture.json",
+      "posterFrame": 28,
+      "posterSha256": "e0a0f8277173d8cfc164870868e1e52c2a5d8468e682b74f7f2328c6ec3b57ac",
+      "videoSha256": "661cc874aecb10f6d36f45bbc09fce719d5b63bf86a09406c0d60577502b8252",
+      "nativeFrames": 60,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "midnight",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/amethyst_block.png": "03c7a9fbacf1cb89fe1265e2ef79cf39df6089c416a626b144bca448b2cd276e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "11609ab6899d4e49c3c073896d01b05c17b56b9373be195c003a118fad03e94b",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "crystal_side",
+      "capture": "build/spellstone-crystal-edges/vestige-crystal_side-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "ec504f3c27c4dab7cb515993f02c5eadb3cbf635c4eb267095dfeb7fb28b3c83",
+      "videoSha256": "ae58191cde7c11d8516c026931be070eb742e53a0ff313b1d431fb123f1a1db5",
+      "nativeFrames": 61,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.5,
+          65.65,
+          1.9
+        ],
+        "pitch": 13.088476,
+        "yaw": 144.46233,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/amethyst_block.png": "03c7a9fbacf1cb89fe1265e2ef79cf39df6089c416a626b144bca448b2cd276e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "11609ab6899d4e49c3c073896d01b05c17b56b9373be195c003a118fad03e94b",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    },
+    {
+      "name": "crystal_stone",
+      "capture": "build/spellstone-crystal-edges/vestige-crystal_stone-apparatus-0/capture.json",
+      "posterFrame": 26,
+      "posterSha256": "44d2e31d7589e25279f5439f8c0e1d774bb35743376ff9d641407639d40573e7",
+      "videoSha256": "c95e5e5fb6abd5ff743bcafb2d1eddf65e1c8404f38f57237f2b1a83977e9ef5",
+      "nativeFrames": 59,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/amethyst_block.png": "03c7a9fbacf1cb89fe1265e2ef79cf39df6089c416a626b144bca448b2cd276e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "11609ab6899d4e49c3c073896d01b05c17b56b9373be195c003a118fad03e94b",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+      }
+    }
+  ]
+}

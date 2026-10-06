@@ -1,0 +1,16 @@
+> Task :createArtifactManifest UP-TO-DATE
+> Task :verifyKithkynCompatibility
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :buildKithkyn UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :prepareGameTestServerRun
+> Task :processResources
+> Task :classes
+> Task :runGameTestServer
+[14:15:49] [Server thread/INFO] [minecraft/GameTestServer]: ========= 72 GAME TESTS COMPLETE IN 15.31 s ======================
+[14:15:49] [Server thread/INFO] [minecraft/GameTestServer]: All 72 required tests passed :)
+BUILD SUCCESSFUL in 36s
+11 actionable tasks: 4 executed, 7 up-to-date

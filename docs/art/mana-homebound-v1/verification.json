@@ -1,0 +1,26 @@
+{
+  "unit": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldTests": 186,
+  "worldFailures": 0,
+  "nativeClientCapture": "success; all six original frames visually inspected",
+  "jar": "/Users/quzzar/Projects/vestige/build/verified-homebound-eye/vestige-0.1.0.jar",
+  "jarSha256": "e64ed22f6fb669aa2007b223892f42b7c628cfce77cc40d40e3ba6ab9db34998",
+  "packagedAssets": {
+    "assets/vestige/models/item/homebound_eye.json": "8fc7d212c11406603c7b5117c499dbc54095277b31712b484c83cce70af0145a",
+    "assets/vestige/textures/item/homebound_eye.png": "68f47e276a80d9d34973b89b7074ec2d7523cbfdd6bfce1332ae6779a8dd1e9c"
+  },
+  "classParity": "NativeMana, ManaPayload, ManaHud, HomeboundEyeItem, HomeboundEyeRecipe, NearbyTeleport, StoneTravel, PlayerExperience agree with compiled output",
+  "imageSha256": {
+    "full-first-spawn.png": "b6fee1d6b3a3a6186c9d63efcecebcb1807f89bcde5ea67b35ba3001b5c2fc9c",
+    "empty.png": "e3c59ba197b212613af3ef8e8c27ddc298f2239069da298355efd75ea82def8a",
+    "full-scale-one.png": "9056082a56b78159801002e6dfc077d98d4b9fe859ba3f02f135f80e1f1f34b4",
+    "half.png": "3337e7645d8d6acac7c8a83f4124bba5d4712d972e54cec59c28d44d9d44003c",
+    "half-scale-one.png": "dedda213be799c015d1423ba339cbd8d85d82afa9ec0dd5e4f8a5e6283244271",
+    "recovering.png": "cb2c7475945cab3a59b46647c0d5bb8f3e869dc833e383db8cef9721345e9e7c"
+  }
+}

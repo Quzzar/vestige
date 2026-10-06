@@ -1,0 +1,52 @@
+{
+  "spell": "vestige:apparatus_layout",
+  "phase": 0,
+  "label": "Apparatus item-display review",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "assetSha256": {
+    "models/block/spellstone.json": "19740189363743cf8ce6b2ecf4a650b33545536ea07b04e196723eacf0001843",
+    "models/block/stone_pedestal.json": "14062e295190fa6d3aaed5996d203bf419066750c8cba264bcbd12cb3b826386",
+    "models/block/runic_pedestal.json": "42d5106ca119f237774ac056acd432f806f1397ed4cc3fd643025794265ae973",
+    "textures/block/pedestal_amethyst.png": "c7d69c3708eb3c8bcab7c16b3da5e993fcddaf36bf76f844accc70155ccfe292",
+    "textures/block/diamond_inlay.png": "ef3b076f4a6555eeb9d4f2bd9a3f935b9dfc580c8b0d6bc753202eee51464d08",
+    "textures/block/spellstone_top.png": "99e99eba6c228dc6024e5e39e4af6dde9930e09a9d133cbcc8e38f4e58e0259c",
+    "textures/block/runic_pedestal_top.png": "6d43ffeec2ff8ba438aa8f229f85440a82f3359e5e70a854c53b0b601417fc7b"
+  },
+  "seconds": 2.114799791,
+  "times": [
+    0.037219208,
+    0.107559833,
+    0.18638725,
+    0.262494958,
+    0.335242625,
+    0.412795291,
+    0.5834785,
+    0.756858541,
+    0.8493735,
+    1.006915166,
+    1.1834985,
+    1.35973625,
+    1.537381208,
+    1.609675125,
+    1.790829041,
+    1.947946125
+  ],
+  "blocks": {
+    "BlockPos{x\u003d-3, y\u003d65, z\u003d-3}": "vestige:runic_pedestal",
+    "BlockPos{x\u003d0, y\u003d65, z\u003d2}": "vestige:stone_pedestal",
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": "vestige:stone_pedestal",
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone",
+    "BlockPos{x\u003d-3, y\u003d65, z\u003d3}": "vestige:runic_pedestal",
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": "vestige:stone_pedestal",
+    "BlockPos{x\u003d3, y\u003d65, z\u003d-3}": "vestige:runic_pedestal",
+    "BlockPos{x\u003d0, y\u003d65, z\u003d-2}": "vestige:stone_pedestal",
+    "BlockPos{x\u003d3, y\u003d65, z\u003d3}": "vestige:runic_pedestal"
+  },
+  "scenario": "Visual fixture only: center, four inner and four outer stands; flat and 3D resting items. Structure distances are not a gameplay rule.",
+  "outcome": "PLACED"
+}

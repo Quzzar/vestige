@@ -1,0 +1,15 @@
+{
+  "installed_at_utc": "2026-10-05T16:37:54.842193+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "1fee6f012340f976c91ac8e1cb0138c389da3bc605b1ff29b73f654dda363b56",
+  "destination_sha256": "1fee6f012340f976c91ac8e1cb0138c389da3bc605b1ff29b73f654dda363b56",
+  "previous_sha256": "c8215e2715e27fbff3f390353abff3ee6908725d1656b196fa0d0ee91af1ba75",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-plinth-columns.jar",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "prism_instance": "Kithkyn Testing",
+  "prism_neoforge": "21.1.248",
+  "installed_behavior": "Connected columns; approved standalone geometry; authored imbuement families with color-neutral effects/keys",
+  "simplified_standalone_models": "Capture-only alternatives, not installed",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

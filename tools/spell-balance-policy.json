@@ -574,7 +574,7 @@
       "mana": 10,
       "charge_ticks": 0,
       "cooldown_ticks": 400,
-      "review": "Three food conversions in ten seconds at 6 mana per nutrition; food and hunger gates, 200 mana cap."
+      "review": "Three food conversions in ten seconds at 6 mana per nutrition; food and hunger gates, 100 mana cap."
     },
     "gravity_fissure": {
       "role": "moving field",

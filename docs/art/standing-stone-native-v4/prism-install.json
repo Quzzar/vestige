@@ -1,0 +1,27 @@
+{
+  "installedAtUtc": "2026-10-06T18:57:05.641136+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/standing-family-review/vestige-0.1.0.jar",
+  "sourceSha256": "aa341bc7cb7b70fc3629d4ac2fcfd2b2557992772fa71a797e7c2cccdfa68dbb",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "aa341bc7cb7b70fc3629d4ac2fcfd2b2557992772fa71a797e7c2cccdfa68dbb",
+  "previousSha256": "c62bf52ada44aa96829dbe2a76dec7edafca249ef715d90991582927a6c8b168",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/standing-family-20261006T185705571723Z/vestige-0.1.0.jar",
+  "backupSha256": "c62bf52ada44aa96829dbe2a76dec7edafca249ef715d90991582927a6c8b168",
+  "forms": 16,
+  "masonryFinishes": 36,
+  "nativeMinecraft": "1.21.1",
+  "nativeNeoForge": "21.1.72",
+  "prismMinecraft": "1.21.1",
+  "prismNeoForge": "21.1.248",
+  "unitTests": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "selectedWorldTests": 12,
+  "gameRestarted": false,
+  "prismProfileLaunched": false,
+  "otherModsChanged": false,
+  "playerWorldsChanged": false
+}

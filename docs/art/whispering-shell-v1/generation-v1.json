@@ -1,0 +1,19 @@
+{
+  "status": "First generated concept; not approved, not a native 16x16 sprite, not packaged",
+  "generation_mode": "Built-in image_gen",
+  "generated_source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-bebe27f9-1756-4302-8c24-47d6d72db097.png",
+  "project_copy": "/Users/quzzar/Projects/vestige/docs/art/whispering-shell-v1/whispering-shell-concept-v1.png",
+  "sha256": "9a2f4637f11bfba93adb195fa140e6e61ccb2c0dd6da2a092d5388d509eb8a34",
+  "size": [
+    1254,
+    1254
+  ],
+  "source_mode": "RGBA",
+  "alpha_values": 256,
+  "transparent_pixels": 1137472,
+  "partially_transparent_pixels": 433673,
+  "opaque_colors": 414,
+  "unchanged_copy": true,
+  "prompt": "prompt-v1.txt",
+  "inspection": "Readable stepped nautilus silhouette, ivory/peach body, dark spiral and mouth, small copper-mounted violet gem. Generated gradients, subpixel variation, and partial alpha remain; needs exact-grid native authoring before in-game approval."
+}

@@ -1,0 +1,1458 @@
+Starting a Gradle Daemon, 2 busy and 1 incompatible and 7 stopped Daemons could not be reused, use --status for details
+Daemon JVM discovery is an incubating feature.
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed.
+> Task :generateModMetadata UP-TO-DATE
+> Task :createArtifactManifest UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources
+> Task :jarJar NO-SOURCE
+> Task :sourcesJar
+> Task :downloadAssets UP-TO-DATE
+> Task :writeNeoForgeTestClasspath UP-TO-DATE
+> Task :prepareNeoForgeTestFiles UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :verifyKithkynCompatibility
+> Task :buildKithkyn UP-TO-DATE
+> Task :prepareEffectsCapture
+> Task :writeEffectsCaptureLegacyClasspath UP-TO-DATE
+> Task :prepareEffectsCaptureRun UP-TO-DATE
+> Task :compileJava
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                        ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                                                                         ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:91: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:238: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:256: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:276: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 warnings
+
+> Task :classes
+> Task :jar
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :javadoc
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for type
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for actor
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for target
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for pending
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for cause
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for facts
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for castingCost
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for roundAmounts
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for adjustment
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for kind
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for durationTicks
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for values
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for identifiers
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for bindings
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onHit
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onTick
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onEnd
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for interval
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for visual
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:82: warning: no @param for timeoutTicks
+    record AwaitRecast(int timeoutTicks) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:73: warning: no @param for key
+    record CaptureValue(ResourceLocation key, SpellValue value) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:73: warning: no @param for value
+    record CaptureValue(ResourceLocation key, SpellValue value) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:56: warning: no @param for visual
+    record Visual(SpellVisual visual) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for group
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for perTarget
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for total
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for effects
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:41: warning: no @param for effects
+    record Secondary(List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for count
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for interval
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for effects
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:31: warning: no @param for ticks
+    record Delay(int ticks) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellDefinition.java:21: warning: no @param for modes
+public record SpellDefinition(
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellDefinition.java:21: warning: no @param for source
+public record SpellDefinition(
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for selection
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for distance
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for required
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for options
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for relationship
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellCost.java:12: warning: no @param for ticks
+    record Cooldown(int ticks) implements SpellCost {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for spell
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for school
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for revision
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for displayName
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for castType
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for cooldownTicks
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for reference
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for system
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for edition
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for publication
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for rank
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for cantrip
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for rarity
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for url
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for id
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for costs
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for effects
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:25: warning: no @param for path
+    record Fact(ResourceLocation path) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for value
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for minimum
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for maximum
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for lease
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for dimension
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for kind
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for entityId
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for entity
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for center
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for radius
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for duration
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for stop
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for id
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for dimension
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for visual
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for points
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for seed
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for elapsed
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for follow
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for stop
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for burst
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for duration
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for radius
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for height
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for layers
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for endsWithBindings
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for sound
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/AttunementMark.java:12: warning: no @param for runes
+public record AttunementMark(List<Rune> runes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for spell
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for name
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for circle
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for color
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for parts
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for clues
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualInputs.java:9: warning: no @param for geometry
+public record RitualInputs(LeylineShaping.Geometry geometry, List<Node> nodes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualInputs.java:9: warning: no @param for nodes
+public record RitualInputs(LeylineShaping.Geometry geometry, List<Node> nodes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for page
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for last
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for refresh
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for entries
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/ApparatusBlock.java:100: warning: no @param for state
+    public static boolean exposed(BlockState state) {
+                          ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/ApparatusBlock.java:100: warning: no @return
+    public static boolean exposed(BlockState state) {
+                          ^
+
+> Task :test
+
+> Task :javadoc
+100 warnings
+
+> Task :javadocJar UP-TO-DATE
+> Task :assemble
+
+> Task :runEffectsCapture
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[15:08:31] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.1.72, --assetIndex, 17, --assetsDir, /Users/quzzar/.gradle/caches/neoformruntime/assets, --gameDir, ., --fml.neoForgeVersion, 21.1.72, --fml.fmlVersion, 4.0.29, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --width, 960, --height, 540]
+[15:08:31] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS
+[15:08:31] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.12.1 by Eclipse Adoptium; OS Mac OS X arch aarch64 version 27.0
+[15:08:31] [main/DEBUG] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Found launch services [minecraft,forgeclient,forgedatauserdev,testharness,forgeserverdev,forgeserveruserdev,forgejunitdev,forgeclientdev,forgeclientuserdev,forgeserver,forgejunituserdev,forgedatadev]
+[15:08:31] [main/DEBUG] [cp.mo.mo.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,slf4jfixer,runtime_enum_extender,accesstransformer,runtimedistcleaner]
+[15:08:31] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path GAMEDIR is /private/tmp/vestige-scroll-rarity-emi
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path MODSDIR is /private/tmp/vestige-scroll-rarity-emi/mods
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is /private/tmp/vestige-scroll-rarity-emi/config
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is /private/tmp/vestige-scroll-rarity-emi/config/fml.toml
+[15:08:31] [main/WARN] [ne.ne.fm.lo.FMLConfig/CORE]: Configuration file /private/tmp/vestige-scroll-rarity-emi/config/fml.toml is not correct. Correcting
+[15:08:31] [main/INFO] [ne.ne.fm.lo.FMLConfig/CORE]: Incorrect key [disableConfigWatcher] was corrected from null to false
+[15:08:31] [main/INFO] [ne.ne.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[15:08:31] [main/INFO] [ne.ne.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Got mod coordinates vestige%%/private/tmp/vestige-scroll-knowledge-build/classes/java/main:vestige%%/private/tmp/vestige-scroll-knowledge-build/resources/main from env
+[15:08:31] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{vestige=[/private/tmp/vestige-scroll-knowledge-build/classes/java/main, /private/tmp/vestige-scroll-knowledge-build/resources/main]}]
+[15:08:31] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: 
+[15:08:32] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[15:08:33] [main/ERROR] [EARLYDISPLAY/]: WARNING : glfwInit took 1.080983917 seconds to start.
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.5
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.4
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.3
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.2
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.1
+[15:08:33] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.1 got version 4.1
+[15:08:33] [main/DEBUG] [EARLYDISPLAY/]: Suppressing GLFW icon error: [0x1000C]Cocoa: Regular windows do not have icons on macOS
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: FML 4.0.29 loading
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: FML found ModLauncher version : 11.0.4+main.d2e20e43
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: FML found AccessTransformer version : 10.0.1+139da711
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: FML found EventBus version : null
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Received command line version data  : VersionInfo[neoForgeVersion=21.1.72, fmlVersion=4.0.29, mcVersion=1.21.1, neoFormVersion=20240808.144430]
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[15:08:33] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@69b0fd6f
+[15:08:33] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/Users/quzzar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23125!/ Service=ModLauncher Env=CLIENT
+[15:08:33] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[15:08:33] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[15:08:33] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[15:08:33] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[15:08:33] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[15:08:33] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path GAMEDIR is /private/tmp/vestige-scroll-rarity-emi
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path MODSDIR is /private/tmp/vestige-scroll-rarity-emi/mods
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is /private/tmp/vestige-scroll-rarity-emi/config
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is /private/tmp/vestige-scroll-rarity-emi/config/fml.toml
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Loading configuration
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Preparing launch handler
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLLoader/CORE]: Using forgeclientuserdev as launch service
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[15:08:33] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Initiating mod scan
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Got mod coordinates vestige%%/private/tmp/vestige-scroll-knowledge-build/classes/java/main:vestige%%/private/tmp/vestige-scroll-knowledge-build/resources/main from env
+[15:08:33] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{vestige=[/private/tmp/vestige-scroll-knowledge-build/classes/java/main, /private/tmp/vestige-scroll-knowledge-build/resources/main]}]
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 4 implementations of IModFileCandidateLocator:
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.NeoForgeDevProvider from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.locators.ModsFolderLocator from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.locators.MavenDirectoryLocator from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	   -1000 - [built-in] net.neoforged.fml.loading.moddiscovery.locators.UserdevLocator from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 2 implementations of IModFileReader:
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.readers.JarModsDotTomlModFileReader from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	   -1000 - net.neoforged.fml.loading.moddiscovery.readers.NestedLibraryModReader from loader-4.0.29.jar
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 1 implementations of IDependencyLocator:
+[15:08:33] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	       0 - net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator from loader-4.0.29.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-21.1.72-minecraft.jar with {minecraft} mods - versions {1.21.1}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-21.1.72-minecraft.jar with {neoforge} mods - versions {21.1.72}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModListHandler/CORE]: Found mod coordinates from lists: []
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /private/tmp/vestige-scroll-knowledge-build/classes/java/main
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {vestige} mods - versions {0.1.0}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /Users/quzzar/Projects/kithkyn/build/libs/kithkyn-1.0.0.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file kithkyn-1.0.0.jar with {kithkyn} mods - versions {1.0.0}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-21.1.72-minecraft.jar with {neoforge} mods - versions {21.1.72}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /Users/quzzar/.gradle/caches/modules-2/files-2.1/dev.emi/emi-neoforge/1.1.24+1.21.1/3fd494b37027dfbc7f78414d7cbf251c9eb6738a/emi-neoforge-1.1.24+1.21.1.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file emi-neoforge-1.1.24+1.21.1.jar with {emi} mods - versions {1.1.24+1.21.1+neoforge}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/4.0.29/1edc5420c37dde59a5c8b12a842f3ea22cd6139e/earlydisplay-4.0.29.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/4.0.29/d18deaf54bafe631f281d4adb5b905308e0a271e/loader-4.0.29.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/coremods/7.0.3/9147e6f638b4272b3bd5fc8f92ad37802512c6c/coremods-7.0.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/11.0.4/6619d4812a3c092310d521ebc4c9503727563df7/modlauncher-11.0.4.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged.accesstransformers/at-modlauncher/10.0.1/5aba50202aceead086bc09fbc2751c9f05cb4890/at-modlauncher-10.0.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/accesstransformers/10.0.1/fd83b5725f76eae9115e9355fa1c456a6a441400/accesstransformers-10.0.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.4/f67f5ffaa5f5130cf6fb9b133da00c7df3b532a5/nashorn-core-15.4.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/mergetool/2.0.3/1275202cbbb248f49345cf6787ce299afd9a02fb/mergetool-2.0.3-api.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/bus/8.0.2/163c9ef7c4bcca6d850c34e95261b606af91fe06/bus-8.0.2.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/toml/3.8.0/861dbcf2757dd6701c98b3949198549ccb5f62ff/toml-3.8.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/core/3.8.0/2498dd2b3120dd49e963e2feab8fa5d0c5f80e0a/core-3.8.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/JarJarSelector/0.4.1/fb3cc7a58af22ad2880adb98af6d518128c47dae/JarJarSelector-0.4.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.neoforged/JarJarMetadata/0.4.1/f8da03683dc81694556dc3e177c5e3bb77ae6fcb/JarJarMetadata-0.4.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.5/4433f50c07debefaed0553bd0068f4f48d449313/maven-artifact-3.8.5.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.jodah/typetools/0.6.3/a01aaa6ddaea9ec07ec4f209487b7a46a526283a/typetools-0.6.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.minecrell/terminalconsoleappender/1.3.0/b562e9bb61235c9520e26282cdee71f8f802d1fc/terminalconsoleappender-1.3.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.14.0/1ed471194b02f2c6cb734a0cd6f6f107c673afae/commons-lang3-3.14.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/logging/1.2.7/24cb95ffb0e3433fd6e844c04e68009e504ca1c0/logging-1.2.7.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j2-impl/2.22.1/d7e6693c2606cb7e7335047d7bb96dec52db5665/log4j-slf4j2-impl-2.22.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.22.1/7183a25510a02ad00cc6a95d3b3d2a7d3c5a8dc4/log4j-core-2.22.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.22.1/bea6fede6328fabafd7e68363161a7ea6605abd1/log4j-api-2.22.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.15.1/f11560da189ab563a5c8e351941415430e9304ea/commons-io-2.15.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.1.2-jre/5e64ec7e056456bef3a4bc4c6fdaef71e8ab6318/guava-32.1.2-jre.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10.1/b3add478d4382b78ea20b1671390a858002feb6c/gson-2.10.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.13.1/17125bae1d965624e265ef49552f6465a2bfa307/antlr4-runtime-4.13.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.minecraftforge/srgutils/0.4.15/ca408b131759478f164e010fae0d73997e125fb5/srgutils-0.4.15.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/cf43b5391de623b36fe066a21127baef82c64022/plexus-utils-3.3.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.jline/jline-reader/3.20.0/8f15415b022a25b473e8e16c28ae913186ffb9c4/jline-reader-3.20.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.machinezoo.noexception/noexception/1.7.1/b65330c98e38a1f915fa54a6e5eca496505e3f0a/noexception-1.7.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.10/b1d8ab82d11d92fd639b56d639f8f46f739dd5fa/oshi-core-6.4.10.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/73.2/61ad4ef7f9131fcf6d25c34b817f90d6da06c9e9/icu4j-73.2.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/6.0.54/de8bc95660e1b2fe8793fd427a7a10dcec5b3ea7/authlib-6.0.54.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/blocklist/1.0.10/5c685c5ffa94c4cd39496c7184c1d122e515ecef/blocklist-1.0.10.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.3.10/d15b53a14cf20fdcaa98f731af5dda654452c010/brigadier-1.3.10.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/8.0.16/67d4de6d7f95d89bcf5862995fb854ebaec02a34/datafixerupper-8.0.16.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/2.2.10/da05971b07cbb379d002cf7eaec6a2048211fefc/patchy-2.2.10.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.17.9/3cad216e3a7f0c19b4b394388bc9ffc446f13b14/text2speech-1.17.9.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.16.0/4e3eb3d79888d76b54e28b350915b5dc3919c9de/commons-codec-1.16.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.97.Final/f8f3d8644afa5e6e1a40a3a6aeb9d9aa970ecb4f/netty-buffer-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.97.Final/384ba4d75670befbedb45c4d3b497a93639c206d/netty-codec-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.97.Final/7cceacaf11df8dc63f23d0fb58e9d4640fc88404/netty-common-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.97.Final/abb86c6906bf512bf2b797a41cd7d2e8d3cd7c36/netty-handler-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.97.Final/cec8348108dc76c47cf87c669d514be52c922144/netty-resolver-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.97.Final/795da37ded759e862457a82d9d92c4d39ce8ecee/netty-transport-classes-epoll-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.97.Final/d469d84265ab70095b01b40886cabdd433b6e664/netty-transport-native-unix-common-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.97.Final/f37380d23c9bb079bc702910833b2fd532c9abd0/netty-transport-4.1.97.Final.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.12/c24946d46824bd528054bface3231d2ecb7e95e8/fastutil-8.5.12.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.14.0/28934d48aed814f11e4c584da55c49fa7032b31b/jna-platform-5.14.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.14.0/67bf3eaea4f0718cb376a181a629e5f88fa1c9dd/jna-5.14.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.26.0/659feffdd12280201c8aacb8f7be94f9a883c824/commons-compress-1.26.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.jcraft/jorbis/0.0.17/8872d22b293e8f5d7d56ff92be966e6dc28ebdc6/jorbis-0.0.17.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.5/22566d58af70ad3d72308bab63b8339906deb649/joml-1.10.5.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.3.3/a0db6c84a8becc8ca05f9dbfa985edc348a824c7/lwjgl-freetype-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.3.3/b0a8c9baa9d1f54ac61e1ab9640c7659e7fa700c/lwjgl-freetype-3.3.3-natives-macos-arm64.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-freetype/3.3.3/806d869f37ce0df388a24e17aaaf5ca0894d851b/lwjgl-freetype-3.3.3-natives-macos-patch.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.3/efa1eb78c5ccd840e9f329717109b5e892d72f8e/lwjgl-glfw-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.3/a1bf400f6bc64e6195596cb1430dafda46090751/lwjgl-glfw-3.3.3-natives-macos.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.3/b543467b7ff3c6920539a88ee602d34098628be5/lwjgl-jemalloc-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.3/2906637657a57579847238c9c72d2c4bde7083f8/lwjgl-jemalloc-3.3.3-natives-macos.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.3/daada81ceb5fc0c291fbfdd4433cb8d9423577f2/lwjgl-openal-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.3/8df8338bfa77f2ebabef4e58964bd04d24805cbf/lwjgl-openal-3.3.3-natives-macos.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.3/2f6b0147078396a58979125a4c947664e98293a/lwjgl-opengl-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.3/1bd45997551ae8a28469f3a2b678f4b7289e12c0/lwjgl-opengl-3.3.3-natives-macos.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.3/25dd6161988d7e65f71d5065c99902402ee32746/lwjgl-stb-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.3/472792c98fb2c1557c060cb9da5fca6a9773621f/lwjgl-stb-3.3.3-natives-macos.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.3/82d755ca94b102e9ca77283b9e2dc46d1b15fbe5/lwjgl-tinyfd-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.3/406feedb977372085a61eb0fee358183f4f4c67a/lwjgl-tinyfd-3.3.3-natives-macos-arm64.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/29589b5f87ed335a6c7e7ee6a5775f81f97ecb84/lwjgl-3.3.3.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/226246e75f6bd8d4e1895bdce8638ef87808d114/lwjgl-3.3.3-natives-macos-arm64.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/4b986a99445e49ea5fbf5d149c4b63f6ed6c6780/lz4-java-1.8.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.20.0/d0ddcc708ddf527a3454c941b7b9225cc83a15ff/jline-terminal-3.20.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.1/1227f9e0666314f9de41477e3ec277e542ed7f7b/java-objc-bridge-1.1.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModDiscoverer/]: Skipping /Users/quzzar/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar because it was already located earlier
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.UniqueModListBuilder/]: Found 2 mods for first modid neoforge, selecting most recent based on version data
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.UniqueModListBuilder/]: Selected file neoforge-21.1.72-minecraft.jar for modid neoforge with version 21.1.72
+[15:08:34] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[15:08:34] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		EMI 1.1.24+1.21.1+neoforge (emi)
+		Kithkyn 1.0.0 (kithkyn)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.72 (neoforge)
+		Vestige 0.1.0 (vestige)
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-21.1.72-minecraft.jar with {minecraft} mods - versions {1.21.1}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /Users/quzzar/.gradle/caches/modules-2/files-2.1/dev.emi/emi-neoforge/1.1.24+1.21.1/3fd494b37027dfbc7f78414d7cbf251c9eb6738a/emi-neoforge-1.1.24+1.21.1.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file emi-neoforge-1.1.24+1.21.1.jar with {emi} mods - versions {1.1.24+1.21.1+neoforge}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /Users/quzzar/.gradle/caches/modules-2/files-2.1/dev.emi/emi-neoforge/1.1.24+1.21.1/3fd494b37027dfbc7f78414d7cbf251c9eb6738a/emi-neoforge-1.1.24+1.21.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config emi.mixins.json
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config emi-neoforge.mixins.json
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /private/tmp/vestige-scroll-knowledge-build/classes/java/main
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {vestige} mods - versions {0.1.0}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-scroll-knowledge-build/classes/java/main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /Users/quzzar/Projects/kithkyn/build/libs/kithkyn-1.0.0.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file kithkyn-1.0.0.jar with {kithkyn} mods - versions {1.0.0}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /Users/quzzar/Projects/kithkyn/build/libs/kithkyn-1.0.0.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file neoforge-21.1.72-minecraft.jar with {neoforge} mods - versions {21.1.72}
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[3,]]]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Found mixin config neoforge.mixins.json
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file  with languages []
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 3 implementations of IModLanguageLoader:
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	net.neoforged.fml.javafmlmod.FMLJavaModLanguageProvider from loader-4.0.29.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	net.neoforged.fml.lowcodemod.LowCodeModLanguageProvider from loader-4.0.29.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	net.neoforged.fml.mclanguageprovider.MinecraftModLanguageProvider from loader-4.0.29.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.LanguageProviderLoader/CORE]: Found language provider javafml, version 4.0.29
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.LanguageProviderLoader/CORE]: Found language provider lowcodefml, version 4.0.29
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.LanguageProviderLoader/CORE]: Found language provider minecraft, version 4.0.29
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Configured system mods: [minecraft, neoforge]
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Found system mod: minecraft
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.ModSorter/]: Found system mod: neoforge
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.ModSorter/LOADING]: Found 6 mod requirements (5 mandatory, 1 optional)
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[15:08:34] [main/DEBUG] [mixin/]: Adding mixin platform agents for container net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent accepted container net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/LOADING]: Loading coremod transformers
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Not loading coremod script-engine since no mod requested it
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: Found 1 implementations of ICoreMod:
+[15:08:34] [main/DEBUG] [ne.ne.fm.ut.ServiceLoaderUtil/CORE]: 	net.neoforged.neoforge.coremods.NeoForgeCoreMod from neoforge-21.1.72-minecraft.jar > neoforge-coremods-21.1.72.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Adding [Target[className=net.minecraft.world.level.biome.Biome, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8]] transformer from core-mod net.neoforged.neoforge.coremods.NeoForgeCoreMod@a20b94b in neoforge-21.1.72-minecraft.jar > neoforge-coremods-21.1.72.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Adding [Target[className=net.minecraft.world.level.levelgen.structure.Structure, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8]] transformer from core-mod net.neoforged.neoforge.coremods.NeoForgeCoreMod@a20b94b in neoforge-21.1.72-minecraft.jar > neoforge-coremods-21.1.72.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Adding [Target[className=net.minecraft.world.level.block.FlowerPotBlock, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8]] transformer from core-mod net.neoforged.neoforge.coremods.NeoForgeCoreMod@a20b94b in neoforge-21.1.72-minecraft.jar > neoforge-coremods-21.1.72.jar
+[15:08:34] [main/DEBUG] [ne.ne.fm.lo.FMLServiceProvider/CORE]: Adding [Target[className=net/minecraft/world/entity/monster/Spider, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/npc/Villager, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/monster/Zombie, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/monster/Strider, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/raid/Raid, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/animal/frog/Tadpole, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/structure/structures/SwampHutPiece, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/PhantomSpawner, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/monster/ZombieVillager, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/NaturalSpawner, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/PatrolSpawner, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/ai/village/VillageSiege, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/animal/horse/SkeletonTrapGoal, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/npc/CatSpawner, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/server/commands/RaidCommand, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/server/commands/SummonCommand, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/entity/EntityType, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8], Target[className=net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece, elementName=, elementDescriptor=, targetType=cpw.mods.modlauncher.api.TargetType@4b45dcb8]] transformer from core-mod net.neoforged.neoforge.coremods.NeoForgeCoreMod@a20b94b in neoforge-21.1.72-minecraft.jar > neoforge-coremods-21.1.72.jar
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.ReplaceFieldWithGetterAccess@73ad4ecc to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/biome/Biome;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.ReplaceFieldWithGetterAccess@787f32b7 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/Structure;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.ReplaceFieldWithGetterAccess@6aef4eb8 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/monster/Spider;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/npc/Villager;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/monster/Zombie;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/monster/Strider;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/raid/Raid;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/animal/frog/Tadpole;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/structures/SwampHutPiece;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/PhantomSpawner;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/monster/ZombieVillager;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/NaturalSpawner;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/PatrolSpawner;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/ai/village/VillageSiege;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/animal/horse/SkeletonTrapGoal;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/npc/CatSpawner;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/server/commands/RaidCommand;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/server/commands/SummonCommand;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/entity/EntityType;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.neoforged.neoforge.coremods.MethodRedirector@76c52298 to Target : cpw.mods.modlauncher.api.TargetType@4b45dcb8 {Lnet/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece;} {} {V}
+[15:08:34] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[15:08:34] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Apple M5 GL version 4.1 Metal - 91.7, Apple
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e]
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[FMLMixinPlatformAgent:null]
+[15:08:36] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by emi.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[15:08:36] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[15:08:36] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(mixin_synthetic)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixin_synthetic)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(emi)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(emi)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(minecraft)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(kithkyn)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(kithkyn)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(vestige)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vestige)]
+[15:08:36] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: Instancing new FMLMixinPlatformAgent for SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: FMLMixinPlatformAgent rejected container SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras.neoforge)]
+[15:08:36] [main/DEBUG] [mixin/]: Registering mixin config: mixinextras.init.mixins.json source=SecureJarResource(mixinextras.neoforge)
+[15:08:36] [main/DEBUG] [mixin/]: inject() running with 8 agents
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:net.neoforged.fml.loading.mixin.FMLMixinContainerHandle@4a68135e]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[FMLMixinPlatformAgent:null]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixin_synthetic)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(emi)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(kithkyn)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vestige)]
+[15:08:36] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras.neoforge)]
+[15:08:36] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.1.72, --gameDir, ., --assetsDir, /Users/quzzar/.gradle/caches/neoformruntime/assets, --assetIndex, 17, --width, 960, --height, 540]
+[15:08:36] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[15:08:36] [main/DEBUG] [mixin/]: Selecting config emi.mixins.json
+[15:08:36] [main/DEBUG] [mixin/]: Selecting config emi-neoforge.mixins.json
+[15:08:36] [main/DEBUG] [mixin/]: Selecting config neoforge.mixins.json
+[15:08:36] [main/DEBUG] [mixin/]: Selecting config mixinextras.init.mixins.json
+[15:08:36] [main/DEBUG] [MixinExtras|Service/]: com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1) is taking over from null
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Preparing emi.mixins.json (26)
+[15:08:36] [main/WARN] [mixin/]: Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz.jei.library.load.PluginCaller)
+[15:08:36] [main/DEBUG] [mixin/]: Skipping virtual target mezz.jei.library.load.PluginCaller for emi.mixins.json:jei.PluginCallerMixin from mod emi
+[15:08:36] [main/DEBUG] [mixin/]: Preparing emi-neoforge.mixins.json (0)
+[15:08:36] [main/DEBUG] [mixin/]: Preparing neoforge.mixins.json (2)
+[15:08:36] [main/DEBUG] [mixin/]: Preparing mixinextras.init.mixins.json (0)
+[15:08:36] [main/DEBUG] [mixin/]: Prepared 27 mixins in 0.642 sec (23.8ms avg) (0ms load, 0ms transform, 0ms plugin)
+[15:08:36] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
+[15:08:36] [main/DEBUG] [mixin/]: Mixing accessor.DrawContextAccessor from emi.mixins.json into net.minecraft.client.gui.GuiGraphics
+[15:08:36] [main/DEBUG] [mixin/]: emi.mixins.json:accessor.DrawContextAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:36] [main/DEBUG] [mixin/]: Mixing DrawContextMixin from emi.mixins.json into net.minecraft.client.gui.GuiGraphics
+[15:08:36] [main/DEBUG] [mixin/]: emi.mixins.json:DrawContextMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:DrawContextMixin from mod emi->@Inject::drawItemTooltip(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:DrawContextMixin from mod emi->@Inject::drawItemTooltip(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:DrawContextMixin from mod emi->@Inject::drawItemTooltip(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:08:37] [main/DEBUG] [mixin/]: Mixing MinecraftClientMixin from emi.mixins.json into net.minecraft.client.Minecraft
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:37] [main/DEBUG] [mixin/]: Renaming synthetic method lambda$reloadResources$0()V to md4ede3e$emi$lambda$reloadResources$0$0 in emi.mixins.json:MinecraftClientMixin from mod emi
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::reloadResources(ZLjava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::reloadResources(ZLjava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::reloadResources(ZLjava/lang/Object;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::disconnect(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::disconnect(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:08:37] [main/DEBUG] [mixin/]: emi.mixins.json:MinecraftClientMixin from mod emi->@Inject::disconnect(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:08:37] [main/DEBUG] [io.ne.ut.in.lo.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[15:08:37] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[15:08:37] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[15:08:38] [main/DEBUG] [os.ut.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@78b41097
+[15:08:38] [main/DEBUG] [os.ut.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@78b41097
+[15:08:41] [pool-9-thread-1/DEBUG] [mixin/]: Mixing MappedRegistryAccessor from neoforge.mixins.json into net.minecraft.core.MappedRegistry
+[15:08:41] [pool-9-thread-1/DEBUG] [mixin/]: neoforge.mixins.json:MappedRegistryAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:41] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 229 Datafixer optimizations took 3036 milliseconds
+[15:08:45] [pool-9-thread-1/DEBUG] [mixin/]: Mixing BlockEntityTypeAccessor from neoforge.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
+[15:08:45] [pool-9-thread-1/DEBUG] [mixin/]: neoforge.mixins.json:BlockEntityTypeAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:46] [pool-9-thread-1/DEBUG] [mixin/]: Mixing ItemStackMixin from emi.mixins.json into net.minecraft.world.item.ItemStack
+[15:08:46] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:ItemStackMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:46] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:ItemStackMixin from mod emi->@Inject::getTooltip(Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/TooltipFlag;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:46] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:ItemStackMixin from mod emi->@Inject::getTooltip(Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/TooltipFlag;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.ShovelItemAccessor from emi.mixins.json into net.minecraft.world.item.ShovelItem
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.ShovelItemAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Renaming @Accessor method getPathStates()Ljava/util/Map; to getPathStates$emi_$md$4ede3e$0 in emi.mixins.json:accessor.ShovelItemAccessor from mod emi
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.AxeItemAccessor from emi.mixins.json into net.minecraft.world.item.AxeItem
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.AxeItemAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Renaming @Accessor method getStrippedBlocks()Ljava/util/Map; to getStrippedBlocks$emi_$md$4ede3e$0 in emi.mixins.json:accessor.AxeItemAccessor from mod emi
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.HoeItemAccessor from emi.mixins.json into net.minecraft.world.item.HoeItem
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.HoeItemAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Renaming @Accessor method getTillingActions()Ljava/util/Map; to getTillingActions$emi_$md$4ede3e$0 in emi.mixins.json:accessor.HoeItemAccessor from mod emi
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: Mixing HoeItemMixin from emi.mixins.json into net.minecraft.world.item.HoeItem
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:HoeItemMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:HoeItemMixin from mod emi->@Inject::createTillAction(Lnet/minecraft/world/level/block/state/BlockState;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:51] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:HoeItemMixin from mod emi->@Inject::createTillAndDropAction(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/ItemLike;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V does use it's CallbackInfoReturnable
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: Java version: 21
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.storeFence: available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Buffer.address: available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 (in module io.netty.common) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.common
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: sun.misc.Unsafe: available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: maxDirectMemory: 8589934592 bytes (maybe)
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.tmpdir: /var/folders/x7/my3yq15j6c1gf4m_rm5k2b8c0000gn/T (java.io.tmpdir)
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: Platform: MacOS
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[15:08:51] [pool-9-thread-1/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[15:08:54] [pool-9-thread-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.EmiClient
+[15:08:54] [pool-9-thread-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.EmiPacket
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.CraftingResultSlotAccessor from emi.mixins.json into net.minecraft.world.inventory.ResultSlot
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.CraftingResultSlotAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: Mixing CraftingResultSlotMixin from emi.mixins.json into net.minecraft.world.inventory.ResultSlot
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:CraftingResultSlotMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:CraftingResultSlotMixin from mod emi->@Inject::onCrafted(Lnet/minecraft/world/item/ItemStack;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:CraftingResultSlotMixin from mod emi->@Inject::onCrafted(Lnet/minecraft/world/item/ItemStack;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:CraftingResultSlotMixin from mod emi->@Inject::onCrafted(Lnet/minecraft/world/item/ItemStack;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.SmithingTransformRecipeAccessor from emi.mixins.json into net.minecraft.world.item.crafting.SmithingTransformRecipe
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.SmithingTransformRecipeAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: Mixing accessor.SmithingTrimRecipeAccessor from emi.mixins.json into net.minecraft.world.item.crafting.SmithingTrimRecipe
+[15:08:58] [pool-9-thread-1/DEBUG] [mixin/]: emi.mixins.json:accessor.SmithingTrimRecipeAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:02] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:09:02] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:09:02] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[15:09:02] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[15:09:02] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:09:02] [Render thread/DEBUG] [mixin/]: Mixing ScreenMixin from emi.mixins.json into net.minecraft.client.gui.screens.Screen
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::init(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::init(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::init(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::resize(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::resize(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ScreenMixin from mod emi->@Inject::resize(Lnet/minecraft/client/Minecraft;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:02] [Render thread/DEBUG] [mixin/]: Mixing AbstractInventoryScreenMixin from emi.mixins.json into net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen
+[15:09:02] [Render thread/DEBUG] [mixin/]: emi.mixins.json:AbstractInventoryScreenMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:AbstractInventoryScreenMixin from mod emi->@Inject::drawStatusEffects(Lnet/minecraft/client/gui/GuiGraphics;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:AbstractInventoryScreenMixin from mod emi->@Inject::drawStatusEffects(Lnet/minecraft/client/gui/GuiGraphics;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:AbstractInventoryScreenMixin from mod emi->@Inject::drawStatusEffects(Lnet/minecraft/client/gui/GuiGraphics;IILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:03] [Render thread/DEBUG] [mixin/]: Mixing accessor.HandledScreenAccessor from emi.mixins.json into net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:accessor.HandledScreenAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:03] [Render thread/DEBUG] [mixin/]: Mixing HandledScreenMixin from emi.mixins.json into net.minecraft.client.gui.screens.inventory.AbstractContainerScreen
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderBackground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderBackground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderBackground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderForeground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderForeground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:HandledScreenMixin from mod emi->@Inject::renderForeground(Lnet/minecraft/client/gui/GuiGraphics;IIFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:03] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar%23178!/assets/.mcassetsroot' uses unexpected schema
+[15:09:03] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/private/tmp/vestige-scroll-knowledge-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar%23178!/data/.mcassetsroot' uses unexpected schema
+[15:09:03] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[15:09:03] [Render thread/INFO] [minecraft/Minecraft]: Setting user: Dev
+[15:09:03] [Render thread/DEBUG] [mixin/]: Mixing ToastManagerMixin from emi.mixins.json into net.minecraft.client.gui.components.toasts.ToastComponent
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ToastManagerMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:ToastManagerMixin from mod emi->@Inject::drawHead(Lnet/minecraft/client/gui/GuiGraphics;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:03] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5
+[15:09:03] [Render thread/DEBUG] [mixin/]: Mixing MouseMixin from emi.mixins.json into net.minecraft.client.MouseHandler
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseDown(JIIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseUp(JIIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseDragged(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseDragged(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseDragged(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:MouseMixin from mod emi->@Inject::onMouseScrolled(JDDLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:03] [Render thread/DEBUG] [mixin/]: Mixing KeyboardMixin from emi.mixins.json into net.minecraft.client.KeyboardHandler
+[15:09:03] [Render thread/DEBUG] [mixin/]: emi.mixins.json:KeyboardMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:09:04] [Render thread/DEBUG] [mixin/]: emi.mixins.json:KeyboardMixin from mod emi->@Inject::onKey(JIIIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:04] [Render thread/DEBUG] [mixin/]: emi.mixins.json:KeyboardMixin from mod emi->@Inject::onChar(JIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:09:04] [Render thread/DEBUG] [ne.ne.fm.ModWorkManager/LOADING]: Using 10 threads for parallel mod-loading
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 0 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+[15:09:04] [Render thread/DEBUG] [ne.ne.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for [dev.emi.emi.platform.neoforge.EmiNeoForge]
+[15:09:04] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.neoforge.EmiNeoForge
+[15:09:04] [Render thread/DEBUG] [ne.ne.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for [com.quzzar.kithkyn.Kithkyn]
+[15:09:04] [Render thread/DEBUG] [ne.ne.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for [com.quzzar.vestige.VestigeMod]
+[15:09:04] [Render thread/DEBUG] [ne.ne.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for [net.neoforged.neoforge.common.NeoForgeMod, net.neoforged.neoforge.client.ClientNeoForgeMod]
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.EmiMain
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.neoforge.EmiPacketHandler
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.EmiNetwork
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.EmiPort
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for emi
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing dev.emi.emi.platform.neoforge.EmiClientNeoForge to MOD
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.ne.in.ve.ne.NeoForgeVersion/CORE]: Found NeoForge version 21.1.72
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.neoforge.EmiClientNeoForge
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.ne.in.ve.ne.NeoForgeVersion/CORE]: Found FML version 4.0.29
+[15:09:04] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.72, for MC 1.21.1
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.ConfigScreen
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Config file neoforge-client.toml for neoforge tracking
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Config file neoforge-server.toml for neoforge tracking
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Config file neoforge-common.toml for neoforge tracking
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Config file kithkyn-common.toml for kithkyn tracking
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Config file kithkyn-advanced.toml for kithkyn tracking
+[15:09:04] [modloading-worker-0/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiResourceReloadListener
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for kithkyn
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.entities.ai.goals.work.ContainerVisit to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.client.gui.TradeSelfTest to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.client.gui.UiPreview to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.CoreEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.GolemEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.AllayEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.PersonClientEvents to MOD
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.RepairEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.BlockPlacementEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.VillageEntryTitle to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.CustodyEvents to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.events.KithkynCommands to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for neoforge
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.server.command.ConfigCommand to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.filters.GenericPacketSplitter to MOD
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.BirchVillageVerification to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CastleRolesVerification to GAME
+[15:09:04] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.BuildingPlacementVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.ut.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6fd24e94
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.AccessoryEvidenceVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.ChestTakeOutVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CastleConstructionVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.WallFoundationVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.WorkerRecoveryVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 20
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 20
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 9
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 4194304
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: false
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[15:09:05] [modloading-worker-0/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.VillageCleanup to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.LowPassageVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.RedevelopmentBenchmark to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.NetworkInitialization to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.ConfigurationInitialization to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.BadlandsVillageVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.VinePassageVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.AllayVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.RedevelopmentVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.BellRecallVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.RepairVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.common.MonsterRoomHooks to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.VillageAudit to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.common.DeferredSpawnEggItem$CommonHandler to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.common.DeferredSpawnEggItem$ColorRegisterHandler to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.model.data.ModelDataManager to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ParticleBoundsDebugRenderer to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GateBannerVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ClientHooks$ClientEvents to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.BlockEntityRenderBoundsDebugRenderer to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.attachment.AttachmentInternals to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CompanionPetVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.ApprovedHouseVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GateAccessVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.FoundingGrowthVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.QuartermasterVisitVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CastleMerchantVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GuardCombatVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.LongRetryVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CustodyVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.VillageTimelapse to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CampfireAccessVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.ConstructionClearanceVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.FoundingProbe to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.OccupationWorkVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GuardNightVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.CastleOperationsVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.ApprovedCenterVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.DevCommands to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.UnhousedBedtimeVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.TreeFellingVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GuardEquipmentVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.dev.GolemVerification to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.other.KithkynItems to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.wrongdoing.TheftEvents to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.village.VillageChunkLoader to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.village.JobAptitudeLoader to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.village.tiers.VillageTierLoader to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.village.buildings.BuildingDefinitionLoader to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.llm.LlmEvents to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.economy.ItemValueLoader to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.kithkyn.configuration.KithkynConfig to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for vestige
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.ManaPayload to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.NativeMana to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.NativeMagic to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.SpellEntities to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.SpellClient to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.client.ManaHud to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.client.NativeManaCapture to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.world.client.ManaHud$Registration to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.presentation.SpellVisualNetwork to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.presentation.client.SpellVisualClient to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.presentation.client.SpellSenseClient to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.magic.presentation.client.NativeEffectsCapture to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.gametest.FocusedGameTests to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.ScrollCasting to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.SpellKnowledge to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.RitualCrafting to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.ApparatusBlocks to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.ScrollItems to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.ScrollRecastPayload to MOD
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.client.NativeItemCapture to GAME
+[15:09:05] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.client.ScrollRecastClient to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.client.SpellstoneHighlight to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.client.NativeFragmentCapture to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.client.ScrollTooltip to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.recipeviewer.RitualDisplayPayload$Sync to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.recipeviewer.RitualViewerClient to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.recipeviewer.RitualDisplayPayload$Registration to MOD
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.StoneTravelPayloads to MOD
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.StoneTravel to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.StandingStones to MOD
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.client.NativeStandingStoneModelCapture to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.client.NativeStoneCapture to GAME
+[15:09:06] [modloading-worker-0/DEBUG] [ne.ne.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.quzzar.vestige.travel.client.StandingStoneClient to MOD
+
+> Task :check
+> Task :build
+
+> Task :runEffectsCapture
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.ne.co.NeoForgeConfig/FORGEMOD]: Loaded NeoForge config file neoforge-client.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loaded TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-client.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Watching TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-client.toml for changes
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loading configs type COMMON
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.ne.co.NeoForgeConfig/FORGEMOD]: Loaded NeoForge config file neoforge-common.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loaded TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-common.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Watching TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-common.toml for changes
+[15:10:22] [modloading-sync-worker/WARN] [ne.ne.fm.co.ConfigTracker/CONFIG]: Configuration file /private/tmp/vestige-scroll-rarity-emi/config/kithkyn-common.toml is not correct. Correcting
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loaded TOML config file /private/tmp/vestige-scroll-rarity-emi/config/kithkyn-common.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Watching TOML config file /private/tmp/vestige-scroll-rarity-emi/config/kithkyn-common.toml for changes
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loaded TOML config file /private/tmp/vestige-scroll-rarity-emi/config/kithkyn-advanced.toml
+[15:10:22] [modloading-sync-worker/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Watching TOML config file /private/tmp/vestige-scroll-rarity-emi/config/kithkyn-advanced.toml for changes
+[15:10:23] [Render thread/DEBUG] [mixin/]: Mixing accessor.ItemRendererAccessor from emi.mixins.json into net.minecraft.client.renderer.entity.ItemRenderer
+[15:10:23] [Render thread/DEBUG] [mixin/]: emi.mixins.json:accessor.ItemRendererAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:10:23] [Render thread/DEBUG] [mixin/]: Mixing accessor.BakedModelManagerAccessor from emi.mixins.json into net.minecraft.client.resources.model.ModelManager
+[15:10:23] [Render thread/DEBUG] [mixin/]: emi.mixins.json:accessor.BakedModelManagerAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:10:23] [Render thread/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: []
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing RecipeBookWidgetMixin from emi.mixins.json into net.minecraft.client.gui.screens.recipebook.RecipeBookComponent
+[15:10:24] [Render thread/DEBUG] [mixin/]: emi.mixins.json:RecipeBookWidgetMixin from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:10:24] [Render thread/DEBUG] [mixin/]: emi.mixins.json:RecipeBookWidgetMixin from mod emi->@Inject::toggleOpen(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V does use it's CallbackInfo
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiData
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiRecipe
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiIngredient
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.render.EmiRenderable
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.RecipeDefaultLoader
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiTagExclusionsLoader
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiDataLoader
+[15:10:24] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiDataLoader$DataConsumer
+[15:10:25] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/emi, mod/kithkyn, mod/vestige, mod/neoforge
+[15:10:25] [Worker-Main-4/INFO] [co.qu.ki.Kithkyn/]: Kithkyn setup!
+[15:10:25] [Render thread/DEBUG] [ne.ne.fm.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue Common setup: 1 jobs
+[15:10:25] [Render thread/DEBUG] [ne.ne.fm.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 11.43 ms
+[15:10:26] [Worker-Main-4/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading
+[15:10:27] [Worker-Main-6/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.RecipeDefaults
+[15:10:27] [Worker-Main-7/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.TagExclusions
+[15:10:27] [Worker-Main-7/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiAlias
+[15:10:27] [Worker-Main-6/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.EmiRecipeCategoryProperties
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.EmiConfig
+[15:10:27] [Worker-Main-2/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.CheatMode
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.ConfigEnum
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.HelpLevel
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.IndexSource
+[15:10:27] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarSide
+[15:10:28] [Worker-Main-8/WARN] [minecraft/SpriteLoader]: Texture vestige:item/homebound_eye with size 1254x1254 limits mip level from 4 to 1
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.RecipeBookAction
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.EffectLocation
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.EmiAgnos
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.platform.neoforge.EmiAgnosNeoForge
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.FluidUnit
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarType
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.ButtonVisibility
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarPages
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarPages$SidebarPage
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarSettings
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarSubpanels
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.IntGroup
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.Margins
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.ScreenAlign
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.HeaderType
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarTheme
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.ScreenAlign$Horizontal
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.ScreenAlign$Vertical
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.input.EmiBind
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.input.EmiBind$ModifiedKey
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS$SyntaxErrorException
+[15:10:28] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS$QDCSSException
+[15:10:29] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS$BadValueException
+[15:10:29] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS$BlameString
+[15:10:29] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.com.unascribed.qdcss.QDCSS$1
+[15:10:29] [Worker-Main-1/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.config.SidebarSubpanels$Subpanel
+[15:10:29] [Render thread/DEBUG] [ne.ne.fm.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue Sided setup: 2 jobs
+[15:10:29] [Render thread/DEBUG] [ne.ne.fm.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 26.50 ms
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=0'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=1'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=2'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=12'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=13'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=14'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=15'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=7'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=8'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=9'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=10'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=11'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=3'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=4'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=5'
+[15:10:33] [Worker-Main-2/WARN] [minecraft/BlockStateModelLoader]: Exception loading blockstate definition: 'vestige:blockstates/temporary_water.json' missing model for variant: 'vestige:temporary_water#level=6'
+[15:10:34] [Worker-Main-2/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiTags
+[15:10:34] [Worker-Main-2/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.util.InheritanceMap
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.FillRecipeC2SPacket
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.CreateItemC2SPacket
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.PingS2CPacket
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.CommandS2CPacket
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.EmiChessPacket$C2S
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.EmiChessPacket
+[15:10:39] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.network.EmiChessPacket$S2C
+[15:10:39] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
+[15:10:39] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[15:10:39] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device MacBook Air Speakers
+[15:10:39] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[15:10:40] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[15:10:40] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[15:10:40] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.bom.BoM
+[15:10:40] [Render thread/INFO] [ne.ne.ne.cl.en.an.js.AnimationLoader/]: Loaded 0 entity animations
+[15:10:40] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiApi
+[15:10:40] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.RecipeScreen
+[15:10:40] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.BoMScreen
+[15:10:42] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiDrawContext
+[15:10:42] [Render thread/INFO] [minecraft/MinecraftServer]: Found new data pack mod/kithkyn:packs/replace_villages, loading it automatically
+[15:10:42] [Render thread/INFO] [minecraft/MinecraftServer]: Found new data pack mod/kithkyn:packs/replace_pillagers, loading it automatically
+[15:10:45] [Worker-Main-2/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiCommands
+[15:10:46] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 1363 recipes
+[15:10:46] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 1473 advancements
+[15:10:46] [Render thread/INFO] [co.qu.ki.Kithkyn/]: Loaded 12 job aptitude profiles
+[15:10:46] [Render thread/INFO] [co.qu.ki.Kithkyn/]: Loaded 6 village tiers
+[15:10:46] [Render thread/INFO] [co.qu.ki.Kithkyn/]: Loaded 23 village building definitions
+[15:10:46] [Render thread/INFO] [co.qu.ki.Kithkyn/]: Loaded 76 item values and 7 tag fallbacks
+[15:10:47] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiReloadManager
+[15:10:47] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiLog
+[15:10:47] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, waiting for tags to reload EMI...
+[15:10:47] [Render thread/DEBUG] [ne.ne.ne.co.CommonHooks/WP]: Gathered mod list to write to world save Vestige recipe inspection
+[15:10:47] [Render thread/DEBUG] [mixin/]: Mixing accessor.BrewingRecipeRegistryAccessor from emi.mixins.json into net.minecraft.world.item.alchemy.PotionBrewing
+[15:10:47] [Render thread/DEBUG] [mixin/]: emi.mixins.json:accessor.BrewingRecipeRegistryAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:10:47] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 1.21.1
+[15:10:47] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[15:10:48] [Server thread/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loading configs type SERVER
+[15:10:48] [Server thread/DEBUG] [ne.ne.ne.co.NeoForgeConfig/FORGEMOD]: Loaded NeoForge config file neoforge-server.toml
+[15:10:48] [Server thread/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Loaded TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-server.toml
+[15:10:48] [Server thread/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Watching TOML config file /private/tmp/vestige-scroll-rarity-emi/config/neoforge-server.toml for changes
+[15:10:49] [pool-11-thread-1/DEBUG] [ne.ne.fm.co.ConfigWatcher/CONFIG]: Config file neoforge-server.toml changed, re-loading
+[15:10:49] [pool-11-thread-1/DEBUG] [ne.ne.ne.co.NeoForgeConfig/FORGEMOD]: NeoForge config just got changed on the file system!
+[15:10:54] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[15:10:54] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[15:10:54] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[15:10:55] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 18%
+[15:10:55] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 55%
+[15:10:57] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[15:10:57] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2817 ms
+[15:10:57] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 4, from 10
+[15:10:57] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 12, from 0
+[15:10:57] [Render thread/DEBUG] [io.ne.ch.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 20
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.co.GlobalEventExecutor/]: -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+[15:10:57] [Render thread/DEBUG] [io.ne.ch.ni.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[15:10:57] [Render thread/DEBUG] [io.ne.ch.ni.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.in.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[15:10:57] [Render thread/DEBUG] [io.ne.ch.DefaultChannelId/]: -Dio.netty.processId: 37677 (auto-detected)
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: -Djava.net.preferIPv6Addresses: system
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.NetUtilInitializations/]: Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+[15:10:57] [Render thread/DEBUG] [io.ne.ch.DefaultChannelId/]: -Dio.netty.machineId: c0:c7:db:ff:fe:bb:b0:b8 (auto-detected)
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.ratio: 8
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.chunkSize: 32
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.blocking: false
+[15:10:57] [Render thread/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.batchFastThreadLocalOnly: true
+[15:10:58] [Netty Server IO #1/DEBUG] [ne.ne.ne.ne.fi.NetworkFilters/]: Injected net.neoforged.neoforge.network.filters.GenericPacketSplitter@1b421e28 into net.minecraft.network.Connection@b1a6f6a
+[15:10:58] [Netty Local Client IO #0/DEBUG] [ne.ne.ne.ne.fi.NetworkFilters/]: Injected net.neoforged.neoforge.network.filters.GenericPacketSplitter@668e7845 into net.minecraft.network.Connection@7bdd02cc
+[15:11:02] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, waiting for tags to reload EMI...
+[15:11:02] [Netty Server IO #1/DEBUG] [ne.ne.ne.ne.fi.NetworkFilters/]: Injected net.neoforged.neoforge.network.filters.GenericPacketSplitter@7b76a2c2 into net.minecraft.network.Connection@b1a6f6a
+[15:11:03] [Server thread/INFO] [minecraft/PlayerList]: Dev[local:E:794999f2] logged in with entity id 1 at (3.5, -60.0, -5.5)
+[15:11:03] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRecipes
+[15:11:03] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiRecipeManager
+[15:11:03] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRecipes$Manager
+[15:11:03] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiStackList$ComparisonHashStrategy
+[15:11:03] [Server thread/INFO] [minecraft/MinecraftServer]: Dev joined the game
+[15:11:04] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, reloading EMI
+[15:11:04] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:04] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiReloadManager$ReloadWorker
+[15:11:04] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiPlugin
+[15:11:04] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiInitRegistry
+[15:11:04] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiRegistry
+[15:11:04] [Thread-13/INFO] [EMI/]: [EMI] Starting EMI reload...
+[15:11:04] [Thread-13/INFO] [EMI/]: [EMI] Clearing data
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiStackList
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiStackList$StrictHashStrategy
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiIngredientSerializers
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiExclusionAreas
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiDragDropHandlers
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiStackProviders
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRecipeFiller
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.handler.EmiRecipeHandler
+[15:11:04] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 2 advancements
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiHidden
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenBase
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.Bounds
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiEntrypoint
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.VanillaPlugin
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.serializer.EmiIngredientSerializer
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.SlotWidget
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.Widget
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.GeneratedSlotWidget
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiRecipeCategory
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiStack
+[15:11:04] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 2004ms or 40 ticks behind
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmptyEmiStack
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.ItemEmiStack
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher$Batchable
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.FluidEmiStack
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.Comparison
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.Comparison$Predicate
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.Comparison$HashFunction
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiRecipeSorting
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.VanillaEmiRecipeCategories
+[15:11:04] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiPluginContainer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiInitRegistryImpl
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Initializing plugin from emi
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.stack.serializer.ItemEmiStackSerializer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.serializer.EmiStackSerializer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.stack.serializer.FluidEmiStackSerializer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.TagEmiIngredient
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.stack.serializer.TagEmiIngredientSerializer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.ListEmiIngredient
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.stack.serializer.ListEmiIngredientSerializer
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiRegistryAdapter$StackConstructor
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiRegistryAdapter
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiRegistryAdapter$1
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Initialized plugin from emi in 437ms
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Initializing plugin from vestige
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Initialized plugin from vestige in 0ms
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.data.IndexStackData
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Processing tags
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiTagKey
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.EmiUtil
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.EmiUtil$1
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiReloadLog
+[15:11:05] [Thread-13/ERROR] [EMI/]: [EMI] Untranslated tag #kithkyn:mine_support_materials
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI]  Tag warning can be disabled in the config, EMI docs describe how to add a translation or exclude tags.
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Constructing index
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiComparisonDefaults
+[15:11:05] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiStackList$IndexGroup
+[15:11:05] [Thread-13/INFO] [EMI/]: [EMI] Reloading item groups on client thread...
+[15:11:06] [Thread-13/INFO] [EMI/]: [EMI] Reloading item groups on client thread took 197ms
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRegistryImpl
+[15:11:06] [Thread-13/INFO] [EMI/]: [EMI] Loading plugin from emi
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.handler.InventoryRecipeHandler
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.handler.StandardRecipeHandler
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.handler.CraftingRecipeHandler
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.handler.CookingRecipeHandler
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.handler.StonecuttingRecipeHandler
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiExclusionArea
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiShapelessRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiCraftingRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiShapedRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiSuspiciousStewRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiPatternCraftingRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiFireworkStarRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiBookCloningRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiBookCloningRecipe$Template
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiBannerDuplicateRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiFireworkStarFadeRecipe
+[15:11:06] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiBannerShieldRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiFireworkRocketRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiArmorDyeRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiMapCloningRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiRepairItemRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiCookingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiSmithingTrimRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiSmithingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiStonecuttingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiWorldInteractionRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiWorldInteractionRecipe$Builder
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiWorldInteractionRecipe$WorldIngredient
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiAnvilRepairItemRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiGrindstoneRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiAnvilEnchantRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiGrindstoneDisenchantingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiAnvilRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.special.EmiGrindstoneDisenchantingBookRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiBrewingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiFuelRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiCompostingRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.recipe.EmiTagRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiIngredientRecipe
+[15:11:07] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiIngredientRecipe$PageSlotWidget
+[15:11:07] [Thread-13/INFO] [EMI/]: [EMI] Reloaded plugin from emi in 1562ms
+[15:11:07] [Thread-13/INFO] [EMI/]: [EMI] Loading plugin from vestige
+[15:11:07] [Thread-13/INFO] [EMI/]: [EMI] Reloaded plugin from vestige in 17ms
+[15:11:07] [Thread-13/INFO] [EMI/]: [EMI] Baking index
+[15:11:08] [Thread-13/INFO] [EMI/]: [EMI] Registering late recipes
+[15:11:08] [Thread-13/INFO] [EMI/]: [EMI] Baking recipes
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.dev.EmiDev
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRecipes$Worker
+[15:11:09] [Thread-13/INFO] [EMI/]: [EMI] Baked 3526 recipes in 1310ms
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiPersistentData
+[15:11:09] [Thread-13/INFO] [EMI/]: [EMI] Baking search
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.EmiSearch
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.SearchStack
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.NameQuery
+[15:11:09] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.Query
+[15:11:09] [Thread-14/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.registry.EmiRecipeSorter
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenManager
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.widget.EmiSearchWidget
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.stack.EmiStackInteraction
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenManager$SidebarEmiStackInteraction
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher$ClaimedCollection
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenManager$SidebarPanel
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.widget.SizedButtonWidget
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.EmiRenderHelper
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.WidgetHolder
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.widget.SidebarButtonWidget
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.recipe.EmiPlayerInventory
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiSidebars
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiFavorites
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiFavorites$CompoundList
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenManager$1
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.EmiScreenManager$ScreenSpace
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher$BatcherVertexConsumerProvider
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher$UnlitFacade
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiProfiler
+[15:11:09] [Render thread/DEBUG] [mixin/]: Mixing accessor.OrderedTextTooltipComponentAccessor from emi.mixins.json into net.minecraft.client.gui.screens.inventory.tooltip.ClientTextTooltip
+[15:11:09] [Render thread/DEBUG] [mixin/]: emi.mixins.json:accessor.OrderedTextTooltipComponentAccessor from mod emi: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[15:11:09] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:09] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:09] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:10] [Thread-14/INFO] [EMI/]: [EMI] Baked recipes after reload in 939ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Finishing up
+[15:11:11] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.EmiSearch$SearchWorker
+[15:11:11] [Thread-13/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiSidebars$1
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Reloaded EMI in 6986ms
+[15:11:11] [Thread-16/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.EmiSearch$CompiledQuery
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Starting EMI reload...
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Clearing data
+[15:11:11] [Thread-16/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.search.LogicalOrQuery
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Initializing plugin from emi
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Initialized plugin from emi in 0ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Initializing plugin from vestige
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Initialized plugin from vestige in 0ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Processing tags
+[15:11:11] [Thread-13/ERROR] [EMI/]: [EMI] Untranslated tag #kithkyn:mine_support_materials
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI]  Tag warning can be disabled in the config, EMI docs describe how to add a translation or exclude tags.
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Constructing index
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Reloading item groups on client thread...
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Reloading item groups on client thread took 68ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Loading plugin from emi
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Reloaded plugin from emi in 403ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Loading plugin from vestige
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Reloaded plugin from vestige in 5ms
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Baking index
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Registering late recipes
+[15:11:11] [Thread-13/INFO] [EMI/]: [EMI] Baking recipes
+[15:11:13] [Thread-13/INFO] [EMI/]: [EMI] Baked 3526 recipes in 1048ms
+[15:11:13] [Thread-13/INFO] [EMI/]: [EMI] Baking search
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiFavorite
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.runtime.EmiHistory
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.RecipeTab
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.RecipeDisplay
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.RecipeFillButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeTreeButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeDefaultButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeScreenshotButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.TextWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.RecipeDisplay$ButtonType
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.WidgetGroup
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.TankWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.TooltipWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.TextureWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.WidgetTooltipHolder
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.DrawableWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.FillingArrowWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.AnimatedTextureWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.ButtonWidget
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeBackground
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.widget.DrawableWidget$DrawableWidgetConsumer
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.RecipeScreen$1
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.render.EmiRender
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.widget.RecipeDefaultButtonWidget$1
+[15:11:13] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.bom.BoM$DefaultStatus
+[15:11:13] [Thread-18/INFO] [EMI/]: [EMI] Baked recipes after reload in 707ms
+[15:11:14] [Thread-13/INFO] [EMI/]: [EMI] Finishing up
+[15:11:14] [Thread-13/INFO] [EMI/]: [EMI] Reloaded EMI in 2865ms
+[15:11:14] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.screen.StackBatcher$UnlitFacade$Consumer
+[15:11:14] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.api.EmiApi$1
+[15:11:14] [Render thread/DEBUG] [mixin/]: Mixing GlobalMixin from emi.mixins.json into dev.emi.emi.input.EmiInput
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Starting EMI reload...
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Clearing data
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initializing plugin from emi
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initialized plugin from emi in 0ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initializing plugin from vestige
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initialized plugin from vestige in 0ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Processing tags
+[15:11:15] [Thread-21/ERROR] [EMI/]: [EMI] Untranslated tag #kithkyn:mine_support_materials
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI]  Tag warning can be disabled in the config, EMI docs describe how to add a translation or exclude tags.
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Tags synchronized, waiting for recipes to reload EMI...
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Recipes synchronized, reloading EMI
+[15:11:15] [Render thread/INFO] [EMI/]: [EMI] Starting Reload
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Constructing index
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Reloading item groups on client thread...
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Reloading item groups on client thread took 57ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Starting EMI reload...
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Clearing data
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initializing plugin from emi
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initialized plugin from emi in 0ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initializing plugin from vestige
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Initialized plugin from vestige in 0ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Processing tags
+[15:11:15] [Thread-21/ERROR] [EMI/]: [EMI] Untranslated tag #kithkyn:mine_support_materials
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI]  Tag warning can be disabled in the config, EMI docs describe how to add a translation or exclude tags.
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Constructing index
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Reloading item groups on client thread...
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Reloading item groups on client thread took 54ms
+[15:11:15] [Thread-21/INFO] [EMI/]: [EMI] Loading plugin from emi
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Reloaded plugin from emi in 306ms
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Loading plugin from vestige
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Reloaded plugin from vestige in 7ms
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Baking index
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Registering late recipes
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Baking recipes
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Baked 3526 recipes in 361ms
+[15:11:16] [Thread-21/INFO] [EMI/]: [EMI] Baking search
+[15:11:16] [Thread-22/INFO] [EMI/]: [EMI] Baked recipes after reload in 386ms
+[15:11:17] [Thread-21/INFO] [EMI/]: [EMI] Finishing up
+[15:11:17] [Thread-21/INFO] [EMI/]: [EMI] Reloaded EMI in 1572ms
+[15:11:21] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+[15:11:21] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Dev lost connection: Disconnected
+[15:11:21] [Server thread/INFO] [minecraft/MinecraftServer]: Dev left the game
+[15:11:21] [Server thread/INFO] [minecraft/ServerCommonPacketListenerImpl]: Stopping singleplayer server as player logged out
+[15:11:21] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[15:11:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[15:11:21] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Vestige recipe inspection]'/minecraft:overworld
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Vestige recipe inspection]'/minecraft:the_nether
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Vestige recipe inspection]'/minecraft:the_end
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Vestige recipe inspection]'/vestige:pocket
+[15:11:27] [Server thread/DEBUG] [ne.ne.ne.co.CommonHooks/WP]: Gathered mod list to write to world save Vestige recipe inspection
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (vestige-recipe-viewer-491013fa-7358-4ae2-86b7-ea989e86299d): All chunks are saved
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (pocket): All chunks are saved
+[15:11:27] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[15:11:27] [Server thread/DEBUG] [ne.ne.fm.co.ConfigTracker/CONFIG]: Unloading configs type SERVER
+
+BUILD SUCCESSFUL in 5m 56s
+21 actionable tasks: 9 executed, 12 up-to-date
+Configuration cache entry stored.

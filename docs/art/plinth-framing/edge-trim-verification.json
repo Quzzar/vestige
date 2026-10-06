@@ -1,0 +1,94 @@
+{
+  "scope": "Preview-only Plinth and matching Spellstone framing; no production art or pack installation",
+  "views": [
+    {
+      "view": "plinth_frame_corner_edges",
+      "image": "corner-edges.png",
+      "imageSource": "native-edges/vestige-plinth_frame_corner_edges-apparatus-0/frame-00019.png",
+      "imageSha256": "faec33a64fd14f601ac96141ce54ba016bbe81e98d7f0473fceb43cca8109cea",
+      "frames": 24,
+      "seconds": 2.060383,
+      "loadedModelHashes": {
+        "models/block/cobblestone_plinth.json": "7ef2666d2092114f5294a7614d6587b5aaeb0431446e96bd02eb4e59c85bf1c1",
+        "models/block/cobblestone_plinth_base.json": "2cf205f587accfeeed0302a992b8ac32411b451b171dc10910eae12298582474",
+        "models/block/cobblestone_plinth_shaft.json": "dfa3b2f31698cb1fbf9e7d0f96fadb5c498b94bbf3bbebf04f713f4fcf9cddf6",
+        "models/block/cobblestone_plinth_cap.json": "9c31dfbaf970d7fb8f73a634fc602d80c974666c69a02f4c4ebf640f5f8b4822"
+      },
+      "camera": {
+        "eye": [
+          1.45,
+          66.05,
+          1.7
+        ],
+        "pitch": 21.406317,
+        "yaw": 141.6325,
+        "fixed": true
+      }
+    },
+    {
+      "view": "spellstone_frame_plain",
+      "image": "spellstone-plain.png",
+      "imageSource": "native-edges/vestige-spellstone_frame_plain-apparatus-0/frame-00019.png",
+      "imageSha256": "e682a2df94ae2fdb19f82e6ffc2592dac4cb2cc5f2016a4a8cb7af5651244dea",
+      "frames": 24,
+      "seconds": 2.011008542,
+      "loadedModelHashes": {
+        "models/block/andesite_spellstone.json": "61bc0d28c11c8fb2270407302a21bf85921d216863ae4708844a874fdd6f58f1"
+      },
+      "camera": {
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626,
+        "yaw": 148.67131,
+        "fixed": true
+      }
+    },
+    {
+      "view": "spellstone_frame_edges",
+      "image": "spellstone-edges.png",
+      "imageSource": "native-edges/vestige-spellstone_frame_edges-apparatus-0/frame-00019.png",
+      "imageSha256": "72e1f6a6ffc9b6f5c4d6494bf3b3190a7e7bf265ddf7718781c269c8805f0819",
+      "frames": 25,
+      "seconds": 2.063159959,
+      "loadedModelHashes": {
+        "models/block/stone_spellstone.json": "18c0813c2fd46cbd6af623d66ebff2da4ed5f6f0c994a38e26cb6d3b19637b2d"
+      },
+      "camera": {
+        "eye": [
+          1.2,
+          65.8,
+          1.65
+        ],
+        "pitch": 17.32626,
+        "yaw": 148.67131,
+        "fixed": true
+      }
+    }
+  ],
+  "verified": [
+    "Java 21 compilation and resource processing passed",
+    "All 22 author models checked: 20 Plinth single/base/shaft/cap models and 2 Spellstones",
+    "Native loaded model hashes match each capture-only source model",
+    "Native frames inspected for both framed blocks and paired with current Spellstone"
+  ],
+  "originalBodiesUnchanged": true,
+  "originalDiamondQuadsUnchanged": true,
+  "plinthImbuementAreaClearInGeometry": true,
+  "columnCornersContinueAcrossJoins": true,
+  "separatelyCapturedStackedOrImbuedAppearance": false,
+  "browserReview": {
+    "testedContentWidths": [
+      536,
+      1185
+    ],
+    "allImagesLoaded": true,
+    "horizontalOverflow": false,
+    "temporaryViewportReset": true,
+    "desktopScreenshot": "edge-trim-preview-browser.jpg",
+    "narrowScreenshot": "edge-trim-preview-narrow-browser.jpg",
+    "desktopScreenshotSha256": "b67f6c7a5d266d595215cd6b6f29ba5c6dbfa3a13d93bacc0a721b9e0e4cbb7e"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_haste",
+  "name": "Haste",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "A Clock leads Copper's Haste association into allied sustenance, describing accelerated movement and work.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 3,
+      "role": "ally sustenance",
+      "ingredient": {
+        "items": [
+          "minecraft:golden_carrot"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Clock motif follows blank inscription clockwise.",
+    "Lightning channel follows clock motif clockwise.",
+    "Ally sustenance follows lightning channel clockwise.",
+    "Blank inscription follows ally sustenance clockwise."
+  ]
+}

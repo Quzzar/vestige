@@ -1,0 +1,72 @@
+{
+  "spell": "vestige:pf2_rust_cloud",
+  "name": "Rust Cloud",
+  "circle": 8,
+  "color": "bf663d",
+  "rationale": "Iron meets wet Kelp, airborne feather and a harmful brewing motif, describing the abrasive obscuring cloud.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 6,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold bound metal; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Draining focus follows blank inscription clockwise, across an unused outer Plinth.",
+    "Feather motif follows draining focus clockwise, across an unused outer Plinth.",
+    "Kelp motif follows feather motif clockwise, across an unused outer Plinth.",
+    "Bound metal follows kelp motif clockwise.",
+    "Blank inscription follows bound metal clockwise."
+  ]
+}

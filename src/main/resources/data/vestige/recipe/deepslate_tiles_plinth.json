@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:deepslate_tiles"
+    },
+    "S": {
+      "item": "minecraft:deepslate_tile_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:deepslate_tiles_plinth",
+    "count": 2
+  }
+}

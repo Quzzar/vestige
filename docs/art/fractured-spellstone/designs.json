@@ -1,0 +1,28 @@
+{
+  "status": "Owner authorized the fractured-relic direction after resetting everything except the top runes",
+  "signature": "Three heavy stone fragments with staggered narrow breaks; the Astral Seal bridges their flat upper surfaces.",
+  "rejected": "Literal Amethyst/Diamond edge decoration, continuous trim, gem collars and the repeated octagonal body.",
+  "dimensions": {
+    "centralSurface": "7/16",
+    "otherSurfaces": [
+      "6.7/16",
+      "6.85/16"
+    ],
+    "footprint": "13/16",
+    "fractureGaps": "1 model unit"
+  },
+  "fragments": 3,
+  "solidCuboids": 6,
+  "bakedFaces": 36,
+  "vanillaTextures": [
+    {
+      "path": "assets/minecraft/textures/block/stone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "33ac70ba8cb701087642a12c5fd29c1ba3006dc4730e9b014ed3a19ce7cdda7b"
+    }
+  ],
+  "scope": "One native art preview. Accepted Astral renderer, production collision/scroll placement, recipes, Plinths and installed Prism jar unchanged."
+}

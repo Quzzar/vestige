@@ -1,0 +1,8 @@
+Use case: precise-object-edit.
+Asset type: Minecraft-compatible Homebound Eye inventory item sprite with transparent background.
+Input image 1 is the EDIT TARGET: the refined chipped flint talisman with its red central eyepiece and pale grey eye frame. Input image 2 is the Minecraft vanilla Ender Pearl PALETTE REFERENCE.
+Primary request: change only the eye's pale frame and the eye-shaped area surrounding the red center to the Ender Pearl's deep desaturated teal-green colors. Keep the central pupil/eyepiece rich dark crimson red.
+The engraved almond-shaped eye should now contain dark teal-green 'whites', with a slightly lighter muted pearl-green edge, around the small red center. The green is restricted to this eye-shaped recess: all the flint outside the eye stays slate-grey. Preserve an obvious dark outline separating the red center from its green surroundings. Use the vanilla Ender Pearl reference for the teal/green shade family, not its round shape.
+Keep unchanged: the selected irregular triangular chipped-flint silhouette, pointed upper-left tip, broad rough lower edge, grey stone shading clusters, eye's position and size, compact dark red center with one small red highlight, and transparent background.
+Style: flat coarse pixel-art inventory sprite, simple Minecraft palette and large uniform pixel clusters. Match the existing pixel size. No extra detail, no smaller pixels, no gradients, no anti-aliasing, no realistic stone texture. Maintain sharp stepped outlines and a flat 2D sprite.
+Avoid: whitening the eye again, coloring the whole flint green, making the pupil green, gold, glow, halos, particles, additional eyes, orb shape, text, labels or backgrounds. Preserve genuine transparency.

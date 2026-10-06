@@ -1,0 +1,40 @@
+{
+  "source": "Actual Minecraft framebuffer recordings; native game image retained at 960x540",
+  "captionPlacement": "Additional forty-pixel band above the game image",
+  "size": [
+    960,
+    580
+  ],
+  "audio": false,
+  "states": [
+    {
+      "state": "ritual_failure",
+      "title": "Four slots: central blast and four Plinth bursts",
+      "outcome": "EXPLOSION_PENDING",
+      "sourceSha256": "af589672eb9a3c7dd4e6c2cbeba62bca2e11c18e52b88308b539ad5dbf874812",
+      "nativeFrames": 50,
+      "nativeSeconds": 6.167707833,
+      "serverTicks": 131
+    },
+    {
+      "state": "ritual_failure_eight",
+      "title": "Eight slots: central blast and eight Plinth bursts",
+      "outcome": "EXPLOSION_PENDING",
+      "sourceSha256": "23d6c5c224f1912b04c718f663628ed88f71b8a7cc62b35f468d6ad91d16ecc8",
+      "nativeFrames": 55,
+      "nativeSeconds": 6.026102667,
+      "serverTicks": 121
+    },
+    {
+      "state": "ritual_failure_spread",
+      "title": "Eight slots with distant, elevated Plinths",
+      "outcome": "EXPLOSION_PENDING",
+      "sourceSha256": "e5eb7e48fba9315e05e2e137682d525128c990883e4c1c170b71f4e058899e27",
+      "nativeFrames": 69,
+      "nativeSeconds": 6.012799125,
+      "serverTicks": 120
+    }
+  ],
+  "sha256": "7a67b6fc4b718cd2d0191762b5accf8581a51b95bf307cd354ba96e307e1c2c6",
+  "decodeVerification": "Complete reel decoded successfully"
+}

@@ -1298,8 +1298,8 @@
     "name": "Gluttony",
     "rarity": "common",
     "origin": "Iron",
-    "description": "Up to three foods consumed within ten seconds convert nutrition into native spell energy, capped at 200.",
-    "notes": "Temporary actor energy is a runtime resource seam; no discovery or progression system is installed.",
+    "description": "Up to three foods consumed within ten seconds convert nutrition into native mana, capped at 100.",
+    "notes": "Uses the native player mana pool; capacity progression remains deferred.",
     "traits": [
       "vestige:life",
       "vestige:transmutation",

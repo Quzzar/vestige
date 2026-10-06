@@ -1,0 +1,59 @@
+{
+  "spell": "vestige:haste",
+  "name": "Haste",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Living light and a Clock meet Copper's Haste and attack-speed associations to accelerate allied work.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 2,
+      "role": "clock motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clock"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    }
+  ],
+  "clues": [
+    "Living light follows blank inscription clockwise.",
+    "Clock motif follows living light clockwise.",
+    "Lightning channel follows clock motif clockwise.",
+    "Blank inscription follows lightning channel clockwise."
+  ]
+}

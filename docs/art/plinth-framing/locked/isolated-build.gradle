@@ -1,0 +1,11 @@
+// Dedicated package and task state keep shared development clients intact.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.layout.projectDirectory.dir('build/apparatus-framing-locked'))
+    }
+}
+gradle.projectsEvaluated {
+    gradle.rootProject.tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+        options.incremental = false
+    }
+}

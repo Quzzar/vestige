@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_grim_tendrils",
+  "name": "Grim Tendrils",
+  "circle": 4,
+  "color": "b397e0",
+  "rationale": "Echo feeds Bone and String to describe a narrow grasping line of void injury.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 2,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "string motif",
+      "ingredient": {
+        "items": [
+          "minecraft:string"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "String motif follows blank inscription clockwise.",
+    "Bone motif follows string motif clockwise.",
+    "Lost echo follows bone motif clockwise.",
+    "Blank inscription follows lost echo clockwise."
+  ]
+}

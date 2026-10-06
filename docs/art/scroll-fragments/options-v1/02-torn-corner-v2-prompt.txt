@@ -1,0 +1,10 @@
+Mode: built-in image generation, edit; transparent_background: true
+Reference: 02-torn-corner.png
+
+Use case: precise-object-edit
+Asset type: Minecraft scroll fragment inventory sprite concept.
+Edit target: the attached torn-corner paper option.
+Primary request: make this tiny paper scrap less geometric. Its current silhouette looks like an arrowhead. Replace the long pointed right-hand tip with a short blunt ragged edge; break up the straight diagonal boundaries with uneven little bites and frayed steps. Use an asymmetrical, compact, irregular torn-paper silhouette, with differently sized damaged corners. It should feel like an accidental little shred torn from a page, with no clear triangle or rectangle.
+Preserve: the very small size, centered placement with abundant transparent space, pale cream parchment and muted tan shading, a single incomplete faded brown ink mark, and simple Minecraft pixel-art style.
+Style: hard square pixels, flat inventory view, restrained cream and tan palette. Keep the paper shape readable at about 6 pixels across in a 16x16 inventory grid. Every pixel outside the scrap is transparent.
+Avoid: sharp arrowhead tip, arrow shape, triangle, rectangular sheet, geometric symmetry, thick outline, smooth illustration, glow, haze, shadow, crystals, ribbons, rolled ends, text, labels, extra objects.

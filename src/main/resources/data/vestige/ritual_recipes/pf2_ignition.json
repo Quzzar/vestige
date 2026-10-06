@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_ignition",
+  "name": "Ignition",
+  "circle": 4,
+  "color": "ff9d42",
+  "rationale": "Blaze and Flint precede Emerald in reversed order for an immediately aimed burning spark.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Evocation focus follows blank inscription clockwise.",
+    "Flint motif follows evocation focus clockwise.",
+    "Flame focus follows flint motif clockwise.",
+    "Blank inscription follows flame focus clockwise."
+  ]
+}

@@ -1,0 +1,15 @@
+Use case: stylized-concept.
+Asset type: low-fidelity shape exploration sheet for Vestige's Minecraft Standing Stone teleport block.
+Input images: all four supplied photos are SHAPE REFERENCES only. Study their irregular broad upright rock faces, diagonal sides, changes in thickness, leaning slabs and sloping broken crowns. Do not reproduce the photographs or environments.
+Primary request: create a clean landscape concept sheet showing EIGHT substantially different standing stones, labeled A through H, in two rows of four. Each is one continuous rough quarried upright monolith, made from very few broad flat polygon faces. The ENTIRE BODY must be irregular, angled and faceted; these must not be tall rectangular cuboids with accessories added to the top.
+A: a tall thin blade-like slab, broad flat face, irregular taper, sharp oblique summit, visibly thin side.
+B: a broad asymmetric five-sided standing rock, heavy spreading base, one sloping shoulder, crown off center.
+C: a modestly leaning thin slab, diagonal whole-body edges, taper and asymmetric thickness clearly visible.
+D: an upright slab with a bevel/chipped edge running most of its height, uneven sides, broken sloped crown.
+E: a shorter broad almost fan-shaped stone, five or six large angular perimeter edges, recognizable irregular natural silhouette.
+F: a thick solid menhir, roughly hexagonal cross section, tapered body and prominent broad facets, an uneven gently peaked crown.
+G: a narrow irregular standing rock whose faces change direction along its height, subtle sideways displacement, few angular planes and no curves.
+H: a broad stone with an especially strong diagonal summit and one irregular cutaway along a long side; natural broken-rock proportions.
+Style/medium: restrained low-poly game model concept illustrations with crisp straight polygon edges, flat-shaded neutral gray stone. Very low surface detail: no photo textures, no fine noise, no chipped pixel wallpaper. Aim for Minecraft-compatible low complexity with about 8 to 16 broad visible/hidden planes per stone. Same three-quarter camera and comparable scale for all eight; show enough side face to convey thickness and volume.
+Composition: generous space around each stone, simple off-white backdrop and subtle ground shadow, no landscape. One short unobtrusive four-glyph cyan rune carving near the center of each broad front face, different arrangements but only small accents so the irregular stone form remains the focus. Labels A, B, C, D on the first row and E, F, G, H on the second row, below each stone, no other lettering.
+Constraints: these are concept sketches, not in-game screenshots or final textures. All stones are single coherent rock masses. Avoid straight rectangular pillar bodies, added caps, stacked blocks, ledges, feet, plinth bases, symmetrical temple columns, decorative frames, crystals, crystals pretending to be stone, U-shaped prongs, fantasy horns, excessive mesh detail, photorealism, rounded smooth sculptures, Minecraft scene screenshots. These are ancient real-world-type standing stones simplified into intentional irregular polygon geometry.

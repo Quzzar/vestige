@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "view": "full-first-spawn",
+      "mana": 100.0,
+      "barVisible": false,
+      "guiScale": 2
+    },
+    {
+      "view": "empty",
+      "mana": 0.0,
+      "barVisible": true,
+      "guiScale": 2
+    },
+    {
+      "view": "half",
+      "mana": 50.0,
+      "barVisible": true,
+      "guiScale": 2
+    },
+    {
+      "view": "recovering",
+      "mana": 12.1,
+      "barVisible": true,
+      "guiScale": 2
+    },
+    {
+      "view": "full-scale-one",
+      "mana": 100.0,
+      "barVisible": false,
+      "guiScale": 1
+    },
+    {
+      "view": "half-scale-one",
+      "mana": 50.0,
+      "barVisible": true,
+      "guiScale": 1
+    }
+  ],
+  "source": "Minecraft main render target",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

@@ -1,0 +1,23 @@
+{
+  "jar": "/Users/quzzar/Projects/vestige/build/homebound-eye-flint/vestige-0.1.0.jar",
+  "sha256": "476cdafedfda3f838c9328f60f41e12d1adf13f865085f97d2e3930cbd6b0bc4",
+  "recipe_constant": "FLINT, no GOLD_INGOT",
+  "files": {
+    "assets/vestige/textures/item/homebound_eye.png": {
+      "sha256": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+      "matches_source": true
+    },
+    "assets/vestige/models/item/homebound_eye.json": {
+      "sha256": "8fc7d212c11406603c7b5117c499dbc54095277b31712b484c83cce70af0145a",
+      "matches_source": true
+    },
+    "com/quzzar/vestige/apparatus/HomeboundEyeRecipe.class": {
+      "matches_compiled_output": true,
+      "sha256": "d0d22eb48b820b672820a2e527a6e99fad78b5e5b75ca61c774a5e3860b14bcd"
+    },
+    "com/quzzar/vestige/magic/world/client/NativeManaCapture.class": {
+      "matches_compiled_output": true,
+      "sha256": "73f2e59e38fe4a2e7dfd2e8e9fe6bae0d6eea54038672e4263c469e8360dfb84"
+    }
+  }
+}

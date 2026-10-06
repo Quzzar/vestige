@@ -1,0 +1,18 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    254
+  ],
+  "colors": 77,
+  "sha256": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+  "generator": "built-in imagegen",
+  "final_prompt": "prompt-red-teal.txt",
+  "export": "Faithful nearest-neighbor 16-pixel game-resource export. No manual recoloring, redrawing or palette edits. The original generated artwork is preserved.",
+  "generated_original": "homebound-eye-flint-red-teal.png",
+  "packaged_texture": "src/main/resources/assets/vestige/textures/item/homebound_eye.png"
+}

@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:wither_skull",
+  "name": "Wither Skull",
+  "circle": 4,
+  "color": "57418f",
+  "rationale": "Bone and Coal darken the Emerald-directed skull into a slow withering blast.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "coal motif",
+      "ingredient": {
+        "items": [
+          "minecraft:coal"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Evocation focus follows blank inscription clockwise.",
+    "Coal motif follows evocation focus clockwise.",
+    "Bone motif follows coal motif clockwise.",
+    "Blank inscription follows bone motif clockwise."
+  ]
+}

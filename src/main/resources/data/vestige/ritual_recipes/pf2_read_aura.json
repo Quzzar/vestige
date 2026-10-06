@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_read_aura",
+  "name": "Read Aura",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Amethyst and Glowstone examine the inscription represented by a Book.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 2,
+      "role": "glow motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glowstone_dust"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "book motif",
+      "ingredient": {
+        "items": [
+          "minecraft:book"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Book motif follows blank inscription clockwise.",
+    "Glow motif follows book motif clockwise.",
+    "Resonant facet follows glow motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

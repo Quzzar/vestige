@@ -1,0 +1,49 @@
+Starting a Gradle Daemon, 2 busy and 14 stopped Daemons could not be reused, use --status for details
+Daemon JVM discovery is an incubating feature.
+Calculating task graph as no cached configuration is available for tasks: test jar verifyKithkynCompatibility
+> Task :jarJar NO-SOURCE
+> Task :verifyKithkynCompatibility
+> Task :generateModMetadata UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :createArtifactManifest UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :writeNeoForgeTestClasspath UP-TO-DATE
+> Task :prepareNeoForgeTestFiles UP-TO-DATE
+> Task :processResources
+> Task :compileJava
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                        ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                                                                         ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:90: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:230: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:248: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:265: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+                      ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 warnings
+
+> Task :classes
+> Task :jar
+
+> Task :compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :testClasses
+> Task :test
+
+BUILD SUCCESSFUL in 6m 15s
+13 actionable tasks: 6 executed, 7 up-to-date
+Configuration cache entry stored.

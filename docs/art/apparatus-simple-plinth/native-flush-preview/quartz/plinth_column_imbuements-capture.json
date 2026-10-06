@@ -1,0 +1,115 @@
+{
+  "spell": "vestige:plinth_column_imbuements",
+  "phase": 0,
+  "label": "Independent imbuements on every column segment",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "quartz",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/quartz_plinth.json": "4be48d4d6059fdaad62992287c063bc35fc029915d03ca42ac475020cdc49bff",
+    "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+    "models/block/quartz_plinth_base.json": "d08d446a72bf73e020d586584cb84f64bad0df5fc56381b5652feb2c64129eaa",
+    "models/block/quartz_plinth_shaft.json": "8b7f98ba525b0f672e99b61cc331e2cfe02bcb5ab2cd7f6b45a2e18199672b48",
+    "models/block/quartz_plinth_cap.json": "d9d0ec57f6e18455bf62687f78864a0305e5595326d29d10371b0a7eda8e4b48"
+  },
+  "seconds": 2.045908333,
+  "times": [
+    0.019184875,
+    0.094784583,
+    0.172775792,
+    0.249741167,
+    0.325817792,
+    0.40193225,
+    0.478264583,
+    0.559109292,
+    0.635554875,
+    0.712472625,
+    0.789044333,
+    0.867574708,
+    0.943172417,
+    1.024288,
+    1.104362542,
+    1.187017208,
+    1.25778175,
+    1.326970708,
+    1.400522917,
+    1.470850292,
+    1.539634417,
+    1.6212185,
+    1.70067675,
+    1.767875542,
+    1.850694583,
+    1.918169208,
+    2.001811125
+  ],
+  "scenario": "Identical empty and fully imbued columns. The right column holds separate Amethyst, Iron, Lapis and Gold sockets from bottom to top; stone geometry/texture is identical. All segments remain imbueable, including covered shafts.",
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d-1, y\u003d65, z\u003d0}": {
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dbase,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d-1, y\u003d66, z\u003d0}": {
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d-1, y\u003d67, z\u003d0}": {
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d-1, y\u003d68, z\u003d0}": {
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dcap,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d1, y\u003d65, z\u003d0}": {
+      "socket": "minecraft:amethyst_block",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dbase,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d1, y\u003d66, z\u003d0}": {
+      "socket": "minecraft:iron_block",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d1, y\u003d67, z\u003d0}": {
+      "socket": "minecraft:lapis_block",
+      "offering": "minecraft:air",
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d1, y\u003d68, z\u003d0}": {
+      "socket": "minecraft:gold_block",
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dcap,waterlogged\u003dfalse]"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d-1, y\u003d68, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d-1, y\u003d67, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d-1, y\u003d66, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d-1, y\u003d65, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d1, y\u003d66, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d1, y\u003d65, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d1, y\u003d67, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d1, y\u003d68, z\u003d0}": "vestige:quartz_plinth"
+  }
+}

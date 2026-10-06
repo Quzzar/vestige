@@ -1,0 +1,221 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Registered native blocks, server snapshots and unchanged after-level framebuffer images",
+  "capture_correction": "Fixture placement resolves neighbor-derived state before setBlock; exposed stacked heads are verified part=cap, not standalone models with extra feet.",
+  "captures": [
+    {
+      "scene": "plinth_columns",
+      "material": "quartz",
+      "image": "native/quartz/plinth_columns.png",
+      "frame": 12,
+      "frame_sha256": "5ba2bd3d8fa0506ba9621a0d79a1f42c8ce1232ea889e3788e7043a5aeb39190",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+        "models/block/plinth.json": "9376bd0c96d2eedbd7c39d6da48097831460482ab07cee128fe79439e36ae4e5",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/quartz_plinth.json": "02aa3501854e47402b2bf9d2637864e107151d4ba5a1588252a01553ccd6782f",
+        "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+        "models/block/quartz_plinth_base.json": "3630193087bd8e254828d9bcbcfc58cad0bf8129a0dac374a964f6866bc32b1b",
+        "models/block/quartz_plinth_shaft.json": "7992c9c05f44a9ff852911040f32492fd9a3f0714119439806249d01ada6e0f4",
+        "models/block/quartz_plinth_cap.json": "22d8805388ce3191f895c790b20e516a22f377ac3b9511b85e5f9806a7648e12"
+      },
+      "apparatus_state": {
+        "BlockPos{x=-2, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=single,waterlogged=false]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:diamond"
+        },
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=base,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=0, y=66, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:diamond"
+        },
+        "BlockPos{x=2, y=65, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=base,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=2, y=66, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=2, y=67, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=2, y=68, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:diamond"
+        }
+      },
+      "native_frames": 26,
+      "inspected": true,
+      "preview_pack": false
+    },
+    {
+      "scene": "plinth_column_detail",
+      "material": "quartz",
+      "image": "native/quartz/plinth_column_detail.png",
+      "frame": 12,
+      "frame_sha256": "39d0ed8d3d381f5a0e0f1ae4b5a2114dcca190c88e914f78335a8b4f0d5ee28e",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+        "models/block/plinth.json": "9376bd0c96d2eedbd7c39d6da48097831460482ab07cee128fe79439e36ae4e5",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/quartz_plinth.json": "02aa3501854e47402b2bf9d2637864e107151d4ba5a1588252a01553ccd6782f",
+        "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+        "models/block/quartz_plinth_base.json": "3630193087bd8e254828d9bcbcfc58cad0bf8129a0dac374a964f6866bc32b1b",
+        "models/block/quartz_plinth_shaft.json": "7992c9c05f44a9ff852911040f32492fd9a3f0714119439806249d01ada6e0f4",
+        "models/block/quartz_plinth_cap.json": "22d8805388ce3191f895c790b20e516a22f377ac3b9511b85e5f9806a7648e12"
+      },
+      "apparatus_state": {
+        "BlockPos{x=0, y=65, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=base,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=0, y=66, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=0, y=67, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=0, y=68, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:diamond"
+        }
+      },
+      "native_frames": 28,
+      "inspected": true,
+      "preview_pack": false
+    },
+    {
+      "scene": "plinth_column_imbuements",
+      "material": "quartz",
+      "image": "native/quartz/plinth_column_imbuements.png",
+      "frame": 12,
+      "frame_sha256": "7d27ab1305e98a11f87ae510dd6cdbf4cfc215be4f4ab44d28211e9e27d799c3",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+        "models/block/plinth.json": "9376bd0c96d2eedbd7c39d6da48097831460482ab07cee128fe79439e36ae4e5",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/quartz_plinth.json": "02aa3501854e47402b2bf9d2637864e107151d4ba5a1588252a01553ccd6782f",
+        "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+        "models/block/quartz_plinth_base.json": "3630193087bd8e254828d9bcbcfc58cad0bf8129a0dac374a964f6866bc32b1b",
+        "models/block/quartz_plinth_shaft.json": "7992c9c05f44a9ff852911040f32492fd9a3f0714119439806249d01ada6e0f4",
+        "models/block/quartz_plinth_cap.json": "22d8805388ce3191f895c790b20e516a22f377ac3b9511b85e5f9806a7648e12"
+      },
+      "apparatus_state": {
+        "BlockPos{x=-1, y=65, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=base,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=-1, y=66, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=-1, y=67, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=-1, y=68, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+          "socket": "minecraft:air",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=1, y=65, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=base,waterlogged=false]",
+          "socket": "minecraft:amethyst_block",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=1, y=66, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:iron_block",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=1, y=67, z=0}": {
+          "offeringSpace": false,
+          "state": "Block{vestige:quartz_plinth}[part=shaft,waterlogged=false]",
+          "socket": "minecraft:lapis_block",
+          "offering": "minecraft:air"
+        },
+        "BlockPos{x=1, y=68, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=cap,waterlogged=false]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:air"
+        }
+      },
+      "native_frames": 27,
+      "inspected": true,
+      "preview_pack": false
+    },
+    {
+      "scene": "apparatus_underwater",
+      "material": "quartz",
+      "image": "native/quartz/apparatus_underwater.png",
+      "frame": 12,
+      "frame_sha256": "fa6c2233a29af6ffdbced1c802dcda817061a346ce164cdcd3bdecc6a4e9daf3",
+      "asset_sha256": {
+        "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+        "models/block/plinth.json": "9376bd0c96d2eedbd7c39d6da48097831460482ab07cee128fe79439e36ae4e5",
+        "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+        "models/block/quartz_plinth.json": "02aa3501854e47402b2bf9d2637864e107151d4ba5a1588252a01553ccd6782f",
+        "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+        "models/block/quartz_plinth_base.json": "3630193087bd8e254828d9bcbcfc58cad0bf8129a0dac374a964f6866bc32b1b",
+        "models/block/quartz_plinth_shaft.json": "7992c9c05f44a9ff852911040f32492fd9a3f0714119439806249d01ada6e0f4",
+        "models/block/quartz_plinth_cap.json": "22d8805388ce3191f895c790b20e516a22f377ac3b9511b85e5f9806a7648e12"
+      },
+      "apparatus_state": {
+        "BlockPos{x=-1, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_spellstone}[part=single,waterlogged=true]",
+          "socket": "minecraft:air",
+          "offering": "vestige:spell_scroll"
+        },
+        "BlockPos{x=1, y=65, z=0}": {
+          "offeringSpace": true,
+          "state": "Block{vestige:quartz_plinth}[part=single,waterlogged=true]",
+          "socket": "minecraft:gold_block",
+          "offering": "minecraft:diamond"
+        }
+      },
+      "native_frames": 26,
+      "inspected": true,
+      "preview_pack": false
+    }
+  ]
+}

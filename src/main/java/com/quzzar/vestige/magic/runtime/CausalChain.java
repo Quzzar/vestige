@@ -17,8 +17,11 @@ public final class CausalChain {
 
     private final UUID rootId;
     private final List<ActivationKey> activations;
+    private final boolean secondary;
 
-    private CausalChain(UUID rootId, List<ActivationKey> activations) {
+    private CausalChain(UUID rootId, List<ActivationKey> activations) { this(rootId,activations,false); }
+    private CausalChain(UUID rootId,List<ActivationKey> activations,boolean secondary) {
+        this.secondary=secondary;
         this.rootId = Objects.requireNonNull(rootId, "rootId");
         this.activations = List.copyOf(activations);
     }
@@ -50,12 +53,15 @@ public final class CausalChain {
 
         List<ActivationKey> nextActivations = new ArrayList<>(activations);
         nextActivations.add(activation);
-        return Optional.of(new CausalChain(rootId, nextActivations));
+        return Optional.of(new CausalChain(rootId, nextActivations,secondary));
     }
 
     /**
      * Returns the root event identifier shared by every branch in this chain.
      */
+    public boolean secondary() { return secondary; }
+    public CausalChain asSecondary() { return secondary ? this : new CausalChain(rootId,activations,true); }
+
     public UUID rootId() {
         return rootId;
     }

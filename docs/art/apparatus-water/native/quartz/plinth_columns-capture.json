@@ -1,0 +1,107 @@
+{
+  "spell": "vestige:plinth_columns",
+  "phase": 0,
+  "label": "Connected Plinth columns",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "quartz",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+    "models/block/plinth.json": "9376bd0c96d2eedbd7c39d6da48097831460482ab07cee128fe79439e36ae4e5",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/quartz_plinth.json": "02aa3501854e47402b2bf9d2637864e107151d4ba5a1588252a01553ccd6782f",
+    "models/block/quartz_spellstone.json": "528cb14e5c1885d4682f7989ba252cf5f4d177f611fa999aa47dba098df23054",
+    "models/block/quartz_plinth_base.json": "3630193087bd8e254828d9bcbcfc58cad0bf8129a0dac374a964f6866bc32b1b",
+    "models/block/quartz_plinth_shaft.json": "7992c9c05f44a9ff852911040f32492fd9a3f0714119439806249d01ada6e0f4",
+    "models/block/quartz_plinth_cap.json": "22d8805388ce3191f895c790b20e516a22f377ac3b9511b85e5f9806a7648e12"
+  },
+  "seconds": 2.002128417,
+  "times": [
+    0.018318125,
+    0.095893417,
+    0.170258375,
+    0.245131875,
+    0.322395125,
+    0.3973375,
+    0.473835417,
+    0.554275334,
+    0.631700042,
+    0.706739417,
+    0.787320042,
+    0.8676905,
+    0.943817042,
+    1.021069042,
+    1.098478959,
+    1.173772417,
+    1.252763709,
+    1.330596167,
+    1.406064667,
+    1.481670084,
+    1.55678275,
+    1.638230375,
+    1.714745417,
+    1.790410375,
+    1.866262167,
+    1.941488625
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": {
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:gold_block",
+      "offering": "minecraft:diamond"
+    },
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dbase,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": {
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dcap,waterlogged\u003dfalse]",
+      "socket": "minecraft:gold_block",
+      "offering": "minecraft:diamond"
+    },
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dbase,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d2, y\u003d66, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d2, y\u003d67, z\u003d0}": {
+      "offeringSpace": false,
+      "state": "Block{vestige:quartz_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "socket": "minecraft:air",
+      "offering": "minecraft:air"
+    },
+    "BlockPos{x\u003d2, y\u003d68, z\u003d0}": {
+      "offeringSpace": true,
+      "state": "Block{vestige:quartz_plinth}[part\u003dcap,waterlogged\u003dfalse]",
+      "socket": "minecraft:gold_block",
+      "offering": "minecraft:diamond"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d2, y\u003d65, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d2, y\u003d66, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d2, y\u003d67, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d2, y\u003d68, z\u003d0}": "vestige:quartz_plinth",
+    "BlockPos{x\u003d-2, y\u003d65, z\u003d0}": "vestige:quartz_plinth"
+  },
+  "scenario": "One, two and four stacked Plinth blocks. Neighbor-derived foot/shaft/cap forms join without internal caps or vertical gaps. Actual Diamond offerings on exposed caps and independent Gold sockets."
+}

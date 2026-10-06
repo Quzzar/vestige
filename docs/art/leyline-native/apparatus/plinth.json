@@ -1,0 +1,53 @@
+{
+  "spell": "vestige:plinth",
+  "phase": 0,
+  "label": "Plinth",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "assetSha256": {
+    "models/block/spellstone.json": "f5ed10c576b51ada18a9e5be075602da8054a625a1ba06ca242441023b99c022",
+    "models/block/plinth.json": "2c55a2f809b0aac72bffbe72af448730ee413c06a3a8143442e48a219106ddeb",
+    "textures/block/spellstone_runes.png": "4e725e0dabb2f1fc4c242dbcc3f44be911b638b155bd374f8971425061eeec6d"
+  },
+  "seconds": 2.013851542,
+  "times": [
+    0.017772,
+    0.089246584,
+    0.160553084,
+    0.231397459,
+    0.304033334,
+    0.376665584,
+    0.453952292,
+    0.5306285,
+    0.608193042,
+    0.686059042,
+    0.760847,
+    0.832825042,
+    0.908486125,
+    0.983400959,
+    1.060167375,
+    1.136,
+    1.210868625,
+    1.286413834,
+    1.363403,
+    1.43936575,
+    1.516543459,
+    1.594102459,
+    1.670024042,
+    1.746502959,
+    1.821566542,
+    1.899501417,
+    1.975090417
+  ],
+  "outcome": "PLACED",
+  "scenario": "Registered Plinth placed on ordinary terrain, viewed with native Minecraft lighting.",
+  "blocks": {
+    "BlockPos{x=0, y=65, z=0}": "vestige:plinth"
+  },
+  "archivedFrame": 15,
+  "frameSha256": "6d70e9ff266bb9672b7311e0c035f811e8045f94d2cf95c85f4159d0a3824e7b"
+}

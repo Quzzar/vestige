@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:recall",
+  "name": "Recall",
+  "circle": 4,
+  "color": "b67cff",
+  "rationale": "Ender passage follows a Compass home through a recovery membrane's return motif.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "recovery veil",
+      "ingredient": {
+        "items": [
+          "minecraft:phantom_membrane",
+          "irons_spellbooks:cooldown_rune"
+        ]
+      },
+      "rationale": "Iron Recovery Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Recovery veil follows blank inscription clockwise.",
+    "Compass motif follows recovery veil clockwise.",
+    "Passage focus follows compass motif clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

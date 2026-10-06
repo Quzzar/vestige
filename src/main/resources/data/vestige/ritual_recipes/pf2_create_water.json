@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_create_water",
+  "name": "Create Water",
+  "circle": 4,
+  "color": "239dcc",
+  "rationale": "Kelp represents water and Clay its cauldron-like vessel; Amethyst focuses the small conjuration.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "clay motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clay_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Kelp motif follows blank inscription clockwise.",
+    "Clay motif follows kelp motif clockwise.",
+    "Resonant facet follows clay motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

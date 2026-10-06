@@ -1,0 +1,12 @@
+{
+  "instance": "Kithkyn Testing",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "e13f08b659a71e289f04e4edd925871d7fa0e5b97dee54b6ee14472b103e541e",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "stage": "final native scrolls, fragments and all 214 ritual recipes with crafting animations; slot-local shaping deferred",
+  "previous_sha256": "04476afd8849e9382864240b0b5ff44f8666d7ea6a7c91b305f4b257de50daba"
+}

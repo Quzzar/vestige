@@ -1,0 +1,40 @@
+{
+  "status": "One fresh study after the owner selected crystal worked into the stone edges",
+  "rejected": "Continuous trim and separate Diamond top settings were disliked across all four finishes.",
+  "signature": "One uninterrupted stone body with solid Amethyst edge facets; Diamond is cut into two opposing upper crystal edges.",
+  "dimensions": {
+    "receivingHeight": "7/16",
+    "bodyFootprint": "14/16",
+    "diamondFaceHeight": "1.5/16",
+    "diamondTopWidth": ".45/16"
+  },
+  "solidCuboids": 11,
+  "bakedFaces": 26,
+  "vanillaTextures": [
+    {
+      "path": "assets/minecraft/textures/block/smooth_stone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623"
+    },
+    {
+      "path": "assets/minecraft/textures/block/amethyst_block.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "03c7a9fbacf1cb89fe1265e2ef79cf39df6089c416a626b144bca448b2cd276e"
+    },
+    {
+      "path": "assets/minecraft/textures/block/diamond_block.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+    }
+  ],
+  "scope": "Native preview only; accepted Astral Seal, construction recipe, production collision and Prism installation unchanged."
+}

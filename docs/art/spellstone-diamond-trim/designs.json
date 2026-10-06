@@ -1,0 +1,115 @@
+{
+  "status": "Owner clarified ordinary trim rather than gilding, with some Diamond on top",
+  "shared": "Same seven-solid low octagon and lowered Astral Seal. A narrow stone border and two opposed fitted Diamond top inlays replace the Gold edge.",
+  "dimensions": {
+    "footprint": "14/16",
+    "receivingHeight": "7/16",
+    "topTrimWidth": ".5 model unit",
+    "sideTrimHeight": ".45 model unit"
+  },
+  "scope": "Native preview pack only; no replacement selected or installed, no gameplay or construction change.",
+  "designs": [
+    {
+      "id": "stone",
+      "name": "Smooth Stone",
+      "carrier": "vestige:spellstone",
+      "bodyTile": "minecraft:block/smooth_stone",
+      "trimTile": "minecraft:block/polished_deepslate",
+      "solidCuboids": 7,
+      "flatEdgingFaces": 16,
+      "flatInlayFaces": 4,
+      "bakedFaces": 42
+    },
+    {
+      "id": "blackstone",
+      "name": "Polished Blackstone",
+      "carrier": "vestige:tuff_spellstone",
+      "bodyTile": "minecraft:block/polished_blackstone",
+      "trimTile": "minecraft:block/smooth_stone",
+      "solidCuboids": 7,
+      "flatEdgingFaces": 16,
+      "flatInlayFaces": 4,
+      "bakedFaces": 42
+    },
+    {
+      "id": "quartz",
+      "name": "Smooth Quartz",
+      "carrier": "vestige:quartz_spellstone",
+      "bodyTile": "minecraft:block/quartz_block_bottom",
+      "trimTile": "minecraft:block/smooth_stone",
+      "solidCuboids": 7,
+      "flatEdgingFaces": 16,
+      "flatInlayFaces": 4,
+      "bakedFaces": 42
+    },
+    {
+      "id": "sandstone",
+      "name": "Smooth Sandstone",
+      "carrier": "vestige:sandstone_spellstone",
+      "bodyTile": "minecraft:block/sandstone_top",
+      "trimTile": "minecraft:block/cut_sandstone",
+      "solidCuboids": 7,
+      "flatEdgingFaces": 16,
+      "flatInlayFaces": 4,
+      "bakedFaces": 42
+    }
+  ],
+  "vanillaTextures": [
+    {
+      "path": "assets/minecraft/textures/block/smooth_stone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623"
+    },
+    {
+      "path": "assets/minecraft/textures/block/polished_blackstone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c"
+    },
+    {
+      "path": "assets/minecraft/textures/block/quartz_block_bottom.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5"
+    },
+    {
+      "path": "assets/minecraft/textures/block/sandstone_top.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c"
+    },
+    {
+      "path": "assets/minecraft/textures/block/polished_deepslate.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744"
+    },
+    {
+      "path": "assets/minecraft/textures/block/cut_sandstone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e"
+    },
+    {
+      "path": "assets/minecraft/textures/block/diamond_block.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+    }
+  ]
+}

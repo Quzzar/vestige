@@ -1,0 +1,6 @@
+Built-in image generation edit, selected second pass, 2026-10-04.
+Edit target: docs/art/apparatus-v9/rune-selected-source.png
+Transparent background: true
+Selected project asset: textures/spellstone_runes_purple.png
+
+Recolor the supplied transparent cyan rune artwork to Amethyst purple. This is strictly a color replacement of the existing image, not a new design. Keep every symbol exactly where it is: the small hollow central diamond, the large broken ring, all the distinct asymmetric angular glyphs, the individual square pixel shapes and all gaps. The central diamond must stay the same small size. Replace cyan/turquoise with violet/purple, and pale cyan highlights with pale lavender. Preserve transparency and do not add a background, outline, halo, new markings, symmetry, text or stone. Use the full-size supplied artwork directly as the edit target.

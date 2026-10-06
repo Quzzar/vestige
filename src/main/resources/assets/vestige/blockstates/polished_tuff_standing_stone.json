@@ -1,0 +1,516 @@
+{
+  "variants": {
+    "facing=north,half=lower,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=blade": {
+      "model": "vestige:block/polished_tuff_standing_stone_blade_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=shoulder": {
+      "model": "vestige:block/polished_tuff_standing_stone_shoulder_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=leaning": {
+      "model": "vestige:block/polished_tuff_standing_stone_leaning_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=spire": {
+      "model": "vestige:block/polished_tuff_standing_stone_spire_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=wedge": {
+      "model": "vestige:block/polished_tuff_standing_stone_wedge_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=crown": {
+      "model": "vestige:block/polished_tuff_standing_stone_crown_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=fang": {
+      "model": "vestige:block/polished_tuff_standing_stone_fang_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=cleft": {
+      "model": "vestige:block/polished_tuff_standing_stone_cleft_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=hunched": {
+      "model": "vestige:block/polished_tuff_standing_stone_hunched_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=taper": {
+      "model": "vestige:block/polished_tuff_standing_stone_taper_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=slant": {
+      "model": "vestige:block/polished_tuff_standing_stone_slant_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=tablet": {
+      "model": "vestige:block/polished_tuff_standing_stone_tablet_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=chisel": {
+      "model": "vestige:block/polished_tuff_standing_stone_chisel_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=saddle": {
+      "model": "vestige:block/polished_tuff_standing_stone_saddle_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=obelisk": {
+      "model": "vestige:block/polished_tuff_standing_stone_obelisk_upper",
+      "y": 270
+    },
+    "facing=north,half=lower,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_lower",
+      "y": 0
+    },
+    "facing=east,half=lower,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_lower",
+      "y": 90
+    },
+    "facing=south,half=lower,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_lower",
+      "y": 180
+    },
+    "facing=west,half=lower,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_lower",
+      "y": 270
+    },
+    "facing=north,half=upper,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_upper",
+      "y": 0
+    },
+    "facing=east,half=upper,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_upper",
+      "y": 90
+    },
+    "facing=south,half=upper,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_upper",
+      "y": 180
+    },
+    "facing=west,half=upper,profile=keel": {
+      "model": "vestige:block/polished_tuff_standing_stone_keel_upper",
+      "y": 270
+    }
+  }
+}

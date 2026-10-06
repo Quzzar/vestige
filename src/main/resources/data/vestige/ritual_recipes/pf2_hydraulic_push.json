@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_hydraulic_push",
+  "name": "Hydraulic Push",
+  "circle": 4,
+  "color": "278bcf",
+  "rationale": "Water-bearing Kelp meets Iron knockback and a Slime-shaped jet to drive one target away.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "kelp motif",
+      "ingredient": {
+        "items": [
+          "minecraft:kelp"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 3,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Kelp motif follows blank inscription clockwise.",
+    "Bound metal follows kelp motif clockwise.",
+    "Slime motif follows bound metal clockwise.",
+    "Blank inscription follows slime motif clockwise."
+  ]
+}

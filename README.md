@@ -1,4 +1,6 @@
-# Vestige: Traditions of Lost Magic
+# Vestige
+
+*Traditions of Lost Magic*
 
 A Minecraft magic, exploration and adventure mod about rediscovering lost traditions.
 Vestige currently focuses on native spells: **214 independently authored spells**, with
@@ -28,6 +30,11 @@ Wizardry Redux; the inherited gameplay systems have been retired in favor of its
 - **Actual cast recordings.** The searchable gallery includes a primary Minecraft cast for
   every spell, showing targets, area boundaries, status effects, movement and world changes.
   Recordings are silent excerpts with observed results, not browser recreations.
+- **Leyline crafting.** Craft one Spellstone and four or eight Plinths from Chiseled Stone
+  Bricks and Iron. All 214 spell recipes support native hints and dynamic Cross/Diagonal
+  layouts with independent spacing and height steps. Crafted scrolls store Amplify, Range,
+  Area and Casting Cost. Plinths hold separate embedded materials; their numeric bonuses
+  remain future work. Only the new Spellstone and Plinth identities remain; use a fresh world.
 
 The [spell reference](docs/spell-reference.md), [balance review](docs/spell-balance-review.md)
 and [art breakdown](docs/spell-art-direction.md) describe the complete catalog.
@@ -48,8 +55,9 @@ and [art breakdown](docs/spell-art-direction.md) describe the complete catalog.
 2. Install NeoForge for Minecraft 1.21.1 and put the jar in the server and clients' `mods` folders.
 3. Enter a world with operator permission and use the spell commands below.
 
-There is no published release yet. Native wands, spell discovery and progression are deferred;
-operator commands are the current development entrypoint. The old equipment and progression
+There is no published release yet. Native scroll casting, fragment discovery and Spellstone
+crafting are playable; [ritual instructions and layouts](docs/design/ritual-crafting.md) explain the loop.
+Native wands and equipment progression remain deferred. Operator commands also support testing. The old equipment and progression
 systems are not connected to these spells.
 
 ## Commands
@@ -59,7 +67,8 @@ systems are not connected to these spells.
 /vestige_magic cast vestige:fireball
 /vestige_magic cast vestige:pf2_wall_of_ice
 /vestige_magic cast vestige:heartstop
-/vestige_magic mana 200
+/vestige_magic scroll vestige:fireball
+/vestige_magic mana 100
 /vestige_magic cast_balanced vestige:fireball
 /vestige_magic interrupt
 /vestige_magic dispel
@@ -69,6 +78,21 @@ systems are not connected to these spells.
 `cast_balanced` enforces native mana and recovery. Recast a summon to dismiss its cohort;
 cast Portal twice while aiming at different positions to connect two points.
 See [the runtime guide](docs/design/spell-runtime.md) for payment, targeting and channel rules.
+
+## Try the apparatus
+
+Every scroll displays **Unknown Scroll** until you successfully cast and identify its spell.
+Ritual recipes show question marks in JEI/EMI until you successfully craft that spell;
+your crafting history reveals its actual ingredients independently of identification.
+Both kinds of knowledge persist for each player.
+
+Find **Spellstone** and **Plinth** in Creative's Functional Blocks tab, or craft their
+[construction grids](docs/leyline-playtesting.md#build-the-apparatus). Click the top to offer
+an ingredient; click a side with a block item to install a material socket. Sneak-click a
+side with an empty hand to recover the material. Empty-hand center activation performs
+fragment discovery or ingredient crafting; a reference scroll supplies hints and remains
+intact when collecting the result. [Leyline playtesting](docs/leyline-playtesting.md) records
+layout bounds, selection, worked casting examples and actual Minecraft captures.
 
 ## Watch the spells
 

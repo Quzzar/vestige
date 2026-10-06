@@ -1,0 +1,74 @@
+{
+  "spell": "vestige:pf2_fire_shield",
+  "name": "Fire Shield",
+  "circle": 8,
+  "color": "ff9d42",
+  "rationale": "Blaze and a protection seal meet Iron resistance and opposing cold to ward and burn nearby attackers.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "flame focus",
+      "ingredient": {
+        "items": [
+          "minecraft:blaze_rod",
+          "irons_spellbooks:fire_rune"
+        ]
+      },
+      "rationale": "Iron Fire focus"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 4,
+      "role": "bound metal",
+      "ingredient": {
+        "items": [
+          "minecraft:iron_ingot"
+        ]
+      },
+      "rationale": "Iron armor/knockback material channels"
+    },
+    {
+      "seat": 6,
+      "role": "cold focus",
+      "ingredient": {
+        "items": [
+          "minecraft:snowball",
+          "irons_spellbooks:frozen_bone",
+          "irons_spellbooks:ice_rune"
+        ]
+      },
+      "rationale": "Native cold substitute for Iron Frozen Bone"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold flame focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Flame focus follows blank inscription clockwise.",
+    "Protection seal follows flame focus clockwise.",
+    "Bound metal follows protection seal clockwise, across an unused outer Plinth.",
+    "Cold focus follows bound metal clockwise, across an unused outer Plinth.",
+    "Blank inscription follows cold focus clockwise, across an unused outer Plinth."
+  ]
+}

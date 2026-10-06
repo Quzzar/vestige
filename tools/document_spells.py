@@ -174,7 +174,7 @@ def action(data):
     if kind == 'grant_max_health':
         return f'Grant temporary {val("amount", 2)} maximum HP, owned by this cast'
     if kind == 'food_mana':
-        return f'Add {val("amount", 20)} native energy; stored actor energy capped at 200'
+        return f'Add {val("amount", 20)} native energy; restoration capped at 100 mana'
     if kind == 'redirect_projectiles':
         return f'Steer nearby projectiles within {val("radius", 6)} blocks toward current creature'
     labels = {

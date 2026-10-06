@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-06",
+  "jar": "/Users/quzzar/Projects/vestige/build/scroll-rarity-colors/vestige-0.1.0.jar",
+  "sha256": "7bb1764b1fbc8009aafd0d6da7e8f35cc6d3bdbcd57b4dacde1d50e0e0093847",
+  "zipIntegrity": true,
+  "unitTests": {
+    "tests": 105,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": 187,
+  "viewers": {
+    "jei": {
+      "captures": 3,
+      "registeredRituals": 216,
+      "normalAdvancedTooltipCases": 20,
+      "rgbaColors": {
+        "Unknown": "#FFFFFF",
+        "Common": "#FFFFFF",
+        "Uncommon": "#FFFF55",
+        "Rare": "#55FFFF",
+        "Mythic": "#FF55FF",
+        "Identified": "#FFFFFF",
+        "Augmented": "#55FFFF"
+      },
+      "liveCraftAndIdentification": true
+    },
+    "emi": {
+      "captures": 3,
+      "registeredRituals": 216,
+      "normalAdvancedTooltipCases": 20,
+      "rgbaColors": {
+        "Unknown": "#FFFFFF",
+        "Common": "#FFFFFF",
+        "Uncommon": "#FFFF55",
+        "Rare": "#55FFFF",
+        "Mythic": "#FF55FF",
+        "Identified": "#FFFFFF",
+        "Augmented": "#55FFFF"
+      },
+      "liveCraftAndIdentification": true
+    }
+  },
+  "payloadVersion": 4,
+  "matchedColorClasses": [
+    "com/quzzar/vestige/apparatus/SpellScrollItem$1.class",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class",
+    "com/quzzar/vestige/apparatus/SpellKnowledge.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload$Sync.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Offering.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload$1.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/NativeRecipeCapture$KnowledgeScreen.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload$Registration.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/NativeRecipeCapture.class"
+  ],
+  "installedIntoPrism": false,
+  "limits": [
+    "Integrated-server presentation verified; no remote multiplayer capture.",
+    "JEI and EMI verified individually; combined bridge behavior is outside this color pass.",
+    "EMI mod-name footer disabled only in the isolated inspection profile.",
+    "EMI dev-mode warnings retain the sibling Kithkyn untranslated mine_support_materials tag; native assertions pass."
+  ]
+}

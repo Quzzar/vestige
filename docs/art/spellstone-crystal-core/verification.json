@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "scope": "One native crystal-edge body study; no selection or production integration",
+  "nativeCaptureBuild": "passed",
+  "deterministicAuthorCheck": "passed",
+  "productionApparatusAuthorCheck": "passed",
+  "modelUvBoundsRotations": "passed",
+  "solidSections": 11,
+  "staticBakedFaces": 26,
+  "nativeViews": 3,
+  "videosEncodedAndDecoded": 3,
+  "originalVanilla16x16Tiles": 3,
+  "actualLoadedTextureHashesMatchOriginals": true,
+  "unchangedProductionBlockModels": 180,
+  "unchangedInventoryModels": 72,
+  "unchangedConstructionRecipes": 72,
+  "acceptedRendererMatchesInstalledClass": true,
+  "installedJarSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSha256": "3e130c206ad6412f09c49216429c5f62b324268340c1346180c6faf9c054401f",
+  "review": "All three final native framebuffer views inspected: daylight, side and night. Solid Amethyst edges and opposing shallow Diamond facets are visible.",
+  "gameplayBoundary": "Development resource-pack art only; carrier retains production collision and interactions. No full mechanics rerun for this art preview."
+}

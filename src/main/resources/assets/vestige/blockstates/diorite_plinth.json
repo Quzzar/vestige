@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/diorite_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/diorite_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/diorite_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/diorite_plinth_cap"
+    }
+  }
+}

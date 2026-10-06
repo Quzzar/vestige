@@ -1,0 +1,21 @@
+{
+  "unit_tests": 82,
+  "required_world_tests": 138,
+  "construction_recipes": 72,
+  "cosmetic_materials": 36,
+  "vanilla_full_block_slab_pairs": 36,
+  "mixed_finish_recipe": "unchanged base Fireball, exact v3 shaping, retained reference",
+  "mixed_finish_attunement": "same identity as Stone Bricks, six occupied/eight active nodes, retained sockets",
+  "native_client_inspected": [
+    "tuff",
+    "quartz"
+  ],
+  "actual_recording": "Tuff reference-preserving Flicker craft, 105 native frames, 160 server ticks",
+  "intermediate_test_failure": "Starfall cap fixture intermittently yielded 9 hits in full run; 16 isolated original cases passed; expanded flight envelope passes full suite; no spell/runtime change",
+  "final_build": "passed",
+  "kithkyn_compatibility": "passed",
+  "final_required_world_tests": "138 passed",
+  "jar_sha256": "c8215e2715e27fbff3f390353abff3ee6908725d1656b196fa0d0ee91af1ba75",
+  "prism_installed": true,
+  "native_instance_manual_test": "pending owner restart/playtest"
+}

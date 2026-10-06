@@ -1,0 +1,102 @@
+{
+  "spell": "vestige:pocket_dimension",
+  "name": "Pocket Dimension",
+  "circle": 8,
+  "color": "b67cff",
+  "rationale": "Ender and Obsidian bound an Echo-hidden room; Chest, Compass, Chorus and Amethyst preserve storage and the return path.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 6,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "lost echo",
+      "ingredient": {
+        "items": [
+          "minecraft:echo_shard"
+        ]
+      },
+      "rationale": "Iron Eldritch focus metadata and Timeless Slurry reagent; there is no Eldritch Rune in the pinned catalog"
+    },
+    {
+      "seat": 4,
+      "role": "chest motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chest"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "compass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:compass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "chorus motif",
+      "ingredient": {
+        "items": [
+          "minecraft:chorus_fruit"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold resonant facet, compass motif, lost echo, passage focus; the other required ingredients use Inner Plinths.",
+    "Resonant facet follows blank inscription clockwise.",
+    "Chorus motif follows resonant facet clockwise.",
+    "Compass motif follows chorus motif clockwise.",
+    "Chest motif follows compass motif clockwise.",
+    "Lost echo follows chest motif clockwise.",
+    "Obsidian motif follows lost echo clockwise.",
+    "Passage focus follows obsidian motif clockwise.",
+    "Blank inscription follows passage focus clockwise."
+  ]
+}

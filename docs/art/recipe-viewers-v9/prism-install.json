@@ -1,0 +1,28 @@
+{
+  "installedAtUtc": "2026-10-06T16:34:43.924361+00:00",
+  "instance": "Kithkyn Testing",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "installed": [
+    {
+      "file": "vestige-0.1.0.jar",
+      "source": "/Users/quzzar/Projects/vestige/build/ritual-viewer-install-v9/vestige-0.1.0.jar",
+      "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+      "sha256": "45e3e82d73de35595e41f826cffe4fdaa1f6a717dde47c73c64f99bfd8ae096c",
+      "previousSha256": "627236c09deb06b7c6a9dbb39747612f7ace00ba3bdb36e17b58a796067cc488",
+      "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/ritual-ui-20261006T163443Z/vestige-0.1.0.jar"
+    },
+    {
+      "file": "jei-1.21.1-neoforge-19.22.1.316.jar",
+      "source": "/Users/quzzar/Projects/vestige/build/ritual-viewer-install-v9/jei-1.21.1-neoforge-19.22.1.316.jar",
+      "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/jei-1.21.1-neoforge-19.22.1.316.jar",
+      "sha256": "ef13d6d38e394c13520475dfd6df1aa74a0c7c76f6e253acc7d1d425bcbcf6d9",
+      "previousSha256": null,
+      "backup": null
+    }
+  ],
+  "recipeViewer": "JEI 19.22.1.316, same Minecraft 1.21.1 NeoForge artifact used in native ritual captures",
+  "verified": "Both installed SHA-256 hashes match the verified staged originals; jars pass ZIP integrity checks",
+  "nativeEvidence": "docs/art/recipe-viewers-v9/README.md",
+  "manualPackTest": "Pending owner restart and in-game testing; the Prism instance was not launched here"
+}

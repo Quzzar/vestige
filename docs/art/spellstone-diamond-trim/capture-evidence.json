@@ -1,0 +1,225 @@
+{
+  "source": "Actual Minecraft framebuffer; unchanged PNGs, videos encoded at measured frame times",
+  "rendererSourceSha256": "ef04ce63666ee84b9b4423f848a34b9cabe3606bbb387d94da69452e6f10a884",
+  "productionInstallationUnchanged": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "noShaderPack": true,
+  "noDynamicWorldLight": true,
+  "audio": false,
+  "shots": [
+    {
+      "name": "trim_blackstone",
+      "capture": "build/spellstone-diamond-trim/vestige-trim_blackstone-apparatus-0/capture.json",
+      "posterFrame": 31,
+      "posterSha256": "5e964d3d59509c197b5560370431e49770cf098054f7521e16234001d680d7ba",
+      "videoSha256": "2ee1696a25af6a82ff147987fec958516e9d96be4cb960c406f9303dda8c2fde",
+      "nativeFrames": 66,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+        "textures/block/cut_sandstone.png": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "2c79f061f6a505ea6151f825b486866cc51607d074ce53cfaaabf344439906a3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "bc3f49b51e085edd92350b99267d493c1cb74b36ae7ffb843481f6ea568a48e2",
+        "models/block/quartz_spellstone.json": "c181d765c9132f2480b32f94dd4af0bc3eda0b35bc02cb76fcdd3bb4a98891d5",
+        "models/block/sandstone_spellstone.json": "b50ba28c3b025bf7e9f651deb8e7bd38396922886d8cfdf564a3a83b139d86ba"
+      }
+    },
+    {
+      "name": "trim_comparison",
+      "capture": "build/spellstone-diamond-trim/vestige-trim_comparison-apparatus-0/capture.json",
+      "posterFrame": 32,
+      "posterSha256": "6ab69a3c2a704c8a3c53a62492c135a424bbfed4214426e06183b614b3748271",
+      "videoSha256": "a34d7be32b0f9b7a14cb8a083ea641b0d802f162c0b979af600850454b12ab55",
+      "nativeFrames": 66,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          3.0,
+          67.0,
+          6.5
+        ],
+        "pitch": 15.068488,
+        "yaw": 157.38014,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+        "textures/block/cut_sandstone.png": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "2c79f061f6a505ea6151f825b486866cc51607d074ce53cfaaabf344439906a3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "bc3f49b51e085edd92350b99267d493c1cb74b36ae7ffb843481f6ea568a48e2",
+        "models/block/quartz_spellstone.json": "c181d765c9132f2480b32f94dd4af0bc3eda0b35bc02cb76fcdd3bb4a98891d5",
+        "models/block/sandstone_spellstone.json": "b50ba28c3b025bf7e9f651deb8e7bd38396922886d8cfdf564a3a83b139d86ba"
+      }
+    },
+    {
+      "name": "trim_quartz",
+      "capture": "build/spellstone-diamond-trim/vestige-trim_quartz-apparatus-0/capture.json",
+      "posterFrame": 32,
+      "posterSha256": "c4f786a63fa4af22e61c827e20a62b2e00c73f73934d17a7dec968b59bb709e3",
+      "videoSha256": "f129814f163f8cbba973a2fd3e4c763eda6797f523d90ebb657073e48839ccdd",
+      "nativeFrames": 61,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+        "textures/block/cut_sandstone.png": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "2c79f061f6a505ea6151f825b486866cc51607d074ce53cfaaabf344439906a3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "bc3f49b51e085edd92350b99267d493c1cb74b36ae7ffb843481f6ea568a48e2",
+        "models/block/quartz_spellstone.json": "c181d765c9132f2480b32f94dd4af0bc3eda0b35bc02cb76fcdd3bb4a98891d5",
+        "models/block/sandstone_spellstone.json": "b50ba28c3b025bf7e9f651deb8e7bd38396922886d8cfdf564a3a83b139d86ba"
+      }
+    },
+    {
+      "name": "trim_sandstone",
+      "capture": "build/spellstone-diamond-trim/vestige-trim_sandstone-apparatus-0/capture.json",
+      "posterFrame": 30,
+      "posterSha256": "94bf9be2d1815e48eaccd3ff5f5ff1e69401da76f09ce04afa2cb90b4b5b30e9",
+      "videoSha256": "5f46b4cad8574548c80aaa18a92c3cc3b5b7a36211a292d651ed49075c728e90",
+      "nativeFrames": 67,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+        "textures/block/cut_sandstone.png": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "2c79f061f6a505ea6151f825b486866cc51607d074ce53cfaaabf344439906a3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "bc3f49b51e085edd92350b99267d493c1cb74b36ae7ffb843481f6ea568a48e2",
+        "models/block/quartz_spellstone.json": "c181d765c9132f2480b32f94dd4af0bc3eda0b35bc02cb76fcdd3bb4a98891d5",
+        "models/block/sandstone_spellstone.json": "b50ba28c3b025bf7e9f651deb8e7bd38396922886d8cfdf564a3a83b139d86ba"
+      }
+    },
+    {
+      "name": "trim_stone",
+      "capture": "build/spellstone-diamond-trim/vestige-trim_stone-apparatus-0/capture.json",
+      "posterFrame": 27,
+      "posterSha256": "c3cf80b91b51587b7722db39a55dfc1efa9570d46bc471702427a65e106944b0",
+      "videoSha256": "de4943d896711c70cef0ff6ca3b2820d8e3bfb782ab15ed7a70b619236530b9a",
+      "nativeFrames": 58,
+      "framebuffer": [
+        960,
+        540
+      ],
+      "lighting": "noon",
+      "camera": {
+        "eye": [
+          1.35,
+          66.1,
+          1.7
+        ],
+        "pitch": 30.028658,
+        "yaw": 144.68878,
+        "fixed": true
+      },
+      "materialTextureSha256": {
+        "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+        "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+        "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+        "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+        "textures/block/polished_deepslate.png": "e6b777f3ba1b44e7ceaea9cfb963c053c1562ab89b348824d5c1ea0e9629f744",
+        "textures/block/cut_sandstone.png": "3deb1313da4ee31db72e5f29ebaa352d8f6ad77fbd5567bf539a35cc4d6f366e",
+        "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+      },
+      "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+      "assetSha256": {
+        "models/block/spellstone.json": "2c79f061f6a505ea6151f825b486866cc51607d074ce53cfaaabf344439906a3",
+        "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+        "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+        "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+        "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+        "models/block/tuff_spellstone.json": "bc3f49b51e085edd92350b99267d493c1cb74b36ae7ffb843481f6ea568a48e2",
+        "models/block/quartz_spellstone.json": "c181d765c9132f2480b32f94dd4af0bc3eda0b35bc02cb76fcdd3bb4a98891d5",
+        "models/block/sandstone_spellstone.json": "b50ba28c3b025bf7e9f651deb8e7bd38396922886d8cfdf564a3a83b139d86ba"
+      }
+    }
+  ]
+}

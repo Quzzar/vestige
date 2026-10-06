@@ -1,0 +1,34 @@
+{
+  "status": "Three body studies requested after owner rejected the four corner ticks and thin perimeter trim",
+  "shared": "The accepted, lowered native Astral Seal; same Stone Brick/Polished Andesite palette; vanilla 16x16 texture assets; flat scroll bed at y7/16.",
+  "scope": "Opt-in native Minecraft preview pack only. Production models, shapes, interactions, recipes and Prism installation remain unchanged.",
+  "designs": [
+    {
+      "id": "relic",
+      "name": "Inscribed Relic",
+      "carrier": "vestige:spellstone",
+      "signature": "A substantial octagonal mass on a low inset foot, with two carved faces and a single diamond-shaped focus in each.",
+      "solidCuboids": 8,
+      "flatFaces": 4,
+      "bakedFaces": 32
+    },
+    {
+      "id": "tablet",
+      "name": "Bound Tablet",
+      "carrier": "vestige:tuff_spellstone",
+      "signature": "Square-cut corners, an inset scroll bed and two broad carved stone bindings crossed by fine cyan seams.",
+      "solidCuboids": 7,
+      "flatFaces": 2,
+      "bakedFaces": 44
+    },
+    {
+      "id": "vault",
+      "name": "Vaulted Seal",
+      "carrier": "vestige:quartz_spellstone",
+      "signature": "The octagonal seal rests on two squat piers, leaving a real opening beneath; broad front/back inscriptions replace jewelry trim.",
+      "solidCuboids": 9,
+      "flatFaces": 2,
+      "bakedFaces": 36
+    }
+  ]
+}

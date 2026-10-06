@@ -1,0 +1,101 @@
+{
+  "spell": "vestige:corner_crust",
+  "phase": 0,
+  "label": "Crystal corner flecks",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "corner-details",
+  "apparatusCamera": {
+    "fixed": true,
+    "eye": [
+      1.22,
+      65.92,
+      1.46
+    ],
+    "pitch": 27.32389,
+    "yaw": 143.1301
+  },
+  "materialTextureSha256": {
+    "textures/block/smooth_stone.png": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623",
+    "textures/block/polished_blackstone.png": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c",
+    "textures/block/quartz_block_bottom.png": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5",
+    "textures/block/sandstone_top.png": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c",
+    "textures/block/diamond_block.png": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "457219aa92968e3317c48f718837a7860193cb98f8a4231f70066dd33893fb3c",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb",
+    "models/block/tuff_spellstone.json": "00d8948dd30a85f636e6e2e8e1c68c975c2f116b7a6a1982f502acb507c399ad",
+    "models/block/quartz_spellstone.json": "93bd8d0d24252452cff2cf18df58d63552a7996fa7f648bcb51bcfa4795cd1ed",
+    "models/block/sandstone_spellstone.json": "5936dbe4786fb200a4d75a0576ef7b97acdf3b4296f8c03e4363ce3bcc8e69c9",
+    "models/block/polished_blackstone_spellstone.json": "8479a8302e71b5016fe31e3ea8e688ff53ff68b3cb41e675d6c7ee082c7f8f9c",
+    "models/block/smooth_quartz_spellstone.json": "52f8320790459d5cfdc4a03144d8401c24b921e1f9d1e865ebffbc3b802885d7",
+    "models/block/smooth_sandstone_spellstone.json": "b4c19eb5fa5383d00788160831fbee3f8517bb71f319e736795fd0d04f00abee"
+  },
+  "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+  "seconds": 3.014390083,
+  "times": [
+    0.020758708,
+    0.089732583,
+    0.173080666,
+    0.240175541,
+    0.312092541,
+    0.380843,
+    0.448752916,
+    0.528934833,
+    0.612635625,
+    0.693541541,
+    0.774177458,
+    0.843322708,
+    0.912932666,
+    0.980156791,
+    1.04923625,
+    1.123727958,
+    1.19057475,
+    1.274188125,
+    1.347228416,
+    1.416634625,
+    1.496127166,
+    1.563940166,
+    1.63144275,
+    1.715530875,
+    1.783730791,
+    1.853414708,
+    1.923303375,
+    1.994010416,
+    2.065805291,
+    2.147382333,
+    2.216104125,
+    2.296056416,
+    2.375487791,
+    2.44559825,
+    2.514291166,
+    2.583977125,
+    2.655444416,
+    2.727571166,
+    2.79515325,
+    2.867294916,
+    2.949577333
+  ],
+  "scenario": "Capture-only native corner texture study: four pixel details wrap the vertical corners of the compact three-piece top stone. Original 16x16 Minecraft tiles supply stone and Diamond colours. Same body and Astral Seal in all seven views; recipes, collision and production installation unchanged.",
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:sandstone_spellstone"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "socket": "minecraft:air",
+      "state": "Block{vestige:sandstone_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true,
+      "offering": "minecraft:air"
+    }
+  },
+  "outcome": "PLACED"
+}

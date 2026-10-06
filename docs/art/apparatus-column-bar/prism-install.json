@@ -1,0 +1,15 @@
+{
+  "installed_at_utc": "2026-10-05T18:58:02.748292+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "8e2828332951d79125a506cc31ca6da7d62f75e0ba229fbacf295b3450da5717",
+  "destination_sha256": "8e2828332951d79125a506cc31ca6da7d62f75e0ba229fbacf295b3450da5717",
+  "previous_sha256": "d37b1330505c1cc27970cb35c5f0bc1218773cc049339f0b3c78ba15a7404b7c",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-column-bar.jar",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "changes": "Remove only the four lower large-panel rails from stacked Plinth caps, retain small imbuement borders. All 36 finishes.",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

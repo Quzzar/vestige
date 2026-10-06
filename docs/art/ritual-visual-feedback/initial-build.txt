@@ -1,0 +1,24 @@
+> Task :createArtifactManifest UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :jarJar NO-SOURCE
+> Task :sourcesJar
+> Task :downloadAssets UP-TO-DATE
+> Task :writeNeoForgeTestClasspath UP-TO-DATE
+> Task :prepareNeoForgeTestFiles UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :compileJava
+> Task :classes
+> Task :jar
+> Task :javadoc
+> Task :compileTestJava
+> Task :testClasses
+> Task :javadoc
+> Task :test
+> Task :javadocJar
+> Task :assemble
+> Task :check
+> Task :build
+BUILD SUCCESSFUL in 25s
+15 actionable tasks: 7 executed, 8 up-to-date

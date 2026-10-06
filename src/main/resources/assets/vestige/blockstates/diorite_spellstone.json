@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/diorite_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/diorite_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/diorite_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/diorite_spellstone"
+    }
+  }
+}

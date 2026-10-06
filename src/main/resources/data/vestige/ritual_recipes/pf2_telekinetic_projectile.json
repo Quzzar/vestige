@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_telekinetic_projectile",
+  "name": "Telekinetic Projectile",
+  "circle": 4,
+  "color": "99aabf",
+  "rationale": "Stone is lifted by resonant Amethyst and a feather into the telekinetically thrown projectile.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "stone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:stone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 3,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Stone motif follows blank inscription clockwise.",
+    "Resonant facet follows stone motif clockwise.",
+    "Feather motif follows resonant facet clockwise.",
+    "Blank inscription follows feather motif clockwise."
+  ]
+}

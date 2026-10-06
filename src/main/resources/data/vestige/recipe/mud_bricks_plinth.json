@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:mud_bricks"
+    },
+    "S": {
+      "item": "minecraft:mud_brick_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:mud_bricks_plinth",
+    "count": 2
+  }
+}

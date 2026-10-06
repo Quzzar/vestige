@@ -1,0 +1,109 @@
+{
+  "minecraft_version": "1.21.1",
+  "scope": "historical_wall_reference",
+  "source": "Vanilla walls block tag and corresponding vanilla shaped crafting recipes",
+  "wall_tag": "data/minecraft/tags/block/walls.json",
+  "materials": [
+    {
+      "wall": "minecraft:cobblestone_wall",
+      "body": "minecraft:cobblestone"
+    },
+    {
+      "wall": "minecraft:mossy_cobblestone_wall",
+      "body": "minecraft:mossy_cobblestone"
+    },
+    {
+      "wall": "minecraft:brick_wall",
+      "body": "minecraft:bricks"
+    },
+    {
+      "wall": "minecraft:prismarine_wall",
+      "body": "minecraft:prismarine"
+    },
+    {
+      "wall": "minecraft:red_sandstone_wall",
+      "body": "minecraft:red_sandstone"
+    },
+    {
+      "wall": "minecraft:mossy_stone_brick_wall",
+      "body": "minecraft:mossy_stone_bricks"
+    },
+    {
+      "wall": "minecraft:granite_wall",
+      "body": "minecraft:granite"
+    },
+    {
+      "wall": "minecraft:stone_brick_wall",
+      "body": "minecraft:stone_bricks"
+    },
+    {
+      "wall": "minecraft:nether_brick_wall",
+      "body": "minecraft:nether_bricks"
+    },
+    {
+      "wall": "minecraft:andesite_wall",
+      "body": "minecraft:andesite"
+    },
+    {
+      "wall": "minecraft:red_nether_brick_wall",
+      "body": "minecraft:red_nether_bricks"
+    },
+    {
+      "wall": "minecraft:sandstone_wall",
+      "body": "minecraft:sandstone"
+    },
+    {
+      "wall": "minecraft:end_stone_brick_wall",
+      "body": "minecraft:end_stone_bricks"
+    },
+    {
+      "wall": "minecraft:diorite_wall",
+      "body": "minecraft:diorite"
+    },
+    {
+      "wall": "minecraft:blackstone_wall",
+      "body": "minecraft:blackstone"
+    },
+    {
+      "wall": "minecraft:polished_blackstone_brick_wall",
+      "body": "minecraft:polished_blackstone_bricks"
+    },
+    {
+      "wall": "minecraft:polished_blackstone_wall",
+      "body": "minecraft:polished_blackstone"
+    },
+    {
+      "wall": "minecraft:cobbled_deepslate_wall",
+      "body": "minecraft:cobbled_deepslate"
+    },
+    {
+      "wall": "minecraft:polished_deepslate_wall",
+      "body": "minecraft:polished_deepslate"
+    },
+    {
+      "wall": "minecraft:deepslate_tile_wall",
+      "body": "minecraft:deepslate_tiles"
+    },
+    {
+      "wall": "minecraft:deepslate_brick_wall",
+      "body": "minecraft:deepslate_bricks"
+    },
+    {
+      "wall": "minecraft:mud_brick_wall",
+      "body": "minecraft:mud_bricks"
+    },
+    {
+      "wall": "minecraft:tuff_wall",
+      "body": "minecraft:tuff"
+    },
+    {
+      "wall": "minecraft:polished_tuff_wall",
+      "body": "minecraft:polished_tuff"
+    },
+    {
+      "wall": "minecraft:tuff_brick_wall",
+      "body": "minecraft:tuff_bricks"
+    }
+  ],
+  "superseded_by": "../design/apparatus-materials.json"
+}

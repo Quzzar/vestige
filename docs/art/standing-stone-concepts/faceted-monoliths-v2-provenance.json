@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-06",
+  "mode": "built-in image generation",
+  "purpose": "shape concept exploration from owner-provided standing-stone photographs",
+  "source_image": "/Users/quzzar/.codex/generated_images/01a0f319-9b8b-7f41-902a-f5e0f775332d/exec-aedec283-72a9-47bd-b3ad-58fa470871da.png",
+  "archived_image": "faceted-monoliths-v2.png",
+  "sha256": "3279f755d64818172297a0fc181565daf906a033569567f6c25b9a509a46c56a",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "prompt_file": "faceted-monoliths-v2-prompt.txt",
+  "prompt_sha256": "a97b0a74dc9b06510dd4c4c4819135317c6c44422a483d2182d6fcc9471cab67",
+  "reference_images": [
+    {
+      "name": "Screenshot 2026-10-06 at 11.32.30\u202fAM.png",
+      "sha256": "0c9a85469d258175d390059d7eacd8d8fc04f288fe55b24698adbaff19864330"
+    },
+    {
+      "name": "Screenshot 2026-10-06 at 11.32.43\u202fAM.png",
+      "sha256": "4a0c5d1b203a3dfff06e7faea3998a9b84c07f68a43fca4be151dba0d385bb5a"
+    },
+    {
+      "name": "Screenshot 2026-10-06 at 11.32.56\u202fAM.png",
+      "sha256": "0d326593a889a692106d58f164147ed13db42cd1a239db0f09f989b4180095ce"
+    },
+    {
+      "name": "Screenshot 2026-10-06 at 11.33.16\u202fAM.png",
+      "sha256": "4432a58ce2b2d47465ffe60ab88b16e608bdb39f70b0b1b35ebf5f7992aa46b9"
+    }
+  ],
+  "inspection": {
+    "eight_A_to_H_labels": true,
+    "unclipped_stones": true,
+    "whole_body_taper_lean_and_depth_variety": true
+  },
+  "approval": "Shape principles accepted; specific silhouettes not yet selected",
+  "limitations": [
+    "Concept illustration, not Minecraft rendering",
+    "Painted stone surfaces and rune glyphs are illustrative",
+    "No native mesh, texture, collision, occupancy or runtime change",
+    "First cuboid-only sheet rejected"
+  ]
+}

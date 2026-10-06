@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: first texture concept for the Minecraft 1.21.1 mod Vestige, item named Whispering Shell.
+Primary request: one original Minecraft inventory item sprite: a small magical nautilus shell used to whisper to someone carrying a matching shell.
+Scene/backdrop: completely transparent background.
+Subject: a weathered ivory and muted peach nautilus shell with a clear, simple dark spiral and a small shadowed mouth at the lower right. A restrained copper clasp grips the lower edge, holding one tiny violet amethyst inset. The shell remains the dominant silhouette. Keep the spiral large and easily readable.
+Style/medium: authentic extremely low-resolution Minecraft 16 x 16 item pixel art displayed at a large nearest-neighbor scale. Design on a strict 16 x 16 logical square-pixel grid. Every logical pixel is a solid uniform-color square. Make the object about 12 to 14 logical pixels across, with a little transparent margin. Shape curves entirely from stepped square pixels. Use around ten opaque colors total: three ivory/peach shell values, two muted brown shadows, two copper values, three violet amethyst values. Binary transparency.
+Composition/framing: single centered sprite, a side view of a curled shell, no ground or cast shadow.
+Constraints: native Minecraft item simplicity, a readable chunky silhouette at tiny inventory size, quiet magical detail. No text, captions, border, rune lettering, frame, presentation sheet, multiple objects, smooth gradient, anti-aliasing, subpixel detail, glossy rendering, bloom, sparkles, realistic shell texture or 3D render. Do not turn the item into a jewel-covered necklace.

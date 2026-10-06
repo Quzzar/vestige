@@ -1,0 +1,13 @@
+{
+  "loader": "neoforge:obj",
+  "model": "vestige:models/block/standing_stone_crown_upper.obj",
+  "automatic_culling": false,
+  "shade_quads": true,
+  "flip_v": false,
+  "emissive_ambient": false,
+  "ambientocclusion": false,
+  "textures": {
+    "body": "minecraft:block/bricks",
+    "particle": "minecraft:block/bricks"
+  }
+}

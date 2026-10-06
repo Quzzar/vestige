@@ -1,0 +1,46 @@
+{
+  "installedAtUTC": "2026-10-06T20:12:09.949371+00:00",
+  "instance": "Kithkyn Testing",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "2cd4a31461e8ca8943ae5a5e947ec4a2bdc72881075136323535df9e8812eca5",
+  "stagedJar": "/Users/quzzar/Projects/vestige/build/standing-list-review/vestige-0.1.0.jar",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/standing-list-20261006T201209680011Z/vestige-0.1.0.jar",
+  "backupSha256": "aa341bc7cb7b70fc3629d4ac2fcfd2b2557992772fa71a797e7c2cccdfa68dbb",
+  "loadedMenuAndServerClassesMatch": true,
+  "approvedApparatusColorsAnd252ModelsIncluded": true,
+  "installation": "atomic single-jar replacement",
+  "minecraftRestarted": false,
+  "otherModsOrWorldsChanged": false,
+  "verifiedAtUTC": "2026-10-06T20:13:48.796636+00:00",
+  "installationPerformedBy": "Coordinated Standing Stone menu chat",
+  "sourceInstallRecord": "../../standing-stone-list/prism-install.json",
+  "zipIntegrityIndependentlyVerified": true,
+  "approvedApparatusModelsByteIdentical": 252,
+  "approvedProductionClassesIndependentlyVerified": {
+    "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254",
+    "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+    "com/quzzar/vestige/apparatus/ApparatusShapes.class": "fe76bc79d681de23dcd05c12cb196d382593da2854dd9c27163c42c2b7ba9478"
+  },
+  "engineProfile": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.248"
+  },
+  "nativeAppearanceEngine": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72"
+  },
+  "clientRestartedOrPackLaunched": false,
+  "languageNormalization": {
+    "previousSha256": "9fbc333878dba7ba48e468e48793d02261f9eeabd76f7685488eb136e6e9377e",
+    "currentSha256": "9fbc333878dba7ba48e468e48793d02261f9eeabd76f7685488eb136e6e9377e",
+    "reason": "Restore canonical JSON Unicode escaping required by both apparatus and Standing Stone authors; all values and keys are identical to the installed jar.",
+    "semanticValuesMatchInstalled": true
+  },
+  "laterCanonicalLanguagePackage": {
+    "record": "../../standing-stone-list/prism-install.json",
+    "installedSha256": "da405fb78ffbcf411f688a2df5e39bdaebc5705cf2c9caa2fe2cf35e47896f6e",
+    "installedAtUTC": "2026-10-06T20:15:46.760664+00:00",
+    "translationsUnchanged": true,
+    "approvedModelsAndClassesUnchanged": true
+  }
+}

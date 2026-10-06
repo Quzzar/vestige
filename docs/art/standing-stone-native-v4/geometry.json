@@ -1,0 +1,242 @@
+[
+  {
+    "profile": "blade",
+    "height": 2.0,
+    "width": 0.5625,
+    "thickness": 0.25,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      7,
+      23.52
+    ]
+  },
+  {
+    "profile": "shoulder",
+    "height": 1.8125,
+    "width": 0.875,
+    "thickness": 0.5,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      8,
+      23.52
+    ]
+  },
+  {
+    "profile": "leaning",
+    "height": 1.9375,
+    "width": 0.8125,
+    "thickness": 0.3125,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      10,
+      23.52
+    ]
+  },
+  {
+    "profile": "spire",
+    "height": 2.0,
+    "width": 0.4375,
+    "thickness": 0.3125,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      7.5,
+      23
+    ]
+  },
+  {
+    "profile": "wedge",
+    "height": 1.8125,
+    "width": 0.875,
+    "thickness": 0.5,
+    "bakedFaces": [
+      10,
+      7,
+      17
+    ],
+    "runeAnchor": [
+      6,
+      20
+    ]
+  },
+  {
+    "profile": "crown",
+    "height": 1.8125,
+    "width": 0.875,
+    "thickness": 0.375,
+    "bakedFaces": [
+      7,
+      13,
+      20
+    ],
+    "runeAnchor": [
+      8,
+      24
+    ]
+  },
+  {
+    "profile": "fang",
+    "height": 1.8125,
+    "width": 0.8125,
+    "thickness": 0.3125,
+    "bakedFaces": [
+      15,
+      9,
+      24
+    ],
+    "runeAnchor": [
+      8.7,
+      19
+    ]
+  },
+  {
+    "profile": "cleft",
+    "height": 1.9375,
+    "width": 0.875,
+    "thickness": 0.4375,
+    "bakedFaces": [
+      11,
+      13,
+      24
+    ],
+    "runeAnchor": [
+      8,
+      24
+    ]
+  },
+  {
+    "profile": "hunched",
+    "height": 1.5625,
+    "width": 0.875,
+    "thickness": 0.625,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      7.5,
+      21
+    ]
+  },
+  {
+    "profile": "taper",
+    "height": 1.875,
+    "width": 0.6875,
+    "thickness": 0.4375,
+    "bakedFaces": [
+      10,
+      12,
+      22
+    ],
+    "runeAnchor": [
+      7,
+      23
+    ]
+  },
+  {
+    "profile": "slant",
+    "height": 1.8125,
+    "width": 0.875,
+    "thickness": 0.375,
+    "bakedFaces": [
+      7,
+      13,
+      20
+    ],
+    "runeAnchor": [
+      7.5,
+      24
+    ]
+  },
+  {
+    "profile": "tablet",
+    "height": 1.5625,
+    "width": 0.75,
+    "thickness": 0.25,
+    "bakedFaces": [
+      7,
+      13,
+      20
+    ],
+    "runeAnchor": [
+      8,
+      22
+    ]
+  },
+  {
+    "profile": "chisel",
+    "height": 2.0,
+    "width": 0.5625,
+    "thickness": 0.1875,
+    "bakedFaces": [
+      12,
+      10,
+      22
+    ],
+    "runeAnchor": [
+      7.5,
+      24
+    ]
+  },
+  {
+    "profile": "saddle",
+    "height": 1.625,
+    "width": 0.75,
+    "thickness": 0.5625,
+    "bakedFaces": [
+      11,
+      13,
+      24
+    ],
+    "runeAnchor": [
+      7.5,
+      19
+    ]
+  },
+  {
+    "profile": "obelisk",
+    "height": 1.9375,
+    "width": 0.625,
+    "thickness": 0.375,
+    "bakedFaces": [
+      7,
+      10,
+      17
+    ],
+    "runeAnchor": [
+      8,
+      23.5
+    ]
+  },
+  {
+    "profile": "keel",
+    "height": 1.875,
+    "width": 0.875,
+    "thickness": 0.25,
+    "bakedFaces": [
+      15,
+      10,
+      25
+    ],
+    "runeAnchor": [
+      8,
+      23
+    ]
+  }
+]

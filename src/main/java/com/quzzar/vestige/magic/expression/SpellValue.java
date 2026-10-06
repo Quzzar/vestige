@@ -9,11 +9,17 @@ import java.util.Objects;
 /**
  * A numerical value that an effect can resolve from a cast's trait profile.
  */
-public sealed interface SpellValue permits SpellValue.Constant, SpellValue.Trait, SpellValue.Sum, SpellValue.Product, SpellValue.Fact {
+public sealed interface SpellValue permits SpellValue.Constant, SpellValue.Trait, SpellValue.Sum, SpellValue.Product, SpellValue.Fact, SpellValue.Clamp {
     /**
      * Resolves this value against the supplied trait profile.
      */
     double resolve(TraitProfile traits);
+
+    /** Explicit authored limits on a complete numerical expression. */
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+        public Clamp { Objects.requireNonNull(value); if (!Double.isFinite(minimum) || !Double.isFinite(maximum) || minimum>maximum) throw new IllegalArgumentException("Invalid expression limits"); }
+        @Override public double resolve(TraitProfile traits) { return Math.max(minimum,Math.min(maximum,value.resolve(traits))); }
+    }
 
     /** Numerical world or stored state, resolved by a cast context. */
     record Fact(ResourceLocation path) implements SpellValue {

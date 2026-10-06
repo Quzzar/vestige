@@ -1,0 +1,9 @@
+{
+  "key": "ef296d46cf1fb04659d2cf47f19535a6a620b8b474929aa1b9fbfa27f9a010b0",
+  "previewWeight": "11/16",
+  "modelSha256": "ee186adce9721f18fc97b6af680fa7b2ceccd425aafcbfd0718f005186012166",
+  "source": "Minecraft main framebuffer; native item/bar/rune/BundleTooltip rendering",
+  "normalAndAdvancedRunes": true,
+  "fixtureOnly": true,
+  "temporaryTexture": "minecraft:item/bundle"
+}

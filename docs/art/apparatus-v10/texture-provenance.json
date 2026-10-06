@@ -1,0 +1,109 @@
+{
+  "revision": 10,
+  "date": "2026-10-03",
+  "mode": "built-in imagegen generation followed by targeted edit",
+  "sources": [
+    {
+      "file": "spellstone-crown-initial-source.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "f3b6ff335c119d2f4ac1174b295521f56b88a2dd53a6792f1190648ba4b3bab7"
+    },
+    {
+      "file": "spellstone-crown-source.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "sha256": "d34d408ef84b1befcb5697d1832a9a933f794ced9ff0d36994e474223cce5f2f"
+    }
+  ],
+  "prompts": [
+    "spellstone-crown-generation-prompt.txt",
+    "spellstone-crown-edit-prompt.txt"
+  ],
+  "preparation": "Selected edited crown: RGBA BOX reduction to 64x64, binary alpha cutoff 96/255, composited over original 16x16 lower-half mirrored Chiseled Deepslate enlarged 4x nearest. Other native textures unchanged from revision 9.",
+  "textures": [
+    {
+      "file": "diamond_inlay.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB",
+      "sha256": "ef3b076f4a6555eeb9d4f2bd9a3f935b9dfc580c8b0d6bc753202eee51464d08"
+    },
+    {
+      "file": "pedestal_amethyst.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "RGB",
+      "sha256": "c7d69c3708eb3c8bcab7c16b3da5e993fcddaf36bf76f844accc70155ccfe292"
+    },
+    {
+      "file": "runic_pedestal_runes.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "sha256": "4e725e0dabb2f1fc4c242dbcc3f44be911b638b155bd374f8971425061eeec6d"
+    },
+    {
+      "file": "runic_pedestal_top.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGB",
+      "sha256": "6d43ffeec2ff8ba438aa8f229f85440a82f3359e5e70a854c53b0b601417fc7b"
+    },
+    {
+      "file": "spellstone_top.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGB",
+      "sha256": "99e99eba6c228dc6024e5e39e4af6dde9930e09a9d133cbcc8e38f4e58e0259c"
+    },
+    {
+      "file": "spellstone_top_inlay.png",
+      "size": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "sha256": "57382302a3981736b5fe417b36328cb936a1d39f07efe18f502922fd743857dc"
+    }
+  ],
+  "vanilla_attribution": "Minecraft 1.21.1 Chiseled Deepslate by Mojang",
+  "native_screenshots": [
+    {
+      "file": "minecraft-apparatus_layout.png",
+      "sha256": "14e66d5b80f44a8a08589b7087b6d6be8d90725d7152c60db1742049363d13a4",
+      "source": "Unchanged Minecraft main render target frame 00010"
+    },
+    {
+      "file": "minecraft-runic_pedestal.png",
+      "sha256": "2a8e1bf53f925aab6d99a7e0498742860de6e721f32dd7e48f7c9c4066e281e9",
+      "source": "Unchanged Minecraft main render target frame 00010"
+    },
+    {
+      "file": "minecraft-spellstone.png",
+      "sha256": "9efbc28fbb33751e21909b9562064500dcbad522b36f2a0d650b69cfeb1161fa",
+      "source": "Unchanged Minecraft main render target frame 00010"
+    },
+    {
+      "file": "minecraft-stone_pedestal.png",
+      "sha256": "3ecdf7f059f6b64f1e6d4f06cb35d72e6f7000496fc5d50fb657e4e0ccb5750e",
+      "source": "Unchanged Minecraft main render target frame 00010"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "Four unselected corner studies; seven actual native views visually inspected",
+  "build": "Java 21 build and verifyKithkynCompatibility passed",
+  "unitTests": {
+    "tests": 95,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldTests": "Not repeated for isolated art previews; production collision and gameplay unchanged",
+  "authorChecks": [
+    "author_spellstone_corners.py --check",
+    "author_apparatus_models.py --check",
+    "audit_apparatus_detail.py --check",
+    "git diff --check"
+  ],
+  "sharedStructuralBodyMatchesProduction": true,
+  "allNativeTextureSizes": [
+    16,
+    16
+  ],
+  "captureViews": 7,
+  "videoVerification": "All seven recordings encode/decode at 960x540 with measured native timestamps",
+  "comparisonSheets": [
+    {
+      "path": "corner-options.png",
+      "rowMajorViews": [
+        "chip",
+        "notch",
+        "vein",
+        "crust"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "7f60fcf571d638ab108904b0aa466d3249c5c10c5d4b4848e7a42bf957019050",
+      "unchangedPosterPixels": true
+    },
+    {
+      "path": "material-options.png",
+      "rowMajorViews": [
+        "notch",
+        "blackstone",
+        "quartz",
+        "sandstone"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "cdfe977a88aa69938c1a969db01107d8921b8b0c94f2def0277b966c0d493355",
+      "unchangedPosterPixels": true
+    }
+  ],
+  "buildJarSha256": "c361d919ea04b06b5ecaa46b4600afda3217a2e215daddea3fa50e2ec44283da",
+  "prismInstallationSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSourceSha256": "315cd86d6fe19feecff29389d83d4b0a2551b1607cb7965b794677e828769ad4"
+}

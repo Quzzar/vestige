@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "scope": "Three opt-in native art candidates; no selected replacement or production integration",
+  "nativeCaptureBuild": "passed",
+  "deterministicAuthorCheck": "passed",
+  "legalModelUvBoundsRotationCheck": "passed",
+  "nativeViews": 4,
+  "fixedCloseCamera": [
+    1.35,
+    66.1,
+    1.7
+  ],
+  "videosEncodedAndDecoded": 4,
+  "unchangedProductionBlockModels": 180,
+  "unchangedInventoryModels": 72,
+  "unchangedConstructionRecipes": 72,
+  "acceptedRendererMatchesInstalledClass": true,
+  "installedJarSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "authorSha256": "18fd56cd9119be0156a075dd5ca3440ace3a5bd6aacf637a7569b4fe7c6eb1f4",
+  "gameplayBoundary": "Preview carriers use existing collision/interaction behavior; replacement-body collision has not been integrated or tested",
+  "review": "All four final framebuffer views inspected; initial moved-camera and compressed-texture runs excluded from published evidence"
+}

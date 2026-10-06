@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:dark_prismarine"
+    },
+    "S": {
+      "item": "minecraft:dark_prismarine_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:dark_prismarine_plinth",
+    "count": 2
+  }
+}

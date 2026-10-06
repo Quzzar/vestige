@@ -1,0 +1,1139 @@
+{
+  "schema_version": 1,
+  "status": "adopted_material_reference_not_runtime",
+  "minecraft": "1.21.1",
+  "sources": [
+    {
+      "project": "iron431/irons-jewelry",
+      "revision": "bd3fae5579376472c04d9090e42a7a932d604333",
+      "version": "1.21.1-2.0.2"
+    },
+    {
+      "project": "iron431/irons-spells-n-spellbooks",
+      "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+      "version": "3.16.3"
+    }
+  ],
+  "quality_policy": {
+    "quality_source": "pattern_designated_part_material",
+    "default_source_quality": 1,
+    "effective_quality": "source_quality * pattern_multiplier * bonus_multiplier",
+    "attribute_amount": "base_amount * effective_quality",
+    "scalar_amount": "base + (effective_quality - 1) * slope",
+    "scalar_clamping": "positive-base values are bounded upward by minimum_magnitude and downward by maximum_magnitude; negative-base values reverse these comparisons",
+    "missing_parameter": "no bonus for that parameter",
+    "parameter_override": "an explicit pattern bonus parameter replaces material selection for that bonus",
+    "sources": [
+      "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/main/java/io/redspace/ironsjewelry/core/data/JewelryData.java",
+      "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/main/java/io/redspace/ironsjewelry/core/data/QualityScalar.java",
+      "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/main/java/io/redspace/ironsjewelry/core/bonuses/AttributeBonusType.java"
+    ]
+  },
+  "materials": [
+    {
+      "source_id": "irons_jewelry:allthemodium",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/allthemodium"
+      },
+      "availability": "optional_compatibility",
+      "quality": 3.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "wearer",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 120.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:strength"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor_toughness",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:slowness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/allthemodium.json",
+        "file_sha256": "cdf34cd9fd877e0ec5d487c880cb83a82ed1eb0321099e3930318fdbf6929f3e"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:amethyst",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/amethyst"
+      },
+      "availability": "vanilla",
+      "quality": 1.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_damage",
+          "target": "causing_entity",
+          "arguments": {
+            "amount": {
+              "base": 3.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            },
+            "damage_type": "minecraft:thorns"
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:armor_pierce",
+          "base_amount": 1.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:poison",
+        "positive_effect": "minecraft:regeneration"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/amethyst.json",
+        "file_sha256": "58494d5d42809e54a05e92da42798b7843434cbb7579fd0612bf5918cc63734d"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:brass",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/brass"
+      },
+      "availability": "optional_compatibility",
+      "quality": 0.75,
+      "parameters": {
+        "attribute": {
+          "target": "minecraft:generic.knockback_resistance",
+          "base_amount": 0.1,
+          "operation": "add_value"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/brass.json",
+        "file_sha256": "47d1b53f55468dfd6b599345e1397b47a8a881ccea26478e46eb3ae155572de5"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:bronze",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/bronze"
+      },
+      "availability": "optional_compatibility",
+      "quality": 1.0,
+      "parameters": {
+        "attribute": {
+          "target": "neoforge:swim_speed",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/bronze.json",
+        "file_sha256": "55de46346f66d92c8690235ec953573ca4d8864a6e7e9291ea8a1c54f76ea288"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:copper",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/copper"
+      },
+      "availability": "vanilla",
+      "quality": 0.5,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_damage",
+          "target": "causing_entity",
+          "arguments": {
+            "amount": {
+              "base": 3.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            },
+            "damage_type": "minecraft:lightning_bolt"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.attack_speed",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:poison",
+        "positive_effect": "minecraft:haste"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/copper.json",
+        "file_sha256": "028332f7f3a9e445b6887ff357bf084dab02a4207905fd53242c98a0da2d30a2"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:diamond",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/diamond"
+      },
+      "availability": "vanilla",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_damage",
+          "target": "causing_entity",
+          "arguments": {
+            "amount": {
+              "base": 1.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            },
+            "damage_type": "minecraft:magic"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:weakness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/diamond.json",
+        "file_sha256": "f58878decbaeb8f0b6abeb659d0e78e65163b188411d1d5cf5f57d294dc33838"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:emerald",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/emerald"
+      },
+      "availability": "vanilla",
+      "quality": 1.5,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:create_items",
+          "target": "causing_entity",
+          "arguments": {
+            "chance": {
+              "base": 0.05,
+              "slope": 0.05,
+              "minimum_magnitude": 0.01,
+              "maximum_magnitude": 1.0
+            },
+            "item": "minecraft:emerald",
+            "max_count": {
+              "base": 4.0,
+              "slope": 2.0,
+              "minimum_magnitude": 0
+            },
+            "min_count": {
+              "base": 1.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.movement_speed",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:infested",
+        "positive_effect": "minecraft:speed"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/emerald.json",
+        "file_sha256": "589d3d9f64571da441fbc123c65a5f366dc078dadcc77baba48048e0c491bc70"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:garnet",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/garnet"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "wearer",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 80.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:resistance"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.attack_damage",
+          "base_amount": 0.04,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:wither"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/garnet.json",
+        "file_sha256": "dc675193915e215236006ec73dc43d5249cddaf79f478a1fd2909e78d47fbd50"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:gold",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/gold"
+      },
+      "availability": "vanilla",
+      "quality": 1.5,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:ignite",
+          "target": "causing_entity",
+          "arguments": {
+            "tick_duration": {
+              "base": 40.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:mining_speed",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:poison",
+        "positive_effect": "minecraft:fire_resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/gold.json",
+        "file_sha256": "f503eb5847f892aaf7be4e5d7237660580b51455564b1e7ce6823ca5ef7363c5"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:iron",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/iron"
+      },
+      "availability": "vanilla",
+      "quality": 0.75,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:knockback",
+          "target": "causing_entity",
+          "arguments": {
+            "strength": {
+              "base": 2.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:slowness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/iron.json",
+        "file_sha256": "e25ed1d13ef6e43edf6adbfd752ac8112296c732f3180e5bfe132ab8644b5b57"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:lapis",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/lapis"
+      },
+      "availability": "vanilla",
+      "quality": 1.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "causing_entity",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 80.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:slowness"
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:experience_gained",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:glowing"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/lapis.json",
+        "file_sha256": "e5c11a1aae61fa39880c356e31dbeba4b9b8d24bc7da3b45d10b9740a16234e9"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:moonstone",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/moonstone"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:explode",
+          "target": "causing_entity",
+          "arguments": {
+            "affect_self": false,
+            "block_interaction": "none",
+            "knockback_multiplier": {
+              "base": 2.5,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "radius": {
+              "base": 2.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:arrow_damage",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:weaving",
+        "positive_effect": "minecraft:invisibility"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/moonstone.json",
+        "file_sha256": "7c4908c300d509e54445fc0ae7292b8ebfc153c41740315b3f3a54576857b54e"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:netherite",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/netherite"
+      },
+      "availability": "vanilla",
+      "quality": 2.5,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "wearer",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 60.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:strength"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.attack_damage",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:wither",
+        "positive_effect": "minecraft:strength"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/netherite.json",
+        "file_sha256": "b2f9db32740f01ff2c99a0ef4b92d03e0ce7ed4813230c39e35f1d86df7ff599"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:onyx",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/onyx"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:heal",
+          "target": "wearer",
+          "arguments": {
+            "amount": {
+              "base": 4.0,
+              "slope": 2.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:crit_damage",
+          "base_amount": 0.15,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:blindness"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/onyx.json",
+        "file_sha256": "3226828a12b7c09ef6ec01e435d6d481fb2309ab8b0f941698b020f3b463ba45"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:peridot",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/peridot"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:knockback",
+          "target": "causing_entity",
+          "arguments": {
+            "strength": {
+              "base": -2.0,
+              "slope": -1.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:mining_speed",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:poison",
+        "positive_effect": "minecraft:haste"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/peridot.json",
+        "file_sha256": "32fc9be3a0e80c29d374c990d30540fab50f5ed16a6987a41944811d4abd54fa"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:platinum",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/platinum"
+      },
+      "availability": "optional_compatibility",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:knockback",
+          "target": "causing_entity",
+          "arguments": {
+            "strength": {
+              "base": 2.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:armor_pierce",
+          "base_amount": 1.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:weakness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/platinum.json",
+        "file_sha256": "5b243d754484da99d4c84ba5b2afe1ed191d0713efb5001715e25a8646dcfe7a"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:ruby",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/ruby"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:ignite",
+          "target": "causing_entity",
+          "arguments": {
+            "tick_duration": {
+              "base": 40.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.max_health",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:hunger"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/ruby.json",
+        "file_sha256": "92d118e6a5f14af8cef47e8bcf85a0f4aa20ff270d4ecfd92e2af5d268859da2"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:sapphire",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/sapphire"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_freeze",
+          "target": "causing_entity",
+          "arguments": {
+            "amount": {
+              "base": 40.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "irons_lib:dodge_chance",
+          "base_amount": 0.03,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:slowness"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/sapphire.json",
+        "file_sha256": "fa9f46ef7f1730f4996fa1c4bdd8e730ce8c23b4c21b98becb1eed52ffd032ed"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:silver",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/silver"
+      },
+      "availability": "optional_compatibility",
+      "quality": 1.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:explode",
+          "target": "wearer",
+          "arguments": {
+            "affect_self": false,
+            "block_interaction": "none",
+            "knockback_multiplier": {
+              "base": 2.5,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "radius": {
+              "base": 2.0,
+              "slope": 1.5,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.movement_speed",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "minecraft:bad_omen",
+        "positive_effect": "minecraft:speed"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/silver.json",
+        "file_sha256": "96b0160d94bf9f05fd1db3fdf73d34ab99f780c4c1aca94e3a7abe1b353a8667"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:topaz",
+      "family": "gem",
+      "ingredient": {
+        "tag": "c:gems/topaz"
+      },
+      "availability": "jewelry_gem",
+      "quality": 2.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:knockback",
+          "target": "wearer",
+          "arguments": {
+            "strength": {
+              "base": -2.0,
+              "slope": -1.0,
+              "minimum_magnitude": 0
+            }
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor_toughness",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:levitation"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/topaz.json",
+        "file_sha256": "78a9b3d26e05d6efedcf2d67b6a75bf1ec2427a39f29de78a94c89df3457c270"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:unobtainium",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/unobtainium"
+      },
+      "availability": "optional_compatibility",
+      "quality": 4.0,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "wearer",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 120.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:strength"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor_toughness",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:slowness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/unobtainium.json",
+        "file_sha256": "61c6e0f0fbe80acf4b0f5fc0519f1a4e43013875948ed92c25f5eca19748ae86"
+      }
+    },
+    {
+      "source_id": "irons_jewelry:vibranium",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/vibranium"
+      },
+      "availability": "optional_compatibility",
+      "quality": 3.5,
+      "parameters": {
+        "action": {
+          "source_type": "irons_jewelry:apply_effect",
+          "target": "wearer",
+          "arguments": {
+            "amplifier": {
+              "base": 0.0,
+              "slope": 1.0,
+              "minimum_magnitude": 0,
+              "maximum_magnitude": 2.0
+            },
+            "duration": {
+              "base": 120.0,
+              "slope": 0.0,
+              "minimum_magnitude": 0
+            },
+            "effect": "minecraft:strength"
+          }
+        },
+        "attribute": {
+          "target": "minecraft:generic.armor_toughness",
+          "base_amount": 2.0,
+          "operation": "add_value"
+        },
+        "negative_effect": "minecraft:slowness",
+        "positive_effect": "minecraft:resistance"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-jewelry/blob/bd3fae5579376472c04d9090e42a7a932d604333/src/generated/resources/data/irons_jewelry/irons_jewelry/material/vibranium.json",
+        "file_sha256": "d9eb0823d80790c7cfdb19e7abafdcaed8c548fa8756189c9703afcbe65ae293"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:arcane",
+      "family": "metal",
+      "ingredient": {
+        "item": "irons_spellbooks:arcane_ingot"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:max_mana",
+          "base_amount": 50,
+          "operation": "add_value"
+        },
+        "action": {
+          "source_type": "irons_jewelry:create_items",
+          "target": "causing_entity",
+          "arguments": {
+            "item": "irons_spellbooks:arcane_essence",
+            "chance": {
+              "base": 0.04,
+              "slope": 0.02,
+              "minimum_magnitude": 0.01,
+              "maximum_magnitude": 1
+            },
+            "min_count": {
+              "base": 1,
+              "slope": 0,
+              "minimum_magnitude": 0
+            },
+            "max_count": {
+              "base": 3,
+              "slope": 2,
+              "minimum_magnitude": 0
+            }
+          }
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/arcane.json",
+        "file_sha256": "05442fafc181d7101e976141874423d3defd7aa452b53293accc21a23f201b86"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:divine_pearl",
+      "family": "gem",
+      "ingredient": {
+        "item": "irons_spellbooks:divine_pearl"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:casting_movespeed",
+          "base_amount": 0.1,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "irons_spellbooks:rend",
+        "positive_effect": "irons_spellbooks:fortify",
+        "action": {
+          "source_type": "irons_jewelry:heal",
+          "target": "wearer",
+          "arguments": {
+            "amount": {
+              "base": 4.0,
+              "slope": 2.0,
+              "minimum_magnitude": 0
+            }
+          }
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/divine_pearl.json",
+        "file_sha256": "53415ac9b28a12a87e12db74f5ec59352eaee6812d8592ad97779fbde79d264a"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:mithril",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/mithril"
+      },
+      "availability": "spellbooks_material",
+      "quality": 3,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:spell_power",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "irons_spellbooks:rend",
+        "positive_effect": "irons_spellbooks:charged"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/mithril.json",
+        "file_sha256": "9f058c0e862b38ce793e06f480d5346278e8c22cfae0eb5eeaba61083b210066"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:pyrium",
+      "family": "metal",
+      "ingredient": {
+        "tag": "c:ingots/pyrium"
+      },
+      "availability": "spellbooks_material",
+      "quality": 3,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:cast_time_reduction",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        },
+        "negative_effect": "irons_spellbooks:guided",
+        "positive_effect": "irons_spellbooks:vigor"
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/pyrium.json",
+        "file_sha256": "213d664a30546333d5468530e7fd16c9eea7085ba9edace454c68ec034b0e17e"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_arcane",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:arcane_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:max_mana",
+          "base_amount": 25,
+          "operation": "add_value"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_arcane.json",
+        "file_sha256": "c1002b8434eb6e9ad782f3105837816ef1f1f506ebf34ffcd3aafbcc0b8f119b"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_blood",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:blood_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:blood_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_blood.json",
+        "file_sha256": "2ea0a77890e58410a0bfb069bd0335909ec42cae95afbd85b1e614ddf37da334"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_cooldown",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:cooldown_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:cooldown_reduction",
+          "base_amount": 0.05,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_cooldown.json",
+        "file_sha256": "2844e6ef53b75c89b112ded54bd4badfdfd4fdcdd218b5e10aa4b6c890c0f9b5"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_ender",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:ender_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:ender_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_ender.json",
+        "file_sha256": "3c2c8f9273bd61c77fc159d01c839eef61c919bd9706f1a0bc2233563f9e6674"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_evocation",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:evocation_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:evocation_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_evocation.json",
+        "file_sha256": "4f9f42bf03307222c13721c7e513c5c47efd425f68df72d9aae4c7cc671ea568"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_fire",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:fire_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:fire_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_fire.json",
+        "file_sha256": "ecda041f771a5bb71c5954d3b0c65c8f795ca69123df1b6ff2c08c7bb5f8d330"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_holy",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:holy_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:holy_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_holy.json",
+        "file_sha256": "2485b05532771ed27937b9002fd3ce0ff0d0c9d33ea113e79bfdb22ea37d4f2d"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_ice",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:ice_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:ice_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_ice.json",
+        "file_sha256": "9794e3c223a0a6cb201dcde9ee605a57d237fe145512c57667eb3c1bc4207f65"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_lightning",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:lightning_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:lightning_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_lightning.json",
+        "file_sha256": "d4be8b1503a2d952f6e32d65f87e35124f0038296ce2ead9efbd602e00c8772e"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_nature",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:nature_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:nature_spell_power",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_nature.json",
+        "file_sha256": "95d20f29fcc3dd6cae780b3bf97991baede83869bef9845ee17566f891852def"
+      }
+    },
+    {
+      "source_id": "irons_spellbooks:rune_protection",
+      "family": "rune",
+      "ingredient": {
+        "item": "irons_spellbooks:protection_rune"
+      },
+      "availability": "spellbooks_material",
+      "quality": 1.5,
+      "parameters": {
+        "attribute": {
+          "target": "irons_spellbooks:spell_resist",
+          "base_amount": 0.025,
+          "operation": "add_multiplied_total"
+        }
+      },
+      "source": {
+        "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/data/irons_spellbooks/irons_jewelry/material/rune_protection.json",
+        "file_sha256": "7fd6b9606d5a2a169aab8fdb53aec496419eb53716e109795554154b7881567b"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "offline SVG export of the live preview geometry",
+  "browserVerified": false,
+  "layers": [
+    {
+      "recipe": "four",
+      "layer": "inner",
+      "slots": 4,
+      "radiusAtGameSize": 46.65071770334929,
+      "maxAlignmentError": 2.842170943040401e-14
+    },
+    {
+      "recipe": "eight",
+      "layer": "inner",
+      "slots": 4,
+      "radiusAtGameSize": 33.73205741626794,
+      "maxAlignmentError": 1.4210854715202004e-14
+    },
+    {
+      "recipe": "eight",
+      "layer": "outer",
+      "slots": 4,
+      "radiusAtGameSize": 60.560820015498564,
+      "maxAlignmentError": 8.526512829121202e-14
+    }
+  ],
+  "assets": [
+    "parchment-v7.png",
+    "plinth-v7.png",
+    "spellstone-v7.png"
+  ],
+  "viewportScale": 2
+}

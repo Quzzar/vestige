@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:blood_slash",
+  "name": "Blood Slash",
+  "circle": 4,
+  "color": "c92551",
+  "rationale": "Draining focus crosses a Flint edge and an Emerald-directed sweep; counterclockwise order distinguishes the slash.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 2,
+      "role": "flint motif",
+      "ingredient": {
+        "items": [
+          "minecraft:flint"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Evocation focus follows blank inscription clockwise.",
+    "Flint motif follows evocation focus clockwise.",
+    "Draining focus follows flint motif clockwise.",
+    "Blank inscription follows draining focus clockwise."
+  ]
+}

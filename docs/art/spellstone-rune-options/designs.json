@@ -1,0 +1,25 @@
+{
+  "status": "Three native rune treatments requested after owner rejected the pixelated purple overlay",
+  "shared": "Same seven-cuboid Stone Brick Sealstone with Polished Andesite top; no baked rune texture.",
+  "scope": "Opt-in capture renderer and resource pack; production art and installed Prism jar unchanged.",
+  "designs": [
+    {
+      "id": "engraving",
+      "name": "Illuminated Engraving",
+      "carrier": "vestige:spellstone",
+      "signature": "A stationary eight-armed seal traced with fine pale-violet strokes in dark carved channels."
+    },
+    {
+      "id": "astral",
+      "name": "Astral Seal",
+      "carrier": "vestige:tuff_spellstone",
+      "signature": "Two counter-rotating broken rings and an interlocked central glyph float above the stone."
+    },
+    {
+      "id": "living",
+      "name": "Living Script",
+      "carrier": "vestige:quartz_spellstone",
+      "signature": "A moving point of light writes an angular glyph, leaving a fading trail and rising motes."
+    }
+  ]
+}

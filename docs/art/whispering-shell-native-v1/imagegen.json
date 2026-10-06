@@ -1,0 +1,8 @@
+{
+  "mode": "Built-in image_gen edit",
+  "target": "../whispering-shell-dark-v1/shell-a.png",
+  "prompt": "imagegen-refinement-prompt.txt",
+  "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-3bf40272-84a5-494a-8bbf-8afc06aa075d.png",
+  "sha256": "374d880e542e7c67fcce522e956baace5a18f7e8247f6b2a050ea0d11a94e2b0",
+  "status": "Concept simplification reference only; native sprite independently authored as literal texture-source.json pixels, not resampled from this image"
+}

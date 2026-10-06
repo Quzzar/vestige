@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: one low-fidelity design iteration sheet, NOT a game asset or in-game render.
+Primary request: Explore exactly four restrained variations of the user's chosen "12 NOTCHED MONOLITH" silhouette from the supplied reference sheet. Use ONLY thumbnail 12 at bottom right as the shape reference; do not incorporate any of the other eleven designs.
+Scene/backdrop: clean warm-white paper with generous whitespace.
+Style/medium: loose pencil outlines, a few construction lines and broad flat gray marker shading, like the supplied concept sheet. No finished textures.
+Composition: exactly 2 columns by 2 rows. Same scale and three-quarter overhead camera for all four bodies, show both top and side. A single number and name BELOW each sketch, no headings or other text.
+Shared shape: squat heavy monolithic stone, roughly half a Minecraft block high. Preserve the distinctive silhouette of thumbnail 12: broad chunky corner lobes joined through a broad uninterrupted central surface, with rectangular U-shaped concave cuts into the side edges between the lobes. Clearly show these inward rectangular bites. These are NOT bevels or chamfered corners and NOT a plus-shaped cross with thin projecting arms. Each body is one solid low stone mass resting directly on the ground.
+Shared rune: on each top center draw the SAME faint pale-violet schematic seal, two interlocking squares inside two broken circular rings, identical size and design. It stands in for the existing Astral Seal. It must not conceal the body outline or recess. Keep the center large and flat enough to lay a scroll.
+The four variants, with exact captions:
+"A ORIGINAL" — closely reproduce thumbnail 12's body outline and height, broad lobes and squared side notches, flat unbroken top.
+"B LOWER" — same outline and notch width/depth as A, but shorten the entire body to about three-eighths of a block. This should be the noticeably flatter version.
+"C SHALLOW CUTS" — same height and outer footprint as A, but make the rectangular side notches half as deep. Broader uninterrupted central top, small clean squared bites around the sides.
+"D RECESSED CENTER" — same outer outline, side cuts and total height as A; lower only a broad central square receiving surface by one small step. Make the shallow square inset and its interior side faces clearly visible. The center is a receiving floor, not a raised slab. Low substantial stone remains around it.
+Constraints: all four monochrome gray bodies, pale-violet seal only. Material, lighting, perspective, footprint scale and rune consistent. No trim, gems, diamond studs, crystals, sculpted molding, supports, feet, cracks, ornaments, paper, items, particles, environments or texture noise. No extra sketches. This is a shape comparison, do not embellish it into detailed fantasy concept art.

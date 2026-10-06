@@ -1,0 +1,87 @@
+{
+  "spell": "vestige:plinth_column_head",
+  "phase": 0,
+  "label": "Close-up of column-head framing",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "tuff",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7fd2119164e4969e4ed4c57dcabc339c47742435a69192f2d3b748c6594d170e",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/tuff_plinth.json": "036597e0f9d1a6ced5c85625a25d80237aec569e60c3744cb88b73047dffed67",
+    "models/block/tuff_spellstone.json": "b48d3aa0ef670fa0c6fe43d3d0e965a77d0317fb6e22b9b3610c0a443a4dc329",
+    "models/block/tuff_plinth_base.json": "9cf77d985200157a3d1045eaffe41eaee14718846d024a62930eea5c4ac9a5de",
+    "models/block/tuff_plinth_shaft.json": "a288eb11fb407e5bf8003a5b80a11bba8cb9a82da9872defd6c84ccf4398996a",
+    "models/block/tuff_plinth_cap.json": "cb5279feb6fcef3da54950ba5587d96d63c47775fb760a74acd0e76368b56ef4"
+  },
+  "seconds": 2.053810792,
+  "times": [
+    0.016816917,
+    0.089883292,
+    0.164788834,
+    0.2405845,
+    0.316592417,
+    0.395440125,
+    0.473131042,
+    0.548998375,
+    0.630388334,
+    0.709599625,
+    0.776268959,
+    0.855836625,
+    0.934028,
+    1.014542625,
+    1.093366542,
+    1.172936792,
+    1.253489292,
+    1.335111542,
+    1.412908959,
+    1.490598709,
+    1.56483075,
+    1.640379,
+    1.716512375,
+    1.791786542,
+    1.866822084,
+    1.941283167,
+    2.014332834
+  ],
+  "outcome": "PLACED",
+  "scenario": "Close native view of the simplified column cap and centered Gold inset protruding half a model unit. The same carved socket and raised material plate appear on every column segment.",
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d0, y\u003d67, z\u003d0}": "vestige:tuff_plinth",
+    "BlockPos{x\u003d0, y\u003d68, z\u003d0}": "vestige:tuff_plinth"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dbase,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d0, y\u003d66, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d0, y\u003d67, z\u003d0}": {
+      "offeringSpace": false,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:tuff_plinth}[part\u003dshaft,waterlogged\u003dfalse]"
+    },
+    "BlockPos{x\u003d0, y\u003d68, z\u003d0}": {
+      "offeringSpace": true,
+      "offering": "minecraft:air",
+      "socket": "minecraft:gold_block",
+      "state": "Block{vestige:tuff_plinth}[part\u003dcap,waterlogged\u003dfalse]"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "spell": "vestige:spellstone",
+  "phase": 0,
+  "label": "Spellstone",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "tuff",
+  "apparatusPresentation": "current",
+  "assetSha256": {
+    "models/block/spellstone.json": "7ffe5aea26ee06523404f49f585a8ca5490f2b8b1b700e70b6819d1955001ebe",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/tuff_plinth.json": "036597e0f9d1a6ced5c85625a25d80237aec569e60c3744cb88b73047dffed67",
+    "models/block/tuff_spellstone.json": "ff0ab67b31cd23c4a699e2aeaa491bbd40ed04f076d2876585ff86d0265c7843",
+    "models/block/tuff_plinth_base.json": "9cf77d985200157a3d1045eaffe41eaee14718846d024a62930eea5c4ac9a5de",
+    "models/block/tuff_plinth_shaft.json": "a288eb11fb407e5bf8003a5b80a11bba8cb9a82da9872defd6c84ccf4398996a",
+    "models/block/tuff_plinth_cap.json": "cb5279feb6fcef3da54950ba5587d96d63c47775fb760a74acd0e76368b56ef4"
+  },
+  "seconds": 2.016962333,
+  "times": [
+    0.017279,
+    0.096256166,
+    0.1795175,
+    0.259502791,
+    0.3452495,
+    0.42495225,
+    0.504075166,
+    0.584985375,
+    0.666866791,
+    0.745914041,
+    0.830708083,
+    0.913028375,
+    0.987801041,
+    1.064297916,
+    1.136992041,
+    1.216635416,
+    1.296586875,
+    1.379954625,
+    1.4643225,
+    1.544309708,
+    1.621753458,
+    1.713841666,
+    1.792176125,
+    1.864214625,
+    1.941851083
+  ],
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:tuff_spellstone"
+  },
+  "scenario": "Registered tuff Spellstone placed on ordinary terrain, viewed with native Minecraft lighting.",
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "socket": "minecraft:air",
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:tuff_spellstone}[part\u003dsingle,waterlogged\u003dfalse]"
+    }
+  }
+}

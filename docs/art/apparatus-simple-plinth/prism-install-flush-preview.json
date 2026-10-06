@@ -1,0 +1,16 @@
+{
+  "installed_at_utc": "2026-10-05T20:08:19.583562+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "89986c3305395f8e7c0b09aec55405a5a31d680c3690de4376196de97a1730b3",
+  "destination_sha256": "89986c3305395f8e7c0b09aec55405a5a31d680c3690de4376196de97a1730b3",
+  "previous_sha256": "8e2828332951d79125a506cc31ca6da7d62f75e0ba229fbacf295b3450da5717",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-simple-plinth.jar",
+  "replacement": "Atomic rename; existing open jar handles remain on the prior inode until restart.",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "changes": "Three-cuboid Plinth; flat centered carved socket and flush material faces on every column segment. Spellstone and gameplay semantics unchanged.",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-05T01:40:46.772838+00:00",
+  "instance": "Kithkyn Testing",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "0597abcd21926cf8477c48e179218546df5db69a4eba6ab7aba953fcb07d7935",
+  "previous_sha256": "4845bd0e55075143c81976992c54cfa92f18842244decd172ddcf7e572f06fc5",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "spellshaping_rules_sha256": "2d3b72a7206f2970b4705f2bee493e278e4f43c976894bd338140fbb9d3e4e9e",
+  "verification": {
+    "unit_tests": 78,
+    "world_tests": 130,
+    "individual_augments": 47,
+    "compound_augments": 6
+  },
+  "stage": "Automatic material Spellshaping and eight-slot Attunement Shards; devices and the remaining design palette are deferred."
+}

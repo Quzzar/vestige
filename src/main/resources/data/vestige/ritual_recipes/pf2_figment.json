@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_figment",
+  "name": "Figment",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Ink supplies illusion, a Note Block supplies sound, and Amethyst binds the light-and-sound lure.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "note motif",
+      "ingredient": {
+        "items": [
+          "minecraft:note_block"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Ink motif follows blank inscription clockwise.",
+    "Note motif follows ink motif clockwise.",
+    "Resonant facet follows note motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

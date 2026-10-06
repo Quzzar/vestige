@@ -1,0 +1,66 @@
+{
+  "spell": "vestige:spellstone_astral_side",
+  "phase": 0,
+  "label": "Spellstone tent opening",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone_bricks",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": -180.0,
+    "pitch": 8.615648,
+    "eye": [
+      0.5,
+      65.5,
+      2.15
+    ],
+    "fixed": true
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "59b7e1e35d2dd9e309ac8de6012519efd5d56e3fd8f76bcfbe94a191ad07d1b7",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/plinth_base.json": "89c30b16e14dff79f911f1051885d3632e9a3c4b5170ad1fe27eef5279af7009",
+    "models/block/plinth_shaft.json": "72ef25c0d0d0e3a308d771653d69d57a1ffb44e288d6bff9a0a0ba510730fdc0",
+    "models/block/plinth_cap.json": "c1d34e42f9997579b67ed329f8031f51dbe08ceb0b575398615f92a2843449eb"
+  },
+  "astralRendererSha256": "c377d39836c4c8c2383ee0084d408796a782ec16cbd715e837332e8fdeb29b8b",
+  "seconds": 4.078034208,
+  "times": [
+    0.106508791,
+    0.204399041,
+    0.291859291,
+    0.487834875,
+    0.692594208,
+    0.796737375,
+    0.9253,
+    1.10926325,
+    2.047544208,
+    2.195495916,
+    2.33820075,
+    2.508804791,
+    2.676903958,
+    2.836217166,
+    2.939263958,
+    3.080712541,
+    3.290114666,
+    3.800425333,
+    3.957214083
+  ],
+  "outcome": "PLACED",
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "offeringSpace": true,
+      "state": "Block{vestige:spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "socket": "minecraft:air"
+    }
+  },
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:spellstone"
+  },
+  "scenario": "Production Spellstone: two thicker inward-leaning supports and one thicker flat tabletop, four flush faceted Diamond corner chips and the lowered native Astral Seal. Spellstone tent opening No resource-pack override."
+}

@@ -1,0 +1,58 @@
+{
+  "spell": "vestige:pf2_thunderstrike",
+  "name": "Thunderstrike",
+  "circle": 4,
+  "color": "dfd9ff",
+  "rationale": "Copper joins a feather's air and Emerald's direction for an aimed electrical strike with thunder.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "lightning channel",
+      "ingredient": {
+        "items": [
+          "minecraft:copper_ingot",
+          "irons_spellbooks:lightning_bottle",
+          "irons_spellbooks:lightning_rune"
+        ]
+      },
+      "rationale": "Iron Copper lightning action and Haste/attack-speed associations; selected recipe role only"
+    },
+    {
+      "seat": 2,
+      "role": "feather motif",
+      "ingredient": {
+        "items": [
+          "minecraft:feather"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    }
+  ],
+  "clues": [
+    "Lightning channel follows blank inscription clockwise.",
+    "Feather motif follows lightning channel clockwise.",
+    "Evocation focus follows feather motif clockwise.",
+    "Blank inscription follows evocation focus clockwise."
+  ]
+}

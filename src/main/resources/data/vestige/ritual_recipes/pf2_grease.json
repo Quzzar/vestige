@@ -1,0 +1,55 @@
+{
+  "spell": "vestige:pf2_grease",
+  "name": "Grease",
+  "circle": 4,
+  "color": "ffd45a",
+  "rationale": "Slime, wet Clay and Coal's native oily-soot motif describe the slippery ground patch.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "slime motif",
+      "ingredient": {
+        "items": [
+          "minecraft:slime_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "clay motif",
+      "ingredient": {
+        "items": [
+          "minecraft:clay_ball"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "coal motif",
+      "ingredient": {
+        "items": [
+          "minecraft:coal"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Slime motif follows blank inscription clockwise.",
+    "Clay motif follows slime motif clockwise.",
+    "Coal motif follows clay motif clockwise.",
+    "Blank inscription follows coal motif clockwise."
+  ]
+}

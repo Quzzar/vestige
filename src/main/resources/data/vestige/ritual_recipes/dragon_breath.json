@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:dragon_breath",
+  "name": "Dragon Breath",
+  "circle": 8,
+  "color": "bbc6f2",
+  "rationale": "Ender focus and Dragon's Breath define the source; Fire Charge and Emerald direct the cone through an Obsidian boundary.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "passage focus",
+      "ingredient": {
+        "items": [
+          "minecraft:ender_pearl",
+          "irons_spellbooks:ender_rune"
+        ]
+      },
+      "rationale": "Iron Ender focus"
+    },
+    {
+      "seat": 2,
+      "role": "dragon motif",
+      "ingredient": {
+        "items": [
+          "minecraft:dragon_breath"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 4,
+      "role": "firecharge motif",
+      "ingredient": {
+        "items": [
+          "minecraft:fire_charge"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 5,
+      "role": "evocation focus",
+      "ingredient": {
+        "items": [
+          "minecraft:emerald",
+          "irons_spellbooks:evocation_rune"
+        ]
+      },
+      "rationale": "Iron Evocation focus"
+    },
+    {
+      "seat": 6,
+      "role": "obsidian motif",
+      "ingredient": {
+        "items": [
+          "minecraft:obsidian"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold passage focus, evocation focus; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Passage focus follows blank inscription clockwise.",
+    "Dragon motif follows passage focus clockwise.",
+    "Firecharge motif follows dragon motif clockwise, across an unused outer Plinth.",
+    "Evocation focus follows firecharge motif clockwise.",
+    "Obsidian motif follows evocation focus clockwise.",
+    "Blank inscription follows obsidian motif clockwise, across an unused outer Plinth."
+  ]
+}

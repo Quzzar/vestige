@@ -1,0 +1,140 @@
+{
+  "spell": "vestige:plinth_column_imbuements",
+  "phase": 0,
+  "label": "Independent imbuements on every column segment",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "feedbackCodeSha256": {
+    "com/quzzar/vestige/apparatus/RitualPresentation.class": "c85ebcb2769567fc94ce18018533ee906825fc0eabf6fa10c4f6d189da02af7a",
+    "com/quzzar/vestige/apparatus/ScrollCasting.class": "98e89494a39055f8c783abb4c4629a89d6ae8844995baf89b45fff810f1af3cb",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class": "78840ff4d5166cd0f78adcbb5bde6ea3a00460a1890116e0a5171f7d9f7e584e",
+    "com/quzzar/vestige/apparatus/client/OfferingRenderer.class": "c0cb63e8ba3e4f885e3683fb398101bd1b494a2450408bd1b52024e7cfeecc3b",
+    "com/quzzar/vestige/apparatus/client/ScrollTooltip.class": "7fd0f7ea78e6091e5f29797908c1db6df437a1b30fe1a31330460294b8287264",
+    "com/quzzar/vestige/apparatus/client/ApparatusColors.class": "14aa82c5532ec95fdd2365b4406e8ac2df130436f171afb6d6ec7b9613ce3254"
+  },
+  "apparatusTrim": {
+    "tintIndex": 0,
+    "brightness": 0.8509803921568627,
+    "tintColor": "#d9d9d9"
+  },
+  "apparatusMaterial": "stone",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "yaw": 145.6849,
+    "fixed": true,
+    "eye": [
+      4.8,
+      69.3,
+      6.8
+    ],
+    "pitch": 17.466055
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "e3c6fac486bf85424b5ffa198e02900dd5399ec53af324f437bc8875895e3db0",
+    "models/block/plinth.json": "53977ef0a356ba87a3b0c14e1b8b600d05c5020f4d997f2ca57c9984019682de",
+    "models/block/stone_plinth.json": "a8072adcffb272586b7a8a84f002e2b7f627449011edc0dcfee2307b4adc364c",
+    "models/block/stone_spellstone.json": "bba176f25ed56d865ba9a7fdc44d1b7317e6823213a62249b609678021d07f2b",
+    "models/block/stone_plinth_base.json": "08b89a12ab619b7f979011ead9426166378f23747ac2c25bc14bad99d2e3471f",
+    "models/block/stone_plinth_shaft.json": "edefb3f3ce7483543c58fc348ef1ed7efeaa7219fac1d95c1282e39c8e379d04",
+    "models/block/stone_plinth_cap.json": "65a01a466ac06be1d65b3065858d628b362d6f6e1ba6e328458f30dd78f45469"
+  },
+  "ritualCraftingSha256": "62a2fc53eb9c0cfbe38ddc139f71eed23835e3be3e05f1ce5f9d37f4b27de889",
+  "astralRendererSha256": "3055870bfa86343b37b72325959368b080311201aa43697988b3a9696b9e9cca",
+  "seconds": 4.14666125,
+  "times": [
+    0.035740042,
+    0.136569209,
+    0.22628975,
+    0.314384209,
+    0.418517334,
+    0.530763792,
+    0.74876525,
+    0.926058,
+    1.091494834,
+    1.252466,
+    1.409382459,
+    1.567107209,
+    1.714811584,
+    1.782359709,
+    1.922731959,
+    2.098236834,
+    2.262630584,
+    2.42562575,
+    2.593002292,
+    2.677435,
+    2.844397084,
+    3.014322375,
+    3.197027917,
+    3.2965205,
+    3.466530625,
+    3.641856709,
+    3.816124584,
+    3.997787417
+  ],
+  "scenario": "Identical empty and fully imbued columns. The right column holds separate Amethyst, Iron, Lapis and Gold sockets from bottom to top; stone geometry/texture is identical. All segments remain imbueable, including covered shafts.",
+  "blocks": {
+    "BlockPos{x\u003d1, y\u003d66, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d-1, y\u003d65, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d-1, y\u003d66, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d-1, y\u003d67, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d-1, y\u003d68, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d1, y\u003d68, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d1, y\u003d67, z\u003d0}": "vestige:stone_plinth",
+    "BlockPos{x\u003d1, y\u003d65, z\u003d0}": "vestige:stone_plinth"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d-1, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_plinth}[part\u003dbase,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d-1, y\u003d66, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d-1, y\u003d67, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d-1, y\u003d68, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:air",
+      "state": "Block{vestige:stone_plinth}[part\u003dcap,waterlogged\u003dfalse]",
+      "offeringSpace": true
+    },
+    "BlockPos{x\u003d1, y\u003d65, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:amethyst_block",
+      "state": "Block{vestige:stone_plinth}[part\u003dbase,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d1, y\u003d66, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:iron_block",
+      "state": "Block{vestige:stone_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d1, y\u003d67, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:lapis_block",
+      "state": "Block{vestige:stone_plinth}[part\u003dshaft,waterlogged\u003dfalse]",
+      "offeringSpace": false
+    },
+    "BlockPos{x\u003d1, y\u003d68, z\u003d0}": {
+      "offering": "minecraft:air",
+      "socket": "minecraft:gold_block",
+      "state": "Block{vestige:stone_plinth}[part\u003dcap,waterlogged\u003dfalse]",
+      "offeringSpace": true
+    }
+  },
+  "outcome": "PLACED"
+}

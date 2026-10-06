@@ -1,0 +1,91 @@
+{
+  "spell": "vestige:spellstone_astral_side",
+  "phase": 0,
+  "label": "Spellstone tent opening",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "stone",
+  "apparatusPresentation": "current",
+  "apparatusCamera": {
+    "eye": [
+      0.5,
+      65.5,
+      2.15
+    ],
+    "pitch": 8.615648,
+    "yaw": -180.0,
+    "fixed": true
+  },
+  "assetSha256": {
+    "models/block/spellstone.json": "36ff0da23a43e52419ff8d080c40f3431461678a6e5aef10fde9d4ae6fcc5a4d",
+    "models/block/plinth.json": "8043dee4b0d555a63bb385a1746c8ad7080f089d54ad069605cd1d70298f7c19",
+    "models/block/stone_plinth.json": "6eac7f44679302deb3d728484a603d182d3e2cc98277b699ff7b619142e23d4d",
+    "models/block/stone_spellstone.json": "b637e9d4b56fe8fda1081cd6bb54b96eb5db131e37f721e594fa8f3cb3eb8be7",
+    "models/block/stone_plinth_base.json": "5a916c3aa8904aca4814b78892a692c573d71cc793b68d3b362dfd94ee534852",
+    "models/block/stone_plinth_shaft.json": "33d8501511049d00bca90266d8394e018a39a6333b285781c48473062689ea04",
+    "models/block/stone_plinth_cap.json": "f0bd2d6e308e93f7c72e24e88642bcfd81cd3c7cc8fb449478fda785d42cbfec"
+  },
+  "astralRendererSha256": "159b0d29a2c2ae0996f0e77650131ec821787ab1f9de83a5881055ef1c001747",
+  "seconds": 4.030061833,
+  "times": [
+    0.051935208,
+    0.132588875,
+    0.215328917,
+    0.298297833,
+    0.3782725,
+    0.460181583,
+    0.540413667,
+    0.633627542,
+    0.715974,
+    0.790723542,
+    0.872464708,
+    1.009476625,
+    1.090086167,
+    1.171380792,
+    1.300552667,
+    1.3807855,
+    1.509763792,
+    1.589378208,
+    1.670561917,
+    1.802892958,
+    1.882573208,
+    1.966843458,
+    2.1001135,
+    2.235797708,
+    2.318922958,
+    2.403203833,
+    2.4834815,
+    2.614701292,
+    2.698682792,
+    2.779086833,
+    2.870324083,
+    2.994006208,
+    3.074905917,
+    3.150385875,
+    3.2297845,
+    3.359566292,
+    3.439294583,
+    3.578004,
+    3.660151083,
+    3.739660042,
+    3.826792792,
+    3.9082835
+  ],
+  "blocks": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": "vestige:stone_spellstone"
+  },
+  "apparatusState": {
+    "BlockPos{x\u003d0, y\u003d65, z\u003d0}": {
+      "state": "Block{vestige:stone_spellstone}[part\u003dsingle,waterlogged\u003dfalse]",
+      "offeringSpace": true,
+      "offering": "minecraft:air",
+      "socket": "minecraft:air"
+    }
+  },
+  "outcome": "PLACED",
+  "scenario": "Production compact Spellstone: two thick inward-leaning supports and one smaller thick cap at y8/16, four isolated cut gemstones on its vertical rim sides and the lowered native Astral Seal. Bare stone between gems and on the top; no connected trim. Spellstone tent opening No resource-pack override."
+}

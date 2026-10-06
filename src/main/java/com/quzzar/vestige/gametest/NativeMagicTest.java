@@ -269,10 +269,15 @@ public final class NativeMagicTest {
         });
     }
 
-    @GameTest(template="empty_3x3x3", batch="balance_caps", timeoutTicks=120, skyAccess=true)
+    @GameTest(template="empty_9x3x9", batch="balance_caps", timeoutTicks=120, skyAccess=true)
     public static void starfallSharesItsCapAcrossSeparateMeteorPulses(GameTestHelper helper) {
         var caster=caster(helper,0); var victim=durableVictim(helper); var point=victim.position();
-        helper.onEachTick(()-> { victim.setPos(point); victim.setDeltaMovement(net.minecraft.world.phys.Vec3.ZERO); });
+        // Rain starts up to three blocks from its target. Keep the complete flight envelope
+        // inside the cleared fixture, away from adjacent test structures and subjects.
+        caster.setPos(caster.position().add(3,0,3));victim.setPos(point.add(3,0,3));point=victim.position();
+        for(int x=3;x<6;x++)for(int z=3;z<6;z++)helper.setBlock(new BlockPos(x,0,z),Blocks.STONE);
+        var stationaryPoint=point;
+        helper.onEachTick(()-> { victim.setPos(stationaryPoint); victim.setDeltaMovement(net.minecraft.world.phys.Vec3.ZERO); });
         var cast=cast(helper,caster,"starfall");
         helper.runAfterDelay(100,()-> {
             successful(helper,cast); require(helper,Math.abs(victim.getHealth()-60)<.01,"Twenty meteors did not share their ten-hit limit: " + victim.getHealth());

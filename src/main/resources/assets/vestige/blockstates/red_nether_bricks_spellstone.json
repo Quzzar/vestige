@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/red_nether_bricks_spellstone"
+    },
+    "part=base": {
+      "model": "vestige:block/red_nether_bricks_spellstone"
+    },
+    "part=shaft": {
+      "model": "vestige:block/red_nether_bricks_spellstone"
+    },
+    "part=cap": {
+      "model": "vestige:block/red_nether_bricks_spellstone"
+    }
+  }
+}

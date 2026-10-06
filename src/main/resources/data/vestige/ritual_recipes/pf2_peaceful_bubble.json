@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_peaceful_bubble",
+  "name": "Peaceful Bubble",
+  "circle": 4,
+  "color": "d6d9c3",
+  "rationale": "Honeycomb's shelter motif and Glass enclose a protection seal that conceals its occupants.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    }
+  ],
+  "clues": [
+    "Protection seal follows blank inscription clockwise.",
+    "Glass motif follows protection seal clockwise.",
+    "Honey motif follows glass motif clockwise.",
+    "Blank inscription follows honey motif clockwise."
+  ]
+}

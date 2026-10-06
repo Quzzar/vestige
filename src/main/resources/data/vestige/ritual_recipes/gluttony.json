@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:gluttony",
+  "name": "Gluttony",
+  "circle": 4,
+  "color": "4bba6b",
+  "rationale": "Bread provides nutrition, Amethyst recalls mana brewing, and Honeycomb binds food to restored spell energy.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "bread motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bread"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    },
+    {
+      "seat": 3,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Bread motif follows blank inscription clockwise.",
+    "Resonant facet follows bread motif clockwise.",
+    "Honey motif follows resonant facet clockwise.",
+    "Blank inscription follows honey motif clockwise."
+  ]
+}

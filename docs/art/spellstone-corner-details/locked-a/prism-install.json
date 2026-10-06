@@ -1,0 +1,17 @@
+{
+  "installedAtUtc": "2026-10-06T16:19:37.021529+00:00",
+  "instance": "Kithkyn Testing",
+  "source": "/Users/quzzar/Projects/vestige/build/spellstone-a-isolated/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "bdc6e4e90685c63bde1b74c23753e6f29ad0fe500bf16f1e7f0776b3ff57de60",
+  "previousSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-spellstone-a-efbda56c98f9.jar",
+  "versions": {
+    "org.lwjgl3": "3.3.3",
+    "net.minecraft": "1.21.1",
+    "net.neoforged": "21.1.248"
+  },
+  "method": "Atomic replacement with verified backup",
+  "changes": "Selected smaller A Diamond corner chips across all 36 Spellstone finishes; three-stone body, collision, Plinths, Astral renderer and ritual behavior preserved",
+  "manualReview": "Fresh pinned-baseline Minecraft client is prepared separately; Prism needs restart to load its installed jar"
+}

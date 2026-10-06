@@ -1,0 +1,84 @@
+{
+  "spell": "vestige:pf2_protector_tree",
+  "name": "Protector Tree",
+  "circle": 8,
+  "color": "4bba6b",
+  "rationale": "Oak and Nature grow the body, while a seal, living light and honey shelter neighboring allies.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "oak motif",
+      "ingredient": {
+        "items": [
+          "minecraft:oak_log"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 4,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 5,
+      "role": "living light",
+      "ingredient": {
+        "items": [
+          "minecraft:glistering_melon_slice",
+          "irons_spellbooks:divine_pearl",
+          "irons_spellbooks:holy_rune"
+        ]
+      },
+      "rationale": "Native healing ingredient; optional Iron Holy focus"
+    },
+    {
+      "seat": 6,
+      "role": "honey motif",
+      "ingredient": {
+        "items": [
+          "minecraft:honeycomb"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold oak motif, living light; the other required ingredients use Inner Plinths.",
+    "Leave the second outer Plinth clockwise from Paper empty.",
+    "Leave the fourth outer Plinth clockwise from Paper empty.",
+    "Oak motif follows blank inscription clockwise.",
+    "Nature focus follows oak motif clockwise.",
+    "Protection seal follows nature focus clockwise, across an unused outer Plinth.",
+    "Living light follows protection seal clockwise.",
+    "Honey motif follows living light clockwise.",
+    "Blank inscription follows honey motif clockwise, across an unused outer Plinth."
+  ]
+}

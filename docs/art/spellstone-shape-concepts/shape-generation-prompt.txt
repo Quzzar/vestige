@@ -1,0 +1,25 @@
+Use case: stylized-concept.
+Asset type: ONE low-fidelity concept exploration sheet for a Minecraft magic mod block called Spellstone.
+Primary request: twelve clearly DIFFERENT body designs, presented as rough thumbnails BEFORE any implementation. This is concept sketching, not an in-game render or a texture asset.
+
+Make one landscape sheet arranged as exactly 4 columns by 3 rows, with generous white space and twelve fully visible separate numbered thumbnails. Each is a three-quarter isometric pencil-and-marker sketch, from the same camera angle and at the same scale. Plain warm-white background. Charcoal outlines, simple flat light/mid-gray washes for volume, a few loose pencil construction marks. VERY LOW FIDELITY: keep surfaces plain and untextured, and focus on large geometric silhouettes. No polished lighting or detailed rendering. Each object must be practical for a Minecraft block: heavy blocky stone masses, approximately half-block height, a flat central surface big enough for a scroll, and simple geometry. Some bodies may have broad cut corners but no elaborate sculpting.
+
+The ONE locked feature is the top magical rune. Above EVERY central receiving surface draw the SAME modest pale-violet rune placeholder: two interlocking squares in the center, surrounded by two broken circular rings. Keep it faint and schematic; do not vary this rune among designs and do not let it hide the silhouette. The bodies themselves are entirely grayscale.
+
+Read each numbered description carefully; do not draw the same altar twelve times. Four of the first six explore the requested recessed altar. Each recess must have an obvious flat floor, not an empty hole.
+
+Draw these twelve thumbnails and label each BELOW its drawing with only the exact number and short name:
+01 SQUARE WELL — a squat square stone body with one thick continuous rim and a shallow square recessed receiving floor. Minimal broad planes.
+02 CUT-CORNER WELL — an eight-sided/chamfered low basin with a broad octagonal recessed floor and thick walls. It must read differently from the square well.
+03 OPEN-FRONT WELL — a heavy U-shaped stone surround: the back and sides have low walls, the front is open to a broad sunken flat floor.
+04 DIAMOND WELL — a low diamond-shaped stone body in plan, with a matching diamond-shaped inset flat receiving floor. Its silhouette is a diamond rather than a square facing the camera.
+05 SUNKEN DISC — a low plain square block cradles a single broad octagonal receiving disc slightly below its top edges. Simple outer square silhouette, clearly visible inner disc.
+06 BROKEN RIM — a weathered low recessed square altar with one substantial corner of the rim broken away; broad floor intact. Suggest the break using two large angular planes, not cracks or texture noise.
+07 FOUR FEET — a broad flat receiving stone supported on four very short heavy corner feet, leaving shallow open spaces beneath. No separate bottom slab, no extra molding.
+08 THREE FEET — a broad hexagonal/blocky receiving stone on three stout squat supports, visibly different in silhouette from four feet. Keep half-block scale and the flat receiving surface.
+09 CROSS SEAT — a stout cruciform stone body in plan, with four broad squared arms and a flat central receiving bed. The concave corners are part of the silhouette.
+10 SPLIT TABLET — two large thick interlocking stone fragments separated by one narrow angular diagonal break; one common flat receiving surface. No added rim or foundation.
+11 OFFSET TABLET — a thick plain square receiving tablet projects asymmetrically over one broad inset stone support; one large cantilever, balanced and substantial rather than flimsy.
+12 NOTCHED MONOLITH — one squat solid rectangular stone body whose four corners have large rectangular inward bites; a broad uninterrupted top remains at the center. Concave notches, not chamfered corners.
+
+Constraints: EXACTLY twelve designs in the 4x3 grid, clearly numbered 01 to 12 so the user can pick combinations. Do not add ornaments, gems, crystal strips, metallic trim, colored ingredient pieces, books, scrolls, particles, flames, pedestals, scenery, UI controls, or extra designs. Do not imitate noisy Minecraft textures. Do not make twelve polished variants of the same octagonal slab. This is an artist's rough shape exploration page with materially different volume, recess, footprint, and support arrangements.

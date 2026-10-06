@@ -1,0 +1,75 @@
+{
+  "status": "Smaller corner details requested by owner; all seven fresh native views visually inspected",
+  "captureRun": "Java 21 runEffectsCapture passed; build/spellstone-smaller-corners-capture.log",
+  "unitAndWorldTests": "Not repeated for isolated decorative model scaling; no gameplay or production asset changes",
+  "authorCheck": "author_spellstone_corners.py --check passed; bounds, legal rotations, UVs and native 16x16 palette verified",
+  "patchWidthAndHeightRatio": 0.65,
+  "diamondAreaRatio": 0.4225,
+  "patternsPaletteBodyAndRendererUnchanged": true,
+  "originalPostersPreserved": true,
+  "captureViews": 7,
+  "videoVerification": "All seven measured-time recordings encode/decode at 960x540",
+  "prismInstallationSha256": "efbda56c98f9dd8dbe1d39af4d1a137780dd8da7e0f29644e9a56a3834683fa8",
+  "models": [
+    {
+      "name": "blackstone",
+      "sha256": "8479a8302e71b5016fe31e3ea8e688ff53ff68b3cb41e675d6c7ee082c7f8f9c",
+      "diamondAreaRatio": 0.4225
+    },
+    {
+      "name": "chip",
+      "sha256": "457219aa92968e3317c48f718837a7860193cb98f8a4231f70066dd33893fb3c",
+      "diamondAreaRatio": 0.42249999999999993
+    },
+    {
+      "name": "crust",
+      "sha256": "5936dbe4786fb200a4d75a0576ef7b97acdf3b4296f8c03e4363ce3bcc8e69c9",
+      "diamondAreaRatio": 0.4224999999999997
+    },
+    {
+      "name": "notch",
+      "sha256": "00d8948dd30a85f636e6e2e8e1c68c975c2f116b7a6a1982f502acb507c399ad",
+      "diamondAreaRatio": 0.4225
+    },
+    {
+      "name": "quartz",
+      "sha256": "52f8320790459d5cfdc4a03144d8401c24b921e1f9d1e865ebffbc3b802885d7",
+      "diamondAreaRatio": 0.4225
+    },
+    {
+      "name": "sandstone",
+      "sha256": "b4c19eb5fa5383d00788160831fbee3f8517bb71f319e736795fd0d04f00abee",
+      "diamondAreaRatio": 0.4225
+    },
+    {
+      "name": "vein",
+      "sha256": "93bd8d0d24252452cff2cf18df58d63552a7996fa7f648bcb51bcfa4795cd1ed",
+      "diamondAreaRatio": 0.4224999999999996
+    }
+  ],
+  "comparisonSheets": [
+    {
+      "path": "corner-options.png",
+      "rowMajorViews": [
+        "chip",
+        "notch",
+        "vein",
+        "crust"
+      ],
+      "sha256": "1fb2683d343a819b5a1a1cb68b9580ee0adac4a38c27ea06414052a55d26414a",
+      "unchangedPosterPixels": true
+    },
+    {
+      "path": "material-options.png",
+      "rowMajorViews": [
+        "notch",
+        "blackstone",
+        "quartz",
+        "sandstone"
+      ],
+      "sha256": "98b931ad19742ab2d0c3ef1ab1a09de6ba442142e80c08c27d6e070b576212fa",
+      "unchangedPosterPixels": true
+    }
+  ],
+  "authorSourceSha256": "d8a6b711c7a7bc7014869bb584076baab49894a2e8376a9879685a9db7b61eb1"
+}

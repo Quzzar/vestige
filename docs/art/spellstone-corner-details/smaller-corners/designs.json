@@ -1,0 +1,190 @@
+{
+  "status": "Owner liked the corner studies and requested smaller Diamond patches; no individual pattern or finish selected",
+  "cornerScale": 0.65,
+  "revision": "Same pixel patterns and upper-corner anchors; patch width and height reduced by 35 percent, area by 57.75 percent.",
+  "shared": "Same compact three-solid tent body and Astral Seal; four details wrap the vertical slab corners onto both adjacent faces. Top and side centers are bare.",
+  "scope": "Isolated native capture resource pack. Registered carrier names are preview aliases; production artwork, recipes and collision are unchanged.",
+  "palette": {
+    "d": [
+      15,
+      5,
+      16,
+      6
+    ],
+    "m": [
+      4,
+      0,
+      5,
+      1
+    ],
+    "c": [
+      4,
+      2,
+      5,
+      3
+    ],
+    "p": [
+      4,
+      1,
+      5,
+      2
+    ],
+    "w": [
+      1,
+      1,
+      2,
+      2
+    ]
+  },
+  "designs": [
+    {
+      "id": "chip",
+      "name": "Corner chip",
+      "carrier": "vestige:spellstone",
+      "bodyTile": "minecraft:block/smooth_stone",
+      "pattern": [
+        "pm.",
+        "md.",
+        "d.."
+      ],
+      "pixelWidth": 0.5525,
+      "solidCuboids": 3,
+      "cornerFaces": 40,
+      "bakedFaces": 58
+    },
+    {
+      "id": "notch",
+      "name": "Stepped inset",
+      "carrier": "vestige:tuff_spellstone",
+      "bodyTile": "minecraft:block/smooth_stone",
+      "pattern": [
+        "dp.",
+        "mcw",
+        "dm."
+      ],
+      "pixelWidth": 0.5525,
+      "solidCuboids": 3,
+      "cornerFaces": 56,
+      "bakedFaces": 74
+    },
+    {
+      "id": "vein",
+      "name": "Broken vein",
+      "carrier": "vestige:quartz_spellstone",
+      "bodyTile": "minecraft:block/smooth_stone",
+      "pattern": [
+        "pm..",
+        "dcp.",
+        ".dm.",
+        "..d."
+      ],
+      "pixelWidth": 0.46799999999999997,
+      "solidCuboids": 3,
+      "cornerFaces": 64,
+      "bakedFaces": 82
+    },
+    {
+      "id": "crust",
+      "name": "Crystal flecks",
+      "carrier": "vestige:sandstone_spellstone",
+      "bodyTile": "minecraft:block/smooth_stone",
+      "pattern": [
+        "cp.d",
+        "mdm.",
+        "d.pm",
+        ".d.."
+      ],
+      "pixelWidth": 0.46799999999999997,
+      "solidCuboids": 3,
+      "cornerFaces": 80,
+      "bakedFaces": 98
+    },
+    {
+      "id": "blackstone",
+      "name": "Stepped inset",
+      "carrier": "vestige:polished_blackstone_spellstone",
+      "bodyTile": "minecraft:block/polished_blackstone",
+      "pattern": [
+        "dp.",
+        "mcw",
+        "dm."
+      ],
+      "pixelWidth": 0.5525,
+      "solidCuboids": 3,
+      "cornerFaces": 56,
+      "bakedFaces": 74
+    },
+    {
+      "id": "quartz",
+      "name": "Stepped inset",
+      "carrier": "vestige:smooth_quartz_spellstone",
+      "bodyTile": "minecraft:block/quartz_block_bottom",
+      "pattern": [
+        "dp.",
+        "mcw",
+        "dm."
+      ],
+      "pixelWidth": 0.5525,
+      "solidCuboids": 3,
+      "cornerFaces": 56,
+      "bakedFaces": 74
+    },
+    {
+      "id": "sandstone",
+      "name": "Stepped inset",
+      "carrier": "vestige:smooth_sandstone_spellstone",
+      "bodyTile": "minecraft:block/sandstone_top",
+      "pattern": [
+        "dp.",
+        "mcw",
+        "dm."
+      ],
+      "pixelWidth": 0.5525,
+      "solidCuboids": 3,
+      "cornerFaces": 56,
+      "bakedFaces": 74
+    }
+  ],
+  "vanillaTextures": [
+    {
+      "path": "assets/minecraft/textures/block/smooth_stone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "53d5b70ba4b3879b8ec7e931ee5c7250859081b4fea41690fd0261271cdb3623"
+    },
+    {
+      "path": "assets/minecraft/textures/block/polished_blackstone.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "df7c7d7328616faf241616af37fbcbc391b09316e7a96667372116eed730313c"
+    },
+    {
+      "path": "assets/minecraft/textures/block/quartz_block_bottom.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "71257d89af4fa37b33d9454eb6575ec187022dfc591c39a771bd0ffb1cad23e5"
+    },
+    {
+      "path": "assets/minecraft/textures/block/sandstone_top.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "321c39b772533abf1b6441d484d05e8e7bf1fa017c97acafcaec9e63781cb40c"
+    },
+    {
+      "path": "assets/minecraft/textures/block/diamond_block.png",
+      "size": [
+        16,
+        16
+      ],
+      "sha256": "93a63fa544d416188412584fffdf01e7fcb218f8a7e9f3e82232e773fc207fc9"
+    }
+  ]
+}

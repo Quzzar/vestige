@@ -1,0 +1,11 @@
+{
+  "reason": "Match canonical author serialization: default ASCII escaping, preserving every translation value.",
+  "translationsUnchanged": true,
+  "previousJarSha256": "2cd4a31461e8ca8943ae5a5e947ec4a2bdc72881075136323535df9e8812eca5",
+  "parsedTranslationSha256": "e3669e0b98b9baaa701545c4c83739311d41d3df0bb9ffa20f38ae269804f2ed",
+  "finalJarSha256": "da405fb78ffbcf411f688a2df5e39bdaebc5705cf2c9caa2fe2cf35e47896f6e",
+  "authorChecks": [
+    "author_apparatus_models.py --check: passed",
+    "author_standing_stones.py --check: passed"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "unit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 146,
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/author_apparatus_middle.py --check"
+  ],
+  "materials_with_audited_uv_joins": 36,
+  "matching_face_sections_each_join": 20,
+  "verified_packaged_models": 180,
+  "native_visual_inspection": "Tuff and Quartz, all eight final scenes; loaded model hashes match final source resources",
+  "jar_sha256": "a04aff2673aae3571b12fe759f63cec472adbbfe3e4617e8a5b2253ae5b8d6ce"
+}

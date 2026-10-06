@@ -48,13 +48,14 @@ final class SpellActions {
             case "transpose", "create_water", "shape_stone", "gather_items", "utterance" -> {
                 return world.features.execute(action, context);
             }
-            case "random_teleport", "dwell_heal", "detect_magic", "inspect_item" -> {
+            case "random_teleport", "dwell_heal", "detect_magic", "inspect_item", "reveal_hidden", "reflect_projectiles" -> {
                 return SpellUtilityActions.execute(world, action, context, caster, living, level);
             }
             case "damage", "weapon_damage" -> {
                 if (living == null) { context.setNumber(VestigeMainMod.location("last_damage"), 0); return true; }
-                double amount = value(action, context, "amount", 0);
+                double amount = action.values().containsKey("amount") ? context.number(action.values().get("amount")) : 0;
                 if (action.type().getPath().equals("weapon_damage") && caster.getAttribute(Attributes.ATTACK_DAMAGE) != null) amount += caster.getAttributeValue(Attributes.ATTACK_DAMAGE) * value(action, context, "weapon_fraction", 1);
+                amount=context.amount(amount);
                 if (!finiteAmount(amount)) return false;
                 int maxHits = (int) value(action, context, "max_hits_per_target", 0);
                 if (maxHits > 0 && !context.claimHit(living.getUUID(), identifier(action, "hit_group", "vestige:damage"), maxHits)) {
@@ -74,11 +75,16 @@ final class SpellActions {
                 context.setNumber(VestigeMainMod.location("last_damage"), Math.max(0, before - living.getHealth()));
                 level.sendParticles(net.minecraft.core.particles.ParticleTypes.ENCHANTED_HIT, point.x, point.y + 1, point.z, 8, .3, .4, .3, .1);
             }
-            case "heal" -> { if (living == null) return false; double amount = value(action, context, "amount", 0); if (!finiteAmount(amount)) return false; living.heal((float) amount); }
+            case "heal" -> {
+                context.setNumber(VestigeMainMod.location("last_heal"),0);
+                if (living == null) return false; double amount = value(action, context, "amount", 0); if (!finiteAmount(amount)) return false;
+                float before=living.getHealth(); living.heal((float) amount);
+                context.setNumber(VestigeMainMod.location("last_heal"),Math.max(0,living.getHealth()-before));
+            }
             case "leech" -> {
                 double dealt = context.value(VestigeMainMod.location("last_damage")).filter(v -> v instanceof com.quzzar.vestige.magic.condition.ConditionValue.Decimal)
                         .map(v -> ((com.quzzar.vestige.magic.condition.ConditionValue.Decimal) v).value()).orElse(0.0);
-                caster.heal((float) Math.min(1000, dealt * value(action, context, "fraction", 0.25)));
+                caster.heal((float) context.amount(Math.min(value(action,context,"maximum",1000), dealt * value(action, context, "fraction", 0.25))));
             }
             case "status" -> {
                 if (living == null) return true;
@@ -219,11 +225,7 @@ final class SpellActions {
             case "remove_attribute" -> cleanup(context.castId());
             case "food_mana" -> {
                 var recipient=living==null?caster:living;
-                var data=recipient.getPersistentData();double previous=data.getDouble("vestige:mana");
-                double restored=Math.min(200,previous+value(action,context,"amount",20));
-                data.putDouble("vestige:mana",restored);
-                if(recipient instanceof net.minecraft.server.level.ServerPlayer player && restored>previous)
-                    player.displayClientMessage(net.minecraft.network.chat.Component.literal("+"+(int)(restored-previous)+" mana"),true);
+                NativeMana.restore(recipient,value(action,context,"amount",20));
             }
             case "redirect_projectiles" -> {
                 if (living == null) return false;
@@ -270,7 +272,7 @@ final class SpellActions {
         control.mob.getNavigation().stop();
         control.mob.setTarget(control.previousTarget != null && control.previousTarget.isAlive() ? control.previousTarget : null);
     }
-    static double value(SpellEffects.Action action, SpellRuntime.Context context, String key, double fallback) { return action.values().containsKey(key) ? context.number(action.values().get(key)) : fallback; }
+    static double value(SpellEffects.Action action, SpellRuntime.Context context, String key, double fallback) { return action.values().containsKey(key) ? context.gameplayValue(key,action.values().get(key)) : fallback; }
     private static int ticks(SpellEffects.Action action, SpellRuntime.Context context, String key, int fallback) { return (int) Math.max(1, Math.min(240000, value(action, context, key, fallback))); }
     private static ResourceLocation identifier(SpellEffects.Action action, String key, String fallback) { return action.identifiers().getOrDefault(key, ResourceLocation.parse(fallback)); }
     private static boolean finiteAmount(double value) { return Double.isFinite(value) && value >= 0 && value <= Float.MAX_VALUE; }

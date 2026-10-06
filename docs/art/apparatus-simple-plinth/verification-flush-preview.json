@@ -1,0 +1,28 @@
+{
+  "verified_at_utc": "2026-10-05T20:04:13.745000+00:00",
+  "commands": [
+    "./gradlew build verifyKithkynCompatibility runGameTestServer",
+    "python3 tools/author_apparatus_models.py --check",
+    "python3 tools/audit_apparatus_detail.py --check"
+  ],
+  "junit": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "required_minecraft_tests": 151,
+  "packaged_apparatus_block_models_verified": 180,
+  "unchanged_spellstone_finishes": 36,
+  "all_construction_recipes_unchanged": true,
+  "raster_assets_unchanged": true,
+  "capture_only_packs_excluded": true,
+  "jar_sha256": "89986c3305395f8e7c0b09aec55405a5a31d680c3690de4376196de97a1730b3",
+  "scope": "Simple Plinth geometry, generated collision and flush centered socket rendering on every segment. Spellstone, independent socket state, waterlogging, offering clearance and shaping unchanged.",
+  "native_visual_inspection": "Eight actual Tuff/Quartz views: standalone, one/two/four columns, empty versus independently imbued columns and close head. Loaded asset hashes and actual parts/sockets match.",
+  "limitations": [
+    "Client inspection covers Tuff and Quartz; all 36 finishes share audited geometry and world-tested behavior.",
+    "Prism NeoForge 21.1.248 requires owner restart/playtest; automated baseline is 21.1.72.",
+    "Geometry counts are not an FPS benchmark."
+  ]
+}

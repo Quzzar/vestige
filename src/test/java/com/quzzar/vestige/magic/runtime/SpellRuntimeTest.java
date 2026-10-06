@@ -182,12 +182,15 @@ class SpellRuntimeTest {
         world.canPay = false;
         var cast = runtime.cast(spell(List.of(), List.of(DAMAGE)), event(), List.of(), true);
         assertEquals(SpellRuntime.Status.COST_FAILED, cast.status()); assertTrue(world.amounts.isEmpty());
+        assertFalse(cast.paymentCommitted());
         world.canPay = true; world.sample = 0;
         cast = runtime.cast(spell(List.of(), List.of(DAMAGE)), event(), List.of(), false);
         assertEquals(SpellRuntime.Status.FORFEITED, cast.status()); assertEquals(1, world.forfeits);
+        assertTrue(cast.paymentCommitted());
         world.sample = 0.99; world.canExecute = false;
         cast = runtime.cast(spell(List.of(), List.of(DAMAGE)), event(), List.of(), true);
         assertEquals(SpellRuntime.Status.EFFECT_FAILED, cast.status()); assertTrue(cast.failure().isPresent());
+        assertTrue(cast.paymentCommitted());
         assertEquals(0, runtime.activeCasts());
     }
 
@@ -304,6 +307,19 @@ class SpellRuntimeTest {
         assertEquals(List.of(SpellRuntime.EndReason.REPLACED),world.ends);
     }
 
+    @Test void shapingPersistsThroughChargeRecastAndManifestationCallbacksAndPaysOnce() {
+        World world=new World();SpellRuntime runtime=new SpellRuntime(world);
+        var fractional=action("damage",2.25*2);
+        var field=new SpellEffects.Manifestation(id("area"),4,Map.of("radius",new SpellValue.Product(List.of(new SpellValue.Constant(2.5),new SpellValue.Trait(AMPLIFY)))),Map.of(),List.of(),List.of(),List.of(fractional),List.of(),2);
+        var definition=spell(List.of(new SpellCost.Mana(20),new SpellCost.Time(5)),List.of(fractional,new SpellEffects.AwaitRecast(20),new SpellEffects.CreateManifestation(field,TargetSpec.self())));
+        var cast=runtime.cast(definition,event(),List.of(new TraitModifier(AMPLIFY,TraitModifier.Operation.MULTIPLY,1.2)),true,Optional.empty(),false,new CastShaping(1.1,true));
+        for (int i=0;i<5;i++) runtime.tick();assertFalse(cast.paymentCommitted());
+        runtime.tick();assertEquals(List.of(new SpellCost.Mana(22),new SpellCost.Time(6)),world.lastCosts);assertEquals(List.of(5.0),world.amounts);
+        assertEquals(cast,runtime.cast(definition,event(),List.of(),true));assertEquals(3,world.lastManifest.get("radius"));
+        for (int i=0;i<4;i++) runtime.tick();assertEquals(List.of(5.0,5.0,5.0),world.amounts);assertEquals(1,world.payments);
+        assertEquals(20,((SpellCost.Mana)definition.costs().getFirst()).amount());
+    }
+
     private static SpellDefinition spell(List<SpellCost> costs, List<SpellEffect> effects) {
         return new SpellDefinition(id("sample"), Set.of(Tradition.ARCANE), new TraitProfile(Map.of(AMPLIFY, 1.0)), costs,
                 List.of(new SpellTrigger(id("primary"), SpellTriggerTypes.INTERACT, List.of())), effects);
@@ -325,6 +341,7 @@ class SpellRuntimeTest {
         final List<SpellRuntime.EndReason> ends = new ArrayList<>();
         final Map<ResourceLocation, ConditionValue> facts = new HashMap<>();
         int payments, forfeits;
+        List<SpellCost> lastCosts; Map<String,Double> lastManifest;
         boolean active = true, canPay = true, canExecute = true, distinctBacking;
         double sample = 0.99;
         @Override public ConditionContext conditions(SpellRuntime.Context context) {
@@ -337,14 +354,15 @@ class SpellRuntimeTest {
         }
         @Override public List<SpellSubject> select(TargetSpec target, SpellRuntime.Context context) { selections++; return selection == null ? List.of(new SpellSubject.Entity(context.actor())) : selection; }
         @Override public void present(SpellVisual visual, List<SpellSubject> points, SpellRuntime.Context context) { presented = points; }
-        @Override public boolean pay(List<SpellCost> costs, SpellRuntime.Context context) { if (!canPay) return false; payments++; return true; }
+        @Override public boolean pay(List<SpellCost> costs, SpellRuntime.Context context) { if (!canPay) return false; payments++; lastCosts=List.copyOf(costs); return true; }
         @Override public boolean active(SpellRuntime.Context context) { return active; }
         @Override public void forfeit(SpellRuntime.Context context) { forfeits++; }
         @Override public boolean execute(SpellEffects.Action action, SpellRuntime.Context context) {
-            if (canExecute) amounts.add(context.number(action.values().get("amount")));
+            if (canExecute) amounts.add(context.gameplayValue("amount",action.values().get("amount")));
             return canExecute;
         }
         @Override public Optional<ManifestationHandle> manifest(SpellEffects.Manifestation definition, Map<String, Double> values, SpellRuntime.Context context) {
+            lastManifest=Map.copyOf(values);
             return Optional.of(new ManifestationHandle() {
                 final SpellSubject subject = distinctBacking ? new SpellSubject.Entity(UUID.randomUUID()) : context.target();
                 public SpellSubject subject() { return subject; }

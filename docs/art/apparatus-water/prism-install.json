@@ -1,0 +1,16 @@
+{
+  "installed_at_utc": "2026-10-05T18:03:22.154749+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "d37b1330505c1cc27970cb35c5f0bc1218773cc049339f0b3c78ba15a7404b7c",
+  "destination_sha256": "d37b1330505c1cc27970cb35c5f0bc1218773cc049339f0b3c78ba15a7404b7c",
+  "previous_sha256": "fca222dc6fb975f269c5dcd16aa29ec86d4f23a47871921287a3d12cb60dedcf",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-water.jar",
+  "prism_instance": "Kithkyn Testing",
+  "prism_minecraft": "1.21.1",
+  "prism_neoforge": "21.1.248",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "installed_behavior": "Waterlogged Plinth and Spellstone; air/fluid clearance for offerings; independent imbuements on all column segments; solid-cover cancellation",
+  "models": "Detailed foot-refined geometry unchanged; corrected capture fixtures select actual column caps",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

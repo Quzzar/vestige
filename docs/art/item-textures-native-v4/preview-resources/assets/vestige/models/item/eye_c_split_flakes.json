@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/eye_c_split_flakes"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        -0.044585987261146494,
+        0.07133757961783439,
+        0
+      ],
+      "scale": [
+        1.614012738853503,
+        1.2105095541401274,
+        1
+      ]
+    }
+  }
+}

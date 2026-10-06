@@ -1,0 +1,57 @@
+{
+  "spell": "vestige:pf2_glass_shield",
+  "name": "Glass Shield",
+  "circle": 4,
+  "color": "d0f5ff",
+  "rationale": "Glass supplies the brittle ward, protection seals it, and Amethyst recalls its retaliating shard.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "protection seal",
+      "ingredient": {
+        "items": [
+          "minecraft:pufferfish",
+          "irons_spellbooks:protection_rune"
+        ]
+      },
+      "rationale": "Iron Protective Rune ingredient"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Glass motif follows blank inscription clockwise.",
+    "Protection seal follows glass motif clockwise.",
+    "Resonant facet follows protection seal clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

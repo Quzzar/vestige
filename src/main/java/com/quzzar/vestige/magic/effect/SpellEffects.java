@@ -37,6 +37,16 @@ public sealed interface SpellEffects extends SpellEffect {
         public Repeat { positive(count); positive(interval); effects = List.copyOf(effects); }
     }
 
+    /** Secondary outcomes retain causal lineage and isolate contact facts across delayed continuations. */
+    record Secondary(List<SpellEffect> effects) implements SpellEffects {
+        public Secondary { effects=List.copyOf(effects); }
+    }
+
+    /** A cast-owned contact budget, shared by impacts, pulses and callbacks. */
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+        public Limited { Objects.requireNonNull(group); positive(perTarget); positive(total); effects=List.copyOf(effects); }
+    }
+
     record ForEach(TargetSpec target, List<SpellEffect> effects, Optional<SpellVisual> visual) implements SpellEffects {
         public ForEach(TargetSpec target, List<SpellEffect> effects) { this(target, effects, Optional.empty()); }
         public ForEach { Objects.requireNonNull(target); effects = List.copyOf(effects); Objects.requireNonNull(visual); }

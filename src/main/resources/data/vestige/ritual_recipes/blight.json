@@ -1,0 +1,82 @@
+{
+  "spell": "vestige:blight",
+  "name": "Blight",
+  "circle": 8,
+  "color": "8bac29",
+  "rationale": "Poison, draining focus and decay choke living growth, with Bone and Mushroom marking its corruption.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 7,
+      "role": "poison motif",
+      "ingredient": {
+        "items": [
+          "minecraft:spider_eye"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 6,
+      "role": "draining focus",
+      "ingredient": {
+        "items": [
+          "minecraft:fermented_spider_eye",
+          "irons_spellbooks:blood_vial",
+          "irons_spellbooks:blood_rune"
+        ]
+      },
+      "rationale": "Native harmful brewing motif; optional Iron Blood focus"
+    },
+    {
+      "seat": 4,
+      "role": "enemy decay",
+      "ingredient": {
+        "items": [
+          "minecraft:rotten_flesh"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "bone motif",
+      "ingredient": {
+        "items": [
+          "minecraft:bone"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "mushroom motif",
+      "ingredient": {
+        "items": [
+          "minecraft:brown_mushroom"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Outer Plinths hold bone motif, poison motif; the other required ingredients use Inner Plinths.",
+    "Leave the first outer Plinth clockwise from Paper empty.",
+    "Leave the third outer Plinth clockwise from Paper empty.",
+    "Mushroom motif follows blank inscription clockwise, across an unused outer Plinth.",
+    "Bone motif follows mushroom motif clockwise.",
+    "Enemy decay follows bone motif clockwise.",
+    "Draining focus follows enemy decay clockwise, across an unused outer Plinth.",
+    "Poison motif follows draining focus clockwise.",
+    "Blank inscription follows poison motif clockwise."
+  ]
+}

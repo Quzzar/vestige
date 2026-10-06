@@ -1,0 +1,53 @@
+{
+  "spell": "vestige:spellstone",
+  "phase": 0,
+  "label": "Spellstone",
+  "kind": "apparatus",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Vestige",
+  "source": "Registered blocks and synchronized offering block entities",
+  "width": 960,
+  "height": 540,
+  "renderStage": "after_level_before_gui",
+  "apparatusMaterial": "quartz",
+  "assetSha256": {
+    "models/block/spellstone.json": "42eb63c3af0fc1be435a957cf0957045477eea0d079757a5f3bbadef3047dc60",
+    "models/block/plinth.json": "241b78b91e7a65d43b2d5154d2a119333f3aa8200a23540b0bf33702dbc8d0ba",
+    "textures/block/spellstone_runes_purple.png": "bea501540d8972c8b2fd77ab83c260819427343268d21ccaa87e2f308f09aea4",
+    "models/block/quartz_plinth.json": "7cadfb6efaaf56fe8d497df7ca000162cef03152213015a9f7e834ff283d66ce",
+    "models/block/quartz_spellstone.json": "60669f727cb2f9f6a9cdaa6a13feb8c87059fa2ea18eb87676916525ca2579f9"
+  },
+  "seconds": 2.033151167,
+  "times": [
+    0.018710833,
+    0.087782375,
+    0.154907708,
+    0.235146333,
+    0.302442167,
+    0.377478875,
+    0.453412167,
+    0.532867167,
+    0.607694833,
+    0.686739625,
+    0.767353458,
+    0.8605805,
+    0.976167792,
+    1.053244167,
+    1.172124125,
+    1.290760708,
+    1.405231583,
+    1.487179083,
+    1.591711333,
+    1.686357667,
+    1.761241208,
+    1.837132917,
+    1.905323583,
+    1.983848375
+  ],
+  "scenario": "Registered quartz Spellstone placed on ordinary terrain, viewed with native Minecraft lighting.",
+  "blocks": {
+    "BlockPos{x=0, y=65, z=0}": "vestige:quartz_spellstone"
+  },
+  "outcome": "PLACED",
+  "archivedFrame": 12,
+  "imageSha256": "7e5d23d3f7d00c8f7fa877397e63caa80c62688d2993afefc56fc10b7b0a128a"
+}

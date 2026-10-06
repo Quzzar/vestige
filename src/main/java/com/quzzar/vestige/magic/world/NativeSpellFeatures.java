@@ -5,7 +5,6 @@ import com.quzzar.vestige.magic.effect.SpellEffects;
 import com.quzzar.vestige.magic.presentation.*;
 import com.quzzar.vestige.magic.runtime.*;
 import net.minecraft.core.*;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.*;
 import net.minecraft.tags.*;
@@ -396,11 +395,17 @@ final class NativeSpellFeatures {
                         List.of(MinecraftSpellWorld.visualPoint(e,0)),cue.getLeastSignificantBits(),0,true,false,false));
             }
             if (behavior.equals("status") && age%40==0 && caster instanceof ServerPlayer player) {
-                var descriptions=recipients.stream().map(world::entity).filter(e -> e instanceof LivingEntity && e.level()==level && !obscured(caster.position(),e.position(),level)).map(e -> {
-                    LivingEntity living=(LivingEntity)e; String health=living.getHealth()/living.getMaxHealth()<.3?"critical":living.getHealth()/living.getMaxHealth()<.7?"hurt":"healthy";
-                    Vec3 direction=living.position().subtract(caster.position());
-                    return living.getName().getString()+": "+health+", "+living.getActiveEffects().size()+" conditions, "+(int)direction.length()+" blocks "+net.minecraft.core.Direction.getNearest(direction.x,0,direction.z).getName();
-                }).toList(); player.displayClientMessage(Component.literal(String.join(" • ",descriptions)),true);
+                for (UUID recipient:recipients) if (world.entity(recipient) instanceof LivingEntity living
+                        && living.level()==level && !obscured(caster.position(),living.position(),level)) {
+                    float health=living.getHealth()/living.getMaxHealth();
+                    int color=health<.3 ? 0xf07889 : health<.7 ? 0xedc879 : 0xa2dfb0;
+                    var layers=new ArrayList<SpellVisual.Layer>();
+                    layers.add(new SpellVisual.Layer(SpellVisual.Shape.BOX,color,.4f,.02f,1));
+                    if (!living.getActiveEffects().isEmpty()) layers.add(new SpellVisual.Layer(SpellVisual.Shape.MOTES,
+                            0xf4e5ff,.7f,.025f,1,0,0,Math.min(16,living.getActiveEffects().size())));
+                    PacketDistributor.sendToPlayer(player,new SpellVisualPayload(UUID.randomUUID(),level.dimension().location(),
+                            new SpellVisual.Resolved(40,.6f,layers),List.of(MinecraftSpellWorld.visualPoint(living,0)),0,0,true,false,false));
+                }
             }
         }
         @Override void release() { if (body!=null && (behavior.equals("camera") || behavior.equals("facade"))) state(behavior,behavior.equals("camera")?body:caster,0,true); }
@@ -444,7 +449,7 @@ final class NativeSpellFeatures {
         LivingEntity caster=world.actor(context); if (caster==null || absent(caster.getUUID()) || remote(caster.getUUID())) return false;
         ServerLevel level=world.level(context.target(),caster); if (level==null) return false;
         Vec3 point=world.position(context.target(),caster); BlockPos pos=BlockPos.containing(point);
-        Map<String,Double> v=new HashMap<>(); action.values().forEach((k,value)->v.put(k,context.number(value)));
+        Map<String,Double> v=new HashMap<>(); action.values().forEach((k,value)->v.put(k,context.gameplayValue(k,value)));
         switch (action.type().getPath()) {
             case "utterance": return !silent(caster.position(),level);
             case "create_water": {

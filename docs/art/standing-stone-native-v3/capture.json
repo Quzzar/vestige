@@ -1,0 +1,517 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Minecraft main render target",
+  "checks": [
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-day"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-day"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-day"
+    },
+    {
+      "particles": "ALL",
+      "yaw": 26.565052,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "capture": "three-shapes-day",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 5500
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "shouldered-stone-close"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "shouldered-stone-close"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "shouldered-stone-close"
+    },
+    {
+      "particles": "ALL",
+      "yaw": 29.93151,
+      "pitch": 10.416332,
+      "camera": [
+        2.4,
+        66.7,
+        -2.8
+      ],
+      "capture": "shouldered-stone-close",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 5500
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "matching-key-three-finishes"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "stone_bricks",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "matching-key-three-finishes"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "sandstone",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "matching-key-three-finishes"
+    },
+    {
+      "particles": "ALL",
+      "yaw": 26.565052,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "capture": "matching-key-three-finishes",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 5500
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-night"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-night"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "three-shapes-night"
+    },
+    {
+      "particles": "ALL",
+      "yaw": 26.565052,
+      "pitch": 7.641405,
+      "camera": [
+        4.5,
+        67.2,
+        -7.5
+      ],
+      "capture": "three-shapes-night",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 18000
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "runes-night-minimal"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "runes-night-minimal"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "runes-night-minimal"
+    },
+    {
+      "particles": "MINIMAL",
+      "yaw": 23.428692,
+      "pitch": 9.548813,
+      "camera": [
+        1.8,
+        66.55,
+        -2.5
+      ],
+      "capture": "runes-night-minimal",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 18000
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "runes-night-decreased"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "runes-night-decreased"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "runes-night-decreased"
+    },
+    {
+      "particles": "DECREASED",
+      "yaw": 23.428692,
+      "pitch": 9.548813,
+      "camera": [
+        1.8,
+        66.55,
+        -2.5
+      ],
+      "capture": "runes-night-decreased",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 18000
+    },
+    {
+      "position": [
+        -3,
+        65,
+        0
+      ],
+      "profile": "blade",
+      "material": "tuff",
+      "key": "76f32f1c38d3f867b7314795817de918434f62f7742e565283a18dff843ed500",
+      "upperHasEndpoint": false,
+      "view": "runes-night-close"
+    },
+    {
+      "position": [
+        0,
+        65,
+        0
+      ],
+      "profile": "shoulder",
+      "material": "tuff",
+      "key": "d9943647cbf7789d06ff728ebe1ecd8973b9fef68ddb481a7f68a213c91dcfc4",
+      "upperHasEndpoint": false,
+      "view": "runes-night-close"
+    },
+    {
+      "position": [
+        3,
+        65,
+        0
+      ],
+      "profile": "leaning",
+      "material": "tuff",
+      "key": "fd6beea2466e6b35d7d933b94217d9152e658d0b2a3fd7d409c3378c04c38811",
+      "upperHasEndpoint": false,
+      "view": "runes-night-close"
+    },
+    {
+      "particles": "ALL",
+      "yaw": 23.428692,
+      "pitch": 9.548813,
+      "camera": [
+        1.8,
+        66.55,
+        -2.5
+      ],
+      "capture": "runes-night-close",
+      "width": 1920,
+      "height": 1080,
+      "dayTime": 18000
+    },
+    {
+      "gameTime": 1016,
+      "frame": 0,
+      "elapsedSeconds": 0.168842958
+    },
+    {
+      "gameTime": 1020,
+      "frame": 1,
+      "elapsedSeconds": 0.35460675
+    },
+    {
+      "gameTime": 1022,
+      "frame": 2,
+      "elapsedSeconds": 0.52800075
+    },
+    {
+      "gameTime": 1026,
+      "frame": 3,
+      "elapsedSeconds": 0.728523875
+    },
+    {
+      "gameTime": 1031,
+      "frame": 4,
+      "elapsedSeconds": 0.951774667
+    },
+    {
+      "gameTime": 1034,
+      "frame": 5,
+      "elapsedSeconds": 1.128013333
+    },
+    {
+      "gameTime": 1038,
+      "frame": 6,
+      "elapsedSeconds": 1.303422542
+    },
+    {
+      "gameTime": 1043,
+      "frame": 7,
+      "elapsedSeconds": 1.530426958
+    },
+    {
+      "gameTime": 1047,
+      "frame": 8,
+      "elapsedSeconds": 1.730605792
+    },
+    {
+      "gameTime": 1052,
+      "frame": 9,
+      "elapsedSeconds": 1.941433
+    },
+    {
+      "gameTime": 1056,
+      "frame": 10,
+      "elapsedSeconds": 2.143225917
+    },
+    {
+      "gameTime": 1059,
+      "frame": 11,
+      "elapsedSeconds": 2.334308208
+    },
+    {
+      "gameTime": 1063,
+      "frame": 12,
+      "elapsedSeconds": 2.539682958
+    },
+    {
+      "gameTime": 1067,
+      "frame": 13,
+      "elapsedSeconds": 2.736933042
+    },
+    {
+      "gameTime": 1071,
+      "frame": 14,
+      "elapsedSeconds": 2.938396333
+    },
+    {
+      "gameTime": 1076,
+      "frame": 15,
+      "elapsedSeconds": 3.141054167
+    },
+    {
+      "gameTime": 1083,
+      "frame": 16,
+      "elapsedSeconds": 3.35033125
+    },
+    {
+      "gameTime": 1087,
+      "frame": 17,
+      "elapsedSeconds": 3.566099458
+    },
+    {
+      "gameTime": 1091,
+      "frame": 18,
+      "elapsedSeconds": 3.742879542
+    },
+    {
+      "gameTime": 1094,
+      "frame": 19,
+      "elapsedSeconds": 3.9269415
+    },
+    {
+      "gameTime": 1098,
+      "frame": 20,
+      "elapsedSeconds": 4.132135125
+    },
+    {
+      "gameTime": 1104,
+      "frame": 21,
+      "elapsedSeconds": 4.343439208
+    },
+    {
+      "gameTime": 1107,
+      "frame": 22,
+      "elapsedSeconds": 4.538505583
+    },
+    {
+      "gameTime": 1112,
+      "frame": 23,
+      "elapsedSeconds": 4.763638083
+    },
+    {
+      "gameTime": 1116,
+      "frame": 24,
+      "elapsedSeconds": 4.973372542
+    },
+    {
+      "gameTime": 1120,
+      "frame": 25,
+      "elapsedSeconds": 5.176868458
+    },
+    {
+      "gameTime": 1123,
+      "frame": 26,
+      "elapsedSeconds": 5.383896167
+    },
+    {
+      "gameTime": 1127,
+      "frame": 27,
+      "elapsedSeconds": 5.581376583
+    },
+    {
+      "gameTime": 1132,
+      "frame": 28,
+      "elapsedSeconds": 5.808059042
+    },
+    {
+      "gameTime": 1136,
+      "frame": 29,
+      "elapsedSeconds": 6.007527958
+    }
+  ],
+  "meshSha256": {
+    "assets/vestige/models/block/standing_stone_blade_lower.obj": "cf83af2f3283478622c8929794dfef1380a65c9607adb631e7c3acab2be5a897",
+    "assets/vestige/models/block/standing_stone_blade_upper.obj": "bb727f8d3a9c4e3014705e4f4d2fe96998d6e21c15921ee95e289c0c391be65c",
+    "assets/vestige/models/block/standing_stone_blade_whole.obj": "68a39704c6cd8a607fb248c283ec2d87db7a8f3df21833a5f1287b4eef537a1d",
+    "assets/vestige/models/block/standing_stone_shoulder_lower.obj": "0591410d093ba1edb58ff61787c198b778e2ea4f73ab43ae4f780fc9f9cbfb0d",
+    "assets/vestige/models/block/standing_stone_shoulder_upper.obj": "b3d5a1021d003c90034416d50bc89f06e7639267ed419c52f2cdece2a342806d",
+    "assets/vestige/models/block/standing_stone_shoulder_whole.obj": "a447c6c0564e64806a8c27a04abe58466b6c54cc5ff0fa47add0c8aaa37555c2",
+    "assets/vestige/models/block/standing_stone_leaning_lower.obj": "3ad9363ce2718911493ccf1fb1dda9a689d5c778b36db116134bd50265c14a6c",
+    "assets/vestige/models/block/standing_stone_leaning_upper.obj": "dd473af48c6deef4587bf0cb21a6592ee69c79172c32fbe7030e2566a7896264",
+    "assets/vestige/models/block/standing_stone_leaning_whole.obj": "68dbe0285a1918cd6b5db899adf93c91d69276c08687d5ea485805efd0ce91ef"
+  }
+}

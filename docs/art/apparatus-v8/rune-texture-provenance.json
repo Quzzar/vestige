@@ -1,0 +1,16 @@
+{
+  "method": "built-in imagegen; native palette/grid adaptation",
+  "reference": "cyan-rune-reference.png",
+  "generated_source": "rune-generated-source.png",
+  "selected_prompt": "rune-generation-prompt.txt",
+  "native_grid": "apparatus-rune-texture.json",
+  "size": [
+    16,
+    16
+  ],
+  "opaque_rune_cells": 95,
+  "unchanged_stone_cells": 161,
+  "preparation": "Area reduction, alpha cutoff 48/255, three-color cyan palette, centered two-by-two aperture",
+  "reference_sha256": "8ed077de3a43471f497a9c9a5fe58892ec0e53db5bdba3dfcdd418966b8bac73",
+  "generated_source_sha256": "7af60ffa8f47888ae295c77dbd78244de28da0e8e01852f3d8b4cfa5cab8becb"
+}

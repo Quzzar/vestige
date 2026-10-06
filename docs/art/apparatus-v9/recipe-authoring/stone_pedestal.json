@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DDD",
+    "ADA"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:chiseled_deepslate"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "id": "vestige:stone_pedestal",
+    "count": 1
+  }
+}

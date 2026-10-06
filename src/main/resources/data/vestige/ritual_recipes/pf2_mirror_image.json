@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_mirror_image",
+  "name": "Mirror Image",
+  "circle": 4,
+  "color": "d98bd0",
+  "rationale": "Glass reflects Ink's depiction around Amethyst; ordering distinguishes copies from a single illusory object.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "glass motif",
+      "ingredient": {
+        "items": [
+          "minecraft:glass"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 2,
+      "role": "ink motif",
+      "ingredient": {
+        "items": [
+          "minecraft:ink_sac"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "resonant facet",
+      "ingredient": {
+        "items": [
+          "minecraft:amethyst_shard",
+          "irons_spellbooks:arcane_essence"
+        ]
+      },
+      "rationale": "Iron mana/regeneration/cast-time crafting family; native focusing role"
+    }
+  ],
+  "clues": [
+    "Glass motif follows blank inscription clockwise.",
+    "Ink motif follows glass motif clockwise.",
+    "Resonant facet follows ink motif clockwise.",
+    "Blank inscription follows resonant facet clockwise."
+  ]
+}

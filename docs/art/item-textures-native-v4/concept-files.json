@@ -1,0 +1,82 @@
+[
+  {
+    "id": "eye_a_stone_lids",
+    "name": "Eye A \u00b7 Stone lids",
+    "subject": "Homebound Eye",
+    "direction": "A wide horizontal almond-shaped eye. Rough dark flint chips form the upper and lower eyelids, framing pearl-green eye whites and a crimson vertical pupil. The eye shape itself is the entire silhouette, with no surrounding pebble or talisman body. It should be around twelve logical pixels wide and six high.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Homebound Eye\nNew direction: A wide horizontal almond-shaped eye. Rough dark flint chips form the upper and lower eyelids, framing pearl-green eye whites and a crimson vertical pupil. The eye shape itself is the entire silhouette, with no surrounding pebble or talisman body. It should be around twelve logical pixels wide and six high.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-0c8eb9d8-206f-4d53-90d8-13975e1f6308.png",
+    "destination": "concepts/eye_a_stone_lids.png",
+    "sha256": "3d89a1331480d8a38789aa73323d0fc2f77cd58d9fff161e871c8fd6c41fc490"
+  },
+  {
+    "id": "eye_b_pearl_heart",
+    "name": "Eye B \u00b7 Pearl heart",
+    "subject": "Homebound Eye",
+    "direction": "An irregular cracked flint fragment cups one side of a glossy teal-green pearl, leaving most of the pearl exposed. A tiny dark crimson pupil sits in the pearl. Asymmetric mineral and pearl silhouette, roughly eleven logical pixels wide and eleven high. Do not put the eye inside a large stone disk.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Homebound Eye\nNew direction: An irregular cracked flint fragment cups one side of a glossy teal-green pearl, leaving most of the pearl exposed. A tiny dark crimson pupil sits in the pearl. Asymmetric mineral and pearl silhouette, roughly eleven logical pixels wide and eleven high. Do not put the eye inside a large stone disk.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-6aff2b80-91b2-45fc-84fe-3c7ebb05d4f7.png",
+    "destination": "concepts/eye_b_pearl_heart.png",
+    "sha256": "e09e5d8fe5333c897a6d7c298763761ad7fc10e84473a945dbc00bce55c5bbf4"
+  },
+  {
+    "id": "eye_c_split_flakes",
+    "name": "Eye C \u00b7 Split flakes",
+    "subject": "Homebound Eye",
+    "direction": "Two separate-looking chipped flint flakes arranged like opposing jaws, joined by a small teal-green central eyepiece with a crimson pupil. Slender upper and lower gray mineral shards curve away from the exposed central eye. Diagonal triangular open form, twelve logical pixels wide and nine high. No round stone body.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Homebound Eye\nNew direction: Two separate-looking chipped flint flakes arranged like opposing jaws, joined by a small teal-green central eyepiece with a crimson pupil. Slender upper and lower gray mineral shards curve away from the exposed central eye. Diagonal triangular open form, twelve logical pixels wide and nine high. No round stone body.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-c7d1264e-10c4-4de9-8232-9d1faaf87417.png",
+    "destination": "concepts/eye_c_split_flakes.png",
+    "sha256": "287b97a98b3db4391112932b1349090c6d82d1de5cde41f57fe577cf94788924"
+  },
+  {
+    "id": "eye_d_crimson_eye",
+    "name": "Eye D \u00b7 Crimson eye",
+    "subject": "Homebound Eye",
+    "direction": "A large organic dark crimson pupil with a pink Spider Eye highlight, surrounded by restrained Ender Pearl green eye whites. It is set into a small angular gray flint cradle at the lower-left and lower edge, rather than mounted on a pebble. Compact upright irregular eye-shaped silhouette, roughly ten logical pixels wide and eleven high. More organic and jewel-like than the other three directions, with a clear rough mineral base.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Homebound Eye\nNew direction: A large organic dark crimson pupil with a pink Spider Eye highlight, surrounded by restrained Ender Pearl green eye whites. It is set into a small angular gray flint cradle at the lower-left and lower edge, rather than mounted on a pebble. Compact upright irregular eye-shaped silhouette, roughly ten logical pixels wide and eleven high. More organic and jewel-like than the other three directions, with a clear rough mineral base.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-94e3bd86-5937-4561-9875-9603b30fd69c.png",
+    "destination": "concepts/eye_d_crimson_eye.png",
+    "sha256": "310a194d7875e77e2b5121478dd9fe40e8c451ce72f3d4c78624ad1674331443"
+  },
+  {
+    "id": "shell_a_coiled_spiral",
+    "name": "Shell A \u00b7 Coiled spiral",
+    "subject": "Whispering Shell",
+    "direction": "A compact round spiraling nautilus shell, charcoal-brown and weathered ash gray, with a visible curling spiral path and a small very dark aperture at the lower-right. A tiny subdued teal glint is inside the aperture. No long conch spire. About eleven logical pixels wide and eleven high.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Whispering Shell\nNew direction: A compact round spiraling nautilus shell, charcoal-brown and weathered ash gray, with a visible curling spiral path and a small very dark aperture at the lower-right. A tiny subdued teal glint is inside the aperture. No long conch spire. About eleven logical pixels wide and eleven high.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-788ec6fb-183f-4651-9129-104393854ee2.png",
+    "destination": "concepts/shell_a_coiled_spiral.png",
+    "sha256": "6125e6bedfd87233261346afc980d1e399970ac00ae25ed29666cd4c2fbbe9a8"
+  },
+  {
+    "id": "shell_b_trumpet",
+    "name": "Shell B \u00b7 Trumpet",
+    "subject": "Whispering Shell",
+    "direction": "A sideways curved trumpet conch, tapering to a curled narrow point on the left and flaring into a hollow oval mouth on the right. Dark cool gray shell with stepped ribs and an inner warm gray lip. Tiny subdued teal glint deep in the black mouth. Wide horizontal silhouette, about thirteen logical pixels wide and eight high. No diagonal pointed old conch silhouette.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Whispering Shell\nNew direction: A sideways curved trumpet conch, tapering to a curled narrow point on the left and flaring into a hollow oval mouth on the right. Dark cool gray shell with stepped ribs and an inner warm gray lip. Tiny subdued teal glint deep in the black mouth. Wide horizontal silhouette, about thirteen logical pixels wide and eight high. No diagonal pointed old conch silhouette.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-5208afc4-6b20-407a-89b8-9fd47506775d.png",
+    "destination": "concepts/shell_b_trumpet.png",
+    "sha256": "e1cd68c6161e63cfc02b02548653a9564db6d6baccdf3f8432146c08a75250c1"
+  },
+  {
+    "id": "shell_c_open_clam",
+    "name": "Shell C \u00b7 Open clam",
+    "subject": "Whispering Shell",
+    "direction": "An open dark scallop or clam shell. A fan-shaped charcoal blue-gray upper valve with five coarse radial ridges sits above a smaller curved lower valve. Black interior gap with one dim teal speck. Obvious bivalve shell shape, roughly twelve logical pixels wide and ten high. No conch spire, round pebble, gem ornament or pearl sitting inside.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Whispering Shell\nNew direction: An open dark scallop or clam shell. A fan-shaped charcoal blue-gray upper valve with five coarse radial ridges sits above a smaller curved lower valve. Black interior gap with one dim teal speck. Obvious bivalve shell shape, roughly twelve logical pixels wide and ten high. No conch spire, round pebble, gem ornament or pearl sitting inside.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-225526ce-d760-4758-ad9c-9ac9b768fb5f.png",
+    "destination": "concepts/shell_c_open_clam.png",
+    "sha256": "6c68824c275ed9f954c708b536e987d42e5269b41e82cfc10f8d445183c1099b"
+  },
+  {
+    "id": "shell_d_broken_whorl",
+    "name": "Shell D \u00b7 Broken whorl",
+    "subject": "Whispering Shell",
+    "direction": "A weathered short spiral shell viewed from its broken side. Ash-gray irregular scalloped rim, a small curled whorl at the upper-left, and a large dark indigo hollow opening at the lower-right with a single muted teal glint. Coarse stepped mineral-like shell ridges, not a traced bright border. Asymmetric hooked silhouette about twelve logical pixels wide and eleven high. No long pointed spire and no smooth oval blob.",
+    "prompt": "Use case: stylized-concept.\nAsset type: original Minecraft 1.21.1 inventory item pixel-art direction on a genuinely transparent background.\nPrimary request: a completely new design, not an iteration of any earlier conversation item. Vanilla Minecraft item style, strong readable silhouette, discrete pixel clusters, natural stepped shading and small palette. Exactly a 16 by 16 logical grid enlarged with uniform crisp square cells. Leave at least one logical transparent pixel around every edge. No fine subpixel detail, blur, antialiasing, smooth vector shapes, glow halo, sparkle, decoration, letters, text, borders or inventory UI. A restrained palette around 10 to 14 colors. Distinct facets and shell ridges may contain small highlights, but avoid noisy dithering or bright outline tracing. Only one complete item. The result does not need to literally depict its crafting ingredients.\n\nItem: Whispering Shell\nNew direction: A weathered short spiral shell viewed from its broken side. Ash-gray irregular scalloped rim, a small curled whorl at the upper-left, and a large dark indigo hollow opening at the lower-right with a single muted teal glint. Coarse stepped mineral-like shell ridges, not a traced bright border. Asymmetric hooked silhouette about twelve logical pixels wide and eleven high. No long pointed spire and no smooth oval blob.",
+    "source": "/Users/quzzar/.codex/generated_images/01a1118c-4338-70a2-8324-306d08c9b319/exec-0e9233aa-bcf3-4df6-8a4a-46442007ad5d.png",
+    "destination": "concepts/shell_d_broken_whorl.png",
+    "sha256": "0c9094011447c2f5131c18cd57bcea36a8fbdc70799fa242fc32925b82c60e70"
+  }
+]

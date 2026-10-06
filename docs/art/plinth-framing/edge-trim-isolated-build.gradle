@@ -1,0 +1,11 @@
+// Separate outputs and --project-cache-dir protect other active review clients.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.layout.projectDirectory.dir('build/apparatus-edge-trim-review'))
+    }
+}
+gradle.projectsEvaluated {
+    gradle.rootProject.tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+        options.incremental = false
+    }
+}

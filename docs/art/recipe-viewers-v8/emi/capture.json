@@ -1,0 +1,63 @@
+{
+  "indexing": {
+    "lapisUses": 1,
+    "baseFireball": 1,
+    "blazeRodSpellUses": 0,
+    "paperSpellUses": 0,
+    "attunedShard": 1,
+    "reloadedFireballCapacity": 8,
+    "shapedFireball": 1
+  },
+  "lookups": [
+    {
+      "recipe": "fireball",
+      "guiScale": 4,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 640,
+      "registeredRituals": 215,
+      "guiHeight": 360
+    },
+    {
+      "recipe": "starfall",
+      "guiScale": 4,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 640,
+      "registeredRituals": 215,
+      "guiHeight": 360
+    },
+    {
+      "recipe": "attunement_shard",
+      "guiScale": 4,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 640,
+      "registeredRituals": 215,
+      "guiHeight": 360
+    },
+    {
+      "recipe": "fireball",
+      "guiScale": 6,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 320,
+      "registeredRituals": 215,
+      "guiHeight": 240
+    },
+    {
+      "recipe": "attunement_shard",
+      "guiScale": 6,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 320,
+      "registeredRituals": 215,
+      "guiHeight": 240
+    },
+    {
+      "recipe": "reloaded_fireball",
+      "guiScale": 6,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 320,
+      "registeredRituals": 215,
+      "guiHeight": 240
+    }
+  ],
+  "viewer": "emi",
+  "source": "Minecraft main render target in actual recipe viewer"
+}

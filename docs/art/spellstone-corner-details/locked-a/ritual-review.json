@@ -1,0 +1,67 @@
+{
+  "source": "Actual Minecraft framebuffer recordings; native game image retained at 960x540",
+  "captionPlacement": "Additional forty-pixel band above the game image",
+  "size": [
+    960,
+    580
+  ],
+  "audio": false,
+  "states": [
+    {
+      "state": "ritual_idle",
+      "title": "Ready to craft",
+      "outcome": "READY",
+      "sourceSha256": "06d950155291edd0346eb205f9addb7c9975fa09164d01e7f3524c417ac4e65a",
+      "nativeFrames": 66,
+      "nativeSeconds": 5.067091667,
+      "serverTicks": 101
+    },
+    {
+      "state": "ritual_hints",
+      "title": "Missing item silhouettes and misplaced items",
+      "outcome": "HINTS",
+      "sourceSha256": "b015375b2c1f4f21a95fd5aac2860727ed0989d1f75764d60fc6edf0b6f8dac2",
+      "nativeFrames": 63,
+      "nativeSeconds": 5.018588875,
+      "serverTicks": 101
+    },
+    {
+      "state": "ritual_wrong",
+      "title": "Completed wrong recipe",
+      "outcome": "WRONG",
+      "sourceSha256": "0cf0bec1f59b6dcb0f009c1ecd241b86d53b8bb8ce295507b32b4e34cb7981cb",
+      "nativeFrames": 65,
+      "nativeSeconds": 5.030828917,
+      "serverTicks": 101
+    },
+    {
+      "state": "ritual_reference_success",
+      "title": "Successful crafting and ingredient lift",
+      "outcome": "CRAFTING",
+      "sourceSha256": "18d2ad6481c284b5dc954e6e211f5486ae34302d824f94eccd15b8709772dd1a",
+      "nativeFrames": 66,
+      "nativeSeconds": 5.015958625,
+      "serverTicks": 100
+    },
+    {
+      "state": "ritual_failure",
+      "title": "Failed ritual and blast",
+      "outcome": "EXPLOSION_PENDING",
+      "sourceSha256": "9ac8bb20e24289069fcee68fecc61c76f6d0388d51361bc72311eebca261a7d9",
+      "nativeFrames": 65,
+      "nativeSeconds": 5.037874292,
+      "serverTicks": 101
+    },
+    {
+      "state": "ritual_discovery",
+      "title": "Fragment discovery",
+      "outcome": "DISCOVERING",
+      "sourceSha256": "1892af742f676a923060d6c76aff3f897343d3983f73a54ead79decfd335da26",
+      "nativeFrames": 63,
+      "nativeSeconds": 5.004101042,
+      "serverTicks": 100
+    }
+  ],
+  "sha256": "69ff50b164388a403a87fbf7ed16c8633c04f89e8f19e624abb9e57f39571acc",
+  "decodeVerification": "Complete reel decoded successfully"
+}

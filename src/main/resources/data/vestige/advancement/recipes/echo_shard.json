@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ghast_tear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": "minecraft:ghast_tear" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": { "recipe": "vestige:echo_shard" }
+    }
+  },
+  "requirements": [["has_ghast_tear", "has_the_recipe"]],
+  "rewards": { "recipes": ["vestige:echo_shard"] }
+}

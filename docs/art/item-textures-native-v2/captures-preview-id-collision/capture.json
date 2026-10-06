@@ -1,0 +1,67 @@
+{
+  "engine": "Minecraft Java 1.21.1 / NeoForge 21.1.72",
+  "source": "Unedited main framebuffer after real vanilla ContainerScreen and item rendering",
+  "screens": [
+    "gui-2.png",
+    "gui-3.png",
+    "eye-hover.png",
+    "shell-hover.png"
+  ],
+  "scales": [
+    2,
+    3,
+    3,
+    3
+  ],
+  "variantOrder": [
+    "eye_a_soft_flint",
+    "eye_b_dark_pebble",
+    "eye_c_chipped_face",
+    "eye_d_simple_talisman",
+    "shell_a_soft_ash",
+    "shell_b_compact_conch",
+    "shell_c_slate",
+    "shell_d_deep_dusk",
+    "previous_eye",
+    "previous_shell"
+  ],
+  "columns": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "assetSha256": {
+    "vestige:textures/item/eye_a_soft_flint.png": "87f460614022fb81bedd2b3b59405a7fcd919a8379d49cedcbc81d366d635716",
+    "vestige:models/item/eye_a_soft_flint.json": "d86ba3b0825c76343b60738cf439706b38363ba0a3eaf6da4a58010d5fef9b3d",
+    "vestige:textures/item/eye_b_dark_pebble.png": "71b173c3697b0b7694a3871e0a48a0c257d3312548150694ff92d15fd393b38c",
+    "vestige:models/item/eye_b_dark_pebble.json": "b7ef431379f9c6d5c27092e121c53c6969c03f939ea8929b2a9b8c2681037ef8",
+    "vestige:textures/item/eye_c_chipped_face.png": "cf5377407cc0d5930cf6fa29fe3afff5d3641beb8a4bb54d25425cc6727efc5f",
+    "vestige:models/item/eye_c_chipped_face.json": "5424ce598eec99636bffc7ea03b69be839b35f816f2b679e38afd9eaf5544cc4",
+    "vestige:textures/item/eye_d_simple_talisman.png": "3d84ff56001240dc10724c1119b5bf93081a1fd9f88879cb24460d407648c0f3",
+    "vestige:models/item/eye_d_simple_talisman.json": "027c042912306314e7d6e68f7d93afa1825fc3ea02db565765836368719c53d9",
+    "vestige:textures/item/shell_a_soft_ash.png": "688aa6a83e577ce2958fa3ea22b37096539e333a6426e956a3b5f9d6b6ed7770",
+    "vestige:models/item/shell_a_soft_ash.json": "c243edc92b79af510b66a2af283adcc90ac9404408e035b4ce29dad38b4e8e3f",
+    "vestige:textures/item/shell_b_compact_conch.png": "423fc9730e3de01b84759a29fd058a2e8f4e57da37a3a71a66ab8451a7175685",
+    "vestige:models/item/shell_b_compact_conch.json": "3a0e699a322fe88731f46721495e4c20c660bb7b43ccf6d5218c24c5c2163370",
+    "vestige:textures/item/shell_c_slate.png": "b1dfaec533c548b9996ab53cac14490c46548bd7b03b29d88c280e4242a53e66",
+    "vestige:models/item/shell_c_slate.json": "569e23f898e86f0382b2eaaf5559213456eb5fe620d9404242f7ff7232f861d5",
+    "vestige:textures/item/shell_d_deep_dusk.png": "f5bf59f10dfafc6a07af7d4845e8ecffe326b5a781679bdec5b54903ebdbf7e2",
+    "vestige:models/item/shell_d_deep_dusk.json": "e539b62b929fc757adcdf6960b004c6217d0d37f31d75023f7789da826784a8b",
+    "vestige:textures/item/previous_eye.png": "e280f10fe59fcdd75c70ed6995b851ccf0947d6c6831f42b5bf171fed3c8bdfc",
+    "vestige:models/item/previous_eye.json": "fcdfe002311f7d58ab65b71bcb020783bc1db124da42c1a69d3557a32f017252",
+    "vestige:textures/item/previous_shell.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "vestige:models/item/previous_shell.json": "888f18f8d04de81b070bd5166f35dfa495f6fb45aacf8938295e0f30586a7504",
+    "minecraft:models/item/paper.json": "a48e15aad3e5c5b074896b71a656bb12fa9194d571276d9283da6ee6dea53f69",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/flint.png": "ba7c3c7a261bfcbc2f1d8c67b808d8bce73ff8f7445aa76d8dc62a7f28198fc0",
+    "minecraft:textures/item/spider_eye.png": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/ink_sac.png": "0b6afc3bedf39949e7a59821e8d0e4bbf1a9617d8e751fc23ddd9b05fe16756d"
+  },
+  "worldOpened": false,
+  "previewOnly": "Paper CustomModelData 202610070–202610079, native item/generated models; no production texture replacement or gameplay change",
+  "menu": "Actual six-row ChestMenu / ContainerScreen. Label rows above the four Eyes and four Shells. Middle comparison row includes vanilla items and the two previous draft textures."
+}

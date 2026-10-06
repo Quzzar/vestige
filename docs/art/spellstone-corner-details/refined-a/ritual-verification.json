@@ -1,0 +1,142 @@
+{
+  "source": "Native server outcomes and actual framebuffer captures",
+  "states": [
+    {
+      "spell": "vestige:ritual_idle",
+      "outcome": "READY",
+      "seconds": 5.042038875,
+      "elapsedTicks": 101,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "1 minecraft:paper",
+        "0 minecraft:air",
+        "1 minecraft:clock",
+        "0 minecraft:air",
+        "1 minecraft:pufferfish",
+        "0 minecraft:air",
+        "1 minecraft:phantom_membrane",
+        "1 minecraft:ender_pearl"
+      ],
+      "subjects": [],
+      "videoSha256": "8bf16e4e5cfafdf8ea83507179287e90a3dc4f25ef53d9ba82c49a53ad2e6032"
+    },
+    {
+      "spell": "vestige:ritual_hints",
+      "outcome": "HINTS",
+      "seconds": 5.040443791,
+      "elapsedTicks": 101,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "1 minecraft:paper",
+        "0 minecraft:air",
+        "1 minecraft:ender_pearl",
+        "0 minecraft:air",
+        "1 minecraft:phantom_membrane",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "1 minecraft:clock"
+      ],
+      "subjects": [],
+      "videoSha256": "490365d45cbc1e2d542ee24570ea5610c92a1488c8728bb6a67bf12b1c66161c"
+    },
+    {
+      "spell": "vestige:ritual_wrong",
+      "outcome": "WRONG",
+      "seconds": 5.029787084,
+      "elapsedTicks": 101,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "1 minecraft:dirt",
+        "0 minecraft:air",
+        "1 minecraft:dirt",
+        "0 minecraft:air",
+        "1 minecraft:dirt",
+        "0 minecraft:air",
+        "1 minecraft:dirt",
+        "0 minecraft:air"
+      ],
+      "subjects": [],
+      "videoSha256": "332d273f184cfa3c274208aeaebb032fde470da4542ed0e74676688da7de63c4"
+    },
+    {
+      "spell": "vestige:ritual_reference_success",
+      "outcome": "CRAFTING",
+      "seconds": 5.072969291,
+      "elapsedTicks": 102,
+      "reference": "1 vestige:spell_scroll",
+      "output": "1 vestige:spell_scroll",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [],
+      "videoSha256": "745a68b7602380f102f64616719398e2f7322b23ef24371275585bacc9297943"
+    },
+    {
+      "spell": "vestige:ritual_failure",
+      "outcome": "EXPLOSION_PENDING",
+      "seconds": 5.083430959,
+      "elapsedTicks": 102,
+      "reference": "1 vestige:spell_scroll",
+      "output": "0 minecraft:air",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [
+        {
+          "role": "Within blast",
+          "displacement": 0.0,
+          "before": 20.0,
+          "after": 7.667985,
+          "alive": true
+        },
+        {
+          "role": "Outside blast",
+          "displacement": 0.0,
+          "before": 20.0,
+          "after": 20.0,
+          "alive": true
+        }
+      ],
+      "videoSha256": "3f443e071df1f108d9f36ea4da5b1adb238d64dac6866c853b3fa11f6a458bc9"
+    },
+    {
+      "spell": "vestige:ritual_discovery",
+      "outcome": "DISCOVERING",
+      "seconds": 5.073487833,
+      "elapsedTicks": 101,
+      "reference": "0 minecraft:air",
+      "output": "1 vestige:spell_scroll",
+      "offerings": [
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air",
+        "0 minecraft:air"
+      ],
+      "subjects": [],
+      "videoSha256": "bccf0d0fabfb4946672a8c13c13b71abaf0072e95167ffffd3e2846534a846ef"
+    }
+  ],
+  "visuallyInspected": "All six states, ingredient lift, reference/result stack, ghost hints, sideways shaking, blast particle frame and final scroll outcomes",
+  "rendererSha256": "d1676c13c4ae72c470c777dee06f95787b08c5bc9af6b4dd30f9cf7033470029"
+}

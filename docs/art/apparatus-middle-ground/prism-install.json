@@ -1,0 +1,15 @@
+{
+  "installed_at_utc": "2026-10-05T17:09:46.045294+00:00",
+  "source": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "destination": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "source_sha256": "a04aff2673aae3571b12fe759f63cec472adbbfe3e4617e8a5b2253ae5b8d6ce",
+  "destination_sha256": "a04aff2673aae3571b12fe759f63cec472adbbfe3e4617e8a5b2253ae5b8d6ce",
+  "previous_sha256": "1fee6f012340f976c91ac8e1cb0138c389da3bc605b1ff29b73f654dda363b56",
+  "backup": "/Users/quzzar/Projects/vestige/build/prism-before-apparatus-middle.jar",
+  "automated_baseline": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "prism_instance": "Kithkyn Testing",
+  "prism_neoforge": "21.1.248",
+  "installed_models": "Middle Plinth 24; Spellstone 25 including rune/decals; column base/shaft/cap 7/5/22",
+  "textures": "Continuous masonry/trim UVs, border-free polished interiors and native Quartz/Purpur pillar shafts",
+  "manual_instance_test": "Pending owner restart and playtest"
+}

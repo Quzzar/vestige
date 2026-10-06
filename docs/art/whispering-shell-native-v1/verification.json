@@ -1,0 +1,99 @@
+{
+  "verified_utc": "2026-10-06T19:08:29.266623+00:00",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": {
+    "texture_author_check": "PASS",
+    "isolated_compile_resources_native_capture": "PASS",
+    "loaded_assets_match_native_draft_and_pinned_vanilla": "PASS",
+    "pinned_loot_archive_eight_tables_and_sensor_echo_probabilities": "PASS"
+  },
+  "pixel_constraints": {
+    "size": [
+      16,
+      16
+    ],
+    "opaque_pixels": 90,
+    "opaque_colors": 8,
+    "alpha": [
+      0,
+      255
+    ],
+    "bright_teal_pixels": 2
+  },
+  "screens": {
+    "gui-2.png": {
+      "sha256": "6d0212808439a82396c47b4f658b33a33594bcf726004d6168e6e7d4d98e5ab3",
+      "size": [
+        1280,
+        960
+      ],
+      "gui_scale": 2,
+      "hover": false,
+      "visually_inspected": true
+    },
+    "gui-2-hover.png": {
+      "sha256": "19c2b993436af291f05c421af4096ebc73604c49e2023311d8de2eab2c162d71",
+      "size": [
+        1280,
+        960
+      ],
+      "gui_scale": 2,
+      "hover": true,
+      "visually_inspected": true
+    },
+    "gui-3.png": {
+      "sha256": "fe12d1309a7f56c7d5ecb11b07b5063a31d395a180fbdb8cfb039bf68bc855ba",
+      "size": [
+        1280,
+        960
+      ],
+      "gui_scale": 3,
+      "hover": false,
+      "visually_inspected": true
+    },
+    "gui-3-hover.png": {
+      "sha256": "35c5cb818f5426003e794427544c67ed60a7d5254991a9178fe8a61ac2b2858a",
+      "size": [
+        1280,
+        960
+      ],
+      "gui_scale": 3,
+      "hover": true,
+      "visually_inspected": true
+    }
+  },
+  "source_sha256": {
+    "texture-source.json": "83b784854fd3912eb12d5b3594243e468a54d0bda796c156f7f5823193bc6843",
+    "author_texture.py": "dde8c6d010d20bdaec38ac66817de7ba65eb386760e59c8bd3374eaea8579ef3",
+    "whispering-shell.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "isolated-preview.gradle": "8d3df564f841a3b06d6561c20191089d64b22ee5167f8e23b23366f2d84b8f86",
+    "preview-source/com/quzzar/vestige/apparatus/client/WhisperingShellTextureCapture.java": "d7b7b1e4a924ef3ccda0e91e32fcdd39eb277ee0990ddb85263277eee66e81d4",
+    "preview-resources/assets/vestige/models/item/whispering_shell_preview.json": "dfae65b11fa1126e2eb003e0fa37c6052ed44809de77c1702fc92063354da472",
+    "preview-resources/assets/minecraft/models/item/paper.json": "a961f2bdb5d98ed15a92d1720d765bcc4d93ac8a3776e505c24b3b9e1fb648eb",
+    "imagegen.json": "879543c7c6a449a142346152c01dddd499799b978f8e694d72009b46cc287cc9",
+    "imagegen-refinement-prompt.txt": "19110237d268f23a7e6106ced29245fed8846bc76223c79831add79f501c6ec6",
+    "captures/capture.json": "b04aedf96443f50a88f3c4b8f2e0fc4aefb1ca5b87527fc310b330783f1a7a41",
+    "native-client.log": "319934116dabe790a4dd00fb734be92f6ed8fee025c8f11e5e54aea0c09005bd"
+  },
+  "actual_loaded_assets_sha256": {
+    "vestige:textures/item/whispering_shell_preview.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "vestige:models/item/whispering_shell_preview.json": "dfae65b11fa1126e2eb003e0fa37c6052ed44809de77c1702fc92063354da472",
+    "minecraft:models/item/paper.json": "a961f2bdb5d98ed15a92d1720d765bcc4d93ac8a3776e505c24b3b9e1fb648eb",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a"
+  },
+  "inspection": "Unedited actual vanilla ContainerScreen and item rendering at GUI scales 2 and 3, with chest/inventory/hotbar positions and vanilla neighbors. Dark opening and restrained teal detail remain visible.",
+  "carrier": "Paper with CustomModelData 202610060; native generated item model. No Shell registered or gameplay implemented.",
+  "world_opened": false,
+  "limits": [
+    "Native texture draft awaiting final owner approval",
+    "No Shell gameplay registered or implemented",
+    "No native binding-mark or held/offhand/effect review",
+    "No world/multiplayer gameplay tests",
+    "No production texture replacement or Prism installation"
+  ],
+  "initial_failure": "Preview-only compile attempt overrode final AbstractContainerScreen.tick; fixed by plain Screen host delegating actual native menu init/render.",
+  "wide_review": "captures-wide/capture.json"
+}

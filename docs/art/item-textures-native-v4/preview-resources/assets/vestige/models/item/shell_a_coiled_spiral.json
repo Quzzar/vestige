@@ -1,0 +1,25 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/shell_a_coiled_spiral"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        -0.33424283765347884,
+        0.1145975443383356,
+        0
+      ],
+      "scale": [
+        1.4969304229195088,
+        1.4969304229195088,
+        1
+      ]
+    }
+  }
+}

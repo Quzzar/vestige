@@ -1,0 +1,189 @@
+{
+  "errors": [],
+  "failures": [],
+  "metrics": {
+    "width": 328,
+    "scrollWidth": 328,
+    "canvases": [
+      {
+        "width": 328,
+        "height": 300,
+        "pixels": [
+          328,
+          300
+        ]
+      },
+      {
+        "width": 328,
+        "height": 300,
+        "pixels": [
+          328,
+          300
+        ]
+      }
+    ]
+  },
+  "narrow": {
+    "width": 288,
+    "scrollWidth": 288
+  },
+  "materials": [
+    {
+      "id": "stone",
+      "name": "Stone"
+    },
+    {
+      "id": "cobblestone",
+      "name": "Cobblestone"
+    },
+    {
+      "id": "mossy_cobblestone",
+      "name": "Mossy Cobblestone"
+    },
+    {
+      "id": "stone_bricks",
+      "name": "Stone Bricks"
+    },
+    {
+      "id": "mossy_stone_bricks",
+      "name": "Mossy Stone Bricks"
+    },
+    {
+      "id": "granite",
+      "name": "Granite"
+    },
+    {
+      "id": "polished_granite",
+      "name": "Polished Granite"
+    },
+    {
+      "id": "diorite",
+      "name": "Diorite"
+    },
+    {
+      "id": "polished_diorite",
+      "name": "Polished Diorite"
+    },
+    {
+      "id": "andesite",
+      "name": "Andesite"
+    },
+    {
+      "id": "polished_andesite",
+      "name": "Polished Andesite"
+    },
+    {
+      "id": "sandstone",
+      "name": "Sandstone"
+    },
+    {
+      "id": "smooth_sandstone",
+      "name": "Smooth Sandstone"
+    },
+    {
+      "id": "red_sandstone",
+      "name": "Red Sandstone"
+    },
+    {
+      "id": "smooth_red_sandstone",
+      "name": "Smooth Red Sandstone"
+    },
+    {
+      "id": "bricks",
+      "name": "Bricks"
+    },
+    {
+      "id": "mud_bricks",
+      "name": "Mud Bricks"
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz"
+    },
+    {
+      "id": "smooth_quartz",
+      "name": "Smooth Quartz Block"
+    },
+    {
+      "id": "prismarine",
+      "name": "Prismarine"
+    },
+    {
+      "id": "prismarine_bricks",
+      "name": "Prismarine Bricks"
+    },
+    {
+      "id": "dark_prismarine",
+      "name": "Dark Prismarine"
+    },
+    {
+      "id": "nether_bricks",
+      "name": "Nether Bricks"
+    },
+    {
+      "id": "red_nether_bricks",
+      "name": "Red Nether Bricks"
+    },
+    {
+      "id": "blackstone",
+      "name": "Blackstone"
+    },
+    {
+      "id": "polished_blackstone",
+      "name": "Polished Blackstone"
+    },
+    {
+      "id": "polished_blackstone_bricks",
+      "name": "Polished Blackstone Bricks"
+    },
+    {
+      "id": "cobbled_deepslate",
+      "name": "Cobbled Deepslate"
+    },
+    {
+      "id": "polished_deepslate",
+      "name": "Polished Deepslate"
+    },
+    {
+      "id": "deepslate_bricks",
+      "name": "Deepslate Bricks"
+    },
+    {
+      "id": "deepslate_tiles",
+      "name": "Deepslate Tiles"
+    },
+    {
+      "id": "tuff",
+      "name": "Tuff"
+    },
+    {
+      "id": "polished_tuff",
+      "name": "Polished Tuff"
+    },
+    {
+      "id": "tuff_bricks",
+      "name": "Tuff Bricks"
+    },
+    {
+      "id": "end_stone_bricks",
+      "name": "End Stone Bricks"
+    },
+    {
+      "id": "purpur",
+      "name": "Purpur"
+    }
+  ],
+  "checks": [
+    "rendered both models",
+    "glowing sigils with and without the scroll",
+    "one complete sigil pattern with a tiny gap above the stone",
+    "scroll and bounds toggles",
+    "top and side view",
+    "turn buttons",
+    "all 36 material choices",
+    "three inset choices and empty",
+    "drag rotation",
+    "320 and 360 pixel layouts",
+    "light and dark appearance"
+  ]
+}

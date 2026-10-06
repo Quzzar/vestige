@@ -1,0 +1,85 @@
+{
+  "viewer": "emi",
+  "lookups": [
+    {
+      "registeredRituals": 216,
+      "guiHeight": 360,
+      "recipe": "crafted_fireball",
+      "guiScale": 4,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 640
+    },
+    {
+      "registeredRituals": 216,
+      "guiHeight": 360,
+      "recipe": "identified_magnetic_attraction",
+      "guiScale": 4,
+      "screen": "dev.emi.emi.screen.RecipeScreen",
+      "guiWidth": 640
+    },
+    {
+      "registeredRituals": 216,
+      "guiHeight": 720,
+      "recipe": "scroll_names",
+      "guiScale": 2,
+      "screen": "com.quzzar.vestige.apparatus.recipeviewer.NativeRecipeCapture$KnowledgeScreen",
+      "guiWidth": 1280
+    }
+  ],
+  "scrollNames": [
+    {
+      "name": "Unknown Scroll",
+      "label": "Unknown",
+      "color": "white",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "name": "Scroll of Firebolt",
+      "label": "Common",
+      "color": "white",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "name": "Scroll of Burning Dash",
+      "label": "Uncommon",
+      "color": "yellow",
+      "rgb": "#FFFF55"
+    },
+    {
+      "name": "Scroll of Ball Lightning",
+      "label": "Rare",
+      "color": "aqua",
+      "rgb": "#55FFFF"
+    },
+    {
+      "name": "Scroll of Black Hole",
+      "label": "Mythic",
+      "color": "light_purple",
+      "rgb": "#FF55FF"
+    },
+    {
+      "name": "Scroll of Magnetic Attraction",
+      "label": "Identified",
+      "color": "white",
+      "rgb": "#FFFFFF"
+    },
+    {
+      "name": "Scroll of Reaching Ball Lightning",
+      "label": "Augmented",
+      "color": "aqua",
+      "rgb": "#55FFFF"
+    }
+  ],
+  "indexing": {
+    "shapedFireball": 1,
+    "craftedPaperUses": 1,
+    "baseFireball": 1,
+    "rarityColorTooltipCases": 20,
+    "lapisUses": 1,
+    "blazeRodSpellUses": 0,
+    "paperSpellUses": 0,
+    "attunedShard": 1,
+    "nameOnlyTooltipCases": 20
+  },
+  "source": "Minecraft main render target in actual recipe viewer"
+}

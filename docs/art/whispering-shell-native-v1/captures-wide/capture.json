@@ -1,0 +1,23 @@
+{
+  "assetSha256": {
+    "vestige:textures/item/whispering_shell_preview.png": "26e9fe7e3d6f68e155284abe9711b3781d5d93b75b1d562a5e4995810ba8de4d",
+    "vestige:models/item/whispering_shell_preview.json": "dfae65b11fa1126e2eb003e0fa37c6052ed44809de77c1702fc92063354da472",
+    "minecraft:models/item/paper.json": "a961f2bdb5d98ed15a92d1720d765bcc4d93ac8a3776e505c24b3b9e1fb648eb",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a"
+  },
+  "source": "Unchanged main framebuffer after actual vanilla ContainerScreen rendering",
+  "textureSize": "16x16",
+  "worldOpened": false,
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "previewOnly": "Paper with CustomModelData 202610060; native generated item model. No Shell registered or gameplay implemented.",
+  "nativeMenu": "ChestMenu / ContainerScreen with ordinary player inventory and hotbar slots",
+  "screens": [
+    "gui-2.png",
+    "gui-2-hover.png",
+    "gui-3.png",
+    "gui-3-hover.png"
+  ]
+}

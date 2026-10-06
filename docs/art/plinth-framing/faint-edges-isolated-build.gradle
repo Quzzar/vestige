@@ -1,0 +1,11 @@
+// Keep this art review's outputs and task state separate from other development runs.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.layout.projectDirectory.dir('build/apparatus-faint-edges-review'))
+    }
+}
+gradle.projectsEvaluated {
+    gradle.rootProject.tasks.withType(org.gradle.api.tasks.compile.JavaCompile).configureEach {
+        options.incremental = false
+    }
+}

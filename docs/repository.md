@@ -46,6 +46,10 @@ The gallery's footage is actual Minecraft framebuffer output. The complete recor
 does not recapture footage: it verifies coverage and exact agreement with the committed
 definitions and videos. See [the capture guide](effects-workshop.md) when changing appearance.
 
+## Art review evidence
+
+Keep authored assets, chosen review images, short review clips and verification records in Git. Repeated native `frame-*.png` / `frame-*.jpg` sequences under `docs/art/` remain local and are ignored; saved capture metadata may name those local originals. Final review exports remain available in the repository. Normal build output, test worlds and the local capture resource packs remain outside Git.
+
 ## Contributions and attribution
 
 Use [Vestige Issues](https://github.com/Quzzar/vestige/issues) for bugs and proposals.

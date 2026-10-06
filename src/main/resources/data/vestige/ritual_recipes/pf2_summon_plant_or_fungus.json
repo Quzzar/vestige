@@ -1,0 +1,56 @@
+{
+  "spell": "vestige:pf2_summon_plant_or_fungus",
+  "name": "Summon Plant or Fungus",
+  "circle": 4,
+  "color": "4bba6b",
+  "rationale": "Nature, Mushroom and Oak describe the living support plant or protective fungus.",
+  "parts": [
+    {
+      "seat": 0,
+      "role": "blank inscription",
+      "ingredient": {
+        "items": [
+          "minecraft:paper"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 1,
+      "role": "nature focus",
+      "ingredient": {
+        "items": [
+          "minecraft:poisonous_potato",
+          "irons_spellbooks:nature_rune"
+        ]
+      },
+      "rationale": "Iron Nature focus"
+    },
+    {
+      "seat": 2,
+      "role": "mushroom motif",
+      "ingredient": {
+        "items": [
+          "minecraft:brown_mushroom"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    },
+    {
+      "seat": 3,
+      "role": "oak motif",
+      "ingredient": {
+        "items": [
+          "minecraft:oak_log"
+        ]
+      },
+      "rationale": "Native spell-specific form/relationship motif"
+    }
+  ],
+  "clues": [
+    "Nature focus follows blank inscription clockwise.",
+    "Mushroom motif follows nature focus clockwise.",
+    "Oak motif follows mushroom motif clockwise.",
+    "Blank inscription follows oak motif clockwise."
+  ]
+}

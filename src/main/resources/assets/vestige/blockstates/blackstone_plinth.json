@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=single": {
+      "model": "vestige:block/blackstone_plinth"
+    },
+    "part=base": {
+      "model": "vestige:block/blackstone_plinth_base"
+    },
+    "part=shaft": {
+      "model": "vestige:block/blackstone_plinth_shaft"
+    },
+    "part=cap": {
+      "model": "vestige:block/blackstone_plinth_cap"
+    }
+  }
+}

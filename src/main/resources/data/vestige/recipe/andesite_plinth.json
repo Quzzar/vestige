@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "pattern": [
+    "SBS",
+    " B ",
+    "SBS"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:andesite"
+    },
+    "S": {
+      "item": "minecraft:andesite_slab"
+    }
+  },
+  "result": {
+    "id": "vestige:andesite_plinth",
+    "count": 2
+  }
+}
