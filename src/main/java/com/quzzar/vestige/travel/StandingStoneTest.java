@@ -24,6 +24,9 @@ import java.util.*;
 public final class StandingStoneTest {
     private StandingStoneTest() { }
     private static String key() { return UUID.randomUUID().toString().replace("-", "").repeat(2); }
+    private static net.minecraft.server.level.ServerPlayer fundedPlayer(GameTestHelper h) {
+        var player = h.makeMockServerPlayerInLevel(); player.setExperienceLevels(50); player.setExperiencePoints(0); return player;
+    }
     private static StandingStoneEntity stone(ServerLevel level, BlockPos pos, String key, String name) {
         level.setBlock(pos, StandingStones.STONE.get().defaultBlockState(), 3);
         level.setBlock(pos.above(), StandingStones.STONE.get().defaultBlockState().setValue(StandingStoneBlock.HALF,
@@ -88,7 +91,7 @@ public final class StandingStoneTest {
         // Keep the destination's entire random arrival area away from the source fixture.
         var targetPos = pos.east(6); floor(level, targetPos, Blocks.STONE);
         var target = stone(level, targetPos, "0".repeat(64), "Destination");
-        var player = h.makeMockServerPlayerInLevel();
+        var player = fundedPlayer(h);
         try {
             for (int i = 0; i < 16; i++) for (var facing : Direction.Plane.HORIZONTAL) {
                 var state = StandingStones.STONE.get().defaultBlockState().setValue(StandingStoneBlock.FACING, facing);
@@ -235,7 +238,7 @@ public final class StandingStoneTest {
         floor(level, start, Blocks.STONE); floor(level, end, Blocks.STONE);
         var source = stone(level, start, key, "Home"); var target = stone(level, end, key, "Henge");
         var foreign = stone(level, h.absolutePos(new BlockPos(8, 1, 8)), key(), "Other network");
-        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+        var player = fundedPlayer(h); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
         StoneTravel.travel(player, source.id(), target.id()); h.assertTrue(player.position().equals(initial), "Unsolicited travel accepted");
         StoneTravel.open(player, source, 0); StoneTravel.travel(player, source.id(), foreign.id());
         h.assertTrue(player.position().equals(initial), "Foreign key accepted");
@@ -253,7 +256,7 @@ public final class StandingStoneTest {
         BlockPos start = h.absolutePos(new BlockPos(2, 1, 2)), end = h.absolutePos(new BlockPos(6, 1, 6));
         floor(level, start, Blocks.STONE); floor(level, end, Blocks.MAGMA_BLOCK);
         var source = stone(level, start, key, "Home"); var target = stone(level, end, key, "Blocked");
-        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+        var player = fundedPlayer(h); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
         StoneTravel.open(player, source, 0); StoneTravel.travel(player, source.id(), target.id());
         h.assertTrue(!player.position().equals(initial), "No opening did not use the nearby fallback");
         floor(level, end, Blocks.STONE); target = stone(level, end, key, "Blocked");
@@ -273,7 +276,7 @@ public final class StandingStoneTest {
         floor(level, start, Blocks.STONE); var source = stone(level, start, key, "Home");
         var destination = level.getServer().getLevel(Level.END); BlockPos end = new BlockPos(80, 70, 80);
         floor(destination, end, Blocks.STONE); var target = stone(destination, end, key, "End Sanctuary");
-        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
+        var player = fundedPlayer(h); player.setPos(Vec3.atBottomCenterOf(start.south())); Vec3 initial = player.position();
         StoneTravel.open(player, source, 0); StoneTravel.travel(player, source.id(), target.id());
         h.assertTrue(player.level() == level && player.position().equals(initial), "Cross-dimension request moved the player");
         destination.setBlock(end, Blocks.AIR.defaultBlockState(), 3);
@@ -329,7 +332,7 @@ public final class StandingStoneTest {
     public static void networkPagesIncludeEverySameDimensionPeerAndRetainCurrentName(GameTestHelper h) {
         var level = h.getLevel(); var pos = h.absolutePos(new BlockPos(4, 1, 4)); floor(level, pos, Blocks.STONE);
         String key = key(); var source = stone(level, pos, key, "Zulu Home");
-        var directory = StoneDirectory.get(level.getServer()); var ids = new HashSet<UUID>(); ids.add(source.id());
+        var directory = StoneDirectory.get(level.getServer()); var ids = new HashSet<UUID>();
         var extra = new ArrayList<UUID>(); var player = h.makeMockServerPlayerInLevel();
         try {
             // Persistent unloaded destinations must remain reachable without loading their chunks for the list.
@@ -341,20 +344,23 @@ public final class StandingStoneTest {
             directory.put(new StoneNetwork.Node(otherDimension, key, Level.END.location(), new BlockPos(0, 70, 0), "Other dimension"));
             directory.put(new StoneNetwork.Node(otherKey, key(), level.dimension().location(), new BlockPos(20000, 70, 0), "Other key"));
             var seen = new HashSet<UUID>();
-            for (int page = 0; page < 3; page++) {
+            for (int page = 0; page < 4; page++) {
                 var view = StoneTravel.view(player, source, page);
-                h.assertTrue(view.page() == page && view.total() == 21 && view.sourceName().equals("Zulu Home")
-                        && view.destinations().size() == (page < 2 ? 8 : 5), "Incorrect page size, total or current name");
+                h.assertTrue(view.page() == page && view.total() == 20 && view.sourceName().equals("Zulu Home")
+                        && view.destinations().size() == (page < 3 ? 6 : 2), "Incorrect page size, total or current name");
                 var buffer = new net.minecraft.network.RegistryFriendlyByteBuf(io.netty.buffer.Unpooled.buffer(), level.registryAccess());
                 try {
                     StoneTravelPayloads.View.CODEC.encode(buffer, view);
                     h.assertTrue(StoneTravelPayloads.View.CODEC.decode(buffer).equals(view), "Network view codec lost current name or page");
                 } finally { buffer.release(); }
-                for (var destination : view.destinations()) h.assertTrue(seen.add(destination.id()), "Duplicate destination across pages");
+                for (var destination : view.destinations()) {
+                    h.assertTrue(seen.add(destination.id()), "Duplicate destination across pages");
+                    h.assertTrue(destination.xpCost() == StandingStoneFare.xp(pos, destination.position()), "Page contains an incorrect fare");
+                }
             }
             h.assertTrue(seen.equals(ids), "Pages omitted peers or admitted foreign dimensions/keys");
             h.assertTrue(StoneTravel.view(player, source, Integer.MIN_VALUE).page() == 0
-                    && StoneTravel.view(player, source, Integer.MAX_VALUE).page() == 2, "Out-of-range pages were not bounded");
+                    && StoneTravel.view(player, source, Integer.MAX_VALUE).page() == 3, "Out-of-range pages were not bounded");
             var rename = new StoneTravelPayloads.Rename(source.id(), "Northwatch", 2);
             var buffer = new net.minecraft.network.RegistryFriendlyByteBuf(io.netty.buffer.Unpooled.buffer(), level.registryAccess());
             try {
@@ -367,4 +373,64 @@ public final class StandingStoneTest {
         h.succeed();
     }
 
+    @GameTest(template = "empty_9x3x9", batch = "standing_stones")
+    public static void exactXpFareIsRequiredAndASuccessfulTripDebitsOnlyOnce(GameTestHelper h) {
+        var level = h.getLevel(); String key = key();
+        var start = h.absolutePos(new BlockPos(2,1,2)); var end = h.absolutePos(new BlockPos(6,1,6));
+        floor(level,start,Blocks.STONE); floor(level,end,Blocks.STONE);
+        var source = stone(level,start,key,"Home"); var target = stone(level,end,key,"Henge");
+        int cost = StandingStoneFare.xp(start,end);
+        try (var player = com.quzzar.vestige.gametest.SurvivalTestPlayer.create(h)) {
+            var initial = Vec3.atBottomCenterOf(start.north()); player.setPos(initial);
+            player.setExperienceLevels(0); player.setExperiencePoints(0); StoneTravel.open(player,source,0);
+            var quote = StoneTravel.view(player,source,0).destinations().getFirst();
+            h.assertTrue(quote.xpCost()==cost, "Menu fare differs from actual charge");
+            player.giveExperiencePoints(cost-1); var before = PlayerExperience.Snapshot.of(player);
+            StoneTravel.travel(player,source.id(),target.id());
+            h.assertTrue(player.position().equals(initial) && before.equals(PlayerExperience.Snapshot.of(player)), "Unaffordable trip moved or charged");
+            player.giveExperiencePoints(1);
+            StoneTravel.travel(player,source.id(),target.id());
+            h.assertTrue(!player.position().equals(initial) && PlayerExperience.available(player)==0, "Exact balance did not buy one trip");
+            var arrived=player.position(); var paid=PlayerExperience.Snapshot.of(player);
+            StoneTravel.travel(player,source.id(),target.id());
+            h.assertTrue(player.position().equals(arrived) && paid.equals(PlayerExperience.Snapshot.of(player)), "Session replay moved or charged again");
+        }
+        h.succeed();
+    }
+    @GameTest(template = "empty_9x3x9", batch = "standing_stone_xp_events")
+    public static void canceledAndModifiedXpEventsRejectWithoutPaymentOrTravel(GameTestHelper h) {
+        var level=h.getLevel(); String key=key(); var start=h.absolutePos(new BlockPos(2,1,2)); var end=h.absolutePos(new BlockPos(6,1,6));
+        floor(level,start,Blocks.STONE);floor(level,end,Blocks.STONE);
+        var source=stone(level,start,key,"Home");var target=stone(level,end,key,"Henge");
+        try(var player=com.quzzar.vestige.gametest.SurvivalTestPlayer.create(h)) {
+            player.setPos(Vec3.atBottomCenterOf(start.north()));player.setExperienceLevels(5);player.setExperiencePoints(0);
+            var before=PlayerExperience.Snapshot.of(player);var initial=player.position();StoneTravel.open(player,source,0);
+            java.util.function.Consumer<net.neoforged.neoforge.event.entity.player.PlayerXpEvent.XpChange> cancel=e->{if(e.getEntity()==player)e.setCanceled(true);};
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(cancel);
+            try{StoneTravel.travel(player,source.id(),target.id());}finally{net.neoforged.neoforge.common.NeoForge.EVENT_BUS.unregister(cancel);}
+            java.util.function.Consumer<net.neoforged.neoforge.event.entity.player.PlayerXpEvent.XpChange> modify=e->{if(e.getEntity()==player)e.setAmount(0);};
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(modify);
+            try{StoneTravel.travel(player,source.id(),target.id());}finally{net.neoforged.neoforge.common.NeoForge.EVENT_BUS.unregister(modify);}
+            java.util.function.Consumer<net.neoforged.neoforge.event.entity.player.PlayerXpEvent.LevelChange> cancelLevel=e->{if(e.getEntity()==player)e.setCanceled(true);};
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(cancelLevel);
+            try{StoneTravel.travel(player,source.id(),target.id());}finally{net.neoforged.neoforge.common.NeoForge.EVENT_BUS.unregister(cancelLevel);}
+            h.assertTrue(player.position().equals(initial)&&before.equals(PlayerExperience.Snapshot.of(player)),"Canceled/modified XP granted or charged travel");
+        }
+        h.succeed();
+    }
+    @GameTest(template = "empty_9x3x9", batch = "standing_stone_xp_events")
+    public static void anEndpointRemovedByAPaymentListenerRefundsTheDebit(GameTestHelper h) {
+        var level=h.getLevel();String key=key();var start=h.absolutePos(new BlockPos(2,1,2));var end=h.absolutePos(new BlockPos(6,1,6));
+        floor(level,start,Blocks.STONE);floor(level,end,Blocks.STONE);
+        var source=stone(level,start,key,"Home");var target=stone(level,end,key,"Henge");
+        try(var player=com.quzzar.vestige.gametest.SurvivalTestPlayer.create(h)) {
+            player.setPos(Vec3.atBottomCenterOf(start.north()));player.setExperienceLevels(5);player.setExperiencePoints(0);
+            var before=PlayerExperience.Snapshot.of(player);var initial=player.position();StoneTravel.open(player,source,0);
+            java.util.function.Consumer<net.neoforged.neoforge.event.entity.player.PlayerXpEvent.XpChange> remove=e->{if(e.getEntity()==player)level.setBlock(end,Blocks.AIR.defaultBlockState(),3);};
+            net.neoforged.neoforge.common.NeoForge.EVENT_BUS.addListener(remove);
+            try{StoneTravel.travel(player,source.id(),target.id());}finally{net.neoforged.neoforge.common.NeoForge.EVENT_BUS.unregister(remove);}
+            h.assertTrue(player.position().equals(initial)&&before.equals(PlayerExperience.Snapshot.of(player)),"Invalidated endpoint retained payment or moved player");
+        }
+        h.succeed();
+    }
 }

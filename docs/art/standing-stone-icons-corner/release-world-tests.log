@@ -1,0 +1,129 @@
+[06Oct2026 19:28:43.696] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserveruserdev, --gameDir, ., --fml.neoForgeVersion, 21.1.72, --fml.fmlVersion, 4.0.29, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
+[06Oct2026 19:28:43.699] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS
+[06Oct2026 19:28:43.704] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.12.1 by Eclipse Adoptium; OS Mac OS X arch aarch64 version 27.0
+[06Oct2026 19:28:43.867] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file /private/tmp/vestige-standing-ui-release-world-tests/config/fml.toml is not correct. Correcting
+[06Oct2026 19:28:43.869] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [disableConfigWatcher] was corrected from null to false
+[06Oct2026 19:28:43.870] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[06Oct2026 19:28:43.870] [main/INFO] [net.neoforged.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[06Oct2026 19:28:43.905] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserveruserdev
+[06Oct2026 19:28:43.987] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/Users/quzzar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2387!/ Service=ModLauncher Env=SERVER
+[06Oct2026 19:28:44.387] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[06Oct2026 19:28:44.388] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.72 (neoforge)
+		Vestige 0.1.0 (vestige)
+[06Oct2026 19:28:45.985] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserveruserdev' with arguments [--gameDir, .]
+[06Oct2026 19:28:49.759] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[06Oct2026 19:29:06.151] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06Oct2026 19:29:06.155] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06Oct2026 19:29:06.159] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[06Oct2026 19:29:06.161] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[06Oct2026 19:29:06.162] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06Oct2026 19:29:06.325] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.72, for MC 1.21.1
+[06Oct2026 19:29:22.448] [modloading-sync-worker/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [vestige]
+[06Oct2026 19:29:22.647] [main/ERROR] [net.minecraft.server.dedicated.Settings/]: Failed to load properties from file: server.properties
+java.nio.file.NoSuchFileException: server.properties
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261) ~[?:?]
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?]
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160) ~[?:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.Settings.loadFromFile(Settings.java:38) ~[neoforge-21.1.72-minecraft.jar%23119!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerProperties.fromFile(DedicatedServerProperties.java:132) ~[neoforge-21.1.72-minecraft.jar%23119!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerSettings.<init>(DedicatedServerSettings.java:12) ~[neoforge-21.1.72-minecraft.jar%23119!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:125) ~[neoforge-21.1.72-minecraft.jar%23119!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.29/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.29.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.29/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.29.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.29/net.neoforged.fml.loading.targets.NeoForgeServerUserdevLaunchHandler.runService(NeoForgeServerUserdevLaunchHandler.java:23) ~[loader-4.0.29.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.29/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.29.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.4.jar%2375!/:?]
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at DevLaunch@1.0.1/net.neoforged.devlaunch.Main.main(Main.java:55) [DevLaunch-1.0.1.jar:?]
+[06Oct2026 19:29:22.680] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[06Oct2026 19:29:22.789] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/private/tmp/vestige-standing-ui-release-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar%23119!/assets/.mcassetsroot' uses unexpected schema
+[06Oct2026 19:29:22.790] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/private/tmp/vestige-standing-ui-release-build/moddev/artifacts/neoforge-21.1.72-minecraft.jar%23119!/data/.mcassetsroot' uses unexpected schema
+[06Oct2026 19:29:24.963] [main/INFO] [net.minecraft.server.Main/]: No existing world data, creating new world
+[06Oct2026 19:29:26.240] [main/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1364 recipes
+[06Oct2026 19:29:26.604] [main/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1474 advancements
+[06Oct2026 19:29:29.049] [main/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1365 recipes
+[06Oct2026 19:29:29.143] [main/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1475 advancements
+[06Oct2026 19:29:32.109] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[06Oct2026 19:29:32.202] [worldgen/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 2%
+[06Oct2026 19:29:32.587] [Server thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 477 ms
+[06Oct2026 19:29:32.615] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: Started game test server
+[06Oct2026 19:29:32.650] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[06Oct2026 19:29:32.732] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: 18 tests are now running at position 11934565, -59, -4377364!
+[06Oct2026 19:29:35.180] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestRunner/]: Running test batch 'standing_stones:0' (14 tests)...
+[06Oct2026 19:29:35.191] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2485ms or 49 ticks behind
+[06Oct2026 19:29:36.070] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [                  ]
+[06Oct2026 19:29:36.178] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [                  ]
+[06Oct2026 19:29:37.265] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 2 at (6.5, -60.0, -3.5)
+[06Oct2026 19:29:37.727] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:38.041] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 4 at (6.5, -60.0, -3.5)
+[06Oct2026 19:29:38.049] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:38.074] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++              ]
+[06Oct2026 19:29:38.109] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 5 at (-9.5, -60.0, -9.5)
+[06Oct2026 19:29:38.115] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:38.183] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 6 at (10.5, -60.0, -8.5)
+[06Oct2026 19:29:38.186] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:40.524] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 7 at (-1.5, -60.0, 2.5)
+[06Oct2026 19:29:40.541] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:40.597] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 8 at (10.5, -60.0, 8.5)
+[06Oct2026 19:29:40.600] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:40.622] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++          ]
+[06Oct2026 19:29:41.018] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: survival-test-player[embedded] logged in with entity id 10 at (-6.5, -60.0, 3.5)
+[06Oct2026 19:29:41.025] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: survival-test-player joined the game
+[06Oct2026 19:29:41.043] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++       ]
+[06Oct2026 19:29:41.076] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: test-mock-player[embedded] logged in with entity id 12 at (-0.5, -60.0, -8.5)
+[06Oct2026 19:29:41.079] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: test-mock-player joined the game
+[06Oct2026 19:29:41.213] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestRunner/]: Running test batch 'standing_stone_ritual:0' (1 tests)...
+[06Oct2026 19:29:41.318] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++    ]
+[06Oct2026 19:29:42.108] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++_   ]
+[06Oct2026 19:29:43.141] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++_   ]
+[06Oct2026 19:29:43.788] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++_   ]
+[06Oct2026 19:29:43.867] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestRunner/]: Running test batch 'standing_stone_xp_events:0' (2 tests)...
+[06Oct2026 19:29:43.874] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++   ]
+[06Oct2026 19:29:44.036] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: survival-test-player[embedded] logged in with entity id 18 at (1.5, -60.0, -6.5)
+[06Oct2026 19:29:44.039] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: survival-test-player joined the game
+[06Oct2026 19:29:44.051] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++++  ]
+[06Oct2026 19:29:44.061] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++++  ]
+[06Oct2026 19:29:44.074] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: survival-test-player[embedded] logged in with entity id 19 at (-7.5, -60.0, 8.5)
+[06Oct2026 19:29:44.078] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: survival-test-player joined the game
+[06Oct2026 19:29:44.091] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestRunner/]: Running test batch 'standing_stone_cancel:0' (1 tests)...
+[06Oct2026 19:29:44.474] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++++ ]
+[06Oct2026 19:29:44.481] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++++ ]
+[06Oct2026 19:29:44.498] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++++_]
+[06Oct2026 19:29:44.506] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++++_]
+[06Oct2026 19:29:44.511] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [+++++++++++++++++_]
+[06Oct2026 19:29:44.517] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: [++++++++++++++++++]
+[06Oct2026 19:29:44.518] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: ========= 18 GAME TESTS COMPLETE IN 11.79 s ======================
+[06Oct2026 19:29:44.519] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: All 18 required tests passed :)
+[06Oct2026 19:29:44.520] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: ====================================================
+[06Oct2026 19:29:44.531] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[06Oct2026 19:29:44.531] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[06Oct2026 19:29:44.531] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[06Oct2026 19:29:46.223] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[06Oct2026 19:29:46.308] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[06Oct2026 19:29:46.322] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[06Oct2026 19:29:46.358] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[06Oct2026 19:29:46.358] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[06Oct2026 19:29:46.358] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[06Oct2026 19:29:46.358] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[06Oct2026 19:29:46.460] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: Game test server shutting down

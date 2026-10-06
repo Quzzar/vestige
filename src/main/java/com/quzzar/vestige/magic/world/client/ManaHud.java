@@ -2,6 +2,7 @@ package com.quzzar.vestige.magic.world.client;
 
 import com.quzzar.vestige.VestigeMainMod;
 import com.quzzar.vestige.magic.world.NativeMana;
+import com.quzzar.vestige.magic.presentation.client.ManaDisplay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.DeltaTracker;
@@ -12,7 +13,7 @@ import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 
-/** A quiet native HUD: one narrow violet gauge between XP and the hotbar while mana is missing. */
+/** A quiet horizontal mana meter in the bottom-right corner, hidden at full mana. */
 @EventBusSubscriber(modid = VestigeMainMod.MOD_ID, value = Dist.CLIENT)
 public final class ManaHud {
     private static float amount = NativeMana.MAX;
@@ -24,18 +25,18 @@ public final class ManaHud {
     private static void draw(GuiGraphics graphics, DeltaTracker delta) {
         var mc = Minecraft.getInstance();
         if (mc.player == null || mc.player.isSpectator() || mc.options.hideGui || !visible()) return;
-        // Vanilla XP ends at height-25 and the hotbar begins at height-22.
-        int width = 100, x = graphics.guiWidth() / 2 - width / 2, y = graphics.guiHeight() - 24;
-        graphics.fill(x - 1, y, x + width + 1, y + 2, 0xff21172f);
-        graphics.fill(x, y, x + width, y + 2, 0xff453458);
-        int filled = Math.clamp((int) Math.floor(amount), 0, width);
-        graphics.fill(x, y, x + filled, y + 2, 0xffac73e8);
-        graphics.fill(x, y, x + filled, y + 1, 0xffdbc0fc);
+        int occupied = Math.max(mc.gui.leftHeight, mc.gui.rightHeight);
+        int x = graphics.guiWidth() - ManaDisplay.METER_WIDTH - 8;
+        boolean besideHotbar = x >= graphics.guiWidth() / 2 + 91 + 8;
+        int y = besideHotbar ? graphics.guiHeight() - ManaDisplay.METER_HEIGHT - 8 : graphics.guiHeight() - occupied;
+        ManaDisplay.drawMeter(graphics, mc.font, x, y, amount);
+        // Compact windows lift the right-aligned meter clear of the hotbar and held-item name.
+        if (!besideHotbar) { mc.gui.leftHeight = occupied + 12; mc.gui.rightHeight = occupied + 12; }
     }
     @EventBusSubscriber(modid = VestigeMainMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static final class Registration {
         @SubscribeEvent public static void layers(RegisterGuiLayersEvent event) {
-            event.registerAbove(VanillaGuiLayers.HOTBAR, VestigeMainMod.location("mana"), ManaHud::draw);
+            event.registerAbove(VanillaGuiLayers.AIR_LEVEL, VestigeMainMod.location("mana"), ManaHud::draw);
         }
     }
 }

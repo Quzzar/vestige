@@ -22,7 +22,7 @@ import java.util.*;
 /** Server-authoritative selection and shared nearby arrival; clients send IDs, never coordinates. */
 @EventBusSubscriber(modid = VestigeMainMod.MOD_ID)
 public final class StoneTravel {
-    public static final int PAGE_SIZE = 8;
+    public static final int PAGE_SIZE = 6;
     private record Session(UUID source, String key, ResourceKey<Level> dimension, BlockPos position, long expires) { }
     private static final Map<MinecraftServer, Map<UUID, Session>> SESSIONS = new IdentityHashMap<>();
     private StoneTravel() { }
@@ -38,10 +38,11 @@ public final class StoneTravel {
     /** Every peer remains accessible through bounded pages, with the current name on every page. */
     static StoneTravelPayloads.View view(ServerPlayer player, StandingStoneEntity stone, int requestedPage) {
         var peers = StoneDirectory.get(player.getServer()).network().peers(stone.key()).stream()
-                .filter(node -> node.dimension().equals(player.level().dimension().location())).toList();
+                .filter(node -> node.dimension().equals(player.level().dimension().location()) && !node.id().equals(stone.id())).toList();
         int page = Math.clamp(requestedPage, 0, Math.max(0, (peers.size() - 1) / PAGE_SIZE));
         var nodes = peers.stream().skip((long) page * PAGE_SIZE).limit(PAGE_SIZE)
-                .map(node -> new StoneTravelPayloads.Destination(node.id(), node.dimension(), node.position(), node.name())).toList();
+                .map(node -> new StoneTravelPayloads.Destination(node.id(), node.dimension(), node.position(), node.name(),
+                        StandingStoneFare.xp(stone.getBlockPos(), node.position()))).toList();
         return new StoneTravelPayloads.View(stone.id(), stone.key(), player.level().dimension().location(),
                 stone.getBlockPos(), stone.name(), nodes, page, peers.size());
     }
@@ -65,6 +66,7 @@ public final class StoneTravel {
         return changed;
     }
     public static void travel(ServerPlayer player, UUID sourceId, UUID destinationId) {
+        if (!player.isAlive()) return;
         var stone = source(player, sourceId).orElse(null);
         if (stone == null) return;
         var directory = StoneDirectory.get(player.getServer());
@@ -83,8 +85,24 @@ public final class StoneTravel {
         }
         var arrival = arrival(player, level, destination.position());
         if (arrival.isEmpty()) return;
+        int cost = StandingStoneFare.xp(stone.getBlockPos(), target.getBlockPos());
+        var payment = PlayerExperience.Snapshot.of(player);
+        if (!PlayerExperience.spend(player, cost)) return;
+        // XP event listeners may invalidate a participant while authorizing the debit.
+        if (!player.isAlive() || source(player, sourceId).orElse(null) != stone
+                || level.getBlockEntity(destination.position()) != target || !target.id().equals(destinationId) || !target.key().equals(stone.key())) {
+            payment.restore(player); return;
+        }
         var point = arrival.get(); var departure = player.position(); var departureLevel = player.serverLevel();
-        player.stopRiding(); player.teleportTo(level, point.x, point.y, point.z, Set.of(), player.getYRot(), player.getXRot());
+        boolean moved;
+        try {
+            moved = player.teleportTo(level, point.x, point.y, point.z, Set.of(), player.getYRot(), player.getXRot());
+        } catch (RuntimeException failure) {
+            payment.restore(player); throw failure;
+        }
+        if (!moved || player.level() != level || player.position().distanceToSqr(point) > .01) {
+            payment.restore(player); return;
+        }
         player.fallDistance = 0;
         SESSIONS.get(player.getServer()).remove(player.getUUID());
         for (var site : List.of(Map.entry(departureLevel, departure), Map.entry(level, point))) {

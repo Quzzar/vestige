@@ -1,0 +1,101 @@
+{
+  "verifiedAtUTC": "2026-10-06T21:53:31.898864+00:00",
+  "jar": "/Users/quzzar/Projects/vestige/build/standing-insets-review/vestige-0.1.0.jar",
+  "jarSha256": "931f89b3554d2f41302b97b08a867120678feefda8a0eacb65c4387c6298d7c8",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "build": true,
+  "kithkynCompatibility": true,
+  "sharedCheckoutUnitTests": {
+    "tests": 114,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeChecks": 24,
+  "nativeCaptures": 14,
+  "guiSizes": [
+    [
+      640,
+      360
+    ],
+    [
+      480,
+      270
+    ]
+  ],
+  "loadedClassSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "3e255fe795a0817783459a1dff7697674781db24f71658dafcd22d8813de320a",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "0426e8b72fc8ea09c04129d865f51415711cf0ab0c51bd2fdf4f1a5f5ebdecee",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "2b4f3484dc118f5cad72c74a0b19df76388719d12d0135024e07e66f9a388b0f",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "af160622ae07c02ec2d8745002d6191693dc72a5f31bc1680b64367fb38814b6",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "426efdddfd40fc39daf9ab2d5c0f0fd143302f2381215094bad4c4eb12e1c7f4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "8a45d8ec1ce8d9fb0e0dd011a2f549af52466c4fbe7a6855b14de01f5d6876dd",
+    "com/quzzar/vestige/travel/StoneTravel.class": "7e1ebf7ee2032eec14edde25cd0bd4d6331b9645339a7f48967c8f0e8c5dfa91",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/StandingStoneFare.class": "e2967a80e8dc9c5b7ce7710149640bcc8971de6f6561d8f877c5a05508d10b19",
+    "com/quzzar/vestige/travel/PlayerExperience.class": "60695be2e183e733e4663a4d6db75ffaa40ba6a0c82bdea25c51d32b190d32ef",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay.class": "47f4e92209d52342718e37e7dc1a2a684f20140c1dfd798558e2199151062f5c",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay$Type.class": "4bbff586910b61804e8f0e307a793705bcfbac84ec501b0f0e0cf1a7247d4e14",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "077680b5e50793dc3552d4bdbed77b687f84d2debf9df869324fb6ff9806053c"
+  },
+  "changedPackageMembers": [
+    "assets/vestige/lang/en_us.json",
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen$1.class",
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen$EditButton.class",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay$Type.class",
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay.class",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class",
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen$DestinationButton.class"
+  ],
+  "translationKeysAdded": [
+    "screen.vestige.hearts",
+    "screen.vestige.heart",
+    "screen.vestige.mana_points",
+    "screen.vestige.hunger_icons"
+  ],
+  "priorInstalledJarSha256": "0373e5f199b37264807c50315e158dc2c630b5b24ab2ddd5326d94d77946d2f4",
+  "preservedPriorPackageMembers": 3288,
+  "approvedApparatusModelsPreserved": 252,
+  "approvedApparatusTintPreserved": true,
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/travel/client/StoneNetworkScreen.java": "20efed8ed1f5e54fa5c9b0e27e9b1ee41b47b7a8b91b680a1398fa989d7a2da8",
+    "src/main/java/com/quzzar/vestige/travel/client/TravelCostDisplay.java": "ab70610094649cc924138d86506f26bf2321d653b6a226a47f9444613baf1b60",
+    "src/main/java/com/quzzar/vestige/travel/client/NativeStoneCapture.java": "a137b37ba51cf20743d5d3896819d15c343a5944e56b537bcac5b45a00010897"
+  },
+  "captureSha256": {
+    "list-narrow.png": "713c5f4e42370ce675b898f6903b35d875fc087126e92c1c20dc9466500e8452",
+    "cost-hunger.png": "e12369056bbbedeb3c597339c76d3c80e9a4b18670c4595e045b77378f559356",
+    "after-travel.png": "ce5e946646f9844cbf6de0bf753cba950c6d1265651b0b43e13a0122cbcb1e44",
+    "list-wide.png": "43477f5584f419e1ad20a516d8d5ffdb800c7f14facefc7c7df4664f71492b39",
+    "second-page.png": "7d1f3b3e301a2a3d1e843ebdf8d0e7fce185ae56e2cb2d540cae596adc965c62",
+    "cost-mana.png": "ec8e30ed303c85f157e0b2bc4ffbc4db8f1b4c445eae191daafb5156e65c5831",
+    "cost-xp.png": "5d5eee53e1c7d305c22973f9bd6052a7163f400e04b67bbc114b3147f70e185d",
+    "cost-health.png": "ecbf5290e2c9d4548c228ba91e0415e77dcd6dfe7579eaf2ad7c4ebb363e96c0",
+    "short-list.png": "84c31a6d37351754ade9ea81d58756a885abcbe4b231a4c0df65ed203c7d6d84",
+    "last-page.png": "042bec15f8b0902cf6768606f6cc3eee323cc574e126f7918ee2fc593f805e48",
+    "only-current-stone.png": "d71b436cdb889c995577e7c1dd2ea0f337e19554d4cc33f88474e13a92f01727",
+    "unaffordable.png": "95639fe5aeb5637a97e4b5316fca8957db1f8303bfa376dc271261ccd56e89b4",
+    "renamed-wide.png": "589cbf39493ad6aafe758a62679891b6e0491aabd391937cc834d58212b4aa1e",
+    "editing-wide.png": "275a0e8796fdc1324e66a74eb12688e73acbcc443bfbfdd3b520ec0b145a1e2f"
+  },
+  "actualTrip": {
+    "xpBefore": 14,
+    "xpFare": 13,
+    "xpAfter": 1,
+    "directDestinationClick": true
+  },
+  "appearanceOnlyCosts": [
+    "XP",
+    "health",
+    "mana",
+    "hunger"
+  ],
+  "alternatePaymentsImplemented": false,
+  "worldMechanicsSuiteRepeated": false,
+  "remoteMultiplayerInspected": false,
+  "packaging": "UI-only review overlay on the preceding verified installed package: compiled menu/cost-display/capture classes and four labels only. Unrelated concurrent shared-checkout implementation is excluded; every other package member is byte-identical to the prior build.",
+  "diagnostics": "All 24 native checks and 14 framebuffer captures completed. The isolated client then stalled in Minecraft ChunkMap.processUnloads during fresh-test-world shutdown; a thread snapshot was saved and only that preview process was terminated. The separate final production build and compatibility check succeed. Hover tooltips are visible in native captures."
+}

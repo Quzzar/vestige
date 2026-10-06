@@ -1,0 +1,42 @@
+{
+  "kind": "Low-fidelity browser preview; prices and XP balance are illustrative",
+  "states": [
+    {
+      "theme": "light",
+      "width": 736,
+      "disabledRows": true,
+      "rename": true,
+      "paging": true,
+      "directAction": true,
+      "overflow": false
+    },
+    {
+      "theme": "light",
+      "width": 320,
+      "disabledRows": true,
+      "rename": true,
+      "paging": true,
+      "directAction": true,
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 736,
+      "disabledRows": true,
+      "rename": true,
+      "paging": true,
+      "directAction": true,
+      "overflow": false
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "disabledRows": true,
+      "rename": true,
+      "paging": true,
+      "directAction": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

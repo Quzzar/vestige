@@ -1,0 +1,68 @@
+{
+  "verifiedAtUTC": "2026-10-06T21:27:06.350487+00:00",
+  "jar": "/Users/quzzar/Projects/vestige/build/standing-button-list-review/vestige-0.1.0.jar",
+  "jarSha256": "0373e5f199b37264807c50315e158dc2c630b5b24ab2ddd5326d94d77946d2f4",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "build": true,
+  "kithkynCompatibility": true,
+  "unitTests": {
+    "tests": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredStandingStoneWorldTests": 18,
+  "nativeChecks": 11,
+  "nativeCaptures": 9,
+  "guiSizes": [
+    [
+      640,
+      360
+    ],
+    [
+      480,
+      270
+    ]
+  ],
+  "loadedClassSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "4ee0b1ddcd5fe947d05044ba9f9dfcedd3a6f702b87e4384688d69a7cae08bb7",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "0426e8b72fc8ea09c04129d865f51415711cf0ab0c51bd2fdf4f1a5f5ebdecee",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "2b4f3484dc118f5cad72c74a0b19df76388719d12d0135024e07e66f9a388b0f",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "af160622ae07c02ec2d8745002d6191693dc72a5f31bc1680b64367fb38814b6",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "426efdddfd40fc39daf9ab2d5c0f0fd143302f2381215094bad4c4eb12e1c7f4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "8a45d8ec1ce8d9fb0e0dd011a2f549af52466c4fbe7a6855b14de01f5d6876dd",
+    "com/quzzar/vestige/travel/StoneTravel.class": "7e1ebf7ee2032eec14edde25cd0bd4d6331b9645339a7f48967c8f0e8c5dfa91",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/StandingStoneFare.class": "e2967a80e8dc9c5b7ce7710149640bcc8971de6f6561d8f877c5a05508d10b19",
+    "com/quzzar/vestige/travel/PlayerExperience.class": "60695be2e183e733e4663a4d6db75ffaa40ba6a0c82bdea25c51d32b190d32ef",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "18de4c9f8803bacf1a6243a84da651b31ca47559a0d03c0615a094a3974248d6"
+  },
+  "packagedCompiledClasses": 335,
+  "packagedSourceResources": 2892,
+  "approvedApparatusModelsPreserved": 252,
+  "approvedApparatusTintPreserved": true,
+  "priorInstalledJarSha256": "da405fb78ffbcf411f688a2df5e39bdaebc5705cf2c9caa2fe2cf35e47896f6e",
+  "captureSha256": {
+    "list-narrow.png": "11d35e2f29982b33e46248d15642b275f04b9f6715a9addcb3f06b984192c699",
+    "after-travel.png": "3529b1ac4a6528717e04d78bb1af296a6e0cda37d74790262eb7e445fabfa141",
+    "list-wide.png": "9b5c6fe06276355007e14d83582ff36e0633d1f193488c5e4d5898702e170754",
+    "second-page.png": "b17ac6f261c59feee640b991f76cacea94f208ad7f8670b40378259ec1070ecc",
+    "last-page.png": "d1cdf88f79ba1fa6f37efe555ae0f776b40fc39b02120b4aa121e8cd975f7df6",
+    "only-current-stone.png": "8f9cd1ace566bacc98117b1ebc4ba0efcc71a721bb838e7209decffcf495197b",
+    "unaffordable.png": "cb64f7068e639dcda281b9772ed55b7110b6ef09651f5cc2830b19ce4c7e49c7",
+    "renamed-wide.png": "a3253e6315e6650094a74e79597e5b83193271fc7c0856ad9ed4d593473f30d1",
+    "editing-wide.png": "09c28cb89e98a5366fc725c8e6492da48d6796b334f862f20f29f979085b3844"
+  },
+  "actualTrip": {
+    "xpBefore": 14,
+    "xpFare": 13,
+    "xpAfter": 1,
+    "directDestinationClick": true
+  },
+  "scope": "Ordinary XP fare, narrow native menu, rename, pagination, disabled affordability and native travel; alternate resources and imbuement discounts deferred.",
+  "diagnostics": "First client completed checks but stalled saving its far-away fixture world and was stopped. Capture uses a closer unaffordable fixture and waits for the editing frame; final client exits cleanly. Intermediate simulation-distance 4 was ignored by Minecraft; final capture uses valid minimum 5.",
+  "fullWorldSuiteRepeated": false,
+  "remoteMultiplayerInspected": false
+}

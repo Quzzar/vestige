@@ -1,0 +1,14 @@
+{
+  "installedAtUTC": "2026-10-06T22:52:32.359053+00:00",
+  "instance": "Kithkyn Testing",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "c5897ac3df89623aeeac3b6092eefd294d47714c2b8a4876e8af1a19743db5ff",
+  "stagedJar": "/Users/quzzar/Projects/vestige/build/standing-icons-corner-review/vestige-0.1.0.jar",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/standing-icons-corner-20261006T225232228932Z/vestige-0.1.0.jar",
+  "backupSha256": "3b37db7cd998d3788af8b7cf134b043d27dd24a8d67ae9ae380a0a3baa2cdf8e",
+  "loadedMenuServerAndManaClassesMatch": true,
+  "approvedApparatusColorsAnd252ModelsIncluded": true,
+  "installation": "atomic single-jar replacement",
+  "minecraftRestarted": false,
+  "otherModsOrWorldsChanged": false
+}

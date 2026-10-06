@@ -1,0 +1,699 @@
+{
+  "world": "isolated creative flat world",
+  "classSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "eb42cb8f78ec41c61257a2141eafce08b55689f5612eb0725ce520aa500a4633",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "419d8903dfd6135855210916aec734e3e69e357410aa0d9e5ff0fe3531e70874",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "398a362edc629df67c52e48ee1d0ce848f4577ba64757a08a1604a6663e3250c",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "af160622ae07c02ec2d8745002d6191693dc72a5f31bc1680b64367fb38814b6",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "426efdddfd40fc39daf9ab2d5c0f0fd143302f2381215094bad4c4eb12e1c7f4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "8a45d8ec1ce8d9fb0e0dd011a2f549af52466c4fbe7a6855b14de01f5d6876dd",
+    "com/quzzar/vestige/travel/StoneTravel.class": "19838204f0100d84a9864eb99b09df017f756c725939ffd8459abca07b0b1e35",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/StandingStoneFare.class": "e2967a80e8dc9c5b7ce7710149640bcc8971de6f6561d8f877c5a05508d10b19",
+    "com/quzzar/vestige/travel/PlayerExperience.class": "60695be2e183e733e4663a4d6db75ffaa40ba6a0c82bdea25c51d32b190d32ef",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay.class": "a4c989447877e265650a51af14e032a9cdf631ff5a85c5f3d5690e9db9b40f2e",
+    "com/quzzar/vestige/travel/client/TravelCostDisplay$Type.class": "0eacb8142e6aa6582639d4b2ffc22d5c3637a7cc04935b0f39446d141291073c",
+    "com/quzzar/vestige/magic/presentation/client/ManaDisplay.class": "7a762a925638ea422a831495045b0da5034f5428c7c93ec15d653ca65173c2b0",
+    "com/quzzar/vestige/magic/world/client/ManaHud.class": "0994111178e0cd33c3c974e51a2a8ca5b6e65d9ae1f641493a374755017a0057",
+    "com/quzzar/vestige/magic/world/client/ManaHud$Registration.class": "4208524808a99676d82d3bd7436ac34d8e9ea2a5ed205102390a330ddf31df7d",
+    "com/quzzar/vestige/magic/world/NativeMana.class": "634159e0941af6bd9fcbcfc97bf1b9ca90b6f7e4fc2b4a047edb415242df07b8",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "0a58c959b1a2c9ebeb92f3244b18df1fd396217e3b575553cc25169e9367aab3",
+    "com/quzzar/vestige/travel/StandingStoneTest.class": "8c49450fa14204dcbd084a5bd50a61313995231fc594342060a7147fc02c83f8"
+  },
+  "checks": [
+    {
+      "passed": true,
+      "check": "list-wide retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "list-wide row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-wide row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-wide row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-wide row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-wide row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Wizard Tower",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "list-wide"
+    },
+    {
+      "passed": true,
+      "check": "Menu is narrowed to 210 GUI units"
+    },
+    {
+      "passed": true,
+      "check": "Long names have a width-bounded ellipsis"
+    },
+    {
+      "passed": true,
+      "check": "Name editor and Save are hidden until pencil click"
+    },
+    {
+      "passed": true,
+      "check": "Actual XP balance disables an expensive destination and enables an affordable one"
+    },
+    {
+      "passed": true,
+      "check": "Pencil reveals editor with unchanged Save disabled"
+    },
+    {
+      "passed": true,
+      "check": "Blank name disables Save"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "editing-wide row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Wizard Tower",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "editing-wide"
+    },
+    {
+      "passed": true,
+      "check": "Saved name returns to compact name-plus-pencil header"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "renamed-wide row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "renamed-wide"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "list-narrow row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "list-narrow"
+    },
+    {
+      "passed": true,
+      "check": "Second page retains current name independently of destination rows"
+    },
+    {
+      "passed": true,
+      "check": "second-page retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "second-page row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "second-page row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "second-page row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "second-page row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "second-page row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 1,
+      "capture": "second-page"
+    },
+    {
+      "passed": true,
+      "check": "Third fixed-height page still exposes the final page"
+    },
+    {
+      "passed": true,
+      "check": "third-page retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "third-page row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "third-page row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "third-page row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "third-page row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "third-page row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 2,
+      "capture": "third-page"
+    },
+    {
+      "passed": true,
+      "check": "All twenty other peers are available across four six-row pages"
+    },
+    {
+      "passed": true,
+      "check": "last-page retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "last-page row 1 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 3,
+      "capture": "last-page"
+    },
+    {
+      "passed": true,
+      "check": "Zero XP disables every destination"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable row 2 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable row 3 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable row 4 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "unaffordable row 5 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "unaffordable"
+    },
+    {
+      "passed": true,
+      "check": "One destination click sends travel directly and closes the menu"
+    },
+    {
+      "passed": true,
+      "check": "Real server travel arrives at the clicked endpoint and charges thirteen XP points"
+    },
+    {
+      "sourceName": "Northwatch Sanctum",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "after-travel"
+    },
+    {
+      "passed": true,
+      "check": "A source-only network has no duplicate self destination"
+    },
+    {
+      "passed": true,
+      "check": "Source-only menu hides all pagination controls"
+    },
+    {
+      "passed": true,
+      "check": "only-current-stone retains fixed 20-pixel destination buttons"
+    },
+    {
+      "sourceName": "Lone Standing Stone",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "only-current-stone"
+    },
+    {
+      "passed": true,
+      "check": "Short network displays exactly three real destinations"
+    },
+    {
+      "passed": true,
+      "check": "Single-page destination list hides arrows and page count"
+    },
+    {
+      "passed": true,
+      "check": "short-list retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "short-list row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "short-list row 2 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "short-list"
+    },
+    {
+      "passed": true,
+      "check": "XP preview shows enabled and unaffordable costs"
+    },
+    {
+      "passed": true,
+      "check": "XP appearance preview sends no travel/payment request"
+    },
+    {
+      "passed": true,
+      "check": "cost-xp retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "cost-xp row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "cost-xp row 2 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "cost-xp"
+    },
+    {
+      "passed": true,
+      "check": "HEALTH preview shows enabled and unaffordable costs"
+    },
+    {
+      "passed": true,
+      "check": "Heart costs display native health points, not whole hearts"
+    },
+    {
+      "passed": true,
+      "check": "HEALTH draws one full icon for two native points"
+    },
+    {
+      "passed": true,
+      "check": "HEALTH draws two full icons and a half for five points"
+    },
+    {
+      "passed": true,
+      "check": "HEALTH preserves a half-only cost"
+    },
+    {
+      "passed": true,
+      "check": "HEALTH appearance preview sends no travel/payment request"
+    },
+    {
+      "passed": true,
+      "check": "cost-health retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "cost-health row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "cost-health row 2 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "cost-health"
+    },
+    {
+      "passed": true,
+      "check": "MANA preview shows enabled and unaffordable costs"
+    },
+    {
+      "passed": true,
+      "check": "MANA appearance preview sends no travel/payment request"
+    },
+    {
+      "passed": true,
+      "check": "cost-mana retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "cost-mana row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "cost-mana row 2 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "cost-mana"
+    },
+    {
+      "passed": true,
+      "check": "HUNGER preview shows enabled and unaffordable costs"
+    },
+    {
+      "passed": true,
+      "check": "Food costs display native hunger points, not whole food icons"
+    },
+    {
+      "passed": true,
+      "check": "HUNGER draws one full icon for two native points"
+    },
+    {
+      "passed": true,
+      "check": "HUNGER draws two full icons and a half for five points"
+    },
+    {
+      "passed": true,
+      "check": "HUNGER preserves a half-only cost"
+    },
+    {
+      "passed": true,
+      "check": "HUNGER appearance preview sends no travel/payment request"
+    },
+    {
+      "passed": true,
+      "check": "cost-hunger retains fixed 20-pixel destination buttons"
+    },
+    {
+      "passed": true,
+      "check": "cost-hunger row 1 retains two-pixel spacing"
+    },
+    {
+      "passed": true,
+      "check": "cost-hunger row 2 retains two-pixel spacing"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        480,
+        270
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "cost-hunger"
+    },
+    {
+      "passed": true,
+      "check": "mana-half uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "mana-half"
+    },
+    {
+      "passed": true,
+      "check": "mana-empty uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "mana-empty"
+    },
+    {
+      "passed": true,
+      "check": "mana-armored uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "mana-armored"
+    },
+    {
+      "passed": true,
+      "check": "mana-full-hidden uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "mana-full-hidden"
+    },
+    {
+      "passed": true,
+      "check": "mana-underwater uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        640,
+        360
+      ],
+      "pixels": [
+        1920,
+        1080
+      ],
+      "page": 0,
+      "capture": "mana-underwater"
+    },
+    {
+      "passed": true,
+      "check": "mana-compact uses synchronized mana and the correct HUD visibility"
+    },
+    {
+      "sourceName": "The Sanctuary Beyond the Ancient Northern Mountains",
+      "gui": [
+        320,
+        240
+      ],
+      "pixels": [
+        960,
+        720
+      ],
+      "page": 0,
+      "capture": "mana-compact"
+    }
+  ],
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "menu": "real server-backed endpoints and payloads",
+  "source": "Minecraft main render target"
+}

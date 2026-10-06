@@ -80,9 +80,6 @@
   "vestige.viewer.title": "Spellstone",
   "emi.category.vestige.spellstone_ritual": "Spellstone",
   "block.vestige.standing_stone": "Stone Bricks Standing Stone",
-  "screen.vestige.standing_stones": "Leyline Network",
-  "screen.vestige.destinations": "%s stones",
-  "screen.vestige.travel": "Travel",
   "block.vestige.stone_standing_stone": "Stone Standing Stone",
   "block.vestige.cobblestone_standing_stone": "Cobblestone Standing Stone",
   "block.vestige.mossy_cobblestone_standing_stone": "Mossy Cobblestone Standing Stone",
@@ -128,9 +125,10 @@
   "item.vestige.homebound_eye.payment.mana": "Payment: 30 mana + 2 durability",
   "item.vestige.homebound_eye.worn": "This Eye has too little durability remaining.",
   "item.vestige.homebound_eye.payment": "You cannot afford this Eye\u2019s payment.",
-  "screen.vestige.current_stone": "Current stone",
   "screen.vestige.save_name": "Save",
-  "screen.vestige.here": "Here",
-  "screen.vestige.signature": "Signature",
-  "screen.vestige.one_stone": "1 stone"
+  "screen.vestige.edit_stone_name": "Edit stone name",
+  "screen.vestige.xp_points": "%s XP points",
+  "screen.vestige.mana_points": "%s mana",
+  "screen.vestige.health_points": "%s health points",
+  "screen.vestige.hunger_points": "%s hunger points"
 }

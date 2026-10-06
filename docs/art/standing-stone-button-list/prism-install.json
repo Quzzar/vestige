@@ -1,0 +1,14 @@
+{
+  "installedAtUTC": "2026-10-06T21:27:21.605765+00:00",
+  "instance": "Kithkyn Testing",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "0373e5f199b37264807c50315e158dc2c630b5b24ab2ddd5326d94d77946d2f4",
+  "stagedJar": "/Users/quzzar/Projects/vestige/build/standing-button-list-review/vestige-0.1.0.jar",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/standing-button-list-20261006T212721274674Z/vestige-0.1.0.jar",
+  "backupSha256": "da405fb78ffbcf411f688a2df5e39bdaebc5705cf2c9caa2fe2cf35e47896f6e",
+  "loadedMenuAndServerClassesMatch": true,
+  "approvedApparatusColorsAnd252ModelsIncluded": true,
+  "installation": "atomic single-jar replacement",
+  "minecraftRestarted": false,
+  "otherModsOrWorldsChanged": false
+}

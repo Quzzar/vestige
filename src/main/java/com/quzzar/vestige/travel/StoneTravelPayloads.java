@@ -16,7 +16,11 @@ import java.util.*;
 @EventBusSubscriber(modid = VestigeMainMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public final class StoneTravelPayloads {
     private StoneTravelPayloads() { }
-    public record Destination(UUID id, ResourceLocation dimension, BlockPos position, String name) { }
+    public record Destination(UUID id, ResourceLocation dimension, BlockPos position, String name, int xpCost) {
+        public Destination {
+            if (xpCost < 1) throw new IllegalArgumentException("Invalid travel fare");
+        }
+    }
     public record View(UUID source, String key, ResourceLocation dimension, BlockPos position,
                        String sourceName, List<Destination> destinations, int page, int total) implements CustomPacketPayload {
         public static final Type<View> TYPE = new Type<>(VestigeMainMod.location("stone_network"));
@@ -24,7 +28,7 @@ public final class StoneTravelPayloads {
             buffer.writeUUID(value.source()); buffer.writeUtf(value.key(), 64); buffer.writeResourceLocation(value.dimension()); buffer.writeBlockPos(value.position());
             buffer.writeUtf(value.sourceName(), 64); buffer.writeVarInt(value.destinations().size());
             for (var node : value.destinations()) {
-                buffer.writeUUID(node.id()); buffer.writeResourceLocation(node.dimension()); buffer.writeBlockPos(node.position()); buffer.writeUtf(node.name(), 64);
+                buffer.writeUUID(node.id()); buffer.writeResourceLocation(node.dimension()); buffer.writeBlockPos(node.position()); buffer.writeUtf(node.name(), 64); buffer.writeVarInt(node.xpCost());
             }
             buffer.writeVarInt(value.page()); buffer.writeVarInt(value.total());
         }, buffer -> {
@@ -32,7 +36,7 @@ public final class StoneTravelPayloads {
             String sourceName = buffer.readUtf(64);
             int size = buffer.readVarInt(); if (size < 0 || size > StoneTravel.PAGE_SIZE) throw new IllegalArgumentException("Invalid network page");
             List<Destination> nodes = new ArrayList<>(size);
-            for (int i = 0; i < size; i++) nodes.add(new Destination(buffer.readUUID(), buffer.readResourceLocation(), buffer.readBlockPos(), buffer.readUtf(64)));
+            for (int i = 0; i < size; i++) nodes.add(new Destination(buffer.readUUID(), buffer.readResourceLocation(), buffer.readBlockPos(), buffer.readUtf(64), buffer.readVarInt()));
             return new View(source, key, dimension, position, sourceName, nodes, buffer.readVarInt(), buffer.readVarInt());
         });
         public View {
@@ -65,7 +69,7 @@ public final class StoneTravelPayloads {
         @Override public Type<Rename> type() { return TYPE; }
     }
     @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event) {
-        var registrar = event.registrar("2");
+        var registrar = event.registrar("4");
         registrar.playToClient(View.TYPE, View.CODEC, (payload, context) -> com.quzzar.vestige.travel.client.StoneNetworkScreen.open(payload));
         registrar.playToServer(Request.TYPE, Request.CODEC, (payload, context) -> {
             if (context.player() instanceof ServerPlayer player) StoneTravel.travel(player, payload.source(), payload.destination());

@@ -1,0 +1,184 @@
+{
+  "checks": [
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        640,
+        360
+      ],
+      "sourceName": "Wizard Tower",
+      "capture": "list-wide"
+    },
+    {
+      "passed": true,
+      "check": "Name editor and Save are hidden until pencil click"
+    },
+    {
+      "passed": true,
+      "check": "Actual XP balance disables an expensive destination and enables an affordable one"
+    },
+    {
+      "passed": true,
+      "check": "Pencil reveals editor with unchanged Save disabled"
+    },
+    {
+      "passed": true,
+      "check": "Blank name disables Save"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        640,
+        360
+      ],
+      "sourceName": "Wizard Tower",
+      "capture": "editing-wide"
+    },
+    {
+      "passed": true,
+      "check": "Saved name returns to compact name-plus-pencil header"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        640,
+        360
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "renamed-wide"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "list-narrow"
+    },
+    {
+      "passed": true,
+      "check": "Second page retains current name independently of destination rows"
+    },
+    {
+      "page": 1,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "second-page"
+    },
+    {
+      "passed": true,
+      "check": "All twenty other peers are available across three pages"
+    },
+    {
+      "page": 2,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "last-page"
+    },
+    {
+      "passed": true,
+      "check": "Zero XP disables every destination"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "unaffordable"
+    },
+    {
+      "passed": true,
+      "check": "One destination click sends travel directly and closes the menu"
+    },
+    {
+      "passed": true,
+      "check": "Real server travel arrives at the clicked endpoint and charges thirteen XP points"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Northwatch Sanctum",
+      "capture": "after-travel"
+    },
+    {
+      "passed": true,
+      "check": "A source-only network has no duplicate self destination"
+    },
+    {
+      "page": 0,
+      "pixels": [
+        1920,
+        1080
+      ],
+      "gui": [
+        480,
+        270
+      ],
+      "sourceName": "Lone Standing Stone",
+      "capture": "only-current-stone"
+    }
+  ],
+  "classSha256": {
+    "com/quzzar/vestige/travel/client/StoneNetworkScreen.class": "4ee0b1ddcd5fe947d05044ba9f9dfcedd3a6f702b87e4384688d69a7cae08bb7",
+    "com/quzzar/vestige/travel/StoneTravelPayloads.class": "0426e8b72fc8ea09c04129d865f51415711cf0ab0c51bd2fdf4f1a5f5ebdecee",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$View.class": "2b4f3484dc118f5cad72c74a0b19df76388719d12d0135024e07e66f9a388b0f",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Rename.class": "af160622ae07c02ec2d8745002d6191693dc72a5f31bc1680b64367fb38814b6",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Page.class": "426efdddfd40fc39daf9ab2d5c0f0fd143302f2381215094bad4c4eb12e1c7f4",
+    "com/quzzar/vestige/travel/StoneTravelPayloads$Request.class": "8a45d8ec1ce8d9fb0e0dd011a2f549af52466c4fbe7a6855b14de01f5d6876dd",
+    "com/quzzar/vestige/travel/StoneTravel.class": "7e1ebf7ee2032eec14edde25cd0bd4d6331b9645339a7f48967c8f0e8c5dfa91",
+    "com/quzzar/vestige/travel/StandingStoneEntity.class": "2598293dbf5a4e748319f5f148f6a3d963baed670fec03c831e4049712f74579",
+    "com/quzzar/vestige/travel/StoneDirectory.class": "eecb914acfece253a35f9834f403349404314d73e79ad91818f62d53bcb5818d",
+    "com/quzzar/vestige/travel/StoneNetwork.class": "2b516880cde3f0e3b96b5448ae2be096e436c5a210db3ef1ef7462d17e5ac826",
+    "com/quzzar/vestige/travel/StandingStoneFare.class": "e2967a80e8dc9c5b7ce7710149640bcc8971de6f6561d8f877c5a05508d10b19",
+    "com/quzzar/vestige/travel/PlayerExperience.class": "60695be2e183e733e4663a4d6db75ffaa40ba6a0c82bdea25c51d32b190d32ef",
+    "com/quzzar/vestige/travel/client/NativeStoneCapture.class": "18de4c9f8803bacf1a6243a84da651b31ca47559a0d03c0615a094a3974248d6"
+  },
+  "world": "isolated creative flat world",
+  "source": "Minecraft main render target",
+  "menu": "real server-backed endpoints and payloads",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

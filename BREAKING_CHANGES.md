@@ -1,5 +1,13 @@
 # Breaking changes
 
+## October 6, 2026: fixed-height Standing Stone pages
+
+Standing Stone pages now carry six destinations rather than eight, matching fixed 20-pixel client buttons. Payload registration version 4 requires matching client/server builds to share the new capacity; its existing field format, endpoint/key data and saved worlds are unchanged. Counted full/half health/food previews and the relocated mana HUD are client presentation changes. No migration or alternate payment route is added.
+
+## October 6, 2026: compact Standing Stone buttons and XP fares
+
+The chosen narrow menu uses name-plus-pencil editing, direct destination buttons with right-aligned XP-orb/amount and an unlabelled centered signature. The source is omitted from its own destination list. Payload registration version 3 adds a positive whole-point `xpCost` to each destination; matching client/server builds are required. Travel now charges the accepted distance fare in XP points through the existing event-aware current-balance helper. Insufficient or canceled payments reject; endpoint invalidation during payment and failed transfers refund. Successful trips consume the source session. Other resource routes/material discounts remain deferred. No registry, attunement key, recipe or saved endpoint format changes and no migration.
+
 ## October 6, 2026: approved apparatus edging
 
 All 36 Plinth/Spellstone finishes use the owner-approved narrow corner/rim/support strips, shaded relative to each native tile at 217/255 brightness in world and inventory. Column corners retain continuous UV phase and pillar textures. Original solids, collision/picking, receiving heights, Diamond details, recipes, sockets, registry IDs and attunement identity are unchanged. The shared native color registration replaces the development-only framing tint. Restart the client to load the final art; no migration.
