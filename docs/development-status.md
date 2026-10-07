@@ -1,5 +1,13 @@
 # Development status
 
+## October 7 · wand shading and one-pixel padding
+
+The owner’s native-inventory review found noisy wand shading and missing padding. All seven body and eight tip layers now use simpler colour patches, at most six opaque colours per body and four per tip, with hard alpha at actual **16×16**. Every one of **63 appearances** has a clear one-pixel transparent outside border and a connected silhouette. All five approved thread textures, item models and gameplay remain unchanged.
+
+**Verified:** deterministic exporter/drift/palette/padding/connectedness checks; two unedited native survival inventory frames beside vanilla items; all 63 models through the ordinary Minecraft item renderer; all resource-loaded texture hashes; and successful production assembly with every packaged component texture checked. The temporary inventory harness was removed from compiled sources. [Artwork and evidence](art/wands-native/padded-v2/README.md) retain the source/prompt set, frames, complete compressed logs and checks. This purely visual change does not rerun the previously completed gameplay suites.
+
+**Installed:** a backed-up texture-only update in **Prism → Kithkyn Testing** replaces exactly fifteen PNGs while preserving all 3,497 other jar entries byte-for-byte, including the previously verified combined gameplay and other agents’ installed features. [Installation](art/wands-native/padded-v2/installation.json) pins old/new hashes and the backup. Restart Minecraft to load the art. Concurrent shared-source changes are excluded from this artifact.
+
 ## October 7 · tipped wands, 16×16 artwork and testing-pack installation
 
 All eight selected tips now execute through shared immutable traits, typed payment and cast-owned primary/secondary outcomes. Five offerings bind an untipped wand; six bind a tipped wand, preserving three exactly identical source scrolls once. Seven bases and five threads retain their authored profiles, sixty-second source recovery and deterministic wear. Wands never identify spells. The compatibility audit covers **214 spells**, **30,065 tipped base/core combinations** and **81 pure utility spells**; coefficients remain initial playtest tuning.

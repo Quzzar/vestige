@@ -1,0 +1,386 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Unedited Minecraft framebuffer, vanilla survival InventoryScreen renderer; review cursor kept over avatar and notifications cleared",
+  "loaded16x16AssetSha256": {
+    "textures/item/callous_thread.png": "57b2c8296871027cd1998d5f235828d1af02d5f6ec94b907912b4ef95b0308c9",
+    "textures/item/consecrated_thread.png": "877be36b7eab5e340775adbfbc13e762a04d1017145e2c752e18ada0a5d934f4",
+    "textures/item/ensorcelled_thread.png": "7b797173145ff4f12474ea7ec109410ece20b3c164ef4363dae6e6adea5f4ece",
+    "textures/item/laced_thread.png": "120fdda65466cf9a866689cf2c96b081c2975477ca5f29eba862267a31950181",
+    "textures/item/smoldering_thread.png": "d1305c46cad6dca4fd3639f8b65b8b1141ebbe6ddb2164db5237604ffacfbe37",
+    "textures/item/wands/base_bamboo.png": "078f2093abee5bee8e2a8a4382166e0cb669f7754fe521a894967c38130bdd1f",
+    "textures/item/wands/base_blaze_rod.png": "9f7fa3fbbc541532bacb33bdb81165110e99bd588528ddd5e95223eea14f47b2",
+    "textures/item/wands/base_bone.png": "12fd924f80d3817ee243ee4ab9d07968cbc6ce2c9c2f4833546d4fc69d7119cf",
+    "textures/item/wands/base_breeze_rod.png": "98bbd8c34c05d3af1154d34f3cb5814651c2a216e4d31d98a2b22855a060a4f5",
+    "textures/item/wands/base_end_rod.png": "aae73056260ce65de07ce7c773525858ceaa1daee3b1d1b0c00d2263cb2dcc9b",
+    "textures/item/wands/base_lightning_rod.png": "1e909397016a4f70ab85e2a820408cc996108f4542ee111d4a555e6cb5370f80",
+    "textures/item/wands/base_stick.png": "93be02d3a3126cf61bb12e70ec41c64dad141e5ce4480562ede817542aaad26b",
+    "textures/item/wands/tip_amethyst.png": "5b91af2f23cf139782b1dcf1608f3d4009ec1895289b57fa7ab41605a5e53213",
+    "textures/item/wands/tip_copper.png": "1b43e4262e44be8a72d1dde33e579684862babe02756e2715687a4e17c605c61",
+    "textures/item/wands/tip_diamond.png": "4266290ffb4025a752d2623881c1e4177ee791f8d4e52625e231c907a0eb3516",
+    "textures/item/wands/tip_emerald.png": "8172b6f2ca65ae2453c99b313cdb8ff5624a6ee3326451efe9c4820ca41bd0a0",
+    "textures/item/wands/tip_ender_pearl.png": "7de6796bbbb0dde4cafe3aa90cd20b5d5fddb51f3c3dd967c39922dc31ffbf1d",
+    "textures/item/wands/tip_ghast_tear.png": "e192791ecd1e5bbde523ae3c2466f54682568f3060a871a39774c07f0a3fac08",
+    "textures/item/wands/tip_iron.png": "690a8e634c3a6ae7f8cb72f431374b7ce8c6380e13fad4360cb8250cf6c62d0e",
+    "textures/item/wands/tip_netherite.png": "b6e46d2457c855a6b7e746b1a1f8caba62c8074739bf96b06884738b8bfcba27"
+  },
+  "captures": [
+    {
+      "contents": [
+        {
+          "slot": 0,
+          "item": "minecraft:stick"
+        },
+        {
+          "slot": 1,
+          "item": "minecraft:bamboo"
+        },
+        {
+          "slot": 2,
+          "item": "minecraft:end_rod"
+        },
+        {
+          "slot": 3,
+          "item": "minecraft:lightning_rod"
+        },
+        {
+          "slot": 4,
+          "item": "minecraft:emerald"
+        },
+        {
+          "slot": 5,
+          "item": "minecraft:iron_sword"
+        },
+        {
+          "slot": 6,
+          "item": "minecraft:netherite_pickaxe"
+        },
+        {
+          "slot": 7,
+          "item": "minecraft:bow"
+        },
+        {
+          "slot": 8,
+          "item": "minecraft:paper"
+        },
+        {
+          "slot": 9,
+          "item": "vestige:wand",
+          "base": "stick",
+          "tip": "untipped"
+        },
+        {
+          "slot": 10,
+          "item": "vestige:wand",
+          "base": "bamboo",
+          "tip": "untipped"
+        },
+        {
+          "slot": 11,
+          "item": "vestige:wand",
+          "base": "bone",
+          "tip": "untipped"
+        },
+        {
+          "slot": 12,
+          "item": "vestige:wand",
+          "base": "blaze_rod",
+          "tip": "untipped"
+        },
+        {
+          "slot": 13,
+          "item": "vestige:wand",
+          "base": "breeze_rod",
+          "tip": "untipped"
+        },
+        {
+          "slot": 14,
+          "item": "vestige:wand",
+          "base": "end_rod",
+          "tip": "untipped"
+        },
+        {
+          "slot": 15,
+          "item": "vestige:wand",
+          "base": "lightning_rod",
+          "tip": "untipped"
+        },
+        {
+          "slot": 16,
+          "item": "minecraft:bone"
+        },
+        {
+          "slot": 17,
+          "item": "minecraft:blaze_rod"
+        },
+        {
+          "slot": 18,
+          "item": "vestige:wand",
+          "base": "stick",
+          "tip": "amethyst"
+        },
+        {
+          "slot": 19,
+          "item": "vestige:wand",
+          "base": "bamboo",
+          "tip": "diamond"
+        },
+        {
+          "slot": 20,
+          "item": "vestige:wand",
+          "base": "bone",
+          "tip": "emerald"
+        },
+        {
+          "slot": 21,
+          "item": "vestige:wand",
+          "base": "blaze_rod",
+          "tip": "ender_pearl"
+        },
+        {
+          "slot": 22,
+          "item": "vestige:wand",
+          "base": "breeze_rod",
+          "tip": "copper"
+        },
+        {
+          "slot": 23,
+          "item": "vestige:wand",
+          "base": "end_rod",
+          "tip": "iron"
+        },
+        {
+          "slot": 24,
+          "item": "vestige:wand",
+          "base": "lightning_rod",
+          "tip": "ghast_tear"
+        },
+        {
+          "slot": 25,
+          "item": "vestige:wand",
+          "base": "stick",
+          "tip": "netherite"
+        },
+        {
+          "slot": 26,
+          "item": "minecraft:breeze_rod"
+        },
+        {
+          "slot": 27,
+          "item": "vestige:ensorcelled_thread"
+        },
+        {
+          "slot": 28,
+          "item": "vestige:callous_thread"
+        },
+        {
+          "slot": 29,
+          "item": "vestige:smoldering_thread"
+        },
+        {
+          "slot": 30,
+          "item": "vestige:laced_thread"
+        },
+        {
+          "slot": 31,
+          "item": "vestige:consecrated_thread"
+        },
+        {
+          "slot": 32,
+          "item": "minecraft:string"
+        },
+        {
+          "slot": 33,
+          "item": "minecraft:lead"
+        },
+        {
+          "slot": 34,
+          "item": "minecraft:amethyst_shard"
+        },
+        {
+          "slot": 35,
+          "item": "minecraft:diamond"
+        }
+      ],
+      "guiWidth": 320,
+      "screen": "com.quzzar.vestige.apparatus.client.NativeWandInventoryCapture$ComparisonInventoryScreen",
+      "guiHeight": 240,
+      "case": "wands-and-threads",
+      "renderer": "net.minecraft.client.gui.screens.inventory.InventoryScreen"
+    },
+    {
+      "contents": [
+        {
+          "slot": 0,
+          "item": "minecraft:stick"
+        },
+        {
+          "slot": 1,
+          "item": "minecraft:bamboo"
+        },
+        {
+          "slot": 2,
+          "item": "minecraft:end_rod"
+        },
+        {
+          "slot": 3,
+          "item": "minecraft:lightning_rod"
+        },
+        {
+          "slot": 4,
+          "item": "minecraft:emerald"
+        },
+        {
+          "slot": 5,
+          "item": "minecraft:iron_sword"
+        },
+        {
+          "slot": 6,
+          "item": "minecraft:netherite_pickaxe"
+        },
+        {
+          "slot": 7,
+          "item": "minecraft:bow"
+        },
+        {
+          "slot": 8,
+          "item": "minecraft:paper"
+        },
+        {
+          "slot": 9,
+          "item": "minecraft:stick"
+        },
+        {
+          "slot": 10,
+          "item": "vestige:wand",
+          "base": "stick",
+          "tip": "amethyst"
+        },
+        {
+          "slot": 11,
+          "item": "minecraft:bamboo"
+        },
+        {
+          "slot": 12,
+          "item": "vestige:wand",
+          "base": "bamboo",
+          "tip": "diamond"
+        },
+        {
+          "slot": 13,
+          "item": "minecraft:bone"
+        },
+        {
+          "slot": 14,
+          "item": "vestige:wand",
+          "base": "bone",
+          "tip": "emerald"
+        },
+        {
+          "slot": 15,
+          "item": "minecraft:blaze_rod"
+        },
+        {
+          "slot": 16,
+          "item": "vestige:wand",
+          "base": "blaze_rod",
+          "tip": "ender_pearl"
+        },
+        {
+          "slot": 17,
+          "item": "minecraft:breeze_rod"
+        },
+        {
+          "slot": 18,
+          "item": "vestige:wand",
+          "base": "breeze_rod",
+          "tip": "copper"
+        },
+        {
+          "slot": 19,
+          "item": "minecraft:end_rod"
+        },
+        {
+          "slot": 20,
+          "item": "vestige:wand",
+          "base": "end_rod",
+          "tip": "iron"
+        },
+        {
+          "slot": 21,
+          "item": "minecraft:lightning_rod"
+        },
+        {
+          "slot": 22,
+          "item": "vestige:wand",
+          "base": "lightning_rod",
+          "tip": "ghast_tear"
+        },
+        {
+          "slot": 23,
+          "item": "vestige:wand",
+          "base": "stick",
+          "tip": "netherite"
+        },
+        {
+          "slot": 24,
+          "item": "minecraft:diamond"
+        },
+        {
+          "slot": 25,
+          "item": "minecraft:amethyst_shard"
+        },
+        {
+          "slot": 26,
+          "item": "minecraft:netherite_ingot"
+        },
+        {
+          "slot": 27,
+          "item": "vestige:ensorcelled_thread"
+        },
+        {
+          "slot": 28,
+          "item": "vestige:callous_thread"
+        },
+        {
+          "slot": 29,
+          "item": "vestige:smoldering_thread"
+        },
+        {
+          "slot": 30,
+          "item": "vestige:laced_thread"
+        },
+        {
+          "slot": 31,
+          "item": "vestige:consecrated_thread"
+        },
+        {
+          "slot": 32,
+          "item": "minecraft:string"
+        },
+        {
+          "slot": 33,
+          "item": "minecraft:lead"
+        },
+        {
+          "slot": 34,
+          "item": "minecraft:amethyst_shard"
+        },
+        {
+          "slot": 35,
+          "item": "minecraft:diamond"
+        }
+      ],
+      "guiWidth": 320,
+      "screen": "com.quzzar.vestige.apparatus.client.NativeWandInventoryCapture$ComparisonInventoryScreen",
+      "guiHeight": 240,
+      "case": "beside-vanilla-materials",
+      "renderer": "net.minecraft.client.gui.screens.inventory.InventoryScreen"
+    }
+  ],
+  "captureHarnessSha256": "12bbadad69e57baed59d1d85e1dad1575cf28c2dba46118c6e583405ce421fe5",
+  "framesSha256": {
+    "wands-and-threads.png": "2c4d3873d997b352a00d470d3ae4f8560448d1289dcc465741d687c9039d261b",
+    "beside-vanilla-materials.png": "09f1488ff807c829892166d48309b54662f7ac9f32e4cd74daf16542c1b98c30"
+  },
+  "matchesInstalledArtifactSha256": "ab9ef827eb60c7c0e10a92681d01e771f73a008a4298ddeabc1ed437bcc5518f"
+}
