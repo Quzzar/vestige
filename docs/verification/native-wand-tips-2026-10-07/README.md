@@ -15,3 +15,5 @@ Coefficients and durability are starting playtest values. Multiplayer transport 
 The combined jar is installed in **Prism → Kithkyn Testing**, SHA-256 `ab9ef827eb60c7c0e10a92681d01e771f73a008a4298ddeabc1ed437bcc5518f`. The prior jar is backed up outside `mods`; `installation.json` records its path and hash. Minecraft must restart to load the replacement. The isolated publication artifact has its own distinct hash and excludes unrelated shared-checkout work.
 
 Earlier incomplete/closed captures are not counted as successes. Initial EMI refresh exposed concurrent comparison changes during asynchronous baking and was corrected before the verified runs. A development-only no-viewer diagnostic briefly referenced JEI, and was corrected with optional-class and null-screen guards before the final passing run. These guards do not alter normal gameplay.
+
+`logs/*.log.gz` preserves the original diagnostic bytes in gzip archives; the verification manifest pins both encoded and decoded hashes.

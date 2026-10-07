@@ -259,6 +259,22 @@
     "restartRequired": true
   },
   "logSha256": {
+    "publication-build.log.gz": "09f5325b7d6ffea0572060f1b3d1842db387c28349166f1b4634230c33a0d99c",
+    "publication-world.log.gz": "4640d431ac6d0056172838880ff8b0004f22ca72465405e3f68db04287f270f6",
+    "combined-build-and-world.log.gz": "f4dd82879bbc1cc66f65904a388acede9b5f6a42e5a18c175327621ec093159d",
+    "jei-native.log.gz": "c18ffc8f7c29796e68f4f883d5639c3e16ee7dd86320c1730b304dcf0d4c26bf",
+    "emi-native.log.gz": "2da24b5253ea44b93eaa081f6199f84090fe8d2ef7881ad20b9a6092627a5443",
+    "both-kith-native.log.gz": "cd31c80d3ae6984e811fe1eb360fa0ab25598b9fd14ec9b7238e1f76ae322ad6",
+    "none-kith-native.log.gz": "b3ee28bbb5363227138993855ce58ebbaf1c21040191ab0aeca7ac7dc1e6d111"
+  },
+  "limits": [
+    "Coefficients and durability are initial playtest values.",
+    "Integrated-server client captures; remote multiplayer not exercised.",
+    "The combined JEI/EMI bridge reports duplicate jei:/ vanilla/tag recipe IDs; all five native wand lookups remain unique and pass.",
+    "Kithkyn local LLM disabled for disposable capture worlds; LLM functionality outside this verification.",
+    "Quartz/Redstone/Nautilus/Magma tips, repair and rebinding deferred."
+  ],
+  "decodedLogSha256": {
     "publication-build.log": "ff0524de2e5d962679991a57df5e0483517381f899c522311a31fab2009d3396",
     "publication-world.log": "aa5208aab35e88e5d3dad59dd41008d331e1972668161fab956891541d6fb29f",
     "combined-build-and-world.log": "ae52ab7374e94bbb22d820f7037317eeb9796dfe58a571017ae26feb962bd6ac",
@@ -267,11 +283,5 @@
     "both-kith-native.log": "020e7e9aa43831a980b6e9b873dde9101c9c889ddd5bb393ebd6fc658dc69be5",
     "none-kith-native.log": "3771ae86d85d8e046cd1c7a1af5652ac5b0f02d2b1f7fb821ca474e1aee36bd6"
   },
-  "limits": [
-    "Coefficients and durability are initial playtest values.",
-    "Integrated-server client captures; remote multiplayer not exercised.",
-    "The combined JEI/EMI bridge reports duplicate jei:/ vanilla/tag recipe IDs; all five native wand lookups remain unique and pass.",
-    "Kithkyn local LLM disabled for disposable capture worlds; LLM functionality outside this verification.",
-    "Quartz/Redstone/Nautilus/Magma tips, repair and rebinding deferred."
-  ]
+  "logEncoding": "gzip, original log bytes preserved"
 }
