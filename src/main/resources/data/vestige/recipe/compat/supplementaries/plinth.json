@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "supplementaries:pedestal"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "ingredients": [
+    {
+      "item": "supplementaries:pedestal"
+    }
+  ],
+  "result": {
+    "id": "vestige:plinth",
+    "count": 1
+  }
+}

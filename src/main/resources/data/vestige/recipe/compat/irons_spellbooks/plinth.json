@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "irons_spellbooks:pedestal"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "vestige_plinth",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:pedestal"
+    }
+  ],
+  "result": {
+    "id": "vestige:plinth",
+    "count": 1
+  }
+}

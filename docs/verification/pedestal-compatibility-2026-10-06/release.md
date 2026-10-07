@@ -1,0 +1,11 @@
+# Pedestal compatibility release · October 6, 2026
+
+The owner authorized shipment. The scoped source release starts from main `bdccfb84` and includes only the four optional recipe/unlock resources, their world-test class and associated documentation/evidence. Neither Iron's nor Supplementaries becomes a dependency.
+
+The clean Java 21 build and Kithkyn compatibility check pass. All **107 scoped unit tests** pass with zero failures/errors/skips, and all **four focused world tests** pass on the unchanged NeoForge **21.1.72** baseline with Kithkyn. The earlier shared-checkout 121-test validation is separate historical evidence; unrelated chat changes are excluded from this source release and no main tests were removed.
+
+The install candidate preserves every one of the existing pack's **3,254 non-directory files** byte-for-byte, including the approved Shell, artwork, UI and scroll limit. It adds exactly five entries: four data resources and the same world-test class packaged by the clean source build. No existing entry, dependency metadata or runtime class is replaced.
+
+**Exact-package verification:** the candidate loads as an ordinary external mod alongside the installed Kithkyn jar in two fresh worlds on Kithkyn Testing's **NeoForge 21.1.248**. All four focused tests pass with neither optional provider and with both actual ValeCraft providers. The earlier independent neither/Iron-only/Supplementaries-only/both source matrix remains documented in the original verification. The empty external harness adds no gameplay; its init script supplies provider jars only to the temporary test runtime. None is installed into Kithkyn Testing.
+
+[Release verification](release-verification.json), [completion excerpts](release-results.txt) and [installation record](prism-install.json) pin the hashes and actual results. Installed candidate SHA-256: `d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155`. The previous jar is verified in a backup outside the mods directory, and replacement was atomic. Restart Minecraft to load the recipes. Existing worlds and running games were not restarted. No new client appearance or remote multiplayer verification is claimed for this recipe-only integration.

@@ -1,0 +1,49 @@
+=== none / NeoForge 21.1.72 ===
+[23:21:14] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:21:14] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:21:14] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 980.4 ms ======================
+[23:21:14] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 46s
+
+=== irons / NeoForge 21.1.247 ===
+[23:19:15] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:19:15] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:19:15] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 986.2 ms ======================
+[23:19:15] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 39s
+
+=== supplementaries / NeoForge 21.1.247 ===
+[23:20:09] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:20:09] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:20:09] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.645 s ======================
+[23:20:09] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 38s
+
+=== both / NeoForge 21.1.247 ===
+[23:17:11] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:17:12] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:17:12] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.405 s ======================
+[23:17:12] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 2m 21s
+
+=== Excluded initial both-provider attempt on NeoForge 21.1.72 ===
+[23:13:35] [main/FATAL] [ne.ne.fm.ModLoader/CORE]: Error during pre-loading phase: Mod geckolib requires neoforge 21.1.150 or above
+Currently, neoforge is 21.1.72
+[23:13:35] [main/FATAL] [ne.ne.fm.ModLoader/CORE]: Error during pre-loading phase: Mod sablecompanion requires neoforge 21.1.80 or above
+Currently, neoforge is 21.1.72
+[23:13:35] [main/FATAL] [ne.ne.fm.ModLoader/CORE]: Error during pre-loading phase: Mod irons_lib requires neoforge 21.1.200 or above
+Currently, neoforge is 21.1.72
+	Failure message: Mod geckolib requires neoforge 21.1.150 or above
+		Currently, neoforge is 21.1.72
+	Failure message: Mod sablecompanion requires neoforge 21.1.80 or above
+		Currently, neoforge is 21.1.72
+	Failure message: Mod irons_lib requires neoforge 21.1.200 or above
+		Currently, neoforge is 21.1.72
+[23:13:36] [main/ERROR] [minecraft/Main]: Failed to start the minecraft server
+	- Mod geckolib requires neoforge 21.1.150 or above
+	  Currently, neoforge is 21.1.72
+	- Mod sablecompanion requires neoforge 21.1.80 or above
+	  Currently, neoforge is 21.1.72
+	- Mod irons_lib requires neoforge 21.1.200 or above
+	  Currently, neoforge is 21.1.72
+Gradle success alone was not considered world-test success.

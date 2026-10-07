@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "supplementaries:pedestal"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pedestal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "supplementaries:pedestal"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "vestige:compat/supplementaries/plinth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pedestal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "vestige:compat/supplementaries/plinth"
+    ]
+  }
+}

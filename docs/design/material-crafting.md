@@ -32,6 +32,19 @@ The owner's October 5 recipes use matching full blocks and slabs for every finis
 
 Carrier construction and decorative trim are cosmetic. Each Plinth's independently installed socket selects local offering/material Spellshaping. Install on a side, recover by sneak-clicking a side with an empty hand; it saves, synchronizes and drops independently of its offering. Supporting blocks have no gameplay contribution. The earlier October 4 Chiseled Stone Brick/Iron grids are superseded.
 
+### Optional pedestal conversions
+
+**Accepted October 6, 2026:** keep foreign display pedestals separate and offer automatic, one-way crafting-grid conversions into the matching Vestige Plinth finish. Material identity is preserved; these recipes do not unlock the other masonry finishes.
+
+| Source item | Crafting-grid output |
+|---|---|
+| Iron's Spells 'n Spellbooks `irons_spellbooks:pedestal` | 1 Stone Bricks Plinth (`vestige:plinth`) |
+| Supplementaries `supplementaries:pedestal` | 1 Stone Bricks Plinth (`vestige:plinth`) |
+
+The inspected ValeCraft jars, Spellbooks 3.16.2 and Supplementaries 3.8.5 for Minecraft 1.21.1, each have one Stone Brick pedestal item. Supplementaries' connected top/middle/base models are stack states, not different masonry items. Put one pedestal in any crafting-grid slot to obtain one Plinth; no extra ingredient is needed. Ordinary crafted items are converted, so take displayed contents off a placed pedestal before breaking and crafting it. There is no in-world block replacement or reverse conversion.
+
+Each recipe and its recipe-book unlock require both the provider mod and its exact pedestal item. Missing or disabled source items skip the integration cleanly. This uses NeoForge's [standard data load conditions](https://docs.neoforged.net/docs/1.21.1/resources/server/conditions/), with no foreign Java API and no dependency declaration for either mod. Native construction recipes retain their original costs and outputs. Any future source finish needs its own explicit material-matched conversion.
+
 ### Historical three-block construction recipes
 
 **Owner-supplied grids, October 3, 2026; superseded by the two-block construction above.** These construct apparatus blocks separately from their planned discovery/augmentation operations. Output is one block per craft, retaining the authoring assumption because screenshots do not show quantities. Source images and original JSON are preserved under [apparatus artwork](../art/apparatus-v1/README.md). Those original authoring grids remain historical evidence; the old pedestal crafting recipes, IDs and migration code are removed.

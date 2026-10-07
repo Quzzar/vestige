@@ -1,5 +1,22 @@
 # Development status
 
+## October 6 · optional pedestal conversions shipped to Kithkyn Testing
+
+The owner authorized shipment. The clean release starts from current main and includes only this chat's conditional conversion recipes, recipe-book unlocks, world-test class and scoped documentation. Neither Iron's Spells 'n Spellbooks nor Supplementaries is a dependency. Each matching source pedestal yields one Stone Bricks Plinth; all native construction recipes retain their costs and outputs.
+
+**Release verification:** Java 21 build and Kithkyn compatibility pass; all **107 scoped unit tests** and **four focused world tests** pass on the unchanged NeoForge 21.1.72 baseline. The exact install candidate additionally passes all four tests with neither optional provider and with both actual providers on the test pack's NeoForge **21.1.248**, alongside its installed Kithkyn jar. The earlier independent four-configuration source matrix remains separate evidence. The install adds only four data resources and their test class, preserving all **3,254 existing pack files** byte-for-byte, including the approved Shell and artwork. No provider mod was installed.
+
+[Release and installation evidence](verification/pedestal-compatibility-2026-10-06/release.md) confirms a verified backup and atomic replacement in **Prism → Kithkyn Testing**. Installed SHA-256: `d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155`. Restart Minecraft to load the recipes. Existing worlds and running games were unchanged; no new client appearance or remote multiplayer verification is claimed.
+
+## October 6 · optional material-matched pedestal conversions
+
+The owner approved automatic compatibility with Iron's Spells 'n Spellbooks and Supplementaries while explicitly rejecting dependencies and cross-material conversions. Added one-way crafting-grid recipes: either provider's single Stone Brick pedestal yields **one Stone Bricks Plinth**. Each recipe and recipe-book unlock loads only when both its provider and exact item exist. No foreign API or dependency declaration was added; native construction recipes and finishes remain unchanged. The [material rules](design/material-crafting.md#optional-pedestal-conversions) record the accepted scope.
+
+**Verified:** final Java 21 baseline build passes with neither provider, with **121 unit tests** and zero failures/errors/skips. All **four focused GameTests** pass in each configuration: neither, Iron's only, Supplementaries only and both. Tests cover conditional recipe/unlock loading, 2×2 and 3×3 grids, normal recipe selection, one matching output, no remainder, invalid inputs and the existing 72 apparatus recipes. Actual ValeCraft provider jars require a newer loader than the development baseline, so their three successful fixtures use ValeCraft's **NeoForge 21.1.247** through temporary command-line/runtime overrides; the standalone fixture and project remain **21.1.72**. The initial incompatible-loader launch is not counted as a world-test success.
+
+[Evidence and package/source hashes](verification/pedestal-compatibility-2026-10-06/README.md) retain those results. All 544 apparatus-generated files excluding the shared translation file remain canonical; the full authoring check still encounters unrelated existing translation drift. Installed packs and existing worlds were unchanged. This is recipe compatibility; no client appearance, shipment, in-world replacement or remote multiplayer verification is claimed.
+
+
 ## October 6 · Standing Stone and mana UI approved for shipping
 
 The owner approved the current Standing Stone and mana UI as **good enough for now** and authorized shipment. The clean release starts from the already merged ritual baseline on main and includes only this chat's menu, ordinary XP travel fare, counted full/half cost previews, fixed six-row pages, shared violet mana drawing and bottom-right HUD, matching protocol version four, tests and scoped documentation. Other chats' unfinished work is excluded. Health/hunger/mana travel remain visual previews; XP is the live payment.

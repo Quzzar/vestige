@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-06",
+  "minecraft": "1.21.1",
+  "baseline_neoforge": "21.1.72",
+  "provider_fixture_neoforge": "21.1.247",
+  "java_home": "/Users/quzzar/.gradle/jdks/eclipse_adoptium-21-aarch64-os_x.2/jdk-21.0.12.1+1/Contents/Home",
+  "optional_providers_are_dependencies": false,
+  "installed_packs_modified": false,
+  "unit_results": {
+    "tests": 121,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/PedestalCompatibilityTest.java": "122c8f7e4c4cb7a591c62770a197a5e8073bfecac469fd565067b67b857ca3a8",
+    "src/main/resources/data/vestige/recipe/compat/irons_spellbooks/plinth.json": "808a3634842ad2ce959d5c45774851e1268e0b7ee7bd7e632d81efd42016c6ef",
+    "src/main/resources/data/vestige/recipe/compat/supplementaries/plinth.json": "043782ff833a3b15a012ad30d764112d1a614419fefcdc2910c82bed6d9f9a6f",
+    "src/main/resources/data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json": "29202897b198cdb00422a8d08afb0a47cb681ded3165d197c4526bc2821d00ff",
+    "src/main/resources/data/vestige/advancement/recipes/compat/supplementaries/plinth.json": "e263074dbfd821135743c0de9cd097d1c0f17a0f60b6a1e6098d5722d689fcad"
+  },
+  "production_jar": {
+    "path": "/private/tmp/vestige-pedestal-compat-build/libs/vestige-0.1.0.jar",
+    "size": 7778362,
+    "sha256": "23f2066986367c6a40d7b36c3cadf0b35534f49c877b50b4f3dd794db5cd8761",
+    "compat_resource_sha256": {
+      "data/vestige/recipe/compat/irons_spellbooks/plinth.json": "808a3634842ad2ce959d5c45774851e1268e0b7ee7bd7e632d81efd42016c6ef",
+      "data/vestige/recipe/compat/supplementaries/plinth.json": "043782ff833a3b15a012ad30d764112d1a614419fefcdc2910c82bed6d9f9a6f",
+      "data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json": "29202897b198cdb00422a8d08afb0a47cb681ded3165d197c4526bc2821d00ff",
+      "data/vestige/advancement/recipes/compat/supplementaries/plinth.json": "e263074dbfd821135743c0de9cd097d1c0f17a0f60b6a1e6098d5722d689fcad"
+    },
+    "pedestal_test_class_sha256": "c47523b573396d77db7c5111b54990f2b91cf207d8978bb9f05f462cecfb4aeb",
+    "provider_dependency_declarations": []
+  },
+  "test_only_init_script": {
+    "path": "/private/tmp/vestige-pedestal-compat.init.gradle",
+    "sha256": "b1d16d9bd16b33fadba89584f70bba85fafe3606660a7f59bb0b26355c2e150f",
+    "content": "allprojects {\n    layout.buildDirectory = file(project.findProperty('pedestal_fixture_build') ?: '/private/tmp/vestige-pedestal-compat-build')\n    afterEvaluate {\n        def pack = new File('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods')\n        def selection = project.findProperty('pedestal_providers') ?: 'none'\n        def jars = []\n        if (selection in ['irons', 'both']) jars.addAll([\n            'irons_spellbooks-1.21.1-3.16.2.jar', 'irons_lib-1.21.1-2.1.0.jar',\n            'geckolib-neoforge-1.21.1-4.9.2.jar', 'curios-neoforge-9.5.1+1.21.1.jar',\n            'player-animation-lib-forge-2.0.4+1.21.1.jar'])\n        if (selection in ['supplementaries', 'both']) jars.addAll([\n            'supplementaries-neoforge-1.21.1-3.8.5.jar', 'moonlight-neoforge-1.21.1-3.3.0.jar'])\n        jars.each { name ->\n            def jar = new File(pack, name)\n            assert jar.isFile(): 'Missing local provider: ' + name\n            dependencies.add('localRuntime', files(jar))\n        }\n    }\n}\n"
+  },
+  "actual_provider_files": [
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/irons_spellbooks-1.21.1-3.16.2.jar",
+      "sha256": "82b650aff7636c8fa88da0e4cfea008c229bb62843274678ee932f6b4ec74430"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/irons_lib-1.21.1-2.1.0.jar",
+      "sha256": "3d0ad1003d6edeaad2500b9922267b4192d2c603cdd846fda339b168f4deff72"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/geckolib-neoforge-1.21.1-4.9.2.jar",
+      "sha256": "5e548466af9ab6aca7a91a7c7d4dc0dc8bc385e22958aed5da0e7bebd0fa3fba"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/curios-neoforge-9.5.1+1.21.1.jar",
+      "sha256": "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "sha256": "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/supplementaries-neoforge-1.21.1-3.8.5.jar",
+      "sha256": "c05b1c9d39d37694d197ef84ffe70f9dbe995261333cc7c06610c7bff6d9599e"
+    },
+    {
+      "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods/moonlight-neoforge-1.21.1-3.3.0.jar",
+      "sha256": "30420824c7f9fbca0317551c8fd6bbdce01c8d745edf5bc8d61e42393c5f0335"
+    }
+  ],
+  "fixtures": [
+    {
+      "selection": "none",
+      "neoforge": "21.1.72",
+      "passed_game_tests": 4,
+      "command_argv": [
+        "./gradlew",
+        "--init-script",
+        "/private/tmp/vestige-pedestal-compat.init.gradle",
+        "--project-cache-dir",
+        "/private/tmp/vestige-pedestal-compat-projectcache",
+        "build",
+        "runGameTestServer",
+        "-Pwith_kithkyn=false",
+        "-Ppedestal_providers=none",
+        "-Pgametest_directory=/private/tmp/vestige-pedestal-compat-worlds/none-final",
+        "-Pgametest_filter=pedestal_compat|apparatus_recipes"
+      ],
+      "log": "/private/tmp/vestige-pedestal-compat-none-final.log",
+      "log_sha256": "fb29e0ea177f9ab46e6dc0038ea84f6336f70cb1bdf0ff9e327017d20def48fc",
+      "completion": [
+        "[23:21:14] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:21:14] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:21:14] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 980.4 ms ======================",
+        "[23:21:14] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 46s"
+      ]
+    },
+    {
+      "selection": "irons",
+      "neoforge": "21.1.247",
+      "passed_game_tests": 4,
+      "command_argv": [
+        "./gradlew",
+        "--init-script",
+        "/private/tmp/vestige-pedestal-compat.init.gradle",
+        "--project-cache-dir",
+        "/private/tmp/vestige-pedestal-compat-projectcache",
+        "runGameTestServer",
+        "-Pwith_kithkyn=false",
+        "-Ppedestal_providers=irons",
+        "-Pgametest_directory=/private/tmp/vestige-pedestal-compat-worlds/irons-pack",
+        "-Pgametest_filter=pedestal_compat|apparatus_recipes",
+        "-Pneo_version=21.1.247",
+        "-Ppedestal_fixture_build=/private/tmp/vestige-pedestal-compat-pack-build"
+      ],
+      "log": "/private/tmp/vestige-pedestal-compat-irons-pack.log",
+      "log_sha256": "9ab783960f6e90873d62d2b9b387b8bb47c4f337aa1cb8e9ac1c821a42d320bc",
+      "completion": [
+        "[23:19:15] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:19:15] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:19:15] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 986.2 ms ======================",
+        "[23:19:15] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 39s"
+      ]
+    },
+    {
+      "selection": "supplementaries",
+      "neoforge": "21.1.247",
+      "passed_game_tests": 4,
+      "command_argv": [
+        "./gradlew",
+        "--init-script",
+        "/private/tmp/vestige-pedestal-compat.init.gradle",
+        "--project-cache-dir",
+        "/private/tmp/vestige-pedestal-compat-projectcache",
+        "runGameTestServer",
+        "-Pwith_kithkyn=false",
+        "-Ppedestal_providers=supplementaries",
+        "-Pgametest_directory=/private/tmp/vestige-pedestal-compat-worlds/supplementaries-pack",
+        "-Pgametest_filter=pedestal_compat|apparatus_recipes",
+        "-Pneo_version=21.1.247",
+        "-Ppedestal_fixture_build=/private/tmp/vestige-pedestal-compat-pack-build"
+      ],
+      "log": "/private/tmp/vestige-pedestal-compat-supplementaries-pack.log",
+      "log_sha256": "c177f6d45ac2df9913f50e37c0072c91093817f01779639bb631780c19382e32",
+      "completion": [
+        "[23:20:09] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:20:09] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:20:09] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.645 s ======================",
+        "[23:20:09] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 38s"
+      ]
+    },
+    {
+      "selection": "both",
+      "neoforge": "21.1.247",
+      "passed_game_tests": 4,
+      "command_argv": [
+        "./gradlew",
+        "--init-script",
+        "/private/tmp/vestige-pedestal-compat.init.gradle",
+        "--project-cache-dir",
+        "/private/tmp/vestige-pedestal-compat-projectcache",
+        "runGameTestServer",
+        "-Pwith_kithkyn=false",
+        "-Ppedestal_providers=both",
+        "-Pgametest_directory=/private/tmp/vestige-pedestal-compat-worlds/both-pack",
+        "-Pgametest_filter=pedestal_compat|apparatus_recipes",
+        "-Pneo_version=21.1.247",
+        "-Ppedestal_fixture_build=/private/tmp/vestige-pedestal-compat-pack-build"
+      ],
+      "log": "/private/tmp/vestige-pedestal-compat-both-pack.log",
+      "log_sha256": "fe451753f63d7a17711952a180546e6f04cc482a04dff8bd197a146228e60b2a",
+      "completion": [
+        "[23:17:11] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:17:12] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:17:12] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.405 s ======================",
+        "[23:17:12] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 2m 21s"
+      ]
+    }
+  ],
+  "excluded_initial_failure": {
+    "log": "/private/tmp/vestige-pedestal-compat-both.log",
+    "sha256": "4c766a8e488ce0903edb5c3940b0d985f551d34510b30320913ac64be7ad714b",
+    "reason": "Provider libraries require newer NeoForge; Minecraft did not start, despite Gradle exit success."
+  },
+  "apparatus_canonical_check": {
+    "matched_generated_files": 544,
+    "mismatches": 0,
+    "excluded_existing_shared_translation_drift": "src/main/resources/assets/vestige/lang/en_us.json"
+  },
+  "limits": [
+    "No installed-pack shipment",
+    "No client appearance verification",
+    "No remote multiplayer verification",
+    "No in-world replacement or reverse conversion"
+  ]
+}

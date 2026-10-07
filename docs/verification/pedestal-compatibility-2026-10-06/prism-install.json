@@ -1,0 +1,21 @@
+{
+  "installedAtUTC": "2026-10-07T03:38:32.191714+00:00",
+  "instance": "Kithkyn Testing",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+  "backupJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/pedestal-compat-20261007T033832145413Z/vestige-0.1.0.jar",
+  "backupSha256": "0ad877fbbb6fc255c4926ecbefe60fda51a14ba18afcd4b67ce4b34a7bdf94dd",
+  "atomicReplacement": true,
+  "verifiedAfterReplacement": true,
+  "installed": true,
+  "changedMembers": [],
+  "addedMembers": [
+    "com/quzzar/vestige/apparatus/PedestalCompatibilityTest.class",
+    "data/vestige/recipe/compat/irons_spellbooks/plinth.json",
+    "data/vestige/recipe/compat/supplementaries/plinth.json",
+    "data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json",
+    "data/vestige/advancement/recipes/compat/supplementaries/plinth.json"
+  ],
+  "unchangedExistingFiles": 3254,
+  "restartPerformed": false
+}

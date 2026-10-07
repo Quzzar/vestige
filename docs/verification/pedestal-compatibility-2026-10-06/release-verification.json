@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "baseMainCommit": "bdccfb84f5394d3273833bdd6dcfab0394ca3fbd",
+  "cleanSourceRelease": {
+    "build": true,
+    "verifyKithkynCompatibility": true,
+    "unitResults": {
+      "tests": 107,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "focusedWorldTests": 4,
+    "jar": "/private/tmp/vestige-pedestal-release-build/libs/vestige-0.1.0.jar",
+    "jarSha256": "7d69888f3a571b7754b75f0bc6ee38aef388a857b04229b5930f3d277295de10",
+    "log": "/private/tmp/vestige-pedestal-release-build.log",
+    "logSha256": "fd6d2ddc1515a63808959bc17b028abaf81fbc12a8b69a099a80ce4fa259df7c"
+  },
+  "candidate": {
+    "instance": "Kithkyn Testing",
+    "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "baseSha256": "0ad877fbbb6fc255c4926ecbefe60fda51a14ba18afcd4b67ce4b34a7bdf94dd",
+    "candidateJar": "/private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar",
+    "candidateSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+    "candidateBytes": 7695011,
+    "cleanReleaseJar": "/private/tmp/vestige-pedestal-release-build/libs/vestige-0.1.0.jar",
+    "cleanReleaseSha256": "7d69888f3a571b7754b75f0bc6ee38aef388a857b04229b5930f3d277295de10",
+    "changedMembers": [],
+    "addedMembers": [
+      "com/quzzar/vestige/apparatus/PedestalCompatibilityTest.class",
+      "data/vestige/recipe/compat/irons_spellbooks/plinth.json",
+      "data/vestige/recipe/compat/supplementaries/plinth.json",
+      "data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json",
+      "data/vestige/advancement/recipes/compat/supplementaries/plinth.json"
+    ],
+    "unchangedMembers": 3254,
+    "memberSha256": {
+      "com/quzzar/vestige/apparatus/PedestalCompatibilityTest.class": "c47523b573396d77db7c5111b54990f2b91cf207d8978bb9f05f462cecfb4aeb",
+      "data/vestige/recipe/compat/irons_spellbooks/plinth.json": "808a3634842ad2ce959d5c45774851e1268e0b7ee7bd7e632d81efd42016c6ef",
+      "data/vestige/recipe/compat/supplementaries/plinth.json": "043782ff833a3b15a012ad30d764112d1a614419fefcdc2910c82bed6d9f9a6f",
+      "data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json": "29202897b198cdb00422a8d08afb0a47cb681ded3165d197c4526bc2821d00ff",
+      "data/vestige/advancement/recipes/compat/supplementaries/plinth.json": "e263074dbfd821135743c0de9cd097d1c0f17a0f60b6a1e6098d5722d689fcad"
+    },
+    "installationPerformed": false
+  },
+  "exactCandidateFixtures": [
+    {
+      "providers": "none",
+      "neoforge": "21.1.248",
+      "passed": 4,
+      "installedKithkynLoaded": true,
+      "log": "/private/tmp/vestige-pedestal-exact-none.log",
+      "logSha256": "1a647140b428daf4f4db774c90754a2e5233b8b3b4563cbb2b704904b9392a83",
+      "completion": [
+        "[23:36:11] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]",
+        "[23:36:45] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:36:46] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:36:46] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 2.367 s ======================",
+        "[23:36:46] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 2m 28s"
+      ]
+    },
+    {
+      "providers": "both",
+      "neoforge": "21.1.248",
+      "passed": 4,
+      "installedKithkynLoaded": true,
+      "log": "/private/tmp/vestige-pedestal-exact-both.log",
+      "logSha256": "e012a20959879ab4e45af1bc3ba877b9a86f8e6733a61a50b545a2f422c6838a",
+      "completion": [
+        "[23:37:14] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]",
+        "[23:37:51] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...",
+        "[23:37:51] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...",
+        "[23:37:52] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.592 s ======================",
+        "[23:37:52] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)",
+        "BUILD SUCCESSFUL in 47s"
+      ]
+    }
+  ],
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/PedestalCompatibilityTest.java": "122c8f7e4c4cb7a591c62770a197a5e8073bfecac469fd565067b67b857ca3a8",
+    "src/main/resources/data/vestige/recipe/compat/irons_spellbooks/plinth.json": "808a3634842ad2ce959d5c45774851e1268e0b7ee7bd7e632d81efd42016c6ef",
+    "src/main/resources/data/vestige/recipe/compat/supplementaries/plinth.json": "043782ff833a3b15a012ad30d764112d1a614419fefcdc2910c82bed6d9f9a6f",
+    "src/main/resources/data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json": "29202897b198cdb00422a8d08afb0a47cb681ded3165d197c4526bc2821d00ff",
+    "src/main/resources/data/vestige/advancement/recipes/compat/supplementaries/plinth.json": "e263074dbfd821135743c0de9cd097d1c0f17a0f60b6a1e6098d5722d689fcad"
+  },
+  "installation": {
+    "installedAtUTC": "2026-10-07T03:38:32.191714+00:00",
+    "instance": "Kithkyn Testing",
+    "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "installedSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+    "backupJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/pedestal-compat-20261007T033832145413Z/vestige-0.1.0.jar",
+    "backupSha256": "0ad877fbbb6fc255c4926ecbefe60fda51a14ba18afcd4b67ce4b34a7bdf94dd",
+    "atomicReplacement": true,
+    "verifiedAfterReplacement": true,
+    "installed": true,
+    "changedMembers": [],
+    "addedMembers": [
+      "com/quzzar/vestige/apparatus/PedestalCompatibilityTest.class",
+      "data/vestige/recipe/compat/irons_spellbooks/plinth.json",
+      "data/vestige/recipe/compat/supplementaries/plinth.json",
+      "data/vestige/advancement/recipes/compat/irons_spellbooks/plinth.json",
+      "data/vestige/advancement/recipes/compat/supplementaries/plinth.json"
+    ],
+    "unchangedExistingFiles": 3254,
+    "restartPerformed": false
+  },
+  "testHarness": {
+    "/private/tmp/vestige-pedestal-exact.init.gradle": "gradle.beforeProject { project ->\n    project.layout.buildDirectory.set(project.file('/private/tmp/vestige-pedestal-exact-build'))\n    project.afterEvaluate {\n        project.sourceSets.main.java.setSrcDirs([project.file('/private/tmp/vestige-pedestal-exact-harness/java')])\n        project.sourceSets.main.resources.setSrcDirs([project.file('/private/tmp/vestige-pedestal-exact-harness/resources')])\n        project.neoForge.mods.clear()\n        def harness = project.neoForge.mods.create('vestige_pedestal_ship_check')\n        harness.sourceSet(project.sourceSets.main)\n        project.neoForge.runs.configureEach { mods.set([harness]) }\n        project.tasks.named('generateModMetadata').configure {\n            into project.layout.buildDirectory.dir('generated/sources/unusedModMetadata')\n        }\n        project.tasks.named('runGameTestServer').configure { maxHeapSize = '2G' }\n        project.dependencies.add('localRuntime', project.files('/private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar'))\n        project.dependencies.add('localRuntime', project.files('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/kithkyn-1.0.0.jar'))\n        def pack = new File('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods')\n        def selection = project.findProperty('pedestal_providers') ?: 'none'\n        def jars = []\n        if (selection in ['irons', 'both']) jars.addAll([\n            'irons_spellbooks-1.21.1-3.16.2.jar', 'irons_lib-1.21.1-2.1.0.jar',\n            'geckolib-neoforge-1.21.1-4.9.2.jar', 'curios-neoforge-9.5.1+1.21.1.jar',\n            'player-animation-lib-forge-2.0.4+1.21.1.jar'])\n        if (selection in ['supplementaries', 'both']) jars.addAll([\n            'supplementaries-neoforge-1.21.1-3.8.5.jar', 'moonlight-neoforge-1.21.1-3.3.0.jar'])\n        jars.each { name ->\n            def jar = new File(pack, name)\n            assert jar.isFile(): 'Missing local provider: ' + name\n            project.dependencies.add('localRuntime', project.files(jar))\n        }\n    }\n}\n",
+    "/private/tmp/vestige-pedestal-release.init.gradle": "allprojects {\n    layout.buildDirectory = file('/private/tmp/vestige-pedestal-release-build')\n}\n",
+    "/private/tmp/vestige-pedestal-exact-harness/java/com/quzzar/pedestalship/PedestalShipCheck.java": "package com.quzzar.pedestalship;\n\nimport net.neoforged.fml.common.Mod;\n\n/** Empty test mod: all gameplay and tests load from the exact candidate JAR. */\n@Mod(\"vestige_pedestal_ship_check\")\npublic final class PedestalShipCheck {\n    public PedestalShipCheck() { }\n}\n",
+    "/private/tmp/vestige-pedestal-exact-harness/resources/META-INF/neoforge.mods.toml": "modLoader=\"javafml\"\nloaderVersion=\"[4,)\"\nlicense=\"All Rights Reserved\"\n\n[[mods]]\nmodId=\"vestige_pedestal_ship_check\"\nversion=\"1.0.0\"\ndisplayName=\"Pedestal Release Verification\"\n"
+  },
+  "limits": [
+    "No new client appearance verification for this data-only integration",
+    "No remote multiplayer verification",
+    "No game restart performed",
+    "Optional provider jars were test-only and were not installed in Kithkyn Testing"
+  ]
+}

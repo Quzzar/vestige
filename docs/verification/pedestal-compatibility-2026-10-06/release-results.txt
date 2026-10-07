@@ -1,0 +1,21 @@
+=== Exact install jar / none ===
+[23:36:11] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[23:36:45] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:36:46] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:36:46] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 2.367 s ======================
+[23:36:46] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 2m 28s
+
+=== Exact install jar / both ===
+[23:37:14] [main/DEBUG] [ne.ne.fm.lo.mo.ModFile/LOADING]: Loading mod file /private/tmp/vestige-pedestal-candidate/vestige-0.1.0.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[4,)]]
+[23:37:51] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[23:37:51] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (2 tests)...
+[23:37:52] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.592 s ======================
+[23:37:52] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 47s
+
+=== Clean main-based release build ===
+BUILD SUCCESSFUL in 11s
+[23:33:22] [Server thread/INFO] [minecraft/GameTestServer]: ========= 4 GAME TESTS COMPLETE IN 1.504 s ======================
+[23:33:22] [Server thread/INFO] [minecraft/GameTestServer]: All 4 required tests passed :)
+BUILD SUCCESSFUL in 1m 2s
