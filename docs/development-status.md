@@ -1,5 +1,13 @@
 # Development status
 
+## October 7 · preserve wand reference art in the native export
+
+The owner found that the generated reference and the simplified in-game export differed. The conversion had stretched the bodies and removed their gold grip bands and thin branches. The same source image is retained unchanged; it is now explicitly documented as a larger generated reference, not an already-native 16×16 asset. Body export fits thirteen pixels tall with aspect-derived width, reserves two gold shades within an eight-colour palette and preserves thin shape coverage. Tips retain at most four colours. Every body retains visible gold, and all 63 actual 16×16 combinations keep hard alpha, connected silhouettes and one-pixel clear outside borders.
+
+**Verified:** exact exporter/model drift and palette/alpha/padding/connectedness/gold-retention checks; two unedited native survival inventory frames beside vanilla items; loaded-resource hashes; successful production assembly and all twenty packaged texture hashes. Temporary capture Java is removed from production. The five thread textures, models and gameplay are unchanged. [Evidence](art/wands-native/faithful-v3/README.md) pins the reference, exported pixels, frames and complete compressed logs. The larger generated source is not claimed to match every native pixel; future artwork reviews should show actual exported sprites before approval.
+
+**Installed:** a backed-up texture-only update in **Prism → Kithkyn Testing** replaces fifteen wand PNG entries and preserves all 3,497 other entries byte-for-byte. [Installation](art/wands-native/faithful-v3/installation.json) pins the artifact and backup. Restart Minecraft to load this correction. Concurrent shared-source work is excluded.
+
 ## October 7 · wand shading and one-pixel padding
 
 The owner’s native-inventory review found noisy wand shading and missing padding. All seven body and eight tip layers now use simpler colour patches, at most six opaque colours per body and four per tip, with hard alpha at actual **16×16**. Every one of **63 appearances** has a clear one-pixel transparent outside border and a connected silhouette. All five approved thread textures, item models and gameplay remain unchanged.

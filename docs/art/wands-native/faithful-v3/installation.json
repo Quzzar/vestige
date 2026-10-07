@@ -1,0 +1,29 @@
+{
+  "installed": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/vestige-backups/vestige-0.1.0-before-wand-art-v3-20261007-134830.jar",
+  "candidate": "/Users/quzzar/Projects/vestige/build/artifacts/vestige-wand-art-v3.jar",
+  "beforeSha256": "f3220a43e09fe95416d5f697dbabd1a7030e3d4ff488defc57d64e00f76382ff",
+  "afterSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc",
+  "changedEntries": [
+    "assets/vestige/textures/item/wands/base_bamboo.png",
+    "assets/vestige/textures/item/wands/base_blaze_rod.png",
+    "assets/vestige/textures/item/wands/base_bone.png",
+    "assets/vestige/textures/item/wands/base_breeze_rod.png",
+    "assets/vestige/textures/item/wands/base_end_rod.png",
+    "assets/vestige/textures/item/wands/base_lightning_rod.png",
+    "assets/vestige/textures/item/wands/base_stick.png",
+    "assets/vestige/textures/item/wands/tip_amethyst.png",
+    "assets/vestige/textures/item/wands/tip_copper.png",
+    "assets/vestige/textures/item/wands/tip_diamond.png",
+    "assets/vestige/textures/item/wands/tip_emerald.png",
+    "assets/vestige/textures/item/wands/tip_ender_pearl.png",
+    "assets/vestige/textures/item/wands/tip_ghast_tear.png",
+    "assets/vestige/textures/item/wands/tip_iron.png",
+    "assets/vestige/textures/item/wands/tip_netherite.png"
+  ],
+  "changedEntryCount": 15,
+  "unchangedEntryCount": 3497,
+  "method": "Texture-only update to the previously verified combined jar; every other uncompressed entry is byte-identical. No concurrent shared-work code is packaged.",
+  "nativeCaptureAssetsMatch": true,
+  "restartRequired": true
+}

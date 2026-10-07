@@ -2,6 +2,7 @@
 """Vanilla-resolution, compositional wand and thread item assets. Requires Pillow for export."""
 import argparse
 from collections import Counter
+import colorsys
 import json
 import pathlib
 from PIL import Image
@@ -34,7 +35,41 @@ def sprite(source, bounds, size, position):
     return canvas
 
 
-def wand_sprite(source, bounds, size, position, colours):
+def gold_binding(rgb):
+    hue, saturation, value = colorsys.rgb_to_hsv(*(channel/255 for channel in rgb[:3]))
+    return 35 <= hue*360 <= 65 and saturation >= .60 and value >= .35
+
+
+def binding_pixel(region, x, y):
+    # Authored grip-band window in the reference crops. Blaze's golden shaft
+    # must retain its own ramp rather than joining this small accent palette.
+    return x < region.width*.55 and region.height*.60 <= y < region.height*.90 and gold_binding(region.getpixel((x,y)))
+
+
+def indexed_colours(region, colours, preserve_binding):
+    """Reserve the small gold accent's palette so frequent shaft colours cannot erase it."""
+    groups = [[], []] if preserve_binding else [[]]
+    for y in range(region.height):
+        for x in range(region.width):
+            rgb = region.getpixel((x,y))
+            if rgb[3] >= 128:
+                group = int(preserve_binding and binding_pixel(region,x,y))
+                groups[group].append(rgb[:3])
+    palettes = []
+    for group, opaque in enumerate(groups):
+        if not opaque:
+            palettes.append(None)
+            continue
+        sample = Image.new('RGB', (len(opaque),1))
+        sample.putdata(opaque)
+        budget = (2 if group else colours-2) if preserve_binding else colours
+        palette = sample.quantize(colors=budget, method=Image.Quantize.MAXCOVERAGE,
+                                  dither=Image.Dither.NONE)
+        palettes.append(region.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE).convert('RGB'))
+    return palettes
+
+
+def wand_sprite(source, bounds, size, position, colours, preserve_binding=False):
     """Indexed, nondithered export: one dominant flat colour per logical pixel.
 
     Generated source cells have small raster variations even inside their flat
@@ -43,22 +78,28 @@ def wand_sprite(source, bounds, size, position, colours):
     Geometry comes entirely from the generated artwork, without painting pixels.
     """
     region = source.crop(bounds).convert('RGBA')
-    opaque = [rgb[:3] for rgb in region.getdata() if rgb[3] >= 128]
-    palette_source = Image.new('RGB', (len(opaque), 1))
-    palette_source.putdata(opaque)
-    indexed = palette_source.quantize(colors=colours, method=Image.Quantize.MEDIANCUT,
-                                      dither=Image.Dither.NONE)
-    rgb = region.convert('RGB').quantize(palette=indexed, dither=Image.Dither.NONE).convert('RGB')
+    palettes = indexed_colours(region, colours, preserve_binding)
     canvas = Image.new('RGBA', (16, 16))
     for y in range(size[1]):
         for x in range(size[0]):
             box = (round(x*region.width/size[0]), round(y*region.height/size[1]),
                    round((x+1)*region.width/size[0]), round((y+1)*region.height/size[1]))
-            values = [rgb.getpixel((px,py)) for py in range(box[1],box[3])
-                      for px in range(box[0],box[2]) if region.getpixel((px,py))[3] >= 128]
+            values = [[], []] if preserve_binding else [[]]
+            for py in range(box[1],box[3]):
+                for px in range(box[0],box[2]):
+                    source_pixel = region.getpixel((px,py))
+                    if source_pixel[3] >= 128:
+                        group = int(preserve_binding and binding_pixel(region,px,py))
+                        values[group].append(palettes[group].getpixel((px,py)))
             area = (box[2]-box[0])*(box[3]-box[1])
-            if len(values)*2 >= area:
-                colour = Counter(values).most_common(1)[0][0]
+            filled = sum(len(group) for group in values)
+            # Preserve thin source branches as a whole native pixel; majority
+            # alpha alone erased the wood crook while reducing its silhouette.
+            if filled*(3 if preserve_binding else 2) >= area:
+                # A short contrasting band must survive reduction even when its
+                # two gold shades each lose individually to a shaft shade.
+                group = 1 if preserve_binding and len(values[1])*4 >= filled else 0
+                colour = Counter(values[group]).most_common(1)[0][0]
                 canvas.putpixel((position[0]+x,position[1]+y), (*colour,255))
     return canvas
 
@@ -66,7 +107,7 @@ def wand_sprite(source, bounds, size, position, colours):
 def verify_wands(result):
     """Check the rendered union, including an optional overlay, not just layers."""
     for relative, sprite in result.items():
-        colour_limit = 6 if '/base_' in relative else 4
+        colour_limit = 8 if '/base_' in relative else 4
         pixels = list(sprite.getdata())
         if sprite.mode != 'RGBA' or sprite.size != (16,16):
             raise ValueError('Wrong wand texture format: '+relative)
@@ -74,6 +115,8 @@ def verify_wands(result):
             raise ValueError('Soft alpha in wand texture: '+relative)
         if len({pixel[:3] for pixel in pixels if pixel[3]}) > colour_limit:
             raise ValueError('Noisy wand palette: '+relative)
+        if '/base_' in relative and not any(gold_binding(pixel) for pixel in pixels if pixel[3]):
+            raise ValueError('Missing reference gold binding: '+relative)
     for base in BASES:
         body = result['textures/item/wands/base_'+base+'.png']
         for tip in [None, *TIPS]:
@@ -103,7 +146,9 @@ def textures():
     result = {}
     with Image.open(ART / 'wand-components-v2.png') as atlas:
         for name, bounds in zip(BASES, BODY_BOUNDS):
-            result['textures/item/wands/base_' + name + '.png'] = wand_sprite(atlas, bounds, (12,11), (1,4), 6)
+            # Fit uniformly instead of squashing every crop into the same box.
+            width = round(13*(bounds[2]-bounds[0])/(bounds[3]-bounds[1]))
+            result['textures/item/wands/base_' + name + '.png'] = wand_sprite(atlas, bounds, (width,13), (13-width,2), 8, preserve_binding=True)
         for name, bounds in zip(TIPS, TIP_BOUNDS):
             result['textures/item/wands/tip_' + name + '.png'] = wand_sprite(atlas, bounds, (4,4), (10,1), 4)
     verify_wands(result)

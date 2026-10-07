@@ -1,5 +1,7 @@
 # Wand artwork · simplified and padded revision
 
+**Historical export, superseded by [the reference-preserving correction](../faithful-v3/README.md).** The owner found that this conversion lost gold bands and source shapes. These images and measurements describe that previous build.
+
 **October 7, 2026.** This replaces the first wand pixels following the owner's actual-inventory feedback: the old export looked noisy and touched the sprite edges. The seven distinctive material bodies and eight optional tips now use simpler connected colour patches. Bodies have at most six opaque colours, tips at most four; all sprites are actual **16×16 RGBA**, with hard alpha. Every one of the **63 combinations**, including untipped bodies, has a clear **one-pixel transparent outside border** and a connected silhouette. All five thread sprites, models and gameplay remain unchanged.
 
 ## Actual Minecraft inspection

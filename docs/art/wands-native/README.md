@@ -1,5 +1,9 @@
 # Native wand and thread art
 
+## October 7 · preserve the generated reference in the actual export
+
+The [current export correction](faithful-v3/README.md) keeps the original body proportions, thin branches and gold grip bands at actual 16×16. It supersedes the simpler v2 conversion below, which discarded those details. Bodies have at most eight shades including two reserved for gold, tips at most four. Every one of the 63 appearances remains padded and connected. Both the native inventory frames and the enlarged inspection now show the actual exported sprites. The source reference is retained unchanged and is explicitly identified as a larger generated image rather than an already-native 16×16 asset.
+
 ## October 7 · quieter shading and clear padding
 
 The [padded revision](padded-v2/README.md) supersedes the first wand pixels after native inventory review. All seven body and eight tip layers now have simpler flat colour patches: **at most six opaque colours per body and four per tip**, compared with forty to forty-nine in the previous bodies. Every one of the **63 composed appearances** has a transparent one-pixel border, binary alpha and a connected body/tip silhouette. The five approved thread sprites are unchanged.
