@@ -108,6 +108,26 @@ public final class Spellshaping {
         payment.costs(base.costs());modes.values().forEach(m->payment.costs(m.costs())); // Validate before a ritual consumes anything.
         return new Compiled(new SpellDefinition(base.id(),base.rarity(),base.traditions(),base.traits(),base.costs(),base.triggers(),plan,modes,base.source()),List.copyOf(modifiers),payment);
     }
+    /** Trusted equipment contributions compose with an already compiled scroll; they are not stored augments. */
+    static Compiled contribute(Compiled source,SpellDefinition base,Rule rule) {
+        requireCompatible(rule,source.spell());
+        var modifiers=new ArrayList<>(source.modifiers());
+        var traits=source.spell().traits().resolve(modifiers);
+        for (var seed:rule.seeds()) if (traits.rating(id(seed))==0)
+            modifiers.add(new TraitModifier(id(seed),TraitModifier.Operation.ADD,1));
+        modifiers.addAll(rule.traits());
+        var costs=source.shaping().adjustment();
+        var factors=new HashMap<>(costs.factors());
+        rule.costFactors().forEach((kind,value)->factors.merge(kind,value,(a,b)->a*b));
+        var additional=new ArrayList<>(costs.additional()); additional.addAll(rule.additional());
+        var shaping=new CastShaping(source.shaping().castingCost(),source.shaping().roundAmounts(),
+                new CastShaping.CostAdjustment(factors,additional,costs.healthFraction(),costs.hungerFraction(),
+                        costs.additionalPreparationTicks(),costs.minimumMana()));
+        var definition=source.spell();var modes=new LinkedHashMap<>(definition.modes());
+        modes.replaceAll((key,mode)->new SpellMode(key,mode.costs(),transform(mode.effects(),rule,base)));
+        return new Compiled(new SpellDefinition(definition.id(),definition.rarity(),definition.traditions(),definition.traits(),definition.costs(),
+                definition.triggers(),transform(definition.effects(),rule,base),modes,definition.source()),List.copyOf(modifiers),shaping);
+    }
     public static String paymentText(List<SpellCost> costs) {
         return costs.stream().map(c->switch(c){
             case SpellCost.Mana m->String.format(Locale.ROOT,"%.0f mana",m.amount());

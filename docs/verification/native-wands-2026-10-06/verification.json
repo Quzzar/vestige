@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-06",
+  "scope": "Native untipped wand binding/casting and initial base/thread profiles",
+  "unit_tests": {
+    "tests": 134,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_unit_tests": 13,
+  "world_tests": {
+    "passed": 26,
+    "new_wand_tests": 13,
+    "thread_regressions": 12,
+    "scroll_regressions": 1
+  },
+  "build": "passed",
+  "platform": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21
+  },
+  "kithkyn_version_check": "passed",
+  "kithkyn_coload_tested": false,
+  "recipe": {
+    "active_nodes": 8,
+    "consumed_offerings": 5,
+    "inner": [
+      "base",
+      "scroll",
+      "scroll",
+      "scroll"
+    ],
+    "outer": [
+      "thread",
+      "empty reserved tip",
+      "empty",
+      "empty"
+    ],
+    "quarter_turns_equivalent": true,
+    "reflections_equivalent": false,
+    "same_scroll_components_required": true
+  },
+  "runtime": {
+    "base_count": 7,
+    "thread_count": 5,
+    "tip_effects_implemented": 0,
+    "wand_recovery_ticks": 1200,
+    "recovery_scope": "per actor, bound spell and wand source family; scroll recovery separate",
+    "wear": {
+      "smoldering": 2,
+      "other_cores": 1
+    },
+    "wand_identifies_spells": false,
+    "source_shaping_copied_once": true,
+    "binding_geometry_adds_shaping": false,
+    "core_mana_premium_minimum": 1
+  },
+  "core_coverage_unshaped": {
+    "vestige:callous_thread": 214,
+    "vestige:consecrated_thread": 25,
+    "vestige:ensorcelled_thread": 214,
+    "vestige:laced_thread": 126,
+    "vestige:smoldering_thread": 86
+  },
+  "appearance": {
+    "vanilla_texture_references": "verified present",
+    "models": "temporary ingredient textures",
+    "native_client_inspection": false
+  },
+  "installed_in_testing_pack": false,
+  "limitations": [
+    "Eight locked tip directions are not yet executable or craftable.",
+    "Wand recipe-viewer entries and final artwork remain outstanding.",
+    "Catalog compatibility is not encounter balance or exhaustive shaped-variant coverage.",
+    "Cooldowns are runtime session state and reset on reload/restart."
+  ],
+  "artifact": {
+    "path": "build/native-wands/libs/vestige-0.1.0.jar",
+    "sha256": "233335a9678d91a09c7a77d0d0063fe37e46bd3f178c506503c708b5f162fa44"
+  },
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/SpellWandItem.java": "0a6fb1d8e99b84eeb09d5f344bfcab00ec8fcf9c262d6d7725b0b5542613d396",
+    "src/main/java/com/quzzar/vestige/apparatus/Spellshaping.java": "c7c6c55db56c269b9231fccfc3a005e88c207d5fd7639958c371bc7c10e12189",
+    "src/main/java/com/quzzar/vestige/apparatus/WandCasting.java": "69d5af359dd0e2811dae67c71c9b8f473ab113677330856efb0514361ec90a9c",
+    "src/main/java/com/quzzar/vestige/apparatus/WandComponents.java": "4dba80ef1650c4f118963c79cd6981e464103ce3c66c11d4e6fa5775bd7b8ecf",
+    "src/main/java/com/quzzar/vestige/apparatus/WandData.java": "85b9e037b8318cdf0b7e5e119e5565de7d322832e581f48e15e807462e750fea",
+    "src/main/java/com/quzzar/vestige/apparatus/WandRecipe.java": "c6d99cde0e57e10611f361e9cdaff54746b2e744db6bf75ff7aa6669f0cbc169",
+    "src/main/java/com/quzzar/vestige/apparatus/WandWorldTest.java": "fdb1f90d53f02c3a2347d5e40038c506a540fc97323e254b495951010ef0c90e",
+    "src/main/java/com/quzzar/vestige/apparatus/client/WandClient.java": "33c1eb0b3c46c02278311c56b5f0fc6bc90d94df48b6afe40961e09c9d4458c2",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastReservation.java": "2db3fc38e729a9283b62d59bb7805ba9740122c04f9a28bd9ef6f3613972caf7",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java": "6843e679132ce7512ccaac4a10ba831b9f0dc6651f0cd3a4bc13d78f1bb9ae6b",
+    "src/main/java/com/quzzar/vestige/magic/runtime/SpellRuntime.java": "f6381131ea0aa3da99d4afd562e1454cd74b2d6cdd5e2f123ad8fc7a84528a4d",
+    "src/test/java/com/quzzar/vestige/apparatus/WandComponentsTest.java": "26c7271ad812d414540ffdf04636d4adf33222c3e54cc13a7d5fc1058fa041d4",
+    "src/test/java/com/quzzar/vestige/apparatus/WandRecipeTest.java": "e2bf8afdbd27610e7ac640f8a8f13426d423ce542e72c34d252f4886c8f578f5",
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastReservationTest.java": "dc75d61706fff951b3b513d9d68516d9fe00a3e8ca22da9f737c7eaf21ca8a6d"
+  }
+}

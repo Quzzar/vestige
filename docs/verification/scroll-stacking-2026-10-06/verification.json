@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-06",
+  "checkedAtUTC": "2026-10-06T21:53:06.652653+00:00",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "buildPassed": true,
+  "unitTests": {
+    "tests": 113,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredMinecraftTests": 15,
+  "requiredMinecraftTestsFailed": 0,
+  "newStackingTests": 6,
+  "testFilter": "scroll_",
+  "stackLimit": 16,
+  "verifiedBehaviors": [
+    "compatible inventory merge stops at sixteen and preserves overflow",
+    "different spells, augments, degrees, leyline values and costs remain separate",
+    "splitting and saving preserve counts and shaping",
+    "successful cast consumes one, cooldown preserves remainder, settling does not consume twice",
+    "failed payment preserves all sixteen scrolls",
+    "actual Minecraft result-slot dismantling consumes one scroll and yields three fragments"
+  ],
+  "initialRun": {
+    "requiredMinecraftTests": 15,
+    "passed": 14,
+    "failure": "Dismantling fixture used a non-server mock player; corrected to the existing SurvivalTestPlayer fixture."
+  },
+  "wandAndStringImplementation": "design only; five core mappings remain proposals",
+  "sources": {
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "dd358f82793654db8d2b2e528a6b6512069b4d1372d15cc4adb1fd9b956eca7c",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollStackingWorldTest.java": "f2edbcf1844e25db30610a52671680d519a3615baadf028e7c52e0b728bb9546"
+  },
+  "jar": "build/scroll-stacking/libs/vestige-0.1.0.jar",
+  "jarSha256": "7040db9a6af0810d50a97a658516d739ff45bb252d54cc9d729df5baa9118393",
+  "log": "/private/tmp/vestige-scroll-stacking-validation-rerun.log",
+  "logSha256": "537f5e94102164969ecf14712f80b4431b452ced2de9c8dd31e8ccc4c6ea56e2",
+  "installedPackUpdated": false,
+  "presentation": "No appearance changes or client capture in this stack-limit pass."
+}

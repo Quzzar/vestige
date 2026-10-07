@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-07",
+  "scope": "Isolated native untipped wand publication, scroll stacking, five thread components, and locked eight-tip design",
+  "base_commit": "87f7d1b50ade929f23719911218ec1b918c420cd",
+  "unit_tests": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "world_tests": {
+    "passed": 237,
+    "required_failed": 0,
+    "run": "complete standalone suite",
+    "new_wand": 13,
+    "new_threads": 12,
+    "new_scroll_stacking": 6
+  },
+  "build": "passed",
+  "kithkyn_platform_version_check": "passed",
+  "kithkyn_coload_tested": false,
+  "platform": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21
+  },
+  "locked_tips": [
+    "amethyst/resonating",
+    "diamond/refracting",
+    "emerald/reclaiming",
+    "ender_pearl/elusive",
+    "copper/conductive",
+    "iron/repelling",
+    "ghast_tear/renewing",
+    "netherite/steadfast"
+  ],
+  "deferred_specialist_tips": [
+    "quartz",
+    "redstone",
+    "nautilus_shell",
+    "magma_cream"
+  ],
+  "tip_effects_implemented": 0,
+  "native_client_appearance_verified": false,
+  "installed_in_testing_pack": false,
+  "limitations": [
+    "Selected tip effects, their coverage audit and final balance remain outstanding.",
+    "Wand and thread artwork uses vanilla ingredient placeholders.",
+    "Dynamic wand displays still need one reusable shared JEI/EMI adapter.",
+    "The separate thread-viewer and Whispering Shell shared-checkout changes are not part of this branch.",
+    "Cooldowns reset on runtime reload/restart."
+  ],
+  "artifact": {
+    "path": "build/libs/vestige-0.1.0.jar",
+    "bytes": 6903281,
+    "sha256": "fafeef4ff7118fc09debd9c3a6d9aa796c0eebbdcffdbe43c86c74f2b8a4c296"
+  },
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadRecipe.java": "c700080db6af6ea46df597a7eb91ee6d1889e9dceb5730b845c641de71168950",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadWorldTest.java": "4e95aab375a6aff3cd5100ec291b034ea0e9217325eb39058a8f04cbb1bb4f5a",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "98cf4e7efa5a283e09e1548859fa227f74c9a6a11af532c9d53664737c5eb0b7",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollCasting.java": "68839ec1f37a23af6078aded8f0502669c4528650f1b0f3ca6e107a90a2e051e",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "4f728370ca2bfbb6e2afdef240b6cdd5402a41876db187bf7b7f7145dfa7b04e",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollRecastPayload.java": "4e33c0296106cec2f0169932ae066b85f96903faea70c3d3d2c64d3ff33afba2",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollStackingWorldTest.java": "f2edbcf1844e25db30610a52671680d519a3615baadf028e7c52e0b728bb9546",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellWandItem.java": "0a6fb1d8e99b84eeb09d5f344bfcab00ec8fcf9c262d6d7725b0b5542613d396",
+    "src/main/java/com/quzzar/vestige/apparatus/Spellshaping.java": "c7c6c55db56c269b9231fccfc3a005e88c207d5fd7639958c371bc7c10e12189",
+    "src/main/java/com/quzzar/vestige/apparatus/WandCasting.java": "69d5af359dd0e2811dae67c71c9b8f473ab113677330856efb0514361ec90a9c",
+    "src/main/java/com/quzzar/vestige/apparatus/WandComponents.java": "4dba80ef1650c4f118963c79cd6981e464103ce3c66c11d4e6fa5775bd7b8ecf",
+    "src/main/java/com/quzzar/vestige/apparatus/WandData.java": "85b9e037b8318cdf0b7e5e119e5565de7d322832e581f48e15e807462e750fea",
+    "src/main/java/com/quzzar/vestige/apparatus/WandRecipe.java": "c6d99cde0e57e10611f361e9cdaff54746b2e744db6bf75ff7aa6669f0cbc169",
+    "src/main/java/com/quzzar/vestige/apparatus/WandWorldTest.java": "fdb1f90d53f02c3a2347d5e40038c506a540fc97323e254b495951010ef0c90e",
+    "src/main/java/com/quzzar/vestige/apparatus/client/ScrollTooltip.java": "37ed98b2ff3feea063bd679342dc608cad053cf51be2f9d781fbaf9b169e6c32",
+    "src/main/java/com/quzzar/vestige/apparatus/client/WandClient.java": "33c1eb0b3c46c02278311c56b5f0fc6bc90d94df48b6afe40961e09c9d4458c2",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastReservation.java": "2db3fc38e729a9283b62d59bb7805ba9740122c04f9a28bd9ef6f3613972caf7",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java": "6843e679132ce7512ccaac4a10ba831b9f0dc6651f0cd3a4bc13d78f1bb9ae6b",
+    "src/main/java/com/quzzar/vestige/magic/runtime/SpellRuntime.java": "f6381131ea0aa3da99d4afd562e1454cd74b2d6cdd5e2f123ad8fc7a84528a4d",
+    "src/main/java/com/quzzar/vestige/magic/world/NativeMagic.java": "51fb27a5ff5227bd57afcb253989561cfa9f43620af9c2364022bc5acfa40ed4",
+    "src/test/java/com/quzzar/vestige/apparatus/MagicalThreadRecipeTest.java": "3b0afc01e78b1d91d5b7efb51d05d21bdd833eb1ffa7f70db15f6f31dd573c12",
+    "src/test/java/com/quzzar/vestige/apparatus/WandComponentsTest.java": "26c7271ad812d414540ffdf04636d4adf33222c3e54cc13a7d5fc1058fa041d4",
+    "src/test/java/com/quzzar/vestige/apparatus/WandRecipeTest.java": "e2bf8afdbd27610e7ac640f8a8f13426d423ce542e72c34d252f4886c8f578f5",
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastReservationTest.java": "dc75d61706fff951b3b513d9d68516d9fe00a3e8ca22da9f737c7eaf21ca8a6d"
+  }
+}

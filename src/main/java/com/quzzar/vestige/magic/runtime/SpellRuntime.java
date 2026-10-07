@@ -21,6 +21,8 @@ public final class SpellRuntime implements AutoCloseable {
     private final Map<UUID, ActiveBinding> bindings = new LinkedHashMap<>();
     private record Recovery(UUID actor, ResourceLocation spell) { }
     private final Map<Recovery, Long> cooldowns = new HashMap<>();
+    private record SourceRecovery(UUID actor,ResourceLocation spell,ResourceLocation group) { }
+    private final Map<SourceRecovery,Long> sourceCooldowns = new HashMap<>();
     private final PriorityQueue<Task> tasks = new PriorityQueue<>(Comparator.comparingLong((Task t) -> t.due).thenComparingLong(t -> t.order));
     private long tick;
     private long order;
@@ -44,8 +46,16 @@ public final class SpellRuntime implements AutoCloseable {
     }
     public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode, boolean freeResources, CastShaping shaping) {
+        return cast(spell,event,modifiers,discovered,mode,freeResources,shaping,CastReservation.NONE);
+    }
+    /** A reserved source validates throughout preparation and commits once with initial payment. */
+    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+                     boolean discovered, Optional<ResourceLocation> mode, boolean freeResources, CastShaping shaping,
+                     CastReservation reservation) {
         Objects.requireNonNull(shaping);
+        Objects.requireNonNull(reservation);
         ensureOpen();
+        if (!reservation.valid()) return rejected(spell,event,Status.CONDITIONS_FAILED);
         if (!world.canActivate(event.actor(),spell)) return rejected(spell,event,Status.CONDITIONS_FAILED);
         if (mode.isPresent() && !spell.modes().containsKey(mode.get())) return rejected(spell, event, Status.CONDITIONS_FAILED);
         // One charge/channel at a time. Dormant recast sessions do not block other spells.
@@ -74,10 +84,14 @@ public final class SpellRuntime implements AutoCloseable {
         if (!freeResources && cooldowns.getOrDefault(new Recovery(event.actor(), spell.id()), 0L) > tick) {
             return rejected(spell, event, Status.COOLDOWN);
         }
+        if (!freeResources && reservation.recovery().filter(r -> sourceCooldowns.getOrDefault(
+                new SourceRecovery(event.actor(),spell.id(),r.group()),0L)>tick).isPresent())
+            return rejected(spell,event,Status.COOLDOWN);
         Cast cast = new Cast(spell, event.actor(), spell.traits().resolve(modifiers), discovered);
         cast.mode = mode;
         cast.freeResources = freeResources;
         cast.shaping = shaping;
+        cast.reservation = reservation;
         cast.costs = shaping.costs(mode.map(spell.modes()::get).map(SpellMode::costs).orElse(spell.costs()));
         List<SpellEffect> effects = mode.map(spell.modes()::get).map(SpellMode::effects).orElse(spell.effects());
         Context triggerContext = new Context(cast, event, new SpellSubject.Entity(event.actor()), event.cause(), null);
@@ -122,7 +136,9 @@ public final class SpellRuntime implements AutoCloseable {
         ensureOpen();
         tick++;
         cooldowns.values().removeIf(deadline -> deadline <= tick);
+        sourceCooldowns.values().removeIf(deadline -> deadline <= tick);
         for (Cast cast : List.copyOf(casts.values())) {
+            if (!cast.paymentCommitted && !cast.reservation.valid()) { end(cast, Status.INTERRUPTED); continue; }
             if (!world.active(cast.context)) { end(cast, Status.INTERRUPTED); continue; }
             if (cast.status == Status.AWAITING_RECAST && tick >= cast.recastDeadline) end(cast, Status.TIMED_OUT);
         }
@@ -206,7 +222,7 @@ public final class SpellRuntime implements AutoCloseable {
         if (closed) return;
         for (Cast cast : List.copyOf(casts.values())) end(cast, Status.INTERRUPTED);
         for (ActiveManifestation manifestation : List.copyOf(manifestations.values())) remove(manifestation, EndReason.SERVER_STOP);
-        tasks.clear(); bindings.clear(); cooldowns.clear(); closed = true;
+        tasks.clear(); bindings.clear(); cooldowns.clear(); sourceCooldowns.clear(); closed = true;
     }
 
     private void fire(ActiveBinding binding, SpellEvent event) {
@@ -248,9 +264,13 @@ public final class SpellRuntime implements AutoCloseable {
         try {
             if (task.needsPayment) {
                 task.needsPayment = false;
+                if (!task.cast.reservation.valid()) { end(task.cast, Status.INTERRUPTED); finish(task); return; }
                 if (!task.cast.freeResources && !world.pay(task.cast.costs, first)) { end(task.cast, Status.COST_FAILED); finish(task); return; }
+                task.cast.reservation.commit();
                 task.cast.paymentCommitted = true;
                 if (!task.cast.freeResources) {
+                    task.cast.reservation.recovery().ifPresent(r -> sourceCooldowns.put(
+                            new SourceRecovery(task.cast.actor,task.cast.spell.id(),r.group()),Math.addExact(tick,r.ticks())));
                     long recovery = task.cast.costs.stream().filter(SpellCost.Cooldown.class::isInstance)
                             .map(SpellCost.Cooldown.class::cast).mapToLong(SpellCost.Cooldown::ticks).sum();
                     if (recovery > 0) cooldowns.put(new Recovery(task.cast.actor, task.cast.spell.id()), Math.addExact(tick, recovery));
@@ -431,6 +451,7 @@ public final class SpellRuntime implements AutoCloseable {
         private final boolean discovered;
         private List<SpellCost> costs;
         private CastShaping shaping = CastShaping.NONE;
+        private CastReservation reservation = CastReservation.NONE;
         private Optional<ResourceLocation> mode = Optional.empty();
         private final Map<ResourceLocation, ConditionValue> state = new LinkedHashMap<>();
         private final Map<ResourceLocation, SpellSubject> anchors = new LinkedHashMap<>();

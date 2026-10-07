@@ -1,6 +1,6 @@
 # Native spell runtime
 
-Status: standalone 214-spell catalog with native scroll casting, persistent identification, discovery and leyline crafting, October 4, 2026. The inherited gameplay layer remains removed. Native wands and equipment progression remain deferred.
+Status: standalone 214-spell catalog with native scroll casting, persistent identification, discovery and leyline crafting, October 4, 2026. The inherited gameplay layer remains removed. Native untipped wand binding/casting and base/thread profiles are implemented as the October 6 foundation; the selected eight tips, final artwork/viewers and broader equipment progression remain outstanding. See [wand crafting](wand-crafting.md).
 
 The [glossary](../../CONTEXT.md) and [trait catalog](trait-catalog.md) define the vocabulary. The [Iron ledger](iron-spell-conversions.md) describes 110 native adaptations, and the [Pathfinder ledger](pathfinder-spell-conversions.md) adds 100 independently authored PF2 adaptations. Historical prototypes remain design evidence.
 
@@ -48,7 +48,7 @@ Incoming damage and healing adapters emit calculating events before commit. Reac
 
 All 214 spells have explicit ingredient recipes. A recipe's four/eight-slot capacity chooses active rings; a quarter-turn preserves relative ordering. The accepted leyline matrices resolve the output's descriptive traits into Amplify, Range, Area and Casting Cost. Crafted scrolls store these modifiers rather than scanning the structure when cast. Effects read only authored scaling axes, while one cost factor independently applies to existing mana, hunger, health, material/durability, charge and recovery components. Recasts, bindings and manifestation callbacks retain the original shaping and pay once. Final quantity expressions and composed cost components round once; health costs round in whole hearts, damage/healing in HP, and ratios/velocities retain precision. Ordinary unshaped casts keep their prior behavior. See [playtesting](../leyline-playtesting.md) for exact bounds and examples.
 
-Persistent identification, atomic ingredient crafting, references and failure feedback are implemented in the native apparatus. Material sockets save and render but have no authored numeric bonuses. The forfeit policy still takes the maximum of unknown and volatile risk; a stronger combination policy remains a separate decision. Native gear, wands and passive/free-item handling remain deferred.
+Persistent identification, atomic ingredient crafting, references and failure feedback are implemented in the native apparatus. Material sockets save and render but have no authored numeric bonuses. The forfeit policy still takes the maximum of unknown and volatile risk; a stronger combination policy remains a separate decision. Native untipped wands use the same paid runtime and do not identify spells. Broader gear progression and passive/free-item handling remain deferred.
 
 ## Authoring
 
@@ -113,7 +113,7 @@ The pinned catalog has 110 native Iron adaptations across nine source schools. P
 
 The operator `cast` command bypasses resource costs, cooldowns and discovery, retains timing and volatility, and can exercise recasts; `cast_balanced` exercises paid casting. Interrupt affects unfinished casts; dispel removes the caller's manifestations. These commands are the current playtest entrypoint.
 
-All 214 spells have authored native costs/outcomes, paid cooldown enforcement and composed animation phases. The 100 selected Pathfinder sources are implemented as bounded native adaptations. Detailed creature/weapon artwork, character gestures, exhaustive encounter/multiplayer visual review, native wand controls, discovery, progression, refund policy, serialization of active effects and release playthroughs remain further work. Optional foreign Iron/Create/Kithkyn adapters are separate work; Kithkyn development co-loading alone does not implement interoperability.
+All 214 spells have authored native costs/outcomes, paid cooldown enforcement and composed animation phases. The 100 selected Pathfinder sources are implemented as bounded native adaptations. Detailed creature/weapon artwork, character gestures, exhaustive encounter/multiplayer visual review, tipped wand contributions, broader progression, refund policy, serialization of active effects and release playthroughs remain further work. Optional foreign Iron/Create/Kithkyn adapters are separate work; Kithkyn development co-loading alone does not implement interoperability.
 
 ## Shared native presentation
 

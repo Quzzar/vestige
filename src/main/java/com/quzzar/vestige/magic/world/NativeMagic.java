@@ -47,6 +47,7 @@ public final class NativeMagic {
     }
     public static void reload() {
         com.quzzar.vestige.apparatus.ScrollCasting.cancelAll();
+        com.quzzar.vestige.apparatus.WandCasting.cancelAll();
         SERVERS.values().forEach(session -> { session.runtime.close(); session.world.close(); });
         SERVERS.clear();
     }

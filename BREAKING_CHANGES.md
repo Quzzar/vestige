@@ -1,5 +1,21 @@
 # Breaking changes
 
+## October 6, 2026: native untipped wand foundation
+
+Registers `vestige:wand`, with version-1 base/thread IDs and one validated source scroll payload. Matching client/server builds are required. The relative five-offering binding recipe uses the eight-node apparatus; the reserved optional tip seat is currently empty. Existing scroll and apparatus identities are unchanged. The item checks its trusted component capacity and persists ordinary used durability; no legacy wand migration is provided.
+
+`SpellRuntime.cast` gains an optional `CastReservation` overload, with default no-op behavior for existing callers. Reserved sources validate during preparation, commit once at initial payment, and may declare a separate per-actor/per-spell recovery group. Wand recovery is sixty seconds across copies, without extending scroll recovery. `CastShaping.CostAdjustment` gains literal post-source preparation and minimum-mana fields; its existing four-argument constructor supplies zero defaults. Scroll casts retain their prior payment behavior.
+
+Native wands never identify spells. Empty-hand continuation input also accepts an already-paid wand continuation; its payload format is unchanged. The foundation implements base/thread profiles, while the locked eight-tip effects, final wand artwork and wand recipe-viewer displays remain outstanding.
+
+## October 6, 2026: native magical thread components
+
+Registers `vestige:ensorcelled_thread`, `vestige:callous_thread`, `vestige:smoldering_thread`, `vestige:laced_thread` and `vestige:consecrated_thread`. One shared shapeless inner-layer ritual consumes String, Amethyst Shard and Honeycomb, with the String's own retained socket selecting the output. Ordinary spell shaping and saved scroll/device identities are unchanged. Matching client/server builds are required for the new items. The initial components use vanilla's default 64-item stack limit and temporary String models; final artwork, stack tuning and equipment bonuses remain separate decisions. No legacy migration or wand runtime is introduced.
+
+## October 6, 2026: sixteen-scroll stacks
+
+Native spell scrolls now stack to sixteen when their item components agree. Spell identity, existing augments/degrees, leyline modifiers and Casting Cost values retain their existing data format and equality; distinct variants stay separate. Casting and dismantling consume one scroll per operation, and Plinths still hold one offering each. Matching client/server builds are required for the new stack limit. Existing scroll item data needs no migration. Future wand binding and magical string crafting remain design work.
+
 ## October 6, 2026: fixed-height Standing Stone pages
 
 Standing Stone pages now carry six destinations rather than eight, matching fixed 20-pixel client buttons. Payload registration version 4 requires matching client/server builds to share the new capacity; its existing field format, endpoint/key data and saved worlds are unchanged. Counted full/half health/food previews and the relocated mana HUD are client presentation changes. No migration or alternate payment route is added.

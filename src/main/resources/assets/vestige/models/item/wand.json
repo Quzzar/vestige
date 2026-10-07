@@ -1,0 +1,41 @@
+{
+  "parent": "vestige:item/wand_stick",
+  "overrides": [
+    {
+      "predicate": {
+        "vestige:wand_base": 1
+      },
+      "model": "vestige:item/wand_bamboo"
+    },
+    {
+      "predicate": {
+        "vestige:wand_base": 2
+      },
+      "model": "vestige:item/wand_bone"
+    },
+    {
+      "predicate": {
+        "vestige:wand_base": 3
+      },
+      "model": "vestige:item/wand_blaze_rod"
+    },
+    {
+      "predicate": {
+        "vestige:wand_base": 4
+      },
+      "model": "vestige:item/wand_breeze_rod"
+    },
+    {
+      "predicate": {
+        "vestige:wand_base": 5
+      },
+      "model": "vestige:item/wand_end_rod"
+    },
+    {
+      "predicate": {
+        "vestige:wand_base": 6
+      },
+      "model": "vestige:item/wand_lightning_rod"
+    }
+  ]
+}

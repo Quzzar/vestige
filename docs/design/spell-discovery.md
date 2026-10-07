@@ -150,6 +150,8 @@ Native scroll casting reads persistent per-player identification through `SpellK
 
 ## Related equipment ideas retained for future design
 
+The owner's October 6 [wand construction and magical string design](wand-crafting.md) now has implemented untipped binding, seven base and five thread profiles, deterministic durability and an additional sixty-second wand cooldown. Durability replaces the briefly considered random break chance and is adjusted by components. Scrolls stack to sixteen by exact stored item components; casting and dismantling still consume one scroll per operation. The five thread components and shared imbuement-selected recipe are implemented. Eight locked additional tip effects, dynamically derived wand displays, final artwork and testing-pack installation remain outstanding. Wand casting never identifies spells.
+
 These are the owner's earlier proposals, not completed items or finalized tuning:
 
 - **Fire mage hat:** multiply the cast's fire rating by 1.5. Effects must actually read fire to respond; current Fireball's damage reads amplify, so its current damage formula would not respond to that hat without a separate recipe decision.

@@ -57,13 +57,29 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
                 case SpellCost.Material m -> new SpellCost.Material(m.item(),m.operation(),(int)value);
             });
         });
+        if (adjustment.additionalPreparationTicks()>0) {
+            int time=result.stream().filter(SpellCost.Time.class::isInstance).map(SpellCost.Time.class::cast).mapToInt(SpellCost.Time::ticks).sum();
+            result.removeIf(SpellCost.Time.class::isInstance);
+            result.add(new SpellCost.Time(Math.addExact(time,adjustment.additionalPreparationTicks())));
+        }
+        if (adjustment.minimumMana()>0 && result.stream().filter(SpellCost.Mana.class::isInstance).map(SpellCost.Mana.class::cast)
+                .mapToDouble(SpellCost.Mana::amount).sum()<adjustment.minimumMana()) {
+            result.removeIf(SpellCost.Mana.class::isInstance);
+            result.add(new SpellCost.Mana(adjustment.minimumMana()));
+        }
         return List.copyOf(result);
     }
-    public record CostAdjustment(Map<String,Double> factors,List<SpellCost> additional,double healthFraction,double hungerFraction) {
+    public record CostAdjustment(Map<String,Double> factors,List<SpellCost> additional,double healthFraction,double hungerFraction,
+                                 int additionalPreparationTicks,int minimumMana) {
+        public CostAdjustment(Map<String,Double> factors,List<SpellCost> additional,double healthFraction,double hungerFraction) {
+            this(factors,additional,healthFraction,hungerFraction,0,0);
+        }
         public static final CostAdjustment NONE=new CostAdjustment(Map.of(),List.of(),0,0);
         public CostAdjustment {
             factors=Map.copyOf(factors); additional=List.copyOf(additional);
             if (additional.size()>32 || !Double.isFinite(healthFraction) || !Double.isFinite(hungerFraction) || healthFraction<0 || hungerFraction<0 || healthFraction+hungerFraction>1) throw new IllegalArgumentException("Invalid cost exchange");
+            if (additionalPreparationTicks<0 || additionalPreparationTicks>240000 || minimumMana<0 || minimumMana>100)
+                throw new IllegalArgumentException("Invalid equipment payment");
             factors.forEach((kind,factor)->{if (!Set.of("mana","health","hunger","time","cooldown","material").contains(kind) || !Double.isFinite(factor) || factor<.1 || factor>8)throw new IllegalArgumentException("Invalid typed cost factor");});
         }
     }
