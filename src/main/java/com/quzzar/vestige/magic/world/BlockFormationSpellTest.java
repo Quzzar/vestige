@@ -71,13 +71,25 @@ public final class BlockFormationSpellTest {
     @GameTest(template="empty_3x3x3",batch="formation_orphans",timeoutTicks=60)
     public static void orphanLogsLeavesAndWaterClearWithoutLootOrSpread(GameTestHelper h) {
         var caster=fixture(h);
+        // Other GameTests can leave ordinary loot inside this deliberately wide search area.
+        var unrelated=new ItemEntity(h.getLevel(),base(h).getX()-2+.5,base(h).getY()+.5,base(h).getZ()+.5,
+                new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.STONE_BUTTON));
+        unrelated.setNoGravity(true);unrelated.setDeltaMovement(net.minecraft.world.phys.Vec3.ZERO);
+        h.getLevel().addFreshEntity(unrelated);
+        var initialItems=h.getLevel().getEntitiesOfClass(ItemEntity.class,area(h)).stream().collect(java.util.stream.Collectors.toMap(Entity::getUUID,e->e.getItem().copy()));
         h.getLevel().setBlock(base(h),SpellBlocks.TEMPORARY_LOG.get().defaultBlockState(),3);
         h.getLevel().setBlock(base(h).above(),SpellBlocks.TEMPORARY_LEAVES.get().defaultBlockState(),3);
         h.getLevel().setBlock(base(h).east(),SpellBlocks.TEMPORARY_WATER.get().defaultBlockState(),3);
         h.runAfterDelay(25,()->{
             check(h,h.getLevel().getBlockState(base(h)).isAir() && h.getLevel().getBlockState(base(h).above()).isAir() && h.getLevel().getBlockState(base(h).east()).isAir(),"Orphan cells remained");
             check(h,h.getLevel().getBlockState(base(h).east().south()).isAir(),"Orphan water spread");
-            check(h,h.getLevel().getEntitiesOfClass(ItemEntity.class,area(h)).isEmpty(),"Orphans dropped loot");finish(h,caster);
+            check(h,h.getLevel().getEntitiesOfClass(ItemEntity.class,area(h)).stream().allMatch(item->{
+                var initial=initialItems.get(item.getUUID());
+                return initial!=null && net.minecraft.world.item.ItemStack.isSameItemSameComponents(initial,item.getItem())
+                        && item.getItem().getCount()<=initial.getCount();
+            }),"Orphans created new loot");
+            check(h,!unrelated.isRemoved(),"Cleanup test removed unrelated existing loot");
+            unrelated.discard();finish(h,caster);
         });
     }
     @GameTest(template="empty_3x3x3",batch="formation_unload",timeoutTicks=100)

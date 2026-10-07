@@ -1,5 +1,11 @@
 # Development status
 
+## Pedestal release follow-up · existing cleanup-test isolation
+
+The published compatibility checks passed, but the full GitHub suite failed twice in the existing orphan-block no-loot test. A local full-suite diagnostic showed the identical Stone Button UUID before orphan placement and at failure: the assertion counted existing loot as a new drop. Added a deterministic unrelated-item regression and changed only the test's accounting to compare item identities, components and counts with their initial snapshots. New item entities or increased stacks still fail; the existing item must survive. Temporary diagnostics were removed. No gameplay, recipe or installed-pack change accompanies this follow-up.
+
+[Red/green reproduction and exact results](verification/pedestal-compatibility-2026-10-06/ci-isolation.md) retain the proof. The minimal old assertion fails and the fixed regression passes; all **107 unit tests** pass. The broad local follow-up passes **205 of 206** tests, with an existing water-immersion assertion failing; the earlier diagnostic run also hit an existing column-cap assertion. Neither broad run is presented as wholly passing. The published CI result is checked separately.
+
 ## October 6 · optional pedestal conversions shipped to Kithkyn Testing
 
 The owner authorized shipment. The clean release starts from current main and includes only this chat's conditional conversion recipes, recipe-book unlocks, world-test class and scoped documentation. Neither Iron's Spells 'n Spellbooks nor Supplementaries is a dependency. Each matching source pedestal yields one Stone Bricks Plinth; all native construction recipes retain their costs and outputs.

@@ -1,0 +1,23 @@
+full_diagnostic
+[23:51:19] [Server thread/ERROR] [minecraft/LogTestReporter]: onlycolumncapsparticipateandcoveringanactivecapcancelssafely failed at 2125784, -60, -14133393! Covering active surface consumed ingredients or retained lock
+[23:51:31] [Server thread/ERROR] [minecraft/LogTestReporter]: orphanlogsleavesandwaterclearwithoutlootorspread failed at 2125802, -60, -14133109! [DEBUG-pedestal-ci] Orphans dropped loot: initial=[0388984f-be66-4c3d-a14c-de1a56ad47e8 1 minecraft:stone_button @ (2125795.3278880487, -59.99509900376721, -1.4133110125E7)], current=[0388984f-be66-4c3d-a14c-de1a56ad47e8 1 minecraft:stone_button @ (2125795.3278880487, -59.99949999997625, -1.4133110125E7)]
+[23:51:35] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 34.64 s ======================
+[23:51:35] [Server thread/INFO] [minecraft/GameTestServer]: 2 required tests failed :(
+BUILD FAILED in 1m 13s
+
+minimal_red
+[23:54:11] [Server thread/ERROR] [minecraft/LogTestReporter]: orphanlogsleavesandwaterclearwithoutlootorspread failed at 314696, -60, -2249378! [DEBUG-pedestal-ci] Orphans dropped loot: initial=[3a4b51bd-c6c5-4cea-a824-27e61b5660df 1 minecraft:stone_button @ (314695.5, -58.5, -2249372.5)], current=[3a4b51bd-c6c5-4cea-a824-27e61b5660df 1 minecraft:stone_button @ (314695.5, -58.5, -2249372.5)]
+[23:54:11] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 1.648 s ======================
+[23:54:11] [Server thread/INFO] [minecraft/GameTestServer]: 1 required tests failed :(
+BUILD FAILED in 58s
+
+minimal_green
+[23:55:57] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 1.226 s ======================
+[23:55:57] [Server thread/INFO] [minecraft/GameTestServer]: All 1 required tests passed :)
+BUILD SUCCESSFUL in 37s
+
+full_after_fix
+[23:58:17] [Server thread/ERROR] [minecraft/LogTestReporter]: waterimmerseswithoutspreadinganddrainsonlyitsownedcells failed at 10701736, -60, 5879132! Real water did not immerse and extinguish a creature
+[23:58:18] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 19.12 s ======================
+[23:58:18] [Server thread/INFO] [minecraft/GameTestServer]: 1 required tests failed :(
+BUILD FAILED in 57s

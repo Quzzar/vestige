@@ -1,0 +1,69 @@
+{
+  "releaseCommit": "b2cde2880958cb6695807ceb566cd415b5235bdc",
+  "originalCI": "https://github.com/Quzzar/vestige/actions/runs/37567858811",
+  "failedAttempts": [
+    1,
+    2
+  ],
+  "originalCISymptom": "Orphans dropped loot",
+  "confirmedCause": "The identical Stone Button entity UUID was present before orphan block placement and at the failure. The assertion counted pre-existing loot as a new cleanup drop. Its original source was not established.",
+  "minimalRegression": "Seed an unrelated Stone Button before placing orphan log/leaves/water; the unchanged old assertion fails and the item snapshot assertion passes.",
+  "fix": "Compare entity identity, item/components and non-increasing counts with their initial snapshots. Assert the unrelated item survives, then remove the regression fixture. New entities and increases in existing stacks remain failures.",
+  "unitResults": {
+    "tests": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "logs": {
+    "full_diagnostic": {
+      "path": "/private/tmp/vestige-pedestal-full-debug.log",
+      "sha256": "30d4e30d09a38acbde61c6316812263d31001ba6fa5938095641d9d0035098fb",
+      "results": [
+        "[23:51:19] [Server thread/ERROR] [minecraft/LogTestReporter]: onlycolumncapsparticipateandcoveringanactivecapcancelssafely failed at 2125784, -60, -14133393! Covering active surface consumed ingredients or retained lock",
+        "[23:51:31] [Server thread/ERROR] [minecraft/LogTestReporter]: orphanlogsleavesandwaterclearwithoutlootorspread failed at 2125802, -60, -14133109! [DEBUG-pedestal-ci] Orphans dropped loot: initial=[0388984f-be66-4c3d-a14c-de1a56ad47e8 1 minecraft:stone_button @ (2125795.3278880487, -59.99509900376721, -1.4133110125E7)], current=[0388984f-be66-4c3d-a14c-de1a56ad47e8 1 minecraft:stone_button @ (2125795.3278880487, -59.99949999997625, -1.4133110125E7)]",
+        "[23:51:35] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 34.64 s ======================",
+        "[23:51:35] [Server thread/INFO] [minecraft/GameTestServer]: 2 required tests failed :(",
+        "BUILD FAILED in 1m 13s"
+      ]
+    },
+    "minimal_red": {
+      "path": "/private/tmp/vestige-pedestal-orphan-regression-red.log",
+      "sha256": "c3a43b18a6999addf52dc70ab05cdda843b9165fbc630ffba40fcc4885cfa0fb",
+      "results": [
+        "[23:54:11] [Server thread/ERROR] [minecraft/LogTestReporter]: orphanlogsleavesandwaterclearwithoutlootorspread failed at 314696, -60, -2249378! [DEBUG-pedestal-ci] Orphans dropped loot: initial=[3a4b51bd-c6c5-4cea-a824-27e61b5660df 1 minecraft:stone_button @ (314695.5, -58.5, -2249372.5)], current=[3a4b51bd-c6c5-4cea-a824-27e61b5660df 1 minecraft:stone_button @ (314695.5, -58.5, -2249372.5)]",
+        "[23:54:11] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 1.648 s ======================",
+        "[23:54:11] [Server thread/INFO] [minecraft/GameTestServer]: 1 required tests failed :(",
+        "BUILD FAILED in 58s"
+      ]
+    },
+    "minimal_green": {
+      "path": "/private/tmp/vestige-pedestal-orphan-regression-green.log",
+      "sha256": "d6e8fa26222f8d225251031723a3fc43de74f8151777ffd6317cf90a9a259003",
+      "results": [
+        "[23:55:57] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 1.226 s ======================",
+        "[23:55:57] [Server thread/INFO] [minecraft/GameTestServer]: All 1 required tests passed :)",
+        "BUILD SUCCESSFUL in 37s"
+      ]
+    },
+    "full_after_fix": {
+      "path": "/private/tmp/vestige-pedestal-full-verified.log",
+      "sha256": "d8a0deeb4a71f31e43b670d6670d1b32c756578a63dc6f2315b71e93811bbe67",
+      "results": [
+        "[23:58:17] [Server thread/ERROR] [minecraft/LogTestReporter]: waterimmerseswithoutspreadinganddrainsonlyitsownedcells failed at 10701736, -60, 5879132! Real water did not immerse and extinguish a creature",
+        "[23:58:18] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 19.12 s ======================",
+        "[23:58:18] [Server thread/INFO] [minecraft/GameTestServer]: 1 required tests failed :(",
+        "BUILD FAILED in 57s"
+      ]
+    }
+  },
+  "fixedSourceSha256": "53c63205cf6a44d9cbeee071c227a38b9994e2d406298be8228fb4568c9a965f",
+  "productionGameplayOrRecipeChanges": false,
+  "installedCandidateUnchanged": true,
+  "installedSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+  "limits": [
+    "First full local diagnostic run also failed the existing column-cap test.",
+    "The full local run after this fix passed 205 of 206 tests; the existing water-immersion test failed. Neither failure changed the confirmed item-accounting fix.",
+    "Final published CI result must be checked separately."
+  ]
+}
