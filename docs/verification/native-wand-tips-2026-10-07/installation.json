@@ -1,0 +1,23 @@
+{
+  "installedAt": "2026-10-07T12:29:32.871507-04:00",
+  "profile": "Prism / Kithkyn Testing",
+  "sourceArtifact": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+  "installedArtifact": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "ab9ef827eb60c7c0e10a92681d01e771f73a008a4298ddeabc1ed437bcc5518f",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/vestige-backups/vestige-0.1.0-before-wand-tips-20261007-122932.jar",
+  "previousSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+  "models": 63,
+  "sprites16x16": 20,
+  "nativeSpellsMatched": 214,
+  "verifiedClasses": {
+    "com/quzzar/vestige/apparatus/WandTips.class": "079d53bd7c7df35170273228162011acb2628d40c0ef77d9407876ff2884a6ef",
+    "com/quzzar/vestige/apparatus/WandTipEffects.class": "99bdf78260cc2cf9773aad7aec96c5d93cd25bb44f60798e23ebf20782ddc596",
+    "com/quzzar/vestige/apparatus/StaffCasting.class": "74debe2b991c9901c9d586f45829a3ba14c3261d51e78439427c7cc01be72c20",
+    "com/quzzar/vestige/apparatus/WhisperingShellItem.class": "2d2fa7ed2b8815c7d05820c110a870d3bacbdc7f44bb87f953b8fa114cfc4029",
+    "com/quzzar/vestige/storage/CraneBagItem.class": "9408e02d2f71024178c07939f30a51b6aedce0e27539260d95de712c720654ff",
+    "com/quzzar/vestige/magic/world/client/PreparationHud.class": "3f89a9257a583d41f804a02c1e20ad1931fb5e7a2f8c32a0d29352114518ffe3",
+    "com/quzzar/vestige/apparatus/recipeviewer/emi/EmiLiveRefresh.class": "73e79e45996f99517a37b0b4112e8e99a05cd7bbf791912871458c1bf508853a",
+    "com/quzzar/vestige/apparatus/recipeviewer/jei/WandJeiCategory.class": "ab76f2c6d5297870f69a09ed5ae15c79383fa31eae668242452670e4d883f8fd"
+  },
+  "restartRequired": true
+}

@@ -21,6 +21,7 @@ public final class RitualDiagram {
     public static int x(RitualDisplays.Entry recipe,int seat){return point(recipe,seat)[0]-8;}
     public static int y(RitualDisplays.Entry recipe,int seat){return point(recipe,seat)[1]-8;}
     public static void draw(GuiGraphics g,RitualDisplays.Entry recipe) {
+        NativeThreadRecipeCapture.diagram(g,recipe);
         RenderSystem.enableBlend();
         illustration(g,PAPER,CENTER_X,CENTER_Y,150);
         if(recipe.capacity()==4)circle(g,47,0);else {circle(g,34,0);circle(g,Math.hypot(43,43),Math.PI/4);}
@@ -33,6 +34,9 @@ public final class RitualDiagram {
             stroke(g,tx,ty,tx+ux*2.7+uy*1.6,ty+uy*2.7-ux*1.6,INK);
         }
         for(int seat:recipe.seats()){var p=point(recipe,seat);illustration(g,PLINTH,p[0],p[1],34);}
+        for(var imbuement:recipe.imbuements()) {
+            var p=point(recipe,imbuement.seat());ImbuementFrameRenderer.draw(g,imbuement.material(),p[0],p[1]);
+        }
         illustration(g,SPELLSTONE,CENTER_X,CENTER_Y,33);
         if(recipe.concealed()) {
             var font=Minecraft.getInstance().font;

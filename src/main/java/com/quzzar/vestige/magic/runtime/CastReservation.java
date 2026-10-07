@@ -16,6 +16,7 @@ public interface CastReservation {
         public boolean valid() { return true; }
         public void commit() { }
     };
+    default CastObserver observer() { return CastObserver.NONE; }
     boolean valid();
     void commit();
     /** An additional per-actor/per-spell source-family restriction; ordinary spell recovery remains separate. */

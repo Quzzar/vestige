@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "minecraft:block/end_rod"
+    "layer0": "vestige:item/wands/base_end_rod"
   }
 }

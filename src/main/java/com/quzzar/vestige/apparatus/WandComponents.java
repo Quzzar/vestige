@@ -34,6 +34,9 @@ public final class WandComponents {
         return base.durability()+(thread==MagicalThreadRecipe.Type.CALLOUS ? 8 : 0);
     }
     public static Compiled compile(SpellDefinition definition,ScrollItems.Scroll source,Base base,MagicalThreadRecipe.Type thread) {
+        return compile(definition,source,base,thread,Optional.empty());
+    }
+    public static Compiled compile(SpellDefinition definition,ScrollItems.Scroll source,Base base,MagicalThreadRecipe.Type thread,Optional<WandTips.Tip> tip) {
         if (!definition.id().equals(source.spell())) throw new IllegalArgumentException("Wrong bound spell");
         var compiled=Spellshaping.compile(definition,source.augments(),source.modifiers(),source.shaping());
         // Resolve before any equipment seed: a new elemental rider cannot qualify its own base affinity.
@@ -90,7 +93,8 @@ public final class WandComponents {
             throw new IllegalArgumentException("Preparation reduction rounded away");
         if (shaping.costs(definition.costs()).stream().anyMatch(c -> c instanceof SpellCost.Material m && m.item().equals(VestigeMainMod.location("wand"))))
             throw new IllegalArgumentException("The reserved source cannot also be a material payment");
-        return new Compiled(compiled,durability(base,thread),wear);
+        var result=new Compiled(compiled,durability(base,thread),wear);
+        return tip.map(t -> WandTips.contribute(result,t)).orElse(result);
     }
     private static double mana(Spellshaping.Compiled source) {
         return source.shaping().costs(source.spell().costs()).stream().filter(SpellCost.Mana.class::isInstance)

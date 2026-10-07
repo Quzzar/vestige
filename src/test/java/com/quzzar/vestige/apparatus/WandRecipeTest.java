@@ -38,8 +38,8 @@ class WandRecipeTest {
         assertTrue(WandRecipe.match(inputs).isEmpty());
         inputs.set(2,source(1,1));inputs.set(6,source(1,1));inputs.set(5,new ItemStack(Items.PAPER));
         assertTrue(WandRecipe.match(inputs).isEmpty());
-        inputs.set(5,ItemStack.EMPTY);inputs.set(3,new ItemStack(Items.DIAMOND));
-        assertTrue(WandRecipe.match(inputs).isEmpty(),"Unimplemented tips must not consume materials or imply an effect");
+        inputs.set(5,ItemStack.EMPTY);inputs.set(3,new ItemStack(Items.DIRT));
+        assertTrue(WandRecipe.match(inputs).isEmpty(),"Unsupported items cannot fill the optional tip seat");
     }
     @Test void theWandCarriesOneSourceVariantAndItsVerifiedCapacity() {
         var scroll=source(2,1.2);var original=ScrollItems.scroll(scroll).orElseThrow();

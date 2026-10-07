@@ -1,0 +1,277 @@
+{
+  "recordedAt": "2026-10-07T12:31:10.811296-04:00",
+  "baseline": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21
+  },
+  "publication": {
+    "branch": "codex/native-wand-foundation",
+    "base": "87f7d1b50ade929f23719911218ec1b918c420cd",
+    "preCompletionHead": "0de178bcb9810219a0aedd25d141eb7105418f08",
+    "units": {
+      "tests": 137,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "requiredWorldTests": 252,
+    "artifactSha256": "efb7df6360a3acb6e2e5203f47b173b173d331b50492800508bafba4d175a66c"
+  },
+  "combined": {
+    "units": {
+      "tests": 152,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "requiredWorldTests": 280,
+    "artifactSha256": "ab9ef827eb60c7c0e10a92681d01e771f73a008a4298ddeabc1ed437bcc5518f",
+    "kithkynCoLoadedModes": [
+      "both",
+      "none"
+    ],
+    "preserves": [
+      "staffs",
+      "Whispering Shell",
+      "Crane Bag",
+      "preparation bar",
+      "current apparatus recipes",
+      "ordinary cooldown removal"
+    ]
+  },
+  "coverage": {
+    "spells": 214,
+    "tippedBaseCoreCombinations": 30065,
+    "pureUtilitySpells": 81
+  },
+  "nativeCaptures": {
+    "jei": {
+      "path": "docs/art/wands-native/jei/capture.json",
+      "sha256": "a16d6a21eda82752582b1fda4afaebf0a630e917c0f479edb9050f2c6efc98c7",
+      "manifest": {
+        "captures": [
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "mezz.jei.gui.recipes.RecipesGui",
+            "recipes": 4987,
+            "case": "untipped"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "mezz.jei.gui.recipes.RecipesGui",
+            "recipes": 4987,
+            "case": "resonating"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "mezz.jei.gui.recipes.RecipesGui",
+            "recipes": 4987,
+            "case": "steadfast-utility"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "mezz.jei.gui.recipes.RecipesGui",
+            "recipes": 4987,
+            "case": "exact-shaped-source"
+          },
+          {
+            "guiScale": 6,
+            "matches": 1,
+            "screen": "mezz.jei.gui.recipes.RecipesGui",
+            "recipes": 4987,
+            "case": "reduced-shaped-source"
+          }
+        ],
+        "exactSourceReceived": true,
+        "source": "Minecraft framebuffer and native recipe APIs",
+        "viewer": "jei"
+      }
+    },
+    "emi": {
+      "path": "docs/art/wands-native/emi/capture.json",
+      "sha256": "6c0b73480eff35856fced2000120ba6e978c7edfa944bcb694f024dc874d6c1e",
+      "manifest": {
+        "captures": [
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "untipped"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "resonating"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "steadfast-utility"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "exact-shaped-source"
+          },
+          {
+            "guiScale": 6,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "reduced-shaped-source"
+          }
+        ],
+        "exactSourceReceived": true,
+        "source": "Minecraft framebuffer and native recipe APIs",
+        "viewer": "emi"
+      }
+    },
+    "both": {
+      "path": "docs/art/wands-native/both/capture.json",
+      "sha256": "36ff528e58e1bc5c2dc08bb89e20c5391715e4920df7ad80cd5590c8a9138ed6",
+      "manifest": {
+        "captures": [
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "untipped"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "resonating"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "steadfast-utility"
+          },
+          {
+            "guiScale": 4,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "exact-shaped-source"
+          },
+          {
+            "guiScale": 6,
+            "matches": 1,
+            "screen": "dev.emi.emi.screen.RecipeScreen",
+            "recipes": 4987,
+            "case": "reduced-shaped-source"
+          }
+        ],
+        "exactSourceReceived": true,
+        "source": "Minecraft framebuffer and native recipe APIs",
+        "viewer": "both"
+      }
+    },
+    "none": {
+      "path": "docs/art/wands-native/none/capture.json",
+      "sha256": "5fd2defc170ba953d099c5d674044208039b173c4a6413bd8d96784877a0fb6f",
+      "manifest": {
+        "viewer": "none",
+        "source": "Minecraft framebuffer and native recipe APIs",
+        "exactSourceReceived": true,
+        "captures": [
+          {
+            "case": "no-viewer",
+            "recipes": 4987,
+            "screen": "world",
+            "matches": 0,
+            "guiScale": 4
+          }
+        ]
+      }
+    },
+    "wands": {
+      "path": "docs/art/wands-native/wands/capture.json",
+      "sha256": "39d9da1787cccd7cefb67f465d33172bdf672c021a2f16c411080da75131712d",
+      "manifest": {
+        "wand_models": 63,
+        "source": "Minecraft main render target, ordinary item renderer",
+        "thread_models": 5,
+        "assetSha256": {
+          "models/item/wand.json": "48bfd6f96e1a192d531359a4d2b971c294b5c482885e33db0a7f98c6ad69eb8e",
+          "textures/item/callous_thread.png": "57b2c8296871027cd1998d5f235828d1af02d5f6ec94b907912b4ef95b0308c9",
+          "textures/item/consecrated_thread.png": "877be36b7eab5e340775adbfbc13e762a04d1017145e2c752e18ada0a5d934f4",
+          "textures/item/ensorcelled_thread.png": "7b797173145ff4f12474ea7ec109410ece20b3c164ef4363dae6e6adea5f4ece",
+          "textures/item/laced_thread.png": "120fdda65466cf9a866689cf2c96b081c2975477ca5f29eba862267a31950181",
+          "textures/item/smoldering_thread.png": "d1305c46cad6dca4fd3639f8b65b8b1141ebbe6ddb2164db5237604ffacfbe37",
+          "textures/item/wands/base_bamboo.png": "078f2093abee5bee8e2a8a4382166e0cb669f7754fe521a894967c38130bdd1f",
+          "textures/item/wands/base_blaze_rod.png": "9f7fa3fbbc541532bacb33bdb81165110e99bd588528ddd5e95223eea14f47b2",
+          "textures/item/wands/base_bone.png": "12fd924f80d3817ee243ee4ab9d07968cbc6ce2c9c2f4833546d4fc69d7119cf",
+          "textures/item/wands/base_breeze_rod.png": "98bbd8c34c05d3af1154d34f3cb5814651c2a216e4d31d98a2b22855a060a4f5",
+          "textures/item/wands/base_end_rod.png": "aae73056260ce65de07ce7c773525858ceaa1daee3b1d1b0c00d2263cb2dcc9b",
+          "textures/item/wands/base_lightning_rod.png": "1e909397016a4f70ab85e2a820408cc996108f4542ee111d4a555e6cb5370f80",
+          "textures/item/wands/base_stick.png": "93be02d3a3126cf61bb12e70ec41c64dad141e5ce4480562ede817542aaad26b",
+          "textures/item/wands/tip_amethyst.png": "5b91af2f23cf139782b1dcf1608f3d4009ec1895289b57fa7ab41605a5e53213",
+          "textures/item/wands/tip_copper.png": "1b43e4262e44be8a72d1dde33e579684862babe02756e2715687a4e17c605c61",
+          "textures/item/wands/tip_diamond.png": "4266290ffb4025a752d2623881c1e4177ee791f8d4e52625e231c907a0eb3516",
+          "textures/item/wands/tip_emerald.png": "8172b6f2ca65ae2453c99b313cdb8ff5624a6ee3326451efe9c4820ca41bd0a0",
+          "textures/item/wands/tip_ender_pearl.png": "7de6796bbbb0dde4cafe3aa90cd20b5d5fddb51f3c3dd967c39922dc31ffbf1d",
+          "textures/item/wands/tip_ghast_tear.png": "e192791ecd1e5bbde523ae3c2466f54682568f3060a871a39774c07f0a3fac08",
+          "textures/item/wands/tip_iron.png": "690a8e634c3a6ae7f8cb72f431374b7ce8c6380e13fad4360cb8250cf6c62d0e",
+          "textures/item/wands/tip_netherite.png": "b6e46d2457c855a6b7e746b1a1f8caba62c8074739bf96b06884738b8bfcba27"
+        }
+      }
+    }
+  },
+  "installation": {
+    "installedAt": "2026-10-07T12:29:32.871507-04:00",
+    "profile": "Prism / Kithkyn Testing",
+    "sourceArtifact": "/Users/quzzar/Projects/vestige/build/libs/vestige-0.1.0.jar",
+    "installedArtifact": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "sha256": "ab9ef827eb60c7c0e10a92681d01e771f73a008a4298ddeabc1ed437bcc5518f",
+    "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/vestige-backups/vestige-0.1.0-before-wand-tips-20261007-122932.jar",
+    "previousSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+    "models": 63,
+    "sprites16x16": 20,
+    "nativeSpellsMatched": 214,
+    "verifiedClasses": {
+      "com/quzzar/vestige/apparatus/WandTips.class": "079d53bd7c7df35170273228162011acb2628d40c0ef77d9407876ff2884a6ef",
+      "com/quzzar/vestige/apparatus/WandTipEffects.class": "99bdf78260cc2cf9773aad7aec96c5d93cd25bb44f60798e23ebf20782ddc596",
+      "com/quzzar/vestige/apparatus/StaffCasting.class": "74debe2b991c9901c9d586f45829a3ba14c3261d51e78439427c7cc01be72c20",
+      "com/quzzar/vestige/apparatus/WhisperingShellItem.class": "2d2fa7ed2b8815c7d05820c110a870d3bacbdc7f44bb87f953b8fa114cfc4029",
+      "com/quzzar/vestige/storage/CraneBagItem.class": "9408e02d2f71024178c07939f30a51b6aedce0e27539260d95de712c720654ff",
+      "com/quzzar/vestige/magic/world/client/PreparationHud.class": "3f89a9257a583d41f804a02c1e20ad1931fb5e7a2f8c32a0d29352114518ffe3",
+      "com/quzzar/vestige/apparatus/recipeviewer/emi/EmiLiveRefresh.class": "73e79e45996f99517a37b0b4112e8e99a05cd7bbf791912871458c1bf508853a",
+      "com/quzzar/vestige/apparatus/recipeviewer/jei/WandJeiCategory.class": "ab76f2c6d5297870f69a09ed5ae15c79383fa31eae668242452670e4d883f8fd"
+    },
+    "restartRequired": true
+  },
+  "logSha256": {
+    "publication-build.log": "ff0524de2e5d962679991a57df5e0483517381f899c522311a31fab2009d3396",
+    "publication-world.log": "aa5208aab35e88e5d3dad59dd41008d331e1972668161fab956891541d6fb29f",
+    "combined-build-and-world.log": "ae52ab7374e94bbb22d820f7037317eeb9796dfe58a571017ae26feb962bd6ac",
+    "jei-native.log": "4af95974f541e479e8910fb38d58af747aa60b6a2ee5b6a4e145a660d5bd4ef5",
+    "emi-native.log": "79f160b830a210897c82b1c3d0d70b0acee8e6ecd58f4ea26b82f7d450df9a44",
+    "both-kith-native.log": "020e7e9aa43831a980b6e9b873dde9101c9c889ddd5bb393ebd6fc658dc69be5",
+    "none-kith-native.log": "3771ae86d85d8e046cd1c7a1af5652ac5b0f02d2b1f7fb821ca474e1aee36bd6"
+  },
+  "limits": [
+    "Coefficients and durability are initial playtest values.",
+    "Integrated-server client captures; remote multiplayer not exercised.",
+    "The combined JEI/EMI bridge reports duplicate jei:/ vanilla/tag recipe IDs; all five native wand lookups remain unique and pass.",
+    "Kithkyn local LLM disabled for disposable capture worlds; LLM functionality outside this verification.",
+    "Quartz/Redstone/Nautilus/Magma tips, repair and rebinding deferred."
+  ]
+}

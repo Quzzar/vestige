@@ -13,7 +13,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 public final class WandClient {
     private WandClient() { }
     @SubscribeEvent public static void setup(FMLClientSetupEvent event) {
-        event.enqueueWork(() -> ItemProperties.register(ScrollItems.WAND.get(),VestigeMainMod.location("wand_base"),
-                (stack,level,entity,seed) -> WandData.binding(stack).map(b -> (float)b.base().ordinal()).orElse(0f)));
+        event.enqueueWork(() -> ItemProperties.register(ScrollItems.WAND.get(),VestigeMainMod.location("wand_appearance"),
+                (stack,level,entity,seed) -> WandData.binding(stack).map(b -> (float)(b.base().ordinal()*(com.quzzar.vestige.apparatus.WandTips.Tip.values().length+1)+b.tip().map(t -> t.ordinal()+1).orElse(0))).orElse(0f)));
     }
 }

@@ -137,5 +137,7 @@
   "screen.vestige.health_points": "%s health points",
   "screen.vestige.hunger_points": "%s hunger points",
   "item.vestige.wand": "Unknown Wand",
-  "item.vestige.wand.named": "Wand of %s"
+  "item.vestige.wand.named": "Wand of %s",
+  "vestige.viewer.wand_title": "Wand Binding",
+  "emi.category.vestige.wand_binding": "Wand Binding"
 }

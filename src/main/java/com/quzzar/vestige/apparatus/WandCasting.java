@@ -31,11 +31,13 @@ public final class WandCasting {
         var spell=binding==null ? null : NativeMagic.spells().spells().get(binding.scroll().spell());
         if (spell==null || !player.isAlive() || player.isSpectator() || ScrollCasting.awaiting(player)) return false;
         WandComponents.Compiled component;
-        try { component=WandComponents.compile(spell,binding.scroll(),binding.base(),binding.thread()); }
+        try { component=WandComponents.compile(spell,binding.scroll(),binding.base(),binding.thread(),binding.tip()); }
         catch (IllegalArgumentException incompatible) { return false; }
         var session=NativeMagic.session(player.getServer());session.world().registerActor(player);
         var expected=stack.copy();
+        var observer=binding.tip().<CastObserver>map(t -> new WandTipEffects(t,player,spell.traits())).orElse(CastObserver.NONE);
         var reservation=new CastReservation() {
+            public CastObserver observer() { return observer; }
             public boolean valid() { return ItemStack.matches(expected,player.getItemInHand(hand)); }
             public Optional<Recovery> recovery() {
                 return Optional.of(new Recovery(VestigeMainMod.location("wand"),WandComponents.COOLDOWN_TICKS));

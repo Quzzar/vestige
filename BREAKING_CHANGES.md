@@ -1,5 +1,11 @@
 # Breaking changes
 
+## October 7, 2026: tipped native wands, shared result signals and component artwork
+
+The native wand binding format retains version 1 with an optional trusted `tip` identity; absent tips remain untipped. Eight materials now compile additional effects and typed costs with the exact stored source. Models use `vestige:wand_appearance` rather than the body-only predicate, with actual 16×16 body/tip layers. Five thread sprites are also actual 16×16 and visually distinct.
+
+`CastReservation.observer`, `CastObserver`, actual paid mana/outcome reporting, `Context.emitSecondary` and `claimAmount` add shared runtime extension points. `target/allied`, `optional_backstep`, optional fractional amount quantization, amount budgets and authored push caps support the trusted component effects. Normal spell definitions and ordinary action defaults are unchanged. Ritual viewer protocol advances to 5 for retained per-seat material frames; an independent version-1 wand display payload carries bounded compiler-approved combinations and exact source magic. Matching client/server builds are required; no legacy registry or migration is introduced.
+
 ## October 6, 2026: native untipped wand foundation
 
 Registers `vestige:wand`, with version-1 base/thread IDs and one validated source scroll payload. Matching client/server builds are required. The relative five-offering binding recipe uses the eight-node apparatus; the reserved optional tip seat is currently empty. Existing scroll and apparatus identities are unchanged. The item checks its trusted component capacity and persists ordinary used durability; no legacy wand migration is provided.

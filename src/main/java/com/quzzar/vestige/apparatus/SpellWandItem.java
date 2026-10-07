@@ -17,6 +17,7 @@ public final class SpellWandItem extends Item {
         if (binding==null || !SpellKnowledge.visible(binding.scroll().spell())) return super.getName(stack).copy().withStyle(ChatFormatting.WHITE);
         var name=Component.empty();
         for (var augment:binding.scroll().augments()) name.append(Component.literal(Spellshaping.name(augment)+" ").withStyle(ChatFormatting.ITALIC));
+        binding.tip().ifPresent(t -> name.append(Component.literal(t.adjective()+" ").withStyle(ChatFormatting.ITALIC)));
         name.append(ScrollItems.spellName(binding.scroll().spell()));
         var color=switch (SpellKnowledge.visibleRarity(binding.scroll().spell())) {
             case COMMON -> ChatFormatting.WHITE;case UNCOMMON -> ChatFormatting.YELLOW;

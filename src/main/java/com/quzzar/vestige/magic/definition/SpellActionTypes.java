@@ -10,7 +10,7 @@ public final class SpellActionTypes {
             "aggro_clear", "aggro_decoy", "aggro_convert", "ender_inventory", "pocket_dimension", "grip", "leech",
             "weapon_damage", "grant_max_health", "food_mana", "redirect_projectiles", "fangs", "attribute", "remove_attribute",
             "despawn", "dismiss_manifestations", "break_blocks", "flight", "end_flight", "reduce_pending_heal", "control",
-            "random_teleport", "dwell_heal", "detect_magic", "inspect_item", "reveal_hidden", "reflect_projectiles", "transpose", "create_water", "shape_stone", "gather_items", "utterance");
+            "optional_backstep", "random_teleport", "dwell_heal", "detect_magic", "inspect_item", "reveal_hidden", "reflect_projectiles", "transpose", "create_water", "shape_stone", "gather_items", "utterance");
     public static final Set<String> MANIFESTATIONS = Set.of("projectile", "summon", "block_lock", "barrier", "area", "wall", "portal", "decoy", "status", "tether",
             "construct", "block_wall", "zone", "mobility", "guard", "sensor", "pet_cache", "passage");
     private SpellActionTypes() { }

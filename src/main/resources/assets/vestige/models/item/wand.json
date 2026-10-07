@@ -3,39 +3,375 @@
   "overrides": [
     {
       "predicate": {
-        "vestige:wand_base": 1
+        "vestige:wand_appearance": 1
+      },
+      "model": "vestige:item/wand_stick_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 2
+      },
+      "model": "vestige:item/wand_stick_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 3
+      },
+      "model": "vestige:item/wand_stick_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 4
+      },
+      "model": "vestige:item/wand_stick_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 5
+      },
+      "model": "vestige:item/wand_stick_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 6
+      },
+      "model": "vestige:item/wand_stick_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 7
+      },
+      "model": "vestige:item/wand_stick_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 8
+      },
+      "model": "vestige:item/wand_stick_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 9
       },
       "model": "vestige:item/wand_bamboo"
     },
     {
       "predicate": {
-        "vestige:wand_base": 2
+        "vestige:wand_appearance": 10
+      },
+      "model": "vestige:item/wand_bamboo_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 11
+      },
+      "model": "vestige:item/wand_bamboo_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 12
+      },
+      "model": "vestige:item/wand_bamboo_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 13
+      },
+      "model": "vestige:item/wand_bamboo_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 14
+      },
+      "model": "vestige:item/wand_bamboo_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 15
+      },
+      "model": "vestige:item/wand_bamboo_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 16
+      },
+      "model": "vestige:item/wand_bamboo_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 17
+      },
+      "model": "vestige:item/wand_bamboo_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 18
       },
       "model": "vestige:item/wand_bone"
     },
     {
       "predicate": {
-        "vestige:wand_base": 3
+        "vestige:wand_appearance": 19
+      },
+      "model": "vestige:item/wand_bone_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 20
+      },
+      "model": "vestige:item/wand_bone_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 21
+      },
+      "model": "vestige:item/wand_bone_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 22
+      },
+      "model": "vestige:item/wand_bone_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 23
+      },
+      "model": "vestige:item/wand_bone_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 24
+      },
+      "model": "vestige:item/wand_bone_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 25
+      },
+      "model": "vestige:item/wand_bone_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 26
+      },
+      "model": "vestige:item/wand_bone_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 27
       },
       "model": "vestige:item/wand_blaze_rod"
     },
     {
       "predicate": {
-        "vestige:wand_base": 4
+        "vestige:wand_appearance": 28
+      },
+      "model": "vestige:item/wand_blaze_rod_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 29
+      },
+      "model": "vestige:item/wand_blaze_rod_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 30
+      },
+      "model": "vestige:item/wand_blaze_rod_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 31
+      },
+      "model": "vestige:item/wand_blaze_rod_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 32
+      },
+      "model": "vestige:item/wand_blaze_rod_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 33
+      },
+      "model": "vestige:item/wand_blaze_rod_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 34
+      },
+      "model": "vestige:item/wand_blaze_rod_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 35
+      },
+      "model": "vestige:item/wand_blaze_rod_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 36
       },
       "model": "vestige:item/wand_breeze_rod"
     },
     {
       "predicate": {
-        "vestige:wand_base": 5
+        "vestige:wand_appearance": 37
+      },
+      "model": "vestige:item/wand_breeze_rod_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 38
+      },
+      "model": "vestige:item/wand_breeze_rod_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 39
+      },
+      "model": "vestige:item/wand_breeze_rod_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 40
+      },
+      "model": "vestige:item/wand_breeze_rod_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 41
+      },
+      "model": "vestige:item/wand_breeze_rod_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 42
+      },
+      "model": "vestige:item/wand_breeze_rod_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 43
+      },
+      "model": "vestige:item/wand_breeze_rod_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 44
+      },
+      "model": "vestige:item/wand_breeze_rod_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 45
       },
       "model": "vestige:item/wand_end_rod"
     },
     {
       "predicate": {
-        "vestige:wand_base": 6
+        "vestige:wand_appearance": 46
+      },
+      "model": "vestige:item/wand_end_rod_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 47
+      },
+      "model": "vestige:item/wand_end_rod_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 48
+      },
+      "model": "vestige:item/wand_end_rod_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 49
+      },
+      "model": "vestige:item/wand_end_rod_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 50
+      },
+      "model": "vestige:item/wand_end_rod_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 51
+      },
+      "model": "vestige:item/wand_end_rod_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 52
+      },
+      "model": "vestige:item/wand_end_rod_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 53
+      },
+      "model": "vestige:item/wand_end_rod_netherite"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 54
       },
       "model": "vestige:item/wand_lightning_rod"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 55
+      },
+      "model": "vestige:item/wand_lightning_rod_amethyst"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 56
+      },
+      "model": "vestige:item/wand_lightning_rod_diamond"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 57
+      },
+      "model": "vestige:item/wand_lightning_rod_emerald"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 58
+      },
+      "model": "vestige:item/wand_lightning_rod_ender_pearl"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 59
+      },
+      "model": "vestige:item/wand_lightning_rod_copper"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 60
+      },
+      "model": "vestige:item/wand_lightning_rod_iron"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 61
+      },
+      "model": "vestige:item/wand_lightning_rod_ghast_tear"
+    },
+    {
+      "predicate": {
+        "vestige:wand_appearance": 62
+      },
+      "model": "vestige:item/wand_lightning_rod_netherite"
     }
   ]
 }

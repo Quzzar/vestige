@@ -39,6 +39,7 @@ public final class ConditionPaths {
     public static final ResourceLocation TARGET_BURNING = id("target/burning");
     public static final ResourceLocation TARGET_WET = id("target/wet");
     public static final ResourceLocation TARGET_ALIVE = id("target/alive");
+    public static final ResourceLocation TARGET_ALLIED = id("target/allied");
 
     public static final ResourceLocation CREATED = id("created");
     public static final ResourceLocation CREATED_ENTITY_TYPE = id("created/entity_type");

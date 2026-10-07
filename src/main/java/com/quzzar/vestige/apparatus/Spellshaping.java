@@ -272,29 +272,33 @@ public final class Spellshaping {
 
     /** Traverses original executable plans, including bindings and delivery callbacks, leaving secondary plans terminal. */
     public static List<SpellEffect> walk(List<SpellEffect> effects,UnaryOperator<SpellEffect> visitor) {
+        return walk(effects,visitor,false);
+    }
+    /** Trusted equipment policies may inspect riders too; ordinary shaping never reshapes secondary plans. */
+    public static List<SpellEffect> walk(List<SpellEffect> effects,UnaryOperator<SpellEffect> visitor,boolean includeSecondary) {
         return effects.stream().map(effect->{
-            if(effect instanceof SpellEffects.Secondary)return effect;
+            if(effect instanceof SpellEffects.Secondary && !includeSecondary)return effect;
             SpellEffect nested=switch(effect){
-                case SpellEffects.Sequence s->new SpellEffects.Sequence(walk(s.effects(),visitor));
-                case SpellEffects.Branch b->new SpellEffects.Branch(b.condition(),walk(b.whenTrue(),visitor),walk(b.whenFalse(),visitor));
-                case SpellEffects.Repeat r->new SpellEffects.Repeat(r.count(),r.interval(),walk(r.effects(),visitor));
-                case SpellEffects.Limited l->new SpellEffects.Limited(l.group(),l.perTarget(),l.total(),walk(l.effects(),visitor));
-                case SpellEffects.ForEach f->new SpellEffects.ForEach(f.target(),walk(f.effects(),visitor),f.visual());
-                case SpellEffects.InstallBinding b->new SpellEffects.InstallBinding(binding(b.binding(),visitor),b.target());
+                case SpellEffects.Sequence s->new SpellEffects.Sequence(walk(s.effects(),visitor,includeSecondary));
+                case SpellEffects.Branch b->new SpellEffects.Branch(b.condition(),walk(b.whenTrue(),visitor,includeSecondary),walk(b.whenFalse(),visitor,includeSecondary));
+                case SpellEffects.Repeat r->new SpellEffects.Repeat(r.count(),r.interval(),walk(r.effects(),visitor,includeSecondary));
+                case SpellEffects.Limited l->new SpellEffects.Limited(l.group(),l.perTarget(),l.total(),walk(l.effects(),visitor,includeSecondary));
+                case SpellEffects.ForEach f->new SpellEffects.ForEach(f.target(),walk(f.effects(),visitor,includeSecondary),f.visual());
+                case SpellEffects.InstallBinding b->new SpellEffects.InstallBinding(binding(b.binding(),visitor,includeSecondary),b.target());
                 case SpellEffects.CreateManifestation c->{
                     var m=c.manifestation();var onHit=m.onHit();
                     if(m.kind().getPath().equals("projectile") && onHit.isEmpty() && m.values().containsKey("damage")){
                         var explicit=new ArrayList<SpellEffect>();explicit.add(new SpellEffects.Branch(new BuiltInCondition.Exists(ConditionPaths.TARGET_HEALTH),List.of(new SpellEffects.Action(id("damage"),Map.of("amount",m.values().get("damage")),Map.of())),List.of()));
                         m.visual().ifPresent(v->explicit.add(new SpellEffects.Visual(new com.quzzar.vestige.magic.presentation.SpellVisual(24,new SpellValue.Constant(1),0,v.layers(),false,Optional.empty()))));onHit=List.copyOf(explicit);
                     }
-                    yield new SpellEffects.CreateManifestation(new SpellEffects.Manifestation(m.kind(),m.durationTicks(),m.values(),m.identifiers(),m.bindings().stream().map(b->binding(b,visitor)).toList(),walk(onHit,visitor),walk(m.onTick(),visitor),walk(m.onEnd(),visitor),m.interval(),m.visual()),c.target());
+                    yield new SpellEffects.CreateManifestation(new SpellEffects.Manifestation(m.kind(),m.durationTicks(),m.values(),m.identifiers(),m.bindings().stream().map(b->binding(b,visitor,includeSecondary)).toList(),walk(onHit,visitor,includeSecondary),walk(m.onTick(),visitor,includeSecondary),walk(m.onEnd(),visitor,includeSecondary),m.interval(),m.visual()),c.target());
                 }
-                case SpellEffects.Secondary ignored->throw new AssertionError();
+                case SpellEffects.Secondary secondary->new SpellEffects.Secondary(walk(secondary.effects(),visitor,includeSecondary));
                 default->effect;
             };return visitor.apply(nested);
         }).toList();
     }
-    private static SpellEffects.Binding binding(SpellEffects.Binding b,UnaryOperator<SpellEffect> visitor){return new SpellEffects.Binding(b.id(),b.triggers(),walk(b.effects(),visitor),b.durationTicks(),b.charges());}
+    private static SpellEffects.Binding binding(SpellEffects.Binding b,UnaryOperator<SpellEffect> visitor,boolean includeSecondary){return new SpellEffects.Binding(b.id(),b.triggers(),walk(b.effects(),visitor,includeSecondary),b.durationTicks(),b.charges());}
     private static void collectReads(SpellEffect e,Set<String> reads){
         if(e instanceof SpellEffects.Action a)a.values().values().forEach(v->read(v,reads));
         if(e instanceof SpellEffects.ForEach f)targetReads(f.target(),reads);

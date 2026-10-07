@@ -55,8 +55,9 @@ final class SpellActions {
                 if (living == null) { context.setNumber(VestigeMainMod.location("last_damage"), 0); return true; }
                 double amount = action.values().containsKey("amount") ? context.number(action.values().get("amount")) : 0;
                 if (action.type().getPath().equals("weapon_damage") && caster.getAttribute(Attributes.ATTACK_DAMAGE) != null) amount += caster.getAttributeValue(Attributes.ATTACK_DAMAGE) * value(action, context, "weapon_fraction", 1);
-                amount=context.amount(amount);
+                if (value(action,context,"quantize_amount",1)>0) amount=context.amount(amount);
                 if (!finiteAmount(amount)) return false;
+                if (action.identifiers().containsKey("amount_budget")) amount=context.claimAmount(action.identifiers().get("amount_budget"),amount,value(action,context,"budget_maximum",0));
                 int maxHits = (int) value(action, context, "max_hits_per_target", 0);
                 if (maxHits > 0 && !context.claimHit(living.getUUID(), identifier(action, "hit_group", "vestige:damage"), maxHits)) {
                     context.setNumber(VestigeMainMod.location("last_damage"), 0);
@@ -72,32 +73,43 @@ final class SpellActions {
                     source = new DamageSource(type.get(), caster, caster);
                 }
                 living.hurt(source, (float) amount);
-                context.setNumber(VestigeMainMod.location("last_damage"), Math.max(0, before - living.getHealth()));
+                double actual=Math.max(0,before-living.getHealth());
+                context.setNumber(VestigeMainMod.location("last_damage"),actual);
+                context.resolved(CastObserver.Kind.DAMAGE,actual);
                 level.sendParticles(net.minecraft.core.particles.ParticleTypes.ENCHANTED_HIT, point.x, point.y + 1, point.z, 8, .3, .4, .3, .1);
             }
             case "heal" -> {
                 context.setNumber(VestigeMainMod.location("last_heal"),0);
-                if (living == null) return false; double amount = value(action, context, "amount", 0); if (!finiteAmount(amount)) return false;
+                if (living == null) return false; double amount = value(action,context,"quantize_amount",1)>0 ? value(action,context,"amount",0) : context.number(action.values().get("amount")); if (!finiteAmount(amount)) return false;
                 float before=living.getHealth(); living.heal((float) amount);
-                context.setNumber(VestigeMainMod.location("last_heal"),Math.max(0,living.getHealth()-before));
+                double actual=Math.max(0,living.getHealth()-before);
+                context.setNumber(VestigeMainMod.location("last_heal"),actual);
+                context.resolved(CastObserver.Kind.HEAL,actual);
             }
             case "leech" -> {
                 double dealt = context.value(VestigeMainMod.location("last_damage")).filter(v -> v instanceof com.quzzar.vestige.magic.condition.ConditionValue.Decimal)
                         .map(v -> ((com.quzzar.vestige.magic.condition.ConditionValue.Decimal) v).value()).orElse(0.0);
+                float before=caster.getHealth();
                 caster.heal((float) context.amount(Math.min(value(action,context,"maximum",1000), dealt * value(action, context, "fraction", 0.25))));
+                context.resolved(CastObserver.Kind.HEAL,Math.max(0,caster.getHealth()-before),new SpellSubject.Entity(caster.getUUID()));
             }
             case "status" -> {
                 if (living == null) return true;
                 var effect = BuiltInRegistries.MOB_EFFECT.getHolder(identifier(action, "effect", "minecraft:slowness")); if (effect.isEmpty()) return false;
-                living.addEffect(new MobEffectInstance(effect.get(), ticks(action, context, "duration", 100), (int) Math.max(0, Math.min(10, value(action, context, "amplifier", 0)))));
+                if (living.addEffect(new MobEffectInstance(effect.get(), ticks(action, context, "duration", 100), (int) Math.max(0, Math.min(10, value(action, context, "amplifier", 0))))))
+                    context.resolved(CastObserver.Kind.UTILITY,1);
             }
             case "remove_status" -> {
                 if (living == null) return false;
-                BuiltInRegistries.MOB_EFFECT.getHolder(identifier(action, "effect", "minecraft:slowness")).ifPresent(living::removeEffect);
+                BuiltInRegistries.MOB_EFFECT.getHolder(identifier(action, "effect", "minecraft:slowness")).ifPresent(effect -> {
+                    if (living.removeEffect(effect)) context.resolved(CastObserver.Kind.UTILITY,1);
+                });
             }
             case "cleanse" -> {
                 if (living == null) return false;
-                List.copyOf(living.getActiveEffects()).stream().filter(e -> !e.getEffect().value().isBeneficial()).forEach(e -> living.removeEffect(e.getEffect()));
+                int removed=0;
+                for (var effect:List.copyOf(living.getActiveEffects())) if (!effect.getEffect().value().isBeneficial() && living.removeEffect(effect.getEffect())) removed++;
+                context.resolved(CastObserver.Kind.UTILITY,removed);
             }
             case "control" -> {
                 if (!(target instanceof Mob mob) || world.owners.containsKey(mob.getUUID()) && !controls.containsKey(mob.getUUID())) return false;
@@ -106,17 +118,59 @@ final class SpellActions {
                 world.owners.put(mob.getUUID(), caster.getUUID()); mob.setTarget(null);
                 own(context, () -> releaseControl(mob.getUUID(), context.castId()));
             }
-            case "ignite" -> { if (target != null) target.igniteForSeconds((float) value(action, context, "seconds", 3)); }
-            case "freeze" -> { if (target != null) target.setTicksFrozen((int) Math.min(400, target.getTicksFrozen() + value(action, context, "ticks", 140))); }
+            case "ignite" -> { if (target != null) {
+                int before=target.getRemainingFireTicks(); target.igniteForSeconds((float)value(action,context,"seconds",3));
+                context.resolved(CastObserver.Kind.UTILITY,Math.max(0,target.getRemainingFireTicks()-before));
+            } }
+            case "freeze" -> { if (target != null) {
+                int before=target.getTicksFrozen(); target.setTicksFrozen((int)Math.min(400,before+value(action,context,"ticks",140)));
+                context.resolved(CastObserver.Kind.UTILITY,Math.max(0,target.getTicksFrozen()-before));
+            } }
             case "knockback", "launch", "pull", "dash" -> {
                 Entity moved = action.type().getPath().equals("dash") ? caster : target; if (moved == null) return false;
+                Vec3 before=moved.getDeltaMovement();
                 Vec3 direction = switch (action.type().getPath()) {
                     case "pull" -> context.origin().map(s -> world.position(s, caster)).orElse(caster.position()).subtract(moved.position()).normalize();
                     case "dash" -> caster.getLookAngle().multiply(1, 0, 1).normalize();
                     default -> moved.position().subtract(caster.position()).multiply(1, 0, 1).normalize();
                 };
-                moved.setDeltaMovement(moved.getDeltaMovement().add(direction.scale(value(action, context, "strength", 0.5))).add(0, value(action, context, "up", action.type().getPath().equals("launch") ? 1 : 0.15), 0));
+                if (action.identifiers().containsKey("origin")) direction=context.anchor(action.identifiers().get("origin"))
+                        .map(s -> moved.position().subtract(world.position(s,caster)).multiply(1,0,1).normalize()).orElse(direction);
+                if (value(action,context,"respect_resistance",0)>0 && moved instanceof LivingEntity recipient)
+                    recipient.knockback(value(action,context,"strength",.35),-direction.x,-direction.z);
+                else moved.setDeltaMovement(moved.getDeltaMovement().add(direction.scale(value(action, context, "strength", 0.5))).add(0, value(action, context, "up", action.type().getPath().equals("launch") ? 1 : 0.15), 0));
+                if (action.values().containsKey("maximum_speed")) {
+                    double maximum=value(action,context,"maximum_speed",1.5);var velocity=moved.getDeltaMovement();
+                    double horizontal=Math.sqrt(velocity.x*velocity.x+velocity.z*velocity.z);
+                    if (horizontal>maximum) moved.setDeltaMovement(velocity.x*maximum/horizontal,velocity.y,velocity.z*maximum/horizontal);
+                }
                 moved.hurtMarked = true;
+                context.resolved(CastObserver.Kind.UTILITY,moved.getDeltaMovement().distanceTo(before));
+            }
+            case "optional_backstep" -> {
+                if (!caster.isCrouching()) return true;
+                double distance=Math.clamp(value(action,context,"distance",1.5),0,2);
+                Vec3 destination=caster.position().subtract(caster.getLookAngle().multiply(1,0,1).normalize().scale(distance));
+                AABB moved=caster.getBoundingBox().move(destination.subtract(caster.position()));
+                BlockPos low=BlockPos.containing(moved.minX,moved.minY,moved.minZ),high=BlockPos.containing(moved.maxX,moved.maxY,moved.maxZ);
+                boolean safe=destination.y>=level.getMinBuildHeight() && moved.maxY<level.getMaxBuildHeight();
+                for (BlockPos pos:BlockPos.betweenClosed(low,high)) safe &= level.hasChunkAt(pos) && level.getWorldBorder().isWithinBounds(pos)
+                        && level.getFluidState(pos).isEmpty();
+                safe &= level.hasChunkAt(BlockPos.containing(destination).below()) && level.getBlockState(BlockPos.containing(destination).below())
+                        .isFaceSturdy(level,BlockPos.containing(destination).below(),Direction.UP) && level.noCollision(caster,moved);
+                // Sweep the full body along the path; a clear destination cannot permit wall hopping.
+                Vec3 offset=destination.subtract(caster.position());
+                for (int step=1;safe && step<=8;step++) {
+                    AABB sample=caster.getBoundingBox().move(offset.scale(step/8d));
+                    safe=level.noCollision(caster,sample);
+                    for (BlockPos pos:BlockPos.betweenClosed(BlockPos.containing(sample.minX,sample.minY,sample.minZ),BlockPos.containing(sample.maxX,sample.maxY,sample.maxZ)))
+                        safe &= level.hasChunkAt(pos) && level.getWorldBorder().isWithinBounds(pos) && level.getFluidState(pos).isEmpty();
+                }
+                if (safe) {
+                    if (caster instanceof ServerPlayer player) player.teleportTo(level,destination.x,destination.y,destination.z,Set.of(),player.getYRot(),player.getXRot());
+                    else caster.teleportTo(destination.x,destination.y,destination.z);
+                    caster.fallDistance=0;
+                }
             }
             case "teleport" -> {
                 Vec3 destination = living != null && living != caster ? living.position().subtract(living.getLookAngle().multiply(1, 0, 1).normalize().scale(2)) : point;
@@ -136,7 +190,9 @@ final class SpellActions {
                         .filter(e -> e.position().distanceToSqr(point) <= radius * radius)
                         .sorted(Comparator.comparingDouble(e -> e.position().distanceToSqr(point)))
                         .limit((long) Math.max(0, value(action, context, "count", 128))).toList()) {
+                    float before=victim.getHealth();
                     victim.hurt(caster.damageSources().indirectMagic(caster, caster), (float) amount);
+                    context.resolved(CastObserver.Kind.DAMAGE,Math.max(0,before-victim.getHealth()),new SpellSubject.Entity(victim.getUUID()));
                 }
                 level.sendParticles(net.minecraft.core.particles.ParticleTypes.EXPLOSION, point.x, point.y + 0.5, point.z, 2, 0.3, 0.3, 0.3, 0);
             }
@@ -210,7 +266,9 @@ final class SpellActions {
                 target.setDeltaMovement(force); target.hurtMarked = true;
                 if (target.horizontalCollision && living != null && context.claimHit(living.getUUID(), VestigeMainMod.location("grip"), (int) value(action, context, "max_hits_per_target", 3))) {
                     living.invulnerableTime = 0;
+                    float before=living.getHealth();
                     living.hurt(caster.damageSources().indirectMagic(caster, caster), (float) value(action, context, "impact_damage", 4));
+                    context.resolved(CastObserver.Kind.DAMAGE,Math.max(0,before-living.getHealth()));
                 }
             }
             case "attribute", "grant_max_health" -> {
@@ -225,7 +283,7 @@ final class SpellActions {
             case "remove_attribute" -> cleanup(context.castId());
             case "food_mana" -> {
                 var recipient=living==null?caster:living;
-                NativeMana.restore(recipient,value(action,context,"amount",20));
+                context.resolved(CastObserver.Kind.UTILITY,NativeMana.restore(recipient,value(action,context,"amount",20)));
             }
             case "redirect_projectiles" -> {
                 if (living == null) return false;
@@ -244,7 +302,9 @@ final class SpellActions {
                         if (!world.ally(caster, victim) && struck.size() < (int) value(action, context, "max_targets", 128)
                                 && struck.add(victim.getUUID())) {
                             victim.invulnerableTime = 0;
+                            float before=victim.getHealth();
                             victim.hurt(caster.damageSources().indirectMagic(caster, caster), (float) damage);
+                            context.resolved(CastObserver.Kind.DAMAGE,Math.max(0,before-victim.getHealth()),new SpellSubject.Entity(victim.getUUID()));
                         }
                     }
                 }

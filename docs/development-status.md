@@ -1,5 +1,15 @@
 # Development status
 
+## October 7 · tipped wands, 16×16 artwork and testing-pack installation
+
+All eight selected tips now execute through shared immutable traits, typed payment and cast-owned primary/secondary outcomes. Five offerings bind an untipped wand; six bind a tipped wand, preserving three exactly identical source scrolls once. Seven bases and five threads retain their authored profiles, sixty-second source recovery and deterministic wear. Wands never identify spells. The compatibility audit covers **214 spells**, **30,065 tipped base/core combinations** and **81 pure utility spells**; coefficients remain initial playtest tuning.
+
+The approved wand direction uses **20 actual 16×16 sprites**: seven bodies, eight tips and five distinct thread loops/coils/knots/braids. Standard handheld layers compose **63 appearances**. Native Minecraft rendering verifies every appearance and loaded PNG dimensions/hashes. Recipe-derived JEI/EMI entries preserve exact source variants, rotate matching body/output alternatives and refresh acquired shaped scrolls. JEI, EMI and both viewers each pass five actual lookup/capture cases, including a smaller GUI; Kithkyn co-loads in the both/no-viewer checks. Neither viewer is required.
+
+**Verified:** isolated publication build, **137 unit tests** and **all 252 required Minecraft tests** pass. The combined shared source, preserving staffs, Shell, Crane Bag, preparation and current apparatus/catalog work, passes production build, **152 unit tests**, **all 280 required world tests** and the Kithkyn version check. [Evidence](verification/native-wand-tips-2026-10-07/README.md) distinguishes both artifacts, complete native captures, corrected inspection failures and existing combined-viewer bridge warnings.
+
+The combined artifact is installed in **Prism → Kithkyn Testing** with a verified backup outside `mods`; [installation](verification/native-wand-tips-2026-10-07/installation.json) pins its SHA-256. Restart Minecraft to load it. Only scoped wand/thread/runtime/viewer work is published in the wand branch. Quartz, Redstone, Nautilus and Magma tips, repair/rebinding, remote multiplayer and encounter tuning remain later work. This completes the tip/art/viewer/install items previously recorded below as outstanding.
+
 ## October 7 · isolated native wand publication verified
 
 The publication branch starts from current main `87f7d1b5` and includes only this chat's sixteen-scroll stacks, five magical thread components, native untipped wand foundation and locked component designs. Merged Standing Stone/mana and optional pedestal changes remain intact. Other shared-checkout Shell, thread-viewer and equipment-artwork work is excluded. The owner reconfirmed the eight initial tip effects; Quartz, Redstone, Nautilus and Magma remain deferred.

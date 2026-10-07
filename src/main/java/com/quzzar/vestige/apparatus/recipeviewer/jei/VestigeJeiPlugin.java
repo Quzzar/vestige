@@ -27,9 +27,10 @@ public final class VestigeJeiPlugin implements IModPlugin {
     private static final String VIEWER_KNOWLEDGE="vestige_viewer_identified";
     private static IJeiRuntime runtime;
     private static List<RitualDisplays.Entry> registered=List.of();
+    private static List<WandDisplays.Entry> registeredWands=List.of();
     public static IJeiRuntime runtime(){return runtime;}
-    @Override public void onRuntimeAvailable(IJeiRuntime available){runtime=available;refresh();}
-    @Override public void onRuntimeUnavailable(){runtime=null;registered=List.of();}
+    @Override public void onRuntimeAvailable(IJeiRuntime available){runtime=available;refresh();refreshWands();}
+    @Override public void onRuntimeUnavailable(){runtime=null;registered=List.of();registeredWands=List.of();}
     /** JEI ignores unchanged vanilla recipe events; update only changed native entries through its runtime API. */
     public static void refresh() {
         if(runtime==null || !active())return;
@@ -59,7 +60,7 @@ public final class VestigeJeiPlugin implements IModPlugin {
     }
     /** Ingredient-list identity includes name visibility; recipe lookup always retains the base spell identity. */
     private static String subtype(ItemStack stack,UidContext context) {
-        var id=RitualDisplays.subtype(stack);
+        var id=stack.is(ScrollItems.WAND.get())?WandDisplays.subtype(stack):RitualDisplays.subtype(stack);
         var scroll=ScrollItems.scroll(stack);
         if(context==UidContext.Ingredient && scroll.isPresent()) {
             var tag=stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA,
@@ -71,7 +72,18 @@ public final class VestigeJeiPlugin implements IModPlugin {
     }
     private static boolean sameRecipe(RitualDisplays.Entry first,RitualDisplays.Entry second) {
         return second!=null && first.id().equals(second.id()) && first.spell().equals(second.spell())
-                && first.capacity()==second.capacity() && first.offerings().equals(second.offerings());
+                && first.capacity()==second.capacity() && first.offerings().equals(second.offerings()) && first.imbuements().equals(second.imbuements());
+    }
+    public static final RecipeType<WandDisplays.Entry> WAND_TYPE=RecipeType.create(VestigeMainMod.MOD_ID,"wand_binding",WandDisplays.Entry.class);
+    public static void refreshWands(){
+        if(runtime==null || !active())return;
+        var next=WandViewerClient.displays();
+        var previous=registeredWands.stream().collect(java.util.stream.Collectors.toMap(WandDisplays.Entry::id,java.util.function.Function.identity()));
+        var current=next.stream().collect(java.util.stream.Collectors.toMap(WandDisplays.Entry::id,java.util.function.Function.identity()));
+        var removed=registeredWands.stream().filter(e -> !e.equals(current.get(e.id()))).toList();
+        var added=next.stream().filter(e -> !e.equals(previous.get(e.id()))).toList();
+        if(!removed.isEmpty())runtime.getRecipeManager().hideRecipes(WAND_TYPE,removed);
+        if(!added.isEmpty())runtime.getRecipeManager().addRecipes(WAND_TYPE,added);registeredWands=next;
     }
     public static final RecipeType<RitualDisplays.Entry> TYPE=RecipeType.create(VestigeMainMod.MOD_ID,"spellstone_ritual",RitualDisplays.Entry.class);
     private static boolean active(){return !ModList.get().isLoaded("emi");}
@@ -81,14 +93,15 @@ public final class VestigeJeiPlugin implements IModPlugin {
             @Override public Object getSubtypeData(ItemStack stack,UidContext context){var id=subtype(stack,context);return id.isEmpty()?null:id;}
             @Override public String getLegacyStringSubtypeInfo(ItemStack stack,UidContext context){return subtype(stack,context);}
         };
+        registration.registerSubtypeInterpreter(ScrollItems.WAND.get(),interpreter);
         registration.registerSubtypeInterpreter(ScrollItems.SCROLL.get(),interpreter);
         registration.registerSubtypeInterpreter(ScrollItems.FRAGMENT.get(),interpreter);
     }
     @Override public void registerCategories(IRecipeCategoryRegistration registration) {
-        if(active())registration.addRecipeCategories(new Category(registration.getJeiHelpers().getGuiHelper()));
+        if(active()){registration.addRecipeCategories(new Category(registration.getJeiHelpers().getGuiHelper()),new WandJeiCategory(registration.getJeiHelpers().getGuiHelper()));}
     }
     @Override public void registerRecipes(IRecipeRegistration registration) {
-        if(active()){registered=RitualViewerClient.displays();registration.addRecipes(TYPE,registered);}
+        if(active()){registered=RitualViewerClient.displays();registration.addRecipes(TYPE,registered);registeredWands=WandViewerClient.displays();registration.addRecipes(WAND_TYPE,registeredWands);}
     }
     @Override public void registerExtraIngredients(IExtraIngredientRegistration registration) {
         if(active())registration.addExtraItemStacks(RitualViewerClient.displays().stream().map(VestigeJeiPlugin::viewerStack).toList());
@@ -97,6 +110,8 @@ public final class VestigeJeiPlugin implements IModPlugin {
         if(active()) {
             registration.addRecipeCatalyst(new ItemStack(ApparatusBlocks.SPELLSTONE.get()),TYPE);
             registration.addRecipeCatalyst(new ItemStack(ApparatusBlocks.PLINTH.get()),TYPE);
+            registration.addRecipeCatalyst(new ItemStack(ApparatusBlocks.SPELLSTONE.get()),WAND_TYPE);
+            registration.addRecipeCatalyst(new ItemStack(ApparatusBlocks.PLINTH.get()),WAND_TYPE);
         }
     }
     private static final class Category implements IRecipeCategory<RitualDisplays.Entry> {
@@ -111,10 +126,25 @@ public final class VestigeJeiPlugin implements IModPlugin {
         @Override public void setRecipe(IRecipeLayoutBuilder builder,RitualDisplays.Entry recipe,IFocusGroup focus) {
             for(var offering:recipe.offerings())builder.addSlot(RecipeIngredientRole.INPUT,RitualDiagram.x(recipe,offering.seat()),RitualDiagram.y(recipe,offering.seat()))
                     .addItemStacks(RitualDisplays.alternatives(offering.ingredient()));
+            for(var material:recipe.imbuements())for(var box:ImbuementFrame.hitBoxes(16))
+                builder.addSlot(RecipeIngredientRole.CATALYST,RitualDiagram.x(recipe,material.seat())-9+box.x(),
+                        RitualDiagram.y(recipe,material.seat())-9+box.y()).addItemStack(material.stack())
+                        .setCustomRenderer(VanillaTypes.ITEM_STACK,new FrameIngredient(box.width()));
             builder.addSlot(RecipeIngredientRole.OUTPUT,RitualDiagram.OUTPUT_X,RitualDiagram.OUTPUT_Y).addItemStack(recipe.output());
             builder.addInvisibleIngredients(RecipeIngredientRole.CATALYST).addItemStacks(ApparatusBlocks.SPELLSTONES.values().stream().map(b -> new ItemStack(b.get())).toList());
             builder.addInvisibleIngredients(RecipeIngredientRole.CATALYST).addItemStacks(ApparatusBlocks.PLINTHS.values().stream().map(b -> new ItemStack(b.get())).toList());
         }
         @Override public void draw(RitualDisplays.Entry recipe,IRecipeSlotsView slots,GuiGraphics graphics,double mouseX,double mouseY){RitualDiagram.draw(graphics,recipe);}
+    }
+    /** Hollow rim segments retain JEI's native catalyst focus, lookup and tooltips without drawing another item. */
+    private record FrameIngredient(int width) implements mezz.jei.api.ingredients.IIngredientRenderer<ItemStack> {
+        @Override public int getWidth(){return width;}
+        @Override public int getHeight(){return 1;}
+        @Override public void render(GuiGraphics graphics,ItemStack stack){ }
+        @Override public List<Component> getTooltip(ItemStack stack,net.minecraft.world.item.TooltipFlag flag) {
+            var minecraft=net.minecraft.client.Minecraft.getInstance();
+            var lines=new java.util.ArrayList<>(stack.getTooltipLines(net.minecraft.world.item.Item.TooltipContext.of(minecraft.level),minecraft.player,flag));
+            lines.add(Component.translatable("vestige.viewer.imbuement.retained").withStyle(net.minecraft.ChatFormatting.GRAY));return lines;
+        }
     }
 }
