@@ -1,0 +1,7 @@
+{
+  "fullSuiteSha256": "02eed7341daa7104162f2d83a8dda81d4706383b59a01d478cea9d612cab6e9f",
+  "finalSha256": "201c7974425df87e72c815c63b711b6700e4cb92318de3e48c27542321395b97",
+  "changedEntries": [
+    "com/quzzar/vestige/apparatus/PlinthColumnTest.class"
+  ]
+}

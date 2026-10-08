@@ -1,5 +1,9 @@
 # Native wand and thread art
 
+## October 8 · approved art shipped with native shimmer
+
+All five magical threads now have Minecraft's native cosmetic enchantment shimmer, with the exact approved v6 PNGs and fifteen retained wand layers unchanged. [Actual inventory/JEI frames and animation evidence](thread-shimmer/README.md) confirm the final in-game appearance. The verified combined build is installed in Kithkyn Testing with a previous-jar backup. [Shipping evidence](../../verification/wand-thread-shipping-2026-10-08/README.md) records full and focused gameplay tests, exact hashes and publication scope. Restart Minecraft to load it. Earlier uninstalled/unpublished descriptions below are historical.
+
 ## October 8 · approved Minecraft thread artwork
 
 The owner approved [threads v6](threads-v6/README.md). Its [approval record](threads-v6/approval.json) pins the exact five reviewed PNGs, which remain unchanged. [Minecraft art and pixel scale](../../design/minecraft-art.md) records the reusable workflow and is linked from the project instructions. This pass records approval and documentation without publishing or installing artwork.

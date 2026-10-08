@@ -1,0 +1,85 @@
+{
+  "indexing": {
+    "ritual/ensorcelled_threadOutput": 1,
+    "ritual/ensorcelled_threadCatalyst": 1,
+    "ritual/callous_threadOutput": 1,
+    "ritual/callous_threadCatalyst": 1,
+    "ritual/smoldering_threadOutput": 1,
+    "ritual/smoldering_threadCatalyst": 1,
+    "ritual/laced_threadOutput": 1,
+    "ritual/laced_threadCatalyst": 1,
+    "ritual/consecrated_threadOutput": 1,
+    "ritual/consecrated_threadCatalyst": 1,
+    "frameHover": 1,
+    "stringHover": 1
+  },
+  "source": "Actual Minecraft framebuffer and public viewer APIs",
+  "captures": [
+    {
+      "case": "diamond",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "iron",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "gold",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "emerald",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "glowstone",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "small-diamond",
+      "guiScale": 6,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "small-gold",
+      "guiScale": 6,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "small-glowstone",
+      "guiScale": 6,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "frame-hover",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "string-hover",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "case": "resource-pack-gold",
+      "guiScale": 4,
+      "registeredRituals": 254,
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    }
+  ]
+}

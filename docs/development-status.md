@@ -1,5 +1,11 @@
 # Development status
 
+## October 8 · approved wand/thread shipping and complete chain verification
+
+The five magical threads now use native cosmetic enchantment shimmer while retaining the exact approved v6 16×16 PNGs, stack size 64 and no actual enchantments. The owner-approved wand/thread art, reusable Minecraft art guide, shimmer and two real thread-to-wand-to-paid-cast world cases are published to the scoped wand PR. A flaky plinth ejection test now follows the actual uniquely marked dropped entity after deliberate movement; no production plinth behavior changed.
+
+**Verified and installed:** the frozen combined build passed all **179 unit tests**, **316 required Minecraft world tests**, and a final **17-case** thread/chain/plinth run. The publication branch passed 137 unit/254 world tests and final code CI. Actual client inspection covered four inventory frames, five JEI wand cases and eleven JEI thread cases; paired frames prove moving shimmer with unchanged approved pixels. Installed Kithkyn was used for co-load, and the final client loaded the pack's complete mod set. The combined jar is now installed in **Kithkyn Testing**, with a verified prior-jar backup outside mods; restart Minecraft to load it. [Complete shipping receipt, hashes, logs and limitations](verification/wand-thread-shipping-2026-10-08/README.md), [native appearance](art/wands-native/thread-shimmer/README.md). The scoped PR and combined local snapshot are distinct; later unrelated shared edits are excluded. No merge, new EMI capture, remote multiplayer or encounter-balance verification is claimed.
+
 ## October 8 · Minecraft art workflow and approved threads
 
 The owner accepted the native v6 thread artwork and required the learned Minecraft style/pixel-ratio discipline to persist. [Minecraft art and pixel scale](design/minecraft-art.md) is now linked from the repository instructions, documentation index and existing spell-art direction document. It requires pinned vanilla references, destination-grid authoring, exported-pixel inspection, consistent material shading and actual client comparison. It records the source/export mismatch and rejected sparse-shading lessons without treating palette/occupancy checks as visual acceptance.
