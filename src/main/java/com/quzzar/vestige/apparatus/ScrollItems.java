@@ -34,7 +34,7 @@ public final class ScrollItems {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, VestigeMainMod.MOD_ID);
     public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<SpellWandItem> WAND = ITEMS.register("wand", () -> new SpellWandItem(new Item.Properties().durability(20)));
-    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY).rarity(Rarity.RARE)));
+    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY).rarity(Rarity.RARE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final DeferredItem<Item> DISSENTIENT_DIAMOND = ITEMS.register("dissentient_diamond", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<ScrollFragmentItem> FRAGMENT = ITEMS.register("scroll_fragment", () -> new ScrollFragmentItem(new Item.Properties()));

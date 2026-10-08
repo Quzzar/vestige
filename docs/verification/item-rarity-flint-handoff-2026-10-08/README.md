@@ -7,7 +7,7 @@ Publication base: `4efe9f9de38ac3b14d90d18c93b6d9ab506355af` (`origin/main` when
 ## Transfer
 
 1. Apply or merge [the scoped patch](scoped-changes.patch): **24 files**, including the binary Flint texture. It contains only this chat’s source, tests, authoring and document changes. It was applied successfully to an isolated exact-base copy and every resulting file matched its scoped target hash.
-2. Copy the **68 new archived files** listed individually in `transferEvidence` in the manifest. These hold the rarity receipt, Flint v2 source/prompt/export/native evidence, and Diamond v10 source provenance referenced by the already-merged v11 approval. Hash each copied file. The **32 v11 evidence files** already in base are unchanged.
+2. Copy the **81 new archived files** listed individually in `transferEvidence` in the manifest. These hold the rarity receipt, Flint v2 source/prompt/export/native evidence, and Diamond v10 source provenance referenced by the already-merged v11 approval. Hash each copied file. The **32 v11 evidence files** already in base are unchanged.
 3. Preserve the other chats’ current shared-file changes while merging. Entries with `copyWholeRootFile: false` are deliberately synthesized from the publication base plus only this chat’s owned hunks; their root reference hashes include other work and are not whole-file transfer instructions.
 4. Include this README, manifest and scoped patch as the handoff record if retaining publication provenance. Rebuild the final combined package in the publication checkout; the earlier review JAR is a historical snapshot.
 
@@ -24,12 +24,12 @@ Publication base: `4efe9f9de38ac3b14d90d18c93b6d9ab506355af` (`origin/main` when
 | `docs/design/robe-behavior-review.md` | Only approved native item-name rarity paragraph. Excludes other-chat art/model or robe proposal changes. |
 | `docs/design/staff-crafting.md` | Only approved native item-name rarity paragraph. Excludes other-chat art/model or robe proposal changes. |
 | `docs/design/wayfarer-imbuement-review.md` | Only approved Uncommon base rarity row. |
-| `docs/development-status.md` | Only this chat’s Flint continuation and rarity verification entries. Excludes all other new development entries. |
+| `docs/development-status.md` | Only this chat’s Flint shimmer, recipe continuation and rarity verification entries. Excludes all other new development entries. |
 | `src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java` | New ordinary four-inner-seat Diamond/Gunpowder/Skull/Gunpowder matcher; one output; whole rotations. |
 | `src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java` | Only ingredients(): Flint/Netherite/Dissentient Diamond/Netherite. Existing unordered repair unchanged. |
 | `src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java` | One actual two-stage construction world case; atomic duplicate consumption, rotation, sockets and inactive outer inputs. |
 | `src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java` | Only the Dissentient Diamond construction branch immediately before Flint construction. Excludes other-chat Hourglass branch. |
-| `src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java` | Six reviewed native rarity property additions only. Excludes other-chat Hourglass registration and creative entry. Diamond registration/Uncommon rarity already in base. |
+| `src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java` | Six reviewed native rarity property additions plus owner-requested Fluxed Flint default enchantment shimmer. Excludes other-chat Hourglass registration and creative entry. Diamond registration/Uncommon rarity already in base. |
 | `src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java` | Repeated ingots give eight labeled arrangements of four distinct rotated patterns; repair audit unchanged. |
 | `src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java` | Opt-in inventory comparison and actual server-tick completion wait; gameplay timings unchanged. |
 | `src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java` | Only ordinary Diamond output mapping and dissentientDiamond() live-pattern entry. Excludes other-chat Hourglass output fallback. |
@@ -47,12 +47,13 @@ Publication base: `4efe9f9de38ac3b14d90d18c93b6d9ab506355af` (`origin/main` when
 - `docs/art/fluxed-flint-v2/` — 21 new files, including the retained failed timing attempt as historical diagnostic evidence, not final verification.
 - `docs/art/dissentient-diamond-v10/` — 28 new source/provenance files referenced by v11. V10’s texture is byte-identical to approved v11; the GUI alignment lives in the v11 model.
 - `docs/art/dissentient-diamond-v11/` — all 32 files already merged and unchanged; retains explicit owner acceptance and exact pins.
+- `docs/verification/fluxed-flint-glint-2026-10-08/` — owner-requested shimmer follow-up, native captures, source/package hashes and build log.
 
 Java files inside these evidence folders are archived fixtures. They are not production replacements. In particular, never transfer a preview collision bypass into `src/`.
 
 ## Acceptance and verification
 
-The item rarities and exact Diamond v11 pixels/alignment are explicitly approved. The human authorized resuming Flint with the discussed recipe and blue accents. The new blue Flint pixels have passed native review but **explicit final owner pixel selection is still pending**. Existing 128-point budget, 25% cap and Volatile 2 remain unchanged playtest tuning; no stabilization choice was invented.
+The item rarities and exact Diamond v11 pixels/alignment are explicitly approved. The human authorized resuming Flint with the discussed recipe and blue accents, then explicitly requested its native magical shimmer. The owner subsequently requested closeout and explicitly authorized the completed package for final release with its native shimmer; `docs/art/fluxed-flint-v2/approval.json` retains that context and pins the current exact artwork. Earlier verification receipts retain their original review status. Existing 128-point budget, 25% cap and Volatile 2 remain unchanged playtest tuning; no stabilization choice was invented.
 
 The rarity pass recorded **202 unit tests and 84 native assertions**. The later combined snapshot recorded **211 unit tests**, **26 focused required Minecraft tests**, and **five final native assertions**, with exact component preservation and both stages of the real construction chain covered. Current scoped Flint sources/resources still match that frozen verification snapshot. The manifests link full logs, screenshots, hashes and limitations. This chat did not install or publish a build.
 

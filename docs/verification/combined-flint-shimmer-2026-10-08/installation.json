@@ -1,0 +1,10 @@
+{
+  "pack": "Kithkyn Testing",
+  "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+  "backupPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261008-170303-fluxed-flint-shimmer/vestige-0.1.0.jar",
+  "previousSha256": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+  "restartRequired": true,
+  "userWorldsChanged": false,
+  "otherModJarsChanged": false
+}

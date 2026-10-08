@@ -1,5 +1,11 @@
 # Development status
 
+## October 8 · final combined Hourglass and Flint shimmer installation
+
+The owner authorized the final Fluxed Flint package in the item-rarity chat. Its native enchantment shimmer is now included with the merged Kairotic Hourglass in **Kithkyn Testing**. The blue Flint art and all gameplay remain unchanged; the final JAR differs from the preceding Hourglass installation in **only `ScrollItems.class`**. [Final receipt and installation hashes](verification/combined-flint-shimmer-2026-10-08/README.md).
+
+**Verified:** fresh combined **211 unit tests across 46 suites**, packaging and Kithkyn compatibility. Four Flint classes and four resources match the five-assertion native preview. The unchanged gameplay retains the Hourglass shipment's **365 required Minecraft tests with Kithkyn**; no new local world-suite or co-loaded client run is claimed for the shimmer-only follow-up. Completed-package owner authorization supersedes the earlier pending Flint-art selection; Hourglass pixels remain a native-reviewed candidate. Restart Minecraft to load the final combined JAR.
+
 ## October 8 · Kairotic Hourglass implemented and verified
 
 The owner requested completing the selected item with its settled imbuements. The [Kairotic Hourglass](design/kairotic-hourglass.md) now returns position within the current dimension: **15 game seconds, 60 mana, ten maximum durability and one wear per successful use**. Direct-inventory/offhand ticks record a bounded player-owned trail; partial history uses its oldest available sample. Ordered Clock → Glass → Echo Shard → Ender Pearl construction supports all **36** temporal/vessel/payment sets, retained sockets, saved geometry and one italic compound adjective. Shared typed XP and atomic source payment preserve the common trait/runtime foundation. Failed, blocked, canceled or redirected returns are silent and free.

@@ -1,0 +1,44 @@
+{
+  "tests": {
+    "suites": 46,
+    "tests": 211,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jar": "/private/tmp/vestige-hourglass-publication-build/libs/vestige-0.1.0.jar",
+  "jarSha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+  "priorInstalledSha256": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+  "onlyChangedJarEntries": [
+    "com/quzzar/vestige/apparatus/ScrollItems.class"
+  ],
+  "nativeClassesEqualPackage": {
+    "com/quzzar/vestige/apparatus/ScrollItems.class": "f54864302df6754821055fd0cad504406109c6a5cedab85d8dd5cd35a4b28517",
+    "com/quzzar/vestige/apparatus/FluxedFlintItem.class": "ff5a95b979096a7092676da47c2a34cdd42e30b8c83c3be37aed7718225733ab",
+    "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class": "61da39b234bb68bee97a3ed85a016cd069c32aaf64836c6a27f9136d66cabe5d",
+    "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class": "b7fe5bd45498767a93166cb1e7ca1d3e5be0bc2c37406e9a79531dcb2c04be32"
+  },
+  "assetsUnchangedAndEqualPackage": {
+    "src/main/resources/assets/vestige/textures/item/fluxed_flint.png": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+    "src/main/resources/assets/vestige/models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+    "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+    "src/main/resources/assets/vestige/models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c"
+  },
+  "date": "2026-10-08",
+  "publicationBase": "1117a6afc33e9778716cd2372ea42c6454c7435f",
+  "branch": "codex/fluxed-flint-shimmer",
+  "build": "BUILD SUCCESSFUL in 2m 2s; test build verifyKithkynCompatibility",
+  "inheritedWorldEvidence": "Hourglass publication passed all 365 required Minecraft tests with Kithkyn. Final shimmer changes only ScrollItems.class.",
+  "nativeEvidence": "Four Flint classes and four assets match the five-assertion native preview. No new co-loaded client or local world-suite run for this cosmetic follow-up.",
+  "ownerApproval": "docs/art/fluxed-flint-v2/approval.json",
+  "installation": {
+    "pack": "Kithkyn Testing",
+    "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "sha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+    "backupPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261008-170303-fluxed-flint-shimmer/vestige-0.1.0.jar",
+    "previousSha256": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+    "restartRequired": true,
+    "userWorldsChanged": false,
+    "otherModJarsChanged": false
+  }
+}

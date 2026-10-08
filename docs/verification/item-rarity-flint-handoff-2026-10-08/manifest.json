@@ -1,10 +1,10 @@
 {
   "date": "2026-10-08",
   "baseCommit": "4efe9f9de38ac3b14d90d18c93b6d9ab506355af",
-  "ownership": "This chat: approved item-name rarities; approved Dissentient Diamond art/registration; authorized Fluxed Flint recipe continuation and blue-accent implementation.",
+  "ownership": "This chat: approved item-name rarities; approved Dissentient Diamond art/registration; authorized Fluxed Flint recipe continuation, blue accents and requested native enchantment shimmer.",
   "patch": {
     "path": "docs/verification/item-rarity-flint-handoff-2026-10-08/scoped-changes.patch",
-    "sha256": "bf8629d9ea9b873f53494f65b5ab3fa11653de2c69952c3adcb12556d05b723d",
+    "sha256": "7fbe8456b95a6cacd2da2b23c44fc814bf6e743e32ea73ff18cbd476e0387b09",
     "files": 24,
     "scope": "24 source/resource/tool/test/document files only; archived evidence must additionally be copied from transferEvidence.",
     "validatedAgainstExactBase": true,
@@ -36,7 +36,7 @@
       "scope": "Only accepted item-name rarities section and lifted Flint hold in its audit row. Excludes other-chat robe proposals/benchmarks.",
       "baseSha256": "9e6afcc68b984adc44c79d0d90febd5a840efa06980091ca8db3a2ba5ac748b4",
       "scopedTargetSha256": "d9d5d44f41e315f03d23b7b47a904b1d5388a06c07b98cd1ea813f56eed85667",
-      "rootReferenceSha256": "51970a1fff114a48a2e8c3911d3bedd122e3fa1aefacdabb021c2452a2222355",
+      "rootReferenceSha256": "bc4668668b1f9475905e2937aa2b98ff8f16c1e40759ddfd6bf6acd604887539",
       "copyWholeRootFile": false
     },
     {
@@ -44,8 +44,8 @@
       "action": "modify",
       "scope": "Current recipe chain, rarity, lifted hold, unchanged repair/volatility semantics and separate new-pixel review boundary.",
       "baseSha256": "8540ff7f2476b11956466c1e0001af29c519f899fb6c57ed0e96f13045965730",
-      "scopedTargetSha256": "a180b4862fd59474d22b256d6a8e9e197f6da6785e7b3b7db828ace715241c36",
-      "rootReferenceSha256": "a180b4862fd59474d22b256d6a8e9e197f6da6785e7b3b7db828ace715241c36",
+      "scopedTargetSha256": "3aa47a3d3c196f8b2953bcf933cdc8e61f03f5d6b728b4d9932c2e75de017371",
+      "rootReferenceSha256": "3aa47a3d3c196f8b2953bcf933cdc8e61f03f5d6b728b4d9932c2e75de017371",
       "copyWholeRootFile": true
     },
     {
@@ -72,7 +72,7 @@
       "scope": "Only approved native item-name rarity paragraph. Excludes other-chat art/model or robe proposal changes.",
       "baseSha256": "43b8a701551cbd179fbf3e6dd34ffe478222e6eabe162d9da9d146a93feae3ff",
       "scopedTargetSha256": "f0a6a0b5cc6d6614f942fc176869eb80a4052e38fdb5d5d87d0041c574728174",
-      "rootReferenceSha256": "2302303226849dc4455885e8bbf4d34e18431ccb3b3e33d9ca0eada721e9bdb9",
+      "rootReferenceSha256": "392dcce6dd94bdcb896d28dff5f8d2a93b2a3fa7a567c8885ffdaea46167c0ce",
       "copyWholeRootFile": false
     },
     {
@@ -96,10 +96,10 @@
     {
       "path": "docs/development-status.md",
       "action": "modify",
-      "scope": "Only this chat’s Flint continuation and rarity verification entries. Excludes all other new development entries.",
+      "scope": "Only this chat’s Flint shimmer, recipe continuation and rarity verification entries. Excludes all other new development entries.",
       "baseSha256": "7e8233024422c318a990d032fd8630baeb8b774c640129123e06295b15f42db0",
-      "scopedTargetSha256": "20126dec69a0755708eb8bf7b8809e490ddaf8358b251bfd181ce78d64acbe99",
-      "rootReferenceSha256": "bfba9c61b21445f5d01e059b14b2f7e6f4cbc645a0ca9b9cf0eb5a8482a41bf1",
+      "scopedTargetSha256": "009d15e6240d0cfd163cac90a6792205d157d9ec16de51c755a957b7d54194c9",
+      "rootReferenceSha256": "bcee149b3fa6a2d5c3d5a346158edebb81dc9cdeab22cc98553504eed2211128",
       "copyWholeRootFile": false
     },
     {
@@ -141,10 +141,10 @@
     {
       "path": "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java",
       "action": "modify",
-      "scope": "Six reviewed native rarity property additions only. Excludes other-chat Hourglass registration and creative entry. Diamond registration/Uncommon rarity already in base.",
+      "scope": "Six reviewed native rarity property additions plus owner-requested Fluxed Flint default enchantment shimmer. Excludes other-chat Hourglass registration and creative entry. Diamond registration/Uncommon rarity already in base.",
       "baseSha256": "bdf00bee918c5e1b60838d3c1546b6d6676a9ee967d17b77472db9861347294f",
-      "scopedTargetSha256": "b845c57ec37cbb879607a6e297d5943bca0be4b4f63f5dfd3494194ad66ad319",
-      "rootReferenceSha256": "15419b3bac3d2f6ad5935adef0b341d199aaca3bb694969182da29ecdfa13d8e",
+      "scopedTargetSha256": "506b342f48633ba174ca25a16454131969d731329c918aaf49ee52ac7663f255",
+      "rootReferenceSha256": "fddaa68f15a93cbacf05541655c8580d97dd7f7eb8960b006816eba79a732317",
       "copyWholeRootFile": false
     },
     {
@@ -467,8 +467,13 @@
     },
     {
       "path": "docs/art/fluxed-flint-v2/README.md",
-      "sha256": "399919a298162901f0fd45dadabc0a8cf03d10aaa567d058ff5a9e7079896102",
-      "bytes": 2434
+      "sha256": "b8d8ca2b0cc98d3641415a5ca0b3d7f341f827618674dcf8ee87566e8e9a1ecb",
+      "bytes": 3254
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/approval.json",
+      "sha256": "30ea5cdb01df3142dc70cda35c54881367af367481abbfa6000ab673e0413f86",
+      "bytes": 1607
     },
     {
       "path": "docs/art/fluxed-flint-v2/edit-target-32x.png",
@@ -482,8 +487,8 @@
     },
     {
       "path": "docs/art/fluxed-flint-v2/export.json",
-      "sha256": "52e9652c0d0058c3f645a1a8d557d80c637c91da44c619e03ccfea69d66f73cd",
-      "bytes": 1062
+      "sha256": "caf47201a3c232d727871091a61bac04894f109b2e9e68e2b63710a01b06cd17",
+      "bytes": 1173
     },
     {
       "path": "docs/art/fluxed-flint-v2/fluxed-flint-16.png",
@@ -569,6 +574,66 @@
       "path": "docs/art/fluxed-flint-v2/vanilla-diamond.png",
       "sha256": "b27b081fde6a794dfb52d37f4ab2a86931ce127323f786a27cea41d2dbe913a2",
       "bytes": 208
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/README.md",
+      "sha256": "a8b4db3d699a7452ebbbeb878fba974f7299c1b00ec40d4f97f77447fbd0c813",
+      "bytes": 2875
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/build.log.gz",
+      "sha256": "15200ff2491acc0e21ca5894956ce1c5a85860993e6a57d552b0a2db7af4d7e5",
+      "bytes": 2451
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/glint-release-followup.patch",
+      "sha256": "0feb21f8e119df9bcedb7b79aad681f4637fd549f9bd2994dcb3bb655d71fdd2",
+      "bytes": 1727
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/durability-after-repair.png",
+      "sha256": "b32cf310f9a9811abdb8276ae5971d6c67baeb2e9406e1ce8e370110dc5c5c43",
+      "bytes": 331524
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/held-and-offered.png",
+      "sha256": "422a5a423a8823ac03f54dc86d36b31933bab3863e8deba074443dfb75940018",
+      "bytes": 423655
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/inventory-beside-vanilla.png",
+      "sha256": "2d7078265366f8b1428634425a4e0836a08a3f2d5bd85cc98e885845afb63ad4",
+      "bytes": 338915
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/repair-in-progress.png",
+      "sha256": "fd410e10dc9d5da53284fe1d59aed669915094dc6d6eae0c45cd46a284cfc310",
+      "bytes": 429341
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/repaired-output.png",
+      "sha256": "eafe92d54d76c044fd6e02eb80f7ffffd105080b2627ce14e007c1a981bb2f6c",
+      "bytes": 397433
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native/verification.json",
+      "sha256": "9dc0d87fe8325e8a87b788931499dfdf37a67c4755bd1c4fd9b13d2552739ea1",
+      "bytes": 847
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/native.log.gz",
+      "sha256": "8d12619da3b4a210a3ea1d749ac14f1c71f93e9f04598d9c78176ae6212e6b56",
+      "bytes": 15335
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/release-followup.json",
+      "sha256": "09fe70c5881f3da3b78f58e5574ab92323fa69ed21ea36b5f555215183220efd",
+      "bytes": 1221
+    },
+    {
+      "path": "docs/verification/fluxed-flint-glint-2026-10-08/verification.json",
+      "sha256": "7a2b748e0d663ea239d32e6b26e33fac71f76ccd6e14c781f2b723e4ab035133",
+      "bytes": 2791
     }
   ],
   "evidenceAlreadyInBase": [
@@ -777,7 +842,8 @@
     "diamondPixelsAndAlignment": "Human explicitly selected and locked v11; exact texture/model hashes retained in its approval.json.",
     "diamondIngredients": "Human selected one Diamond, two Gunpowder and one Wither Skeleton Skull.",
     "flintContinuation": "Human requested continuing Fluxed Flint after Diamond and rarity work; implements discussed Flint + two Netherite Ingots + intermediate and blue accents.",
-    "blueFlintFinalPixelSelection": "Pending explicit final owner selection; native appearance reviewed, implementation direction authorized. Do not describe these exact new pixels as owner-locked.",
+    "nativeShimmer": "Human explicitly requested: put the magic effect on this, like the glowing effect. Implemented as vanilla enchantment glint without adding an enchantment.",
+    "blueFlintFinalPixelSelection": "Owner requested completed-package closeout and explicitly authorized final release with the native shimmer; exact current artwork and wording retained in docs/art/fluxed-flint-v2/approval.json. This records package authorization, without inventing a literal pixel-lock quotation.",
     "balance": "128 repair points, 25% per-operation cap and Volatile 2 unchanged; still playtest tuning. No stabilization imbuements added."
   },
   "verification": {

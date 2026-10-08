@@ -62,7 +62,7 @@ index 321bdd3..46bcef2 100644
  Wayfarer Boots now implement this path, including four compatible contributions, shared adjective naming, trusted selections, actor trait scaling, typed mana/recovery and durability. Dawnsight Hood, Patchwork Robes, Spiderstep Boots and the selected Kairotic Hourglass still require this path before implementation. Their unapproved controls, values and material selectors remain review decisions. Preserve the hourglass's accepted 60-mana / ten-durability / one-wear baseline.
  
 diff --git a/docs/design/magical-repair.md b/docs/design/magical-repair.md
-index 77116bc..bb08545 100644
+index 77116bc..ce26b0e 100644
 --- a/docs/design/magical-repair.md
 +++ b/docs/design/magical-repair.md
 @@ -1,10 +1,8 @@
@@ -74,11 +74,11 @@ index 77116bc..bb08545 100644
 -**Owner direction, October 8, 2026; first implementation for playtesting.** Fluxed Flint is the selected name for the expensive, volatile repair catalyst. The owner accepted finite catalyst durability, exact target preservation except improved damage, and the shared input-volatility failure rule. Numerical balance and the recipe below are initial implementation choices, not owner-approved final tuning.
 -
 -**Owner design hold, October 8:** pause further Fluxed Flint recipe and artwork changes while defining the reusable **Dissentient Diamond** intermediate below. The owner favors Gunpowder as a volatility/chaos ingredient and proposed a later Flint recipe using two Netherite Ingots, one Flint and that intermediate, with diamond-blue accents replacing the current violet. The revised Flint composition and recolor remain proposals, not implemented or final. The existing playtest implementation remains available; this hold does not disable it.
-+**Owner direction, October 8; first implementation for playtesting.** Fluxed Flint is the selected name for the expensive, volatile repair catalyst. The owner accepted finite catalyst durability, exact target preservation except improved damage, and the shared input-volatility failure rule. The 128-point budget, 25% operation cap and Volatile 2 remain initial playtest tuning. The original violet artwork is superseded by the [diamond-blue revision](../art/fluxed-flint-v2/README.md); its exact silhouette and five stone shades are preserved. Final owner selection of the new pixels remains separate from implementation and native verification.
++**Owner direction, October 8; first implementation for playtesting.** Fluxed Flint is the selected name for the expensive, volatile repair catalyst. The owner accepted finite catalyst durability, exact target preservation except improved damage, and the shared input-volatility failure rule. The 128-point budget, 25% operation cap and Volatile 2 remain initial playtest tuning. The original violet artwork is superseded by the [diamond-blue revision](../art/fluxed-flint-v2/README.md); its exact silhouette and five stone shades are preserved. The owner subsequently requested closeout and authorized shipping the completed package with its final native shimmer; [the authorization record](../art/fluxed-flint-v2/approval.json) pins the current artwork separately from verification and delivery.
  
  The owner's correction also applies to material attribution: Echo Shard makes Timeless Slurry, which combines with Pyrium in specific Iron restoration recipes, but those recipes do not establish that either ingredient universally supplies restoration. Likewise, a healing ingredient paired with Amethyst does not establish Amethyst as the source of healing. [Pinned material facts](../research/iron-material-uses.md) remain distinct from new Vestige ingredient conventions. Diamond's pinned Jewelry parameters include Armor and a magic-damage action; the explicit Spell Power attribute belongs to Mithril. Gunpowder's proposed broader identity does not automatically make every existing Gunpowder offering volatile.
  
-@@ -12,13 +10,15 @@ The owner's correction also applies to material attribution: Echo Shard makes Ti
+@@ -12,13 +10,17 @@ The owner's correction also applies to material attribution: Echo Shard makes Ti
  
  **Owner selection, October 8:** the reusable intermediate is named **Dissentient Diamond** and uses **one Wither Skeleton Skull, two Gunpowder and one Diamond**. The two Gunpowder units are intentional. This replaces the earlier Ender Pearl suggestion; Soul Sand, Echo Shard, Crying Obsidian and Nether Star were discussed as alternatives, not selected ingredients.
  
@@ -92,6 +92,8 @@ index 77116bc..bb08545 100644
  
 -Craft one Fluxed Flint by offering **one Flint, one Diamond Block, one Netherite Ingot and one Echo Shard** in that clockwise order on the four inner Plinths around an empty Spellstone. Whole rotations match; outer nodes are inactive and socket materials are retained. This provisional composition predates the design hold above. Echo Shard's upstream Timeless Slurry use was recipe inspiration, not evidence of an inherent restoration property; this is an original native recipe, without an Iron dependency or copied quality system. Both optional recipe viewers expose this public construction recipe.
 +**Item-name rarity, owner approved October 8:** Fluxed Flint uses native Rare/aqua. This changes its name presentation only; finite repair budget and Volatile 2 are unchanged. See the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
++
++**Owner presentation follow-up, October 8:** Fluxed Flint has the native enchantment shimmer through its default `ENCHANTMENT_GLINT_OVERRIDE` component, including ordinary crafted stacks. This is a visual effect; it adds no enchantment or new enchantment support. The diamond-blue texture/model, name rarity, repair budget and volatility are unchanged. Dissentient Diamond remains an ordinary ingredient without shimmer.
 +
 +Craft one Fluxed Flint by offering **one Flint, one Netherite Ingot, one Dissentient Diamond and one Netherite Ingot** in that clockwise order on the four inner Plinths around an empty Spellstone. Whole rotations match; the two identical ingots give the pattern a natural reflection symmetry. Outer nodes are inactive and socket materials are retained. Both optional recipe viewers expose this public construction recipe and the intermediate's recipe. Dissentient Diamond supplies the reusable fractured-crystal ingredient identity; no Iron dependency or generic ingredient-quality system is introduced.
  
@@ -166,12 +168,19 @@ index eead65f..f1292e2 100644
  | Burst | 3 seconds at +20% movement speed |
  | Landing benefit | During the burst, prevent up to 4 HP / two hearts of damage on one landing; unused protection expires with the burst |
 diff --git a/docs/development-status.md b/docs/development-status.md
-index 16d7c82..45df5bb 100644
+index 16d7c82..98aa960 100644
 --- a/docs/development-status.md
 +++ b/docs/development-status.md
-@@ -1,5 +1,23 @@
+@@ -1,5 +1,30 @@
  # Development status
  
++## October 8 · Fluxed Flint enchantment shimmer
++
++The owner requested the magical glowing effect on Fluxed Flint. Its registered item now defaults to Minecraft's native enchantment shimmer, matching the magical threads. This adds no enchantment or enchantment eligibility; blue texture/model, Rare name, recipe chain, repair budget and volatility are unchanged. Dissentient Diamond remains an ordinary ingredient without shimmer.
++
++**Verified:** the frozen build passes **211 tests across 46 suites**. All **five existing native repair assertions** pass, and updated inventory, held/offered, lift, output and durability frames were inspected. Relevant native classes match the staged review JAR; the four Flint/Diamond assets retain their prior hashes and match the package. Original isolated collision source was restored after the documented art-only preview; the root and staged artifact retain production collision. [Receipt, client images and logs](verification/fluxed-flint-glint-2026-10-08/README.md). No new world suite, Kithkyn co-load, installation or publication is claimed for this cosmetic follow-up.
++
++
 +## October 8 · Fluxed Flint recipe chain and diamond-blue artwork
 +
 +The owner resumed Fluxed Flint after approving Dissentient Diamond and completing item rarities. The intermediate now crafts one item through **Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder**; Flint construction becomes **Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot**. Both use the existing four-inner-Plinth ordered ritual, whole quarter-turns, retained sockets and ordinary atomic output. Duplicate units occupy separate seats; both public viewer patterns follow the actual matchers. This retires the provisional Diamond Block/Echo Shard route. Flint's repair budget, cap, Volatile 2, exact target metadata copying and unordered repair on either ring remain unchanged.
@@ -280,7 +289,7 @@ index b2cfb15..b153ccf 100644
              if (!flints.isEmpty()) {
                  if (flints.size()!=1) return Outcome.INVALID;
 diff --git a/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java b/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
-index 6a2b662..f3ddd6d 100644
+index 6a2b662..11d28f3 100644
 --- a/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
 +++ b/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
 @@ -34,19 +34,19 @@ public final class ScrollItems {
@@ -288,7 +297,7 @@ index 6a2b662..f3ddd6d 100644
      public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(16)));
      public static final DeferredItem<SpellWandItem> WAND = ITEMS.register("wand", () -> new SpellWandItem(new Item.Properties().durability(20)));
 -    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY)));
-+    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY).rarity(Rarity.RARE)));
++    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY).rarity(Rarity.RARE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
      public static final DeferredItem<Item> DISSENTIENT_DIAMOND = ITEMS.register("dissentient_diamond", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
 -    public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40)));
 +    public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40).rarity(Rarity.UNCOMMON)));
