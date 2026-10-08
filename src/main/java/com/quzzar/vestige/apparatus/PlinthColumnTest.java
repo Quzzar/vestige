@@ -81,8 +81,18 @@ public final class PlinthColumnTest {
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL),center)==RitualCrafting.Outcome.CRAFTING,"Column caps reject normal recipe");
         var covered=layout.stands().get(0);var original=covered.displayedItem().copy();
         h.setBlock(layout.stands().get(0).getBlockPos().above().subtract(h.absolutePos(BlockPos.ZERO)),ApparatusBlocks.PLINTH.get());
+        // [DEBUG-shipping-drop] Replay a legitimate moved drop outside the delayed local query.
+        var ejected=h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(2),e->ItemStack.matches(e.getItem(),original));
+        h.assertTrue(ejected.size()==1,"No single immediate ejection");
+        ejected.getFirst().setPos(ejected.getFirst().position().add(0,0,-3));
         h.runAfterDelay(65,()->{
-            h.assertTrue(RitualTestOutput.stack(center).isEmpty() && covered.displayedItem().isEmpty() && layout.items().stream().filter(i->!i.isEmpty()).count()==3 && h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(2),e->ItemStack.matches(e.getItem(),original)).size()==1 && layout.blocks().stream().noneMatch(OfferingBlockEntity::busy),"Covering active surface consumed ingredients or retained lock");h.succeed();
+            h.assertTrue(RitualTestOutput.stack(center).isEmpty(),"Covered craft produced an output");
+            h.assertTrue(covered.displayedItem().isEmpty(),"Covered cap retained its offering");
+            h.assertTrue(layout.items().stream().filter(i->!i.isEmpty()).count()==3,"Covered craft consumed remaining offerings");
+            var nearby=h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(2),e->ItemStack.matches(e.getItem(),original));
+            var region=h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(12),e->ItemStack.matches(e.getItem(),original));
+            h.assertTrue(nearby.size()==1,"Ejected item count near="+nearby.size()+", region="+region.stream().map(e->e.getItem()+"@"+e.position()).toList()+", source="+covered.getBlockPos());
+            h.assertTrue(layout.blocks().stream().noneMatch(OfferingBlockEntity::busy),"Covered craft retained locks");h.succeed();
         });
     }
 }
