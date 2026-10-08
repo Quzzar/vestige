@@ -1,0 +1,13 @@
+{
+  "status": "Owner authorized release coordination; final shimmer rebuild/install/publication requested",
+  "productionFile": "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java",
+  "patch": "glint-release-followup.patch",
+  "publicationBaseSourceSha256": "15419b3bac3d2f6ad5935adef0b341d199aaca3bb694969182da29ecdfa13d8e",
+  "testedTargetSourceSha256": "fddaa68f15a93cbacf05541655c8580d97dd7f7eb8960b006816eba79a732317",
+  "installedJarSha256AtAudit": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+  "audit": "Installed texture/model assets and FluxedFlintItem/Recipe/NativeFlintCapture classes match the tested glint build. ScrollItems registration differs by exactly the default glint component. Installed combined build passed 211 unit tests and 365 Minecraft tests with Kithkyn, per its receipt.",
+  "requiredFollowup": "Release chat should add the one-line default-glint change, rebuild and update the testing build through its existing publication process. Do not replace it with the older isolated review JAR.",
+  "sourceReceipt": "verification.json",
+  "ownerAuthorization": "Yeah, go for it. Go for it, go for it.",
+  "releaseThreadId": "01a0fe8e-212b-7190-97fd-162454bd02aa"
+}

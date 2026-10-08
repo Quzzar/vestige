@@ -8,6 +8,10 @@ The [production PNG](fluxed-flint-16.png) is literal **16×16 RGBA**, with **82 
 
 The [current repair/recipe design](../../design/magical-repair.md) records the new ingredient chain. Native client review, tests and packaging are recorded in the [implementation receipt](../../verification/fluxed-flint-v2-2026-10-08/README.md). Native review is separate from final owner acceptance of this new art revision. No new glint, overlay or custom repair UI was added.
 
+**Owner closeout, October 8:** after the final shimmer implementation, the owner requested closing out Fluxed Flint and explicitly authorized the release chat to include that last change. The [completed-package authorization](approval.json) pins these exact unchanged texture/model hashes and retains the owner's wording. Earlier receipts below describe their original review status; final publication and testing-pack delivery are tracked separately.
+
+**Owner follow-up, October 8:** the owner subsequently requested the magical glowing effect. Fluxed Flint now uses vanilla's animated enchantment shimmer over these same unchanged pixels. The original captures below predate that addition; the [shimmer follow-up receipt](../../verification/fluxed-flint-glint-2026-10-08/README.md) records the updated client review.
+
 ## Native review
 
 The [actual inventory](native/inventory-comparison-crop.png) shows the registered blue Flint beside vanilla Flint, Diamond, approved Dissentient Diamond and Netherite Ingot at GUI scale 3. This is an unresampled crop; its full source framebuffer is [retained here](native/inventory-beside-vanilla.png). [Held/offered](native/held-and-offered.png), [ritual lift](native/repair-in-progress.png), [dropped repaired Staff](native/repaired-output.png) and [final native durability bars](native/durability-after-repair.png) were also inspected. All [five client assertions](native/verification.json) pass and loaded resource hashes match production and the packaged review JAR.

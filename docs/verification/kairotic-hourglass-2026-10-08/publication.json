@@ -1,0 +1,23 @@
+{
+  "pullRequest": "https://github.com/Quzzar/vestige/pull/4",
+  "state": "MERGED",
+  "mergedAt": "2026-10-08T20:56:17Z",
+  "mergeCommit": "1117a6afc33e9778716cd2372ea42c6454c7435f",
+  "verifiedHead": "db7f9b4757943d873e0a66bbe89c01c49025513a",
+  "githubChecks": {
+    "run": "https://github.com/Quzzar/vestige/actions/runs/37842725096",
+    "build": "success",
+    "cast-gallery": "success"
+  },
+  "installation": {
+    "pack": "Kithkyn Testing",
+    "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "sha256": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+    "backupPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261008-164948-kairotic-hourglass/vestige-0.1.0.jar",
+    "previousSha256": "3ba781c1883c9eaf473cb22b29507090d2cd7dc2a64957a1b8e116105fd4e353",
+    "restartRequired": true,
+    "userWorldsChanged": false,
+    "otherModJarsChanged": false
+  },
+  "recordType": "Post-merge local delivery receipt; implementation and verification evidence committed in PR #4"
+}
