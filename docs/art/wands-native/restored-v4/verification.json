@@ -1,0 +1,246 @@
+{
+  "status": "Previous v4 wand artwork restored locally; uncommitted, not published or installed",
+  "ownerDirection": "Return toward the previous wand appearance; rope/thread artwork needs separate rework",
+  "sourceArtwork": "../source-art/wand-components-v4.png",
+  "sourceArtworkSha256": "9de7355c80128160f2dd43e4c90f1794d0ef5fd711dc38dca42308aaa1911417",
+  "all15WandTexturesExactlyMatchV4": true,
+  "all63ConnectedAndPadded": true,
+  "actualTextureSize": [
+    16,
+    16
+  ],
+  "layers": [
+    {
+      "file": "textures/item/wands/base_stick.png",
+      "sha256": "716f1a38e5664bdf91d652576f99dca0fc8354bd689ab0782eb1729b0c95e146",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bamboo.png",
+      "sha256": "ab5345c0ff4d1443e554cfc777b12dfd37d5072a7543f58302ad401426c1cdd9",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bone.png",
+      "sha256": "c99b2c1fdc8bcd00e09497d26edd50cc104b1d61486bde63eea731ab1f6176bc",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_blaze_rod.png",
+      "sha256": "c10be2c9edac97eda8d74e22d18e7272ca5196e968a13f2cf461298ecab69339",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 6,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_breeze_rod.png",
+      "sha256": "89acb220df675480aadb0f6778a8de3567ad6faaf64c8f9ba61cf408a64d62bc",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_end_rod.png",
+      "sha256": "dd5078346d58feef63c73786a3583e11042a71c3eeac2394e2fa64c74599a69c",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_lightning_rod.png",
+      "sha256": "052af17321c238c25ab5a851f3d653a63c999707c0810ee4cb0f820d2ee7fff0",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_amethyst.png",
+      "sha256": "b0ce245b8ae8bae742966f337243598e708b48b020d7572987dd0d565b46593b",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_diamond.png",
+      "sha256": "c43231cd9089c90b6ab90b0022e06401d565bf9d0d4fc04b4a2c205ba47ab67c",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_emerald.png",
+      "sha256": "aa33a9ce73ce2e165ea68fa89e248c6261b1451c32d0e229b8f1cf31f43cc7bf",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ender_pearl.png",
+      "sha256": "b7e5cae365fb874a064324ba908d5bbba349b9adbf7aca8c94ec17e4012e0739",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_copper.png",
+      "sha256": "8198f57e659ab789eacfa7e54df94b3e66bbaacf5a4d78142bb362153c793637",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_iron.png",
+      "sha256": "ed42d201213e79eda9f4c0681c6a1075d7d38d348bc7d53f42c7c7feadde4c56",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ghast_tear.png",
+      "sha256": "332048f9b026442987fc4beb444a2e652e58b905a0b5cff53be97da08144c3e6",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_netherite.png",
+      "sha256": "25ededfeb3ab69fdb528cc8d91cfcd9e96e37c41294b52972e49fbe0e5b565ae",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    }
+  ],
+  "unchangedThreads": [
+    {
+      "file": "textures/item/ensorcelled_thread.png",
+      "sha256": "7b797173145ff4f12474ea7ec109410ece20b3c164ef4363dae6e6adea5f4ece"
+    },
+    {
+      "file": "textures/item/callous_thread.png",
+      "sha256": "57b2c8296871027cd1998d5f235828d1af02d5f6ec94b907912b4ef95b0308c9"
+    },
+    {
+      "file": "textures/item/smoldering_thread.png",
+      "sha256": "d1305c46cad6dca4fd3639f8b65b8b1141ebbe6ddb2164db5237604ffacfbe37"
+    },
+    {
+      "file": "textures/item/laced_thread.png",
+      "sha256": "120fdda65466cf9a866689cf2c96b081c2975477ca5f29eba862267a31950181"
+    },
+    {
+      "file": "textures/item/consecrated_thread.png",
+      "sha256": "877be36b7eab5e340775adbfbc13e762a04d1017145e2c752e18ada0a5d934f4"
+    }
+  ],
+  "nativeCaptureEvidenceReused": "../soft-v4/inventory/capture.json",
+  "nativeLoadedTextureHashesMatchRestoredTextures": true,
+  "newClientCapture": false,
+  "build": {
+    "successful": true,
+    "log": "build.log.gz",
+    "decodedSha256": "43f5017bf928be3795000fac03a576c50783849db355043e3d65ebf0c4e7d6f5",
+    "compressedSha256": "ccbb1d67cae56a0351169262d827899bcecac2a6eac7488375a9c1b6020bad0c",
+    "jarSha256": "8182f786dee03a2bbe98abe324353dc8d422ac29f1b92c59e61ccd204bf44b6c",
+    "packagedTexturesVerified": 20,
+    "productionJavaChanges": false,
+    "modelsUnchanged": true,
+    "temporaryCaptureExcluded": true
+  },
+  "installedArtifactLeftUnchangedSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc"
+}

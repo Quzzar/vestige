@@ -50,6 +50,8 @@ Java 21 is used by both the toolchain and Gradle daemon. Development runs build/
 
 ## Design and conventions
 
+For item sprites, block UVs, worn textures or GUI artwork, read `docs/design/minecraft-art.md` before authoring. Preserve Minecraft's native pixel density and review the exported assets in the actual client.
+
 Check `BREAKING_CHANGES.md` before changing public APIs. Read `CONTEXT.md`, `docs/design/trait-catalog.md`, `docs/design/spell-runtime.md`, `docs/design/iron-spell-conversions.md`, and `docs/design/pathfinder-spell-conversions.md` before changing spell structure. For balance changes, read `docs/design/spell-balance.md` and `docs/spell-balance-review.md`; author outcomes in the relevant `tools/convert_irons_spells.py` or `tools/convert_pathfinder_spells.py` recipes and costs in `tools/spell-balance-policy.json`. Preserve relative trait units while tuning actual outcomes, timing, and constraints. Research/prototype documents retain historical proposals; their headers identify superseded scope decisions.
 
 For scrolls, discovery, recipe matching or ritual feedback, read `docs/design/spell-discovery.md` and `docs/design/ritual-crafting.md`; ingredient compositions and clues live in `docs/ritual-recipes.md`. For station recipes, material contributions, equipment crafting or optional Iron ingredients, read `docs/design/material-crafting.md` and the complete pinned reference `docs/research/iron-material-uses.md`; Jewelry channel/pattern details are in `docs/research/irons-jewelry-materials.md`. Preserve the distinction between accepted decisions, recipe proposals and upstream facts, including upstream quality values that remain inert in Vestige.

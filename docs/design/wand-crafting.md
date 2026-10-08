@@ -59,6 +59,8 @@ Casting consumes one scroll on committed payment, and failed payment or cooldown
 
 ## Magical thread direction
 
+**Presentation approved October 8:** all five magical threads use vanilla enchantment shimmer through their default Glint Override component. The approved 16×16 v6 artwork stays unchanged. This is cosmetic: it adds no actual enchantments, tooltip instructions, crafting input or gameplay bonus, and threads still stack to 64.
+
 The owner accepts a common string-crafting recipe whose String offering's installed imbuement determines which magical thread is produced. Magical threads are obtained through this imbuement step; dyes, loot or a plain crafting-table recipe must not bypass it. In the coordinated chat **Define magical string types**, the owner confirmed the complete five-type set below and accepted the common String/Amethyst Shard/Honeycomb recipe. This selection supersedes the earlier Amethyst/Copper/Stone/Soul Sand/Moss shortlist. Component effects remain proposals.
 
 | Accepted selector in the String offering's Plinth | Current thread name | Existing native flavor that can inform its design |

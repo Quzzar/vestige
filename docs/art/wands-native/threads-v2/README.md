@@ -1,0 +1,11 @@
+# Simpler magical thread artwork · review version
+
+**October 7, 2026. Local review candidate; not published or installed.** The owner liked the restored wand artwork but rejected the rope/thread textures. This pass gives the five thread ingredients simpler loose loops, folded skeins and open strands, with restrained blue/lavender, warm grey, terracotta, green and ivory/ochre material colours. Their gameplay identities, recipes and component effects retain their existing rules.
+
+The [new source artwork](../source-art/magical-threads-v2.png) was generated with the built-in image tool. The [complete prompts and export notes](../source-art/prompts-threads-v2.json) distinguish the final new drawing from a discarded edit that retained too much of the old intricate braid. The larger generated sheet is a production reference, not an already-native 16×16 asset.
+
+Production exports are five actual **16×16 RGBA PNGs**, each with **four opaque colours**, hard alpha, one-pixel clear outside padding and one connected silhouette. The previous point-sampled exports contained 51–116 colours. The shared exporter now indexes source shades without dithering and uses dominant colours per logical cell for threads as well as wands. All fifteen restored v4 wand PNGs remain byte-identical, and item models and gameplay are unchanged.
+
+`inventory/threads-beside-string-and-lead.png` is an unedited native Minecraft survival inventory capture, showing the new ingredients alongside vanilla String, Lead and other materials. The other inventory frames retain the broader wand/material comparisons. Their native capture manifest pins all twenty loaded texture hashes. `old-above-new-below.png` compares enlarged old and new production exports; it is not a game screenshot. The five `*_candidate.png` files are exact production-size review copies. The temporary comparison harness is retained as review evidence and excluded from production packaging.
+
+`verification.json` records source, exported and native-loaded texture hashes, unchanged wands, frame hashes, packaging and complete compressed logs. `tools/author_wand_models.py --check` verifies all five thread sprites and all 63 wand unions. The installed testing pack and published branch remain unchanged; this candidate is ready for visual review, not owner approval of final artwork.

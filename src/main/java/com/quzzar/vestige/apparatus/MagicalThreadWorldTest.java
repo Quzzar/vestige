@@ -57,6 +57,8 @@ public final class MagicalThreadWorldTest {
         h.runAfterDelay(65, () -> {
             var output = RitualTestOutput.stack(layout.center());
             h.assertTrue(output.is(type.item()) && output.getCount() == 1 && !output.has(DataComponents.CUSTOM_DATA), "Wrong count/type or incidental shaping");
+            h.assertTrue(output.hasFoil() && output.getEnchantments().isEmpty() && output.getMaxStackSize() == 64,
+                    "Magical thread lost its cosmetic shimmer, gained an enchantment or changed stacking");
             h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && layout.center().displayedItem().isEmpty(), "Offerings/reference were not correct after commitment");
             h.assertTrue(inputs.nodes().stream().allMatch(n -> ItemStack.matches(n.material(), layout.stands().get(n.seat()).materialItem())), "Imbuement consumed or changed");
             h.assertTrue(layout.blocks().stream().noneMatch(OfferingBlockEntity::busy), "Craft retained locks");

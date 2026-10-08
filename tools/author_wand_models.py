@@ -13,31 +13,17 @@ ART = ROOT / 'docs/art/wands-native/source-art'
 BASES = ['stick', 'bamboo', 'bone', 'blaze_rod', 'breeze_rod', 'end_rod', 'lightning_rod']
 TIPS = ['amethyst', 'diamond', 'emerald', 'ender_pearl', 'copper', 'iron', 'ghast_tear', 'netherite']
 THREADS = ['ensorcelled', 'callous', 'smoldering', 'laced', 'consecrated']
-BODY_BOUNDS = [(46,91,285,381), (362,91,590,381), (661,91,901,381), (988,91,1208,381),
-               (61,440,289,727), (362,441,590,727), (661,440,901,727)]
-TIP_BOUNDS = [(115,829,204,939), (429,829,516,939), (736,829,826,939), (1048,829,1156,941),
-              (113,1061,203,1161), (426,1061,515,1161), (737,1061,817,1161), (1059,1062,1149,1161)]
-THREAD_BOUNDS = [(46,189,391,580), (433,238,791,560), (842,198,1206,597), (1258,198,1650,601), (1689,182,1936,613)]
-
-
-def sprite(source, bounds, size, position):
-    """Production export: crop generated components, nearest-neighbor sampling, hard alpha."""
-    region = source.crop(bounds).resize(size, Image.Resampling.NEAREST)
-    region.putalpha(region.getchannel('A').point(lambda a: 255 if a >= 128 else 0))
-    canvas = Image.new('RGBA', (16, 16))
-    canvas.paste(region, position)
-    # Transparent pixels carry no fringe color into resource-pack mipmaps.
-    pixels = canvas.load()
-    for y in range(16):
-        for x in range(16):
-            if pixels[x,y][3] == 0:
-                pixels[x,y] = (0,0,0,0)
-    return canvas
+BODY_BOUNDS = [(45,90,287,381), (360,90,592,381), (661,91,902,381), (986,90,1209,381),
+               (61,439,288,727), (360,439,592,727), (661,439,902,727)]
+TIP_BOUNDS = [(114,828,206,941), (427,828,519,941), (736,828,828,941), (1047,828,1157,942),
+              (114,1061,205,1161), (426,1061,516,1161), (736,1061,817,1161), (1060,1061,1151,1161)]
+THREAD_BOUNDS = [(79,190,357,528), (485,190,795,528), (913,190,1247,528),
+                 (1365,190,1681,516), (1795,214,2126,512)]
 
 
 def gold_binding(rgb):
     hue, saturation, value = colorsys.rgb_to_hsv(*(channel/255 for channel in rgb[:3]))
-    return 35 <= hue*360 <= 65 and saturation >= .60 and value >= .35
+    return 35 <= hue*360 <= 65 and saturation >= .45 and value >= .35
 
 
 def binding_pixel(region, x, y):
@@ -63,13 +49,13 @@ def indexed_colours(region, colours, preserve_binding):
         sample = Image.new('RGB', (len(opaque),1))
         sample.putdata(opaque)
         budget = (2 if group else colours-2) if preserve_binding else colours
-        palette = sample.quantize(colors=budget, method=Image.Quantize.MAXCOVERAGE,
+        palette = sample.quantize(colors=budget, method=Image.Quantize.MEDIANCUT,
                                   dither=Image.Dither.NONE)
         palettes.append(region.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE).convert('RGB'))
     return palettes
 
 
-def wand_sprite(source, bounds, size, position, colours, preserve_binding=False):
+def indexed_sprite(source, bounds, size, position, colours, preserve_binding=False, coverage=(1,2)):
     """Indexed, nondithered export: one dominant flat colour per logical pixel.
 
     Generated source cells have small raster variations even inside their flat
@@ -80,6 +66,7 @@ def wand_sprite(source, bounds, size, position, colours, preserve_binding=False)
     region = source.crop(bounds).convert('RGBA')
     palettes = indexed_colours(region, colours, preserve_binding)
     canvas = Image.new('RGBA', (16, 16))
+    numerator, denominator = (2,5) if preserve_binding else coverage
     for y in range(size[1]):
         for x in range(size[0]):
             box = (round(x*region.width/size[0]), round(y*region.height/size[1]),
@@ -93,15 +80,34 @@ def wand_sprite(source, bounds, size, position, colours, preserve_binding=False)
                         values[group].append(palettes[group].getpixel((px,py)))
             area = (box[2]-box[0])*(box[3]-box[1])
             filled = sum(len(group) for group in values)
-            # Preserve thin source branches as a whole native pixel; majority
-            # alpha alone erased the wood crook while reducing its silhouette.
-            if filled*(3 if preserve_binding else 2) >= area:
+            # Body coverage preserves the short branch; other source cells
+            # use their configured coverage without expanding the contour.
+            output_position = (position[0]+x,position[1]+y)
+            if filled*denominator >= area*numerator:
                 # A short contrasting band must survive reduction even when its
                 # two gold shades each lose individually to a shaft shade.
                 group = 1 if preserve_binding and len(values[1])*4 >= filled else 0
                 colour = Counter(values[group]).most_common(1)[0][0]
-                canvas.putpixel((position[0]+x,position[1]+y), (*colour,255))
+                canvas.putpixel(output_position, (*colour,255))
     return canvas
+
+
+def verify_connected(sprite, name):
+    occupied = {(x,y) for y in range(16) for x in range(16) if sprite.getpixel((x,y))[3]}
+    if not occupied or any(x in (0,15) or y in (0,15) for x,y in occupied):
+        raise ValueError('Item must have a clear one-pixel border: '+name)
+    pending = [next(iter(occupied))]
+    connected = set(pending)
+    while pending:
+        x,y = pending.pop()
+        for dx in (-1,0,1):
+            for dy in (-1,0,1):
+                neighbour = (x+dx,y+dy)
+                if neighbour in occupied and neighbour not in connected:
+                    connected.add(neighbour)
+                    pending.append(neighbour)
+    if connected != occupied:
+        raise ValueError('Detached item pixels or disconnected component: '+name)
 
 
 def verify_wands(result):
@@ -124,40 +130,43 @@ def verify_wands(result):
             if tip:
                 composed.alpha_composite(result['textures/item/wands/tip_'+tip+'.png'])
             name = base+('/'+tip if tip else '')
-            occupied = {(x,y) for y in range(16) for x in range(16)
-                        if composed.getpixel((x,y))[3]}
-            if not occupied or any(x in (0,15) or y in (0,15) for x,y in occupied):
-                raise ValueError('Wand must have a clear one-pixel border: '+name)
-            pending = [next(iter(occupied))]
-            connected = set(pending)
-            while pending:
-                x,y = pending.pop()
-                for dx in (-1,0,1):
-                    for dy in (-1,0,1):
-                        neighbour = (x+dx,y+dy)
-                        if neighbour in occupied and neighbour not in connected:
-                            connected.add(neighbour)
-                            pending.append(neighbour)
-            if connected != occupied:
-                raise ValueError('Detached wand pixels or disconnected tip: '+name)
+            verify_connected(composed, name)
+
+
+def verify_threads(result):
+    for thread in THREADS:
+        relative = 'textures/item/'+thread+'_thread.png'
+        sprite = result[relative]
+        if sprite.mode != 'RGBA' or sprite.size != (16,16):
+            raise ValueError('Wrong thread texture format: '+relative)
+        pixels = list(sprite.getdata())
+        if any(pixel[3] not in (0,255) for pixel in pixels):
+            raise ValueError('Soft alpha in thread texture: '+relative)
+        if len({pixel[:3] for pixel in pixels if pixel[3]}) > 4:
+            raise ValueError('Noisy thread palette: '+relative)
+        tones = [.2126*p[0]+.7152*p[1]+.0722*p[2] for p in pixels if p[3]]
+        if not tones or min(tones)>85 or max(tones)<220:
+            raise ValueError('Thread must retain a dark shadow and pale strands: '+relative)
+        verify_connected(sprite, thread)
 
 
 def textures():
     result = {}
-    with Image.open(ART / 'wand-components-v2.png') as atlas:
+    with Image.open(ART / 'wand-components-v4.png') as atlas:
         for name, bounds in zip(BASES, BODY_BOUNDS):
             # Fit uniformly instead of squashing every crop into the same box.
             width = round(13*(bounds[2]-bounds[0])/(bounds[3]-bounds[1]))
-            result['textures/item/wands/base_' + name + '.png'] = wand_sprite(atlas, bounds, (width,13), (13-width,2), 8, preserve_binding=True)
+            result['textures/item/wands/base_' + name + '.png'] = indexed_sprite(atlas, bounds, (width,13), (13-width,2), 8, preserve_binding=True)
         for name, bounds in zip(TIPS, TIP_BOUNDS):
-            result['textures/item/wands/tip_' + name + '.png'] = wand_sprite(atlas, bounds, (4,4), (10,1), 4)
+            result['textures/item/wands/tip_' + name + '.png'] = indexed_sprite(atlas, bounds, (4,4), (10,1), 4)
     verify_wands(result)
-    with Image.open(ART / 'magical-threads.png') as atlas:
+    with Image.open(ART / 'magical-threads-v6.png') as atlas:
         for name, bounds in zip(THREADS, THREAD_BOUNDS):
             width, height = bounds[2]-bounds[0], bounds[3]-bounds[1]
             scale = 14/max(width,height)
             size = (round(width*scale), round(height*scale))
-            result['textures/item/' + name + '_thread.png'] = sprite(atlas, bounds, size, ((16-size[0])//2,(16-size[1])//2))
+            result['textures/item/' + name + '_thread.png'] = indexed_sprite(atlas, bounds, size, ((16-size[0])//2,(16-size[1])//2), 4)
+    verify_threads(result)
     return result
 
 

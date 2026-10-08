@@ -1,0 +1,16 @@
+{
+  "mode": "built-in image_gen; precise edit; transparent_background=true",
+  "references": [
+    {
+      "file": "magical-threads-v4.png",
+      "role": "edit target"
+    },
+    {
+      "file": "../threads-v3/vanilla-string-enlarged.png",
+      "role": "style reference"
+    }
+  ],
+  "output": "magical-threads-v5.png",
+  "prompt": "Use case: precise-object-edit\nAsset type: Minecraft 16x16 magical STRING item sprite atlas.\nImage 1 is the EDIT TARGET: the five thread sprites from our latest review. Image 2 is a STYLE REFERENCE: enlarged vanilla Minecraft String.\nThe user likes the latest softer shading, but says the strands are still TOO THICK. Make the physical strands notably narrower, not the whole icons smaller. Preserve each icon's general loose loop arrangement, open silhouette, colour identity, relative footprint and soft four-colour shading. Exactly five horizontal icons, no extra objects.\n\nReduce cord thickness by about one third. At native 16x16 resolution, most stretches should read as ONE PIXEL WIDE string, with occasional TWO-PIXEL WIDTH only at bends, a small crossing or a short underside accent. There must be no long 3-pixel-thick bands. Remove the continuous extra-width dark side rail that makes the cord look like chunky rope. Put the subtle shadow pixels ALONG the narrow strand, alternating by region with the pale strand colours; do not encase a bright central strand with a separate border on both sides. Keep a few short lower-side shadow accents where useful, but the thread must still read as fine flexible string with large transparent gaps. Broaden the transparent holes by thinning the strands toward their centerlines. Keep the overall bounding footprint similar, so the items remain visible at inventory size. Do not simply shrink the complete tangle, tighten the loops or thicken crossings into knots.\n\nLeft to right: Ensorcelled light blue/lavender; Callous pale silver; Smoldering pale peach/cream; Laced pale sage/mint; Consecrated warm ivory. Keep the current modest dark shadows and intermittent medium shadow shades, pale material shades and bright near-white strand pixels. At most four flat shades per icon. Flexible loose strands, no braiding, noisy specks or outlining the whole contour. The reference's light/dark balance matters; the edit should be physically thinner than the current target.\n\nProduction intent: every sprite occupies up to 14 by 14 logical pixels inside a 16 by 16 canvas, with a clear one-pixel transparent margin. Thin but fully connected strands and crisp opaque pixel squares. Consistent logical pixel size in the atlas. Uniformly enlarged logical pixels rather than tiny extra detail. A mostly one-pixel stroke remains a visible string path; don't erase it or break it into disconnected fragments. Transparent holes and background. Hard alpha, no antialiasing, gradients, blur, glow, translucent fringe or shadows outside the sprite. No labels, grid, text, UI, wands or tips. Keep the five horizontal cells and ample clear spacing.",
+  "production": "Actual 16x16 connected sprites, four coherent opaque shades, one-pixel transparent border. Thinner strands within similar icon footprints. The large generated atlas is reference art, not packaged textures."
+}

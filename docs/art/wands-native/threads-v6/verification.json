@@ -1,0 +1,639 @@
+{
+  "status": "Strand and shadow review ready; uncommitted, not installed or published",
+  "sourceArtwork": "../source-art/magical-threads-v6.png",
+  "sourceArtworkSha256": "c45e4d991ef63f6c1a1a6fe0412b1a39b80c2e6568c02e23a55bc8579d6758ad",
+  "promptSet": "../source-art/prompts-threads-v6.json",
+  "generationMode": "Built-in image_gen, precise edit of enlarged exact native v4 production pixels with vanilla String reference",
+  "referenceProvenance": "../threads-v3/vanilla-reference.json",
+  "productionExport": "Four-shade nondithered ramps; restored strand/shadow pairing; aspect fit within 14 occupied pixels",
+  "layers": [
+    {
+      "file": "textures/item/ensorcelled_thread.png",
+      "sha256": "139451f9ce048d5b5c195912507df20bdebb4bab753074dc9ed19bcd2f5159a9",
+      "bounds": [
+        2,
+        1,
+        14,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          68,
+          72,
+          92
+        ],
+        [
+          90,
+          94,
+          115
+        ],
+        [
+          199,
+          203,
+          236
+        ],
+        [
+          235,
+          237,
+          249
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/callous_thread.png",
+      "sha256": "1a16215276f8d3156599328d485a6de73c1faf53a32ee8b9e15b92b60fb119de",
+      "bounds": [
+        1,
+        1,
+        14,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          64,
+          64,
+          64
+        ],
+        [
+          95,
+          94,
+          94
+        ],
+        [
+          214,
+          214,
+          214
+        ],
+        [
+          240,
+          239,
+          239
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/smoldering_thread.png",
+      "sha256": "b7d32132cfdba8183cf26be06056b63dceeb92b91b1650b4f5b24da0bacfd028",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          90,
+          65,
+          48
+        ],
+        [
+          132,
+          100,
+          76
+        ],
+        [
+          245,
+          203,
+          167
+        ],
+        [
+          252,
+          231,
+          210
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/laced_thread.png",
+      "sha256": "ed9bb936fcda92ccfc328c6cbd5704ca4519b7bc3bc3b9b92d7cba9ebda4fa56",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          63,
+          72,
+          58
+        ],
+        [
+          104,
+          115,
+          95
+        ],
+        [
+          210,
+          220,
+          195
+        ],
+        [
+          239,
+          244,
+          227
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/consecrated_thread.png",
+      "sha256": "658bc515b7722db7f74bcb4b1c7bbf8718f64a419cda4817b7593d385a673cd0",
+      "bounds": [
+        1,
+        1,
+        15,
+        14
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          83,
+          71,
+          64
+        ],
+        [
+          106,
+          94,
+          84
+        ],
+        [
+          229,
+          221,
+          205
+        ],
+        [
+          250,
+          246,
+          236
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    }
+  ],
+  "unchangedWands": [
+    {
+      "file": "textures/item/wands/base_stick.png",
+      "sha256": "716f1a38e5664bdf91d652576f99dca0fc8354bd689ab0782eb1729b0c95e146",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bamboo.png",
+      "sha256": "ab5345c0ff4d1443e554cfc777b12dfd37d5072a7543f58302ad401426c1cdd9",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bone.png",
+      "sha256": "c99b2c1fdc8bcd00e09497d26edd50cc104b1d61486bde63eea731ab1f6176bc",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_blaze_rod.png",
+      "sha256": "c10be2c9edac97eda8d74e22d18e7272ca5196e968a13f2cf461298ecab69339",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 6,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_breeze_rod.png",
+      "sha256": "89acb220df675480aadb0f6778a8de3567ad6faaf64c8f9ba61cf408a64d62bc",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_end_rod.png",
+      "sha256": "dd5078346d58feef63c73786a3583e11042a71c3eeac2394e2fa64c74599a69c",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_lightning_rod.png",
+      "sha256": "052af17321c238c25ab5a851f3d653a63c999707c0810ee4cb0f820d2ee7fff0",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_amethyst.png",
+      "sha256": "b0ce245b8ae8bae742966f337243598e708b48b020d7572987dd0d565b46593b",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_diamond.png",
+      "sha256": "c43231cd9089c90b6ab90b0022e06401d565bf9d0d4fc04b4a2c205ba47ab67c",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_emerald.png",
+      "sha256": "aa33a9ce73ce2e165ea68fa89e248c6261b1451c32d0e229b8f1cf31f43cc7bf",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ender_pearl.png",
+      "sha256": "b7e5cae365fb874a064324ba908d5bbba349b9adbf7aca8c94ec17e4012e0739",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_copper.png",
+      "sha256": "8198f57e659ab789eacfa7e54df94b3e66bbaacf5a4d78142bb362153c793637",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_iron.png",
+      "sha256": "ed42d201213e79eda9f4c0681c6a1075d7d38d348bc7d53f42c7c7feadde4c56",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ghast_tear.png",
+      "sha256": "332048f9b026442987fc4beb444a2e652e58b905a0b5cff53be97da08144c3e6",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_netherite.png",
+      "sha256": "25ededfeb3ab69fdb528cc8d91cfcd9e96e37c41294b52972e49fbe0e5b565ae",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    }
+  ],
+  "allFiveThreadsConnectedAndPadded": true,
+  "all63WandUnionsConnectedAndPadded": true,
+  "nativeLoadedTexturesMatchProduction": true,
+  "nativeFrames": [
+    {
+      "file": "inventory/wands-and-threads.png",
+      "sha256": "1df741e1dba970dad10f999b5231436a3225279eda9bbfe132c35db6d15838f5",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/beside-vanilla-materials.png",
+      "sha256": "63b9e3766535771e48e9892823f69b4fadd7792e291aa661208f704a1a1eda39",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/threads-beside-string-and-lead.png",
+      "sha256": "d13df795a3a157796a9106ab97ddc250358a5ce0b0e5f5e44591970031ea1739",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    }
+  ],
+  "nativePixelChecks": [
+    {
+      "item": "ensorcelled",
+      "opaqueTexelCentersChecked": 77,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "callous",
+      "opaqueTexelCentersChecked": 82,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "smoldering",
+      "opaqueTexelCentersChecked": 83,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "laced",
+      "opaqueTexelCentersChecked": 87,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "consecrated",
+      "opaqueTexelCentersChecked": 91,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "vanilla_string",
+      "opaqueTexelCentersChecked": 75,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    }
+  ],
+  "logs": [
+    {
+      "file": "logs/vestige-threads-v6-inventory.log.gz",
+      "decodedSha256": "4bfb03f067b4c469757d713bfff78be1830486bb3fa642c7c7b9da49b700cb04",
+      "compressedSha256": "cb53d6ec0375d5b50ebc608f234f05594e8277af8bdf1de3d19c9428c5716110",
+      "completed": true
+    },
+    {
+      "file": "logs/vestige-threads-v6-build.log.gz",
+      "decodedSha256": "f89511f838298fb37886b02ee4b7741ff273e09928c3eb6a824bde9ae8e57c99",
+      "compressedSha256": "79dad7ae6dc5f7621abdc252112f03a9db14eff959d9afe505195c17d3d91460",
+      "completed": true
+    },
+    {
+      "file": "logs/vestige-threads-v6-export.log.gz",
+      "decodedSha256": "b102b29bc2bfc8703a43d3e843980ddd1fcf20e38975391123c28405866c179f",
+      "compressedSha256": "1e461f3604bdff496337754ce73e012cc6983d75d812a742bb70f75ab46501d1",
+      "completed": true
+    }
+  ],
+  "isolatedPackage": {
+    "sha256": "0f4b312aab0f93c77b420d48f95d18cc77ffc998fdb7f21293e0b471fbbc489a",
+    "texturesVerified": 20,
+    "productionJavaChanges": false,
+    "modelsUnchanged": true,
+    "temporaryCaptureExcluded": true,
+    "vanillaReferencesExcluded": true
+  },
+  "installedArtifactLeftUnchangedSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc",
+  "strandDensityComparison": [
+    {
+      "thread": "ensorcelled",
+      "previousV5": {
+        "occupiedPixels": 45,
+        "solid2x2Patches": 5,
+        "bounds": [
+          2,
+          1,
+          13,
+          15
+        ]
+      },
+      "newV6": {
+        "occupiedPixels": 77,
+        "solid2x2Patches": 33,
+        "bounds": [
+          2,
+          1,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "thread": "callous",
+      "previousV5": {
+        "occupiedPixels": 57,
+        "solid2x2Patches": 5,
+        "bounds": [
+          2,
+          1,
+          14,
+          15
+        ]
+      },
+      "newV6": {
+        "occupiedPixels": 82,
+        "solid2x2Patches": 31,
+        "bounds": [
+          1,
+          1,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "thread": "smoldering",
+      "previousV5": {
+        "occupiedPixels": 62,
+        "solid2x2Patches": 12,
+        "bounds": [
+          1,
+          1,
+          14,
+          15
+        ]
+      },
+      "newV6": {
+        "occupiedPixels": 83,
+        "solid2x2Patches": 34,
+        "bounds": [
+          1,
+          1,
+          15,
+          15
+        ]
+      }
+    },
+    {
+      "thread": "laced",
+      "previousV5": {
+        "occupiedPixels": 64,
+        "solid2x2Patches": 7,
+        "bounds": [
+          1,
+          1,
+          15,
+          15
+        ]
+      },
+      "newV6": {
+        "occupiedPixels": 87,
+        "solid2x2Patches": 29,
+        "bounds": [
+          1,
+          1,
+          15,
+          15
+        ]
+      }
+    },
+    {
+      "thread": "consecrated",
+      "previousV5": {
+        "occupiedPixels": 78,
+        "solid2x2Patches": 16,
+        "bounds": [
+          1,
+          1,
+          15,
+          15
+        ]
+      },
+      "newV6": {
+        "occupiedPixels": 91,
+        "solid2x2Patches": 39,
+        "bounds": [
+          1,
+          1,
+          15,
+          14
+        ]
+      }
+    }
+  ],
+  "threadLogicalCellCoverage": [
+    1,
+    2
+  ],
+  "nativePixelEditTarget": {
+    "file": "native-v4-edit-target.png",
+    "sha256": "0896e0f3e824a1340b67377622007bf554f7596171315542403a1a35afeb8602",
+    "source": "Nearest-neighbor enlargement of the exact five v4 production textures"
+  }
+}

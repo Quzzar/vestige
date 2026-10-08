@@ -1,0 +1,17 @@
+{
+  "source": "Local pinned Minecraft 1.21.1 client jar",
+  "jar": "/Users/quzzar/.gradle/caches/neoformruntime/artifacts/minecraft_1.21.1_client.jar",
+  "jarSha256": "499f6897d1837516680f3114072d8106e11c9adcd933fe5cf051b551089b0c99",
+  "assets": [
+    {
+      "file": "vanilla-string-reference.png",
+      "sha256": "ded6537ee0356cfd3a0024fccd1a7ee478b58279a0bace73b689cc62369d26da",
+      "role": "Visual style reference only; not included in shipped Vestige assets"
+    },
+    {
+      "file": "vanilla-lead-reference.png",
+      "sha256": "8970ef231b71a4aec68b56d77d4bab27d69fdeb59e4a5faa6c837c3ccc9f87a5",
+      "role": "Visual style reference only; not included in shipped Vestige assets"
+    }
+  ]
+}

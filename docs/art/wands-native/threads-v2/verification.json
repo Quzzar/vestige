@@ -1,0 +1,356 @@
+{
+  "status": "Native review ready; uncommitted, not installed or published",
+  "sourceArtwork": "../source-art/magical-threads-v2.png",
+  "sourceArtworkSha256": "0b188da95c976dfe4864915aa370c57224e6563f17c87a2ba30041004015a34b",
+  "promptSet": "../source-art/prompts-threads-v2.json",
+  "generationMode": "Built-in image_gen, new transparent artwork",
+  "productionExport": "Nondithered four-shade median-cut palette; majority colour per logical cell; aspect fit within 14 occupied pixels",
+  "layers": [
+    {
+      "file": "textures/item/ensorcelled_thread.png",
+      "sha256": "bd68e40cf2459bd70ca05e0cd46ebf825ab5fe11a58aef4f12ceefb72f45131d",
+      "bounds": [
+        1,
+        2,
+        15,
+        14
+      ],
+      "opaqueColours": 4,
+      "previousOpaqueColours": 84,
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/callous_thread.png",
+      "sha256": "ed5bba0dff48c77707c7d8d41cc9acf39b914b02470014612001a103865e3d68",
+      "bounds": [
+        1,
+        3,
+        15,
+        13
+      ],
+      "opaqueColours": 4,
+      "previousOpaqueColours": 116,
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/smoldering_thread.png",
+      "sha256": "015aca5e155cf46c908005346e84bc6e5b295c2049ebbc1b6b920294cc3886bc",
+      "bounds": [
+        1,
+        2,
+        15,
+        13
+      ],
+      "opaqueColours": 4,
+      "previousOpaqueColours": 69,
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/laced_thread.png",
+      "sha256": "eea5bad08c3ef4a8c2eb666461018435870ef86ad807db6aed0bf72df348c57c",
+      "bounds": [
+        3,
+        1,
+        13,
+        15
+      ],
+      "opaqueColours": 4,
+      "previousOpaqueColours": 91,
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/consecrated_thread.png",
+      "sha256": "00f854b15fa9314f7fdc9a2ddadd45ab44607ba7e1ec3ac4f8ea6c0432f92a14",
+      "bounds": [
+        1,
+        3,
+        15,
+        12
+      ],
+      "opaqueColours": 4,
+      "previousOpaqueColours": 51,
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    }
+  ],
+  "unchangedWands": [
+    {
+      "file": "textures/item/wands/base_stick.png",
+      "sha256": "716f1a38e5664bdf91d652576f99dca0fc8354bd689ab0782eb1729b0c95e146",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bamboo.png",
+      "sha256": "ab5345c0ff4d1443e554cfc777b12dfd37d5072a7543f58302ad401426c1cdd9",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bone.png",
+      "sha256": "c99b2c1fdc8bcd00e09497d26edd50cc104b1d61486bde63eea731ab1f6176bc",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_blaze_rod.png",
+      "sha256": "c10be2c9edac97eda8d74e22d18e7272ca5196e968a13f2cf461298ecab69339",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 6,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_breeze_rod.png",
+      "sha256": "89acb220df675480aadb0f6778a8de3567ad6faaf64c8f9ba61cf408a64d62bc",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_end_rod.png",
+      "sha256": "dd5078346d58feef63c73786a3583e11042a71c3eeac2394e2fa64c74599a69c",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_lightning_rod.png",
+      "sha256": "052af17321c238c25ab5a851f3d653a63c999707c0810ee4cb0f820d2ee7fff0",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_amethyst.png",
+      "sha256": "b0ce245b8ae8bae742966f337243598e708b48b020d7572987dd0d565b46593b",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_diamond.png",
+      "sha256": "c43231cd9089c90b6ab90b0022e06401d565bf9d0d4fc04b4a2c205ba47ab67c",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_emerald.png",
+      "sha256": "aa33a9ce73ce2e165ea68fa89e248c6261b1451c32d0e229b8f1cf31f43cc7bf",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ender_pearl.png",
+      "sha256": "b7e5cae365fb874a064324ba908d5bbba349b9adbf7aca8c94ec17e4012e0739",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_copper.png",
+      "sha256": "8198f57e659ab789eacfa7e54df94b3e66bbaacf5a4d78142bb362153c793637",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_iron.png",
+      "sha256": "ed42d201213e79eda9f4c0681c6a1075d7d38d348bc7d53f42c7c7feadde4c56",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ghast_tear.png",
+      "sha256": "332048f9b026442987fc4beb444a2e652e58b905a0b5cff53be97da08144c3e6",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_netherite.png",
+      "sha256": "25ededfeb3ab69fdb528cc8d91cfcd9e96e37c41294b52972e49fbe0e5b565ae",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    }
+  ],
+  "allFiveThreadsConnectedAndPadded": true,
+  "all63WandUnionsConnectedAndPadded": true,
+  "nativeLoadedTexturesMatchProduction": true,
+  "nativeFrames": [
+    {
+      "file": "inventory/wands-and-threads.png",
+      "sha256": "ee199ae760ece4940815a5a7edc9502d6f3a7fd6423025037e6aa37e15cb5764",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/beside-vanilla-materials.png",
+      "sha256": "766a40a9ebd9b179766184aeb1b13cd450f863a0322ac9e5d4a7d26e7b274b8f",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/threads-beside-string-and-lead.png",
+      "sha256": "f08c8038217d8797e4b118b1383820b5eb09ce98daebeba4f3c4aa451710db6b",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    }
+  ],
+  "logs": [
+    {
+      "file": "logs/vestige-threads-v2-inventory.log.gz",
+      "decodedSha256": "b4673dbbd7ae6b703534f33fdfb8fab9c91027a28e5b81f942c10700e8724343",
+      "compressedSha256": "98ae1d9d08f07e38368cf1a61b02d9a314bdb06dcbd06c58431adf54f1f6c7c6",
+      "completed": true
+    },
+    {
+      "file": "logs/vestige-threads-v2-build.log.gz",
+      "decodedSha256": "2c5e813d49be0eee6aae170aaf104f7acc77e7d0b8e02e019a9a9dd8d6c97bd2",
+      "compressedSha256": "2339105d2a09fae1f4f3adb5fa30c809845d81eddf4dd77045cbe7be0dd36343",
+      "completed": true
+    }
+  ],
+  "isolatedPackage": {
+    "sha256": "be8586a976816290d815d4a8f9f910593d26d373d6d474039ee041ae7f8cb190",
+    "texturesVerified": 20,
+    "productionJavaChanges": false,
+    "modelsUnchanged": true,
+    "temporaryCaptureExcluded": true
+  },
+  "installedArtifactLeftUnchangedSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc"
+}

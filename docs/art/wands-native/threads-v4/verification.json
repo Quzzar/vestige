@@ -1,0 +1,507 @@
+{
+  "status": "Softer String shadow review ready; uncommitted, not installed or published",
+  "sourceArtwork": "../source-art/magical-threads-v4.png",
+  "sourceArtworkSha256": "e47368f858832369584dc1928752f90d99c08fd784d16583b7d982fee5260130",
+  "promptSet": "../source-art/prompts-threads-v4.json",
+  "generationMode": "Built-in image_gen, precise edit of v3 transparent art",
+  "referenceProvenance": "../threads-v3/vanilla-reference.json",
+  "productionExport": "Four-shade nondithered ramps; lighter and intermittent shadow runs with pale strands; aspect fit within 14 occupied pixels",
+  "layers": [
+    {
+      "file": "textures/item/ensorcelled_thread.png",
+      "sha256": "d8083dbba55edc96158b1ea8d51b7243d857b4c66ed3bc73443fd24629d6e520",
+      "bounds": [
+        2,
+        1,
+        14,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          57,
+          62,
+          81
+        ],
+        [
+          92,
+          96,
+          116
+        ],
+        [
+          192,
+          198,
+          239
+        ],
+        [
+          235,
+          237,
+          251
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/callous_thread.png",
+      "sha256": "eb3c947a97f44edf573679c5a7ccd0f2f602cd80d3e8ea821a6ac0a889eba5e2",
+      "bounds": [
+        1,
+        1,
+        14,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          60,
+          60,
+          63
+        ],
+        [
+          92,
+          91,
+          93
+        ],
+        [
+          198,
+          198,
+          198
+        ],
+        [
+          239,
+          239,
+          239
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/smoldering_thread.png",
+      "sha256": "fcf6f30450b388d69474394f4ffbc1457dc33f0bd812d247a4d56fe2cfde8368",
+      "bounds": [
+        1,
+        1,
+        15,
+        15
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          84,
+          60,
+          45
+        ],
+        [
+          125,
+          92,
+          68
+        ],
+        [
+          240,
+          193,
+          151
+        ],
+        [
+          252,
+          234,
+          212
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/laced_thread.png",
+      "sha256": "d3597914b4c6afd7b52fc32d97d9a3416362677cb20492b41b432067bc314863",
+      "bounds": [
+        1,
+        1,
+        15,
+        14
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          51,
+          62,
+          48
+        ],
+        [
+          86,
+          100,
+          79
+        ],
+        [
+          184,
+          201,
+          170
+        ],
+        [
+          242,
+          247,
+          229
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    },
+    {
+      "file": "textures/item/consecrated_thread.png",
+      "sha256": "1e967d453873d375d7c1a1b715ddc31730966ece49d3bf77ca76b76639c57901",
+      "bounds": [
+        1,
+        2,
+        15,
+        14
+      ],
+      "opaqueColours": 4,
+      "shadeRamp": [
+        [
+          70,
+          61,
+          54
+        ],
+        [
+          98,
+          87,
+          74
+        ],
+        [
+          222,
+          211,
+          186
+        ],
+        [
+          251,
+          247,
+          234
+        ]
+      ],
+      "actualSize": [
+        16,
+        16
+      ],
+      "binaryAlpha": true,
+      "transparentBorder": 1,
+      "connected": true
+    }
+  ],
+  "unchangedWands": [
+    {
+      "file": "textures/item/wands/base_stick.png",
+      "sha256": "716f1a38e5664bdf91d652576f99dca0fc8354bd689ab0782eb1729b0c95e146",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bamboo.png",
+      "sha256": "ab5345c0ff4d1443e554cfc777b12dfd37d5072a7543f58302ad401426c1cdd9",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_bone.png",
+      "sha256": "c99b2c1fdc8bcd00e09497d26edd50cc104b1d61486bde63eea731ab1f6176bc",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_blaze_rod.png",
+      "sha256": "c10be2c9edac97eda8d74e22d18e7272ca5196e968a13f2cf461298ecab69339",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 6,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_breeze_rod.png",
+      "sha256": "89acb220df675480aadb0f6778a8de3567ad6faaf64c8f9ba61cf408a64d62bc",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_end_rod.png",
+      "sha256": "dd5078346d58feef63c73786a3583e11042a71c3eeac2394e2fa64c74599a69c",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/base_lightning_rod.png",
+      "sha256": "052af17321c238c25ab5a851f3d653a63c999707c0810ee4cb0f820d2ee7fff0",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_amethyst.png",
+      "sha256": "b0ce245b8ae8bae742966f337243598e708b48b020d7572987dd0d565b46593b",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_diamond.png",
+      "sha256": "c43231cd9089c90b6ab90b0022e06401d565bf9d0d4fc04b4a2c205ba47ab67c",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_emerald.png",
+      "sha256": "aa33a9ce73ce2e165ea68fa89e248c6261b1451c32d0e229b8f1cf31f43cc7bf",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ender_pearl.png",
+      "sha256": "b7e5cae365fb874a064324ba908d5bbba349b9adbf7aca8c94ec17e4012e0739",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_copper.png",
+      "sha256": "8198f57e659ab789eacfa7e54df94b3e66bbaacf5a4d78142bb362153c793637",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_iron.png",
+      "sha256": "ed42d201213e79eda9f4c0681c6a1075d7d38d348bc7d53f42c7c7feadde4c56",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_ghast_tear.png",
+      "sha256": "332048f9b026442987fc4beb444a2e652e58b905a0b5cff53be97da08144c3e6",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    },
+    {
+      "file": "textures/item/wands/tip_netherite.png",
+      "sha256": "25ededfeb3ab69fdb528cc8d91cfcd9e96e37c41294b52972e49fbe0e5b565ae",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true
+    }
+  ],
+  "allFiveThreadsConnectedAndPadded": true,
+  "all63WandUnionsConnectedAndPadded": true,
+  "nativeLoadedTexturesMatchProduction": true,
+  "nativeFrames": [
+    {
+      "file": "inventory/wands-and-threads.png",
+      "sha256": "9b83dc717a18230f162227401232ef92ecf6efc4910e4dcaa34a175a27cfff6b",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/beside-vanilla-materials.png",
+      "sha256": "2c5c9493cf27d152fb1d29eb893c6fbe18c79c90fbd761699c076825ae6be9ea",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    },
+    {
+      "file": "inventory/threads-beside-string-and-lead.png",
+      "sha256": "33d9c6b9aed0fdfdae1fd7bb1508ab24bc2312939119bc99a6e8244d82e8fd5c",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer, vanilla survival inventory renderer"
+    }
+  ],
+  "nativePixelChecks": [
+    {
+      "item": "ensorcelled",
+      "opaqueTexelCentersChecked": 77,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "callous",
+      "opaqueTexelCentersChecked": 89,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "smoldering",
+      "opaqueTexelCentersChecked": 86,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "laced",
+      "opaqueTexelCentersChecked": 91,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "consecrated",
+      "opaqueTexelCentersChecked": 93,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    },
+    {
+      "item": "vanilla_string",
+      "opaqueTexelCentersChecked": 75,
+      "maxChannelDifference": 3,
+      "tolerance": 3,
+      "screen": "inventory/threads-beside-string-and-lead.png"
+    }
+  ],
+  "logs": [
+    {
+      "file": "logs/vestige-threads-v4-inventory.log.gz",
+      "decodedSha256": "d022555fa248facfb87347c27cf5e4ba5ca6277b1417c7f6b11534751f32ebbc",
+      "compressedSha256": "df8c243f680d0efc036d828c2e9a8d30c3d53b7aca313c7d469293865b369a54",
+      "completed": true
+    },
+    {
+      "file": "logs/vestige-threads-v4-build.log.gz",
+      "decodedSha256": "76b627a255e69a61076a555cd3f8daccb3ac895356cbdedaaab359bdad1e0b39",
+      "compressedSha256": "028a1d7c5beb373cdc9c59808ab104b21abe0744c67add4cd446c867145b3399",
+      "completed": true
+    }
+  ],
+  "isolatedPackage": {
+    "sha256": "490307aec9cf5d065a6b861c370c516f290307fd2846531383a879ce84cb7034",
+    "texturesVerified": 20,
+    "productionJavaChanges": false,
+    "modelsUnchanged": true,
+    "temporaryCaptureExcluded": true,
+    "vanillaReferencesExcluded": true
+  },
+  "installedArtifactLeftUnchangedSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc"
+}
