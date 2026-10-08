@@ -28,7 +28,7 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
         for (var cost:composed) {
             Key key=cost instanceof SpellCost.Material m ? new Key(cost.getClass(),m.item(),m.operation()) : new Key(cost.getClass(),null,null);
             double value=switch(cost) {
-                case SpellCost.Mana m -> m.amount(); case SpellCost.Health h -> h.amount(); case SpellCost.Hunger h -> h.amount();
+                case SpellCost.Mana m -> m.amount(); case SpellCost.Health h -> h.amount(); case SpellCost.Hunger h -> h.amount(); case SpellCost.Experience e -> e.amount();
                 case SpellCost.Time t -> t.ticks(); case SpellCost.Cooldown c -> c.ticks(); case SpellCost.Material m -> m.amount();
             };
             totals.merge(key,value,Double::sum); examples.put(key,cost);
@@ -44,7 +44,7 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
         }
         var result=new ArrayList<SpellCost>();
         totals.forEach((key,total)->{
-            String kind=switch(examples.get(key)) { case SpellCost.Mana m->"mana";case SpellCost.Health h->"health";case SpellCost.Hunger h->"hunger";case SpellCost.Time t->"time";case SpellCost.Cooldown c->"cooldown";case SpellCost.Material m->"material"; };
+            String kind=switch(examples.get(key)) { case SpellCost.Mana m->"mana";case SpellCost.Health h->"health";case SpellCost.Hunger h->"hunger";case SpellCost.Experience e->"experience";case SpellCost.Time t->"time";case SpellCost.Cooldown c->"cooldown";case SpellCost.Material m->"material"; };
             double adjusted=total*adjustment.factors().getOrDefault(kind,1d);
             if (kind.equals("mana")) adjusted*=1-adjustment.healthFraction()-adjustment.hungerFraction();
             double value=examples.get(key) instanceof SpellCost.Health ? Math.floor(adjusted/2*castingCost+.5)*2 : Math.floor(adjusted*castingCost+.5);
@@ -52,6 +52,7 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
             if (value>Integer.MAX_VALUE) throw new IllegalArgumentException("Shaped cost exceeds supported amount");
             result.add(switch(examples.get(key)) {
                 case SpellCost.Mana m -> new SpellCost.Mana(value); case SpellCost.Health h -> new SpellCost.Health(value);
+                case SpellCost.Experience e -> new SpellCost.Experience((int)value);
                 case SpellCost.Hunger h -> new SpellCost.Hunger((int)value); case SpellCost.Time t -> new SpellCost.Time((int)value);
                 case SpellCost.Cooldown c -> new SpellCost.Cooldown((int)value);
                 case SpellCost.Material m -> new SpellCost.Material(m.item(),m.operation(),(int)value);
@@ -80,7 +81,7 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
             if (additional.size()>32 || !Double.isFinite(healthFraction) || !Double.isFinite(hungerFraction) || healthFraction<0 || hungerFraction<0 || healthFraction+hungerFraction>1) throw new IllegalArgumentException("Invalid cost exchange");
             if (additionalPreparationTicks<0 || additionalPreparationTicks>240000 || minimumMana<0 || minimumMana>100)
                 throw new IllegalArgumentException("Invalid equipment payment");
-            factors.forEach((kind,factor)->{if (!Set.of("mana","health","hunger","time","cooldown","material").contains(kind) || !Double.isFinite(factor) || factor<.1 || factor>8)throw new IllegalArgumentException("Invalid typed cost factor");});
+            factors.forEach((kind,factor)->{if (!Set.of("mana","health","hunger","experience","time","cooldown","material").contains(kind) || !Double.isFinite(factor) || factor<.1 || factor>8)throw new IllegalArgumentException("Invalid typed cost factor");});
         }
     }
 }

@@ -45,11 +45,12 @@ public final class RitualDisplays {
         }
         public boolean shapeless() { return id.equals(VestigeMainMod.location("ritual/attunement_shard")); }
         public boolean concealed() { return spell.isPresent() && offerings.isEmpty(); }
-        public ItemStack output() { return com.quzzar.vestige.equipment.WayfarerDisplays.output(id).orElseGet(() -> com.quzzar.vestige.equipment.MagicArmorDisplays.output(id).orElseGet(this::ordinaryOutput)); }
+        public ItemStack output() { return com.quzzar.vestige.equipment.WayfarerDisplays.output(id).orElseGet(() -> com.quzzar.vestige.equipment.MagicArmorDisplays.output(id).orElseGet(() -> HourglassDisplays.output(id).orElseGet(this::ordinaryOutput))); }
         private ItemStack ordinaryOutput() { return spell.map(ScrollItems::scroll).orElseGet(() -> MagicalThreadRecipe.types().stream()
                 .filter(type -> id.equals(VestigeMainMod.location("ritual/"+type.id().getPath())))
                 .findFirst().map(type -> new ItemStack(type.item())).orElseGet(() -> new ItemStack(
                 id.equals(VestigeMainMod.location("ritual/fluxed_flint")) ? ScrollItems.FLUXED_FLINT.get() :
+                id.equals(VestigeMainMod.location("ritual/dissentient_diamond")) ? ScrollItems.DISSENTIENT_DIAMOND.get() :
                 id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() :
                 id.equals(VestigeMainMod.location("ritual/whispering_shell")) ? ScrollItems.WHISPERING_SHELL.get() : ScrollItems.ATTUNEMENT_SHARD.get()))); }
         public List<Integer> seats() { return capacity==4 ? List.of(0,2,4,6) : List.of(0,1,2,3,4,5,6,7); }
@@ -86,6 +87,12 @@ public final class RitualDisplays {
     public static Entry fluxedFlint() {
         var ingredients=FluxedFlintRecipe.ingredients();
         return new Entry(VestigeMainMod.location("ritual/fluxed_flint"),Optional.empty(),false,SpellRarity.COMMON,4,
+                java.util.stream.IntStream.range(0,4).mapToObj(i -> new Offering(i*2,
+                        new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
+    }
+    public static Entry dissentientDiamond() {
+        var ingredients=DissentientDiamondRecipe.ingredients();
+        return new Entry(VestigeMainMod.location("ritual/dissentient_diamond"),Optional.empty(),false,SpellRarity.COMMON,4,
                 java.util.stream.IntStream.range(0,4).mapToObj(i -> new Offering(i*2,
                         new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
     }

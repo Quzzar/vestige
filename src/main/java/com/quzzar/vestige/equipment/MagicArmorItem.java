@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 public class MagicArmorItem extends ArmorItem {
     private final ResourceLocation ability;
     public MagicArmorItem(Holder<ArmorMaterial> material, ResourceLocation ability) {
-        this(material, ability, Type.CHESTPLATE, new Item.Properties().durability(80).component(net.minecraft.core.component.DataComponents.DYED_COLOR, new net.minecraft.world.item.component.DyedItemColor(DyeColor.WHITE.getTextureDiffuseColor(), false)));
+        this(material, ability, Type.CHESTPLATE, new Item.Properties().durability(80).rarity(Rarity.UNCOMMON).component(net.minecraft.core.component.DataComponents.DYED_COLOR, new net.minecraft.world.item.component.DyedItemColor(DyeColor.WHITE.getTextureDiffuseColor(), false)));
     }
     protected MagicArmorItem(Holder<ArmorMaterial> material, ResourceLocation ability, Type type, Item.Properties properties) {
         super(material, type, properties);

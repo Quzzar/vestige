@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Translated item name",
+    "Native partial-history return succeeded",
+    "Return selected exact initial position",
+    "Return paid sixty mana and one wear"
+  ],
+  "assetSha256": {
+    "models/item/kairotic_hourglass.json": "530d68174feb0a09633dca751bc31a8438176e399c7878a08dec986275011e46",
+    "textures/item/kairotic_hourglass.png": "90e5c7e09200fe5aa6ff3b6bdd2ae4381ab29842c0a1a1e861b8f4f53c426e44"
+  },
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Unedited framebuffer"
+}

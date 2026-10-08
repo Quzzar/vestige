@@ -51,6 +51,29 @@ public final class FluxedFlintTest {
         h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Nonvolatile ingredients rolled");})==RitualCrafting.Outcome.CRAFTING,"Construction rejected");
         h.runAfterDelay(45,()->{var out=RitualTestOutput.stack(center);h.assertTrue(out.is(ScrollItems.FLUXED_FLINT.get()) && out.getCount()==1 && out.getDamageValue()==0,"Wrong catalyst output");h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty),"Construction inputs survived");h.succeed();});
     }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=150)
+    public static void diamondIntermediateThenRevisedFlintCraftThroughTheAtomicLifecycle(GameTestHelper h) {
+        var center=structure(h,true);var layout=LeylineStructure.find(center,4).getFirst();
+        for(int i=0;i<4;i++) layout.stands().get((i*2+2)%8).insert(new ItemStack(DissentientDiamondRecipe.ingredients().get(i)));
+        var outer=(OfferingBlockEntity)h.getBlockEntity(CENTER.offset(GEOMETRY.offset(1)));outer.insert(new ItemStack(Items.PAPER));
+        layout.stands().get(0).installMaterial(new ItemStack(Items.AMETHYST_BLOCK));
+        h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Ordinary ingredients rolled risk");})==RitualCrafting.Outcome.CRAFTING,"Diamond construction rejected");
+        h.runAfterDelay(65,()->{
+            var diamond=RitualTestOutput.take(center);
+            h.assertTrue(diamond.is(ScrollItems.DISSENTIENT_DIAMOND.get()) && diamond.getCount()==1 && !diamond.hasFoil(),"Wrong intermediate output");
+            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER)
+                    && layout.stands().get(0).materialItem().is(Items.AMETHYST_BLOCK),"Intermediate consumed inactive offerings or socket");
+            layout.stands().get(2).insert(new ItemStack(Items.FLINT));layout.stands().get(4).insert(new ItemStack(Items.NETHERITE_INGOT));
+            layout.stands().get(6).insert(diamond);layout.stands().get(0).insert(new ItemStack(Items.NETHERITE_INGOT));
+            h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Intermediate acquired an unauthored volatile trait");})==RitualCrafting.Outcome.CRAFTING,"Revised Flint construction rejected");
+        });
+        h.runAfterDelay(115,()->{
+            var result=RitualTestOutput.stack(center);
+            h.assertTrue(result.is(ScrollItems.FLUXED_FLINT.get()) && result.getCount()==1 && result.getDamageValue()==0 && result.getMaxDamage()==128,"Wrong catalyst budget or output");
+            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER)
+                    && layout.stands().get(0).materialItem().is(Items.AMETHYST_BLOCK),"Flint construction failed atomic consumption or touched inactive inputs");h.succeed();
+        });
+    }
     @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
     public static void successClonesAllTargetAndCatalystComponentsChangingOnlyDamage(GameTestHelper h) {
         var target=staff();var catalyst=flint(5);catalyst.set(DataComponents.CUSTOM_NAME,Component.literal("My Flint"));

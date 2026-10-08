@@ -84,6 +84,7 @@ public final class SpellJson {
                 case "mana" -> costs.add(new SpellCost.Mana(number(required(cost, "amount"))));
                 case "health" -> costs.add(new SpellCost.Health(number(required(cost, "amount"))));
                 case "hunger" -> costs.add(new SpellCost.Hunger(integer(cost, "amount")));
+                case "experience" -> costs.add(new SpellCost.Experience(integer(cost, "amount")));
                 case "material" -> costs.add(new SpellCost.Material(identifier(text(cost, "item")),
                         SpellCost.Material.Operation.valueOf(text(cost, "operation").toUpperCase(Locale.ROOT)), integer(cost, "amount")));
                 default -> throw new JsonParseException("Unknown cost type: " + cost);

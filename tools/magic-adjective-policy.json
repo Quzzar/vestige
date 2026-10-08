@@ -37,66 +37,66 @@
       "id": "vestige:hourglass/fleeting",
       "word": "Fleeting",
       "meaning": "Shorter positional recall at a lower mana price.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/enduring",
       "word": "Enduring",
       "meaning": "Longer positional recall at a higher mana price.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/reinforced",
       "word": "Reinforced",
       "meaning": "More carrier durability at a higher activation mana price.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/frugal",
       "word": "Frugal",
       "meaning": "Less activation mana with less carrier durability.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/bloodbound",
       "word": "Bloodbound",
       "meaning": "Exchange part of activation mana for health through the shared valuation.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/fasting",
       "word": "Fasting",
       "meaning": "Exchange part of activation mana for food through the shared valuation.",
-      "status": "Hourglass design; gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:hourglass/erudite",
       "word": "Erudite",
       "meaning": "Exchange part of activation mana for experience points through the shared valuation.",
-      "status": "Hourglass name authored; shared XP payment and gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "id": "vestige:wayfarer/swift",
       "word": "Swift",
-      "meaning": "A faster, shorter movement burst: Motion \u00d71.50 and Time \u00d72/3.",
+      "meaning": "A faster, shorter movement burst: Motion ×1.50 and Time ×2/3.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/enduring",
       "word": "Enduring",
-      "meaning": "A longer movement burst: Time \u00d71.20 and mana \u00d71.12.",
+      "meaning": "A longer movement burst: Time ×1.20 and mana ×1.12.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/reinforced",
       "word": "Reinforced",
-      "meaning": "More carrier durability with increased mana: maximum durability \u00d71.50 and mana \u00d71.25.",
+      "meaning": "More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/quickened",
       "word": "Quickened",
-      "meaning": "Shorter actor recovery with increased mana: recovery \u00d70.80 and mana \u00d71.25. This changes recovery, not preparation.",
+      "meaning": "Shorter actor recovery with increased mana: recovery ×0.80 and mana ×1.25. This changes recovery, not preparation.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
@@ -133,7 +133,7 @@
         "vestige:hourglass/frugal": 1
       },
       "meaning": "Recent recall and a cheaper, shorter-lived vessel.",
-      "status": "Name authored; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -143,7 +143,7 @@
         "vestige:hourglass/reinforced": 1
       },
       "meaning": "Longer recall and a more durable vessel.",
-      "status": "Name authored; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -154,7 +154,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Longer recall, a more durable vessel and health-backed payment.",
-      "status": "Name authored; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:wayfarer_boots",
@@ -1342,7 +1342,7 @@
         "vestige:hourglass/reinforced": 1
       },
       "meaning": "Fleeting + reinforced; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1352,7 +1352,7 @@
         "vestige:hourglass/frugal": 1
       },
       "meaning": "Enduring + frugal; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1362,7 +1362,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Fleeting + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1372,7 +1372,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Fleeting + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1382,7 +1382,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Fleeting + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1392,7 +1392,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Enduring + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1402,7 +1402,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Enduring + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1412,7 +1412,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Enduring + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1422,7 +1422,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Reinforced + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1432,7 +1432,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Reinforced + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1442,7 +1442,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Reinforced + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1452,7 +1452,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Frugal + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1462,7 +1462,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Frugal + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1472,7 +1472,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Frugal + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1483,7 +1483,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Fleeting + reinforced + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1494,7 +1494,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Fleeting + reinforced + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1505,7 +1505,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Fleeting + reinforced + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1516,7 +1516,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Fleeting + frugal + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1527,7 +1527,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Fleeting + frugal + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1538,7 +1538,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Fleeting + frugal + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1549,7 +1549,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Enduring + reinforced + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1560,7 +1560,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Enduring + reinforced + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1571,7 +1571,7 @@
         "vestige:hourglass/bloodbound": 1
       },
       "meaning": "Enduring + frugal + bloodbound; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1582,7 +1582,7 @@
         "vestige:hourglass/fasting": 1
       },
       "meaning": "Enduring + frugal + fasting; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     },
     {
       "family": "vestige:kairotic_hourglass",
@@ -1593,7 +1593,7 @@
         "vestige:hourglass/erudite": 1
       },
       "meaning": "Enduring + frugal + erudite; each authored contribution retains its own trade-off.",
-      "status": "Name reserved; hourglass gameplay pending"
+      "status": "Implemented Kairotic Hourglass adjustment"
     }
   ],
   "complete_families": [

@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Deterministic 16x16 export from the generated Fluxed Flint study. Requires Pillow."""
+"""Deterministic constrained 16x16 export of the generated diamond-blue recolor. Requires Pillow."""
 from pathlib import Path
 from collections import Counter
+from statistics import median
 from io import BytesIO
 import argparse
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / 'docs/art/fluxed-flint-v1'
+ART = ROOT / 'docs/art/fluxed-flint-v2'
 TARGET = ROOT / 'src/main/resources/assets/vestige/textures/item/fluxed_flint.png'
 
 
@@ -15,32 +16,30 @@ def sprite():
     source = Image.open(ART / 'source.png').convert('RGBA')
     bounds = source.getchannel('A').point(lambda a: 255 if a >= 128 else 0).getbbox()
     region = source.crop(bounds)
-    # Reserve the source's purple fracture ramp during nondithered palette reduction.
-    def accent(rgb):
-        return rgb[2] > rgb[1]*1.15 and rgb[0] > rgb[1]*1.1
-    groups = [[], []]
-    for rgb in (region.getpixel((x,y)) for y in range(region.height) for x in range(region.width)):
-        if rgb[3] >= 128:
-            groups[int(accent(rgb))].append(rgb[:3])
-    palettes = []
-    for colors, budget in zip(groups, (5, 3)):
-        sample = Image.new('RGB', (len(colors), 1)); sample.putdata(colors)
-        palette = sample.quantize(colors=budget, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-        palettes.append(region.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE).convert('RGB'))
-    out = Image.new('RGBA', (16, 16))
+    original = Image.open(ART / 'previous-16.png').convert('RGBA')
+    # The requested edit preserves the original logical cells and five stone shades.
+    # Collapse generated shading/edge noise into one diamond shade per accent role.
+    roles = ((100, 39, 159), (193, 118, 239), (244, 194, 251))
+    diamond = Image.open(ART / 'vanilla-diamond.png').convert('RGBA')
+    palette = sorted({p[:3] for p in diamond.getdata() if p[3] and p[1] > p[0] + 20 and p[2] > p[0] + 20})
+    samples = {role: [] for role in roles}
     for y in range(13):
         for x in range(11):
-            box = (round(x*region.width/11), round(y*region.height/13), round((x+1)*region.width/11), round((y+1)*region.height/13))
-            values = [[], []]
-            for py in range(box[1], box[3]):
-                for px in range(box[0], box[2]):
-                    rgb = region.getpixel((px, py))
-                    if rgb[3] >= 128:
-                        group = int(accent(rgb)); values[group].append(palettes[group].getpixel((px, py)))
-            count = sum(map(len, values))
-            if count*2 >= (box[2]-box[0])*(box[3]-box[1]):
-                group = int(len(values[1])*4 >= count)
-                out.putpixel((x+2, y+1), (*Counter(values[group]).most_common(1)[0][0], 255))
+            role = original.getpixel((x+2, y+1))[:3]
+            if role in samples:
+                pixel = region.getpixel((int((x+.5)*region.width/11), int((y+.5)*region.height/13)))
+                samples[role].append(pixel[:3])
+    exported = {}
+    for role, pixels in samples.items():
+        center = tuple(median(p[channel] for p in pixels) for channel in range(3))
+        exported[role] = min(palette, key=lambda shade: sum((shade[i]-center[i])**2 for i in range(3)))
+    assert len(set(exported.values())) == 3, 'Generated accent ramp collapsed'
+    out = original.copy()
+    for y in range(16):
+        for x in range(16):
+            pixel = original.getpixel((x,y))
+            if pixel[3] and pixel[:3] in exported:
+                out.putpixel((x,y), (*exported[pixel[:3]], 255))
     return out
 
 

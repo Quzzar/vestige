@@ -1,0 +1,285 @@
+{
+  "generator": "Built-in image_gen localized edit",
+  "source": "source.png",
+  "prompt": "prompt.txt",
+  "sourceSha256": "e9051f960cdc22a5a267b3467ec300aa6a9f51934a01a2c060c26125c9f659c6",
+  "basis": "dissentient-diamond-v9/dissentient-diamond-16.png",
+  "editTarget": "edit-target-64x.png",
+  "nativeGrid": [
+    16,
+    16
+  ],
+  "changedCells": [
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      10,
+      7
+    ]
+  ],
+  "changedPixelCount": 13,
+  "alphaUnchanged": true,
+  "allOtherPixelsUnchanged": true,
+  "crackPalette": [
+    "#155365",
+    "#103548"
+  ],
+  "export": "Sample requested imagegen crack cells; align to two blue shades; retain all unaffected v9 texels",
+  "generatedSamples": [
+    {
+      "cell": [
+        6,
+        11
+      ],
+      "generatedColor": [
+        23,
+        86,
+        104
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        7,
+        5
+      ],
+      "generatedColor": [
+        23,
+        86,
+        104
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        7,
+        6
+      ],
+      "generatedColor": [
+        20,
+        55,
+        74
+      ],
+      "paletteColor": "#103548"
+    },
+    {
+      "cell": [
+        7,
+        10
+      ],
+      "generatedColor": [
+        23,
+        86,
+        104
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        7,
+        11
+      ],
+      "generatedColor": [
+        20,
+        56,
+        75
+      ],
+      "paletteColor": "#103548"
+    },
+    {
+      "cell": [
+        7,
+        12
+      ],
+      "generatedColor": [
+        23,
+        85,
+        103
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        8,
+        4
+      ],
+      "generatedColor": [
+        22,
+        86,
+        105
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        8,
+        7
+      ],
+      "generatedColor": [
+        20,
+        55,
+        74
+      ],
+      "paletteColor": "#103548"
+    },
+    {
+      "cell": [
+        9,
+        3
+      ],
+      "generatedColor": [
+        23,
+        87,
+        105
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        9,
+        7
+      ],
+      "generatedColor": [
+        20,
+        56,
+        75
+      ],
+      "paletteColor": "#103548"
+    },
+    {
+      "cell": [
+        9,
+        8
+      ],
+      "generatedColor": [
+        23,
+        86,
+        104
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        10,
+        6
+      ],
+      "generatedColor": [
+        22,
+        93,
+        112
+      ],
+      "paletteColor": "#155365"
+    },
+    {
+      "cell": [
+        10,
+        7
+      ],
+      "generatedColor": [
+        23,
+        84,
+        102
+      ],
+      "paletteColor": "#155365"
+    }
+  ],
+  "32pxArtifact": "Exact 2x nearest-neighbor derivative of the native 16px sprite, not a new 32px study",
+  "artifacts": {
+    "16": {
+      "file": "dissentient-diamond-16.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "bounds": [
+        2,
+        1,
+        13,
+        15
+      ],
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+      "opaquePixels": 93,
+      "palette": [
+        "#03869a",
+        "#03b6c4",
+        "#103548",
+        "#145e53",
+        "#155365",
+        "#54f6f2",
+        "#abfaf7"
+      ]
+    },
+    "32": {
+      "file": "dissentient-diamond-32.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "bounds": [
+        4,
+        2,
+        26,
+        30
+      ],
+      "sha256": "f44c2fa5d2c47584f970a13cb0f3d8749ecae012c4494829360f1be4032b60b3",
+      "opaquePixels": 372,
+      "palette": [
+        "#03869a",
+        "#03b6c4",
+        "#103548",
+        "#145e53",
+        "#155365",
+        "#54f6f2",
+        "#abfaf7"
+      ]
+    }
+  },
+  "ownerAccepted": false,
+  "nativeReviewed": false
+}

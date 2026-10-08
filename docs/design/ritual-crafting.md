@@ -8,9 +8,10 @@
 | Homebound Eye | Attunement Shard → Flint → Spider Eye → Ender Pearl |
 | Whispering Shell | Attunement Shard → Sculk Sensor → Nautilus Shell → empty |
 | Standing Stone | Attunement Shard → masonry → Ender Pearl → same masonry |
-| Fluxed Flint | Flint → Diamond Block → Netherite Ingot → Echo Shard |
+| Dissentient Diamond | Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder |
+| Fluxed Flint | Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot |
 
-Fluxed Flint's ingredient redesign/art hold remains in force; this pass changes only the existing recipe's order. Four-slot patterns use the nearest complete inner layer even on a complete eight-slot apparatus. Outer nodes are inactive, unreserved and untouched. Intentional empty **inner** positions are part of the pattern and revalidated before commitment. String/Spider Eye selectors stay paired with their offering under rotation.
+The owner resumed Fluxed Flint work after approving Dissentient Diamond. Its new ingredient chain supersedes the provisional Diamond Block/Echo Shard recipe; both duplicate offerings occupy separate seats. Four-slot patterns use the nearest complete inner layer even on a complete eight-slot apparatus. Outer nodes are inactive, unreserved and untouched. Intentional empty **inner** positions are part of the pattern and revalidated before commitment. String/Spider Eye selectors stay paired with their offering under rotation.
 
 **Unordered operations:** one-scroll dismantling into fragments is an ordinary crafting recipe. Combining four or more fragments to discover a scroll is a separate, retained unordered ritual. Attunement Shards accept unordered ingredients but encode their relative arrangement, paired imbuements and geometry into the signature. Fluxed Flint repair accepts a catalyst and one damaged magical target in any two available seats. These unordered rituals select the complete available table, including both rings on an eight-slot layout; unused available seats must remain empty and participate in reservation/revalidation. Public diagrams for ordered construction now show actual relationships; an Attunement Shard diagram remains an example.
 
@@ -70,3 +71,7 @@ The accepted [Standing Stone](standing-stones.md) composition uses the ordered i
 ## Historical implementation
 
 The preceding fixed three-block apparatus, Deepslate/Amethyst/Diamond recipes, art and earlier feedback revisions remain historical evidence in [apparatus models](apparatus-models.md). The owner explicitly rejected migrations and authorized deleting old test worlds. Old pedestal registry IDs, aliases and migration hooks are removed; Spellstone and Plinth are the two apparatus roles. Standing Stone is a separately authorized travel device.
+
+## Kairotic Hourglass device ritual
+
+The [hourglass](kairotic-hourglass.md) uses ordered Clock → Glass → Echo Shard → Ender Pearl on the inner layer with an empty reference. Whole rotations preserve offering/socket pairs. The trusted palette supports all 36 temporal/vessel/payment sets; each copies physical geometry into the result. Existing reservation, atomic input revalidation, ingredient lift and centered ordinary-drop output apply. Both optional viewers derive every variant directly from the live palette and recipe. Recognized incompatible effects reject silently rather than consuming paid no-ops.

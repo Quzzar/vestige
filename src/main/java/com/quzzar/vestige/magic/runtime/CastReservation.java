@@ -15,4 +15,10 @@ public interface CastReservation {
     default boolean continues() { return true; }
     boolean valid();
     void commit();
+
+    /** A fallible physical commitment; adapters must refund payment when it rejects. */
+    interface Atomic extends CastReservation {
+        boolean tryCommit();
+        @Override default void commit() { throw new IllegalStateException("Atomic source requires transactional payment"); }
+    }
 }

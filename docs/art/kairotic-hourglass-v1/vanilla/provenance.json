@@ -1,0 +1,9 @@
+{
+  "source": "Minecraft 1.21.1 client resources, local pinned jar; retained only as design/reference evidence",
+  "sha256": {
+    "clock_00": "52652043a299f6d27da9229f1ccadd64e94018e6126c0bb2cbdf283bec114d87",
+    "echo_shard": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "ender_pearl": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a",
+    "compass_00": "4f39dc942808fb5fe37d3307eb22320523ead9bd38c808b54d516f20e20c9ae2"
+  }
+}

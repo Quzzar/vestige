@@ -33,6 +33,8 @@ public final class NativeFlintCapture {
     private static int state;
     private static long started,next;
     private static CompletableFuture<Void> pending;
+    private static CompletableFuture<Boolean> repairReady;
+    private static int repairTick;
     private static OfferingBlockEntity center,catalyst,target;
     private static ItemStack original;
     private NativeFlintCapture() { }
@@ -53,7 +55,7 @@ public final class NativeFlintCapture {
         catalyst.insert(new ItemStack(ScrollItems.FLUXED_FLINT.get()));original=StaffData.create(VestigeMainMod.location("fire"));original.setDamageValue(23);target.insert(original);
         player.connection.teleport(4,4,-6,33.69f,22);player.setNoGravity(true);
         for(int i=0;i<player.getInventory().getContainerSize();i++)player.getInventory().setItem(i,ItemStack.EMPTY);
-        var comparisons=List.of(new ItemStack(Items.FLINT),new ItemStack(ScrollItems.FLUXED_FLINT.get()),new ItemStack(Items.ECHO_SHARD),new ItemStack(Items.AMETHYST_SHARD));
+        var comparisons=List.of(new ItemStack(Items.FLINT),new ItemStack(ScrollItems.FLUXED_FLINT.get()),new ItemStack(Items.DIAMOND),new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get()),new ItemStack(Items.NETHERITE_INGOT));
         for(int i=0;i<comparisons.size();i++)player.getInventory().setItem(9+i,comparisons.get(i));
         player.getInventory().setItem(0,new ItemStack(ScrollItems.FLUXED_FLINT.get()));player.getInventory().setItem(1,original.copy());player.inventoryMenu.broadcastChanges();
     }
@@ -81,10 +83,17 @@ public final class NativeFlintCapture {
                     require(RitualCrafting.layout(center).geometry().slots()==8 && RitualCrafting.layout(center).items().stream().filter(item -> !item.isEmpty()).count()==2,
                             "Eight-slot fixture has only two outer offerings");
                     require(RitualCrafting.activate(player,center)==RitualCrafting.Outcome.CRAFTING,"Native outer-only activation enters repair lifecycle");
+                    repairTick=mc.getSingleplayerServer().getTickCount();
                 });state=5;next=now+1_000_000_000L;
             } else if(state==5 && pending.isDone() && now>=next) {
                 pending.join();capture(mc,"repair-in-progress");state=6;next=now+1_500_000_000L;
             } else if(state==6 && now>=next) {
+                // Native scenes can run below 20 TPS during parallel builds. Wait for the
+                // server lifecycle, rather than mistaking a wall-clock delay for commitment.
+                if(repairReady==null) {repairReady=mc.getSingleplayerServer().submit(()->mc.getSingleplayerServer().getTickCount()>=repairTick+65);return;}
+                if(!repairReady.isDone())return;
+                boolean finished=repairReady.join();repairReady=null;
+                if(!finished){next=now+250_000_000L;return;}
                 capture(mc,"repaired-output");pending=mc.getSingleplayerServer().submit(()->{
                     var expected=original.copy();expected.setDamageValue(13);
                     require(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Actual dropped staff differs only by ten restored durability");

@@ -77,10 +77,11 @@ public final class ShapelessRitualTest {
             if(a==b || a==c || b==c || a==d || b==d || c==d) continue;
             var seats=new ArrayList<>(Collections.nCopies(8,ItemStack.EMPTY));var positions=List.of(a,b,c,d);
             for(int i=0;i<4;i++) seats.set(positions.get(i),new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
-            boolean valid=(a&1)==0 && b==(a+2)%8 && c==(a+4)%8 && d==(a+6)%8;
+            boolean valid=(a&1)==0 && c==(a+4)%8 && ((b==(a+2)%8 && d==(a+6)%8) || (d==(a+2)%8 && b==(a+6)%8));
             h.assertTrue(FluxedFlintRecipe.create(seats).isPresent()==valid,"Construction ignored relative order");if(valid)constructions++;
         }
-        h.assertTrue(repairs==56 && constructions==4,"Arrangement audit was incomplete");h.succeed();
+        // Two identical ingots give two labelings of each of the four distinct rotated patterns.
+        h.assertTrue(repairs==56 && constructions==8,"Arrangement audit was incomplete");h.succeed();
     }
     @GameTest(template="empty_9x3x9",batch="shapeless_ritual")
     public static void extraOuterOfferingRejectsInsteadOfFallingBackToFourSlots(GameTestHelper h) {

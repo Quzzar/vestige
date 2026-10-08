@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-08",
+  "revision": "V10: thirteen fissure pixels in two blue shades; v9 faces, teal outline and alpha retained",
+  "ownerAccepted": false,
+  "nativeReviewed": true,
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "nativeAssertions": 6,
+  "nativeClientRun": "Successful in 1m 17s; isolated preview Java compilation",
+  "assetSha256": {
+    "models/item/dissentient_diamond.json": "56b89e5139099be6f24937cbeff8ac2dac76b646e4937247a3d28e8bdac82630",
+    "textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51"
+  },
+  "equality": "Production, exact native export, preview pack, frozen source and loaded assets agree",
+  "screenshots": [
+    "native/inventory-scale-3.png",
+    "native/inventory-scale-2.png",
+    "native/held-offered-and-dropped.png"
+  ],
+  "originalScreenshotDimensions": [
+    1920,
+    1440
+  ],
+  "crop": {
+    "file": "native/inventory-comparison-crop.png",
+    "source": "native/inventory-scale-3.png",
+    "bounds": [
+      676,
+      451,
+      1264,
+      989
+    ],
+    "dimensions": [
+      588,
+      538
+    ],
+    "pixelEqualityVerified": true,
+    "sourceSha256": "d516a8e9e58204991a706dbfbdb8113d8080784d5565cf0a0842b8e5a22ab807"
+  },
+  "comparisonOrder": [
+    "Vanilla Diamond",
+    "Dissentient Diamond candidate",
+    "Prismarine Shard",
+    "Echo Shard",
+    "Netherite Scrap"
+  ],
+  "fixture": "Unchanged CustomModelData Diamond art fixture; historical v2 pack folder carries exact v10 resources",
+  "isolatedSource": "/private/tmp/vestige-dissentient-diamond-v2-20261008-source",
+  "scope": "Native artwork refinement. No ingredient registry/recipe, Fluxed Flint revision, installed pack update or publication.",
+  "buildAndTestScope": "Focused isolated compilation and native capture with unrelated StandingStoneCollision preview bypass; no root Java change, full build or unit/world suite",
+  "log": "native/client.log.gz",
+  "pixelIntegrity": "export.json: thirteen crack pixels changed; every other v9 pixel and alpha identical",
+  "startupAttempt": "initial-startup/ retains stopped attempt and thread evidence of voxel-union initialization stall",
+  "unrelatedCollisionPreview": {
+    "originalSource": "initial-startup/StandingStoneCollision.original.java",
+    "previewSource": "StandingStoneCollision.preview.java",
+    "originalSourceSha256": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+    "previewSourceSha256": "91f0c8be382b8b55f47c8ca982261a5ebb1756566c83177ad7fb9eaedc1c28f4",
+    "isolatedSourceRestored": true,
+    "standingStoneUsedInScene": false
+  }
+}

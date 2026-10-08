@@ -1,0 +1,17 @@
+{
+  "src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java": "e8153c4844123d06a5e690f583a00f05f3c445475af89248fa621e6acba0484d",
+  "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "822cd227064633d0a95ef516b7a9739d0a260efdcafd7b452545741c2ec9f814",
+  "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintItem.java": "42061faa298671d475ef5a49c083966f4eba7c4624733ad107f08275db1914db",
+  "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "f909584ed57236f696bb993ccd86824906c0f6230607c82936153fd52fe9d329",
+  "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "3c15475dd681da40ac2cb72cb540e6b85407dc9d9c5a369d17e7a2bbca3db8dd",
+  "src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java": "601832c04cf1cc3bff010c1d5292b7fa6f59470cac92aa75a65a3ce5b905944a",
+  "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": "58cb1a28f85e871cedeb5ea282ef2084da56a73769fd12f0d78a3ea237e473bb",
+  "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": "1dfdf0f0d48c5d2a6d370418063020f03b512cccd8d1734697cce1f951e177db",
+  "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "55b8bac497c3fddf54dff60d9bc0a07eb1b25b85684e95e1d26803e18e87e10e",
+  "src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java": "b49b1428a14185ef15d254a1a5264500c6c0ec0e1db5ebef00b7d0103f31a993",
+  "src/main/resources/assets/vestige/textures/item/fluxed_flint.png": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+  "src/main/resources/assets/vestige/models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+  "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+  "src/main/resources/assets/vestige/models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+  "tools/author_fluxed_flint.py": "a6d4c193afe83341d824917ca22c9c5539e3b6600bb4eb35aadfd12016110aac"
+}

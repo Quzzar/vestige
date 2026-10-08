@@ -11,7 +11,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Absorbing | `vestige:spellshaping/absorbing` — Implemented spell adjustment | After successful entity protection, add an owned four-second ward with 1 charges and 4 base mitigation per hit. |
 | Anchored | `vestige:spellshaping/anchored` — Implemented spell adjustment | Freeze a moving field whose actual pulses query around its own position; target-locked and already stationary fields are incompatible. |
 | Bleeding | `vestige:spellshaping/bleeding` — Implemented spell adjustment | Positive primary damage opens one bounded wound. |
-| Bloodbound | `vestige:spellshaping/bloodbound` — Implemented spell adjustment<br>`vestige:hourglass/bloodbound` — Hourglass design; gameplay pending<br>`vestige:homebound_eye/health` — Implemented Homebound Eye payment | Amplify ×1.05 per contribution.<br>Exchange part of activation mana for health through the shared valuation.<br>A health-backed return with reduced carrier wear. |
+| Bloodbound | `vestige:spellshaping/bloodbound` — Implemented spell adjustment<br>`vestige:hourglass/bloodbound` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/health` — Implemented Homebound Eye payment | Amplify ×1.05 per contribution.<br>Exchange part of activation mana for health through the shared valuation.<br>A health-backed return with reduced carrier wear. |
 | Charged | `vestige:spellshaping/charged` — Implemented spell adjustment<br>`vestige:homebound_eye/mana` — Implemented Homebound Eye payment | Amplify ×1.15 per contribution.<br>A mana-backed return with reduced carrier wear. |
 | Chilling | `vestige:spellshaping/chilling` — Implemented spell adjustment | Cold contact leaves brief movement impairment. |
 | Cleansing | `vestige:spellshaping/cleansing` — Implemented spell adjustment | Couple eligible healing to a limited removal of harmful statuses. |
@@ -21,18 +21,18 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Drawing | `vestige:spellshaping/drawing` — Implemented spell adjustment | Bring a qualified recipient toward an explicit anchor. |
 | Echoing | `vestige:spellshaping/echoing` — Implemented spell adjustment | A supported direct outcome repeats at reduced strength. |
 | Elusive | `vestige:wand_tip/ender_pearl` — Implemented wand tip | An optional short caster backstep after a supported cast. |
-| Enduring | `vestige:spellshaping/enduring` — Implemented spell adjustment<br>`vestige:hourglass/enduring` — Hourglass design; gameplay pending<br>`vestige:wayfarer/enduring` — Implemented Wayfarer adjustment | Extend finite supported manifestations without independently extending event bindings.<br>Longer positional recall at a higher mana price.<br>A longer movement burst: Time ×1.20 and mana ×1.12. |
+| Enduring | `vestige:spellshaping/enduring` — Implemented spell adjustment<br>`vestige:hourglass/enduring` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/enduring` — Implemented Wayfarer adjustment | Extend finite supported manifestations without independently extending event bindings.<br>Longer positional recall at a higher mana price.<br>A longer movement burst: Time ×1.20 and mana ×1.12. |
 | Envenomed | `vestige:spellshaping/envenomed` — Implemented spell adjustment | Add bounded poison to an eligible damaged recipient. |
-| Erudite | `vestige:hourglass/erudite` — Hourglass name authored; shared XP payment and gameplay pending<br>`vestige:homebound_eye/experience` — Implemented Homebound Eye payment | Exchange part of activation mana for experience points through the shared valuation.<br>An experience-point-backed return with reduced carrier wear. |
+| Erudite | `vestige:hourglass/erudite` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/experience` — Implemented Homebound Eye payment | Exchange part of activation mana for experience points through the shared valuation.<br>An experience-point-backed return with reduced carrier wear. |
 | Excavating | `vestige:spellshaping/excavating` — Implemented spell adjustment | Increase the supported mining hardness threshold. |
 | Exhausting | `vestige:spellshaping/exhausting` — Implemented spell adjustment | Increase Amplify by 25% per degree at 35% more mana per degree. |
 | Famished | `vestige:spellshaping/famished` — Implemented spell adjustment | Amplify ×1.1 per contribution. |
-| Fasting | `vestige:spellshaping/fasting` — Implemented spell adjustment<br>`vestige:hourglass/fasting` — Hourglass design; gameplay pending<br>`vestige:homebound_eye/hunger` — Implemented Homebound Eye payment | Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.<br>Exchange part of activation mana for food through the shared valuation.<br>A food-backed return with reduced carrier wear. |
-| Fleeting | `vestige:hourglass/fleeting` — Hourglass design; gameplay pending | Shorter positional recall at a lower mana price. |
+| Fasting | `vestige:spellshaping/fasting` — Implemented spell adjustment<br>`vestige:hourglass/fasting` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/hunger` — Implemented Homebound Eye payment | Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.<br>Exchange part of activation mana for food through the shared valuation.<br>A food-backed return with reduced carrier wear. |
+| Fleeting | `vestige:hourglass/fleeting` — Implemented Kairotic Hourglass adjustment | Shorter positional recall at a lower mana price. |
 | Focused | `vestige:spellshaping/focused` — Implemented spell adjustment | Amplify ×1.12 per contribution. |
 | Forked | `vestige:spellshaping/forked` — Implemented spell adjustment | Increase a native projectile fan; existing hit and rider budgets remain shared. |
 | Freezing | `vestige:spellshaping/freezing` — Implemented spell adjustment | A sufficiently qualified cold impact builds a finite frozen state. |
-| Frugal | `vestige:spellshaping/frugal` — Implemented spell adjustment<br>`vestige:hourglass/frugal` — Hourglass design; gameplay pending | Amplify ×0.85 per contribution.<br>Less activation mana with less carrier durability. |
+| Frugal | `vestige:spellshaping/frugal` — Implemented spell adjustment<br>`vestige:hourglass/frugal` — Implemented Kairotic Hourglass adjustment | Amplify ×0.85 per contribution.<br>Less activation mana with less carrier durability. |
 | Gathering | `vestige:spellshaping/gathering` — Implemented spell adjustment | Range ×1.2 per contribution. |
 | Greedy | `vestige:spellshaping/greedy` — Implemented spell adjustment | Amplify ×1.15 per contribution. |
 | Hindering | `vestige:spellshaping/hindering` — Implemented spell adjustment | Apply brief Slow after a qualifying outcome. |
@@ -53,7 +53,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Reclaiming | `vestige:wand_tip/emerald` — Implemented wand tip | A conditional rebate of actually paid mana, with additional wear. |
 | Reflecting | `vestige:spellshaping/reflecting` — Implemented spell adjustment | Add a three-second protective halo that returns up to two incoming vanilla arrows or tridents; native spell deliveries are excluded. |
 | Refracting | `vestige:wand_tip/diamond` — Implemented wand tip | A bounded distribution of supported damage or healing to nearby recipients. |
-| Reinforced | `vestige:hourglass/reinforced` — Hourglass design; gameplay pending<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25. |
+| Reinforced | `vestige:hourglass/reinforced` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25. |
 | Renewing | `vestige:wand_tip/ghast_tear` — Implemented wand tip | A bounded caster restoration following the authored successful outcome. |
 | Repelling | `vestige:spellshaping/repelling` — Implemented spell adjustment<br>`vestige:wand_tip/iron` — Implemented wand tip | Drive a hit recipient away from the declared impact origin.<br>An additional bounded push after eligible damage, healing or protection. |
 | Resonating | `vestige:wand_tip/amethyst` — Implemented wand tip | A bounded delayed echo of a supported damage or healing outcome. |
@@ -77,9 +77,9 @@ These names describe the exact complete set below. The underlying adjustments st
 
 | Combined adjective | Item | Required adjustments | Meaning / status |
 | --- | --- | --- | --- |
-| Ephemeral | `vestige:kairotic_hourglass` | Fleeting + Frugal | Recent recall and a cheaper, shorter-lived vessel. Name authored; hourglass gameplay pending. |
-| Stalwart | `vestige:kairotic_hourglass` | Enduring + Reinforced | Longer recall and a more durable vessel. Name authored; hourglass gameplay pending. |
-| Relentless | `vestige:kairotic_hourglass` | Enduring + Reinforced + Bloodbound | Longer recall, a more durable vessel and health-backed payment. Name authored; hourglass gameplay pending. |
+| Ephemeral | `vestige:kairotic_hourglass` | Fleeting + Frugal | Recent recall and a cheaper, shorter-lived vessel. Implemented Kairotic Hourglass adjustment. |
+| Stalwart | `vestige:kairotic_hourglass` | Enduring + Reinforced | Longer recall and a more durable vessel. Implemented Kairotic Hourglass adjustment. |
+| Relentless | `vestige:kairotic_hourglass` | Enduring + Reinforced + Bloodbound | Longer recall, a more durable vessel and health-backed payment. Implemented Kairotic Hourglass adjustment. |
 | Striding | `vestige:wayfarer_boots` | Swift + Enduring | Faster movement with the longer-burst contribution. Implemented Wayfarer adjustment. |
 | Surefooted | `vestige:wayfarer_boots` | Swift + Reinforced | Faster movement with a more durable vessel. Implemented Wayfarer adjustment. |
 | Nimble | `vestige:wayfarer_boots` | Swift + Quickened | Faster movement and shorter recovery. Implemented Wayfarer adjustment. |
@@ -197,31 +197,31 @@ These names describe the exact complete set below. The underlying adjustments st
 | Prudent | `vestige:wand` | Frugal + Steadfast | Mana economy plus caster stability. Implemented contributions; display alias. |
 | Sonorous | `vestige:wand` | Enduring + Resonating | Supported duration plus the bounded tip echo. Implemented contributions; display alias. |
 | Iridescent | `vestige:wand` | Widening + Refracting | Wider coverage plus the tip distribution. Implemented contributions; display alias. |
-| Resilient | `vestige:kairotic_hourglass` | Fleeting + Reinforced | Fleeting + reinforced; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Measured | `vestige:kairotic_hourglass` | Enduring + Frugal | Enduring + frugal; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Sanguine | `vestige:kairotic_hourglass` | Fleeting + Bloodbound | Fleeting + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Spare | `vestige:kairotic_hourglass` | Fleeting + Fasting | Fleeting + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Retrospective | `vestige:kairotic_hourglass` | Fleeting + Erudite | Fleeting + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Unyielding | `vestige:kairotic_hourglass` | Enduring + Bloodbound | Enduring + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Ascetic | `vestige:kairotic_hourglass` | Enduring + Fasting | Enduring + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Recollective | `vestige:kairotic_hourglass` | Enduring + Erudite | Enduring + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Hardened | `vestige:kairotic_hourglass` | Reinforced + Bloodbound | Reinforced + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Abstinent | `vestige:kairotic_hourglass` | Reinforced + Fasting | Reinforced + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Studious | `vestige:kairotic_hourglass` | Reinforced + Erudite | Reinforced + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Miserly | `vestige:kairotic_hourglass` | Frugal + Bloodbound | Frugal + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Austere | `vestige:kairotic_hourglass` | Frugal + Fasting | Frugal + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Scholarly | `vestige:kairotic_hourglass` | Frugal + Erudite | Frugal + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Intrepid | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Bloodbound | Fleeting + reinforced + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Tempered | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Fasting | Fleeting + reinforced + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Deliberate | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Erudite | Fleeting + reinforced + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Fugitive | `vestige:kairotic_hourglass` | Fleeting + Frugal + Bloodbound | Fleeting + frugal + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Spartan | `vestige:kairotic_hourglass` | Fleeting + Frugal + Fasting | Fleeting + frugal + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Resourceful | `vestige:kairotic_hourglass` | Fleeting + Frugal + Erudite | Fleeting + frugal + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Monastic | `vestige:kairotic_hourglass` | Enduring + Reinforced + Fasting | Enduring + reinforced + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Sagacious | `vestige:kairotic_hourglass` | Enduring + Reinforced + Erudite | Enduring + reinforced + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Unflagging | `vestige:kairotic_hourglass` | Enduring + Frugal + Bloodbound | Enduring + frugal + bloodbound; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Forbearing | `vestige:kairotic_hourglass` | Enduring + Frugal + Fasting | Enduring + frugal + fasting; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
-| Contemplative | `vestige:kairotic_hourglass` | Enduring + Frugal + Erudite | Enduring + frugal + erudite; each authored contribution retains its own trade-off. Name reserved; hourglass gameplay pending. |
+| Resilient | `vestige:kairotic_hourglass` | Fleeting + Reinforced | Fleeting + reinforced; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Measured | `vestige:kairotic_hourglass` | Enduring + Frugal | Enduring + frugal; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Sanguine | `vestige:kairotic_hourglass` | Fleeting + Bloodbound | Fleeting + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Spare | `vestige:kairotic_hourglass` | Fleeting + Fasting | Fleeting + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Retrospective | `vestige:kairotic_hourglass` | Fleeting + Erudite | Fleeting + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Unyielding | `vestige:kairotic_hourglass` | Enduring + Bloodbound | Enduring + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Ascetic | `vestige:kairotic_hourglass` | Enduring + Fasting | Enduring + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Recollective | `vestige:kairotic_hourglass` | Enduring + Erudite | Enduring + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Hardened | `vestige:kairotic_hourglass` | Reinforced + Bloodbound | Reinforced + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Abstinent | `vestige:kairotic_hourglass` | Reinforced + Fasting | Reinforced + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Studious | `vestige:kairotic_hourglass` | Reinforced + Erudite | Reinforced + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Miserly | `vestige:kairotic_hourglass` | Frugal + Bloodbound | Frugal + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Austere | `vestige:kairotic_hourglass` | Frugal + Fasting | Frugal + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Scholarly | `vestige:kairotic_hourglass` | Frugal + Erudite | Frugal + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Intrepid | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Bloodbound | Fleeting + reinforced + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Tempered | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Fasting | Fleeting + reinforced + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Deliberate | `vestige:kairotic_hourglass` | Fleeting + Reinforced + Erudite | Fleeting + reinforced + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Fugitive | `vestige:kairotic_hourglass` | Fleeting + Frugal + Bloodbound | Fleeting + frugal + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Spartan | `vestige:kairotic_hourglass` | Fleeting + Frugal + Fasting | Fleeting + frugal + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Resourceful | `vestige:kairotic_hourglass` | Fleeting + Frugal + Erudite | Fleeting + frugal + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Monastic | `vestige:kairotic_hourglass` | Enduring + Reinforced + Fasting | Enduring + reinforced + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Sagacious | `vestige:kairotic_hourglass` | Enduring + Reinforced + Erudite | Enduring + reinforced + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Unflagging | `vestige:kairotic_hourglass` | Enduring + Frugal + Bloodbound | Enduring + frugal + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Forbearing | `vestige:kairotic_hourglass` | Enduring + Frugal + Fasting | Enduring + frugal + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Contemplative | `vestige:kairotic_hourglass` | Enduring + Frugal + Erudite | Enduring + frugal + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
 
 ## Implemented mechanical compounds
 

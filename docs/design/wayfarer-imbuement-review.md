@@ -9,6 +9,7 @@ The approved baseline and exact crafting behavior are listed below. Numeric valu
 | Property | Approved baseline |
 | --- | --- |
 | Equipment | Feet; 1 armor; zero toughness; no maximum-mana bonus |
+| Base item rarity | Uncommon / yellow across all sixteen crafted variants; owner approved October 8; compatible enchantments retain vanilla's displayed promotion |
 | Trigger | Deliberate grounded sprint-jump; ordinary walking/jumping remain ordinary |
 | Burst | 3 seconds at +20% movement speed |
 | Landing benefit | During the burst, prevent up to 4 HP / two hearts of damage on one landing; unused protection expires with the burst |

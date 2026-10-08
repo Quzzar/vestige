@@ -11,6 +11,7 @@ import net.minecraft.core.registries.*;
 import net.minecraft.resources.*;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -238,7 +239,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
     @Override public boolean pay(List<SpellCost> costs, SpellRuntime.Context context) {
         LivingEntity caster = actor(context); if (caster == null) return false;
         if (caster instanceof Player player && player.isCreative()) return true;
-        double health = 0, mana = 0; long hunger = 0;
+        double health = 0, mana = 0; long hunger = 0, experience = 0;
         List<ItemStack> inventory = caster instanceof Player p ? p.getInventory().items.stream().map(ItemStack::copy).toList() : List.of();
         for (SpellCost cost : costs) {
             switch (cost) {
@@ -247,6 +248,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
                 case SpellCost.Mana amount -> mana += amount.amount();
                 case SpellCost.Health amount -> health += amount.amount();
                 case SpellCost.Hunger amount -> hunger += amount.amount();
+                case SpellCost.Experience amount -> experience += amount.amount();
                 case SpellCost.Material material -> {
                     int remaining = material.amount();
                     for (ItemStack stack : inventory) {
@@ -260,12 +262,42 @@ public final class MinecraftSpellWorld implements SpellWorld {
             }
         }
         if (!Double.isFinite(health) || caster.getHealth() <= health || !Double.isFinite(mana) || NativeMana.amount(caster) < mana || hunger > 0 && (!(caster instanceof Player p) || p.getFoodData().getFoodLevel() < hunger)) return false;
-        if (caster instanceof Player p) for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
+        if (experience > 0 && (!(caster instanceof ServerPlayer player) || experience > Integer.MAX_VALUE
+                || !com.quzzar.vestige.travel.PlayerExperience.spend(player, (int) experience))) return false;
+        if (costs.stream().anyMatch(SpellCost.Material.class::isInstance) && caster instanceof Player p)
+            for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
         if (health > 0) caster.setHealth((float) (caster.getHealth() - health));
         if (mana > 0) NativeMana.spend(caster, mana);
         context.paidMana(mana);
         if (hunger > 0 && caster instanceof Player p) p.getFoodData().setFoodLevel(p.getFoodData().getFoodLevel() - (int) hunger);
         return true;
+    }
+    /** Restore only resources owned by this payment, including mana recovery delay. */
+    @Override public boolean payAndCommit(List<SpellCost> costs, SpellRuntime.Context context, CastReservation source) {
+        if (!(source instanceof CastReservation.Atomic atomic)) return SpellWorld.super.payAndCommit(costs, context, source);
+        LivingEntity caster = actor(context);
+        if (!(caster instanceof ServerPlayer player)) return false;
+        var inventory = player.getInventory().items.stream().map(ItemStack::copy).toList();
+        float health = player.getHealth(); int hunger = player.getFoodData().getFoodLevel();
+        var xp = com.quzzar.vestige.travel.PlayerExperience.Snapshot.of(player);
+        var data = player.getPersistentData().copy();
+        boolean committed = false;
+        try {
+            if (!pay(costs, context)) return false;
+            committed = source.valid() && atomic.tryCommit();
+            return committed;
+        } finally {
+            if (!committed) {
+                if (costs.stream().anyMatch(SpellCost.Material.class::isInstance))
+                    for (int i=0;i<inventory.size();i++) player.getInventory().setItem(i,inventory.get(i));
+                player.setHealth(health); player.getFoodData().setFoodLevel(hunger); xp.restore(player);
+                for (String key : List.of("vestige:mana", "vestige:mana_recovery")) {
+                    if (data.contains(key)) player.getPersistentData().put(key,data.get(key).copy());
+                    else player.getPersistentData().remove(key);
+                }
+                NativeMana.sync(player,true);
+            }
+        }
     }
     @Override public void forfeit(SpellRuntime.Context context) {
         LivingEntity caster = actor(context); if (caster == null) return;

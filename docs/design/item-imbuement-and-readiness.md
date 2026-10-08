@@ -2,6 +2,21 @@
 
 **Owner direction, October 8, 2026.** Embrace crafted imbuements across native magical items, alongside the existing shared trait system. The owner requested an audit and follow-up changes to existing items, plus an animated native review of independent mana and recovery overlays. The v3 vanilla overlay appearance is approved below; production readiness integration is implemented with Wayfarer; other item conversions remain follow-up work.
 
+## Accepted item-name rarities
+
+**Owner approved October 8:** use Minecraft's native base item rarity for the reviewed equipment and devices.
+
+| Base rarity | Items |
+| --- | --- |
+| Uncommon / yellow | Dissentient Diamond, Attunement Shard, Homebound Eye, Whispering Shell, magical Staff, Wardweave Robes, Cinderweave Robes, Wayfarer Boots |
+| Rare / aqua | Crane Bag, Fluxed Flint |
+| Common / white | All five magical threads, Scroll Fragments, all seven mundane Staffs, every Spellstone/Plinth/Standing Stone finish |
+
+Scrolls and Wands retain their existing knowledge-aware spell-rarity name colors; unidentified spells remain white. Magical Staff names stay Uncommon across affinities, selection and two/four/six-slot capacities. Item rarity does not change spell rarity, Staff cast wear, resources, effects, crafting or durability. Crafted adjective prefixes inherit the name color and retain their italics; the stored variant remains authoritative. Existing thread/shard shimmer is independent of rarity and is retained. Compatible armor enchantments keep vanilla's displayed rarity promotion rather than receiving a forced text color. No new Epic base item is selected, and this decision does not implement the pending hourglass or other clothing packages.
+
+[Native verification and packaging](../verification/item-rarity-2026-10-08/README.md) record actual results; changing the testing-pack installation is separate work.
+
+
 ## Traits and crafted variants
 
 Numerical ability values use the same authored trait relationships as spells. Duration, protection, movement, range and other numerical outcomes can consume the appropriate traits. Numerical relationships remain explicit: a descriptive trait does not acquire a hidden runtime rule merely because an item has a number. Activation snapshots and passive reevaluation keep their existing ownership rules.
@@ -34,12 +49,13 @@ The October 8 follow-up with the resource/imbuement chat confirmed explicit per-
 | Magical threads | Socket choice selects one of five accepted thread types | Preserve the five types, names, recipes and artwork. Audit how thread contributions become part of crafted equipment; a thread type is not an arbitrary stored ability graph. |
 | Wardweave / Cinderweave | Shared trait-scaled abilities; robe crafting stores the item and wool color, without a crafted ability variant | Connect crafted imbuement to both reactive and passive resolution, costs/recovery where present, maximum durability and wear. Retain the approved unmodified behavior and appearance. |
 | Homebound Eye | Spider-Eye socket already selects an explicit resource/wear route | Preserve those accepted routes, attunement key, destination and rollback. Audit shared variant resolution/payment and durability support without reinterpreting the channel key. |
+| Kairotic Hourglass | Ordered construction and all 36 temporal/vessel/payment variants, shared traits, single adjectives and atomic returns | Review the native artwork and survival economy; preserve the approved baseline and current-dimension trail ownership. |
 | Crane Bag | Persistent shared contents keyed by attunement | Audit meaningful ability/variant hooks. Any capacity variant needs an explicit shared-pool and overflow policy first; temporary traits must not discard stored items. |
 | Whispering Shell | Communication keyed by attunement | Audit meaningful variants while preserving channel identity and accepted communication behavior. Do not invent a cost or range merely to add a trait consumer. |
 | Standing Stones / Attunement Shards | Shared verified blueprint/channel identity; stone payment policy has its own design | Keep identity separate from ability shaping. Audit payment and applicable numerical behaviors without silently rehashing the key or changing existing membership. |
-| Fluxed Flint | Finite repair budget and intrinsic volatility; stabilizing imbuements remain unimplemented | Include durability/wear and risk shaping in the audit. Respect the existing recipe/art hold; this direction does not choose a stabilization material or change its risk. |
+| Fluxed Flint | Finite repair budget and intrinsic volatility; stabilizing imbuements remain unimplemented | Include durability/wear and risk shaping in the audit. The owner resumed the recipe/art revision after approving Dissentient Diamond; stabilization materials and risk changes remain separate work. |
 
-Wayfarer Boots now implement this path, including four compatible contributions, shared adjective naming, trusted selections, actor trait scaling, typed mana/recovery and durability. Dawnsight Hood, Patchwork Robes, Spiderstep Boots and the selected Kairotic Hourglass still require this path before implementation. Their unapproved controls, values and material selectors remain review decisions. Preserve the hourglass's accepted 60-mana / ten-durability / one-wear baseline.
+Wayfarer Boots and the [Kairotic Hourglass](kairotic-hourglass.md) now implement this path. The hourglass adds seven compatible choices across 36 complete sets, trusted geometry, actor Time/Amplify scaling, typed mana/health/hunger/XP payments and deterministic durability. Shared `SpellCost.Experience` now supplies the XP extension identified in the earlier coordination findings. Dawnsight Hood, Patchwork Robes and Spiderstep Boots still need their reviewed implementation packages; the separate robe proposal remains unapproved.
 
 Each conversion needs an unchanged unimbued route, supported variant behavior and a trait-boost composition case. Preserve shaping through dyeing, repairs, renaming, stack transfers, menus, save/load and networking as applicable. Durability changes must preserve existing damage rather than refilling the item. Cancellation, failed payment, exact wear, depleted-item behavior and typed resource substitutions need native behavior evidence when changed. Do not add legacy migrations; fresh test items/worlds remain the project policy.
 

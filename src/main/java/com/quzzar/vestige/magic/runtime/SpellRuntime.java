@@ -318,8 +318,12 @@ public final class SpellRuntime implements AutoCloseable {
             if (task.needsPayment) {
                 task.needsPayment = false;
                 if (!task.cast.reservation.valid()) { end(task.cast, Status.INTERRUPTED); finish(task); return; }
-                if (!task.cast.freeResources && !world.pay(task.cast.costs, first)) { end(task.cast, Status.COST_FAILED); finish(task); return; }
-                task.cast.reservation.commit();
+                if (!task.cast.freeResources && !world.payAndCommit(task.cast.costs, first, task.cast.reservation)) { end(task.cast, Status.COST_FAILED); finish(task); return; }
+                if (task.cast.freeResources) {
+                    if (task.cast.reservation instanceof CastReservation.Atomic atomic) {
+                        if (!atomic.tryCommit()) { end(task.cast, Status.INTERRUPTED); finish(task); return; }
+                    } else task.cast.reservation.commit();
+                }
                 task.cast.paymentCommitted = true;
                 if (!task.cast.freeResources) {
                     long recovery = task.cast.costs.stream().filter(SpellCost.Cooldown.class::isInstance)

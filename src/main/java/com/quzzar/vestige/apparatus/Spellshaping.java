@@ -133,6 +133,7 @@ public final class Spellshaping {
             case SpellCost.Mana m->String.format(Locale.ROOT,"%.0f mana",m.amount());
             case SpellCost.Health h->String.format(Locale.ROOT,"%.0f hearts",h.amount()/2);
             case SpellCost.Hunger h->h.amount()+" hunger";
+            case SpellCost.Experience e->e.amount()+" XP points";
             case SpellCost.Time t->String.format(Locale.ROOT,"%.2g s charge",t.ticks()/20d);
             case SpellCost.Cooldown recovery->String.format(Locale.ROOT,"%.2g s recovery",recovery.ticks()/20d);
             case SpellCost.Material m->m.amount()+" "+m.item().getPath().replace('_',' ')+(m.operation()==SpellCost.Material.Operation.DAMAGE ? " durability" : "");
