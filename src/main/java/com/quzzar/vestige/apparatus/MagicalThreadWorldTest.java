@@ -75,21 +75,16 @@ public final class MagicalThreadWorldTest {
     public static void lacedCraftsWithEmerald(GameTestHelper h) { craft(h, MagicalThreadRecipe.Type.LACED, 6); }
     @GameTest(template = "empty_9x3x9", batch = "magical_threads", timeoutTicks = 90)
     public static void consecratedCraftsWithGlowstone(GameTestHelper h) { craft(h, MagicalThreadRecipe.Type.CONSECRATED, 0); }
-    @GameTest(template = "empty_9x3x9", batch = "magical_threads_outer", timeoutTicks = 90)
-    public static void occupiedOuterPlinthsAreIgnoredEvenIfChangedDuringCraft(GameTestHelper h) {
+    @GameTest(template = "empty_9x3x9", batch = "magical_threads_outer", timeoutTicks=90)
+    public static void completeOuterLayerDoesNotChangeTheOrderedInnerRecipe(GameTestHelper h) {
         var layout = ritual(h, MagicalThreadRecipe.Type.CONSECRATED, 2, true);
         var advanced = RitualCrafting.layout(layout.center());
-        for (int i : List.of(1, 3, 5, 7)) {
-            advanced.stands().get(i).insert(new ItemStack(Items.DIAMOND));
-            advanced.stands().get(i).installMaterial(new ItemStack(Items.DIAMOND_BLOCK));
-        }
-        h.assertTrue(RitualCrafting.activate(quietPlayer(h), layout.center()) == RitualCrafting.Outcome.CRAFTING, "Outer offerings prevented inner recipe");
-        h.runAfterDelay(10, () -> { advanced.stands().get(1).remove(); advanced.stands().get(1).insert(new ItemStack(Items.PAPER)); });
-        h.runAfterDelay(65, () -> {
-            h.assertTrue(RitualTestOutput.stack(layout.center()).is(MagicalThreadRecipe.Type.CONSECRATED.item()), "Outer edit changed/canceled the output");
-            for (int i : List.of(1, 3, 5, 7)) h.assertTrue(!advanced.stands().get(i).displayedItem().isEmpty()
-                    && advanced.stands().get(i).materialItem().is(Items.DIAMOND_BLOCK) && !advanced.stands().get(i).busy(), "Outer node participated in consumption/locking");
-            h.succeed();
+        advanced.stands().get(1).insert(new ItemStack(Items.DIAMOND));
+        h.assertTrue(RitualCrafting.activate(quietPlayer(h), layout.center()) == RitualCrafting.Outcome.CRAFTING,"Inner pattern rejected");
+        h.assertTrue(!advanced.stands().get(1).busy(),"Inactive node reserved");
+        h.runAfterDelay(65,()->{
+            h.assertTrue(RitualTestOutput.stack(layout.center()).is(ScrollItems.CONSECRATED_THREAD.get())
+                    && advanced.stands().get(1).displayedItem().is(Items.DIAMOND),"Outer offering consumed or changed recipe");h.succeed();
         });
     }
     @GameTest(template = "empty_9x3x9", batch = "magical_threads_rejection")

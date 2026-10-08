@@ -1,0 +1,57 @@
+{
+  "atlas": [
+    64,
+    64
+  ],
+  "logicalTexelsPerModelUnit": 1,
+  "body": [
+    8,
+    12,
+    4
+  ],
+  "wideSleeve": [
+    4,
+    12,
+    4
+  ],
+  "slimSleeve": [
+    3,
+    12,
+    4
+  ],
+  "coatHalves": {
+    "count": 2,
+    "each": [
+      5,
+      8,
+      5
+    ],
+    "motion": "native leg positions with 35% of stride rotation; overlap at waist and center",
+    "cape": false
+  },
+  "shoulderHeight": 3,
+  "cuffHeight": 3,
+  "dye": "neutral fabric only; separate fixed overlay",
+  "sources": "built-in image_gen; exact prompts in ../prompts.json",
+  "cropping": "frozen REGIONS and palette in author_robe_armor.py snapshot",
+  "bodyDeformation": [
+    0.65,
+    0.05,
+    0.65
+  ],
+  "coatDeformation": [
+    0.1,
+    0,
+    0.4
+  ],
+  "collarDeformation": [
+    0.75,
+    0.1,
+    0.75
+  ],
+  "cuffDeformation": [
+    0.55,
+    0.05,
+    0.55
+  ]
+}

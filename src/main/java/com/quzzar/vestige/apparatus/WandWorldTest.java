@@ -111,25 +111,40 @@ public final class WandWorldTest {
         h.assertTrue(!WandCasting.cast(caster,InteractionHand.MAIN_HAND) && NativeMana.amount(caster)==100,"Forged capacity cast or paid");h.succeed();
     }
     @GameTest(template="empty_9x3x9",batch="wand_payment",timeoutTicks=80)
-    public static void committedCastWearsOnceAndSwappingCopiesCannotBypassCooldown(GameTestHelper h) {
+    public static void repeatAndSwappedWandsEachPrepareAndPayWithoutAddedRecovery(GameTestHelper h) {
         var caster=player(h,true,"pf2_shield");
         h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Cast rejected");
         h.assertTrue(caster.getMainHandItem().getDamageValue()==0 && NativeMana.amount(caster)==100,"Preparation paid early");
         h.runAfterDelay(25,() -> {
             h.assertTrue(caster.getMainHandItem().getDamageValue()==1 && NativeMana.amount(caster)==94,"Commitment did not pay/wear exactly once");
-            caster.setItemInHand(InteractionHand.MAIN_HAND,wand("pf2_shield",MagicalThreadRecipe.Type.ENSORCELLED));
-            h.assertTrue(!WandCasting.cast(caster,InteractionHand.MAIN_HAND) && caster.getMainHandItem().getDamageValue()==0 && NativeMana.amount(caster)==94,"Copy/core swap bypassed recovery");
+            h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Same wand retained added recovery");
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==1 && NativeMana.amount(caster)==94,"Repeat preparation paid early");
         });
-        h.runAfterDelay(70,() -> {NativeMagic.session(h.getLevel().getServer()).runtime().dispelActor(caster.getUUID());h.succeed();});
+        h.runAfterDelay(50,() -> {
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==2 && NativeMana.amount(caster)==88,"Repeat commitment skipped or duplicated payment");
+            caster.getInventory().setItem(5,caster.getMainHandItem().copy());
+            caster.setItemInHand(InteractionHand.MAIN_HAND,wand("pf2_shield",MagicalThreadRecipe.Type.ENSORCELLED));
+            h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Swapped wand retained added recovery");
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==0 && NativeMana.amount(caster)==88,"Swapped preparation paid early");
+        });
+        h.runAfterDelay(70,() -> {
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==1 && caster.getInventory().getItem(5).getDamageValue()==2
+                    && NativeMana.amount(caster)==83,"Economy core must save one mana on the swapped cast");h.succeed();
+        });
     }
     @GameTest(template="empty_9x3x9",batch="wand_scroll_recovery",timeoutTicks=120)
-    public static void theWandMinuteDoesNotExtendTheScrollsNativeRecovery(GameTestHelper h) {
+    public static void wandAndScrollCastsCanFollowEachOtherWithoutAddedRecovery(GameTestHelper h) {
         var caster=player(h,true,"pf2_shield");h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Wand cast rejected");
-        h.runAfterDelay(85,() -> {
-            h.assertTrue(!WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Wand minute expired early");
+        h.runAfterDelay(25,() -> {
             caster.setItemInHand(InteractionHand.MAIN_HAND,ScrollItems.scroll(id("pf2_shield")));
             h.assertTrue(ScrollCasting.cast(caster,caster.getMainHandItem()) && caster.getMainHandItem().isEmpty() && NativeMana.amount(caster)==88,
-                    "Wand minute extended scroll recovery or charged the wrong amount");h.succeed();
+                    "Wand blocked the scroll or charged the wrong amount");
+            caster.setItemInHand(InteractionHand.MAIN_HAND,wand("pf2_shield",MagicalThreadRecipe.Type.CALLOUS));
+            h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Scroll blocked the next wand preparation");
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==0 && NativeMana.amount(caster)==88,"New wand preparation paid early");
+        });
+        h.runAfterDelay(55,() -> {
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==1 && NativeMana.amount(caster)==82,"Wand after scroll did not pay normally");h.succeed();
         });
     }
     @GameTest(template="empty_9x3x9",batch="wand_switch",timeoutTicks=80)
@@ -162,7 +177,13 @@ public final class WandWorldTest {
         h.assertTrue(WandCasting.cast(caster,InteractionHand.OFF_HAND),"Final use rejected");
         h.runAfterDelay(25,() -> {
             h.assertTrue(caster.getOffhandItem().isEmpty() && caster.getInventory().getItem(5).getDamageValue()==0 && NativeMana.amount(caster)==94,
-                    "Final cast failed to break or charged a spare wand");h.succeed();
+                    "Final cast failed to break or charged a spare wand");
+            caster.setItemInHand(InteractionHand.MAIN_HAND,caster.getInventory().getItem(5));caster.getInventory().setItem(5,ItemStack.EMPTY);
+            h.assertTrue(WandCasting.cast(caster,InteractionHand.MAIN_HAND),"Broken offhand wand blocked its replacement");
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==0 && NativeMana.amount(caster)==94,"Replacement preparation paid early");
+        });
+        h.runAfterDelay(55,() -> {
+            h.assertTrue(caster.getMainHandItem().getDamageValue()==1 && NativeMana.amount(caster)==88,"Replacement wand did not pay normally");h.succeed();
         });
     }
     @GameTest(template="empty_9x3x9",batch="wand_unknown",timeoutTicks=70)

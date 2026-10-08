@@ -1,0 +1,211 @@
+{
+  "date": "2026-10-08",
+  "scope": "Wardweave and Cinderweave gameplay approved and implemented October 7; mage armor v2 worn appearance approved October 8. The other four clothing packages remain proposals.",
+  "shared": {
+    "accepted": [
+      "Robes use the chest armor slot, give very little armor, increase maximum mana, and have an additional effect.",
+      "Four wool blocks must all match. Their color determines the finished cloth color; mixed colors do not craft.",
+      "Cloth may be dyed later. Belts, fastenings, cuffs and patches keep their identifying colors.",
+      "Wardweave and Cinderweave each use eight offerings around an empty Spellstone.",
+      "Every magical armor piece has durability. Normal damaging hits cause armor wear; hits absorbed by the robe’s magic still wear that robe, including full prevention.",
+      "Do not charge extra durability simply for activating an effect or keeping it active. Charge each eligible hit once; protected damage cannot make the robe unbreakable.",
+      "Trait-driven duration and protection can grow without arbitrary power ceilings. Actual damage prevented cannot exceed the hit; persistent pocket counts remain separate design decisions.",
+      "Ordinary compatible armor enchantments are allowed, but Unbreaking and Mending are excluded to preserve the authored durability and magical-material repair rules.",
+      "Each robe: 2 armor points, zero toughness, +25 maximum mana. A robe takes the normal pool from 100 to 125.",
+      "Equipping extra capacity does not refill mana. Taking it off clamps mana to the smaller pool; recovery speed stays the same.",
+      "Ability recovery belongs to the wearer. Swapping, repairing or dyeing another copy does not reset it.",
+      "Wardweave and Cinderweave begin with 80 durability. One corresponding magical thread repairs 20 durability at an anvil; dyeing and repair preserve components."
+    ],
+    "proposed": [
+      "The hood and each pair of boots: 1 armor point and zero toughness. Dawnsight could also give +10 maximum mana."
+    ],
+    "finishingProposal": [
+      "The remaining hood/boots packages could start with 55/65 durability; these are still proposals.",
+      "Corresponding-thread repair is implemented for both approved robes; repair materials and quantities for the remaining clothing still need review.",
+      "Dyeing and repairs preserve stored objects, enchantments and item identity."
+    ]
+  },
+  "items": [
+    {
+      "id": "wardweave",
+      "name": "Wardweave Robes",
+      "role": "A brief second-hit defense",
+      "stats": [
+        "Chest slot",
+        "2 armor",
+        "+25 max mana"
+      ],
+      "abilityStatus": "Approved · implemented",
+      "control": "Automatic after taking damage",
+      "cost": "No extra mana",
+      "recovery": "12 seconds",
+      "behavior": [
+        "A hit that actually deals health damage creates a four-second ward. That triggering hit keeps its normal damage; canceled or fully blocked hits do not arm it.",
+        "The next eligible hit spends the single charge and loses up to 2 HP (one heart) before ordinary armor and other protections. A smaller hit still spends the whole charge.",
+        "Time multiplies duration; Force and Amplify multiply protection without tuned upper ceilings. The ward keeps the values resolved when it forms.",
+        "Recovery starts when the ward forms and stays 12 seconds. A hit that spends the charge cannot also create another. Removing or changing the robe clears the charge without resetting recovery.",
+        "Normal attacks, fire and falls qualify. Damage that bypasses magical protection, including void and operator kill damage, does not.",
+        "Protected hits still cause robe wear once, even if all health damage is prevented. Forming a ward adds no separate durability charge."
+      ],
+      "example": "With +25% Time, the ward lasts 5 seconds. With +25% Force and +25% Amplify, it prevents up to 3.125 HP on one hit. The first hit remains unchanged.",
+      "recipeStatus": "Accepted",
+      "recipe": "4 matching Wool + 2 Callous Thread + Iron Ingot + Pufferfish",
+      "artStatus": "Approved · Mage armor v2 · October 8",
+      "art": "../magic-equipment-armor-v2/captures/wardweave-white-gui-2.png",
+      "artMode": "single",
+      "artLink": "../magic-equipment-armor-v2/index.html",
+      "decisions": []
+    },
+    {
+      "id": "cinderweave",
+      "name": "Cinderweave Robes",
+      "role": "Partial protection from heat",
+      "stats": [
+        "Chest slot",
+        "2 armor",
+        "+25 max mana"
+      ],
+      "abilityStatus": "Approved · implemented",
+      "control": "Passive while worn",
+      "cost": "No extra mana",
+      "recovery": "Always active",
+      "behavior": [
+        "Prevent 25% of incoming fire-tagged damage, capped at 2 HP (one heart) per event, before ordinary armor and other protections.",
+        "Fire multiplies the percentage up to complete prevention. Amplify multiplies the per-event HP protection budget without a tuned upper ceiling. Actual protection uses the smaller result and cannot exceed the incoming hit.",
+        "Read current wearer traits for each fire event. An expired boost stops helping on later events; maximum mana remains a fixed +25.",
+        "Burning and lava qualify through Minecraft’s fire damage tag. Ordinary physical hits and damage bypassing magical protection do not. Strong boosts may fully protect an eligible fire hit; the robe grants no ignition.",
+        "A fire hit prevented by the robe still wears it once, including burning damage that would normally bypass armor wear. Merely wearing the robe adds no durability drain."
+      ],
+      "example": "On an 8 HP fire event: baseline protection is 2 HP. +25% Fire alone still prevents 2 HP because of the cap; +25% Fire and +25% Amplify together prevent 2.5 HP.",
+      "recipeStatus": "Accepted",
+      "recipe": "4 matching Wool + 2 Smoldering Thread + Blaze Powder + Magma Cream",
+      "artStatus": "Approved · Mage armor v2 · October 8",
+      "art": "../magic-equipment-armor-v2/captures/cinderweave-white-gui-2.png",
+      "artMode": "single",
+      "artLink": "../magic-equipment-armor-v2/index.html",
+      "decisions": []
+    },
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer Boots",
+      "role": "A short travel burst",
+      "stats": [
+        "Feet slot",
+        "1 armor",
+        "No mana capacity bonus"
+      ],
+      "abilityStatus": "Awaiting approval",
+      "control": "Sprint, then jump from the ground (proposed)",
+      "cost": "5 mana per burst",
+      "recovery": "15 seconds",
+      "behavior": [
+        "A sprint-jump triggers 3 seconds of 20% faster movement when the ability is ready and affordable.",
+        "The next landing during those 3 seconds can prevent up to 2 hearts of fall damage once.",
+        "Normal jumps stay ordinary. Repeated jumps cannot refresh the burst or its landing protection."
+      ],
+      "example": "Sprint-jump to cross a gap. You get a short speed burst and protection on one landing if it happens before the burst expires.",
+      "recipeStatus": "Proposed",
+      "recipe": "4 Leather + 2 Laced Thread + Feather + Rabbit’s Foot",
+      "artStatus": "Selected: Feather Tabs (C)",
+      "art": "../magic-equipment-v1/captures/wayfarer_c.png",
+      "artMode": "single",
+      "artLink": "../magic-equipment-v1/gallery.html#wayfarer",
+      "decisions": [
+        "Approve the burst, fall protection, cost and recipe.",
+        "Choose whether every ready sprint-jump should activate it, or whether it needs a more deliberate control."
+      ]
+    },
+    {
+      "id": "dawnsight",
+      "name": "Dawnsight Hood",
+      "role": "See nearby invisible creatures",
+      "stats": [
+        "Head slot",
+        "1 armor",
+        "+10 max mana optional"
+      ],
+      "abilityStatus": "Awaiting approval",
+      "control": "Sneak without moving for 2 seconds (proposed)",
+      "cost": "10 mana per reveal",
+      "recovery": "20 seconds",
+      "behavior": [
+        "After preparing, reveal up to 8 invisible living creatures within 12 blocks for 6 seconds.",
+        "Require a clear line of sight to each creature when the reveal starts. Only the wearer sees the outline; invisibility stays intact.",
+        "Moving, entering combat or removing the hood cancels preparation without spending mana."
+      ],
+      "example": "Pause and prepare to spot an invisible creature in an open room. The hood does not locate creatures hidden behind a wall.",
+      "recipeStatus": "Proposed",
+      "recipe": "4 matching Wool + 2 Consecrated Thread + Glow Ink Sac + Glowstone Dust",
+      "artStatus": "Preferred: Side Fold (D)",
+      "art": "../magic-equipment-dyes-v2/captures/dawnsight_d-comparison.png",
+      "artMode": "colors",
+      "artLink": "../magic-equipment-dyes-v2/gallery.html#dawnsight_d",
+      "decisions": [
+        "Approve the reveal, range, duration, cost and recipe.",
+        "Choose the activation control; ordinary stationary crouching would also trigger the current proposal.",
+        "Choose whether the hood adds 10 maximum mana."
+      ]
+    },
+    {
+      "id": "patchwork",
+      "name": "Patchwork Robes",
+      "role": "Carry four folded useful objects",
+      "stats": [
+        "Chest slot",
+        "2 armor",
+        "+25 max mana"
+      ],
+      "abilityStatus": "Awaiting approval",
+      "control": "Small four-pocket inventory (exact opening control undecided)",
+      "cost": "Supply the actual stored objects",
+      "recovery": "None proposed",
+      "behavior": [
+        "Four personal patches each store one object. The initial choices are Torch, Ladder, Oak Boat and a normal Compass.",
+        "Taking an object out empties its patch. Refill it with a real object; the robe does not generate replacement supplies.",
+        "Contents travel with this particular robe. There is no shared bag channel, full-stack storage or nested container storage."
+      ],
+      "example": "Put a boat into a patch, then take that same boat out later. The patch stays empty until you put another object in.",
+      "recipeStatus": "Proposed",
+      "recipe": "4 matching Wool + 2 Ensorcelled Thread + Ender Pearl + Chest",
+      "artStatus": "Preferred: Pocket Coat (C)",
+      "art": "../magic-equipment-dyes-v2/captures/patchwork_c-comparison.png",
+      "artMode": "colors",
+      "artLink": "../magic-equipment-dyes-v2/gallery.html#patchwork_c",
+      "decisions": [
+        "Approve four reusable storage patches, or revise the intended magic.",
+        "Choose the allowed objects, how to open the pockets, and whether access is available while worn.",
+        "Approve the recipe and shared robe values."
+      ]
+    },
+    {
+      "id": "spiderstep",
+      "name": "Spiderstep Boots",
+      "role": "Climb vertical walls",
+      "stats": [
+        "Feet slot",
+        "1 armor",
+        "No mana capacity bonus"
+      ],
+      "abilityStatus": "Awaiting approval",
+      "control": "Hold jump against a wall; sneak to hold position",
+      "cost": "2 mana per second while attached",
+      "recovery": "None proposed",
+      "behavior": [
+        "Climb a solid vertical wall at about 2 blocks per second. Holding still on the wall also spends mana.",
+        "Release the control, run out of mana, enter water, mount or remove the boots to detach. After detaching, ordinary falling applies.",
+        "No ceiling walking. Repeated short jumps cannot avoid paying for the climb."
+      ],
+      "example": "A 10-block climb takes about 5 seconds and 10 mana, plus any time spent holding still.",
+      "recipeStatus": "Proposed",
+      "recipe": "4 Leather + 2 Laced Thread + Spider Eye + Slimeball",
+      "artStatus": "Final artwork unselected",
+      "art": null,
+      "artMode": "none",
+      "artLink": "../magic-equipment-v1/gallery.html#spiderstep",
+      "decisions": [
+        "Approve climbing, mana drain, controls and recipe.",
+        "Choose Red Laces, Web Cuffs, Spider Clasp or Climbing Wraps artwork."
+      ]
+    }
+  ]
+}

@@ -19,7 +19,10 @@ public final class VestigeMod {
         com.quzzar.vestige.travel.StandingStones.BLOCKS.register(bus);
         com.quzzar.vestige.travel.StandingStones.ITEMS.register(bus);
         com.quzzar.vestige.travel.StandingStones.ENTITIES.register(bus);
+        com.quzzar.vestige.equipment.MagicEquipment.MATERIALS.register(bus);
+        com.quzzar.vestige.apparatus.MundaneStaffs.bootstrap();
         com.quzzar.vestige.apparatus.ScrollItems.ITEMS.register(bus);
         com.quzzar.vestige.apparatus.ScrollItems.SERIALIZERS.register(bus);
+        com.quzzar.vestige.apparatus.StaffSelection.MENUS.register(bus);
     }
 }

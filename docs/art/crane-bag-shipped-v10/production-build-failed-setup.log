@@ -1,0 +1,21 @@
+Starting a Gradle Daemon, 1 busy and 1 incompatible and 5 stopped Daemons could not be reused, use --status for details
+Daemon JVM discovery is an incubating feature.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Initialization script '/Users/quzzar/Projects/vestige/docs/art/crane-bag-shipped-v10/production-build.gradle' line: 11
+
+* What went wrong:
+Could not determine the dependencies of task ':createMinecraftArtifacts'.
+> Could not create task ':generateModMetadata'.
+   > No signature of method: org.gradle.language.jvm.tasks.ProcessResources.setSource() is applicable for argument types: (File) values: [/Users/quzzar/Projects/vestige/run/crane-bag-shipped-input/src/main/templates]
+     Possible solutions: getSource()
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 17s

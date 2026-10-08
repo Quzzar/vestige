@@ -1,0 +1,153 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:angel_wing",
+    "school": "irons_spellbooks:holy",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Angel Wings",
+    "cast_type": "instant",
+    "cooldown_ticks": 2400
+  },
+  "rarity": "rare",
+  "traditions": [
+    "divine"
+  ],
+  "traits": {
+    "vestige:holy": 4,
+    "vestige:air": 4,
+    "vestige:motion": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 40
+    },
+    {
+      "type": "cooldown",
+      "ticks": 400
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "flight"
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "wings",
+            "color": "ffd45a",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.4,
+            "speed": 0.5,
+            "phase": 0,
+            "count": 10
+          },
+          {
+            "shape": "rays",
+            "color": "fffbe1",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.9799999999999999,
+            "speed": -0.325,
+            "phase": 1.2,
+            "count": 5
+          },
+          {
+            "shape": "sparks",
+            "color": "fffbe1",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "wings",
+              "color": "ffd45a",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.4,
+              "speed": 0.5,
+              "phase": 0,
+              "count": 10
+            },
+            {
+              "shape": "rays",
+              "color": "fffbe1",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.9799999999999999,
+              "speed": -0.325,
+              "phase": 1.2,
+              "count": 5
+            },
+            {
+              "shape": "sparks",
+              "color": "fffbe1",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

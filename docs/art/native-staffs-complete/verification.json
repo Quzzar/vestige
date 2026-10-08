@@ -1,0 +1,144 @@
+{
+  "assetSha256": {
+    "models/item/staff.json": "ea7bb2a7f953d5b3ff64c1d1ec08f9969420920c3ac9b5c3318110d22abf9718",
+    "textures/item/staff.png": "3d1c3d8e0c2d57345dd726953a9cf6b6e4aa98155f80934e5ed8a1e2fc713345"
+  },
+  "checks": [
+    {
+      "passed": true,
+      "check": "Native menu exposes 2 slots"
+    },
+    {
+      "passed": true,
+      "check": "All 2 slot buttons retain fixed height"
+    },
+    {
+      "passed": true,
+      "check": "Identified binding reveals its name"
+    },
+    {
+      "passed": true,
+      "check": "Unknown binding conceals its spell name"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "two-slots"
+    },
+    {
+      "passed": true,
+      "check": "Selecting a slot spends no durability"
+    },
+    {
+      "passed": true,
+      "check": "Native menu exposes 6 slots"
+    },
+    {
+      "passed": true,
+      "check": "All 6 slot buttons retain fixed height"
+    },
+    {
+      "passed": true,
+      "check": "Identified binding reveals its name"
+    },
+    {
+      "passed": true,
+      "check": "Unknown binding conceals its spell name"
+    },
+    {
+      "passed": true,
+      "check": "Stored shaping and empty replacement destinations are visible"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "six-slots"
+    },
+    {
+      "passed": true,
+      "check": "Native menu exposes 6 slots"
+    },
+    {
+      "passed": true,
+      "check": "All 6 slot buttons retain fixed height"
+    },
+    {
+      "passed": true,
+      "check": "Identified binding reveals its name"
+    },
+    {
+      "passed": true,
+      "check": "Unknown binding conceals its spell name"
+    },
+    {
+      "passed": true,
+      "check": "Stored shaping and empty replacement destinations are visible"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "six-slots-small"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "held-staff"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "third-person-staff"
+    },
+    {
+      "pixels": [
+        1920,
+        1440
+      ],
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "after-cast"
+    },
+    {
+      "passed": true,
+      "check": "Real use packet casts with normal mana and exactly one wear"
+    },
+    {
+      "passed": true,
+      "check": "Unknown staff binding remains unidentified"
+    }
+  ],
+  "source": "Unedited Minecraft framebuffer",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

@@ -34,8 +34,7 @@ public final class RitualDisplays {
             if (capacity!=4 && capacity!=8 || offerings.size()>capacity
                     || !identified && rarity!=SpellRarity.COMMON
                     || spell.isEmpty() && (identified || offerings.isEmpty())
-                    || spell.isPresent() && !offerings.isEmpty() && (offerings.size()<4
-                        || !offerings.stream().map(Offering::seat).toList().containsAll(List.of(0,2,4,6)))
+                    || spell.isPresent() && !offerings.isEmpty() && offerings.size()<4
                     || offerings.stream().map(Offering::seat).distinct().count()!=offerings.size()
                     || offerings.stream().anyMatch(o -> o.seat()<0 || o.seat()>7 || capacity==4 && (o.seat()&1)!=0))
                 throw new IllegalArgumentException("Invalid ritual display");
@@ -44,13 +43,15 @@ public final class RitualDisplays {
                     || imbuements.stream().anyMatch(m -> m.material()==null || !offeringSeats.contains(m.seat())))
                 throw new IllegalArgumentException("Invalid ritual imbuement");
         }
-        public boolean shapeless() { return spell.isEmpty(); }
+        public boolean shapeless() { return id.equals(VestigeMainMod.location("ritual/attunement_shard")); }
         public boolean concealed() { return spell.isPresent() && offerings.isEmpty(); }
-        public ItemStack output() { return spell.map(ScrollItems::scroll).orElseGet(() -> MagicalThreadRecipe.types().stream()
+        public ItemStack output() { return com.quzzar.vestige.equipment.WayfarerDisplays.output(id).orElseGet(() -> com.quzzar.vestige.equipment.MagicArmorDisplays.output(id).orElseGet(this::ordinaryOutput)); }
+        private ItemStack ordinaryOutput() { return spell.map(ScrollItems::scroll).orElseGet(() -> MagicalThreadRecipe.types().stream()
                 .filter(type -> id.equals(VestigeMainMod.location("ritual/"+type.id().getPath())))
                 .findFirst().map(type -> new ItemStack(type.item())).orElseGet(() -> new ItemStack(
+                id.equals(VestigeMainMod.location("ritual/fluxed_flint")) ? ScrollItems.FLUXED_FLINT.get() :
                 id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() :
-                ScrollItems.ATTUNEMENT_SHARD.get()))); }
+                id.equals(VestigeMainMod.location("ritual/whispering_shell")) ? ScrollItems.WHISPERING_SHELL.get() : ScrollItems.ATTUNEMENT_SHARD.get()))); }
         public List<Integer> seats() { return capacity==4 ? List.of(0,2,4,6) : List.of(0,1,2,3,4,5,6,7); }
     }
     public static List<Entry> threads() {
@@ -75,6 +76,18 @@ public final class RitualDisplays {
         return new Entry(VestigeMainMod.location("ritual/attunement_shard"),Optional.empty(),false,SpellRarity.COMMON,8,
                 java.util.stream.IntStream.range(0,ingredients.size()).mapToObj(i ->
                         new Offering(i,new RitualRecipe.Ingredient(List.of(ingredients.get(i)),List.of()))).toList());
+    }
+    public static Entry whisperingShell() {
+        var ingredients=WhisperingShellRecipe.ingredients();
+        return new Entry(VestigeMainMod.location("ritual/whispering_shell"),Optional.empty(),false,SpellRarity.COMMON,4,
+                java.util.stream.IntStream.range(0,ingredients.size()).mapToObj(i -> new Offering(i*2,
+                        new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
+    }
+    public static Entry fluxedFlint() {
+        var ingredients=FluxedFlintRecipe.ingredients();
+        return new Entry(VestigeMainMod.location("ritual/fluxed_flint"),Optional.empty(),false,SpellRarity.COMMON,4,
+                java.util.stream.IntStream.range(0,4).mapToObj(i -> new Offering(i*2,
+                        new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
     }
     public static Entry homeboundEye() {
         var ingredients=HomeboundEyeRecipe.ingredients();

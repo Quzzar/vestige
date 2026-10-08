@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-08",
+  "scope": "Owner-directed ordered component/device construction and shared resource rebalance. Current combined working tree; unrelated work remains outside this change.",
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/FourSlotPattern.java": "87331e4347348a7cc363c7c8ba5d9c551911f57fb123c76787dba0d18025d495",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadRecipe.java": "5877e239298a1b6b29323b5e0703530a247b2ebb553cb7d09fdf568bdb966bd1",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeRecipe.java": "43fad515eae2c12555ce0d7729bebfd82d915fa8591e0d191c078b9ebc54f8e1",
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellRecipe.java": "d5f55ff201ead9e238798345041d062a34c66c3831fab4ed757abc9941fa7f48",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneRecipe.java": "7a811f59638a0c84c8711b8b77dd16a80d61d3d052e99f8de800ca927abebc8e",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "cc36c741e915549151179426e5d54dd13c522c52845115d046fa60c423717e5d",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "72c5fecdaab004287347992f00b1eab67d3b4a1ef862c6888077d38c8441c9be",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": "1b46f53d746614ec44645657f44c334c0989af86730dba85abc8450296bc536c",
+    "src/main/java/com/quzzar/vestige/magic/runtime/ResourceValuation.java": "e814269f937351fccde6df4ac7b834410d5bd1be08c11f041ece7cbed63090d8",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java": "63ef1eb44cf6560bdb117d12c11f2a00fb80622352f6134b8e7560da618d4c4b",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeItem.java": "a4b5838251e5c7dd19c4acb46114c79c2d566cffe704dd1ab94288a2e337b4c2",
+    "tools/author_spellshaping.py": "6306b918d03401e0d4970fdb7833a0008cfd5beb96a42f04b504fc3850b7f131",
+    "src/main/resources/data/vestige/spellshaping_rules.json": "b492214fe4058727b5ef3b8927a9c2a3f6a92e3fe397eea7d54cd5cdeff754ff",
+    "src/main/resources/assets/vestige/lang/en_us.json": "84fb89da761d980f1ed42754eb4471775ff267e3e54b56fd14a499e709f03b7d",
+    "src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java": "3f281daf49cc8cc2d4a6d2031a4b353f66fafd823953c4a1fa3ba54fe1335c3c",
+    "src/test/java/com/quzzar/vestige/apparatus/MagicalThreadRecipeTest.java": "00e9844cdbbdee86859466a0fb6c015f42f9bf63ff225f83e79927ef8d63de6f",
+    "src/test/java/com/quzzar/vestige/apparatus/HomeboundEyeTest.java": "2c8946fc2bef7c8de084f4824ca924230a66e524393d474871f66c5dba86b630",
+    "src/test/java/com/quzzar/vestige/apparatus/WhisperingShellTest.java": "5f7cd7c6d1960e14acee39ca7be19c2c853788f238424dcb45cb3322d3a497c6",
+    "src/test/java/com/quzzar/vestige/apparatus/RitualDisplaysTest.java": "79d80b4e831ffb3bab81df374f73ad40046f2e05f952e53eb9f46239cfd50eb4",
+    "src/test/java/com/quzzar/vestige/apparatus/SpellshapingTest.java": "7475fb451cbc50890a13785d5f0e33ec929c7023dced0f0f2074eaf84fd346ba",
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastShapingTest.java": "a2d7e88e68eb0ade89a8799efbe3d9bc54e7936d72a3ed7482e351702df220e0",
+    "src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java": "1e6a16404b9391417d264f19e3c6456baddd8cceb5a2c0e73e343d3e86d57967",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadWorldTest.java": "1e43d75504d1367082ff2939b5742cc01777d7d17816764ccca249937b97f81e",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.java": "90b981b302158b6dc1fa1b397eb680007adf0772d98cb458a118d8d552c9de34",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellshapingWorldTest.java": "bf5f47c087dc7365d03520d73be726b006b72c3a710132b4124493a2c33651c3",
+    "src/main/java/com/quzzar/vestige/communication/WhisperingShellWorldTest.java": "f3f04ff9b679687e35429fda17bcc1fd35dac10cabf7c5472e43b85ee91ef0a9",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java": "6b0f6671b13527d3771a99679bdce87913b437460839f4d795f982809664e552",
+    "src/main/java/com/quzzar/vestige/magic/world/ItemManaTest.java": "7d58fbddc594f87368b608698b8b772499be7daf0fa5be9f0f22c48c23340a31"
+  },
+  "package": {
+    "path": "/private/tmp/vestige-ritual-order-payments-build/libs/vestige-0.1.0.jar",
+    "sha256": "a463e424f6c276560a7fc324df56cf4be59c99e7f359c2817e65004cfa7009f2",
+    "resource_agreement": {
+      "data/vestige/spellshaping_rules.json": true,
+      "assets/vestige/lang/en_us.json": true
+    },
+    "class_sha256": {
+      "com/quzzar/vestige/apparatus/FourSlotPattern.class": "14212af3f8a410d429a99229837a1421c17f9ab2301c28d2f938e1badbfbd30d",
+      "com/quzzar/vestige/magic/runtime/ResourceValuation.class": "8f72183fde98d56c3f4a7c127021f3cd3fc1feaafd747bc544bb878451eba41c",
+      "com/quzzar/vestige/magic/runtime/CastShaping.class": "0126b825e99205b01d52b4176c3f97e4e340588a8962edd0651632d4a9612e87",
+      "com/quzzar/vestige/apparatus/HomeboundEyeItem.class": "8e1ee2739fb1b92070fa9bcdf936d7ec7b1ef0c77194f0436b7888bddbb860da"
+    }
+  },
+  "junit": {
+    "tests": 189,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_suites": 43,
+  "gametests": {
+    "required": 69,
+    "passed": 69,
+    "kithkyn_loaded": "1.0.0",
+    "filter": "shapeless_ritual|ordered_ritual|magical_threads|homebound_|shell_craft|standing_stone|fluxed_flint|shaping_payment|wand_chain|item_mana"
+  },
+  "checks": [
+    "author_spellshaping.py --check: 56 rules",
+    "author_ritual_recipes.py --check: 214 recipes",
+    "test_ritual_recipes.py: 11 pass",
+    "test_spell_balance.py: 17 pass",
+    "sync_leyline_rules.mjs --check: 490 fixtures",
+    "build: pass",
+    "verifyKithkynCompatibility: pass"
+  ],
+  "isolation_note": "Two initial harness attempts misplaced main/test classes. Final init pins compiler outputs at task-graph time; a separate Gradle project cache and no configuration cache produced a complete passing run. No gameplay assertion failed in those startup attempts.",
+  "client": {
+    "result": "native visual verification incomplete",
+    "attempts": [
+      {
+        "viewers": "jei-and-emi",
+        "result": "capture timed out; no screenshot produced",
+        "diagnostic": "client-jei-and-emi-failure.txt",
+        "full_log_sha256": "31dd6ab315402c6f853bc3fe3551b6b70d13e157271bcbaecf9865f617ea4a80"
+      },
+      {
+        "viewers": "emi",
+        "result": "capture timed out; no screenshot produced",
+        "diagnostic": "client-emi-failure.txt",
+        "full_log_sha256": "e7160594d6da9d1e12bd193d5a594aecae2a14f35bdeef331da52782fddac4c3"
+      }
+    ],
+    "model_checks": "Ordered public viewer patterns and unordered shard status verified by unit tests."
+  },
+  "limits": [
+    "Resource values are initial survival playtest tuning, not measured economy equivalence.",
+    "Standing Stone alternate resource payments and Kairotic Hourglass mechanics remain unimplemented.",
+    "Fluxed Flint ingredient/art redesign remains on hold; only current construction order changed.",
+    "Both native recipe-viewer capture attempts timed out. No screenshot inspection, installed-pack update or publication is claimed."
+  ]
+}

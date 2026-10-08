@@ -1,6 +1,8 @@
 package com.quzzar.vestige.apparatus;
 
 import com.quzzar.vestige.magic.definition.SpellRarity;
+import com.quzzar.vestige.magic.presentation.MagicAdjectives;
+import com.quzzar.vestige.VestigeMainMod;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -29,8 +31,8 @@ public final class SpellScrollItem extends Item {
         };
     }
     private static Component scrollName(ScrollItems.Scroll scroll) {
-        var name=Component.empty();
-        for(var augment:scroll.augments())name.append(Component.literal(Spellshaping.name(augment)+" ").withStyle(ChatFormatting.ITALIC));
+        var name=MagicAdjectives.prefix(VestigeMainMod.location("spell_scroll"), scroll.augments().stream()
+                .map(a -> MagicAdjectives.Adjustment.spellshaping(a.id(), a.degree())).toList());
         return name.append(ScrollItems.spellName(scroll.spell()));
     }
     @Override public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {

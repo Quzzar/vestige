@@ -166,10 +166,10 @@ ROUTES = {'reaching': {'name': 'Reaching',
                 'pairs': [{'ingredient': 'minecraft:fermented_spider_eye',
                            'foundation': 'minecraft:soul_sand'}]},
  'fasting': {'name': 'Fasting',
-             'effect': 'Exchange a quarter of adjusted mana for one hunger point per five mana, rounded up.',
+             'effect': 'Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.',
              'pairs': [{'ingredient': 'minecraft:bread', 'foundation': 'minecraft:amethyst_block'}]},
  'exhausting': {'name': 'Exhausting',
-                'effect': 'Amplify ×1.05 per contribution.',
+                'effect': 'Amplify ×1.25 and mana ×1.35 per contribution.',
                 'pairs': [{'ingredient': 'minecraft:phantom_membrane',
                            'foundation': 'minecraft:iron_block'}]},
  'charged': {'name': 'Charged',
@@ -293,8 +293,8 @@ numeric('greedy','amplify',1.15,1.02)['costs']=[{'type':'material','item':'minec
 numeric('sacrificial','amplify',1.1,1.02)['costs']=[{'type':'material','item':'minecraft:iron_pickaxe','operation':'damage','amount':4}]
 numeric('famished','amplify',1.1,1.02)['costs']=[{'type':'hunger','amount':1}]
 numeric('bloodbound','amplify',1.05,1.02)['health_exchange']=.25
-add('fasting','Exchange a quarter of adjusted mana for one hunger point per five mana, rounded up.',hunger_exchange=.25,cost_factors={'mana':1.02},max_degree=3)
-numeric('exhausting','amplify',1.05,.94)['cost_factors']['cooldown']=1.2
+add('fasting','Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.',hunger_exchange=.25,cost_factors={'mana':1.02},max_degree=3)
+numeric('exhausting','amplify',1.25,1.35)['description']='Increase Amplify by 25% per degree at 35% more mana per degree.'
 numeric('charged','amplify',1.15,1.1)['costs']=[{'type':'time','ticks':15}]
 
 # These complete paired patterns replace their constituent individual augments.
@@ -347,7 +347,7 @@ lines=['# Executable Spellshaping recipes','',f'{len([r for r in RULES if not r.
 'Install each material in the Plinth **side socket** and place the paired base-recipe ingredient on **top**. Only block materials named in these rules are accepted as imbuements, including compound-only pieces; unsupported blocks reject without consumption. All 16 wool colors use the White Wool routes, and all 16 concrete colors use the White Concrete routes. Imbuement color affects neither Spellshaping nor Attunement keys; installed stacks and retained shard nodes keep their actual color. Carpets and concrete powder are separate unsupported materials. Keep the ordinary spell recipe unchanged. The Spellstone automatically compiles the result; incompatible outcomes reject safely before consumption. Materials stay installed. Accepted materials paired with an unmatched offering remain neutral.','',
 'Duplicate compatible contributions resolve through normal trait ADD/MULTIPLY operations. Degree 1 has the ordinary name; degree 2 is Greater; degree 3 or higher is Grand. Rule-specific saturation limits reject before consumption. Complete compounds consume their matching local pieces and emit one named plan instead of their constituent augments. Larger patterns match first; equal-size patterns use stable identifier order. Whole quarter-turns preserve local associations; moving an ingredient to another socket can change the result.','',
 'Added damage/healing contact riders require positive actual primary damage or healing. Detection/illumination extensions run after their supported primary operation; protection extensions attach to its actual living recipient. Each rule permits one initial contact per recipient and eight per cast, across all callbacks and pulses. Secondary outcomes retain lineage, cannot retrigger a Spellshaping rider, and retain their original contact facts through delays. Secondary fields also have shared finite contact budgets. Geometry still applies separately and missing consumers remain absent.','',
-'Added trait consumers are calibrated against the base spell rating (at least one), and seed missing traits explicitly. Base trait ratios and published definitions stay unchanged. All final costs and gameplay amounts round once; health payments use whole hearts. Mana exchange uses the price after typed mana adjustments, then one common layout multiplier. Bloodbound/Fasting share at most 75% exchanged mana; one heart or hunger point per five exchanged mana rounded up.','',
+'Added trait consumers are calibrated against the base spell rating (at least one), and seed missing traits explicitly. Base trait ratios and published definitions stay unchanged. All final costs and gameplay amounts round once; health payments use whole hearts. Mana exchange uses the price after typed mana adjustments, then one common layout multiplier. Bloodbound/Fasting share at most 75% exchanged mana; one heart per thirty exchanged mana or one food point per 7.5 exchanged mana, rounded up. The owner-accepted valuation is 1 heart = 2 full hunger icons (4 food points) = 30 XP points = 30 mana.','',
 'Core routes use vanilla materials. Explicit Arcane Essence/Amethyst, Evocation Rune/Emerald, Fire Rune/Blaze Rod and Divine Pearl or Holy Rune/Melon alternative offerings participate when an installed mod and the base ingredient recipe accept them. Iron quality values do not affect these rules.','',
 'Ingredient examples below are candidate base recipes; the native compiler additionally checks executable compatibility. A matching ingredient name alone never grants an incompatible effect.','',
 '| Augment | Offering / installed material | Outcome | Candidate ingredient recipes |','| --- | --- | --- | --- |']

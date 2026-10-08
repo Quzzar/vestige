@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-07",
+  "unit": {
+    "tests": 179,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "world": {
+    "tests": 312,
+    "failures": 0,
+    "freshWorld": "run/robes-final-2026-10-07"
+  },
+  "focusedWorld": {
+    "tests": 21,
+    "failures": 0
+  },
+  "nativeClient": {
+    "captures": 64,
+    "allColors": 16,
+    "guiScales": [
+      2,
+      3
+    ],
+    "models": [
+      "WIDE",
+      "SLIM"
+    ],
+    "tintAndTrimChecks": "Passed"
+  },
+  "packaging": {
+    "result": "Passed",
+    "kithkynCoLoad": true,
+    "jarSha256": "4a7e311ee4f10222b579471b64ea26d4bd71330eb4d2892e87fda9e8615a3c1d",
+    "nativeAssetHashesMatch": true,
+    "productionAbilityDefinitionsMatch": true
+  },
+  "artStatus": "Wardweave Folded Mantle preferred; Cinderweave Coal Cuffs provisional; worn geometry is standard chest armor",
+  "otherClothing": "Pending separate owner review"
+}

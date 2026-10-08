@@ -28,10 +28,6 @@
     {
       "type": "mana",
       "amount": 42
-    },
-    {
-      "type": "cooldown",
-      "ticks": 600
     }
   ],
   "triggers": [

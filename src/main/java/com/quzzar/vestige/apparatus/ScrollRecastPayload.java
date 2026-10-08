@@ -17,7 +17,7 @@ public record ScrollRecastPayload() implements CustomPacketPayload {
     @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event) {
         event.registrar("1").playToServer(TYPE,STREAM_CODEC,(payload,context) -> {
             if (context.player().getMainHandItem().isEmpty() && context.player().getOffhandItem().isEmpty()
-                    && !ScrollCasting.recast(context.player())) WandCasting.recast(context.player());
+                    && !ScrollCasting.recast(context.player()) && !WandCasting.recast(context.player())) StaffCasting.recast(context.player());
         });
     }
 }

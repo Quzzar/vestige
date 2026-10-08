@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-08",
+  "artApproval": "pending owner visual review",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "unitTests": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "unitTestScope": "Full isolated Gradle build; final capture-angle refinements compiled/packaged by capture_client.py.",
+  "nativeCaptures": {
+    "total": 84,
+    "dyedInventoryAndPoses": 64,
+    "ironArmorLayering": 2,
+    "thirdPersonWorld": 18,
+    "bodyTypes": [
+      "WIDE",
+      "SLIM"
+    ],
+    "poses": [
+      "front",
+      "side",
+      "back",
+      "walking",
+      "crouching"
+    ]
+  },
+  "wornAssets": [
+    {
+      "path": "assets/vestige/textures/models/armor/wardweave_layer_1.png",
+      "sha256": "b16dbee45a958ac265ffcaad9d680bfa0b69329938703553aa56b5aed1b9d2a7",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/wardweave_layer_1_overlay.png",
+      "sha256": "f714be7b992e92090ae09b0162fde1b34c9ca341a0ff920f1b93aeabd7e16918",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/cinderweave_layer_1.png",
+      "sha256": "58a2161837adb34b9a18f2fa76fdcf8b6e0a72f4bdee9c8bc8c9d0636b931874",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/cinderweave_layer_1_overlay.png",
+      "sha256": "951acedb994d468029ecd0754aff3f34ca2e82ed596da3b0aa2e42ceb79f4b4c",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    }
+  ],
+  "packagedJar": "run/robes-mantles-review-build/libs/vestige-0.1.0.jar",
+  "packagedJarSha256": "bbb65d65088d017e2c8607ed453d11913852f8160a77440cbab6de3b0b20510c",
+  "captureHashes": {
+    "cinderweave-black-gui-2.png": "d0b932aeb94daede79181cc0e3da0aee700c6c5f75320071fa058fcd7cfae801",
+    "cinderweave-black-gui-3.png": "3886a71892af26b1b64147ebd32355f7be34dacba707d96376ee4ee2b3d798c6",
+    "cinderweave-black-world-back.png": "c931a783f704b7c8a430b33eeb7cef1416b8961de0a8a931efb85273f85f3001",
+    "cinderweave-black-world-front.png": "c84e84e84d9b48be8228233a87e645e9d3d2d4e600758ff8fe3e2fdb3021ea82",
+    "cinderweave-black-world-side.png": "e3ceac60ee1e46823dcf5202d05d4814a10f89cf353abc939933a34203771d23",
+    "cinderweave-blue-gui-2.png": "e7680c8c55d76c2d6d2873e453472fc544bd58e8f54c5a2de17a18b84fd53e79",
+    "cinderweave-blue-gui-3.png": "3cbff260f2febff672b5cde3a24a0dc5f9946a9af08c169cf64c6cff803de65a",
+    "cinderweave-blue-world-back.png": "bca66fc51ca0fde036e0eb16be3f6e4c5ee10fc90e0692e49a2f75a75c3b729b",
+    "cinderweave-blue-world-front.png": "7a9c8a191000650e9c40ae9291e6c3d7ba8dbc43509c095b129870849dbbcf5c",
+    "cinderweave-blue-world-side.png": "3f90e9e1bba787c8cc0783f33a5a6313ff299f6f275ca576eff561bc985f5ddd",
+    "cinderweave-brown-gui-2.png": "d0d336245ad70fb5abd8f967cc3418c2337bf334ec40079cab80ba2fb01693fb",
+    "cinderweave-brown-gui-3.png": "af328e914413b4fd8f12ff1507a79cad1adf7e9d2d0d096f518b182daf263050",
+    "cinderweave-cyan-gui-2.png": "c2f2e773cad88adf871a68f63d8d9d711b0e07a0baff6193c6ca5b99e4bd09af",
+    "cinderweave-cyan-gui-3.png": "d48203d9a1eaa6b7ee3a188351504ea31822e738c4be9aad701daf01da54d509",
+    "cinderweave-gray-gui-2.png": "cdbe42f926b2acc9ea55c46336792974c19c18c8c6ed18a379a7d156d8caca3a",
+    "cinderweave-gray-gui-3.png": "e00f61824c3b69e94cf069a3033200ff29247d25f8f51939b1bb3225739553ab",
+    "cinderweave-green-gui-2.png": "3f09bc032dd49f440fb7f14e74491436c3dfae800e1b39c95dd5d182fa9453d6",
+    "cinderweave-green-gui-3.png": "31d6be45dd495a1d31c251e0780453d6c1a77c01e5c6f30d6378e1415761c3c8",
+    "cinderweave-light_blue-gui-2.png": "f6ca1209d6717e9de7f40a816000039e38debe12be0550191ad854150504175b",
+    "cinderweave-light_blue-gui-3.png": "410684c344c0f1f822e3a230f6f89f00e8b5424e4defcf437a5951df9f9355e6",
+    "cinderweave-light_gray-gui-2.png": "f787e51301441acaefa64c0253db8ecf793011bd90017d5117e7363802af008d",
+    "cinderweave-light_gray-gui-3.png": "8cc43977208221f93c71c0ef3a6ee5091db9bee9ff2731afd2660e691aea7265",
+    "cinderweave-lime-gui-2.png": "8dff8d34249110bbd203452accfb838f6d6163895b7ae4261d7f195c0e053525",
+    "cinderweave-lime-gui-3.png": "1b722444cdb37ab4fa160ccad76c8488bcd68c6aa939393463ffb6c9349daa1a",
+    "cinderweave-magenta-gui-2.png": "aeff5e88fddb1c3bc03d2a3981ebbaf91a5948d81eae0f329a3971f4663a4db6",
+    "cinderweave-magenta-gui-3.png": "19131609a708a851ba81b32fd0064ad2bad9deedc65b20b8359694493e982e40",
+    "cinderweave-orange-gui-2.png": "6da847f5b7bed8fbb730de50e760aea1c45f6523a072fdad90d2d4250cdf3f71",
+    "cinderweave-orange-gui-3.png": "bf6821237163379f6fff913bedb62b49c64064040cb675c0f1a7c78222eda49e",
+    "cinderweave-pink-gui-2.png": "7d1285b0befdcfcc2c3754ba26a66e746929f4d8e1478ddea010cf346dd1bca6",
+    "cinderweave-pink-gui-3.png": "0d19a25420a98f33b2d4c8829255be443fc916a484c92c1eccfb9afacfcc63f7",
+    "cinderweave-purple-gui-2.png": "79b306798a6c3e4a65bd2224174c543d722997b6478a6cf59bc513d50815d1b8",
+    "cinderweave-purple-gui-3.png": "47368a550f21e263aeef5ec746771e6b38279f763292cf69f3d6547e66bc3814",
+    "cinderweave-red-gui-2.png": "f9c52723926ac785c68376f6e25133904a790e82b7d1f30293bf9ce87532e40c",
+    "cinderweave-red-gui-3.png": "016bdc255769d3b17784c294eb31d4e46ebf3857b22e507e44b2201a66cc59c9",
+    "cinderweave-white-armor-layers.png": "f22a4360feec4d2f55f645b09516c0a7be5541dc1b921f5830dc4087557a42e0",
+    "cinderweave-white-gui-2.png": "bcee585c8b5a721fb00cd7b5b7798ca67e5d8a0eab29871096c47e3c1f588d16",
+    "cinderweave-white-gui-3.png": "5cc2cf410946f96cf46bf76bdef2979411145e7b96c122924e9e29a77a97abea",
+    "cinderweave-white-world-back.png": "0936da987d20418684577da83dc1c65ff655424bf31a8f4ce486075bfc2fa852",
+    "cinderweave-white-world-front.png": "8782e8d27ecce76c2a9fcc6d5ff938e93756ff0b230cc15bee98c4219ac4966a",
+    "cinderweave-white-world-side.png": "d824d3894293d0cc812e31a004c9cdcaa9675530e396cc1f0caff3dda650be5a",
+    "cinderweave-yellow-gui-2.png": "2accc1963b47cf01135fd9f5f45e56e5e5117bbeda86f3667974810bbe1d4171",
+    "cinderweave-yellow-gui-3.png": "c96e7f06bd061ac423ef759108ea707f8565bad128e06893f2bef888de835c81",
+    "wardweave-black-gui-2.png": "1d53c4918469d308739cbeb21adc674d9a3ab63b8033bd80044a963042f091ed",
+    "wardweave-black-gui-3.png": "fbaaff37031fe8ec070b4654bba6ef0b3b141fe927397b42ec2315cc71c67f36",
+    "wardweave-black-world-back.png": "e0adb6b18f2eb30927349e96b387b530112c95e71b6f809d0190c56ead13145b",
+    "wardweave-black-world-front.png": "0f21407e8cbe282d711e718fbc6ee30ba855af1a4e82299340b4741e365e3aad",
+    "wardweave-black-world-side.png": "ab988fdb36c02ae31d224d6d789543339b3a77088f2e07e24b916591b94666f5",
+    "wardweave-blue-gui-2.png": "0ff040ff11f98a704f5cb85d7d91c056f54cecbc7cc99a1db927df5a38ccd886",
+    "wardweave-blue-gui-3.png": "d613fcc24def1d9d87e64777edd671b1c5c183ef6348f5d5ef199da9c629dc9d",
+    "wardweave-blue-world-back.png": "77ade612ada4f13da980f4763dabe462aafe1a48c3d9317ceb1bac300439cf0c",
+    "wardweave-blue-world-front.png": "05a6374badd3a71f0fe0093c9183f9386a1b21dbe5328c4a2ea9bba1312bca41",
+    "wardweave-blue-world-side.png": "876922da20ef3d9fa75d1131bd77831f163e6011df2cfef8b3e8a4da03a493ef",
+    "wardweave-brown-gui-2.png": "668ca0dfc14f9284af0dee9b1aa06b9e100fb5b8f99baabb96fa0f2dd2273f02",
+    "wardweave-brown-gui-3.png": "1c124c8f720ab6fed731879ee28d923285981c114d4db39082c9e53e82560045",
+    "wardweave-cyan-gui-2.png": "a62a62416a94d8e51b9ac884bba9611105a56af61a1582d898c6a6c17ca96d2e",
+    "wardweave-cyan-gui-3.png": "da207d7ea8f6bea50863f53eb389e6e4dd6572fe16c855f9bc25d52898e8c3dc",
+    "wardweave-gray-gui-2.png": "a67a325bdc4973d7f5ebc388c44ccd7b634f17788a904064ba817b676fa25c39",
+    "wardweave-gray-gui-3.png": "b2804a6c02ef34e12929072a8de539dcf0319088bc327c1a6a6068ee2e31fb36",
+    "wardweave-green-gui-2.png": "d096919ee3cd5d42d09bd18bcd85bbcf88e8bfab2a5699ad14769f8c98b2db2e",
+    "wardweave-green-gui-3.png": "9aab3d3ef6ff9dfa97a6e49aa3e4d86588bf3a7e4230bfdccbb3f92221378129",
+    "wardweave-light_blue-gui-2.png": "bb6f3b7a4c4308604fedbd568c1e249d19549a3b6e9d3d12ef014e5cf93c56e3",
+    "wardweave-light_blue-gui-3.png": "be2bddd84a65c89eab8139f38df1769cbf3ff66175ff7df57b397d01701911f0",
+    "wardweave-light_gray-gui-2.png": "d0ec73d6588165a0986adaa7dc8f021cb8e2b1ec8d079ef4162869fb3fb61cce",
+    "wardweave-light_gray-gui-3.png": "fd4bc7322373031577cf386a7acace2130190a55ff8d03d9ca0cb9ee3ad7fa58",
+    "wardweave-lime-gui-2.png": "1880e00a3523b48585afa87727c2f34cd7d67c3ca3200fb14166d7bb79874b92",
+    "wardweave-lime-gui-3.png": "5d8843f04eb603f99a6f2f88799d591624cdca6253e36b0e084589297b0686ad",
+    "wardweave-magenta-gui-2.png": "241c0f9988c36273751092b98241f1a93505b835d36965e38cefcb1936c3a467",
+    "wardweave-magenta-gui-3.png": "6de57c8b8009af4ce6cfc50641737e95f72c5dda1e1726c9fefd3495ff20c44b",
+    "wardweave-orange-gui-2.png": "f19ef099f1a3e05f8e3c68120969989865e2bceb0d16c1969f7521bbacbccc92",
+    "wardweave-orange-gui-3.png": "1582189c01c3a320b5bc4863fcb0a25789223a8171ccaace1725e1c8e7345d5a",
+    "wardweave-pink-gui-2.png": "eb7e2f20f0a29456b50444e0e118a477987293ca3c5f40ecf3a7f91b3e2fd375",
+    "wardweave-pink-gui-3.png": "0f1254fa94614eee66b2e78323ac508a2b0b91c8093d54c792a899a651f51dff",
+    "wardweave-purple-gui-2.png": "571e26bb7ba8c2591a97b7ef3da9ae1673fc3b2f26963ac10a05fe13356a0d05",
+    "wardweave-purple-gui-3.png": "0fd8c1f35246c380ed609598cf45825c2671bc7ce38fc70c3d22ab64060fb1c0",
+    "wardweave-red-gui-2.png": "9b69d1123b8b942dba2730fb3ad261fddc1e7f37d29a63bc540144a6728d1355",
+    "wardweave-red-gui-3.png": "1fdc04fe4867688e21bebe9906f6b9414ef359ff6682494cb8771a4b11e34861",
+    "wardweave-white-armor-layers.png": "6ec843820abc85813dc2a37a137a755e57a0b43f6ed6aa4ab9b1b0b9a11dbacc",
+    "wardweave-white-gui-2.png": "96ab3a69674d93956e3b3c05b46e7946dc64fc90259f4b11080b709142736565",
+    "wardweave-white-gui-3.png": "16d6ff3caf17a3b37a34dffdea669967e239ba7fb8d6fee2ec6273f79603e25a",
+    "wardweave-white-world-back.png": "805ef9dd761fed0d8558e93276c631500beae03f316d809816891a46c9cdddc4",
+    "wardweave-white-world-front.png": "030546182a6930cbbacd662fe3f31cd7a532904a0398c797508d7873c7f1f339",
+    "wardweave-white-world-side.png": "8cbd8cc8a4174a9664c166de9f5fb7f50a70325e3506d9358611b5e6d0a2c440",
+    "wardweave-yellow-gui-2.png": "9b5b376a3bc6eca79956c67bb6dff721cf067c880681de2dd7270b2ffe2bd35f",
+    "wardweave-yellow-gui-3.png": "dfb1962b8b41ab2ffe24b0506ffdbce5440961d94fcfc35f25aa0ac892772d8d"
+  },
+  "sourceHashes": {
+    "src/main/java/com/quzzar/vestige/equipment/client/RobeModel.java": "5ab89b7f44f0fea5bcc1237bd4dfb1e51f810fd9248752ca7f4fdb82ddb3f1fc",
+    "src/main/java/com/quzzar/vestige/equipment/client/RobeModels.java": "fb512b21606d77a8abda6bb0fbb7e119338535a759e4fffbbf7d5db4e7a46c1b",
+    "src/main/java/com/quzzar/vestige/equipment/client/MagicEquipmentCapture.java": "fc69adf1bbbdd0d4417a7d33455bc1ad05cf389d675111578fbcbed76a94fb8e",
+    "tools/author_robe_armor.py": "6036118c353ce3ff4df2137b129f8ec0dc1090a7cece66c59d507bb1354bee25",
+    "docs/art/magic-equipment-mantles/wardweave-generated.png": "118c40c38748618380c381cf4fea0ec47636db96d96142052b1e05076986fed5",
+    "docs/art/magic-equipment-mantles/cinderweave-generated.png": "3d895e8e15160f6e253cef0576a6c77837280fb6a109d4204c0214ee27be78aa",
+    "docs/art/magic-equipment-mantles/prompts.json": "f66304afe73dae3ed3460771866d4d103440cfe5df77fd4b56365c19ca00ee8f"
+  },
+  "limits": [
+    "Visual candidate awaiting owner review.",
+    "Cape uses bounded pose/stride movement, not simulated cloth physics.",
+    "Riding, swimming, flight and other mods' back-slot equipment remain additional visual playtests.",
+    "No gameplay changes; no combat world-test rerun or installed pack changes in this art pass."
+  ]
+}

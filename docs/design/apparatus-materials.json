@@ -5,13 +5,13 @@
     "plinth",
     "spellstone"
   ],
-  "decision_date": "2026-10-05",
+  "decision_date": "2026-10-07",
   "construction_recipes": {
     "spellstone": {
       "pattern": [
         "DSD",
-        "BAB",
-        "BBB"
+        "SAS",
+        "S S"
       ],
       "count": 1,
       "common_items": {
@@ -19,17 +19,27 @@
         "A": "minecraft:amethyst_block"
       },
       "variant_items": {
-        "B": "body_item",
         "S": "slab_item"
       }
     },
     "plinth": {
       "pattern": [
-        "SBS",
+        "SSS",
         " B ",
-        "SBS"
+        "SSS"
       ],
       "count": 2,
+      "material_conditions": {
+        "stone_bricks": [
+          {
+            "type": "neoforge:not",
+            "value": {
+              "type": "neoforge:mod_loaded",
+              "modid": "supplementaries"
+            }
+          }
+        ]
+      },
       "variant_items": {
         "B": "body_item",
         "S": "slab_item"
@@ -265,7 +275,7 @@
     },
     {
       "id": "smooth_quartz",
-      "name": "Smooth Quartz Block",
+      "name": "Smooth Quartz",
       "body_item": "minecraft:smooth_quartz",
       "source_stairs": "minecraft:smooth_quartz_stairs",
       "textures": {

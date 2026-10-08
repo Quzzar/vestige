@@ -1,0 +1,221 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:wither_skull",
+    "school": "irons_spellbooks:blood",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Wither Skull",
+    "cast_type": "instant",
+    "cooldown_ticks": 20
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:death": 4,
+    "vestige:unholy": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 30
+    },
+    {
+      "type": "cooldown",
+      "ticks": 120
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 200,
+        "values": {
+          "speed": 0.56,
+          "distance": {
+            "product": [
+              32,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          }
+        },
+        "identifiers": {
+          "item": "minecraft:wither_skeleton_skull"
+        },
+        "bindings": [],
+        "on_hit": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  2,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "relationship": "hostile",
+              "options": {
+                "count": 6
+              }
+            },
+            "effects": [
+              {
+                "type": "damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      6,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  },
+                  "ignore_invulnerability": 1
+                }
+              },
+              {
+                "type": "status",
+                "values": {
+                  "duration": 100,
+                  "amplifier": 0
+                },
+                "identifiers": {
+                  "effect": "minecraft:wither"
+                }
+              }
+            ],
+            "visual": {
+              "duration": 24,
+              "radius": {
+                "product": [
+                  2,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "height": 0.25,
+              "layers": [
+                {
+                  "shape": "tendrils",
+                  "color": "57418f",
+                  "alpha": 0.85,
+                  "width": 0.15,
+                  "scale": 1.45,
+                  "speed": -0.7,
+                  "phase": 0,
+                  "count": 5
+                },
+                {
+                  "shape": "motes",
+                  "color": "d992ff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 1.015,
+                  "speed": 0.45499999999999996,
+                  "phase": 1.2,
+                  "count": 3
+                },
+                {
+                  "shape": "sparks",
+                  "color": "d992ff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:entity.generic.explode",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        ],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "tendrils",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.15,
+              "scale": 1.45,
+              "speed": -0.7,
+              "phase": 0,
+              "count": 5
+            },
+            {
+              "shape": "motes",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 1.015,
+              "speed": 0.45499999999999996,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

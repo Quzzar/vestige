@@ -1,0 +1,1795 @@
+{
+  "definitions": 214,
+  "cost_entries": 220,
+  "channels": [
+    "mana"
+  ],
+  "spellshaping_rules": 56,
+  "exchange_rules": [
+    "bloodbound",
+    "fasting"
+  ],
+  "cooldown_factors": [],
+  "fixed_hunger_rules": [
+    {
+      "id": "famished",
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "sustaining",
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 2
+        }
+      ]
+    }
+  ],
+  "cost_inventory": [
+    {
+      "spell": "abyssal_shroud",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 72
+      }
+    },
+    {
+      "spell": "acid_orb",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "acupuncture",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "angel_wing",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "arcane_lock",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 20
+      }
+    },
+    {
+      "spell": "arcane_shackle",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "arrow_volley",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "ascension",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "ball_lightning",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "black_hole",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 88
+      }
+    },
+    {
+      "spell": "blaze_storm",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "blessing_of_life",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 15
+      }
+    },
+    {
+      "spell": "blight",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "blizzard",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 46
+      }
+    },
+    {
+      "spell": "blood_needles",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "blood_slash",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "blood_step",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "burning_dash",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "chain_creeper",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "chain_lightning",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 32
+      }
+    },
+    {
+      "spell": "charge",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "cleanse",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "cone_of_cold",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "counterspell",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "devour",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "divine_smite",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "dragon_breath",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "earthquake",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 48
+      }
+    },
+    {
+      "spell": "echoing_strikes",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "eldritch_blast",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "electrocute",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "evasion",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "fang_strike",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "fang_swirl",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "fang_ward",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "fire_arrow",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "fire_breath",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "fireball",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "firebolt",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "firecracker",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 14
+      }
+    },
+    {
+      "spell": "firefly_swarm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "flaming_barrage",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "flaming_strike",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "force_arrow",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 14
+      }
+    },
+    {
+      "spell": "fortify",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "frost_step",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "frostbite",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "frostwave",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "gluttony",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "gravity_fissure",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "greater_heal",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "guiding_bolt",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "gust",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "haste",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "heal",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 15
+      }
+    },
+    {
+      "spell": "healing_circle",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 48
+      }
+    },
+    {
+      "spell": "heartstop",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 80
+      }
+    },
+    {
+      "spell": "heat_surge",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "ice_block",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "ice_spikes",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "ice_tomb",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "icicle",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 14
+      }
+    },
+    {
+      "spell": "interposing_earth",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "invisibility",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "lightning_bolt",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "lightning_lance",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "lob_creeper",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "magic_arrow",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "magic_missile",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "magma_bomb",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "oakskin",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_air_bubble",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_arctic_rift",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 64
+      }
+    },
+    {
+      "spell": "pf2_bind_undead",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 34
+      }
+    },
+    {
+      "spell": "pf2_breathe_fire",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_cataclysm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 90
+      }
+    },
+    {
+      "spell": "pf2_caustic_blast",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_chain_lightning",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "pf2_cinder_swarm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_clairvoyance",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 32
+      }
+    },
+    {
+      "spell": "pf2_collective_transposition",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "pf2_containment",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "pf2_create_water",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_creation",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_creation",
+      "path": "/modes/0/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_creation",
+      "path": "/modes/1/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_detect_magic",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_divine_lance",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_eclipse_burst",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 62
+      }
+    },
+    {
+      "spell": "pf2_electric_arc",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_enfeeble",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "pf2_enlarge",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_falling_stars",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 70
+      }
+    },
+    {
+      "spell": "pf2_false_vitality",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_fear",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "pf2_field_of_life",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "pf2_figment",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_fire_shield",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 34
+      }
+    },
+    {
+      "spell": "pf2_fireball",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_fleet_step",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "pf2_flicker",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_floating_flame",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "pf2_force_barrage",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_freezing_rain",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "pf2_frostbite",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_gecko_grip",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_gentle_breeze",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_gentle_landing",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_glass_shield",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "pf2_gouging_claw",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_gravity_well",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_grease",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "pf2_grim_tendrils",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_harm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_haste",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_heal",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_hydraulic_push",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "pf2_ignition",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_illusory_creature",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "pf2_illusory_object",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_invisibility",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_item_facade",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "pf2_lightning_bolt",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "pf2_magic_passage",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "pf2_magnetic_attraction",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_mirror_image",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_mud_pit",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_needle_darts",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_peaceful_bubble",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_pet_cache",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 20
+      }
+    },
+    {
+      "spell": "pf2_protection",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "pf2_protector_tree",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_puff_of_poison",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_read_aura",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 10
+      }
+    },
+    {
+      "spell": "pf2_regenerate",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_repulsion",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "pf2_resist_energy",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_revealing_light",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_rust_cloud",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "pf2_scatter_scree",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_see_the_unseen",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 20
+      }
+    },
+    {
+      "spell": "pf2_shape_stone",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_share_life",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_shield",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_shrink",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_silence",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_slashing_gust",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_slow",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "pf2_soothe",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_spirit_blast",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "pf2_spiritual_armament",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "pf2_spout",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_status",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_summon_animal",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "pf2_summon_elemental",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_summon_elemental",
+      "path": "/modes/0/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_summon_elemental",
+      "path": "/modes/1/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_summon_elemental",
+      "path": "/modes/2/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_summon_fey",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_summon_plant_or_fungus",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_summon_plant_or_fungus",
+      "path": "/modes/0/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_tangle_vine",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "pf2_telekinetic_projectile",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_thunderstrike",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 20
+      }
+    },
+    {
+      "spell": "pf2_time_jump",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 34
+      }
+    },
+    {
+      "spell": "pf2_translocate",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "pf2_vampiric_feast",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_vitality_lash",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_void_warp",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 6
+      }
+    },
+    {
+      "spell": "pf2_wall_of_ice",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "pf2_wall_of_stone",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "pf2_wall_of_water",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "pf2_water_breathing",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "pf2_water_walk",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 18
+      }
+    },
+    {
+      "spell": "pf2_weapon_storm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "pf2_wooden_double",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "pf2_zephyr_slip",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 22
+      }
+    },
+    {
+      "spell": "planar_sight",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 32
+      }
+    },
+    {
+      "spell": "pocket_dimension",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 60
+      }
+    },
+    {
+      "spell": "poison_arrow",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "poison_breath",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "poison_splash",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "portal",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 48
+      }
+    },
+    {
+      "spell": "raise_dead",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 60
+      }
+    },
+    {
+      "spell": "raise_hell",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "ray_of_frost",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "ray_of_siphoning",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "recall",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "root",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "sacrifice",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "scapegoat",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "scorch",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "sculk_tentacles",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "shadow_slash",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "shield",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 26
+      }
+    },
+    {
+      "spell": "shockwave",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "slow",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "snowball",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 14
+      }
+    },
+    {
+      "spell": "sonic_boom",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "spectral_hammer",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "spider_aspect",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "starfall",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 88
+      }
+    },
+    {
+      "spell": "stomp",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "summon_ender_chest",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 16
+      }
+    },
+    {
+      "spell": "summon_horse",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 24
+      }
+    },
+    {
+      "spell": "summon_polar_bear",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "summon_swords",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 54
+      }
+    },
+    {
+      "spell": "summon_vex",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 40
+      }
+    },
+    {
+      "spell": "summon_zombie",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 28
+      }
+    },
+    {
+      "spell": "sunbeam",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 44
+      }
+    },
+    {
+      "spell": "telekinesis",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 42
+      }
+    },
+    {
+      "spell": "teleport",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 15
+      }
+    },
+    {
+      "spell": "throw",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 12
+      }
+    },
+    {
+      "spell": "thunderstorm",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 84
+      }
+    },
+    {
+      "spell": "touch_dig",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 8
+      }
+    },
+    {
+      "spell": "volt_strike",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 38
+      }
+    },
+    {
+      "spell": "wall_of_fire",
+      "path": "/costs/0",
+      "cost": {
+        "type": "mana",
+        "amount": 48
+      }
+    },
+    {
+      "spell": "wisp",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 36
+      }
+    },
+    {
+      "spell": "wither_skull",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 30
+      }
+    },
+    {
+      "spell": "wololo",
+      "path": "/costs/1",
+      "cost": {
+        "type": "mana",
+        "amount": 3
+      }
+    }
+  ]
+}

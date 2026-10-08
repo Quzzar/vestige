@@ -1,0 +1,99 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:touch_dig",
+    "school": "irons_spellbooks:nature",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Touch Dig",
+    "cast_type": "instant",
+    "cooldown_ticks": 10
+  },
+  "rarity": "common",
+  "traditions": [
+    "primal"
+  ],
+  "traits": {
+    "vestige:earth": 4,
+    "vestige:transmutation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 20
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "block_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            8,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "break_block",
+          "values": {
+            "hardness": 10
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "shards",
+            "color": "af8057",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.1,
+            "speed": 0.9,
+            "phase": 0,
+            "count": 4
+          },
+          {
+            "shape": "sigil",
+            "color": "f2d3a6",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.77,
+            "speed": -0.5850000000000001,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f2d3a6",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

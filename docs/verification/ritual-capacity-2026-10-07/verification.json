@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-07",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "unit": {
+    "tests": 140,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "world_tests": 9,
+  "world_passed": 9,
+  "build": "passed",
+  "kithkyn_compatibility": "passed",
+  "leyline_parity_fixtures": 490,
+  "client_capture_frames": 51,
+  "client_capture_outcome": "NEEDS_PLINTHS",
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "74ce822e4281f1b72561373acec702ce38697f8e8e9041fdc7b5db4d0d0360e1",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualPresentation.java": "8a50b263acf8f82d63411185e958086337e20a4076bfa344cac30a77c72ed426",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCapacityTest.java": "b1bd80b0fa325ea99d68282789e32d28a693bccecfcdcc78d0eb5adc00571eb5",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollCreativeTest.java": "07258e45a1dbefc6ab1325459c47eaa40d072caef6fc6aef90bba10d7de91422",
+    "src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java": "b6149ed30cdd607e3959a5c5383aedbc15efb0caf8360058919816dea98fdb3c",
+    "src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualNetwork.java": "cdf5e4864436eea324170daf63fa555bdb7e2f42f706c054fa6e158db04d698d",
+    "src/main/java/com/quzzar/vestige/magic/presentation/VisualGeometry.java": "5439ffac5ba5f0fac6e24d72d617458b5a228f813277743fac265e8f4410dec1",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/SpellVisualClient.java": "d3a7db49cbdf3745ce7655d0650b2261781e54e79ea44d00de83c5988d1332e1",
+    "src/main/java/com/quzzar/vestige/magic/world/NativeCaptureScene.java": "228d417b7bbc7ab07f1c058bffd8f748061994095783d66991bb6abf81a8fa09",
+    "src/test/java/com/quzzar/vestige/magic/presentation/SpellVisualTest.java": "82d2f4db86e221d5508f0412462f2b53de4c5ae10aea0acb41b46c5fef2ab8b1"
+  },
+  "review_jar": "/Users/quzzar/Projects/vestige/build/ritual-capacity-review/libs/vestige-0.1.0.jar",
+  "review_jar_sha256": "7cad4c7918f289fa140167b0e80f91591375a91b8ccf99d8fa4a27dc6bf77236",
+  "limitations": [
+    "Not installed in Prism or a running client",
+    "No remote multiplayer inspection",
+    "Equipment/device center references are not supported"
+  ]
+}

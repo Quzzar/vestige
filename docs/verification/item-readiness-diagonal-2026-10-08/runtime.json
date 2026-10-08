@@ -1,0 +1,11 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "baseBuild": "run/robes-mantles-review-build",
+  "baseJarSha256": "604bab46106ca7ea751c4e9c1fcb1f21ecb31c6b161e5ea5f3797bd0dc376acd",
+  "scope": "Isolated native UI study, no optional Kithkyn. Existing server mana regeneration and vanilla client cooldown timer; prototype price 12 mana, no new item ability.",
+  "fixture": "Non-displayed standing-stone collision simplified only on the isolated classpath, never packaged; restored in finally.",
+  "originalCollisionSha256": "e0fa6475518cccbd5ae46748972c3e0a972a5d1749c75ff2288fbdadc2687f21",
+  "fixtureCollisionSha256": "a64c6da5c50fb496ec42c10b8d0f0fddad47fdca4c29bc22318f239bccd454b9",
+  "vanillaGuiSourceSha256": "9779101356074e82d4ad63a0c0dff721aa7ae33613d96b7c4fb254e6b2494645",
+  "prototypeJarSha256": "702d05d0a55ce0c1c49e3f8ff3ceb143c4f3895d2ea9abc3562afcd4e4ea1d98"
+}

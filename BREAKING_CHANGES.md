@@ -1,10 +1,89 @@
 # Breaking changes
 
+## October 8, 2026: shared magical adjective presentation
+
+Scroll, wand and staff stored-spell labels now use the shared `MagicAdjectives` prefix helper and a generated naming catalog. Single adjustments retain their words and degree labels; complete mixtures now receive one italicized adjective from an exact alias or the reserved Confluent fallback. Rarity styling and identification gates remain intact. The authored Wayfarer matrix covers all sixteen approved and implemented sets. Naming aliases never replace effects or alter saved items, costs, protocol formats or attunement identity. Run `tools/author_magic_adjectives.py --check` when changing source names or aliases. No migration or installation is introduced.
+
+## October 8, 2026: resource mana equivalent revised to thirty
+
+The latest accepted conversion is 1 full heart (2 HP) = 2 full hunger icons (4 food points) = 30 XP points = 30 mana. This supersedes the forty-mana equivalence below. `ResourceValuation.MANA_PER_FOOD` is now a double (7.5); dependents must recompile rather than assume integer food pricing. Bloodbound/Fasting inherit current rates and Homebound Eye's mana route now costs thirty, retaining its other prices and wear. Saved routes, keys, formats and mana regeneration are unchanged.
+
+## October 8, 2026: owner-locked resource equivalence
+
+The accepted conversion is one full heart (2 HP) = two full hunger icons (4 food points) = 30 XP points = 40 mana. `ResourceValuation` now applies it to Bloodbound/Fasting and Homebound Eye; the Eye resource routes cost two wear plus 1 heart / 4 food points / 30 XP / 40 mana. This supersedes the provisional prices in the earlier October 8 entry below. Existing items keep their route, origin and key while paying current prices. Save/network schemas, mana recovery and ordinary spell costs are unchanged.
+
+## October 8, 2026: ordered construction and shared resource prices
+
+Threads, Homebound Eye, Whispering Shell, Standing Stone and Fluxed Flint construction require the relative inner-layer patterns in `docs/design/ritual-crafting.md`; whole rotations remain valid. Outer offerings no longer participate in these four-slot constructions. Attunement, fragment combination, scroll dismantling and two-input repair retain unordered acceptance. Bloodbound now buys twenty mana per heart; Fasting keeps five per food point. Exhausting changes to Amplify ×1.25 / mana ×1.35 per degree with no cooldown factor. Homebound Eye resource routes now spend two wear plus 2 hearts / 8 food / 80 XP / 40 mana. Existing items retain their route, origin and key while using current pricing; no save or network schema changes. Matching client/server builds are required for consistent viewer semantics. The Flint ingredient/art redesign remains on hold.
+
+## October 7, 2026: subtle preparation zoom
+
+Replaces the expanding crosshair edge with a first-person camera zoom of up to 3% over the reserved held source's composed preparation time. The native FOV interpolation smooths release/cancellation, and FOV Effects scales the cue. Removes `PreparationCrosshair` and the preparation GUI layer; the native crosshair is unchanged. Straight item draw-back, preparation payload version 2, reservations, costs, automatic release, saved items and mana shading retain their behavior and formats. This supersedes the earlier crosshair preparation entry and isolated 8% trial.
+
+## October 7, 2026: native magical robes and capacity snapshots
+
+Wardweave/Cinderweave register native armor and material IDs with no inherited equipment migration. Mana payload version 3 now carries amount and maximum; all clients must use matching Vestige. `NativeMana.maximum` derives worn capacity and removal permanently clamps the balance. The shared runtime adds `CastReservation.continues` for revocable worn sources, actual `CastObserver.mitigated` notifications, and `armor_damage_calculating` after shields/hurt immunity but before armor. Ordinary paid wand/staff continuations keep the default continued-source behavior.
+
+## October 7, 2026: remove additional wand recovery
+
+Removes the separate sixty-second wand timer without changing component durability, initial wear, composed resource costs or preparation/channel time. Completed and paid-forfeited casts can prepare again immediately when their resources permit. Each initial payment still commits wear once; canceled preparation, failed payment and paid recasts retain their prior behavior.
+
+Removes the obsolete `CastReservation.Recovery` record, `recovery()` hook and `WandComponents.COOLDOWN_TICKS` constant, along with the source-family timer map. Explicit authored `SpellCost.Cooldown` costs remain supported; all shipped spells omit them. Saved item and network formats are unchanged. This supersedes earlier October 6/7 references to retained wand recovery.
+
+## October 7, 2026: crosshair preparation and straight draw-back
+
+Replaces the separate preparation bar with a center-out expanding edge around the existing crosshair, using its current resource-pack sprite, Minecraft's default contrast colors and final shaped time cost. The native crosshair pixels retain their original rendering. Held items now translate straight toward the camera without inward/upward movement or rotation. The obsolete preparation-bar renderer is removed. Preparation payload version 2, source reservations, costs, automatic release, saved items and ordinary mana shading retain their formats and behavior.
+
+## October 7, 2026: native rarity-based Staff wear
+
+Staff initial casts now spend 1/2/3/4 durability for Common/Uncommon/Rare/Mythic native spells instead of a flat one. Wear commits with payment before the chaos roll, so paid volatile forfeits also spend it. Failed payment, canceled preparation and paid continuations retain their prior wear behavior. The final paid cast can break its reserved staff even with fewer remaining points than the spell's wear. Maximum durability stays 40/80/120 for two/four/six slots; saved item and protocol formats are unchanged.
+
+## October 7, 2026: identified Staff scroll insertion
+
+Staff menu slots now reject scrolls whose spell is unknown to the inserting player, in addition to requiring the staff's positive base affinity and valid source shaping. This applies to clicks, replacements, dragging, hotbar swaps and Shift-click; rejection adds no instructional text. Saved or borrowed bindings remain removable and retain knowledge-aware names. Saved item and protocol formats are unchanged. The selected button now stays visibly inset with a bright outline and pixel checkmark.
+
+## October 7, 2026: held-item spell preparation
+
+Private `vestige:cast_preparation` registration advances to version 2, adding the reserved hand and an opaque item/source fingerprint. Matching client/server builds are required. Scrolls, wands and staffs use one first-person draw-back alongside the existing crosshair bar. Runtime timing, automatic release, costs, reservations, recovery, wear and saved item formats retain their behavior.
+
+## October 7, 2026: shared trait-driven item abilities
+
+`MagicDefinition` becomes the shared executable contract for spells and trusted `ItemAbilityDefinition` programs. `SpellDefinition` adds an immutable named-variable map; former Java constructor signatures remain available with an empty map. `SpellRuntime.cast` and `SpellWorld.canActivate` accept the common definition. World/effect adapters use `Context.definition()` in place of the former spell-only accessor. Exhaustive expression/effect switches must handle `SpellValue.Variable` and `SpellEffects.GrantTraits`.
+
+Spells and item abilities use the same source/wearer/actor trait resolver. The shared catalog loader also accepts server-authored `item_abilities` definitions; no built-in clothing ability definitions or registrations ship yet. Binding records add an optional lifetime expression with the former constructor retained. Existing spell JSON, scroll/wand/staff data, attunement keys, registry IDs, protocol formats and baseline gameplay retain their formats. Reactive abilities can execute during preparation without occupying the casting lane. Six equipment formula fixtures remain pending review and are included only in test resources. See `docs/design/item-abilities.md`.
+
+
+## October 7, 2026: item-relative mana shading
+
+Removes the standalone mana HUD and replaces it with vanilla cooldown-style shading on scrolls, wands, selected staff spells and mana-paid Homebound Eyes. The private `vestige:item_mana` version-1 payload carries bounded server-compiled source prices. `vestige:mana` advances to registration version 2 and double precision; matching client/server builds are required. The retained mana rune becomes a transparent 9×9 GUI asset. Capacity, regeneration, spell payment, charge time, source wear and saved item formats are unchanged.
+
+## October 7, 2026: native Staff inventory menu
+
+Registers the native `vestige:staff` menu type and replaces the select-only `vestige:staff_slots` / `vestige:staff_select` custom payloads with the standard container opening, click and button protocols. Matching client/server builds are required. Shift-right-click opens a scrolling scroll-slot list and player inventory. Removing or swapping a binding now returns its stored source-scroll variant; the old consuming Staff/Scroll/Amethyst binding ritual is removed. Staff construction and capacity upgrades remain atomic rituals. Version-1 saved staff sources, affinity, selected slot and wear retain their format; no migration is introduced.
+
+
 ## October 7, 2026: tipped native wands, shared result signals and component artwork
 
 The native wand binding format retains version 1 with an optional trusted `tip` identity; absent tips remain untipped. Eight materials now compile additional effects and typed costs with the exact stored source. Models use `vestige:wand_appearance` rather than the body-only predicate, with actual 16×16 body/tip layers. Five thread sprites are also actual 16×16 and visually distinct.
 
 `CastReservation.observer`, `CastObserver`, actual paid mana/outcome reporting, `Context.emitSecondary` and `claimAmount` add shared runtime extension points. `target/allied`, `optional_backstep`, optional fractional amount quantization, amount budgets and authored push caps support the trusted component effects. Normal spell definitions and ordinary action defaults are unchanged. Ritual viewer protocol advances to 5 for retained per-seat material frames; an independent version-1 wand display payload carries bounded compiler-approved combinations and exact source magic. Matching client/server builds are required; no legacy registry or migration is introduced.
+
+
+## October 7, 2026: spell preparation display and ordinary cooldown removal
+
+All 214 shipped spell definitions and modes omit ordinary `cooldown` costs; policy entries retain zero values. Resource amounts, charge time, outcomes, traits and source provenance remain unchanged. Wands retain their separate sixty-second source recovery. Explicit data-pack cooldown costs remain supported. Adds the immutable `SpellRuntime.Preparation` snapshot/accessor and private clientbound `vestige:cast_preparation` payload, version 1, requiring matching client/server builds. The short crosshair bar clears at release or interruption. Saved items and apparatus formats are unchanged.
+
+## October 7, 2026: missing-Plinth ritual cue
+
+Adds the reusable `PULSE` visual shape for an outward reach followed by a collapse. Spell-visual payload registration moves from version 4 to 5, requiring matching client/server builds; spell-sense packets retain version 4. Eight-slot scroll references on a valid four-Plinth setup return `NEEDS_PLINTHS` and send this visual without starting a ritual or consuming inputs. Saved apparatus/items and all recipe compositions retain their formats.
+
+## October 7, 2026: native trait staffs
+
+Registers `vestige:staff` with version-1 fixed affinity, two/four/six bounded source-scroll slots and an explicit selected slot. Amplify, Range and Area are unavailable affinities. Native construction, selected-slot binding and capacity expansions use the existing atomic Plinth ritual; each binding consumes one scroll. Casting retains normal typed spell payment/recovery and commits deterministic source wear once, including the final use; staff continuations cannot identify spells or cross into scroll/wand casting. Adds mandatory clientbound `vestige:staff_slots` and serverbound `vestige:staff_select` payloads, version 1, requiring matching client/server builds. Saved scrolls/wands and other registries retain their formats. No legacy migration is introduced. Initial recipes, durability and item art are playtest choices.
+
+## October 7, 2026: apparatus construction grids and Smooth Quartz names
+
+All 36 Spellstone recipes now use five matching slabs, two Diamonds and one Amethyst Block; all 36 Plinth grids use six matching slabs around one full block and still yield two Plinths. With Supplementaries installed, the native Stone Bricks Plinth recipe and unlock are skipped so its pedestal construction recipe retains the grid. Each pedestal converts one-for-one through the existing optional recipe. Iron's optional conversion remains independent. Smooth Quartz Plinth, Spellstone and Standing Stone names drop the redundant word "Block". Registry IDs, saved items and apparatus behavior are unchanged.
 
 ## October 6, 2026: native untipped wand foundation
 
@@ -14,17 +93,38 @@ Registers `vestige:wand`, with version-1 base/thread IDs and one validated sourc
 
 Native wands never identify spells. Empty-hand continuation input also accepts an already-paid wand continuation; its payload format is unchanged. The foundation implements base/thread profiles, while the locked eight-tip effects, final wand artwork and wand recipe-viewer displays remain outstanding.
 
-## October 6, 2026: native magical thread components
+## October 6, 2026: Whispering Shell center flash removed
 
-Registers `vestige:ensorcelled_thread`, `vestige:callous_thread`, `vestige:smoldering_thread`, `vestige:laced_thread` and `vestige:consecrated_thread`. One shared shapeless inner-layer ritual consumes String, Amethyst Shard and Honeycomb, with the String's own retained socket selecting the output. Ordinary spell shaping and saved scroll/device identities are unchanged. Matching client/server builds are required for the new items. The initial components use vanilla's default 64-item stack limit and temporary String models; final artwork, stack tuning and equipment bonuses remain separate decisions. No legacy migration or wand runtime is introduced.
+The owner removed the extra channel-symbol flash beneath the crosshair. The client deletes its Shell GUI layer and temporary pulse state; the existing cue packet now plays the quiet sound only. Compact channel chat and inventory corner symbols remain. Channel keys, item bindings, server routing and cue protocol are unchanged.
 
-## October 6, 2026: sixteen-scroll stacks
+## October 6, 2026: retained imbuements in Spellstone recipe viewers
 
-Native spell scrolls now stack to sixteen when their item components agree. Spell identity, existing augments/degrees, leyline modifiers and Casting Cost values retain their existing data format and equality; distinct variants stay separate. Casting and dismantling consume one scroll per operation, and Plinths still hold one offering each. Matching client/server builds are required for the new stack limit. Existing scroll item data needs no migration. Future wand binding and magical string crafting remain design work.
+Ritual display protocol version 5 adds a bounded per-seat installed-material list, separate from consumed offerings. Matching client/server builds are required. The five public thread recipes derive their offerings and selectors from the native thread recipe; JEI and EMI index the installed block as a retained catalyst and fit its active resource-pack texture to the String Plinth's illustrated rim. Existing spell concealment, saved items, crafting rules and source artwork are unchanged.
+
+## October 6, 2026: compact Whispering Shell conversation symbols
+
+Adds the data-defined native `vestige:whispering_shell` chat type and its `%s - %s` translation. Shell conversations use each channel's single inventory-corner symbol, gray ampersands between channels, and ` > ` before the original sender name. The existing native player-chat packet retains its original body/signature. Matching client/server resources are required for the new decoration. Full verified channel keys, version-1 item bindings and cue payloads are unchanged; the compact symbols also replace full signatures in the brief client pulse. Saved devices need no migration.
 
 ## October 6, 2026: fixed-height Standing Stone pages
 
 Standing Stone pages now carry six destinations rather than eight, matching fixed 20-pixel client buttons. Payload registration version 4 requires matching client/server builds to share the new capacity; its existing field format, endpoint/key data and saved worlds are unchanged. Counted full/half health/food previews and the relocated mana HUD are client presentation changes. No migration or alternate payment route is added.
+
+## October 6, 2026: native magical thread components
+
+Registers `vestige:ensorcelled_thread`, `vestige:callous_thread`, `vestige:smoldering_thread`, `vestige:laced_thread` and `vestige:consecrated_thread`. One shared shapeless inner-layer ritual consumes String, Amethyst Shard and Honeycomb, with the String's own retained socket selecting the output. Ordinary spell shaping and saved scroll/device identities are unchanged. Matching client/server builds are required for the new items. The initial components use vanilla's default 64-item stack limit and temporary String models; final artwork, stack tuning and equipment bonuses remain separate decisions. No legacy migration or wand runtime is introduced.
+
+## October 6, 2026: native Whispering Shell
+
+- Registers `vestige:whispering_shell` with version-1 custom data containing the complete independently verified shard blueprint/key. Normal and advanced custom tooltips show the shared four-rune mark; cosmetic names do not affect channels.
+- Adds the three-offering Sculk Sensor/Nautilus Shell/valid Attunement Shard device ritual on four inner Plinths, with one empty seat. Existing atomic commitment and public JEI/EMI views apply.
+- Every hotbar Shell and offhand Shell diverts ordinary typed chat to matching direct-inventory/offhand holders, online across dimensions, once per player. Invalid active Shells fail closed. No per-message resource cost; nested inventories and offline storage do not participate.
+- Two required communication mixins target the pinned Java 1.21.1 submission/recipient seam. Vanilla signed/filtered messages, cancellation, visibility, ordering, logging and spam accounting remain in use. Platform updates must reverify these seams.
+- Adds mandatory clientbound `vestige:shell_cue` protocol version 1, bounded to ten channel keys. Matching updated clients receive one brief rune/audio cue per delivered conversation. No historical Paper review fixture is migrated into a Shell.
+
+
+## October 6, 2026: sixteen-scroll stacks
+
+Native spell scrolls now stack to sixteen when their item components agree. Spell identity, existing augments/degrees, leyline modifiers and Casting Cost values retain their existing data format and equality; distinct variants stay separate. Casting and dismantling consume one scroll per operation, and Plinths still hold one offering each. Matching client/server builds are required for the new stack limit. Existing scroll item data needs no migration. Future wand binding and magical string crafting remain design work.
 
 ## October 6, 2026: compact Standing Stone buttons and XP fares
 

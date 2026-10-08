@@ -18,7 +18,7 @@ public record SpellVisual(int duration, SpellValue radius, double height, List<L
         Objects.requireNonNull(sound);
     }
     public enum Shape { ARC, BEAM, SPHERE, RING, SPARKS, FIRE, SMOKE, BOX, BODY, TREE, WAVE, RAIN, VEIL, JET, SPLASH, SHIELD,
-        SIGIL, HELIX, SHARDS, TENDRILS, FLARE, VORTEX, MOTES, LEAVES, RAYS, RIPPLE, SLASH, CHAIN, WINGS, FANGS, CLOCK, EYE }
+        SIGIL, HELIX, SHARDS, TENDRILS, FLARE, VORTEX, MOTES, LEAVES, RAYS, RIPPLE, SLASH, CHAIN, WINGS, FANGS, CLOCK, EYE, PULSE }
     public record Layer(Shape shape, int color, float alpha, float width, float scale,
                         float speed, float phase, int count) {
         public Layer(Shape shape, int color, float alpha, float width, float scale) {

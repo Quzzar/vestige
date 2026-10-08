@@ -1,0 +1,118 @@
+{
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:earth": 5,
+    "vestige:stone": 3,
+    "vestige:abjuration": 4,
+    "vestige:conjuration": 2,
+    "vestige:amplify": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self"
+      },
+      "manifestation": {
+        "kind": "vestige:barrier",
+        "duration": 60,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:earth_defense",
+            "duration": 60,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:intercept",
+                "event": "vestige:damage_calculating"
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      2,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "end_manifestation"
+              }
+            ]
+          }
+        ],
+        "visual": {
+          "duration": 60,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "af8057",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.25,
+              "speed": 0.3,
+              "phase": 0,
+              "count": 5
+            },
+            {
+              "shape": "shield",
+              "color": "f2d3a6",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.875,
+              "speed": -0.195,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f2d3a6",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

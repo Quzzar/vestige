@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.quzzar.vestige.magic.runtime.CastReservationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-08T19:17:08" hostname="Quzzars-Book.local" time="0.004">
+  <properties/>
+  <testcase name="successivePaidCastsEachPrepareAndCommitWithoutAddedRecovery()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.0"/>
+  <testcase name="resourceAndSourceCommitOnceBeforeEffectsAndDelayedContinuation()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.001"/>
+  <testcase name="reservedSourcesRetainOnlyExplicitAuthoredCooldownCosts()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.001"/>
+  <testcase name="cancellationAndFailedPaymentDoNotCommitTheSource()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.001"/>
+  <testcase name="paidForfeitSpendsTheSourceAndAllowsAnotherPreparationImmediately()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.0"/>
+  <testcase name="aPaidRecastRetainsItsOriginalViewWithoutSecondWearOrPayment()" classname="com.quzzar.vestige.magic.runtime.CastReservationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

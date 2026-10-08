@@ -1,0 +1,104 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1476",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Create Water",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 322",
+      "rank": 1,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1476"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "divine",
+    "primal"
+  ],
+  "traits": {
+    "vestige:water": 1,
+    "vestige:conjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "block_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            12,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "create_water"
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "ripple",
+            "color": "239dcc",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.2,
+            "speed": 0.85,
+            "phase": 0,
+            "count": 6
+          },
+          {
+            "shape": "motes",
+            "color": "c2f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.84,
+            "speed": -0.5525,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "c2f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

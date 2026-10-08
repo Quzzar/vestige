@@ -1,0 +1,240 @@
+{
+  "status": "design proposal; not gameplay verification",
+  "date": "2026-10-08",
+  "source": "docs/design/wayfarer-imbuement-review.md",
+  "checks": {
+    "reachable_sets": 16,
+    "exact_rational_combination_math": "pass",
+    "displayed_examples": "pass",
+    "trait_composition_examples": "pass",
+    "local_links": "pass",
+    "scoped_whitespace": "pass",
+    "naming_catalog_coverage": "pass: 4 singles and 11 complete combination names"
+  },
+  "rounding": "existing shared final typed payment: floor(value + 0.5); proposed carrier maximum uses the same numeric convention separately",
+  "source_inspected": "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java",
+  "resolved_links": [
+    "docs/design/item-imbuement-and-readiness.md",
+    "docs/research/iron-material-uses.md",
+    "tools/author_spellshaping.py",
+    "docs/design/resource-payments.md",
+    "docs/design/item-imbuement-and-readiness.md"
+  ],
+  "combinations": [
+    {
+      "contributions": [],
+      "burst_seconds": 3.0,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 5.0,
+      "final_mana": 5,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift"
+      ],
+      "burst_seconds": 2.0,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 5.0,
+      "final_mana": 5,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/enduring"
+      ],
+      "burst_seconds": 3.6,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 5.6,
+      "final_mana": 6,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/reinforced"
+      ],
+      "burst_seconds": 3.0,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 6.25,
+      "final_mana": 6,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 3.0,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 6.25,
+      "final_mana": 6,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/enduring"
+      ],
+      "burst_seconds": 2.4,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 5.6,
+      "final_mana": 6,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/reinforced"
+      ],
+      "burst_seconds": 2.0,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 6.25,
+      "final_mana": 6,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 2.0,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 6.25,
+      "final_mana": 6,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/reinforced"
+      ],
+      "burst_seconds": 3.6,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 7.0,
+      "final_mana": 7,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 3.6,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 7.0,
+      "final_mana": 7,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/reinforced",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 3.0,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 7.8125,
+      "final_mana": 8,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/reinforced"
+      ],
+      "burst_seconds": 2.4,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 7.0,
+      "final_mana": 7,
+      "recovery_seconds": 15.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 2.4,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 7.0,
+      "final_mana": 7,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 65,
+      "thread_repair_proposed": 16
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/reinforced",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 2.0,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 7.8125,
+      "final_mana": 8,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/reinforced",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 3.6,
+      "movement_bonus_percent": 20.0,
+      "raw_mana": 8.75,
+      "final_mana": 9,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    },
+    {
+      "contributions": [
+        "vestige:wayfarer/swift",
+        "vestige:wayfarer/enduring",
+        "vestige:wayfarer/reinforced",
+        "vestige:wayfarer/quickened"
+      ],
+      "burst_seconds": 2.4,
+      "movement_bonus_percent": 30.0,
+      "raw_mana": 8.75,
+      "final_mana": 9,
+      "recovery_seconds": 12.0,
+      "maximum_durability": 98,
+      "thread_repair_proposed": 24
+    }
+  ],
+  "limitations": [
+    "All four new contribution routes and prices are proposals.",
+    "65 starting durability and matching-thread repair are proposals.",
+    "No equipment registration, variant persistence or gameplay implementation performed.",
+    "No unit/world/client suites, artwork capture, installation or publication performed."
+  ],
+  "naming_policy": "tools/magic-adjective-policy.json; names only, mechanics still proposed",
+  "shared_naming_verification": "docs/verification/magic-adjectives-2026-10-08/README.md; naming agent reports195unit tests/build/Kithkyn compatibility passing; no boot gameplay evidence"
+}

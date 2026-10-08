@@ -106,7 +106,7 @@ public final class Spellshaping {
         double sum=health+hunger;if(sum>.75){health*=.75/sum;hunger*=.75/sum;}
         var payment=new CastShaping(shaping.castingCost(),shaping.roundAmounts(),new CastShaping.CostAdjustment(factors,additional,health,hunger));
         payment.costs(base.costs());modes.values().forEach(m->payment.costs(m.costs())); // Validate before a ritual consumes anything.
-        return new Compiled(new SpellDefinition(base.id(),base.rarity(),base.traditions(),base.traits(),base.costs(),base.triggers(),plan,modes,base.source()),List.copyOf(modifiers),payment);
+        return new Compiled(new SpellDefinition(base.id(),base.rarity(),base.traditions(),base.traits(),base.costs(),base.triggers(),plan,modes,base.source(),base.variables()),List.copyOf(modifiers),payment);
     }
     /** Trusted equipment contributions compose with an already compiled scroll; they are not stored augments. */
     static Compiled contribute(Compiled source,SpellDefinition base,Rule rule) {
@@ -126,7 +126,7 @@ public final class Spellshaping {
         var definition=source.spell();var modes=new LinkedHashMap<>(definition.modes());
         modes.replaceAll((key,mode)->new SpellMode(key,mode.costs(),transform(mode.effects(),rule,base)));
         return new Compiled(new SpellDefinition(definition.id(),definition.rarity(),definition.traditions(),definition.traits(),definition.costs(),
-                definition.triggers(),transform(definition.effects(),rule,base),modes,definition.source()),List.copyOf(modifiers),shaping);
+                definition.triggers(),transform(definition.effects(),rule,base),modes,definition.source(),definition.variables()),List.copyOf(modifiers),shaping);
     }
     public static String paymentText(List<SpellCost> costs) {
         return costs.stream().map(c->switch(c){
@@ -146,7 +146,7 @@ public final class Spellshaping {
         Set<String> capabilities=new HashSet<>();SpellCapabilities.ofPlan(spell.effects()).forEach(i->capabilities.add(i.getPath()));
         var reads=new HashSet<String>();var leaves=new HashSet<String>();var parameters=new HashSet<String>();var statuses=new HashSet<ResourceLocation>();var flags=new boolean[4];
         walk(spell.effects(),e->{
-            collectReads(e,reads);
+            collectReads(e,reads,spell);
             if(e instanceof SpellEffects.Action a){leaves.add(a.type().getPath());if(a.type().getPath().equals("status"))statuses.add(a.identifiers().get("effect"));if(rule.kinds().contains(a.type().getPath()))collectParameters(a.values(),rule,spell,parameters);if(matchesAfter(a,rule))flags[2]=true;}
             if(e instanceof SpellEffects.CreateManifestation c){var m=c.manifestation();if(rule.kinds().contains(m.kind().getPath()))collectParameters(m.values(),rule,spell,parameters);if(m.durationTicks()>0 && m.bindings().isEmpty() && LIFETIME_KINDS.contains(m.kind().getPath()))flags[0]=true;if(anchorable(m,spell))flags[3]=true;}
             if(e instanceof SpellEffects.ForEach f && rule.kinds().contains(f.target().selection().name().toLowerCase(Locale.ROOT))) collectParameters(f.target().options(),rule,spell,parameters);
@@ -298,15 +298,24 @@ public final class Spellshaping {
             };return visitor.apply(nested);
         }).toList();
     }
-    private static SpellEffects.Binding binding(SpellEffects.Binding b,UnaryOperator<SpellEffect> visitor,boolean includeSecondary){return new SpellEffects.Binding(b.id(),b.triggers(),walk(b.effects(),visitor,includeSecondary),b.durationTicks(),b.charges());}
-    private static void collectReads(SpellEffect e,Set<String> reads){
-        if(e instanceof SpellEffects.Action a)a.values().values().forEach(v->read(v,reads));
-        if(e instanceof SpellEffects.ForEach f)targetReads(f.target(),reads);
-        if(e instanceof SpellEffects.CreateManifestation c){c.manifestation().values().values().forEach(v->read(v,reads));targetReads(c.target(),reads);}
-        if(e instanceof SpellEffects.InstallBinding b)targetReads(b.target(),reads);
+    private static SpellEffects.Binding binding(SpellEffects.Binding b,UnaryOperator<SpellEffect> visitor,boolean includeSecondary){return new SpellEffects.Binding(b.id(),b.triggers(),walk(b.effects(),visitor,includeSecondary),b.durationTicks(),b.charges(),b.lifetime());}
+    private static void collectReads(SpellEffect e,Set<String> reads,SpellDefinition spell){
+        if(e instanceof SpellEffects.Action a)a.values().values().forEach(v->read(v,reads,spell));
+        if(e instanceof SpellEffects.ForEach f)targetReads(f.target(),reads,spell);
+        if(e instanceof SpellEffects.CreateManifestation c){c.manifestation().values().values().forEach(v->read(v,reads,spell));targetReads(c.target(),reads,spell);}
+        if(e instanceof SpellEffects.InstallBinding b){targetReads(b.target(),reads,spell);b.binding().lifetime().ifPresent(v->read(v,reads,spell));}
+        if(e instanceof SpellEffects.CaptureValue c)read(c.value(),reads,spell);
+        if(e instanceof SpellEffects.GrantTraits g){read(g.duration(),reads,spell);targetReads(g.target(),reads,spell);}
     }
-    private static void targetReads(TargetSpec t,Set<String> reads){read(t.distance(),reads);t.options().values().forEach(v->read(v,reads));}
-    private static void read(SpellValue value,Set<String> reads){switch(value){case SpellValue.Trait t->reads.add(t.trait().getPath());case SpellValue.Product p->p.factors().forEach(v->read(v,reads));case SpellValue.Sum s->s.terms().forEach(v->read(v,reads));case SpellValue.Clamp c->read(c.value(),reads);default->{}}}
+    private static void targetReads(TargetSpec t,Set<String> reads,SpellDefinition spell){read(t.distance(),reads,spell);t.options().values().forEach(v->read(v,reads,spell));}
+    private static void read(SpellValue value,Set<String> reads,SpellDefinition spell){switch(value){
+        case SpellValue.Trait t->reads.add(t.trait().getPath());
+        case SpellValue.Variable v->{var formula=spell.variables().get(v.key());if(formula!=null)read(formula,reads,spell);}
+        case SpellValue.Product p->p.factors().forEach(v->read(v,reads,spell));
+        case SpellValue.Sum s->s.terms().forEach(v->read(v,reads,spell));
+        case SpellValue.Clamp c->read(c.value(),reads,spell);
+        default->{}
+    }}
     private static List<SpellEffect> normalized(List<SpellEffect> effects,SpellDefinition base){return walk(effects,e->{
         if(e instanceof SpellEffects.Action a)return new SpellEffects.Action(a.type(),expressions(a.values(),base),a.identifiers());
         if(e instanceof SpellEffects.CaptureValue c)return new SpellEffects.CaptureValue(c.key(),normalize(c.value(),base));

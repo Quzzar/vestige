@@ -1,0 +1,3 @@
+build	Build and test standalone Vestige	2026-10-07T04:08:29.3102358Z [04:08:29] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 18.70 s ======================
+build	Build and test standalone Vestige	2026-10-07T04:08:29.3103366Z [04:08:29] [Server thread/INFO] [minecraft/GameTestServer]: All 206 required tests passed :)
+build	Build and test standalone Vestige	2026-10-07T04:08:30.7015630Z BUILD SUCCESSFUL in 57s

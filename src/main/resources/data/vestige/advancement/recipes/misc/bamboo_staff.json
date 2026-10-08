@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "minecraft:bamboo" } ] } },
+    "has_the_recipe": { "trigger": "minecraft:recipe_unlocked", "conditions": { "recipe": "vestige:bamboo_staff" } }
+  },
+  "requirements": [ [ "has_bamboo", "has_the_recipe" ] ],
+  "rewards": { "recipes": [ "vestige:bamboo_staff" ] }
+}

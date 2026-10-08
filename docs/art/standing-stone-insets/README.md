@@ -17,13 +17,13 @@ These are **unedited actual Minecraft framebuffer captures**, not browser sketch
 | Mana | Vanilla violet Amethyst Shard | Mana units | 10, 20, 30 |
 | Hunger | Vanilla full food icon | Whole hunger icons | 2, 4, 6 |
 
-![XP cost preview](native/cost-xp.png)
+![XP cost preview](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/cost-xp.png)
 
-![Health cost preview](native/cost-health.png)
+![Health cost preview](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/cost-health.png)
 
-![Mana cost preview](native/cost-mana.png)
+![Mana cost preview](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/cost-mana.png)
 
-![Hunger cost preview](native/cost-hunger.png)
+![Hunger cost preview](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/cost-hunger.png)
 
 **Live travel still charges ordinary XP**, using the previously accepted distance formula. The alternate-cost screen is an opt-in native appearance fixture: it sends no travel, rename or paging requests and spends no resources. Health/mana/hunger conversions, nonlethal health affordability, food accounting and Pearl/material payment selection remain separate unfinished mechanics. No new art asset or external mod dependency is introduced by these symbols.
 
@@ -39,10 +39,10 @@ The review artifact applies only the freshly compiled menu, cost-display and opt
 
 Installed in **Prism → Kithkyn Testing**, SHA-256 `931f89b3554d2f41302b97b08a867120678feefda8a0eacb65c4387c6298d7c8`. [`prism-install.json`](prism-install.json) records the atomic single-jar replacement and verified backup. Minecraft was not restarted; other mods and existing worlds were not changed.
 
-![Actual short destination list without paging](native/short-list.png)
+![Actual short destination list without paging](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/short-list.png)
 
-![Source-only network with matching name/signature panels](native/only-current-stone.png)
+![Source-only network with matching name/signature panels](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/only-current-stone.png)
 
-![Actual paginated list at GUI scale four](native/list-narrow.png)
+![Actual paginated list at GUI scale four](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/list-narrow.png)
 
-![Native name editor](native/editing-wide.png)
+![Native name editor](/Users/quzzar/Projects/vestige/docs/art/standing-stone-insets/native/editing-wide.png)

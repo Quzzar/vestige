@@ -4,6 +4,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.quzzar.vestige.VestigeMainMod;
 import com.quzzar.vestige.magic.data.RuntimeSpellLoader;
+import com.quzzar.vestige.magic.data.RuntimeAbilityLoader;
 import com.quzzar.vestige.magic.definition.SpellTriggerTypes;
 import com.quzzar.vestige.magic.definition.SpellDefinition;
 import com.quzzar.vestige.magic.runtime.*;
@@ -30,6 +31,7 @@ import java.util.*;
 public final class NativeMagic {
     private static final Map<MinecraftServer, Session> SERVERS = new IdentityHashMap<>();
     private static RuntimeSpellLoader loader = new RuntimeSpellLoader();
+    private static RuntimeAbilityLoader abilityLoader = new RuntimeAbilityLoader();
     private NativeMagic() { }
     public record Session(MinecraftSpellWorld world, SpellRuntime runtime) { }
     public static Session session(MinecraftServer server) {
@@ -39,6 +41,7 @@ public final class NativeMagic {
         });
     }
     public static RuntimeSpellLoader spells() { return loader; }
+    public static RuntimeAbilityLoader abilities() { return abilityLoader; }
     static boolean ownsTemporaryBlock(net.minecraft.server.level.ServerLevel level,net.minecraft.core.BlockPos pos) {
         Session session=SERVERS.get(level.getServer());return session!=null && session.world.features.ownsTemporaryBlock(level,pos);
     }
@@ -48,24 +51,34 @@ public final class NativeMagic {
     public static void reload() {
         com.quzzar.vestige.apparatus.ScrollCasting.cancelAll();
         com.quzzar.vestige.apparatus.WandCasting.cancelAll();
-        SERVERS.values().forEach(session -> { session.runtime.close(); session.world.close(); });
+        com.quzzar.vestige.apparatus.StaffCasting.cancelAll();
+        com.quzzar.vestige.apparatus.StaffSelection.cancelAll();
+        SERVERS.forEach((server, session) -> { session.runtime.close(); session.world.close(); NativePreparation.close(server); });
         SERVERS.clear();
+        com.quzzar.vestige.equipment.EquipmentMagic.clear();
+        com.quzzar.vestige.equipment.WayfarerMagic.clear();
     }
     @SubscribeEvent public static void load(AddReloadListenerEvent event) {
         loader = new RuntimeSpellLoader();
         event.addListener(loader);
+        abilityLoader = new RuntimeAbilityLoader();
+        event.addListener(abilityLoader);
     }
     @SubscribeEvent public static void tick(ServerTickEvent.Post event) {
         Session session = SERVERS.get(event.getServer());
         if (session != null) { session.runtime.tick(); session.world.tick(); }
+        com.quzzar.vestige.equipment.EquipmentMagic.tick();
+        NativePreparation.sync(event.getServer(), session == null ? null : session.runtime);
         if (event.getServer().getTickCount()%100==0) PetCache.retry(event.getServer());
         event.getServer().getPlayerList().getPlayers().forEach(PrivateSpaces::enforce);
     }
     @SubscribeEvent public static void stop(ServerStoppedEvent event) {
+        NativePreparation.close(event.getServer());
         Session session = SERVERS.remove(event.getServer());
         if (session != null) { session.runtime.close(); session.world.close(); }
     }
     @SubscribeEvent public static void stopping(net.neoforged.neoforge.event.server.ServerStoppingEvent event) {
+        NativePreparation.close(event.getServer());
         Session session = SERVERS.remove(event.getServer());
         if (session != null) { session.runtime.close(); session.world.close(); }
     }
@@ -131,9 +144,9 @@ public final class NativeMagic {
                         }))))
                 .then(Commands.literal("mana").executes(context -> {
                     var player = context.getSource().getPlayerOrException();
-                    context.getSource().sendSuccess(() -> Component.literal("Mana: " + NativeMana.amount(player) + "/" + NativeMana.MAX), false);
+                    context.getSource().sendSuccess(() -> Component.literal("Mana: " + NativeMana.amount(player) + "/" + NativeMana.maximum(player)), false);
                     return 1;
-                }).then(Commands.argument("amount", IntegerArgumentType.integer(0, NativeMana.MAX)).executes(context -> {
+                }).then(Commands.argument("amount", IntegerArgumentType.integer(0)).executes(context -> {
                     var player = context.getSource().getPlayerOrException();
                     NativeMana.set(player, IntegerArgumentType.getInteger(context, "amount"));
                     return 1;

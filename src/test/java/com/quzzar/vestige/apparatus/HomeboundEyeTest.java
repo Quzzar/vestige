@@ -23,6 +23,14 @@ class HomeboundEyeTest {
         assertTrue(HomeboundEyeItem.binding(new ItemStack(ScrollItems.HOMEBOUND_EYE.get())).isEmpty());
         assertThrows(IllegalArgumentException.class, () -> HomeboundEyeItem.bound("short", Level.OVERWORLD, BlockPos.ZERO, HomeboundEyeItem.Payment.MANA));
     }
+    @Test void everyResourceRouteBuysTheSameDurabilityBenefitAtTheSharedRate() {
+        assertEquals(6,HomeboundEyeItem.Payment.DURABILITY.wear);
+        assertEquals(2,HomeboundEyeItem.Payment.HEALTH.cost);
+        assertEquals(4,HomeboundEyeItem.Payment.HUNGER.cost);
+        assertEquals(30,HomeboundEyeItem.Payment.EXPERIENCE.cost);
+        assertEquals(30,HomeboundEyeItem.Payment.MANA.cost);
+        for(var route:HomeboundEyeItem.Payment.values()) if(route!=HomeboundEyeItem.Payment.DURABILITY) assertEquals(2,route.wear);
+    }
     @Test void publicRecipeUsesFourSeparateOfferingsAndPaymentHasOneLocalSelector() {
         var display = com.quzzar.vestige.apparatus.recipeviewer.RitualDisplays.homeboundEye();
         assertEquals(4, display.capacity()); assertEquals(4, display.offerings().size());

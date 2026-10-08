@@ -1,0 +1,139 @@
+{
+  "accepted_maximum_zoom_percent": 3,
+  "native_frames": 306,
+  "native_cast_checks": 11,
+  "views": [
+    {
+      "view": "scroll-wide",
+      "minimum_world_fov": 67.93955981731415,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-offhand",
+      "minimum_world_fov": 67.92041301727295,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "wand-wide",
+      "minimum_world_fov": 67.92335450649261,
+      "final_world_fov": 69.99993324279785,
+      "mana": 64.0,
+      "remainingScrolls": 1,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "staff-left",
+      "minimum_world_fov": 67.93648481369019,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 1,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "cancel-wide",
+      "minimum_world_fov": 68.9803546667099,
+      "final_world_fov": 69.99910295009613,
+      "mana": 100.0,
+      "remainingScrolls": 4,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-compact",
+      "minimum_world_fov": 67.95816421508789,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "staff-compact",
+      "minimum_world_fov": 67.92848229408264,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 1,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-snow",
+      "minimum_world_fov": 67.95763432979584,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-night",
+      "minimum_world_fov": 67.9258245229721,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-fov-off",
+      "minimum_world_fov": 70.0,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": true
+    },
+    {
+      "view": "scroll-third-person",
+      "minimum_world_fov": 70.0,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "remainingScrolls": 3,
+      "preparation_cleared": true,
+      "zoom_excluded": true
+    }
+  ],
+  "unit_tests": {
+    "tests": 179,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "build": "passed",
+  "kithkyn_compatibility": "passed",
+  "world_suite_rerun": false,
+  "native_integrated_server_checks": true,
+  "source_snapshot": "/private/tmp/vestige-subtle-zoom-20261007-source",
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": "4a663e3de2bae746418dff95ee95657f3a8d93092ce166adb9637770a8644a10",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationZoom.java": "95ce3e03481237a51187e389e2dede6f5edc9b19ea3fa46a3e1b0910da1b708b",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc",
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": "41177527167b1b6520c1dd28226e3f446972439494a6f53a792ac8ad70fc763e"
+  },
+  "obsolete_edge_renderer_packaged": false,
+  "held_item_animation_unchanged": true,
+  "jar": "/Users/quzzar/Projects/vestige/build/subtle-zoom-review/libs/vestige-0.1.0.jar",
+  "jar_sha256": "cd4ca85b6f8bda411f897676eeca550d384b338e81f37d61290d62815ef56aa6",
+  "installed": false,
+  "inspected_native_views": [
+    "scroll-idle",
+    "scroll-wide",
+    "wand-wide",
+    "staff-left",
+    "scroll-snow"
+  ],
+  "video": "/Users/quzzar/Projects/vestige/docs/art/spell-preparation-subtle-zoom/charging.mp4",
+  "video_sha256": "1c83a41a34c91f3bf1984655d92d73b2768fbafa241ab1752e4f825bde6ad678",
+  "video_duration_seconds": 4.466667,
+  "decoded_video_frame_inspected": true
+}

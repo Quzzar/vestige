@@ -1,0 +1,108 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:fang_ward",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Fang Ward",
+    "cast_type": "long",
+    "cooldown_ticks": 300
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:evocation": 4,
+    "vestige:abjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 22
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "fangs",
+          "values": {
+            "max_targets": 6,
+            "amount": {
+              "product": [
+                6,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "count": 16,
+            "radius": {
+              "product": [
+                3,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "fangs",
+            "color": "99aabf",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.8,
+            "speed": -0.5,
+            "phase": 0,
+            "count": 12
+          },
+          {
+            "shape": "sigil",
+            "color": "eef5ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.26,
+            "speed": 0.325,
+            "phase": 1.2,
+            "count": 6
+          },
+          {
+            "shape": "sparks",
+            "color": "eef5ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

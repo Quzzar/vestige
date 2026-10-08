@@ -1,6 +1,6 @@
 package com.quzzar.vestige.magic.effect;
 
-import com.quzzar.vestige.magic.definition.SpellDefinition;
+import com.quzzar.vestige.magic.definition.MagicDefinition;
 import com.quzzar.vestige.magic.definition.SpellEffect;
 import net.minecraft.resources.ResourceLocation;
 import java.util.HashSet;
@@ -10,7 +10,7 @@ import java.util.Set;
 /** Derives capabilities by walking effects, including temporary behavior and persistent outcomes. */
 public final class SpellCapabilities {
     private SpellCapabilities() { }
-    public static Set<ResourceLocation> of(SpellDefinition spell) {
+    public static Set<ResourceLocation> of(MagicDefinition spell) {
         Set<ResourceLocation> result = new HashSet<>();
         collect(spell.effects(), result);
         spell.modes().values().forEach(mode -> collect(mode.effects(), result));
@@ -30,6 +30,7 @@ public final class SpellCapabilities {
                     if (action.type().equals(id("transpose"))) result.add(id("teleport"));
                     if (action.type().equals(id("shape_stone")) || action.type().equals(id("create_water"))) result.add(id("alter_blocks"));
                 }
+                case SpellEffects.GrantTraits ignored -> result.add(id("modify_traits"));
                 case SpellEffects.Sequence sequence -> collect(sequence.effects(), result);
                 case SpellEffects.Branch branch -> { collect(branch.whenTrue(), result); collect(branch.whenFalse(), result); }
                 case SpellEffects.ForEach each -> collect(each.effects(), result);

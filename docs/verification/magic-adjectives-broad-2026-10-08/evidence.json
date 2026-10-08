@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-08",
+  "unitTests": {
+    "name": "com.quzzar.vestige.magic.presentation.MagicAdjectivesTest",
+    "tests": "9",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-10-08T18:55:25",
+    "hostname": "Quzzars-Book.local",
+    "time": "1.641"
+  },
+  "nativeRequiredTests": 13,
+  "nativeScope": [
+    "homebound_*",
+    "scroll_stacking*"
+  ],
+  "terms": 79,
+  "exactAliases": 145,
+  "mixedAdjective": "Confluent",
+  "bootNamingSets": 16,
+  "hourglassDesignNamingSets": 36,
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/magic/presentation/MagicAdjectives.java": "5de1203247dfaeadfddda2a7263d588e3d7a42812fafeefef243ebace997c756",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeItem.java": "6d98b0ac312e3b51b684f5e68bf658f628a3d0a88c658394d8634481e0bae4e5",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.java": "e44a9ca2936ae218bbf9e20715b2b8550f391167067e90e8faf1b09b9bae42aa",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollStackingWorldTest.java": "9d25adb93a171f9ce374212ca7ba199b4b1ccbd42e24f949bfd09e43ed17bd9e",
+    "src/test/java/com/quzzar/vestige/magic/presentation/MagicAdjectivesTest.java": "002924c7552c31bd6c6b06686b2bef2c97636a8ada30f53ad23c268a85d6a1ed",
+    "src/main/resources/data/vestige/magic_adjectives.json": "097a3085b9ee0edb52b9276bafccbbed998e9082844e04464be02b5031baf5ef",
+    "tools/author_magic_adjectives.py": "08c79e9ef14301051c9d9cbef3ba65e84f13acbc72fe5e6d67a3b334a1bd9793",
+    "tools/magic-adjective-policy.json": "b011d29775fbbd9ba18b137b06ac1da6989003d7a13f1a15788baaf138b5e122"
+  },
+  "noNewArtReviewClaimed": true,
+  "installationAndPublication": "Recorded separately by the final combined closeout"
+}

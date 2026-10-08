@@ -145,6 +145,7 @@ tasks.named('processTestResources', ProcessResources) {
     from('tools/irons-spells.json')
     from('tools/pathfinder-spells.json')
     from('tools/effects-viewer/src/catalog.json')
+    from('docs/art/magic-equipment-review/ability-proposals.json')
 }
 
 def verifyKithkynCompatibility = tasks.register('verifyKithkynCompatibility') {

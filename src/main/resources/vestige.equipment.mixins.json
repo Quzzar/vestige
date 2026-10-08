@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.quzzar.vestige.equipment.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingDamageAccess",
+    "ArmorProtection",
+    "PlayerArmorSlot",
+    "InventoryArmorSlot"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

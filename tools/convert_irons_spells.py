@@ -213,9 +213,9 @@ def write():
         path.write_text(json.dumps(decorate(spell,name),indent=2,ensure_ascii=False)+'\n')
     ledger = ['# Iron spell conversion ledger','',
               f'All **{len(ROWS)} default-enabled spells** in the pinned catalog have native Vestige effect graphs. Source: Iron 3.16.3 / Minecraft 1.21.1 at `{REVISION}`.', '',
-              'These native adaptations execute without Iron or the retired Wizardry layer. The complete catalog has a native balance pass with authored outcomes, mana, charge times, cooldowns, and constraints. Models, animation, audio, advanced entity AI, and the explicitly listed mechanic differences are not parity claims.', '',
+              'These native adaptations execute without Iron or the retired Wizardry layer. The complete catalog has a native balance pass with authored outcomes, mana, charge times and constraints; ordinary spell cooldowns were removed on October 7, 2026. Models, animation, audio, advanced entity AI, and the explicitly listed mechanic differences are not parity claims.', '',
               'All recipes are checked-in under `src/main/resources/data/vestige/runtime_spells/`. `tools/convert_irons_spells.py` regenerates them from explicit per-spell recipes; it has no fallback conversion. `tools/irons-spells.json` freezes the source catalog.', '',
-              'Native costs are authored in `tools/spell-balance-policy.json`; original Iron cooldowns remain provenance. `/vestige_magic cast_balanced` enforces native resource costs and cooldowns. Discovery, progression, and wand controls remain deferred.', '',
+              'Native costs are authored in `tools/spell-balance-policy.json`; original Iron cooldowns remain provenance. `/vestige_magic cast_balanced` enforces native resource costs and preparation; the shipped catalog has no ordinary spell cooldowns. Equipment recovery is separate.', '',
               'See [the complete balance review](../spell-balance-review.md) for every spell\'s role and tuning rationale. Rarity does not copy upstream rarity or impose trait-point budgets. These are tested initial balance baselines; future encounter playtesting can refine them.', '',
               '| Spell / native ID | Rarity | School | Native behavior | Adaptation / remaining difference |','|---|---|---|---|---|']
     for name,row in ROWS.items():
@@ -227,7 +227,8 @@ def write():
 
 def balanced_costs(name):
     tuning = BALANCE_POLICY['spells'][name]
-    costs = [{'type':'mana','amount':tuning['mana']}, {'type':'cooldown','ticks':tuning['cooldown_ticks']}]
+    costs = [{'type':'mana','amount':tuning['mana']}]
+    if tuning['cooldown_ticks']: costs.append({'type':'cooldown','ticks':tuning['cooldown_ticks']})
     if tuning['charge_ticks']: costs.insert(0, {'type':'time','ticks':tuning['charge_ticks']})
     return costs
 

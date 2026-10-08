@@ -1,0 +1,73 @@
+{
+  "status": "Owner-approved appearance",
+  "approvedLocalDate": "2026-10-08",
+  "timezone": "America/New_York",
+  "scope": "Wardweave and Cinderweave mage armor v2 worn textures and model, all sixteen cloth colors, fixed trim and both player body types, as shown in the native Minecraft review. No cape or separate back panel.",
+  "ownerStatement": "Yeah, I think these look pretty good. I think this is fine. Um, I think these are fine. Let's lock these in and move on.",
+  "evidence": {
+    "nativeCaptures": [
+      "captures/wardweave-white-gui-2.png",
+      "captures/cinderweave-blue-gui-2.png"
+    ],
+    "nativeCaptureManifest": "captures/capture.json",
+    "gallery": "index.html",
+    "verification": "../../verification/armor-robes-2026-10-08/verification.json",
+    "sourceArtwork": [
+      "source/wardweave-generated.png",
+      "source/cinderweave-generated.png"
+    ],
+    "prompts": "prompts.json",
+    "exportSettings": "source/export-settings.json"
+  },
+  "approvedTextures": [
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/models/armor/wardweave_layer_1.png",
+      "reviewCopy": "export/wardweave_layer_1.png",
+      "sha256": "06d694a69f6abede32bbcec8c719440faa5a8b1f48a7d9cb76a1901f92c0b7bc",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/models/armor/wardweave_layer_1_overlay.png",
+      "reviewCopy": "export/wardweave_layer_1_overlay.png",
+      "sha256": "e003f1a376624ad70291d04ed5b54deab77fa665845cc99b8c78406d9338f04e",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/models/armor/cinderweave_layer_1.png",
+      "reviewCopy": "export/cinderweave_layer_1.png",
+      "sha256": "1b000b3082d1c9f6f72afd1336f1d1eb380d2ef10ddbf122e6f2c62efb7502a6",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/models/armor/cinderweave_layer_1_overlay.png",
+      "reviewCopy": "export/cinderweave_layer_1_overlay.png",
+      "sha256": "c073f86bcaa73ef0b4d020b56c0f3a7abe734d75ded2949430e58af5f1b0dafc",
+      "size": [
+        64,
+        64
+      ]
+    }
+  ],
+  "approvedModels": [
+    {
+      "productionFile": "src/main/java/com/quzzar/vestige/equipment/client/RobeModel.java",
+      "reviewCopy": "source/RobeModel.java",
+      "sha256": "5aa071bfd9782f766528c1431c1b71d29bf67db8bf99dd9f40b9583cc4a69ff9"
+    },
+    {
+      "productionFile": "src/main/java/com/quzzar/vestige/equipment/client/RobeModels.java",
+      "reviewCopy": "source/RobeModels.java",
+      "sha256": "e9e34241b0ccb848b588fadf10bed4f4eff1df8834431eb62c0442e91af504ba"
+    }
+  ],
+  "documentationPass": "Records owner acceptance of the existing verified artwork. No production pixel/model/gameplay change, client rerun, publication or installation performed by this approval pass."
+}

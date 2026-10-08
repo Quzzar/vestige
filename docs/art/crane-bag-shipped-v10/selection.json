@@ -1,0 +1,11 @@
+{
+  "selected": "A Gathered",
+  "approvedSource": "docs/art/crane-bag-native-variants-v9/textures/crane_bag_native_a_gathered.png",
+  "productionTexture": "src/main/resources/assets/vestige/textures/item/crane_bag.png",
+  "sha256": "2c8eeebdd4bf6c555d829ff99d0d9694da7f82e3254db7aa42a16628349212e8",
+  "dimensions": [
+    16,
+    16
+  ],
+  "selectionSource": "Owner: A, gathered. This one is great. You can ship this."
+}

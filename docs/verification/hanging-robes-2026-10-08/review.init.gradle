@@ -1,0 +1,6 @@
+gradle.projectsLoaded {
+    rootProject.layout.buildDirectory.set(new File('/private/tmp/vestige-robes-hanging-review-build-2026-10-08'))
+}
+gradle.projectsEvaluated {
+    rootProject.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+}

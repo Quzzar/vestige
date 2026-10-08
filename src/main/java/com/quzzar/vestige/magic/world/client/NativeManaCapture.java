@@ -85,12 +85,12 @@ public final class NativeManaCapture {
                 pending.join(); mc.options.guiScale().set(VIEWS.get(index).scale); mc.resizeDisplay();
                 mc.mouseHandler.releaseMouse(); state = 3; next = now + VIEWS.get(index).seconds * 1_000_000_000L;
             } else if (state == 3 && now >= next && mc.screen == null) {
-                var view = VIEWS.get(index); float amount = ManaHud.amount(); boolean visible = ManaHud.visible();
-                if (visible != (view.mana < 100) || view.name.equals("recovering") && amount <= 0
+                var view = VIEWS.get(index); double amount = ItemManaOverlay.amount(); boolean visible = false;
+                if (view.name.equals("recovering") && amount <= 0
                         || !view.name.equals("recovering") && Math.abs(amount - view.mana) > .01) throw new IllegalStateException("Invalid mana HUD state: " + view + " / " + amount);
                 Path out = Path.of(System.getProperty("vestige.capture.output")); Files.createDirectories(out);
                 try (var image = Screenshot.takeScreenshot(mc.getMainRenderTarget())) { image.writeToFile(out.resolve(view.name + ".png")); }
-                CHECKS.add(Map.of("view", view.name, "mana", amount, "barVisible", visible, "guiScale", view.scale));
+                CHECKS.add(Map.of("view", view.name, "mana", amount, "explicitManaBarVisible", visible, "guiScale", view.scale));
                 if (++index == VIEWS.size()) {
                     Files.writeString(out.resolve("capture.json"), new GsonBuilder().setPrettyPrinting().create().toJson(Map.of(
                             "engine", "Minecraft 1.21.1 / NeoForge 21.1.72", "source", "Minecraft main render target", "checks", CHECKS)) + "\n");

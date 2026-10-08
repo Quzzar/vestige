@@ -1,0 +1,163 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1552",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Harm",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 334",
+      "rank": 1,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1552"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "divine"
+  ],
+  "traits": {
+    "vestige:void": 1,
+    "vestige:death": 1,
+    "vestige:necromancy": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 12
+    },
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 120
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            16,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "branch",
+          "condition": {
+            "type": "tagged",
+            "path": "vestige:target/entity_type",
+            "tag": "minecraft:undead"
+          },
+          "then": [
+            {
+              "type": "heal",
+              "values": {
+                "amount": {
+                  "product": [
+                    8,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "else": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    8,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "c895ff",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "tendrils",
+            "color": "57418f",
+            "alpha": 0.85,
+            "width": 0.15,
+            "scale": 1.2,
+            "speed": -0.8,
+            "phase": 0,
+            "count": 6
+          },
+          {
+            "shape": "rays",
+            "color": "d992ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.84,
+            "speed": 0.52,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "d992ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

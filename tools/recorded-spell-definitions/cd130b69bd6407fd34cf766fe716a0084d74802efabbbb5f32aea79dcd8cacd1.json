@@ -1,0 +1,234 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:eldritch_blast",
+    "school": "irons_spellbooks:eldritch",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Eldritch Blast",
+    "cast_type": "instant",
+    "cooldown_ticks": 300
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:void": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "beam",
+        "required": false,
+        "distance": {
+          "product": [
+            24,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 4
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                6,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "b397e0",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "tendrils",
+            "color": "57418f",
+            "alpha": 0.85,
+            "width": 0.15,
+            "scale": 1.7,
+            "speed": -2.0,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "helix",
+            "color": "d992ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.19,
+            "speed": 1.3,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "d992ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "repeat",
+      "count": 2,
+      "interval": 1,
+      "effects": [
+        {
+          "type": "await_recast",
+          "timeout": 100
+        },
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "beam",
+            "required": false,
+            "distance": {
+              "product": [
+                24,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "count": 4
+            }
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    6,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": 0.85,
+            "height": 1.1,
+            "layers": [
+              {
+                "shape": "beam",
+                "color": "b397e0",
+                "alpha": 0.9,
+                "width": 0.25,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "beam",
+                "color": "ffffff",
+                "alpha": 1,
+                "width": 0.06,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "tendrils",
+                "color": "57418f",
+                "alpha": 0.85,
+                "width": 0.15,
+                "scale": 1.7,
+                "speed": -2.0,
+                "phase": 0,
+                "count": 5
+              },
+              {
+                "shape": "helix",
+                "color": "d992ff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 1.19,
+                "speed": 1.3,
+                "phase": 1.2,
+                "count": 3
+              },
+              {
+                "shape": "sparks",
+                "color": "d992ff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

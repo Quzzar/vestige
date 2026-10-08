@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-08T19:17:08" hostname="Quzzars-Book.local" time="0.01">
+  <properties/>
+  <testcase name="boostsAreBoundedToTheirRecipientReplaceTheirOwnGroupAndDispelCleanly()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.003"/>
+  <testcase name="itemAbilitiesHaveNoUnknownScrollRiskButKeepExplicitVolatility()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <testcase name="reactiveEquipmentDoesNotInterruptOrBlockAPreparedSpell()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <testcase name="playerAndSourceModifiersComposeOnceForSpellsAndItemAbilities()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.001"/>
+  <testcase name="resolvedBindingExpiresAtItsDeadlineAndCannotProtectLaterHits()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <testcase name="aFiveSecondWardKeepsItsSnapshotAfterTheTimeBoostExpires()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.001"/>
+  <testcase name="grammarSupportsForwardVariablesAndRejectsCyclesMissingReferencesAndWorldFacts()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.001"/>
+  <testcase name="unaffordableAbilityCannotGrantABoostAndInvalidVariablesFailBeforePayment()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <testcase name="aBoostGrantedByAConsumedBindingOwnsItsIndependentLifetime()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <testcase name="recastsRetainTheOriginalBoostSnapshotAndPayOnce()" classname="com.quzzar.vestige.magic.runtime.UnifiedMagicTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

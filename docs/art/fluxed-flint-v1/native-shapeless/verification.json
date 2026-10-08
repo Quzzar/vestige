@@ -1,0 +1,30 @@
+{
+  "assetSha256": {
+    "models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+    "textures/item/fluxed_flint.png": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3"
+  },
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Unedited framebuffer",
+  "checks": [
+    {
+      "check": "Translated native item name",
+      "passed": true
+    },
+    {
+      "check": "Eight-slot fixture has only two outer offerings",
+      "passed": true
+    },
+    {
+      "check": "Native outer-only activation enters repair lifecycle",
+      "passed": true
+    },
+    {
+      "check": "Actual dropped staff differs only by ten restored durability",
+      "passed": true
+    },
+    {
+      "check": "Catalyst spends ten points and target is consumed once",
+      "passed": true
+    }
+  ]
+}

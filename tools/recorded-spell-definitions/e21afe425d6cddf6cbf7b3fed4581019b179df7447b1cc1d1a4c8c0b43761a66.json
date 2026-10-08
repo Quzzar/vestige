@@ -1,0 +1,161 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:ice_tomb",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Ice Tomb",
+    "cast_type": "instant",
+    "cooldown_ticks": 600
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:abjuration": 4,
+    "vestige:life": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 40
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:barrier",
+        "duration": 100,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:tomb_break",
+            "duration": 100,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:tomb_break/trigger",
+                "event": "vestige:damage_calculating",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "fact": "vestige:event/damage_amount"
+                  }
+                }
+              },
+              {
+                "type": "end_manifestation"
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "self",
+              "required": true
+            },
+            "effects": [
+              {
+                "type": "heal",
+                "values": {
+                  "amount": {
+                    "product": [
+                      1,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "status",
+                "values": {
+                  "duration": 25,
+                  "amplifier": 10
+                },
+                "identifiers": {
+                  "effect": "minecraft:slowness"
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 100,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "48badf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.4,
+              "speed": 0.15,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "shield",
+              "color": "e7fbff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.9799999999999999,
+              "speed": -0.0975,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "e7fbff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

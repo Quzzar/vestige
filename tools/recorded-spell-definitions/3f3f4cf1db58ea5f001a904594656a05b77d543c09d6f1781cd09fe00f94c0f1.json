@@ -1,0 +1,90 @@
+{
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:death": 4,
+    "vestige:necromancy": 5,
+    "vestige:conjuration": 3,
+    "vestige:amplify": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 28
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self"
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "identifiers": {
+          "entity": "minecraft:zombie",
+          "head": "minecraft:leather_helmet"
+        },
+        "values": {
+          "health": 16,
+          "attack_damage": 3
+        },
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "sigil",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": -0.65,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "shards",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": 0.42250000000000004,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

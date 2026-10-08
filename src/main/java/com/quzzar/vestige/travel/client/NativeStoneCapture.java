@@ -7,7 +7,7 @@ import com.quzzar.vestige.apparatus.AttunementMark;
 import com.quzzar.vestige.travel.*;
 import com.quzzar.vestige.magic.presentation.client.ManaDisplay;
 import com.quzzar.vestige.magic.world.NativeMana;
-import com.quzzar.vestige.magic.world.client.ManaHud;
+import com.quzzar.vestige.magic.world.client.ItemManaOverlay;
 import net.minecraft.client.*;
 import net.minecraft.client.gui.components.*;
 import net.minecraft.client.gui.screens.TitleScreen;
@@ -239,9 +239,9 @@ public final class NativeStoneCapture {
                     pending=mc.getSingleplayerServer().submit(()->prepareHud(mc.getSingleplayerServer(),hudStage));next=now+800_000_000L;
                 }
             } else if (state == 15 && pending.isDone() && mc.screen==null && now >= next
-                    && Math.round(ManaHud.amount())==HUD_AMOUNTS[hudStage]
+                    && Math.round(ItemManaOverlay.amount())==HUD_AMOUNTS[hudStage]
                     && (hudStage!=5 || mc.getWindow().getGuiScaledWidth()==320)) {
-                pending.join();require(ManaHud.visible()==(HUD_AMOUNTS[hudStage]<NativeMana.MAX),HUD_NAMES[hudStage]+" uses synchronized mana and the correct HUD visibility");
+                pending.join();require(Math.round(ItemManaOverlay.amount())==HUD_AMOUNTS[hudStage],HUD_NAMES[hudStage]+" retains synchronized hidden mana");
                 capture(mc,previous,HUD_NAMES[hudStage]);
                 if (++hudStage<HUD_AMOUNTS.length) {
                     if (hudStage==5) GLFW.glfwSetWindowSize(mc.getWindow().getWindow(),480,360);
@@ -281,7 +281,7 @@ public final class NativeStoneCapture {
         for (var type : List.of(StoneNetworkScreen.class, StoneTravelPayloads.class, StoneTravelPayloads.View.class, StoneTravelPayloads.Rename.class,
                 StoneTravelPayloads.Page.class, StoneTravelPayloads.Request.class, StoneTravel.class, StandingStoneEntity.class,
                 StoneDirectory.class, StoneNetwork.class, StandingStoneFare.class, PlayerExperience.class, TravelCostDisplay.class, TravelCostDisplay.Type.class,
-                ManaDisplay.class, ManaHud.class, ManaHud.Registration.class, NativeMana.class, NativeStoneCapture.class, StandingStoneTest.class)) {
+                ManaDisplay.class, ItemManaOverlay.class, ItemManaOverlay.Registration.class, NativeMana.class, NativeStoneCapture.class, StandingStoneTest.class)) {
             String path = type.getName().replace('.', '/') + ".class";
             try (var stream = type.getResourceAsStream("/" + path)) {
                 hashes.put(path, HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Objects.requireNonNull(stream).readAllBytes())));

@@ -47,11 +47,14 @@ public final class NativeManaTest {
         var event = SpellEvent.of(SpellTriggerTypes.INTERACT, player.getUUID(), null);
         var cast = session.runtime().cast(spell, event, List.of(), true);
         h.assertTrue(cast.failure().isEmpty() && NativeMana.amount(player) == 86, "Paid spell ignored the 100-mana pool");
-        h.assertTrue(session.runtime().cast(spell, event, List.of(), true).status() == SpellRuntime.Status.COOLDOWN
-                && NativeMana.amount(player) == 86, "Rejected repeat spent mana");
+        h.assertTrue(session.runtime().cast(spell, event, List.of(), true).paymentCommitted()
+                && NativeMana.amount(player) == 72, "Ordinary spell recovery blocked a paid repeat");
         for (int i = 0; i < 100; i++) NativeMana.recover(player);
-        h.assertTrue(NativeMana.amount(player) == 86, "Spell payment did not start delay");
-        NativeMana.recover(player); h.assertTrue(NativeMana.amount(player) > 86, "Mana never recovered");
+        h.assertTrue(NativeMana.amount(player) == 72, "Spell payment did not start delay");
+        NativeMana.recover(player); h.assertTrue(NativeMana.amount(player) > 72, "Mana never recovered");
+        NativeMana.set(player,0);
+        h.assertTrue(session.runtime().cast(spell,event,List.of(),true).status()==SpellRuntime.Status.COST_FAILED
+                && NativeMana.amount(player)==0,"Removing cooldown also bypassed mana");
         session.runtime().interruptActor(player.getUUID()); session.runtime().dispelActor(player.getUUID()); h.succeed();
         }
     }

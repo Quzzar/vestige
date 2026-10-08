@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-07",
+  "source_snapshot": "/private/tmp/vestige-wand-no-recovery-20261007-source",
+  "changed_java_files_match_workspace": {
+    "src/main/java/com/quzzar/vestige/apparatus/WandComponents.java": true,
+    "src/main/java/com/quzzar/vestige/apparatus/WandCasting.java": true,
+    "src/main/java/com/quzzar/vestige/apparatus/WandWorldTest.java": true,
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastReservation.java": true,
+    "src/main/java/com/quzzar/vestige/magic/runtime/SpellRuntime.java": true,
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastReservationTest.java": true,
+    "src/test/java/com/quzzar/vestige/apparatus/WandComponentsTest.java": true
+  },
+  "unit_tests": {
+    "tests": 177,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "minecraft_tests": {
+    "tests": 56,
+    "failures": 0,
+    "filter": "wand_|staff_|cast_preparation|player_mana",
+    "fresh_world": "/private/tmp/vestige-wand-no-recovery-confirmed-world-20261007"
+  },
+  "build": "passed",
+  "kithkyn_compatibility": "passed",
+  "wand_models": "63 models and 20 actual 16x16 component/thread sprites passed",
+  "staff_traits": "passed",
+  "staff_texture": "passed",
+  "generated_docs": [
+    "document_spell_balance.py --check passed",
+    "document_spells.py --check passed"
+  ],
+  "artifact": "/Users/quzzar/Projects/vestige/build/wand-no-recovery-review/libs/vestige-0.1.0.jar",
+  "artifact_sha256": "b9574f2243b52409f03584af18624babf968701ff3054fdc0f83ac0b698dc2df",
+  "initial_world_failure": "One expected mana balance was corrected from 82 to 83: Ensorcelled rounds the six-mana source to five mana. No payment or balance code changed.",
+  "limits": [
+    "The testing pack was not modified.",
+    "No new client presentation capture was performed: this change removes a server-side timer and keeps the previously verified crosshair/item cues.",
+    "Other chats continue editing the shared checkout; the source manifest pins the staged artifact."
+  ]
+}

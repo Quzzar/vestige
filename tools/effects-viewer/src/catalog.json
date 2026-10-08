@@ -17,10 +17,6 @@
       {
         "type": "mana",
         "amount": 72
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -42,10 +38,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -71,10 +63,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -101,10 +89,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -124,10 +108,6 @@
       {
         "type": "mana",
         "amount": 20
-      },
-      {
-        "type": "cooldown",
-        "ticks": 40
       }
     ]
   },
@@ -153,10 +133,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -182,10 +158,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -208,10 +180,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -237,10 +205,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -267,10 +231,6 @@
       {
         "type": "mana",
         "amount": 88
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -292,10 +252,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -321,10 +277,6 @@
       {
         "type": "mana",
         "amount": 15
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -351,10 +303,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -380,10 +328,6 @@
       {
         "type": "mana",
         "amount": 46
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -405,10 +349,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -434,10 +374,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -460,10 +396,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -485,10 +417,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -514,10 +442,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -543,10 +467,6 @@
       {
         "type": "mana",
         "amount": 32
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -569,10 +489,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -594,10 +510,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -619,10 +531,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -644,10 +552,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -674,10 +578,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -699,10 +599,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -725,10 +621,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -754,10 +646,6 @@
       {
         "type": "mana",
         "amount": 48
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -780,10 +668,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -805,10 +689,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -830,10 +710,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -856,10 +732,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -885,10 +757,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -914,10 +782,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -939,10 +803,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -968,10 +828,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -993,10 +849,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -1022,10 +874,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1047,10 +895,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 40
       }
     ]
   },
@@ -1072,10 +916,6 @@
       {
         "type": "mana",
         "amount": 14
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -1102,10 +942,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -1127,10 +963,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -1152,10 +984,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -1176,10 +1004,6 @@
       {
         "type": "mana",
         "amount": 14
-      },
-      {
-        "type": "cooldown",
-        "ticks": 40
       }
     ]
   },
@@ -1206,10 +1030,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1232,10 +1052,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 140
       }
     ]
   },
@@ -1257,10 +1073,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1286,10 +1098,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -1311,10 +1119,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -1341,10 +1145,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -1370,10 +1170,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1396,10 +1192,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1422,10 +1214,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1452,10 +1240,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 500
       }
     ]
   },
@@ -1481,10 +1265,6 @@
       {
         "type": "mana",
         "amount": 15
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1511,10 +1291,6 @@
       {
         "type": "mana",
         "amount": 48
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1537,10 +1313,6 @@
       {
         "type": "mana",
         "amount": 80
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -1566,10 +1338,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -1596,10 +1364,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -1626,10 +1390,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -1652,10 +1412,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1677,10 +1433,6 @@
       {
         "type": "mana",
         "amount": 14
-      },
-      {
-        "type": "cooldown",
-        "ticks": 50
       }
     ]
   },
@@ -1702,10 +1454,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -1726,10 +1474,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1755,10 +1499,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1784,10 +1524,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1813,10 +1549,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1842,10 +1574,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -1867,10 +1595,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 50
       }
     ]
   },
@@ -1897,10 +1621,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -1922,10 +1642,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -1948,10 +1664,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -1977,10 +1689,6 @@
       {
         "type": "mana",
         "amount": 64
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -2007,10 +1715,6 @@
       {
         "type": "mana",
         "amount": 34
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -2036,10 +1740,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -2068,10 +1768,6 @@
       {
         "type": "mana",
         "amount": 90
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -2093,10 +1789,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 30
       }
     ]
   },
@@ -2122,10 +1814,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -2151,10 +1839,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 140
       }
     ]
   },
@@ -2180,10 +1864,6 @@
       {
         "type": "mana",
         "amount": 32
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -2209,10 +1889,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -2238,10 +1914,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -2263,10 +1935,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -2293,10 +1961,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -2322,10 +1986,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -2348,10 +2008,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -2378,10 +2034,6 @@
       {
         "type": "mana",
         "amount": 62
-      },
-      {
-        "type": "cooldown",
-        "ticks": 280
       }
     ]
   },
@@ -2403,10 +2055,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 24
       }
     ]
   },
@@ -2428,10 +2076,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -2457,10 +2101,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -2487,10 +2127,6 @@
       {
         "type": "mana",
         "amount": 70
-      },
-      {
-        "type": "cooldown",
-        "ticks": 360
       }
     ]
   },
@@ -2512,10 +2148,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -2538,10 +2170,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -2567,10 +2195,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 220
       }
     ]
   },
@@ -2597,10 +2221,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -2626,10 +2246,6 @@
       {
         "type": "mana",
         "amount": 34
-      },
-      {
-        "type": "cooldown",
-        "ticks": 220
       }
     ]
   },
@@ -2655,10 +2271,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -2680,10 +2292,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -2710,10 +2318,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -2739,10 +2343,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -2768,10 +2368,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -2798,10 +2394,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -2823,10 +2415,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -2853,10 +2441,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -2883,10 +2467,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -2908,10 +2488,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -2934,10 +2510,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -2959,10 +2531,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -2989,10 +2557,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -3019,10 +2583,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -3048,10 +2608,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -3078,10 +2634,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -3104,10 +2656,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -3134,10 +2682,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -3163,10 +2707,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -3188,10 +2728,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -3217,10 +2753,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -3246,10 +2778,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -3275,10 +2803,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3304,10 +2828,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -3333,10 +2853,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 140
       }
     ]
   },
@@ -3363,10 +2879,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -3389,10 +2901,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -3418,10 +2926,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3448,10 +2952,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 140
       }
     ]
   },
@@ -3473,10 +2973,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -3503,10 +2999,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -3533,10 +3025,6 @@
       {
         "type": "mana",
         "amount": 20
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3558,10 +3046,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -3588,10 +3072,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -3613,10 +3093,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 30
       }
     ]
   },
@@ -3642,10 +3118,6 @@
       {
         "type": "mana",
         "amount": 10
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -3671,10 +3143,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 260
       }
     ]
   },
@@ -3700,10 +3168,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -3725,10 +3189,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 220
       }
     ]
   },
@@ -3750,10 +3210,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -3780,10 +3236,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -3805,10 +3257,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 30
       }
     ]
   },
@@ -3834,10 +3282,6 @@
       {
         "type": "mana",
         "amount": 20
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3864,10 +3308,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3894,10 +3334,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3919,10 +3355,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -3948,10 +3380,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -3977,10 +3405,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -4002,10 +3426,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 24
       }
     ]
   },
@@ -4032,10 +3452,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -4062,10 +3478,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 90
       }
     ]
   },
@@ -4091,10 +3503,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -4121,10 +3529,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -4146,10 +3550,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 30
       }
     ]
   },
@@ -4175,10 +3575,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -4204,10 +3600,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -4236,10 +3628,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -4266,10 +3654,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -4296,10 +3680,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -4321,10 +3701,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 40
       }
     ]
   },
@@ -4346,10 +3722,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -4375,10 +3747,6 @@
       {
         "type": "mana",
         "amount": 20
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -4401,10 +3769,6 @@
       {
         "type": "mana",
         "amount": 34
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -4431,10 +3795,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -4461,10 +3821,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -4486,10 +3842,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -4511,10 +3863,6 @@
       {
         "type": "mana",
         "amount": 6
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -4541,10 +3889,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -4572,10 +3916,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -4602,10 +3942,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -4632,10 +3968,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -4662,10 +3994,6 @@
       {
         "type": "mana",
         "amount": 18
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -4691,10 +4019,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -4717,10 +4041,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -4743,10 +4063,6 @@
       {
         "type": "mana",
         "amount": 22
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -4772,10 +4088,6 @@
       {
         "type": "mana",
         "amount": 32
-      },
-      {
-        "type": "cooldown",
-        "ticks": 500
       }
     ]
   },
@@ -4803,10 +4115,6 @@
       {
         "type": "mana",
         "amount": 60
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -4828,10 +4136,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 70
       }
     ]
   },
@@ -4853,10 +4157,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -4882,10 +4182,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -4908,10 +4204,6 @@
       {
         "type": "mana",
         "amount": 48
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -4938,10 +4230,6 @@
       {
         "type": "mana",
         "amount": 60
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -4968,10 +4256,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -4997,10 +4281,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -5022,10 +4302,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -5051,10 +4327,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 400
       }
     ]
   },
@@ -5080,10 +4352,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -5110,10 +4378,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -5135,10 +4399,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -5161,10 +4421,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -5191,10 +4447,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -5221,10 +4473,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 140
       }
     ]
   },
@@ -5246,10 +4494,6 @@
       {
         "type": "mana",
         "amount": 26
-      },
-      {
-        "type": "cooldown",
-        "ticks": 240
       }
     ]
   },
@@ -5275,10 +4519,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -5300,10 +4540,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -5325,10 +4561,6 @@
       {
         "type": "mana",
         "amount": 14
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -5354,10 +4586,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 180
       }
     ]
   },
@@ -5383,10 +4611,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -5408,10 +4632,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 300
       }
     ]
   },
@@ -5433,10 +4653,6 @@
       {
         "type": "mana",
         "amount": 88
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5463,10 +4679,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -5489,10 +4701,6 @@
       {
         "type": "mana",
         "amount": 16
-      },
-      {
-        "type": "cooldown",
-        "ticks": 100
       }
     ]
   },
@@ -5518,10 +4726,6 @@
       {
         "type": "mana",
         "amount": 24
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5548,10 +4752,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5578,10 +4778,6 @@
       {
         "type": "mana",
         "amount": 54
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5607,10 +4803,6 @@
       {
         "type": "mana",
         "amount": 40
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5635,10 +4827,6 @@
       {
         "type": "mana",
         "amount": 28
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5661,10 +4849,6 @@
       {
         "type": "mana",
         "amount": 44
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -5687,10 +4871,6 @@
       {
         "type": "mana",
         "amount": 42
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -5712,10 +4892,6 @@
       {
         "type": "mana",
         "amount": 15
-      },
-      {
-        "type": "cooldown",
-        "ticks": 80
       }
     ]
   },
@@ -5737,10 +4913,6 @@
       {
         "type": "mana",
         "amount": 12
-      },
-      {
-        "type": "cooldown",
-        "ticks": 60
       }
     ]
   },
@@ -5766,10 +4938,6 @@
       {
         "type": "mana",
         "amount": 84
-      },
-      {
-        "type": "cooldown",
-        "ticks": 600
       }
     ]
   },
@@ -5791,10 +4959,6 @@
       {
         "type": "mana",
         "amount": 8
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   },
@@ -5817,10 +4981,6 @@
       {
         "type": "mana",
         "amount": 38
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -5842,10 +5002,6 @@
       {
         "type": "mana",
         "amount": 48
-      },
-      {
-        "type": "cooldown",
-        "ticks": 200
       }
     ]
   },
@@ -5872,10 +5028,6 @@
       {
         "type": "mana",
         "amount": 36
-      },
-      {
-        "type": "cooldown",
-        "ticks": 160
       }
     ]
   },
@@ -5902,10 +5054,6 @@
       {
         "type": "mana",
         "amount": 30
-      },
-      {
-        "type": "cooldown",
-        "ticks": 120
       }
     ]
   },
@@ -5931,10 +5079,6 @@
       {
         "type": "mana",
         "amount": 3
-      },
-      {
-        "type": "cooldown",
-        "ticks": 20
       }
     ]
   }

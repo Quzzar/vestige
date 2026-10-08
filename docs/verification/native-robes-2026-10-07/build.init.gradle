@@ -1,0 +1,7 @@
+gradle.projectsLoaded {
+    rootProject.layout.buildDirectory.set(new File('/private/tmp/vestige-robes-build-2026-10-07'))
+}
+gradle.projectsEvaluated {
+    rootProject.neoForge.runs.gameTestServer.gameDirectory.set(rootProject.layout.projectDirectory.dir('run/robes-final-2026-10-07'))
+    rootProject.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+}

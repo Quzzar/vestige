@@ -31,6 +31,8 @@ Use a fresh output directory for every pass. Omit `capture_spells` to select the
 
 `--complete` requires an actual cast for every spell and rejects incomplete collections. The published 214-spell gallery passes this check. Each recording demonstrates one primary-plan encounter; it does not cover every optional mode or gameplay situation. Current counts and executed results are in [development status](development-status.md).
 
+**Cooldown-removal revision, October 8:** the operator recordings bypass cooldowns. Their original metadata/video hashes remain intact, and [214 exact recorded definitions](../tools/recorded-spell-definitions/README.md) preserve the bytes named by those hashes. Verification accepts current definitions only when they are identical to that evidence with explicit spell/mode cooldown cost entries removed. Effects, visuals, preparation, mana and all other changes still reject. This proves compatibility with the earlier cooldown removal; it does not claim a fresh capture or survival payment verification.
+
 ## Cast in Minecraft
 
 ```text

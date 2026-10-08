@@ -24,13 +24,13 @@ All modifications use the native trait, composed-effect and typed-cost machinery
 
 ## Accepted casting limits
 
-The owner selected a **60-second cooldown** and an initial **20 maximum durability** for a wand. Twenty is the starting balance value, subject to later tuning. This replaces the briefly considered five-percent random break chance; wand wear is durability-based.
+**October 7, 2026:** the owner removed the separate **60-second wand recovery** after removing ordinary spell cooldowns. Wands are limited by the bound spell's composed resources, preparation/channel time and deterministic durability. The initial twenty-durability foundation remains subject to component adjustments and later playtest tuning; it replaced the briefly considered five-percent random break chance.
 
 Component combinations adjust durability alongside trait changes, compatible effects and costs. The initial profiles use eighteen through twenty-four base durability, with Callous adding eight. These are implemented starting values, not final encounter balance. Smoldering spends two durability per committed cast; other current cores spend one.
 
 Wear commits with successful initial payment, before effects or a volatile forfeit. Canceled preparation and failed payment spend neither resources nor durability. A final use with less remaining durability than its wear price still casts and breaks the held wand; no random break roll is used. Recasts retain the paid cast and spend nothing again.
 
-The additional sixty-second limit is per player and bound spell, shared across wand copies, bases and threads. The spell's ordinary recovery remains a separate restriction, so any longer native recovery still governs. Scrolls retain their normal native recovery. Both timers reset on reload/restart.
+Wands, scrolls and staffs have no added equipment recovery. Once a cast is complete, the same wand or another copy can prepare again immediately if its resources and durability allow. Each new cast pays and wears its own reserved source; an already-paid recast remains part of its original session. Explicit data-pack spell cooldown costs remain supported, but no shipped spell has one.
 
 ## Native wand implementation
 
@@ -77,9 +77,9 @@ Each core should give a distinct reason to choose its material. The table record
 
 **Accepted October 6:** consume **1 String + 1 Amethyst Shard + 1 Honeycomb** to produce **1 magical thread**. String supplies the fibres, Amethyst is the magical focusing ingredient and Honeycomb binds/waxes the fibres. All five outputs use these same offerings and quantities; the installed material in the String offering's own Plinth selects the thread type. This supersedes the earlier String/Honeycomb/Glow Ink Sac proposal. These are Vestige recipe roles, not universal upstream Iron material properties.
 
-Use the four inner Plinths around an empty Spellstone, with one offering per Plinth and one offering surface empty. Acceptance is shapeless: the String may occupy any of the four seats as long as that seat has the required installed material. The displayed layout is an example, not a fixed compass arrangement. No reference scroll, Paper or outer layer is required. Four Plinths remain required even though only three hold offerings. Consume the three offerings once, retain all socket materials, and spawn the ordinary dropped output above the Spellstone through the existing atomic ritual lifecycle.
+Use the ordered inner-layer pattern **String → Amethyst Shard → Honeycomb → empty** around an empty Spellstone. Whole quarter-turns match; arbitrary permutations and distinct reflections reject. The displayed pattern records relative positions without an absolute compass direction. Outer nodes on a larger table are inactive. The String keeps its installed selector when the pattern rotates. No reference scroll, Paper or outer layer is required. Four Plinths remain required even though only three hold offerings. Consume the three offerings once, retain all socket materials, and spawn the ordinary dropped output above the Spellstone through the existing atomic ritual lifecycle.
 
-Only the socket paired with the String offering selects its type. Other inner sockets and the complete outer layer must not select another core or add unspecified traits. A missing or unsupported String selector produces no magical-thread output. Craft ordinary thread items without geometry-derived shaping; exact core effects belong to the later equipment recipe.
+Only the socket paired with the String offering selects its type. Other sockets must not select another core or add unspecified traits. A missing or unsupported String selector produces no magical-thread output. Craft ordinary thread items without geometry-derived shaping; exact core effects belong to the later equipment recipe.
 
 Core selection belongs to this component recipe. It must not reassign ordinary spell recipe pairings: String/Copper currently selects Forked while shaping a spell, and that route remains intact. The selected five blocks require new component-recipe mappings, with separately authored wand contributions that can reuse compatible existing effect/cost behavior.
 

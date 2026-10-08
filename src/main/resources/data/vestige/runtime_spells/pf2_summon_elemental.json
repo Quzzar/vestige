@@ -36,10 +36,6 @@
     {
       "type": "mana",
       "amount": 38
-    },
-    {
-      "type": "cooldown",
-      "ticks": 300
     }
   ],
   "triggers": [
@@ -151,10 +147,6 @@
         {
           "type": "mana",
           "amount": 38
-        },
-        {
-          "type": "cooldown",
-          "ticks": 300
         }
       ],
       "effects": [
@@ -260,10 +252,6 @@
         {
           "type": "mana",
           "amount": 38
-        },
-        {
-          "type": "cooldown",
-          "ticks": 300
         }
       ],
       "effects": [
@@ -369,10 +357,6 @@
         {
           "type": "mana",
           "amount": 38
-        },
-        {
-          "type": "cooldown",
-          "ticks": 300
         }
       ],
       "effects": [

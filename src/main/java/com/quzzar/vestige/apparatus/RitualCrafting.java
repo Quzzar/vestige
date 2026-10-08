@@ -31,7 +31,7 @@ import java.util.Map;
 /** Server-owned inspection, discovery and atomic ritual commitment, with bounded client-only movement. */
 @EventBusSubscriber(modid = VestigeMainMod.MOD_ID)
 public final class RitualCrafting {
-    public enum Outcome { INVALID, HINTS, WRONG, EXPLOSION_PENDING, CRAFTING, DISCOVERING, ATTUNING, BUSY }
+    public enum Outcome { INVALID, HINTS, WRONG, EXPLOSION_PENDING, CRAFTING, DISCOVERING, ATTUNING, BUSY, NEEDS_PLINTHS }
     private static RitualCatalog catalog = new RitualCatalog();
     private static final Map<MinecraftServer,List<Pending>> PENDING = new IdentityHashMap<>();
     private RitualCrafting() { }
@@ -66,6 +66,53 @@ public final class RitualCrafting {
         List<Layout> candidates=LeylineStructure.find(center,recipe==null ? 4 : recipe.circle());
         if (recipe==null) {
             var advanced=LeylineStructure.find(center,8);
+            // A complete larger table supplies all eight seats to shapeless operations.
+            var shapeless=advanced.isEmpty() ? candidates : advanced;
+            var repairs=shapeless.stream().filter(l -> FluxedFlintRecipe.repair(l.items()).isPresent()).toList();
+            if (!repairs.isEmpty()) {
+                if (repairs.size()!=1) return Outcome.INVALID;
+                var selected=repairs.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var repair=FluxedFlintRecipe.repair(selected.items()).orElseThrow();
+                return begin(selected,player,repair.output(),repair.used(),0xf4e5ff,RitualInputs.capture(selected),
+                        java.util.Optional.empty(),Map.of(repair.catalystSeat(),repair.remainingCatalyst()),random,Outcome.CRAFTING);
+            }
+            var flints=candidates.stream().filter(l -> FluxedFlintRecipe.create(l.items()).isPresent()).toList();
+            if (!flints.isEmpty()) {
+                if (flints.size()!=1) return Outcome.INVALID;
+                var selected=flints.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                return begin(selected,player,FluxedFlintRecipe.create(selected.items()).orElseThrow(),
+                        java.util.stream.IntStream.range(0,8).filter(i -> !selected.items().get(i).isEmpty()).boxed().toList(),
+                        0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+            }
+            var staffLayouts=new ArrayList<>(candidates);staffLayouts.addAll(advanced);
+            var staffs=staffLayouts.stream().filter(l -> StaffRecipe.match(l.items(),l.geometry().slots()).isPresent()).toList();
+            if(!staffs.isEmpty()) {
+                if(staffs.size()!=1) return Outcome.INVALID;
+                var selected=staffs.getFirst();
+                if(selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var output=StaffRecipe.result(selected.items(),selected.geometry().slots());if(output.isEmpty()) return Outcome.INVALID;
+                return begin(selected,player,output.get(),StaffRecipe.match(selected.items(),selected.geometry().slots()).orElseThrow().occupied(),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+            }
+            var boots=advanced.stream().filter(l -> com.quzzar.vestige.equipment.WayfarerRecipe.matches(l.items())).toList();
+            if (!boots.isEmpty()) {
+                if (boots.size()!=1) return Outcome.INVALID;
+                var selected=boots.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var output=com.quzzar.vestige.equipment.WayfarerRecipe.result(selected.items(), selected.stands().stream().map(OfferingBlockEntity::materialItem).toList());
+                if (output.isEmpty()) return Outcome.INVALID;
+                return begin(selected,player,output.get(),java.util.stream.IntStream.range(0,8).boxed().toList(),
+                        0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+            }
+            var robes=advanced.stream().filter(l -> com.quzzar.vestige.equipment.MagicArmorRecipe.result(l.items()).isPresent()).toList();
+            if (!robes.isEmpty()) {
+                if (robes.size()!=1) return Outcome.INVALID;
+                var selected=robes.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                return begin(selected,player,com.quzzar.vestige.equipment.MagicArmorRecipe.result(selected.items()).orElseThrow(),
+                        java.util.stream.IntStream.range(0,8).boxed().toList(),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+            }
             var wands=advanced.stream().filter(l -> WandRecipe.match(l.items()).isPresent()).toList();
             if (!wands.isEmpty()) {
                 if (wands.size()!=1) return Outcome.INVALID;
@@ -73,8 +120,7 @@ public final class RitualCrafting {
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
                 var output=WandRecipe.result(selected.items());
                 if (output.isEmpty()) return Outcome.INVALID;
-                begin(selected,player,output.get(),WandRecipe.match(selected.items()).orElseThrow().occupied(),false,0xf4e5ff,RitualInputs.capture(selected));
-                return Outcome.CRAFTING;
+                return begin(selected,player,output.get(),WandRecipe.match(selected.items()).orElseThrow().occupied(),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
             }
             var threads=candidates.stream().filter(l -> MagicalThreadRecipe.matches(l.items())).toList();
             if (!threads.isEmpty()) {
@@ -85,8 +131,16 @@ public final class RitualCrafting {
                 var output=MagicalThreadRecipe.result(inputs);
                 if (output.isEmpty()) return Outcome.INVALID;
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
-                begin(selected,player,output.get(),occupied,false,0xf4e5ff,inputs);
-                return Outcome.CRAFTING;
+                return begin(selected,player,output.get(),occupied,0xf4e5ff,inputs,random,Outcome.CRAFTING);
+            }
+            var shells=candidates.stream().filter(l -> WhisperingShellRecipe.result(l.items()).isPresent()).toList();
+            if (!shells.isEmpty()) {
+                if (shells.size()!=1) return Outcome.INVALID;
+                var selected=shells.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var inputs=RitualInputs.capture(selected);
+                var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
+                return begin(selected,player,WhisperingShellRecipe.result(selected.items()).orElseThrow(),occupied,0x81ddc3,inputs,random,Outcome.CRAFTING);
             }
             var eyes=candidates.stream().filter(l -> HomeboundEyeRecipe.matches(l.items())).toList();
             if (!eyes.isEmpty()) {
@@ -97,8 +151,7 @@ public final class RitualCrafting {
                 if (output.isEmpty()) return Outcome.INVALID;
                 var inputs=RitualInputs.capture(selected);
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
-                begin(selected,player,output.get(),occupied,false,0xac73e8,inputs);
-                return Outcome.CRAFTING;
+                return begin(selected,player,output.get(),occupied,0xac73e8,inputs,random,Outcome.CRAFTING);
             }
             var stones=candidates.stream().filter(l -> com.quzzar.vestige.travel.StandingStoneRecipe.result(l.items()).isPresent()).toList();
             if (!stones.isEmpty()) {
@@ -107,8 +160,7 @@ public final class RitualCrafting {
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
                 var inputs=RitualInputs.capture(selected);
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
-                begin(selected,player,com.quzzar.vestige.travel.StandingStoneRecipe.result(selected.items()).orElseThrow(),occupied,false,0x83d9ef,inputs);
-                return Outcome.CRAFTING;
+                return begin(selected,player,com.quzzar.vestige.travel.StandingStoneRecipe.result(selected.items()).orElseThrow(),occupied,0x83d9ef,inputs,random,Outcome.CRAFTING);
             }
             var attunements=advanced.stream().filter(l -> attunementRecipe(l.items())).toList();
             if (!attunements.isEmpty()) {
@@ -117,12 +169,9 @@ public final class RitualCrafting {
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
                 var inputs=RitualInputs.capture(selected);
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
-                begin(selected,player,AttunementShardItem.create(inputs),occupied,false,0x927be8,inputs);
-                return Outcome.ATTUNING;
+                return begin(selected,player,AttunementShardItem.create(inputs),occupied,0x927be8,inputs,random,Outcome.ATTUNING);
             }
-            List<Layout> discovery=advanced.stream().filter(l -> java.util.stream.IntStream.of(1,3,5,7).anyMatch(i -> !l.items().get(i).isEmpty())).toList();
-            if (discovery.isEmpty()) discovery=candidates;
-            discovery=discovery.stream().filter(l -> l.items().stream().filter(i -> !i.isEmpty()).count()>=4
+            var discovery=shapeless.stream().filter(l -> l.items().stream().filter(i -> !i.isEmpty()).count()>=4
                     && l.items().stream().filter(i -> !i.isEmpty()).allMatch(i -> ScrollItems.fragment(i).isPresent())).toList();
             if (!discovery.isEmpty()) {
                 if (discovery.size()!=1) return Outcome.INVALID;
@@ -133,7 +182,7 @@ public final class RitualCrafting {
                 var pool=FragmentDiscovery.pool(NativeMagic.spells().spells().values(),fragments);
                 if (pool.isEmpty()) return Outcome.INVALID;
                 var discovered=FragmentDiscovery.pick(pool,random.getAsDouble()).orElseThrow();
-                begin(layout,player,ScrollItems.scroll(discovered.id()),occupied,false,0xac73e8); return Outcome.DISCOVERING;
+                return begin(layout,player,ScrollItems.scroll(discovered.id()),occupied,0xac73e8,random,Outcome.DISCOVERING);
             }
             List<Match> matches=new ArrayList<>();
             var all=new ArrayList<>(candidates); all.addAll(advanced);
@@ -146,11 +195,23 @@ public final class RitualCrafting {
             if (matches.size()==1) {
                 var match=matches.getFirst();
                 if (match.layout.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
-                return craft(player,match.layout,match.recipe,match.evaluation);
+                return craft(player,match.layout,match.recipe,match.evaluation,random);
             }
             return Outcome.INVALID;
         }
-        if (candidates.isEmpty()) return Outcome.INVALID;
+        if (candidates.isEmpty()) {
+            if(recipe.circle()==8) {
+                var inner=LeylineStructure.find(center,4);
+                if(inner.size()==1) {
+                    var layout=inner.getFirst();
+                    if(layout.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                    RitualPresentation.missingPlinths(layout);
+                    layout.level().playSound(null,center.getBlockPos(),SoundEvents.AMETHYST_BLOCK_CHIME,SoundSource.BLOCKS,.5f,.65f);
+                    return Outcome.NEEDS_PLINTHS;
+                }
+            }
+            return Outcome.INVALID;
+        }
         RitualRecipe selectedRecipe=recipe;
         var correct=candidates.stream().filter(l -> selectedRecipe.evaluate(l.items()).correct()).toList();
         if (correct.size()>1 || correct.isEmpty() && candidates.size()>1) return Outcome.INVALID;
@@ -158,7 +219,7 @@ public final class RitualCrafting {
         if (layout.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
         List<ItemStack> items=layout.items();
         var evaluation=recipe.evaluate(items);
-        if (evaluation.correct()) return craft(player,layout,recipe,evaluation);
+        if (evaluation.correct()) return craft(player,layout,recipe,evaluation,random);
         for (int i=0;i<8;i++) {
             OfferingBlockEntity stand=layout.stands().get(i); if (stand==null) continue;
             var expected=evaluation.expected().get(i);
@@ -169,13 +230,16 @@ public final class RitualCrafting {
         layout.level().playSound(null,center.getBlockPos(),SoundEvents.AMETHYST_BLOCK_CHIME,SoundSource.BLOCKS,.7f,evaluation.complete() ? .65f : 1.1f);
         if (!evaluation.complete()) return Outcome.HINTS;
         double chance=ForfeitPolicy.DEFAULT.chance(spell.traits().resolve(scroll.modifiers()),SpellKnowledge.identified(player,spell.id()));
-        if (chance>0 && random.getAsDouble()<chance) {
-            List<Integer> all=new ArrayList<>(); for (int i=0;i<8;i++) if (layout.stands().get(i)!=null) all.add(i);
-            begin(layout,player,ItemStack.EMPTY,all,true,0xe55669); return Outcome.EXPLOSION_PENDING;
+        var inputs=RitualInputs.capture(layout);
+        var all=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
+        var culprit=RitualVolatility.culprit(reference,inputs,all,chance,random);
+        if (culprit.isPresent()) {
+            queue(layout,player,ItemStack.EMPTY,all,true,0xe55669,inputs,java.util.Optional.empty(),Map.of(),culprit.getAsInt());
+            return Outcome.EXPLOSION_PENDING;
         }
         return Outcome.WRONG;
     }
-    private static Outcome craft(Player player, Layout layout, RitualRecipe recipe, RitualRecipe.Evaluation evaluation) {
+    private static Outcome craft(Player player, Layout layout, RitualRecipe recipe, RitualRecipe.Evaluation evaluation,java.util.function.DoubleSupplier random) {
         var spell=NativeMagic.spells().spells().get(recipe.spell());
         if (spell==null) return Outcome.INVALID;
         var used=evaluation.expected().keySet().stream().sorted().toList();
@@ -187,7 +251,7 @@ public final class RitualCrafting {
             Spellshaping.compile(spell,augments,shaping.traits(),new com.quzzar.vestige.magic.runtime.CastShaping(shaping.cost(),true));
         } catch(IllegalArgumentException invalid){return Outcome.INVALID;}
         var output=ScrollItems.shapedScroll(spell.id(),shaping,augments);
-        begin(layout,player,output,used,false,recipe.color(),inputs,java.util.Optional.of(recipe.spell())); return Outcome.CRAFTING;
+        return begin(layout,player,output,used,recipe.color(),inputs,java.util.Optional.of(recipe.spell()),random,Outcome.CRAFTING);
     }
     private static boolean attunementRecipe(List<ItemStack> items) {
         if(items.size()!=8)return false;
@@ -195,14 +259,33 @@ public final class RitualCrafting {
         for(var item:items)if(!item.isEmpty() && !required.remove(net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(item.getItem())))return false;
         return required.isEmpty();
     }
-    private static void begin(Layout layout, Player player, ItemStack output,List<Integer> used,boolean explosion,int color) {
-        begin(layout,player,output,used,explosion,color,RitualInputs.capture(layout));
+    private static Outcome begin(Layout layout,Player player,ItemStack output,List<Integer> used,int color,java.util.function.DoubleSupplier random,Outcome success) {
+        return begin(layout,player,output,used,color,RitualInputs.capture(layout),random,success);
     }
-    private static void begin(Layout layout,Player player,ItemStack output,List<Integer> used,boolean explosion,int color,RitualInputs inputs) {
-        begin(layout,player,output,used,explosion,color,inputs,java.util.Optional.empty());
+    private static Outcome begin(Layout layout,Player player,ItemStack output,List<Integer> used,int color,RitualInputs inputs,java.util.function.DoubleSupplier random,Outcome success) {
+        return begin(layout,player,output,used,color,inputs,java.util.Optional.empty(),Map.of(),random,success);
     }
-    private static void begin(Layout layout,Player player,ItemStack output,List<Integer> used,boolean explosion,int color,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell) {
-        Pending pending=new Pending(layout,player,output,used,explosion,inputs,craftedSpell); PENDING.computeIfAbsent(layout.level().getServer(),server -> new ArrayList<>()).add(pending);
+    private static Outcome begin(Layout layout,Player player,ItemStack output,List<Integer> used,int color,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell,java.util.function.DoubleSupplier random,Outcome success) {
+        return begin(layout,player,output,used,color,inputs,craftedSpell,Map.of(),random,success);
+    }
+    private static Outcome begin(Layout layout,Player player,ItemStack output,List<Integer> used,int color,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell,Map<Integer,ItemStack> retained,java.util.function.DoubleSupplier random,Outcome success) {
+        var reference=layout.center().displayedItem();
+        var culprit=RitualVolatility.culprit(reference,inputs,used,ForfeitPolicy.DEFAULT.chance(RitualVolatility.traits(reference),true),random);
+        if (culprit.isPresent()) {
+            queue(layout,player,ItemStack.EMPTY,used,true,0xe55669,inputs,java.util.Optional.empty(),Map.of(),culprit.getAsInt());
+            return Outcome.EXPLOSION_PENDING;
+        }
+        // Compile all remainders before output callbacks, then revalidate the full captured arrangement.
+        var remainders=new java.util.HashMap<Integer,ItemStack>();
+        for (int seat:used) {
+            var ingredient=inputs.nodes().stream().filter(n -> n.seat()==seat).findFirst().orElseThrow().offering();
+            remainders.put(seat,retained.containsKey(seat) ? retained.get(seat).copy() : ingredient.getCraftingRemainingItem());
+        }
+        queue(layout,player,output,used,false,color,inputs,craftedSpell,remainders,RitualVolatility.CENTER);
+        return success;
+    }
+    private static void queue(Layout layout,Player player,ItemStack output,List<Integer> used,boolean explosion,int color,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell,Map<Integer,ItemStack> remainders,int culprit) {
+        Pending pending=new Pending(layout,player,output,used,explosion,inputs,craftedSpell,remainders,culprit); PENDING.computeIfAbsent(layout.level().getServer(),server -> new ArrayList<>()).add(pending);
         for (var block:layout.blocks()) {
             block.lock(explosion ? 32 : 60);
             if (!explosion) block.feedback(RitualRecipe.Feedback.SUCCESS,ItemStack.EMPTY,color,60);
@@ -230,13 +313,15 @@ public final class RitualCrafting {
                 }
                 // Every snapshot is revalidated before any consumption. All mutations run on this server thread.
                 pending.used.forEach(i -> {
-                    ItemStack ingredient=pending.layout.stands().get(i).remove();
+                    if (pending.explosion && i==pending.culprit) return;
+                    pending.layout.stands().get(i).remove();
                     if (!pending.explosion) {
-                        ItemStack remainder=ingredient.getCraftingRemainingItem();
+                        ItemStack remainder=pending.remainders.get(i);
                         if (!remainder.isEmpty()) pending.layout.stands().get(i).insert(remainder);
                     }
                 });
                 if (pending.explosion) {
+                    if (pending.culprit!=RitualVolatility.CENTER) pending.layout.center().remove();
                     blast(pending.layout,pending.player);
                 } else {
                     BlockPos center=pending.layout.center().getBlockPos();
@@ -289,15 +374,17 @@ public final class RitualCrafting {
         final Layout layout; final Player player; final ItemStack output; final List<Integer> used; final boolean explosion;
         final RitualInputs inputs; final ItemStack reference; final long start;
         final java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell;
+        final Map<Integer,ItemStack> remainders; final int culprit;
         boolean committed;
-        Pending(Layout layout,Player player,ItemStack output,List<Integer> used,boolean explosion,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell) {
+        Pending(Layout layout,Player player,ItemStack output,List<Integer> used,boolean explosion,RitualInputs inputs,java.util.Optional<net.minecraft.resources.ResourceLocation> craftedSpell,Map<Integer,ItemStack> remainders,int culprit) {
+            this.remainders=remainders.entrySet().stream().collect(java.util.stream.Collectors.toUnmodifiableMap(Map.Entry::getKey,e -> e.getValue().copy())); this.culprit=culprit;
             this.craftedSpell=craftedSpell;
             this.layout=layout; this.player=player; this.output=output.copy(); this.used=List.copyOf(used); this.explosion=explosion;
             this.inputs=inputs; reference=layout.center().displayedItem(); start=layout.level().getGameTime();
         }
         boolean valid() {
             for (var block:layout.blocks()) if (!layout.level().hasChunkAt(block.getBlockPos()) || layout.level().getBlockEntity(block.getBlockPos())!=block) return false;
-            if (!ItemStack.matches(reference,layout.center().displayedItem())) return false;
+            if (!ItemStack.matches(committed && explosion && culprit!=RitualVolatility.CENTER ? ItemStack.EMPTY : reference,layout.center().displayedItem())) return false;
             if (!committed) {
                 if (!layout.center().resultItem().isEmpty()) return false;
                 if (!inputs.matches(layout)) return false;

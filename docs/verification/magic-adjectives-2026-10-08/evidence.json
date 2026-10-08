@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-08",
+  "scope": "Shared naming only; boots gameplay and worn art are not implemented by this pass",
+  "java": "21.0.12.1",
+  "checks": [
+    "test",
+    "build",
+    "verifyKithkynCompatibility",
+    "author_magic_adjectives.py --check",
+    "author_spellshaping.py --check"
+  ],
+  "unit_totals": {
+    "tests": 195,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": 44,
+  "boot_name_sets": 16,
+  "catalog_source_entries": 75,
+  "display_aliases": 14,
+  "jar": "/private/tmp/vestige-adjective-catalog-build/libs/vestige-0.1.0.jar",
+  "jar_sha256": "bfbbdc61b3cfd29912bb1c4e76c1dd72b046a5ed568078334a55d7783637e218",
+  "sources_jar_sha256": "0a591f886f642778088a8b01212e1c99812ca90076b33125cf8ca2233757268f",
+  "source_hashes": {
+    "src/main/java/com/quzzar/vestige/magic/presentation/MagicAdjectives.java": "f824b7e5aaced8cedbe76ef31be008dcdb60804262ca05e51239609874d552f3",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellScrollItem.java": "c41580e7b2138e75d3393026304cf313deed90db43039503dde59b29b2779dc5",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellWandItem.java": "359ae883c7508a71c8f6cdd5436ee3af8237112a6163f0e9d687f062787092ce",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellStaffItem.java": "29be38790782082a5d42ab662c40b1e90e6623a97cac8d7bd710c7483f29f7bc",
+    "src/main/resources/data/vestige/magic_adjectives.json": "924deed32328ac1548c641960299340bf554e9804294f51bf00fa404b8b4aedb",
+    "tools/author_magic_adjectives.py": "953aa23a8a98ee22c3220a3f14d0ac32e2d04a6c9097f298ea77651903ccda64",
+    "tools/magic-adjective-policy.json": "4fb5ac33df0c2aceb0faa6b57161dce57be65b7c6bec2226085c5b1c45f72b19",
+    "src/test/java/com/quzzar/vestige/magic/presentation/MagicAdjectivesTest.java": "bdbb031555e24e50081108768a8582035e5c93f41aeb8f365a22309a019729b2"
+  },
+  "packaged_class_hashes": {
+    "com/quzzar/vestige/magic/presentation/MagicAdjectives$Adjustment.class": "cb7413084514e4e4d480a5e68626e4cca1cb06f58787dd1f06b3d389efb13d3c",
+    "com/quzzar/vestige/magic/presentation/MagicAdjectives$Catalog.class": "5bb4224dafb1ff54cddadbe2310ae663fc58f8a3e435f9b211fb72c90e13f4cf",
+    "com/quzzar/vestige/magic/presentation/MagicAdjectives$Combination.class": "35edb178a9ec0b3f3b9be9d0580a1cab370a4e528cde2b2fb8746f1e0ad21a24",
+    "com/quzzar/vestige/magic/presentation/MagicAdjectives.class": "525d31a97caa55c0cd7b9dc89afb8914d6088c70e297906351da0baeff2f8d73",
+    "com/quzzar/vestige/magic/presentation/MagicAdjectives$Term.class": "09d9a6419b092c9285e7d093b0f97ace2d1a50d3a6719344bf5a6c6132a3db32",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class": "582013f77f1eb04b1602534b9b17b562f76a63ecd3e4f8e34f9581703a0debaa",
+    "com/quzzar/vestige/apparatus/SpellWandItem.class": "d56e163011950496c77672feddebf5f0e94e8c3f94b82756ad53da8dee15fa3d",
+    "com/quzzar/vestige/apparatus/SpellStaffItem.class": "145c6677948e266a654ebc6c22d102de20e4096c366188f09dd776a169cb3dc6"
+  },
+  "source_jar_matches_current_naming_java": true,
+  "packaged_resource_matches_current_catalog": true,
+  "packaged_classes_match_compiled_classes": true,
+  "new_world_or_client_verification": false,
+  "installed_or_published": false
+}

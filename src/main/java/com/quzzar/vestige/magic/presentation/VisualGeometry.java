@@ -8,6 +8,12 @@ import java.util.Random;
 /** Deterministic procedural paths, shared by rendering and geometry verification. */
 public final class VisualGeometry {
     private VisualGeometry() { }
+    /** One outward reach followed by a quicker return, with no residual radius at expiry. */
+    public static double pulseRadius(float progress) {
+        double p=Math.clamp(progress,0,1);
+        double reach=p<.65 ? p/.65 : (1-p)/.35;
+        return reach*reach*(3-2*reach);
+    }
     public static List<Vec3> arc(Vec3 start, Vec3 end, long seed) {
         Vec3 delta = end.subtract(start);
         double length = delta.length();

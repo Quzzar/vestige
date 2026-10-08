@@ -1,0 +1,43 @@
+{
+  "approved": "October 6, 2026",
+  "ownerInstruction": "Centered pearl Eye A and deep coil Shell B are locked in.",
+  "selections": [
+    {
+      "item": "homebound_eye",
+      "variant": "eye_a_centered_pearl",
+      "selection": "Eye A \u00b7 Centered pearl",
+      "source": "approved/homebound_eye.png",
+      "sha256": "716aec5a00b5dbb5dce5305df963921dc7b49a4db8baceb6937ae43f8618b710",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "solidBounds": [
+        317,
+        392,
+        940,
+        1053
+      ],
+      "approvedMenu": "../item-textures-native-v5/captures/eye-a.png"
+    },
+    {
+      "item": "whispering_shell",
+      "variant": "shell_b_deep_coil",
+      "selection": "Shell B \u00b7 Deep coil",
+      "source": "approved/whispering_shell.png",
+      "sha256": "1e9a555a5d1ce097c289e0ff67a21d44bc6a1896784a0798e4f6a851e50f2da3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "solidBounds": [
+        269,
+        286,
+        994,
+        999
+      ],
+      "approvedMenu": "../item-textures-native-v5/captures/shell-b.png"
+    }
+  ],
+  "preservation": "Artwork pixels and original alpha stay unchanged. Production PNGs only add transparent padding to a power-of-two atlas canvas; no resizing, palette edits or redrawing."
+}

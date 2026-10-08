@@ -3,9 +3,9 @@
   "category": "misc",
   "group": "vestige_plinth",
   "pattern": [
-    "SBS",
+    "SSS",
     " B ",
-    "SBS"
+    "SSS"
   ],
   "key": {
     "B": {
@@ -18,5 +18,14 @@
   "result": {
     "id": "vestige:plinth",
     "count": 2
-  }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "supplementaries"
+      }
+    }
+  ]
 }

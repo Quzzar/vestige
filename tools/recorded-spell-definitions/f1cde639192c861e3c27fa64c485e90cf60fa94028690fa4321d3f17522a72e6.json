@@ -1,0 +1,177 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:raise_dead",
+    "school": "irons_spellbooks:blood",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Raise Dead",
+    "cast_type": "long",
+    "cooldown_ticks": 3000
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:death": 4,
+    "vestige:necromancy": 4,
+    "vestige:conjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 30
+    },
+    {
+      "type": "mana",
+      "amount": 60
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 2,
+          "health": 16,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:zombie",
+          "weapon": "minecraft:iron_sword",
+          "head": "minecraft:leather_helmet"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "sigil",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": -0.75,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "tendrils",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": 0.48750000000000004,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 1,
+          "health": 12,
+          "attack_damage": 2
+        },
+        "identifiers": {
+          "entity": "minecraft:skeleton",
+          "weapon": "minecraft:bow",
+          "head": "minecraft:leather_helmet"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "sigil",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": -0.75,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "tendrils",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": 0.48750000000000004,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "await_recast",
+      "timeout": 600
+    },
+    {
+      "type": "dismiss_manifestations"
+    }
+  ]
+}

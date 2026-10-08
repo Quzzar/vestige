@@ -1,0 +1,15 @@
+# Accepted subtle charging zoom · October 7, 2026
+
+**Owner locked the reviewed 3% result on October 8, 2026.** Verification below records the unchanged October 7 implementation and captures.
+
+The owner selected zoom instead of the expanding crosshair edge, then requested a much smaller amount. Production now narrows first-person FOV by at most 3% over the exact held source's composed preparation time. Cubic progress and Minecraft's native camera interpolation ease the charge and return. The source retains its straight draw-back; the native crosshair is unchanged. The obsolete edge renderer and GUI layer have been removed.
+
+The FOV Effects setting scales the cue and zero disables zoom. Exact reserved-source matching, local player, first person, alive/non-spectator state and a closed menu gate it. Other FOV modifiers compose multiplicatively. Runtime costs, timing, automatic release, mana shading, resources and wear are unchanged. The inspection-only FOV recorder lives inside the opt-in native capture harness.
+
+**Verified:** production build, Kithkyn compatibility and all 179 unit tests passed with zero failures/errors/skips. Eleven integrated-server native cast/cancel checks passed across 306 framebuffer captures: scroll, offhand, wand, left-handed staff, cancellation, two display/GUI sizes, snow/night, FOV Effects zero and third person. Normal full charges narrow the resting 70-degree camera to approximately 67.92–67.96 degrees and return within 0.001 degrees. Cancellation retains 100 mana and all four scrolls. FOV Effects zero and third person remain at 70 throughout. The jar contains the new zoom and excludes the obsolete edge renderer/GUI registration. [Measured values and source/artifact hashes](verification.json), [all capture metadata](capture.json), source files and the compressed build/client log retain the evidence.
+
+**Actually inspected:** native idle/charged apparatus and snow frames, wand and left-handed staff frames, and a decoded frame of the new clip. [Native footage and unmodified stills](../../art/spell-preparation-subtle-zoom/README.md) show the accepted smaller amount. The clip uses captured timestamps, an idle leader and final pause; game frames are downscaled exactly one half with nearest-neighbor sampling, and titles remain outside gameplay. No camera movement or UI is synthesized.
+
+Verification ran against `/private/tmp/vestige-subtle-zoom-20261007-source`, a frozen copy of the active shared checkout. The built jar is staged at `build/subtle-zoom-review/libs/vestige-0.1.0.jar`; no testing-pack installation, commit or publication occurred. Raw frames remain at `build/subtle-zoom-native`. The broad GameTest suite was not repeated for this presentation change; the capture's eleven checks ran actual casting/payment/cancellation in the native integrated server. Moving combat, aiming and long-session feel remain playtest work.
+
+The earlier [8% comparison](../spell-preparation-zoom-trial-2026-10-07/README.md) is historical review evidence. The [accepted design](../../design/spell-preparation.md) records the 3% direction.

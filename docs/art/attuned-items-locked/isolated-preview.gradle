@@ -1,0 +1,13 @@
+// Review-only sources/assets; excluded from ordinary builds.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/attuned-items-locked-build'))
+        project.afterEvaluate {
+            project.sourceSets.main.java.srcDir(project.file('docs/art/attuned-items-locked/preview-source'))
+            project.sourceSets.main.resources.srcDir(project.file('docs/art/attuned-items-locked/preview-resources'))
+            project.neoForge.runs.effectsCapture.programArguments.set(['--width', '480', '--height', '360'])
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+            project.tasks.named('runEffectsCapture').configure { maxHeapSize = '2G' }
+        }
+    }
+}

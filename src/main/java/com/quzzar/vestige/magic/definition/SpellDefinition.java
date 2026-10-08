@@ -1,6 +1,8 @@
 package com.quzzar.vestige.magic.definition;
 
 import net.minecraft.resources.ResourceLocation;
+import com.quzzar.vestige.magic.expression.MagicVariables;
+import com.quzzar.vestige.magic.expression.SpellValue;
 
 import java.util.List;
 import java.util.Map;
@@ -27,8 +29,14 @@ public record SpellDefinition(
         List<SpellTrigger> triggers,
         List<SpellEffect> effects,
         Map<ResourceLocation, SpellMode> modes,
-        java.util.Optional<SpellSource> source
-) {
+        java.util.Optional<SpellSource> source,
+        Map<ResourceLocation, SpellValue> variables
+) implements MagicDefinition {
+    public SpellDefinition(ResourceLocation id, SpellRarity rarity, Set<Tradition> traditions, TraitProfile traits,
+                           List<SpellCost> costs, List<SpellTrigger> triggers, List<SpellEffect> effects,
+                           Map<ResourceLocation, SpellMode> modes, java.util.Optional<SpellSource> source) {
+        this(id, rarity, traditions, traits, costs, triggers, effects, modes, source, Map.of());
+    }
     public SpellDefinition(ResourceLocation id, Set<Tradition> traditions, TraitProfile traits,
                            List<SpellCost> costs, List<SpellTrigger> triggers, List<SpellEffect> effects) {
         this(id, SpellRarity.COMMON, traditions, traits, costs, triggers, effects, Map.of(), java.util.Optional.empty());
@@ -52,6 +60,7 @@ public record SpellDefinition(
     }
 
     public SpellDefinition {
+        variables = MagicVariables.validate(variables);
         Objects.requireNonNull(id, "id");
         Objects.requireNonNull(rarity, "rarity");
         Objects.requireNonNull(traditions, "traditions");

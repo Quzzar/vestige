@@ -184,6 +184,20 @@ public final class SpellshapingWorldTest {
         h.runAfterDelay(110,()->{caster.invulnerableTime=0;caster.hurt(caster.damageSources().mobAttack(attacker),4);h.assertTrue(caster.getHealth()==13,"Expired shaping guard still mitigated: "+caster.getHealth());h.succeed();});
     }
     @GameTest(template="empty_9x3x9",batch="shaping_payment")
+    public static void exhaustingChargesRealManaAndAmplifiesAnActualHitWithoutCooldown(GameTestHelper h){
+        var player=h.makeMockPlayer(GameType.SURVIVAL);player.getPersistentData().putDouble("vestige:mana",26);
+        var victim=h.spawnWithNoFreeWill(EntityType.VILLAGER,new BlockPos(4,1,4));victim.setNoGravity(true);
+        var session=NativeMagic.session(h.getLevel().getServer());session.world().registerActor(player);session.world().registerActor(victim);
+        var base=new SpellDefinition(id("exhausting_payment_test"),Set.of(Tradition.ARCANE),new TraitProfile(Map.of(id("amplify"),1d)),List.of(new SpellCost.Mana(20)),List.of(new SpellTrigger(id("cast"),SpellTriggerTypes.INTERACT,List.of())),List.of(new SpellEffects.ForEach(new TargetSpec(TargetSpec.Selection.EVENT_TARGET,new SpellValue.Constant(0)),List.of(new SpellEffects.Action(id("damage"),Map.of("amount",new SpellValue.Product(List.of(new SpellValue.Constant(2),new SpellValue.Trait(id("amplify"))))),Map.of())))));
+        var compiled=Spellshaping.compile(base,List.of(augment("exhausting")),List.of(),new CastShaping(1,true));
+        var event=SpellEvent.of(SpellTriggerTypes.INTERACT,player.getUUID(),new SpellSubject.Entity(victim.getUUID()));
+        var rejected=session.runtime().cast(compiled.spell(),event,compiled.modifiers(),true,Optional.empty(),false,compiled.shaping());
+        h.assertTrue(rejected.status()==SpellRuntime.Status.COST_FAILED && player.getPersistentData().getDouble("vestige:mana")==26 && victim.getHealth()==20,"Unaffordable Exhausting partially committed");
+        player.getPersistentData().putDouble("vestige:mana",100);
+        var cast=session.runtime().cast(compiled.spell(),event,compiled.modifiers(),true,Optional.empty(),false,compiled.shaping());
+        h.assertTrue(cast.paymentCommitted() && cast.status()==SpellRuntime.Status.COMPLETED && player.getPersistentData().getDouble("vestige:mana")==73 && victim.getHealth()==17,"Exhausting did not buy actual power with actual mana");h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="shaping_payment")
     public static void exchangedAndMaterialPaymentsCommitTogetherOrLeaveEverythingUntouched(GameTestHelper h){
         var player=h.makeMockPlayer(GameType.SURVIVAL);player.setHealth(20);player.getFoodData().setFoodLevel(20);player.getPersistentData().putDouble("vestige:mana",100);
         var victim=h.spawnWithNoFreeWill(EntityType.VILLAGER,new BlockPos(4,1,4));victim.setNoGravity(true);
@@ -196,7 +210,7 @@ public final class SpellshapingWorldTest {
         h.assertTrue(failed.status()==SpellRuntime.Status.COST_FAILED && !failed.paymentCommitted() && player.getHealth()==20 && player.getFoodData().getFoodLevel()==20 && player.getPersistentData().getDouble("vestige:mana")==100 && player.getInventory().getItem(1).getCount()==2 && victim.getHealth()==20,"Failed typed payment partially committed");
         player.getInventory().setItem(2,new ItemStack(Items.IRON_PICKAXE));
         var paid=session.runtime().cast(compiled.spell(),event,compiled.modifiers(),true,Optional.empty(),false,compiled.shaping());
-        h.assertTrue(paid.paymentCommitted() && paid.status()==SpellRuntime.Status.COMPLETED && player.getHealth()==16 && player.getFoodData().getFoodLevel()==18 && player.getPersistentData().getDouble("vestige:mana")==89 && player.getInventory().getItem(1).getCount()==1 && player.getInventory().getItem(2).getDamageValue()==4 && victim.getHealth()==17,"Typed payment did not commit once: "+paid.status()+" / "+compiled.shaping().costs(base.costs()));h.succeed();
+        h.assertTrue(paid.paymentCommitted() && paid.status()==SpellRuntime.Status.COMPLETED && player.getHealth()==18 && player.getFoodData().getFoodLevel()==19 && player.getPersistentData().getDouble("vestige:mana")==89 && player.getInventory().getItem(1).getCount()==1 && player.getInventory().getItem(2).getDamageValue()==4 && victim.getHealth()==17,"Typed payment did not commit once: "+paid.status()+" / "+compiled.shaping().costs(base.costs()));h.succeed();
     }
     @GameTest(template="empty_9x3x9",batch="shaping_revealing",timeoutTicks=130)
     public static void revealingOutlinesEightInvisibleCreaturesAndExpiresWithoutDispelling(GameTestHelper h){

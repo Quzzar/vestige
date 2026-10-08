@@ -1,0 +1,32 @@
+{
+  "tool": "built-in imagegen",
+  "transparent_background": true,
+  "edits": [
+    {
+      "asset": "wardweave-inventory-generated.png",
+      "reference": "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-dyes-v2/masters/wardweave_b.png",
+      "prompt": "Use case: precise-object-edit. Asset: Minecraft 1.21.1 inventory item sprite for Wardweave Robes, native logical 16x16 grid rendered enlarged with nearest-neighbor pixel blocks on a transparent background. Preserve the reference Folded Mantle silhouette: paired broad shoulders, short cloth sleeves, folded pale mantle, narrow dark gray belt and extended robe body. Convert faithfully into one clear centered 16x16 logical sprite, leaving at least one transparent logical pixel padding. All main fabric neutral grayscale for dye tint, five restrained cloth shades. Fixed trim dark gray belt and one pale iron seam. Strict hard square pixels, no soft edges, no gradients within pixels, no glow, no text, no frames, no extra symbols, no mannequin. The final sprite should sit naturally beside Minecraft's vanilla leather chestplate. This is an export refinement of the supplied artwork, not a new design."
+    },
+    {
+      "asset": "cinderweave-inventory-generated.png",
+      "reference": "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-dyes-v2/masters/cinderweave_a.png",
+      "prompt": "Use case: precise-object-edit. Asset: Minecraft 1.21.1 Cinderweave Robes native inventory sprite, 16x16 logical pixel grid rendered enlarged with nearest-neighbor pixel blocks, transparent background. Preserve supplied Coal Cuffs artwork silhouette with folded pale cloth robe, orange ember tabs at wrists and hem and fixed dark brass belt buckle. Center the entire robe with one logical transparent pixel padding. Main fabric must be neutral grayscale with five restrained shades, later tintable to any wool color. Keep cuffs orange and belt dark brass as a fixed untinted overlay. Convert faithfully to a concise readable Minecraft leather chestplate-like sprite. Strict hard square pixels, no antialiasing, no soft edges, no glow, no text, no frames, no mannequin, no extra symbols. Export refinement, not a new design."
+    },
+    {
+      "asset": "wardweave-armor-generated.png",
+      "references": [
+        "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-native/sources/vanilla-leather-layer-1.png",
+        "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-native/sources/wardweave-inventory-generated.png"
+      ],
+      "prompt": "Create a production Minecraft 1.21.1 armor texture atlas, native logical 64x32 pixels, enlarged exactly on a transparent background with hard nearest-neighbor pixel blocks. This is an exact UV-layout-preserving edit of the first reference, vanilla leather armor layer 1. Keep every island at precisely its original normalized location and shape: head island upper left, body island x16..40 y16..32, arms x40..56 y16..32, leg region x0..16 y16..32. Do not move, expand or rotate UV islands or add text or frames. Restyle only chest/body and arms to match reference 2 Wardweave Folded Mantle: neutral grayscale white cloth with folded lapel seams, dark gray narrow belt across the body near y27 and iron pale edging. Minecraft pixel armor palette and opaque pixel islands, exactly 64x32 logical grid. Head/leg regions may remain vanilla as they are unused. All cloth grayscale; dark gray belt and iron seam will be separated into an untinted overlay at export. No photographic fabric, no glow, no noise, no antialiasing."
+    },
+    {
+      "asset": "cinderweave-armor-generated.png",
+      "references": [
+        "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-native/sources/vanilla-leather-layer-1.png",
+        "/Users/quzzar/Projects/vestige/docs/art/magic-equipment-native/sources/cinderweave-inventory-generated.png"
+      ],
+      "prompt": "Precise edit of reference 1, a Minecraft leather ARMOR UV texture atlas. Preserve the exact existing layout, exactly 64 columns x32 rows. Output enlarged 20x nearest neighbor on transparent background; the same texture atlas structure as reference 1, not an item icon. Reference 2 supplies material colors only. Do NOT draw any robe-shaped icon anywhere in this atlas. Body front is the rectangular 8x12 region x20..27 y20..31, body back x32..39 y20..31, side strips x16..19 and28..31 y20..31. Arms are narrow rectangular skin panels in x40..55 y20..31. Fill body/arm panels completely with neutral grayscale cloth pixels following the original texture's rectangular face coverage. Add a thin dark brass belt horizontally at y27 across all body face panels, plus small orange ember cuff seams at y29 across arm panels; keep orange and brass fixed. Coal Cuffs style: white/gray tintable cloth with small orange ends, no glow, no antialiasing, no gradients inside pixels, no text. Leave all original UV islands in precisely the original positions; keep unused head/leg regions identical."
+    }
+  ]
+}

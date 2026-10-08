@@ -1,0 +1,182 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:magic_missile",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Magic Missile",
+    "cast_type": "instant",
+    "cooldown_ticks": 20
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:force": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 16
+    },
+    {
+      "type": "cooldown",
+      "ticks": 50
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:projectile",
+        "duration": 200,
+        "values": {
+          "speed": 0.9,
+          "distance": {
+            "product": [
+              48,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          },
+          "homing": 0.2
+        },
+        "identifiers": {
+          "item": "minecraft:amethyst_shard"
+        },
+        "bindings": [],
+        "on_hit": [
+          {
+            "type": "damage",
+            "values": {
+              "amount": {
+                "product": [
+                  6,
+                  {
+                    "trait": "vestige:amplify"
+                  }
+                ]
+              },
+              "ignore_invulnerability": 1
+            }
+          },
+          {
+            "type": "visual",
+            "visual": {
+              "duration": 24,
+              "radius": 0.9,
+              "height": 0.25,
+              "layers": [
+                {
+                  "shape": "helix",
+                  "color": "b67cff",
+                  "alpha": 0.85,
+                  "width": 0.09,
+                  "scale": 1.25,
+                  "speed": 1.8,
+                  "phase": 0,
+                  "count": 5
+                },
+                {
+                  "shape": "motes",
+                  "color": "f4deff",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.875,
+                  "speed": -1.1700000000000002,
+                  "phase": 1.2,
+                  "count": 3
+                },
+                {
+                  "shape": "sparks",
+                  "color": "f4deff",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "sound": {
+                "id": "minecraft:entity.generic.explode",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        ],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 200,
+          "radius": 0.42,
+          "height": 0,
+          "layers": [
+            {
+              "shape": "sphere",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.5,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "helix",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.09,
+              "scale": 1.25,
+              "speed": 1.8,
+              "phase": 0,
+              "count": 5
+            },
+            {
+              "shape": "motes",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.875,
+              "speed": -1.1700000000000002,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "sound": {
+            "id": "minecraft:block.amethyst_block.chime",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

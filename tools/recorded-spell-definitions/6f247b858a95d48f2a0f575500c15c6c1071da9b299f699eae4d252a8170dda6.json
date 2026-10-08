@@ -1,0 +1,121 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1485",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Detect Magic",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 323",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1485"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "divine",
+    "occult",
+    "primal"
+  ],
+  "traits": {
+    "vestige:mind": 1,
+    "vestige:divination": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 4
+    },
+    {
+      "type": "mana",
+      "amount": 8
+    },
+    {
+      "type": "cooldown",
+      "ticks": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "detect_magic",
+          "values": {
+            "radius": {
+              "product": [
+                16,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "visual",
+          "visual": {
+            "duration": 24,
+            "radius": {
+              "product": [
+                16,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "height": 0.08,
+            "layers": [
+              {
+                "shape": "eye",
+                "color": "b67cff",
+                "alpha": 0.85,
+                "width": 0.045,
+                "scale": 1.2,
+                "speed": 1.1,
+                "phase": 0,
+                "count": 6
+              },
+              {
+                "shape": "rays",
+                "color": "f4deff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 0.84,
+                "speed": -0.7150000000000001,
+                "phase": 1.2,
+                "count": 3
+              },
+              {
+                "shape": "sparks",
+                "color": "f4deff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

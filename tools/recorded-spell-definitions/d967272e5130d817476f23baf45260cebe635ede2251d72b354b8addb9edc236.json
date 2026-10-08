@@ -1,0 +1,112 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:summon_vex",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Summon Vex",
+    "cast_type": "long",
+    "cooldown_ticks": 3000
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:conjuration": 4,
+    "vestige:spirit": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 40
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 2,
+          "health": 8,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:vex",
+          "weapon": "minecraft:iron_sword"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "wings",
+              "color": "b67cff",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": 1.0,
+              "phase": 0,
+              "count": 5
+            },
+            {
+              "shape": "sigil",
+              "color": "f4deff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": -0.65,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "f4deff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "await_recast",
+      "timeout": 600
+    },
+    {
+      "type": "dismiss_manifestations"
+    }
+  ]
+}

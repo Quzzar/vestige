@@ -1,0 +1,141 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:oakskin",
+    "school": "irons_spellbooks:nature",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Oakskin",
+    "cast_type": "instant",
+    "cooldown_ticks": 1800
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "primal"
+  ],
+  "traits": {
+    "vestige:wood": 4,
+    "vestige:abjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 28
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:oakskin",
+            "duration": 200,
+            "charges": 6,
+            "triggers": [
+              {
+                "id": "vestige:oakskin/trigger",
+                "event": "vestige:damage_calculating",
+                "conditions": [
+                  {
+                    "type": "compare",
+                    "path": "vestige:event/magical",
+                    "operation": "equal",
+                    "expected": false
+                  },
+                  {
+                    "type": "compare",
+                    "path": "vestige:event/fire",
+                    "operation": "equal",
+                    "expected": false
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      0.25,
+                      {
+                        "fact": "vestige:event/damage_amount"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "leaves",
+              "color": "af8057",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.1,
+              "speed": 0.35,
+              "phase": 0,
+              "count": 9
+            },
+            {
+              "shape": "shield",
+              "color": "f2d3a6",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.77,
+              "speed": -0.22749999999999998,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "f2d3a6",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

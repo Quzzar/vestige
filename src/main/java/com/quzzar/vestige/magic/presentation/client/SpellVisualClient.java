@@ -340,6 +340,15 @@ public final class SpellVisualClient {
                         }
                     }
                     case RING -> ring(consumer, matrix, points.getLast(), radius, layer.width(), layer.color(), alpha);
+                    case PULSE -> {
+                        double reach=cue.data.visual().radius()*layer.scale()*VisualGeometry.pulseRadius(progress);
+                        ring(consumer,matrix,hub,reach,layer.width(),layer.color(),alpha);
+                        for(int i=0;i<layer.count();i++) {
+                            double angle=layer.phase()+i*Math.PI*2/layer.count();
+                            ribbon(consumer,matrix,camera,radial(hub,reach*.8,angle),radial(hub,reach,angle),
+                                    layer.width(),layer.color(),alpha);
+                        }
+                    }
                     case SPHERE -> sphere(consumer, matrix, points.getLast(), radius, layer.color(), alpha);
                     case VEIL -> sphere(consumer, matrix, points.getLast(), radius, layer.color(), alpha*(.85f+.15f*(float)Math.sin(age*.1)));
                     case BOX -> {

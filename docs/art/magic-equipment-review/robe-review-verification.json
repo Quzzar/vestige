@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-07",
+  "scope": "Wardweave/Cinderweave native gameplay implemented after owner approval October 7",
+  "acceptedDirection": "Durability on all armor, absorbed hits wear the protecting robe once, no activation/uptime wear, no arbitrary scalar power ceilings",
+  "pending": "Cinderweave inventory A/B choice, final worn artwork acceptance and the four other clothing packages",
+  "bundleCheck": "Passed",
+  "bundleSyntax": "Passed",
+  "localLinks": "Passed",
+  "numericExamples": {
+    "wardweave": [
+      {
+        "multipliers": {},
+        "seconds": 4,
+        "protectionHP": 2
+      },
+      {
+        "multipliers": {
+          "time": 1.25
+        },
+        "seconds": 5,
+        "protectionHP": 2
+      },
+      {
+        "multipliers": {
+          "force": 1.25
+        },
+        "seconds": 4,
+        "protectionHP": 2.5
+      },
+      {
+        "multipliers": {
+          "force": 1.25,
+          "amplify": 1.25
+        },
+        "seconds": 4,
+        "protectionHP": 3.125
+      },
+      {
+        "multipliers": {
+          "time": 3,
+          "force": 2,
+          "amplify": 2
+        },
+        "seconds": 12,
+        "protectionHP": 8
+      },
+      {
+        "multipliers": {
+          "time": 4,
+          "force": 3,
+          "amplify": 3
+        },
+        "seconds": 16,
+        "protectionHP": 18
+      }
+    ],
+    "cinderweave": [
+      {
+        "multipliers": {},
+        "fraction": 0.25,
+        "budgetHP": 2,
+        "preventedFrom4HP": 1,
+        "preventedFrom8HP": 2
+      },
+      {
+        "multipliers": {
+          "fire": 1.25
+        },
+        "fraction": 0.3125,
+        "budgetHP": 2,
+        "preventedFrom4HP": 1.25,
+        "preventedFrom8HP": 2
+      },
+      {
+        "multipliers": {
+          "amplify": 1.25
+        },
+        "fraction": 0.25,
+        "budgetHP": 2.5,
+        "preventedFrom4HP": 1,
+        "preventedFrom8HP": 2
+      },
+      {
+        "multipliers": {
+          "fire": 1.25,
+          "amplify": 1.25
+        },
+        "fraction": 0.3125,
+        "budgetHP": 2.5,
+        "preventedFrom4HP": 1.25,
+        "preventedFrom8HP": 2.5
+      },
+      {
+        "multipliers": {
+          "fire": 3,
+          "amplify": 3
+        },
+        "fraction": 0.75,
+        "budgetHP": 6,
+        "preventedFrom4HP": 3,
+        "preventedFrom8HP": 6
+      },
+      {
+        "multipliers": {
+          "fire": 4,
+          "amplify": 5
+        },
+        "fraction": 1,
+        "budgetHP": 10,
+        "preventedFrom4HP": 4,
+        "preventedFrom8HP": 8
+      }
+    ]
+  },
+  "unitTests": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldTestsThisPass": "Not run: production gameplay unchanged; protective wear remains to implement",
+  "priorFoundationEvidence": "trait-scaling-verification.json",
+  "visualVerification": {
+    "verified": false,
+    "reason": "Prior local file URL block remains; no alternate surface attempted"
+  },
+  "log": "/private/tmp/vestige-equipment-growth-tests.log",
+  "enchantmentDecision": {
+    "status": "Owner accepted",
+    "allowed": "Ordinary compatible armor enchantments",
+    "excluded": [
+      "minecraft:unbreaking",
+      "minecraft:mending"
+    ],
+    "implementation": "Outstanding: clothing is not registered; all acquisition and combination paths must enforce this policy",
+    "verification": "Decision documentation only; prior numerical unit-test evidence remains unchanged"
+  },
+  "implementationVerification": {
+    "unitTests": 179,
+    "unitFailures": 0,
+    "fullWorldTests": 312,
+    "fullWorldFailures": 0,
+    "finalFocusedWorldTests": 21,
+    "focusedFailures": 0,
+    "packaging": "Passed with Kithkyn co-load",
+    "nativeClient": "Passed: 64 native inventory/worn captures; all 16 colors at GUI 2/3, WIDE/SLIM; inspected white/blue/black frames"
+  }
+}

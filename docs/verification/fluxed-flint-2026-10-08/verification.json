@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-08",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "sourceSnapshot": "/private/tmp/vestige-fluxed-flint-20261008-source",
+  "scope": "Frozen combined working source; not a scoped publication branch. Listed files match the root checkout at staging.",
+  "unitTests": {
+    "tests": 179,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fullWorldSuite": {
+    "required": 329,
+    "passed": 329,
+    "fluxedFlintCases": 12
+  },
+  "finalFocusedWorldSuite": {
+    "required": 13,
+    "passed": 13,
+    "changeSinceFullSuite": "One additional FluxedFlintTest method only; production code unchanged."
+  },
+  "kithkyn": "Version compatibility passed. Final full/client/focused runs disabled Kithkyn co-load; prior integration run passed all Flint tests but had the independently fixed staff-guard fixture failure.",
+  "nativeClient": {
+    "checks": [
+      {
+        "check": "Translated native item name",
+        "passed": true
+      },
+      {
+        "check": "Native activation enters repair lifecycle",
+        "passed": true
+      },
+      {
+        "check": "Actual dropped staff differs only by ten restored durability",
+        "passed": true
+      },
+      {
+        "check": "Catalyst spends ten points and target is consumed once",
+        "passed": true
+      }
+    ],
+    "framesInspected": [
+      "durability-after-repair.png",
+      "held-and-offered.png",
+      "inventory-beside-vanilla.png",
+      "repair-in-progress.png",
+      "repaired-output.png"
+    ],
+    "assetSha256": {
+      "models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+      "textures/item/fluxed_flint.png": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3"
+    },
+    "source": "Unedited framebuffer"
+  },
+  "reviewArtifacts": {
+    "vestige-0.1.0.jar": {
+      "path": "/Users/quzzar/Projects/vestige/build/fluxed-flint-review/libs/vestige-0.1.0.jar",
+      "sha256": "3b2a805f12a438ca9a8811ef8df135d2ecafd9c06b9c18e692874bc01dd5c1b4"
+    },
+    "vestige-0.1.0-sources.jar": {
+      "path": "/Users/quzzar/Projects/vestige/build/fluxed-flint-review/libs/vestige-0.1.0-sources.jar",
+      "sha256": "d932b4569f526ff28ffc2acfad8847f98ec46fac0e5a38bf93987f62e868edd0"
+    }
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/RitualTraitSource.java": "25bef019e74091e7eeefe18755c93375037ed752171bd7bd33f34fe3f6c9cc69",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintItem.java": "42061faa298671d475ef5a49c083966f4eba7c4624733ad107f08275db1914db",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "3a2843d34ae953982a3f1948a5a30da58f66ce06f29ff8bedf2c2e4ff18962c4",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualVolatility.java": "edbd29419504b1a1ff6654a1f01ce42ee2930d0b637e3274a1ab379fc9c1a827",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalRepairPolicy.java": "85cf73f0d6ebac49ec85b808a556cac6e0bc094c2cb0326ce3c43223fc85b78b",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "167a31864b095a410ba39f24e596efbd8700882dc8feea6c3c65b8629d399ccb",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "00369aedd6520ca654779546cb062796925863368e2004f67269caaaf3a332b5",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "0870f025d53d82b87d4fcc8361cb4605f4d592d975cd2763d8218b92139d4780",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellWandItem.java": "77fa08fc3f436eabb950a0dfe02e109a0e4d29b3c75f1476e97054400de607b4",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellStaffItem.java": "865d7a995c1e48c14adb03f18590ea141e9992d930f92739077762277ece4559",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "eba6de0d263e14406852839e8118aa91104299e736423651f62375bcd9ee2e2c",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": "6d5eb4585e164d35b17215a7c1244763d6a34ebb8e1c48ad7637fa704cd8bcdb",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": "4c1f9d2e6d591ed3dbf63229ed61e34a1ed16a720972486fbb16fe9104d02bb3",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "0e44aab4de0698a04c0c078c59da005bcfbf127f0b97f8be306e49c1e8aa45c7",
+    "src/main/java/com/quzzar/vestige/apparatus/MundaneStaffWorldTest.java": "e82dc2c1830c4c247a8b8b092c107820921d64b857ad225763a1152df3d66b4c",
+    "src/main/resources/assets/vestige/lang/en_us.json": "7848b900aa5362f5234f51f31dbc01abe89b80aecc612638782e8a75a6b2fcfb",
+    "src/main/resources/assets/vestige/models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+    "src/main/resources/assets/vestige/textures/item/fluxed_flint.png": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3",
+    "src/main/resources/data/vestige/tags/item/magical_repairable.json": "92b06cb5a1f1d396147b3872a3cf741450af8225886e57e30406f68e6c648d62"
+  },
+  "artAuthoringSha256": {
+    "tools/author_fluxed_flint.py": "364952bc16d65ba1ba75e492b6d8b937ec591766b6e33105ec2d0e75a830e228"
+  },
+  "installed": false,
+  "published": false,
+  "ownerArtAccepted": false,
+  "remaining": [
+    "Survival balance and provisional recipe acceptance",
+    "Stabilization/imbuement design",
+    "Dynamic repair viewer entries",
+    "Remote multiplayer and long-session playtesting"
+  ]
+}

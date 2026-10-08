@@ -86,8 +86,12 @@ class SpellRuntimeTest {
                 new SpellEffects.Delay(2), DAMAGE));
         var cast = runtime.cast(spell, event(), List.of(new TraitModifier(AMPLIFY, TraitModifier.Operation.ADD, 1)), true);
         assertEquals(SpellRuntime.Status.CHARGING, cast.status());
+        assertEquals(new SpellRuntime.Preparation(cast.id(), 0, 2), runtime.preparation(ACTOR).orElseThrow());
+        assertTrue(runtime.preparation(UUID.randomUUID()).isEmpty());
         runtime.tick(); assertEquals(0, world.payments);
+        assertEquals(new SpellRuntime.Preparation(cast.id(), 1, 2), runtime.preparation(ACTOR).orElseThrow());
         runtime.tick(); assertEquals(List.of(10.0), world.amounts);
+        assertTrue(runtime.preparation(ACTOR).isEmpty(), "An effect delay must not masquerade as charge time");
         assertEquals(1, world.payments);
         runtime.tick(); assertEquals(1, world.amounts.size());
         runtime.tick(); assertEquals(List.of(10.0, 5.0), world.amounts);
@@ -117,6 +121,7 @@ class SpellRuntimeTest {
         assertEquals(SpellRuntime.Status.TIMED_OUT, waiting.status());
         var charging = runtime.cast(spell(List.of(new SpellCost.Time(2)), List.of(DAMAGE)), event(), List.of(), true);
         assertTrue(runtime.interrupt(charging.id()));
+        assertTrue(runtime.preparation(ACTOR).isEmpty());
         runtime.tick(); runtime.tick();
         assertEquals(SpellRuntime.Status.INTERRUPTED, charging.status());
         assertTrue(world.amounts.isEmpty()); assertEquals(1, world.payments);
@@ -313,11 +318,29 @@ class SpellRuntimeTest {
         var field=new SpellEffects.Manifestation(id("area"),4,Map.of("radius",new SpellValue.Product(List.of(new SpellValue.Constant(2.5),new SpellValue.Trait(AMPLIFY)))),Map.of(),List.of(),List.of(),List.of(fractional),List.of(),2);
         var definition=spell(List.of(new SpellCost.Mana(20),new SpellCost.Time(5)),List.of(fractional,new SpellEffects.AwaitRecast(20),new SpellEffects.CreateManifestation(field,TargetSpec.self())));
         var cast=runtime.cast(definition,event(),List.of(new TraitModifier(AMPLIFY,TraitModifier.Operation.MULTIPLY,1.2)),true,Optional.empty(),false,new CastShaping(1.1,true));
+        assertEquals(new SpellRuntime.Preparation(cast.id(),0,6),runtime.preparation(ACTOR).orElseThrow());
         for (int i=0;i<5;i++) runtime.tick();assertFalse(cast.paymentCommitted());
         runtime.tick();assertEquals(List.of(new SpellCost.Mana(22),new SpellCost.Time(6)),world.lastCosts);assertEquals(List.of(5.0),world.amounts);
+        assertTrue(runtime.preparation(ACTOR).isEmpty(), "Dormant recasts must not show preparation");
         assertEquals(cast,runtime.cast(definition,event(),List.of(),true));assertEquals(3,world.lastManifest.get("radius"));
         for (int i=0;i<4;i++) runtime.tick();assertEquals(List.of(5.0,5.0,5.0),world.amounts);assertEquals(1,world.payments);
         assertEquals(20,((SpellCost.Mana)definition.costs().getFirst()).amount());
+    }
+
+    @Test void preparationClearsOnPaymentFailureActorLossAndRuntimeClose() {
+        World world=new World();SpellRuntime runtime=new SpellRuntime(world);
+        var definition=spell(List.of(new SpellCost.Time(2),new SpellCost.Mana(10)),List.of(DAMAGE));
+        world.canPay=false;
+        var failed=runtime.cast(definition,event(),List.of(),true);
+        runtime.tick();runtime.tick();
+        assertEquals(SpellRuntime.Status.COST_FAILED,failed.status());assertTrue(runtime.preparation(ACTOR).isEmpty());
+        world.canPay=true;
+        var lost=runtime.cast(definition,event(),List.of(),true);world.active=false;runtime.tick();
+        assertEquals(SpellRuntime.Status.INTERRUPTED,lost.status());assertTrue(runtime.preparation(ACTOR).isEmpty());
+        world.active=true;
+        var closed=runtime.cast(definition,event(),List.of(),true);runtime.close();
+        assertEquals(SpellRuntime.Status.INTERRUPTED,closed.status());assertTrue(runtime.preparation(ACTOR).isEmpty());
+        assertTrue(world.amounts.isEmpty());
     }
 
     private static SpellDefinition spell(List<SpellCost> costs, List<SpellEffect> effects) {

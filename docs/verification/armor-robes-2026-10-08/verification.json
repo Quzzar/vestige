@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-08",
+  "artApprovalRecord": "../../art/magic-equipment-armor-v2/approval.json",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "unitTests": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "unitTestScope": "181-test gameplay baseline from the prior isolated full build, not rerun for this appearance-only revision. Current robe classes compiled and packaged by capture_client.py.",
+  "nativeCaptures": {
+    "total": 66,
+    "dyedInventoryAndPoses": 64,
+    "ironArmorLayering": 2,
+    "thirdPersonWorld": 0,
+    "bodyTypes": [
+      "WIDE",
+      "SLIM"
+    ],
+    "poses": [
+      "front",
+      "side",
+      "back",
+      "walking",
+      "crouching"
+    ]
+  },
+  "artOnlyFixture": {
+    "scope": "Art review only: standing stones absent; their collision uses a unit cube.",
+    "originalClassSha256": "e0fa6475518cccbd5ae46748972c3e0a972a5d1749c75ff2288fbdadc2687f21",
+    "fixtureClassSha256": "dabb762a090850ba98a773f97365c7fe3f752fac28311cb96858bd5b460040e4",
+    "robeClassesAndAssets": "Current production files, unchanged by fixture."
+  },
+  "wornAssets": [
+    {
+      "path": "assets/vestige/textures/models/armor/wardweave_layer_1.png",
+      "sha256": "06d694a69f6abede32bbcec8c719440faa5a8b1f48a7d9cb76a1901f92c0b7bc",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/wardweave_layer_1_overlay.png",
+      "sha256": "e003f1a376624ad70291d04ed5b54deab77fa665845cc99b8c78406d9338f04e",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/cinderweave_layer_1.png",
+      "sha256": "1b000b3082d1c9f6f72afd1336f1d1eb380d2ef10ddbf122e6f2c62efb7502a6",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    },
+    {
+      "path": "assets/vestige/textures/models/armor/cinderweave_layer_1_overlay.png",
+      "sha256": "c073f86bcaa73ef0b4d020b56c0f3a7abe734d75ded2949430e58af5f1b0dafc",
+      "size": [
+        64,
+        64
+      ],
+      "hardAlpha": true
+    }
+  ],
+  "packagedJar": "run/robes-mantles-review-build/libs/vestige-0.1.0.jar",
+  "packagedJarSha256": "604bab46106ca7ea751c4e9c1fcb1f21ecb31c6b161e5ea5f3797bd0dc376acd",
+  "captureHashes": {
+    "cinderweave-black-gui-2.png": "943f474218060b17a04b96a8cbbc00349ef4c8b0aea57d1b53bc578d4b36a59a",
+    "cinderweave-black-gui-3.png": "edc0ce15585db993f492f4e1254c4d1eed05211cf166020867458fa197d39f85",
+    "cinderweave-blue-gui-2.png": "36ef957a0b2df2c6eb46842e1849def556e7b63b4309a5f693cbbd04dc4a8775",
+    "cinderweave-blue-gui-3.png": "57c6e83a9e3ebd60aec8f400969c58a1a7f42c38d8cfb9ebd1bbc35d87316d92",
+    "cinderweave-brown-gui-2.png": "016bfac88e89fcc833a56163867c04f66c7b9fe5594afe88345567320c5090d4",
+    "cinderweave-brown-gui-3.png": "7b99c6cd6a9e204a6dd3b6548d720a65bac92fc4423051d1e27fe02bb85eac94",
+    "cinderweave-cyan-gui-2.png": "8f6acfb7e8bc0bd51600b7094a2c6fc369a2ffcccbba02f687942a66b8ae5311",
+    "cinderweave-cyan-gui-3.png": "a93113c3764957be6288fefa1a1b932b7a2e08cc57a0fd65e4c69257d6343fd2",
+    "cinderweave-gray-gui-2.png": "0d2f4fe9e5c16e48cd4b4e248bec93fcdb5469403f76a4548e4121811e9bb647",
+    "cinderweave-gray-gui-3.png": "0edc7a6a2ce944b7abf1431327f4f0ba7a96b4d1e7842c7e4a836d2a3803712a",
+    "cinderweave-green-gui-2.png": "3915643a5124a7e7385bab1ec43d6378e604841c51de53105f37eb4b2cedfc62",
+    "cinderweave-green-gui-3.png": "2c0e884318d6ff69c3a308654bacf1a38d44bdfcddd21aa1613c6b79e89a078f",
+    "cinderweave-light_blue-gui-2.png": "7e7c13df1c4287b7c7e1876985c4cea41212c06c6f5e2c3b7f59f39e876b21e3",
+    "cinderweave-light_blue-gui-3.png": "663f45a108331f434349d5ccd0d59b1447ff9a0be32bc916047261d167c78358",
+    "cinderweave-light_gray-gui-2.png": "ce3df38d17251bc0a2dd9928d949626dda07d99983ca1806a3e65eb6045ce6dc",
+    "cinderweave-light_gray-gui-3.png": "10d93b374154d2b3834a07cf79d0535de6e9e1873ca6fabe9584820bd34445f8",
+    "cinderweave-lime-gui-2.png": "888ae9d6d5fa1bf7433918ac237517d00b8c426d7d762fd08a7d3767538e4dc5",
+    "cinderweave-lime-gui-3.png": "8fa70552a9d46f8ef19f940b63514d38a8e5405a4c20a2025062dc1ba654ab40",
+    "cinderweave-magenta-gui-2.png": "989f9f16e6a4b0e2a858673058aa07c212fa134d27fb3a48557edc49d9f34cc7",
+    "cinderweave-magenta-gui-3.png": "b5ae0881854bd3d4deb800efbf8d57a982293808d55b890f341fc33f07a0f04b",
+    "cinderweave-orange-gui-2.png": "c10d4eaf85834afa722a57c19eb82adbe99391f741f87aaf4e1afd49390bf567",
+    "cinderweave-orange-gui-3.png": "a00ca74a9d59f22ab4a0f44e1054160c2bfb939115933187bcfd655e5d35506d",
+    "cinderweave-pink-gui-2.png": "d95469eebd44d005673862238cb35d8e5167ba9ae1ea5dc2d5be07a12d723f32",
+    "cinderweave-pink-gui-3.png": "3d7d3f82d8c38019ed79cc716f37d0849e3f14e3aa98da7abec4c0cff04891f9",
+    "cinderweave-purple-gui-2.png": "8401b561c1ec9ae94bdada5e0a44349ad0ef10c618e7ac466d0ab480de65ecea",
+    "cinderweave-purple-gui-3.png": "0ae697d0dd1e4a1509efca82ee003c89a454857512d9b8cfdc39532bb46a0ad2",
+    "cinderweave-red-gui-2.png": "0028a2db2c7de3e71023464647fdb379000a99e69f574de39da3bf5ee0d569cb",
+    "cinderweave-red-gui-3.png": "efae60c2159131133907cf7489bb2b236e099066179576187d0da522cb5ae854",
+    "cinderweave-white-armor-layers.png": "a14679e8f8e10bbcf8095530b3b32545899bbc8e878e8dd4631ee24bd807a6fd",
+    "cinderweave-white-gui-2.png": "8aa6c5c93bee608936cd474b48a732220e65effcdc96262c58ef9d55ee715ba4",
+    "cinderweave-white-gui-3.png": "5716b6c1a5eabe35b91b284ebf9f6c8013eb66ddd98d2c9def953179fd817ed0",
+    "cinderweave-yellow-gui-2.png": "3eb17ceae42f4293b7a50d649eec6907479c756f71d276c1ba9174bec4a7bf6e",
+    "cinderweave-yellow-gui-3.png": "7ef568c9b0f09faa1761e63c22419d564bb236adf356421d36748e28bcc82ecd",
+    "wardweave-black-gui-2.png": "75b7d63de96cfca45cfbc6c3e006ebd2e1acbcd32e84514cb21259b9976c4fa0",
+    "wardweave-black-gui-3.png": "57d389053601c38598c81ed717d60ee87d0d12e24e4a6a9dbf3658b6b9a4c401",
+    "wardweave-blue-gui-2.png": "fc1dab94cb36ec7c973e2a0b52b3ad6d0e03a028d08fb31f29e1a3f0823ca3e7",
+    "wardweave-blue-gui-3.png": "c0e5a6e98586273fd3132dde7dce1a65304b0fca9cd089294d68a2afc0ff4cc3",
+    "wardweave-brown-gui-2.png": "9ab1cf433201e735fac45e2541b2895f760996b6a9e85864beb705c1e9e28fd5",
+    "wardweave-brown-gui-3.png": "bb6d534b6122874d31fcf66d4df9745e9a30862bb9bc119186c1aac5a26ed3e3",
+    "wardweave-cyan-gui-2.png": "32c569214cad86992a462c2bbf07e9ccf01c8afe23c8af6485cc747b44df6746",
+    "wardweave-cyan-gui-3.png": "4f6c646c2f579cb009be082b6d2a1adfbca06ad2f125159625254cda31a8d40f",
+    "wardweave-gray-gui-2.png": "964c73c6bd717023f1300bf6448ba61c5ad2ed614015dd4b477824737be3f719",
+    "wardweave-gray-gui-3.png": "499fbd0e2651aba91f273c45919701b4f0cfcbaac29e62c0681ede584d5c3ee9",
+    "wardweave-green-gui-2.png": "6594f841542b7caa9a2bddd6adb5169cf6461d6ad28307a89ca29dcc2eba2f6b",
+    "wardweave-green-gui-3.png": "f7e8313ba872d19c042556837b3b7299c79034fb55cbdbb577583db3d6f474b2",
+    "wardweave-light_blue-gui-2.png": "512e443902b6949ada67a7281ed55e3235a02a7ff99a18b0c8d3a87e89cd05e7",
+    "wardweave-light_blue-gui-3.png": "1277d1769e85852183898674ea46f521674f755644d73ebd85171175e715a721",
+    "wardweave-light_gray-gui-2.png": "465eaa3b495171a468b52da2e027900ad67b8e92378ad3436b3093fe74b34bbc",
+    "wardweave-light_gray-gui-3.png": "7f9dfe14e938a919c0953da1c3d4a06bd534aa657108cd5b1038a472409776d1",
+    "wardweave-lime-gui-2.png": "c2e3af59eeb58a792f50166312f7b0e05fa892f7504feb3b9307f6fa3e590334",
+    "wardweave-lime-gui-3.png": "77916347543f12914cdeca0c6df8b4616a70e380645db7e7c368aa27b0674c09",
+    "wardweave-magenta-gui-2.png": "38855f286ecdf2df2f83f1a8473d8569cf08ba2347967659045b691cc2d948a2",
+    "wardweave-magenta-gui-3.png": "48efa3931290c28e0dae277890e66a4fe8f09953fed5b50a9531b96208cf2365",
+    "wardweave-orange-gui-2.png": "16e96cb48f50cc24afd05c469f2d8811849bc0606323b6da54321165faf3d81a",
+    "wardweave-orange-gui-3.png": "ddad91d978174b111f13d8f1e5aa7999221e81d24ced4836af716bc98d84f7c8",
+    "wardweave-pink-gui-2.png": "8e18faa8a271a215e3f454723f64ef229c1f3ec0f41e7b52f104405d18dd8194",
+    "wardweave-pink-gui-3.png": "fdeeec714aa498d000d47d2353e747f236675fffaf44ef3339a8536f5fe6838a",
+    "wardweave-purple-gui-2.png": "97f1780a16d99d90e0d320c26c65140216b87b8429959b4ef584cfe67eac4a4f",
+    "wardweave-purple-gui-3.png": "86b0ebb5740cafeb50d38dc48432f048aa4f558fcfedaefc8d6e81bc99642327",
+    "wardweave-red-gui-2.png": "88d4da158e67a293bd538809777540414efae9bef7e7c217a7c2ed576cd14182",
+    "wardweave-red-gui-3.png": "2aa964283ce634266d2f43a8f5e1ec4b07aa80248ba4e9e3f771cd89bf966fea",
+    "wardweave-white-armor-layers.png": "251603ca0110f5416b40950ddb2f1044e0a2c37b0d7194c48eadd5feb88d3746",
+    "wardweave-white-gui-2.png": "f8909f4afc44efd6ca54750434dfbd117122871600262f7f9157367c80a0cfee",
+    "wardweave-white-gui-3.png": "5b8f1db0d318a36b8b1a53a60372c7986271acb9397ac266db9b4f648c6ba7a4",
+    "wardweave-yellow-gui-2.png": "7885a56f79f7ab563095c49630e573444f7532db2cab5fc6c5ce14695ffdf011",
+    "wardweave-yellow-gui-3.png": "847c2a421d9a31d99d972d57bd3c1b3db5a81513954109fe71e7859654fc9082"
+  },
+  "referenceHashes": {
+    "electroblob-sage.png": "904b5ab00f44d6c917cddd0dad73492064ea5bc7c0344dc6914a5a4ae182b251",
+    "electroblob-wizard.png": "e2629796bfc0fbf1c7a676b31a0ef19d7f679297df38e649f92f74957935f6cb",
+    "iron-pyromancer.png": "207e6c36e227a6fbf8dd47acffca703158753f9f29b212fac1b71f54412a5161",
+    "iron-wizard.png": "3cb71e14a26cee15ea310fcd4937b5ab20ba09a81574acb04021f3a8b4d3efc3",
+    "reference-atlases.png": "4f23a5be01d7ec2c5ffc8e0be2800f460cba6931507f0df981ffd9cdfb9c4caa",
+    "vanilla-iron_layer_1.png": "4ab8a988d646e8a22a78fe71d0bc293579c65a663e3c1755cac698acbbdc2a66",
+    "vanilla-leather_layer_1.png": "6c96099472fc44dc11b5823a81c57ec7c207203050cd088a15d2358b3df6b5e7",
+    "vanilla-leather_layer_1_overlay.png": "45f68c68cf1106e35d34cd2a35fc5f46d685ec6a10331b50b3bab47c7db6304c",
+    "vanilla-native-density.png": "de9dd0cbda9a8d2912600466819d08aea53d6c6d440f9a896efbca5a6e38848e"
+  },
+  "sourceHashes": {
+    "src/main/java/com/quzzar/vestige/equipment/client/RobeModel.java": "5aa071bfd9782f766528c1431c1b71d29bf67db8bf99dd9f40b9583cc4a69ff9",
+    "src/main/java/com/quzzar/vestige/equipment/client/RobeModels.java": "e9e34241b0ccb848b588fadf10bed4f4eff1df8834431eb62c0442e91af504ba",
+    "src/main/java/com/quzzar/vestige/equipment/client/MagicEquipmentCapture.java": "ccae029fd26d21610d346146c7f1e4da9abdff9e31368836438f9308bb09fb92",
+    "tools/author_robe_armor.py": "e361c76a89b8d44d79ed821f2ce9060574560a72a0cc5628d15e6481045c8caa",
+    "docs/art/magic-equipment-armor-v2/source/wardweave-generated.png": "de6c5935e5b4eb0dd84c6aa064c0cf26b516efc2d27fb058054531ae0f90a6cd",
+    "docs/art/magic-equipment-armor-v2/source/cinderweave-generated.png": "2471e8ddb1147b837e13f756d14bb3458b6a3424ad237578de0054cdb3cf3878",
+    "docs/art/magic-equipment-armor-v2/prompts.json": "281545fee840f13fb3dbf5f3e0d20d8f283cb9032ef357b74c1c0264b96b0300"
+  },
+  "limits": [
+    "Owner acceptance is recorded separately in the linked approval record.",
+    "Split lower robe follows native leg poses; no cape or back panel.",
+    "Final art client excludes optional Kithkyn and ordinary world captures; no integration/world presentation claim.",
+    "Art-only classpath fixture simplifies non-displayed standing-stone collision; production class restored afterward.",
+    "Riding, swimming, flight and other mods' armor rendering remain additional visual playtests.",
+    "No gameplay changes; no combat world-test rerun or installed pack changes in this art pass."
+  ]
+}

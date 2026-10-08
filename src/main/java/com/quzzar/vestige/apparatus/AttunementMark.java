@@ -32,4 +32,6 @@ public record AttunementMark(List<Rune> runes) {
         }
         return result;
     }
+    /** The same compact abbreviation used on a Shell's inventory corner. */
+    public MutableComponent symbol() { return runes.getFirst().component(); }
 }

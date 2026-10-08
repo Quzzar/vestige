@@ -1,0 +1,20 @@
+allprojects {
+    layout.buildDirectory = file(project.findProperty('pedestal_fixture_build') ?: '/private/tmp/vestige-apparatus-recipes-20261007-provider-build')
+    afterEvaluate {
+        tasks.named('runGameTestServer').configure { maxHeapSize = '2G' }
+        def pack = new File('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Valecraft-v1.19/minecraft/mods')
+        def selection = project.findProperty('pedestal_providers') ?: 'none'
+        def jars = []
+        if (selection in ['irons', 'both']) jars.addAll([
+            'irons_spellbooks-1.21.1-3.16.2.jar', 'irons_lib-1.21.1-2.1.0.jar',
+            'geckolib-neoforge-1.21.1-4.9.2.jar', 'curios-neoforge-9.5.1+1.21.1.jar',
+            'player-animation-lib-forge-2.0.4+1.21.1.jar'])
+        if (selection in ['supplementaries', 'both']) jars.addAll([
+            'supplementaries-neoforge-1.21.1-3.8.5.jar', 'moonlight-neoforge-1.21.1-3.3.0.jar'])
+        jars.each { name ->
+            def jar = new File(pack, name)
+            assert jar.isFile(): 'Missing local provider: ' + name
+            dependencies.add('localRuntime', files(jar))
+        }
+    }
+}

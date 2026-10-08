@@ -15,8 +15,11 @@ class CastReservationTest {
     private static SpellEvent event() { return SpellEvent.of(id("interact"),ACTOR,null); }
     private static final SpellEffects.Action ACTION=new SpellEffects.Action(id("damage"),Map.of("amount",new SpellValue.Constant(1)),Map.of());
     private static SpellDefinition spell(List<SpellEffect> plan) {
+        return spell(plan,List.of(new SpellCost.Time(2),new SpellCost.Mana(6)));
+    }
+    private static SpellDefinition spell(List<SpellEffect> plan,List<SpellCost> costs) {
         return new SpellDefinition(id("reservation_fixture"),Set.of(Tradition.ARCANE),TraitProfile.empty(),
-                List.of(new SpellCost.Time(2),new SpellCost.Mana(6),new SpellCost.Cooldown(4)),
+                costs,
                 List.of(new SpellTrigger(id("primary"),id("interact"),List.of())),plan);
     }
     private static SpellRuntime.Cast cast(SpellRuntime runtime,SpellDefinition definition,Reservation source,boolean identified) {
@@ -27,9 +30,8 @@ class CastReservationTest {
         Reservation(List<String> order) { this.order=order; }
         public boolean valid() { return valid; }
         public void commit() { commits++;order.add("wear");valid=false; }
-        public Optional<Recovery> recovery() { return Optional.of(new Recovery(id("wand"),1200)); }
     }
-    @Test void cancellationAndFailedPaymentDoNotCommitTheSourceOrRecovery() {
+    @Test void cancellationAndFailedPaymentDoNotCommitTheSource() {
         var world=new World();var runtime=new SpellRuntime(world);var source=new Reservation(world.order);
         var canceled=cast(runtime,spell(List.of(ACTION)),source,true);source.valid=false;runtime.tick();runtime.tick();
         assertEquals(SpellRuntime.Status.INTERRUPTED,canceled.status());assertEquals(0,world.payments);assertEquals(0,source.commits);
@@ -45,21 +47,36 @@ class CastReservationTest {
         runtime.tick();runtime.tick();assertEquals(SpellRuntime.Status.COMPLETED,cast.status());
         assertEquals(1,world.payments);assertEquals(1,source.commits);assertEquals(List.of("pay","wear","damage","damage"),world.order);
     }
-    @Test void paidForfeitSpendsTheSourceAndKeepsExactlySixtySecondsOfRecovery() {
+    @Test void paidForfeitSpendsTheSourceAndAllowsAnotherPreparationImmediately() {
         var world=new World();world.random=0;var runtime=new SpellRuntime(world);var source=new Reservation(world.order);
         var definition=spell(List.of(ACTION));var forfeited=cast(runtime,definition,source,false);runtime.tick();runtime.tick();
         assertEquals(SpellRuntime.Status.FORFEITED,forfeited.status());assertTrue(forfeited.paymentCommitted());
         assertEquals(1,world.payments);assertEquals(1,source.commits);assertEquals(List.of("pay","wear","forfeit"),world.order);
-        for (int i=0;i<1199;i++) runtime.tick();
-        assertEquals(SpellRuntime.Status.COOLDOWN,cast(runtime,definition,new Reservation(world.order),true).status());
-        runtime.tick();assertEquals(SpellRuntime.Status.CHARGING,cast(runtime,definition,new Reservation(world.order),true).status());
+        var retrySource=new Reservation(world.order);world.random=.99;
+        var retry=cast(runtime,definition,retrySource,true);
+        assertEquals(SpellRuntime.Status.CHARGING,retry.status());assertEquals(1,world.payments);assertEquals(0,retrySource.commits);
+        runtime.tick();runtime.tick();assertEquals(SpellRuntime.Status.COMPLETED,retry.status());
+        assertEquals(2,world.payments);assertEquals(1,retrySource.commits);assertEquals(1,source.commits);
     }
-    @Test void sourceRecoveryDoesNotLengthenOrdinarySpellRecovery() {
-        var world=new World();var runtime=new SpellRuntime(world);var source=new Reservation(world.order);var definition=spell(List.of(ACTION));
+    @Test void reservedSourcesRetainOnlyExplicitAuthoredCooldownCosts() {
+        var world=new World();var runtime=new SpellRuntime(world);var source=new Reservation(world.order);
+        var definition=spell(List.of(ACTION),List.of(new SpellCost.Time(2),new SpellCost.Mana(6),new SpellCost.Cooldown(4)));
         cast(runtime,definition,source,true);runtime.tick();runtime.tick();
-        for (int i=0;i<4;i++) runtime.tick();
+        for (int i=0;i<3;i++) runtime.tick();
         assertEquals(SpellRuntime.Status.COOLDOWN,cast(runtime,definition,new Reservation(world.order),true).status());
-        assertEquals(SpellRuntime.Status.CHARGING,runtime.cast(definition,event(),List.of(),true).status());
+        assertEquals(SpellRuntime.Status.COOLDOWN,runtime.cast(definition,event(),List.of(),true).status());
+        assertEquals(1,world.payments);assertEquals(1,source.commits);
+        runtime.tick();
+        assertEquals(SpellRuntime.Status.CHARGING,cast(runtime,definition,new Reservation(world.order),true).status());
+    }
+    @Test void successivePaidCastsEachPrepareAndCommitWithoutAddedRecovery() {
+        var world=new World();var runtime=new SpellRuntime(world);var definition=spell(List.of(ACTION));
+        for (int i=1;i<=3;i++) {
+            var source=new Reservation(world.order);var cast=cast(runtime,definition,source,true);
+            assertEquals(SpellRuntime.Status.CHARGING,cast.status());assertEquals(i-1,world.payments);assertEquals(0,source.commits);
+            runtime.tick();assertEquals(0,source.commits);runtime.tick();
+            assertEquals(SpellRuntime.Status.COMPLETED,cast.status());assertEquals(i,world.payments);assertEquals(1,source.commits);
+        }
     }
     @Test void aPaidRecastRetainsItsOriginalViewWithoutSecondWearOrPayment() {
         var world=new World();var runtime=new SpellRuntime(world);var source=new Reservation(world.order);

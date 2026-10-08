@@ -1,0 +1,144 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:ray_of_siphoning",
+    "school": "irons_spellbooks:blood",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Ray Of Siphoning",
+    "cast_type": "continuous",
+    "cooldown_ticks": 300
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:blood": 4,
+    "vestige:necromancy": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "repeat",
+      "count": 16,
+      "interval": 4,
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "beam",
+            "required": false,
+            "distance": {
+              "product": [
+                12,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "count": 1
+            }
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    1,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            },
+            {
+              "type": "leech",
+              "values": {
+                "fraction": 0.5
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": 0.85,
+            "height": 1.1,
+            "layers": [
+              {
+                "shape": "beam",
+                "color": "eb6684",
+                "alpha": 0.9,
+                "width": 0.25,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "beam",
+                "color": "ffffff",
+                "alpha": 1,
+                "width": 0.06,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "helix",
+                "color": "c92551",
+                "alpha": 0.85,
+                "width": 0.09,
+                "scale": 1.6,
+                "speed": -1.6,
+                "phase": 0,
+                "count": 6
+              },
+              {
+                "shape": "tendrils",
+                "color": "ffd0b7",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 1.1199999999999999,
+                "speed": 1.04,
+                "phase": 1.2,
+                "count": 3
+              },
+              {
+                "shape": "sparks",
+                "color": "ffd0b7",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

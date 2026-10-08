@@ -1,0 +1,109 @@
+{
+  "kind": "browser-only fitted illustration-rim study",
+  "nativeVerified": false,
+  "placeholderOutputSprite": "minecraft:string",
+  "captures": [
+    {
+      "name": "desktop",
+      "mode": "normal",
+      "filename": "desktop-normal.png",
+      "viewport": 1100,
+      "scrollWidth": 1100,
+      "sockets": [
+        {
+          "variant": "frame",
+          "width": 68,
+          "height": 68,
+          "insideDiagram": true,
+          "offeringOwnsCenter": true
+        }
+      ]
+    },
+    {
+      "name": "desktop",
+      "mode": "reduced",
+      "filename": "desktop-reduced.png",
+      "viewport": 1100,
+      "scrollWidth": 1100,
+      "sockets": [
+        {
+          "variant": "frame",
+          "width": 46.24000549316406,
+          "height": 46.240020751953125,
+          "insideDiagram": true,
+          "offeringOwnsCenter": true
+        }
+      ]
+    },
+    {
+      "name": "narrow",
+      "mode": "normal",
+      "filename": "narrow-normal.png",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "sockets": [
+        {
+          "variant": "frame",
+          "width": 61.19999694824219,
+          "height": 61.20001220703125,
+          "insideDiagram": true,
+          "offeringOwnsCenter": true
+        }
+      ]
+    },
+    {
+      "name": "narrow",
+      "mode": "reduced",
+      "filename": "narrow-reduced.png",
+      "viewport": 390,
+      "scrollWidth": 390,
+      "sockets": [
+        {
+          "variant": "frame",
+          "width": 41.616004943847656,
+          "height": 41.615997314453125,
+          "insideDiagram": true,
+          "offeringOwnsCenter": true
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "thread": "Ensorcelled Thread",
+      "materials": [
+        "diamond_block",
+        "diamond_block"
+      ]
+    },
+    {
+      "thread": "Callous Thread",
+      "materials": [
+        "iron_block",
+        "iron_block"
+      ]
+    },
+    {
+      "thread": "Smoldering Thread",
+      "materials": [
+        "gold_block",
+        "gold_block"
+      ]
+    },
+    {
+      "thread": "Laced Thread",
+      "materials": [
+        "emerald_block",
+        "emerald_block"
+      ]
+    },
+    {
+      "thread": "Consecrated Thread",
+      "materials": [
+        "glowstone",
+        "glowstone"
+      ]
+    }
+  ],
+  "keyboardFrameFocus": true
+}

@@ -1,0 +1,174 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:gluttony",
+    "school": "irons_spellbooks:nature",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Gluttony",
+    "cast_type": "instant",
+    "cooldown_ticks": 1800
+  },
+  "rarity": "common",
+  "traditions": [
+    "primal"
+  ],
+  "traits": {
+    "vestige:life": 4,
+    "vestige:transmutation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 10
+    },
+    {
+      "type": "cooldown",
+      "ticks": 400
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:gluttony",
+            "duration": 200,
+            "charges": 3,
+            "triggers": [
+              {
+                "id": "vestige:gluttony/trigger",
+                "event": "vestige:item_use_finished",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "self",
+                  "required": true
+                },
+                "effects": [
+                  {
+                    "type": "food_mana",
+                    "values": {
+                      "amount": {
+                        "product": [
+                          6,
+                          {
+                            "fact": "vestige:event/food_nutrition"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.8,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "leaves",
+                      "color": "4bba6b",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 0.95,
+                      "speed": 0.8,
+                      "phase": 0,
+                      "count": 6
+                    },
+                    {
+                      "shape": "helix",
+                      "color": "d7ff9d",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.6649999999999999,
+                      "speed": -0.52,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "d7ff9d",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "leaves",
+              "color": "4bba6b",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.95,
+              "speed": 0.8,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "helix",
+              "color": "d7ff9d",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.6649999999999999,
+              "speed": -0.52,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "d7ff9d",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

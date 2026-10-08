@@ -1,0 +1,16 @@
+// Real Crane Bag item and production assets; no Paper or texture overrides.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/crane-bag-shipped-preview-build'))
+        project.afterEvaluate {
+            project.sourceSets.main.java.setSrcDirs([project.file('run/crane-bag-shipped-input/src/main/java'), project.file('docs/art/crane-bag-shipped-v10/preview-source')])
+            project.sourceSets.main.resources.setSrcDirs([project.file('run/crane-bag-shipped-input/src/main/resources'), project.tasks.named('generateModMetadata')])
+            project.tasks.named('generateModMetadata').configure {
+                into project.layout.buildDirectory.dir('generated/sources/modMetadata')
+            }
+            project.neoForge.runs.effectsCapture.programArguments.set(['--width', '480', '--height', '360'])
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+            project.tasks.named('runEffectsCapture').configure { maxHeapSize = '2G' }
+        }
+    }
+}

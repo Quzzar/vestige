@@ -3,9 +3,9 @@
   "category": "misc",
   "group": "vestige_plinth",
   "pattern": [
-    "SBS",
+    "SSS",
     " B ",
-    "SBS"
+    "SSS"
   ],
   "key": {
     "B": {

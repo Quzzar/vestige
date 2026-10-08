@@ -37,6 +37,25 @@ class CastObserverTest {
         cast(runtime,world,observer,true);runtime.tick();runtime.tick();runtime.close();
         assertThrows(IllegalStateException.class,runtime::tick);assertEquals(0,world.secondary);assertEquals(0,runtime.activeCasts());
     }
+    @Test void actualMitigationNotifiesForSecondaryIncomingDamageAndSourceRemovalRevokesFutureBindings() {
+        var world=new World();var runtime=new SpellRuntime(world);var enabled=new java.util.concurrent.atomic.AtomicBoolean(true);
+        var prevented=new ArrayList<Double>();
+        var binding=new SpellEffects.Binding(id("worn/ward"),List.of(new SpellTrigger(id("worn/hit"),SpellTriggerTypes.ARMOR_DAMAGE_CALCULATING,List.of())),
+                List.of(new SpellEffects.Action(id("reduce_pending_damage"),Map.of("amount",new com.quzzar.vestige.magic.expression.SpellValue.Constant(2)),Map.of())),20,2);
+        var ability=new ItemAbilityDefinition(id("worn"),TraitProfile.empty(),Map.of(),List.of(),List.of(new SpellTrigger(id("use"),SpellTriggerTypes.INTERACT,List.of())),
+                List.of(new SpellEffects.InstallBinding(binding,TargetSpec.self())),ItemAbilityDefinition.Activation.REACTIVE);
+        var source=new CastReservation() {
+            public boolean valid(){return true;}public void commit(){}public boolean continues(){return enabled.get();}
+            public CastObserver observer(){return new CastObserver(){public void mitigated(double amount,SpellRuntime.Context c){prevented.add(amount);}};}
+        };
+        runtime.activate(ability,SpellEvent.of(SpellTriggerTypes.INTERACT,world.actor,null),List.of(),source);
+        var first=new SpellEvent.PendingOutcome(5);
+        runtime.emit(new SpellEvent(SpellTriggerTypes.ARMOR_DAMAGE_CALCULATING,world.actor,Optional.of(new SpellSubject.Entity(world.actor)),Optional.of(first),CausalChain.start().asSecondary()));
+        assertEquals(3,first.amount());assertEquals(List.of(2d),prevented);
+        enabled.set(false);var second=new SpellEvent.PendingOutcome(5);
+        runtime.emit(new SpellEvent(SpellTriggerTypes.ARMOR_DAMAGE_CALCULATING,world.actor,Optional.of(new SpellSubject.Entity(world.actor)),Optional.of(second),CausalChain.start()));
+        assertEquals(5,second.amount());assertEquals(List.of(2d),prevented);
+    }
     private static final class Observer implements CastObserver {
         final List<String> events=new ArrayList<>();boolean rider;
         public void preparing(SpellRuntime.Context c){events.add("prepare");}

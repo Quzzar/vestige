@@ -49,7 +49,9 @@ The 110 Iron adaptations retain descriptive ratings of four and scaling baseline
 
 ## Rarity and balancing criteria
 
-Explicit assignments for all 214 spells live in [spell-balance-policy.json](../../tools/spell-balance-policy.json). The file records rarity, role, mana, charge, native cooldown, and a tuning rationale for every spell. It has no trait-point allowances, weighted totals, or quadratic load checks.
+**Owner resource-valuation direction, October 8, 2026:** health is more valuable than food, and food more valuable than experience. The [owner-accepted payment values](resource-payments.md) are **1 heart = 2 full hunger icons (4 food points) = 30 XP points = 30 mana**, now used by Bloodbound/Fasting and Homebound Eye. Exhausting's missing cooldown drawback is replaced by an actual mana premium. The [audit](../ritual-shape-and-payment-audit.md) preserves pre-fix evidence; survival recovery and resource access still need playtesting.
+
+Explicit assignments for all 214 spells live in [spell-balance-policy.json](../../tools/spell-balance-policy.json). The file records rarity, role, mana, charge, zero ordinary cooldown and a tuning rationale for every spell. It has no trait-point allowances, weighted totals, or quadratic load checks.
 
 | Rarity | Initial authoring role |
 |---|---|
@@ -120,11 +122,11 @@ Compare spells by role and by total value over a useful encounter window. A sing
 
 For an attack with measured or explicitly assumed hit probability `h`, damage per hit `d`, pulse count `n`, and eligible victims per pulse `v`, a useful comparison is `h × d × n × v`. Record assumptions beside the measurement. Mana and time efficiency divide a comparable outcome by actual spent mana or the relevant execution window. They are undefined when the denominator is zero and are poor cross-family measures when outcome units differ.
 
-Native cooldowns and mana are authored independently of source provenance and enforced by paid casts. Use `/vestige_magic mana 100` and `cast_balanced` in Survival to exercise them. The ordinary development `cast` command bypasses payment and cooldowns, so its observed cast frequency is not a balance measurement. Player mana recovers according to the accepted baseline below; capacity progression remains deferred. Recasts share their initial payment and cooldown, and only one active charge/channel per actor is allowed. Interrupted charges and failed payment do not start cooldown; a paid cast retains its cooldown through effect failure or interruption.
+**October 7, 2026: the owner removed ordinary spell cooldowns from all 214 definitions and modes.** Mana, preparation, outcomes and relative trait units retain their previous values. Source cooldowns remain inert provenance. Recasts share initial payment, and only one active charge/channel per actor is allowed. The owner also removed the sixty-second wand recovery; wands, staffs and scrolls have no extra equipment recovery. Wand durability and composed costs are unchanged. Use `/vestige_magic mana 100` and `cast_balanced` in Survival to exercise resources and preparation; the ordinary `cast` command bypasses resources. Repeat frequency is now governed by preparation/channel timing and available resources; encounter tuning remains playtest work.
 
-## Planned player mana baseline
+## Player mana baseline
 
-**October 6, 2026: accepted and implemented baseline.** Players have **100 maximum mana**, start with full mana on first spawn and after death/respawn, and have a mana bar that is hidden at full mana and visible while mana is missing, including at zero. The native runtime implements this player pool, recovery and synchronized mana HUD. Relogging preserves the current balance and pending recovery delay; nondeath clones preserve both as well.
+**October 6, 2026: accepted and implemented baseline.** Players have **100 base maximum mana**, start with full mana on first spawn and after death/respawn, and use per-item affordability shading. Wardweave/Cinderweave raise capacity to 125 while worn; equipping them does not refill mana. The native runtime implements this persistent player pool, recovery and private synchronized snapshots. Relogging preserves the current balance and pending recovery delay; nondeath clones preserve both as well.
 
 The catalog already contains explicit native costs for all 214 spells. Inspection of the packaged base definitions and successful balance checks gives:
 
@@ -137,11 +139,11 @@ The catalog already contains explicit native costs for all 214 spells. Inspectio
 
 At 100 mana, with no replenishment, an unshaped Firebolt costs 12 (eight casts), Heal costs 15 (six), Fireball costs 28 (three), Recall costs 30 (three), and Cataclysm costs 90 (one). Every unmodified base spell can be afforded from a full pool. Crafted cost increases and added payments can exceed the base values, so that statement is not a guarantee for every shaped scroll. Keep authored spell costs for the first pool/recovery playtest rather than rescaling the catalog solely to change the test cap.
 
-**Accepted recovery:** recover 2 mana per second after five seconds without a successful mana expenditure. An empty 100-mana pool then fills in 55 seconds. Spending 30 mana would take 20 seconds to recover when no other mana is spent. A successful mana payment from a spell or device restarts the delay; rejected payment does not. Keep this delay separate from each spell's authored cooldown and charge time. These timings are arithmetic forecasts, not observed survival-playtest results.
+**Accepted recovery:** recover 2 mana per second after five seconds without a successful mana expenditure. An empty 100-mana pool then fills in 55 seconds. Spending 30 mana would take 20 seconds to recover when no other mana is spent. A successful mana payment from a spell or device restarts the delay; rejected payment does not. Keep this delay separate from spell preparation and equipment recovery; ordinary spells have no cooldown. These timings are arithmetic forecasts, not observed survival-playtest results.
 
-The HUD should display current mana while below the maximum, including during any recovery delay, and disappear when completely refilled. Player initialization, death reset, passive recovery and authoritative server-to-client snapshots are implemented. The violet gauge occupies the gap between the XP strip and hotbar, leaving the vanilla health, hunger and XP displays in place. No capacity progression is selected by this baseline.
+The October 7 [mana display](mana-display.md) supersedes the standalone HUD gauge: mana-using items shade only while their next composed mana payment is unaffordable. No numerical pooled HUD is drawn. Player initialization, death reset, recovery and authoritative private snapshots remain implemented.
 
-[Homebound Eye](attuned-devices.md#durability-and-imbuement) has an accepted price of 30 mana plus 2 durability per return, with separate accepted health, hunger and XP prices. Review the starting device prices against the implemented recovery rate and real travel/escape opportunities during playtesting.
+[Homebound Eye](attuned-devices.md#durability-and-imbuement) uses the October 8 shared valuation: 30 mana plus 2 durability per return, with equivalent health, hunger and XP routes. Review the starting device prices against the implemented recovery rate and real travel/escape opportunities during playtesting.
 
 ## Audit and verification
 
@@ -156,4 +158,4 @@ python3 tools/document_spell_balance.py --check
 
 Check mode verifies policy coverage, rarity agreement, and report freshness. Python behavior tests exercise equivalent trait scales with compensated formulas, unit-sensitive additions, symbolic facts, mixed responses, stacked amplification, spatial growth, addon traits with large ratings, and zero baselines. Java tests exercise parsing, catalog coverage, and rarity conditions through the runtime.
 
-The [complete balance review](../spell-balance-review.md) records actual outcome tuning, role comparisons, native costs, and direct per-creature ceilings for all 214 spells. Regression encounters test actual Minecraft health changes, modifier scaling, crowd and hit caps, cooldown payment, protection, control, and summons. This completes the initial catalog pass; future PvP, AI, terrain and multiplayer playtesting can refine it. Formula response remains separate from observed gameplay value.
+The [complete balance review](../spell-balance-review.md) records actual outcome tuning, role comparisons, native costs, and direct per-creature ceilings for all 214 spells. Regression encounters test actual Minecraft health changes, modifier scaling, crowd and hit caps, repeat payment, protection, control, and summons. This completes the initial catalog pass; future PvP, AI, terrain and multiplayer playtesting can refine it. Formula response remains separate from observed gameplay value.

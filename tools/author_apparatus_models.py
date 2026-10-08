@@ -132,6 +132,10 @@ def generated_files(manifest):
                         'recipe': 'vestige:' + name}}},
                 'requirements': [['has_material', 'has_the_recipe']],
                 'rewards': {'recipes': ['vestige:' + name]}}
+            conditions = recipe.get('material_conditions', {}).get(material['id'])
+            if conditions:
+                for directory in ('recipe', 'advancement/recipes'):
+                    outputs[RESOURCES / 'data/vestige' / directory / (name + '.json')]['neoforge:conditions'] = copy.deepcopy(conditions)
     outputs[RESOURCES / 'data/minecraft/tags/block/mineable/pickaxe.json'] = {'replace': False, 'values': names + ['#vestige:standing_stones']}
     lang_path = RESOURCES / 'assets/vestige/lang/en_us.json'
     language = json.loads(lang_path.read_text())

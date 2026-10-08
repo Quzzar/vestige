@@ -1,0 +1,113 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:summon_polar_bear",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Summon Polar Bear",
+    "cast_type": "long",
+    "cooldown_ticks": 3600
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:conjuration": 4,
+    "vestige:life": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 30
+    },
+    {
+      "type": "mana",
+      "amount": 42
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 600,
+        "values": {
+          "count": 1,
+          "health": 24,
+          "attack_damage": 5
+        },
+        "identifiers": {
+          "entity": "minecraft:polar_bear"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 600,
+          "radius": 1,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "48badf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": 0.4,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "sigil",
+              "color": "e7fbff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": -0.26,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "e7fbff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "await_recast",
+      "timeout": 600
+    },
+    {
+      "type": "dismiss_manifestations"
+    }
+  ]
+}

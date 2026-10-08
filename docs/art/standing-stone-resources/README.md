@@ -19,13 +19,13 @@ The amount comes **before** its icon. XP and mana are whole points. Health and h
 
 The first two fixture rows are enabled and the final row is disabled. These are appearance examples, not approved exchange rates. **Only ordinary XP travel is live**. Alternate previews cannot send travel, rename or paging requests and spend no resources. Distance-based health/food/mana rates, affordability rules and material-selected travel payments remain separate work.
 
-![Actual XP point costs](native/cost-xp.png)
+![Actual XP point costs](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/cost-xp.png)
 
-![Actual health preview: 2 HP is shown as 1 heart](native/cost-health.png)
+![Actual health preview: 2 HP is shown as 1 heart](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/cost-health.png)
 
-![Actual mana preview using the shared rune](native/cost-mana.png)
+![Actual mana preview using the shared rune](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/cost-mana.png)
 
-![Actual food preview: 2 food points is shown as 1 food icon](native/cost-hunger.png)
+![Actual food preview: 2 food points is shown as 1 food icon](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/cost-hunger.png)
 
 ## Mana standard, first review
 
@@ -33,29 +33,29 @@ The [mana display direction](../../design/mana-display.md) uses a 9×9 native GU
 
 The meter uses synchronized native mana, including existing capacity/recovery. It stays hidden at full mana, remains visible at zero and sits above occupied vanilla resource rows. The native captures verify ordinary, empty, armored, full-hidden and underwater states. Armor/air remain readable, and mana does not cover the XP bar. The source also respects spectator mode/Hide GUI and reserves room for the selected-item name; vehicle health and extra heart rows were not independently visually captured in this pass.
 
-![Actual 50 mana and half-filled meter](native/mana-half.png)
+![Actual 50 mana and half-filled meter](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/mana-half.png)
 
-![Actual zero mana with an empty meter](native/mana-empty.png)
+![Actual zero mana with an empty meter](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/mana-empty.png)
 
-![Mana above armor and health](native/mana-armored.png)
+![Mana above armor and health](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/mana-armored.png)
 
-![Full mana keeps the HUD hidden](native/mana-full-hidden.png)
+![Full mana keeps the HUD hidden](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/mana-full-hidden.png)
 
-![Mana above armor and underwater air](native/mana-underwater.png)
+![Mana above armor and underwater air](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/mana-underwater.png)
 
 ## Three actual pages
 
 Twenty real same-key peers are available through native page requests: eight destinations, eight destinations, then four. Name and attunement remain visible on every page. The first page disables Previous; the final page disables Next. The shorter final list shrinks its panel. A source-only or single-page network shows no paging controls or page count.
 
-![Page 1 of 3](native/list-narrow.png)
+![Page 1 of 3](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/list-narrow.png)
 
-![Page 2 of 3](native/second-page.png)
+![Page 2 of 3](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/second-page.png)
 
-![Page 3 of 3](native/last-page.png)
+![Page 3 of 3](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/last-page.png)
 
-![Single-page short network omits pagination](native/short-list.png)
+![Single-page short network omits pagination](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/short-list.png)
 
-![Source-only network omits destinations and pagination](native/only-current-stone.png)
+![Source-only network omits destinations and pagination](/Users/quzzar/Projects/vestige/docs/art/standing-stone-resources/native/only-current-stone.png)
 
 Additional visually inspected frames retain the [smaller GUI scale](native/list-wide.png), [editor](native/editing-wide.png), [saved name](native/renamed-wide.png), [zero-XP disabled list](native/unaffordable.png) and [actual paid arrival](native/after-travel.png).
 

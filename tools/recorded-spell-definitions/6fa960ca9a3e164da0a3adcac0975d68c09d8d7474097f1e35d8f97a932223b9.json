@@ -1,0 +1,156 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:sacrifice",
+    "school": "irons_spellbooks:blood",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Sacrifice",
+    "cast_type": "instant",
+    "cooldown_ticks": 20
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:death": 4,
+    "vestige:blood": 4,
+    "vestige:necromancy": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 36
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            24,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "owned"
+      },
+      "effects": [
+        {
+          "type": "explode",
+          "values": {
+            "amount": {
+              "sum": [
+                {
+                  "product": [
+                    6,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                {
+                  "product": [
+                    0.25,
+                    {
+                      "fact": "vestige:target/health"
+                    }
+                  ]
+                }
+              ]
+            },
+            "radius": {
+              "product": [
+                3,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "count": 6
+          }
+        },
+        {
+          "type": "despawn"
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "eb6684",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "c92551",
+            "alpha": 0.85,
+            "width": 0.085,
+            "scale": 1.1,
+            "speed": 1.7,
+            "phase": 0,
+            "count": 12
+          },
+          {
+            "shape": "fangs",
+            "color": "ffd0b7",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.77,
+            "speed": -1.105,
+            "phase": 1.2,
+            "count": 6
+          },
+          {
+            "shape": "sparks",
+            "color": "ffd0b7",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

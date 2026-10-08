@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
@@ -33,6 +34,9 @@ public final class ScrollItems {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, VestigeMainMod.MOD_ID);
     public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<SpellWandItem> WAND = ITEMS.register("wand", () -> new SpellWandItem(new Item.Properties().durability(20)));
+    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY)));
+    public static final DeferredItem<Item> DISSENTIENT_DIAMOND = ITEMS.register("dissentient_diamond", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40)));
     public static final DeferredItem<ScrollFragmentItem> FRAGMENT = ITEMS.register("scroll_fragment", () -> new ScrollFragmentItem(new Item.Properties()));
     public static final DeferredItem<Item> ENSORCELLED_THREAD = ITEMS.register("ensorcelled_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final DeferredItem<Item> CALLOUS_THREAD = ITEMS.register("callous_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
@@ -40,6 +44,7 @@ public final class ScrollItems {
     public static final DeferredItem<Item> LACED_THREAD = ITEMS.register("laced_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final DeferredItem<Item> CONSECRATED_THREAD = ITEMS.register("consecrated_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final DeferredItem<AttunementShardItem> ATTUNEMENT_SHARD = ITEMS.register("attunement_shard", () -> new AttunementShardItem(new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<WhisperingShellItem> WHISPERING_SHELL = ITEMS.register("whispering_shell", () -> new WhisperingShellItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<HomeboundEyeItem> HOMEBOUND_EYE = ITEMS.register("homebound_eye", () -> new HomeboundEyeItem(new Item.Properties().durability(HomeboundEyeItem.DURABILITY)));
     public static final DeferredItem<com.quzzar.vestige.storage.CraneBagItem> CRANE_BAG = ITEMS.register("crane_bag", () -> new com.quzzar.vestige.storage.CraneBagItem(new Item.Properties().stacksTo(1)));
     public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<ScrollDismantlingRecipe>> DISMANTLE = SERIALIZERS.register(
@@ -144,9 +149,15 @@ public final class ScrollItems {
         // Resource-backed recipes exist on both physical sides before a world is opened.
         RitualCatalog.builtinIds().forEach(id -> event.accept(scroll(id)));
         RitualCatalog.builtinTraits().forEach(id -> event.accept(fragment(id)));
+        event.accept(FLUXED_FLINT.get());
+        event.accept(DISSENTIENT_DIAMOND.get());
         event.accept(ATTUNEMENT_SHARD.get());
         event.accept(HOMEBOUND_EYE.get());
+        event.accept(WHISPERING_SHELL.get());
         event.accept(CRANE_BAG.get());
+        event.accept(com.quzzar.vestige.equipment.MagicEquipment.WARDWEAVE.get());
+        event.accept(com.quzzar.vestige.equipment.MagicEquipment.CINDERWEAVE.get());
         MagicalThreadRecipe.types().forEach(type -> event.accept(type.item()));
+        RitualCatalog.builtinTraits().stream().filter(StaffData::affinityAllowed).forEach(trait -> event.accept(StaffData.create(trait)));
     }
 }

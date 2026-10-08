@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-08",
+  "scope": "Registered ordinary ingredient and native rarity-name color; approved artwork unchanged",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "nativeClientRun": "BUILD SUCCESSFUL in 3m 14s",
+  "nativeAssertions": 6,
+  "assetSha256": {
+    "models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+    "textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51"
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "bdf00bee918c5e1b60838d3c1546b6d6676a9ee967d17b77472db9861347294f",
+    "src/main/resources/assets/vestige/lang/en_us.json": "64e23c9b35a24fdeebd545325a40a32a4642fe92b7adaeece31489448f54c005"
+  },
+  "nativeEvidence": [
+    "native/inventory-scale-3.png",
+    "native/inventory-scale-2.png",
+    "native/held-offered-and-dropped.png"
+  ],
+  "tooltips": "Real registered item and Wither Skeleton Skull rendered with vanilla tooltip API in screen post-render; both Uncommon yellow. Unrelated default cursor tooltip remains visible.",
+  "crop": {
+    "file": "native/inventory-comparison-crop.png",
+    "source": "native/inventory-scale-3.png",
+    "bounds": [
+      676,
+      451,
+      1264,
+      989
+    ],
+    "pixelEqualityVerified": true
+  },
+  "registeredItem": "vestige:dissentient_diamond",
+  "rarity": "UNCOMMON",
+  "color": "#FFFF55",
+  "recipeImplemented": false,
+  "intrinsicTraitAssigned": false,
+  "artApproval": "../approval.json",
+  "isolatedCollisionPreview": {
+    "scope": "Same isolated art-only Standing Stone bypass as prior v11 capture; no Standing Stone used in scene",
+    "originalSource": "../StandingStoneCollision.original.java",
+    "previewSource": "../StandingStoneCollision.preview.java",
+    "isolatedSourceRestored": true
+  },
+  "log": "native/client.log.gz",
+  "installationOrPublication": false,
+  "worldTestSuiteRun": false
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-10-08T19:17:08" hostname="Quzzars-Book.local" time="0.021">
+  <properties/>
+  <testcase name="simultaneousChargesAndChannelsAreBlockedButDormantRecastsAllowOtherSpells()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="fieldPulsesAreAnchoredToCreationAndIncludeTheFinalIntervalBeforeCleanup()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.002"/>
+  <testcase name="presentationReceivesTheSameOrderedSelectionWithoutASecondQuery()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="modesChooseAnAlternateChargePlanWithoutChangingSpellIdentity()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="reactionsMutateOnlyUncommittedOutcomes()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="recastResumesTheSameSessionAndPaysOnlyOnce()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="recastsShareOnePaymentAndRecoveryWhileDevelopmentBypassRemainsExplicit()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="rarityIsQueryableAndUnaffectedByTraitBoosts()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.002"/>
+  <testcase name="timeoutAndInterruptionCancelContinuationsWithoutSpendingChargeCosts()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="capturedFactsRemainStableAcrossDelayedDelivery()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="cooldownStartsAfterPaymentAndExpiresExactlyForItsActorAndSpell()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="interruptedChargesAndFailedPaymentDoNotStartRecoveryButPaidFailuresDo()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="replacementUsesTheOriginalTargetWhenBackingCreatesADifferentSubject()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="consumedBindingsNotifyOnceWithoutDeletingTheirManifestation()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="repeatBranchAndTargetIterationUseReusablePlans()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="preparationClearsOnPaymentFailureActorLossAndRuntimeClose()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="shapingPersistsThroughChargeRecastAndManifestationCallbacksAndPaysOnce()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="expiredBackingAndUnavailableActorsRemovePersistentBehavior()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="bindingsReactOnlyOnTheirSubjectAndRespectChargesAndExpiry()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="bindingExpiryAndReplacementCancelItsDelayedConsequences()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="replacingBehaviorAndDispellingManifestationsOwnsCleanup()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="failedCostsForfeitsAndFailedEffectsDoNotLeaveActiveState()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.0"/>
+  <testcase name="expiredBindingsNotifyOnceAndDistinguishNaturalExpiry()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <testcase name="chargeAndDelayExecuteInOrderWithAnImmutableResolvedProfile()" classname="com.quzzar.vestige.magic.runtime.SpellRuntimeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

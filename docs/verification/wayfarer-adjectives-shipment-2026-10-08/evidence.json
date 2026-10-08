@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-08",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "base_commit": "4ae5c801",
+  "branch": "codex/wayfarer-adjectives",
+  "unit": {
+    "tests": 202,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 45
+  },
+  "native_world": {
+    "tests": 354,
+    "required_passed": 354,
+    "kithkyn_loaded": true,
+    "includes_final_wayfarer_hooks": true
+  },
+  "gallery_tests": 6,
+  "native_recordings_checked": 214,
+  "leyline_parity_fixtures": 490,
+  "generator_reproduction_changed_files": 0,
+  "authoring": [
+    {
+      "check": "convert_pathfinder_spells",
+      "exit": 0
+    },
+    {
+      "check": "document_spells",
+      "exit": 0
+    },
+    {
+      "check": "audit_spell_balance",
+      "exit": 0
+    },
+    {
+      "check": "document_spell_balance",
+      "exit": 0
+    },
+    {
+      "check": "document_pathfinder_inventory",
+      "exit": 0
+    },
+    {
+      "check": "document_pathfinder_selection",
+      "exit": 0
+    },
+    {
+      "check": "document_spell_art",
+      "exit": 0
+    },
+    {
+      "check": "export_spell_effects",
+      "exit": 0
+    },
+    {
+      "check": "author_magic_adjectives",
+      "exit": 0
+    },
+    {
+      "check": "author_ritual_recipes",
+      "exit": 0
+    },
+    {
+      "check": "author_spellshaping",
+      "exit": 0
+    },
+    {
+      "check": "audit_staff_traits",
+      "exit": 0
+    },
+    {
+      "check": "author_staff_texture",
+      "exit": 0
+    },
+    {
+      "check": "author_wand_models",
+      "exit": 0
+    },
+    {
+      "check": "author_robe_inventory",
+      "exit": 0
+    },
+    {
+      "check": "author_robe_armor",
+      "exit": 0
+    },
+    {
+      "check": "author_wayfarer_art",
+      "exit": 0
+    },
+    {
+      "check": "test_spell_balance",
+      "exit": 0
+    },
+    {
+      "check": "test_ritual_recipes",
+      "exit": 0
+    },
+    {
+      "check": "test_spell_presentation",
+      "exit": 0
+    },
+    {
+      "check": "test_native_capture",
+      "exit": 0
+    }
+  ],
+  "jar_sha256": "3ba781c1883c9eaf473cb22b29507090d2cd7dc2a64957a1b8e116105fd4e353",
+  "jar_bytes": 8336682,
+  "source_files": 3907,
+  "source_manifest_sha256": "d547dd5ade0c9f49cc6e32ad06c0824b165b8ad3d5403e4c08fcae908b61afd6",
+  "limitations": [
+    "Hourglass gameplay remains design-only.",
+    "Other unapproved clothing and robe crafted imbuements remain separate work.",
+    "Native boots capture ran without Kithkyn; combined behavior suite loaded Kithkyn.",
+    "Optional JEI/EMI screens were not opened.",
+    "Installed client must restart to load the replacement jar."
+  ],
+  "publication_tracking": "GitHub pull request for codex/wayfarer-adjectives; no release tag",
+  "packaged_compiled_classes_verified": true,
+  "packaged_boots_and_adjective_resources_verified": true
+}

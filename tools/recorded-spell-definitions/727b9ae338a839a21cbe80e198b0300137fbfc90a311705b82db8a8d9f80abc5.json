@@ -1,0 +1,114 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1978",
+    "revision": "aon-2026-10-01; Player Core 2 errata 1.1 (2024-12-16)",
+    "name": "Collective Transposition",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core 2 p. 243",
+      "rank": 6,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1978"
+    }
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "occult"
+  ],
+  "traits": {
+    "vestige:space": 1,
+    "vestige:conjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            16,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "transpose",
+          "values": {
+            "radius": 8,
+            "count": 3
+          }
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "helix",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 1.3,
+            "speed": -1.2,
+            "phase": 0,
+            "count": 12
+          },
+          {
+            "shape": "sigil",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.9099999999999999,
+            "speed": 0.78,
+            "phase": 1.2,
+            "count": 6
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

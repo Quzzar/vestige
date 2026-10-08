@@ -11,7 +11,7 @@ and manual requests. Its layout follows Kithkyn's repository, with checks specif
 
 - Java 21 and Python 3.13, with Gradle dependency caching.
 - Deterministic native spell conversion and generated reference, balance, source and art checks.
-- Balance, presentation and recording verification, including hashes for all 214 cast videos.
+- Balance, presentation and recording verification, including hashes for all 214 cast videos. Hash-verified recorded definitions permit only the documented cooldown-removal compatibility revision; all other definition changes require new footage.
 - Gradle unit tests, packaging and Minecraft behavior tests, with Kithkyn co-loading disabled.
 - A separate cast-gallery job using Bun 1.3.11, the frozen lockfile, catalog tests and the production build.
 

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vestige · Vanilla readiness layers</title>
+<style>
+:root { color-scheme:dark; font:16px/1.5 system-ui,sans-serif; background:#202020; color:#eee }
+body { max-width:1000px; margin:auto; padding:24px 16px 48px }
+h1 { font-size:26px; margin:0 0 8px }
+p { max-width:780px; color:#ccc; margin:0 0 16px } a { color:#bdd9ef }
+video { display:block; width:100%; height:auto; background:#111; border:1px solid #555; box-sizing:border-box }
+nav { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin:20px 0 }
+select,button { font:inherit; color:inherit; background:#353535; border:1px solid #777; border-radius:3px; padding:5px 10px }
+button { cursor:pointer } :focus-visible { outline:3px solid #c5e0ee; outline-offset:3px }
+</style>
+<h1>Both layers, vanilla style</h1>
+<p>Mana and cooldown use the same translucent white shade and clear from top to bottom. Each clears independently; the overlap is more opaque.</p>
+<p>The columns show <strong>vanilla cooldown, mana, cooldown, both and ready</strong>. Recorded inside Minecraft using native item icons and slots.</p>
+<nav aria-label="Video options"><label for="scale">Minecraft GUI scale</label><select id="scale"><option value="3">3</option><option value="2">2</option></select><button id="restart" type="button">Replay</button><a href="README.md">Sources and verification</a></nav>
+<video id="comparison" controls muted autoplay loop playsinline src="videos/vanilla-scale-3.mp4" aria-label="Mana and cooldown clearing in the same direction with vanilla white shading"></video>
+<p style="margin-top:16px">Owner-approved appearance. The example uses 12 mana and a 15-second timer; production integration remains follow-up work. <a href="approval.json">Acceptance record</a>.</p>
+<script>
+const video = document.getElementById('comparison');
+document.getElementById('scale').addEventListener('change', event => {
+  video.src = `videos/vanilla-scale-${event.target.value}.mp4`;
+  video.load(); video.play().catch(() => {});
+});
+document.getElementById('restart').addEventListener('click', () => {
+  video.currentTime = 0; video.play().catch(() => {});
+});
+</script>
+</html>

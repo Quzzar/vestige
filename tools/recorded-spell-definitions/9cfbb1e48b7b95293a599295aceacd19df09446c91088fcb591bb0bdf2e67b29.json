@@ -1,0 +1,149 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:planar_sight",
+    "school": "irons_spellbooks:eldritch",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Planar Sight",
+    "cast_type": "instant",
+    "cooldown_ticks": 4000
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:divination": 4,
+    "vestige:void": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 32
+    },
+    {
+      "type": "cooldown",
+      "ticks": 500
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:area",
+        "duration": 400,
+        "values": {
+          "radius": {
+            "product": [
+              24,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "follow_target": 1
+        },
+        "identifiers": {
+          "particle": "minecraft:enchant"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  24,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "options": {
+                "through_blocks": 1,
+                "count": 16
+              }
+            },
+            "effects": [
+              {
+                "type": "status",
+                "values": {
+                  "duration": 40,
+                  "amplifier": 0
+                },
+                "identifiers": {
+                  "effect": "minecraft:glowing"
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 400,
+          "radius": {
+            "product": [
+              24,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "eye",
+              "color": "57418f",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.1,
+              "speed": 0.65,
+              "phase": 0,
+              "count": 12
+            },
+            {
+              "shape": "vortex",
+              "color": "d992ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.06999999999999999,
+              "speed": -0.42250000000000004,
+              "phase": 1.2,
+              "count": 6
+            },
+            {
+              "shape": "sparks",
+              "color": "d992ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

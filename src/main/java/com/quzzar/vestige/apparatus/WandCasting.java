@@ -18,7 +18,7 @@ import java.util.*;
 /** Reservations use complete held components, and deterministic wear commits before any spell outcomes. */
 @EventBusSubscriber(modid=VestigeMainMod.MOD_ID)
 public final class WandCasting {
-    private record Pending(SpellRuntime.Cast cast,Spellshaping.Compiled compiled,WandData.Binding binding) { }
+    private record Pending(SpellRuntime.Cast cast,Spellshaping.Compiled compiled,WandData.Binding binding,InteractionHand hand) { }
     private static final Map<Player,Pending> PENDING=new IdentityHashMap<>();
     private WandCasting() { }
     public static boolean cast(Player player,InteractionHand hand) {
@@ -29,7 +29,7 @@ public final class WandCasting {
         }
         var stack=player.getItemInHand(hand);var binding=WandData.binding(stack).orElse(null);
         var spell=binding==null ? null : NativeMagic.spells().spells().get(binding.scroll().spell());
-        if (spell==null || !player.isAlive() || player.isSpectator() || ScrollCasting.awaiting(player)) return false;
+        if (spell==null || !player.isAlive() || player.isSpectator() || ScrollCasting.awaiting(player) || StaffCasting.awaiting(player)) return false;
         WandComponents.Compiled component;
         try { component=WandComponents.compile(spell,binding.scroll(),binding.base(),binding.thread(),binding.tip()); }
         catch (IllegalArgumentException incompatible) { return false; }
@@ -39,9 +39,6 @@ public final class WandCasting {
         var reservation=new CastReservation() {
             public CastObserver observer() { return observer; }
             public boolean valid() { return ItemStack.matches(expected,player.getItemInHand(hand)); }
-            public Optional<Recovery> recovery() {
-                return Optional.of(new Recovery(VestigeMainMod.location("wand"),WandComponents.COOLDOWN_TICKS));
-            }
             public void commit() {
                 if (player.hasInfiniteMaterials()) return;
                 var held=player.getItemInHand(hand);int damage=held.getDamageValue()+component.wear();
@@ -56,7 +53,7 @@ public final class WandCasting {
                 compiled.modifiers(),SpellKnowledge.identified(player,spell.id()),Optional.empty(),false,compiled.shaping(),reservation);
         if (List.of(SpellRuntime.Status.BUSY,SpellRuntime.Status.COOLDOWN,SpellRuntime.Status.CONDITIONS_FAILED,
                 SpellRuntime.Status.LOOP_REJECTED,SpellRuntime.Status.COST_FAILED,SpellRuntime.Status.INTERRUPTED).contains(cast.status())) return false;
-        var active=new Pending(cast,compiled,binding);PENDING.put(player,active);settle(player,active);
+        var active=new Pending(cast,compiled,binding,hand);PENDING.put(player,active);settle(player,active);
         return true;
     }
     /** Continues the same already-paid cast, including empty-hand input after its final durability use. */
@@ -70,6 +67,12 @@ public final class WandCasting {
         return continued==pending.cast();
     }
     public static boolean awaiting(Player player) { return PENDING.containsKey(player); }
+    /** Presentation follows only the hand reserved by this exact initial cast. */
+    public static Optional<InteractionHand> preparingHand(Player player,UUID castId) {
+        var pending=PENDING.get(player);
+        return pending!=null && pending.cast().id().equals(castId) && pending.cast().status()==SpellRuntime.Status.CHARGING
+                ? Optional.of(pending.hand()) : Optional.empty();
+    }
     private static void settle(Player player,Pending pending) {
         if (!List.of(SpellRuntime.Status.CHARGING,SpellRuntime.Status.RUNNING,SpellRuntime.Status.AWAITING_RECAST).contains(pending.cast().status()))
             PENDING.remove(player);

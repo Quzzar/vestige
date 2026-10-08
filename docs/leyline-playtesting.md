@@ -20,10 +20,12 @@ Construction supports all [36 stone/masonry stair finishes](design/apparatus-var
 
 ```text
 Spellstone (1)      Plinths (2)
-D S D              S B S
-B A B              . B .
-B B B              S B S
+D S D              S S S
+S A S              . B .
+S . S              S S S
 ```
+
+The October 7 grids use five matching slabs, two Diamonds and one Amethyst Block per Spellstone, and one full block plus six matching slabs per two Plinths. With Supplementaries installed, the Stone Bricks grid keeps making its two pedestals; put each pedestal into any crafting-grid slot to convert it into one Stone Bricks Plinth. Other finishes keep their native construction recipes.
 
 Spellstone is [compact three-piece stonework with selected A corners](art/spellstone-corner-details/locked-a/README.md): two thick inclined supports, a visible opening and a smaller thick top stone. Supports are 3.5 model units thick; the 12×12 top is 3.25 units thick and receives scrolls at y10/16. Four smaller native Diamond pixel chips wrap the vertical cap corners onto their adjacent side faces; the side centers and top remain bare. The owner selected A from the October 6 corner studies. Its native Astral Seal keeps its glyph and animation, now close to the surface beneath resting items. Straight authored cuboid edges replace the stepped hover outline. Generated collision follows the supports and preserves the opening. Plinth has a flat 14/16-high cap/receiving surface, 12/16 foot/cap width and 10/16 shaft width. Mix any finishes within a ritual: they do not change magic. Stone Brick baseline IDs are `vestige:spellstone`/`vestige:plinth`; other finishes are `vestige:<material>_spellstone`/`vestige:<material>_plinth`. Tuff is `vestige:tuff_spellstone` and `vestige:tuff_plinth`. Use a fresh world; old Stone/Runic Pedestal IDs and migration hooks remain removed.
 
@@ -82,11 +84,11 @@ The [complete recipe ledger](ritual-recipes.md) lists ingredients and relative r
 
 A crafted scroll stores **Amplify, Range, Area and Casting Cost**. These stored factors are not printed in chat, the actionbar or scroll tooltips. Scroll tooltips show only their name; identification still determines whether that name is known. Moving or rebuilding the apparatus later does not change that scroll. A reference's existing bonuses are never copied or stacked into the new result.
 
-Effects read the scaling traits they already use. A self-only spell gains no reach, and a spell with no area consumer gains no coverage. Casting Cost still scales every existing cost component independently: mana, hunger, health, materials/durability, charge time and recovery. Recasts and lasting callbacks retain the original shaping and pay once. Definitions, descriptive ratings, rarity, discovery weights and unsupported capabilities do not change.
+Effects read the scaling traits they already use. A self-only spell gains no reach, and a spell with no area consumer gains no coverage. Casting Cost still scales every existing cost component independently: mana, hunger, health, materials/durability, charge time and any explicitly present equipment/data-pack recovery. Recasts and lasting callbacks retain the original shaping and pay once. Definitions, descriptive ratings, rarity, discovery weights and unsupported capabilities do not change.
 
 Final gameplay quantities round once after the complete expression. Costs of the same kind/item/operation compose before rounding; absent and rounded-zero components stay absent. Health **costs** convert native HP to hearts before rounding, then convert back, matching the calculator's heart field. Damage and healing outcomes round in native HP. Multipliers, fractions, velocities, probabilities, visual widths and intermediate expressions retain precision. Ordinary unshaped scrolls retain their existing runtime behavior.
 
-A concrete four-slot Fireball potency example uses Cross offset **3**, with Plinths **2 blocks below** Spellstone. Its complete Fire/Evocation profile produces approximately +9.8% Amplify, +5.4% Range, +6.1% Area and +4.3% Casting Cost. The current authored 8-HP damage becomes **9 HP**, 28 mana becomes **29**, charge 20 ticks becomes **21**, and recovery 100 becomes **104**. A radius of 3 remains **3** after rounding. Test with enough mana in Survival; Creative resource bypass cannot demonstrate actual payment.
+A concrete four-slot Fireball potency example uses Cross offset **3**, with Plinths **2 blocks below** Spellstone. Its complete Fire/Evocation profile produces approximately +9.8% Amplify, +5.4% Range, +6.1% Area and +4.3% Casting Cost. The current authored 8-HP damage becomes **9 HP**, 28 mana becomes **29** and charge 20 ticks becomes **21**. Ordinary spell cooldowns were removed on October 7, 2026. A radius of 3 remains **3** after rounding. Test with enough mana in Survival; Creative resource bypass cannot demonstrate actual payment.
 
 Fragment reconstruction retains its established trait intersection and weighted selection and produces an unshaped base scroll. Use its reference to craft a shaped version through the ingredient recipe. Native wands, equipment crafting and passive/free-item balancing remain separate future work.
 

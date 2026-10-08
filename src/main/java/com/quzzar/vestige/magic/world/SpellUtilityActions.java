@@ -104,7 +104,7 @@ final class SpellUtilityActions {
                 nearby.sort(Comparator.<AbstractArrow>comparingDouble(e->e.position().distanceToSqr(point)).thenComparing(AbstractArrow::getUUID));
                 for(var arrow:nearby) {
                     var previous=world.causedEntities.getOrDefault(arrow.getUUID(),context.cause());
-                    var returnedCause=previous.asSecondary().enter(new com.quzzar.vestige.magic.runtime.CausalChain.ActivationKey(context.spell().id(),VestigeMainMod.location("reflect_projectiles")));
+                    var returnedCause=previous.asSecondary().enter(new com.quzzar.vestige.magic.runtime.CausalChain.ActivationKey(context.definition().id(),VestigeMainMod.location("reflect_projectiles")));
                     if(returnedCause.isEmpty())continue;
                     if(!context.claimContact(arrow.getUUID(),VestigeMainMod.location("reflect_projectiles"),1,count))continue;
                     var shooter=arrow.getOwner();

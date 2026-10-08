@@ -44,19 +44,13 @@ public final class MagicalThreadRecipe {
         return types().stream().filter(type -> material.is(BuiltInRegistries.ITEM.get(type.material()))).findFirst();
     }
     public static boolean matches(List<ItemStack> seats) {
-        if (seats.size() != 8) return false;
-        var remaining = new ArrayList<>(ingredients());
-        for (int i = 0; i < 8; i++) {
-            var offering = seats.get(i);
-            if (offering.isEmpty()) continue;
-            if ((i & 1) != 0 || offering.getCount() != 1 || !remaining.remove(offering.getItem())) return false;
-        }
-        return remaining.isEmpty();
+        return FourSlotPattern.matches(seats, ingredients());
     }
     public static Optional<ItemStack> result(RitualInputs inputs) {
-        if (inputs.geometry().slots() != 4 || inputs.nodes().size() != 4
-                || inputs.nodes().stream().anyMatch(n -> n.seat() < 0 || n.seat() >= 8 || (n.seat() & 1) != 0)
-                || inputs.nodes().stream().map(RitualInputs.Node::seat).distinct().count() != 4) return Optional.empty();
+        int capacity = inputs.geometry().slots();
+        if (capacity != 4 || inputs.nodes().size() != capacity
+                || inputs.nodes().stream().anyMatch(n -> n.seat() < 0 || n.seat() >= 8 || capacity == 4 && (n.seat() & 1) != 0)
+                || inputs.nodes().stream().map(RitualInputs.Node::seat).distinct().count() != capacity) return Optional.empty();
         var seats = new ArrayList<>(java.util.Collections.nCopies(8, ItemStack.EMPTY));
         inputs.nodes().forEach(n -> seats.set(n.seat(), n.offering()));
         if (!matches(seats)) return Optional.empty();

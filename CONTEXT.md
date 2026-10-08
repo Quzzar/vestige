@@ -63,7 +63,16 @@ The placement of ingredients in relative Plinth recipe slots. Turning the whole 
 A completed incorrect arrangement that provides placement clues and may explode according to the reference spell's knowledge and volatility risk. An explosion destroys participating offerings and damages nearby creatures while preserving terrain and the reference scroll.
 
 **Equipment Crafting**:
-The planned construction of magical gear using ingredients and recipes.
+The construction of native magical gear through authored Spellstone/Plinth recipes. Wardweave and Cinderweave robes use eight offerings, including four matching-color wool blocks, and share spells' trait/variable resolution for their abilities. Other clothing packages remain proposals.
+
+**Staff**:
+A durable collection of spells that share one permanent trait. Its two/four/six menu slots accept only scrolls identified by the inserting player and matching that trait. Each removable scroll retains its own shaping; taking it off returns that stored variant. Casting pays the selected spell's ordinary costs plus 1/2/3/4 wear for native Common/Uncommon/Rare/Mythic rarity, including paid chaos. Default durability is 40/80/120 by slot capacity; selection never identifies spells.
+
+**Mundane Staff**:
+A physical weapon crafted from two matching vanilla shaft materials. It has the wooden-pickaxe combat profile, spends one durability on each successful left-click hit and uses a held 40% frontal guard after the normal five-tick raise delay on right-click. Every guarded hit spends one Staff durability; the guard has none of a shield's knockback, axe disabling or full-block behavior. It has no spell runtime or innate magical effect. A mundane Staff is intended to become the Shaft ingredient of a future magical Staff construction.
+
+**Staff Affinity**:
+The single descriptive trait a staff requires of its bound spells, excluding Amplify, Range and Area. Additional traits are allowed; the affinity is not a mutually exclusive school or a spell-power rank.
 
 **Runic Circle**:
 A structure for spell discovery, crafting and attunement, centered on a Spellstone and four inner Plinth slots, with up to four outer slots. Its active layout includes distances, height differences and connections between nodes.
@@ -104,6 +113,12 @@ _Avoid_: Slot Base, foundation bonus
 
 **Spellshaping**:
 The modification of a base spell through resolved traits, composed effects and typed costs, preserving its identity. Local offering–imbuement pairs select automatic rules; complete compounds replace their constituent contributions. Secondary plans have shared finite budgets. Only implemented rules appear in the executable ledger.
+
+**Adjustment Adjective**:
+A reusable italicized word describing an authored magical adjustment. Its meaning is shared vocabulary; each spell or item explicitly determines its compatible effects and trade-offs.
+
+**Combined Adjective**:
+One italicized word naming a particular combination of adjustments and their degrees. It describes their composed result without replacing their effects; an actual Spellshaping compound can instead replace its participating contributions.
 
 **Leyline Shaping**:
 The contribution of active ritual geometry to Amplify, Range, Area and Casting Cost, conditioned by the output's descriptive traits. Outcome modifiers affect only properties the output explicitly uses; Casting Cost scales its existing payment components independently.

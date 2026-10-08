@@ -1,0 +1,176 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:ascension",
+    "school": "irons_spellbooks:lightning",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Ascension",
+    "cast_type": "instant",
+    "cooldown_ticks": 300
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 4,
+    "vestige:air": 4,
+    "vestige:motion": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 36
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "launch",
+          "values": {
+            "up": 1.8,
+            "strength": 0
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 80,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:slow_falling"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "helix",
+            "color": "5594ff",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 1.45,
+            "speed": 1.8,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "e5f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.015,
+            "speed": -1.1700000000000002,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "e5f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "nearby_entities",
+        "required": false,
+        "distance": {
+          "product": [
+            4,
+            {
+              "trait": "vestige:area"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 6
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                5,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "helix",
+            "color": "5594ff",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 1.45,
+            "speed": 1.8,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "e5f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.015,
+            "speed": -1.1700000000000002,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "e5f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

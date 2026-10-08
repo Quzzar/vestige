@@ -1,0 +1,32 @@
+{
+  "status": "Owner-approved appearance",
+  "approvedLocalDate": "2026-10-08",
+  "timezone": "America/New_York",
+  "ownerStatement": "This is great. Yeah, let's lock this in.",
+  "scope": "Exact v11 texture and centered generated-item model shown in the native inventory comparison",
+  "texture": {
+    "productionFile": "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png",
+    "reviewCopy": "dissentient-diamond-16.png",
+    "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+    "size": [
+      16,
+      16
+    ]
+  },
+  "model": {
+    "productionFile": "src/main/resources/assets/vestige/models/item/dissentient_diamond.json",
+    "sha256": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+    "guiTranslation": [
+      0.5,
+      0,
+      0
+    ]
+  },
+  "evidence": {
+    "nativeCapture": "native/inventory-comparison-crop.png",
+    "nativeReceipt": "native-review.json",
+    "sourceAndPrompt": "../dissentient-diamond-v10/README.md"
+  },
+  "nameColorDirection": "Match Wither Skeleton Skull rarity: Minecraft 1.21.1 UNCOMMON / yellow (#FFFF55). No glint requested.",
+  "installationOrPublication": false
+}

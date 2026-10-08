@@ -37,7 +37,8 @@ class SpellJsonTest {
                 assertEquals(traditions, spell.traditions(), name);
                 assertFalse(SpellCapabilities.of(spell).isEmpty(), name);
                 assertTrue(spell.costs().stream().anyMatch(c -> c instanceof SpellCost.Mana), name);
-                assertTrue(spell.costs().stream().anyMatch(c -> c instanceof SpellCost.Cooldown), name);
+                assertFalse(spell.costs().stream().anyMatch(c -> c instanceof SpellCost.Cooldown), name);
+                assertTrue(spell.modes().values().stream().noneMatch(mode -> mode.costs().stream().anyMatch(SpellCost.Cooldown.class::isInstance)), name);
                 assertEquals(1, spell.traits().rating(id("amplify")), name);
             }
         }
@@ -84,6 +85,8 @@ class SpellJsonTest {
                 var definition = SpellJson.read(id(name), json);
                 assertEquals(json.get("rarity").getAsString(), definition.rarity().id(), name);
                 assertFalse(definition.effects().isEmpty(), name);
+                assertFalse(definition.costs().stream().anyMatch(SpellCost.Cooldown.class::isInstance), name);
+                assertTrue(definition.modes().values().stream().noneMatch(mode -> mode.costs().stream().anyMatch(SpellCost.Cooldown.class::isInstance)), name);
                 assertFalse(SpellCapabilities.of(definition).isEmpty(), name);
                 var source = definition.source().orElseThrow();
                 assertEquals(ResourceLocation.parse("irons_spellbooks:" + name), source.spell());
@@ -103,6 +106,7 @@ class SpellJsonTest {
                 assertTrue(json.has("rarity"), name + " must author its rarity explicitly");
                 assertEquals(json.get("rarity").getAsString(), spell.rarity().id());
                 assertEquals(id(name), spell.id()); assertFalse(spell.effects().isEmpty());
+                assertFalse(spell.costs().stream().anyMatch(SpellCost.Cooldown.class::isInstance), name);
                 assertFalse(SpellCapabilities.of(spell).isEmpty(), name);
             }
         }

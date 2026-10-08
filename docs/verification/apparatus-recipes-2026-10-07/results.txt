@@ -1,0 +1,22 @@
+standalone
+[10:23:04] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[10:23:04] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (3 tests)...
+[10:23:04] [Server thread/INFO] [minecraft/GameTestServer]: ========= 5 GAME TESTS COMPLETE IN 734.2 ms ======================
+[10:23:04] [Server thread/INFO] [minecraft/GameTestServer]: All 5 required tests passed :)
+BUILD SUCCESSFUL in 1m 23s
+
+supplementaries
+[10:10:16] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[10:10:20] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (3 tests)...
+[10:10:20] [Server thread/INFO] [minecraft/GameTestServer]: ========= 5 GAME TESTS COMPLETE IN 13.96 s ======================
+[10:10:20] [Server thread/INFO] [minecraft/GameTestServer]: All 5 required tests passed :)
+BUILD SUCCESSFUL in 6m 44s
+
+both
+[10:17:45] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'apparatus_recipes:0' (2 tests)...
+[10:17:57] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'pedestal_compat:0' (3 tests)...
+[10:18:01] [Server thread/INFO] [minecraft/GameTestServer]: ========= 5 GAME TESTS COMPLETE IN 41.63 s ======================
+[10:18:01] [Server thread/INFO] [minecraft/GameTestServer]: All 5 required tests passed :)
+BUILD SUCCESSFUL in 6m 51s
+
+Final unit tests: {"tests": 139, "failures": 0, "errors": 0, "skipped": 0}

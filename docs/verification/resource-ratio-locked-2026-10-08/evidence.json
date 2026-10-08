@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-08",
+  "scope": "Owner-locked cross-resource equivalence, shared conversion update and follow-up balance inventory; current combined working tree.",
+  "ratio": {
+    "health_hp": 2,
+    "full_heart_icons": 1,
+    "food_points": 4,
+    "full_hunger_icons": 2,
+    "experience_points": 30,
+    "mana": 40
+  },
+  "homebound_eye": {
+    "durability": 30,
+    "default_wear": 6,
+    "resource_wear": 2,
+    "health_hp": 2,
+    "food_points": 4,
+    "experience_points": 30,
+    "mana": 40
+  },
+  "source_sha256": {
+    "AGENTS.md": "ba41e97fe1de790ff0ef0b4f80cb0dc1a82c5076095962732ff12b6f9b259661",
+    "src/main/java/com/quzzar/vestige/magic/runtime/ResourceValuation.java": "d9b3c7a778de2f2856a377177b41678583d98cdedd21c4f379b1082e052c562d",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java": "63ef1eb44cf6560bdb117d12c11f2a00fb80622352f6134b8e7560da618d4c4b",
+    "src/main/java/com/quzzar/vestige/magic/world/NativeMana.java": "8aba30c751bc25f2289ff0eb0fa90b352b74384c2ef251f0ccbda2270f97feab",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeItem.java": "a4b5838251e5c7dd19c4acb46114c79c2d566cffe704dd1ab94288a2e337b4c2",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.java": "eeefe3adc8f4dfaf7c918d868c0782a231784fabf956871c848bfa5fe0ad5c79",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellshapingWorldTest.java": "31414571f76a099e11bc8d2e0948e78d97bf037de11e0e3a3001ea752ee121d7",
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastShapingTest.java": "1d7451f1e23f13ac0694d85f80c2afc5d36c45710dff268d49925a6a8bd61212",
+    "src/test/java/com/quzzar/vestige/apparatus/HomeboundEyeTest.java": "b1a7efcb878ff64aea58ac709293ee4971a866fdb85c392322468b566bcfc9bf",
+    "src/test/java/com/quzzar/vestige/apparatus/SpellshapingTest.java": "daff05c90a66f48172a5c67bff34559047eed75ffc75efc034dacf04ad513ae8",
+    "tools/author_spellshaping.py": "255ff3d62b58dc47469463f2732747b8d4ff5ad58d24843b51579a5c71d7e011",
+    "src/main/resources/data/vestige/spellshaping_rules.json": "861fd424e8c8617dd2238daf71cf1603fd8fb2992628feb2f99b5c7dce635edc",
+    "src/main/resources/assets/vestige/lang/en_us.json": "337b99b2bf5740d7f60eb568dccd198aa41175b30da3faf3384834fcbd447357",
+    "docs/design/resource-payments.md": "3257857c751f318cdb29d78f4baf90898b7340167df82a68192cb57e301cb6b3",
+    "docs/resource-payment-balance-review.md": "7ce640cb1ac6511cddbc0f8487699eac43d34ba050e27d7da2549f2d8ed4be0b",
+    "docs/design/spellshaping.md": "a0c1e8c071018eb6b4b0321cd8ad9316e590b7c85f0de0d06960f571ce5b8b99",
+    "docs/design/spell-balance.md": "a036a1e948dd42bbbf32d900706ee8628fd6ba326b6638d8011cd99a7718a5e2",
+    "docs/design/attuned-devices.md": "1db243a9e76be4f54021b8d6ba6226e5ba8c3f7b856278e0426415bb5cf27a0d",
+    "docs/design/standing-stone-payments.md": "1333bf29552bfc1dc8b69992c6ee0ecb648a585a131eb883c96596bc64ff13d3",
+    "docs/design/kairotic-hourglass.md": "96d953ceccb78069f8978f101553a9f028c58693208bfc068ea3d22bbbbecb05",
+    "docs/design/spell-runtime.md": "0ffac9a07b58e52d16c3a2fcfbf6acb13980e06ecf6ed0330f57485999740cc2"
+  },
+  "package": {
+    "path": "/private/tmp/vestige-resource-ratio-locked-build/libs/vestige-0.1.0.jar",
+    "sha256": "7b42e2a884800cb4738bfe9f720836f60e1891b06526b45bb9eaa26247eef32a",
+    "class_sha256": {
+      "com/quzzar/vestige/magic/runtime/ResourceValuation.class": "bd385087da2b4812e1e6606cc9d5a58125c29c7025eea3b928475b226188e70a",
+      "com/quzzar/vestige/magic/runtime/CastShaping.class": "0126b825e99205b01d52b4176c3f97e4e340588a8962edd0651632d4a9612e87",
+      "com/quzzar/vestige/apparatus/HomeboundEyeItem.class": "8e1ee2739fb1b92070fa9bcdf936d7ec7b1ef0c77194f0436b7888bddbb860da",
+      "com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.class": "d9949f564a383244f35acf1ae70a617153b1a2cb083e81f3e740bbda88dc806c"
+    },
+    "resource_agreement": {
+      "data/vestige/spellshaping_rules.json": true,
+      "assets/vestige/lang/en_us.json": true
+    }
+  },
+  "junit": {
+    "tests": 189,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "junit_suites": 43,
+  "gametests": {
+    "required": 33,
+    "passed": 33,
+    "filter": "homebound_|shaping_payment|wand_chain|item_mana|player_mana|standing_stone"
+  },
+  "checks": [
+    "build: pass",
+    "verifyKithkynCompatibility: pass",
+    "author_spellshaping.py --check: 56 rules",
+    "test_spell_balance.py: 17 pass",
+    "audit_spell_balance.py --check: 214 current",
+    "document_spell_balance.py --check: current",
+    "author_ritual_recipes.py --check: 214 current",
+    "sync_leyline_rules.mjs --check: 490 fixtures",
+    "documentation links and scoped whitespace: pass"
+  ],
+  "initial_failure": "The added insufficient-XP fixture incorrectly initialized level 4 plus 1 point (41 XP) as 29. Changed it to level 3 plus 2 points (29); final 33 tests passed. No production payment change was needed to fix the fixture.",
+  "limits": [
+    "The accepted exchange ratio is consistent; long-term survival economy and encounter balance still require playtesting.",
+    "Standing Stone alternate payments and Kairotic Hourglass implementation remain deferred.",
+    "Earlier native recipe-viewer capture attempts timed out. No new visual verification, testing-pack installation or publication is claimed."
+  ],
+  "logs": {
+    "final-run.log": "97cb955d1aa5988301e5c3462347aef1063d73521b9346eb2b79309cdf04f294",
+    "initial-fixture-failure.log": "f0794b367c1f9a992eb3103a40628265543227d0d4be77860c7045f770885d32"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1546",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Gouging Claw",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 333",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1546"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:polymorph": 1,
+    "vestige:transmutation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 6
+    },
+    {
+      "type": "cooldown",
+      "ticks": 20
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "melee",
+        "required": true,
+        "distance": {
+          "product": [
+            3,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 1,
+          "angle": 45
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                6,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 40,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:wither"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "slash",
+            "color": "c92551",
+            "alpha": 0.85,
+            "width": 0.18,
+            "scale": 1.5,
+            "speed": 1.5,
+            "phase": 0,
+            "count": 3
+          },
+          {
+            "shape": "fangs",
+            "color": "ffd0b7",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.0499999999999998,
+            "speed": -0.9750000000000001,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "ffd0b7",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

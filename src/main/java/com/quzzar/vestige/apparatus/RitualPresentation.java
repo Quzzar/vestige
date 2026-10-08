@@ -12,6 +12,14 @@ import java.util.UUID;
 public final class RitualPresentation {
     public static final int RUNE_COLOR = 0xf4e5ff;
     private RitualPresentation() { }
+    /** A failed reach beyond the inner ring communicates missing outer capacity, without item hints. */
+    public static void missingPlinths(RitualCrafting.Layout inner) {
+        float radius=(float)Math.min(16,inner.geometry().d1()+1.5);
+        var visual=new SpellVisual.Resolved(40,radius,List.of(
+                new SpellVisual.Layer(SpellVisual.Shape.PULSE,RUNE_COLOR,.85f,.035f,1,0,0,4)));
+        send(inner,new SpellVisualPayload(UUID.randomUUID(),inner.level().dimension().location(),visual,
+                List.of(point(inner,-1,false)),0,0,false,false,false));
+    }
     public static void connections(RitualCrafting.Layout layout,int duration,boolean success) {
         List<int[]> edges=new ArrayList<>();
         for (int inner:new int[]{0,2,4,6}) { edges.add(new int[]{-1,inner}); edges.add(new int[]{inner,(inner+2)%8}); }
