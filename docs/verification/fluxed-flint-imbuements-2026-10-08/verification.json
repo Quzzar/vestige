@@ -52,12 +52,27 @@
     "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": "52ba5a0661a1d638fc110647ab0b0ad242b55cf8734a2ef6cbc5c29a685003f2",
     "src/test/java/com/quzzar/vestige/apparatus/FluxedFlintImbuementsTest.java": "3b78c2deeceee1d2b5b4c206088f4e1cf2b166072ff133e6ded8ba340952a6a3",
     "tools/magic-adjective-policy.json": "55c925885cde95a4f8546e84e32c6ec1ef5167fea9bade8d134623361ca79cac",
-    "src/main/resources/data/vestige/magic_adjectives.json": "95e6f2d589f251f9a0f89ec4a4d23baedd263f340e010ac7e1c825be9023f125"
+    "src/main/resources/data/vestige/magic_adjectives.json": "95e6f2d589f251f9a0f89ec4a4d23baedd263f340e010ac7e1c825be9023f125",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "8fa69de7fba83d074c35d8490579325780c90f2e971d6fee85da9304c4eaa00e"
   },
-  "publication": "pending",
-  "installation": "pending",
+  "publication": {
+    "url": "https://github.com/Quzzar/vestige/pull/6",
+    "state": "draft",
+    "branch": "codex/fluxed-flint-imbuements",
+    "firstRevisionChecks": "build and cast-gallery passed"
+  },
+  "installation": {
+    "pack": "Kithkyn Testing",
+    "sha256": "c2c625a2bcb5c1087e0765688b9a1f6e2d72af5b88dca526547564dada862751",
+    "previousSha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+    "backupRetained": true,
+    "restartRequired": true,
+    "userWorldsChanged": false,
+    "otherModJarsChanged": false,
+    "installedAt": "2026-10-08T21:51:35.917736+00:00"
+  },
   "package": {
-    "sha256": "b2b6802dee12dcfff5355cf7b3837cff8481e194afdc6816ac727b29760290d0",
+    "sha256": "c2c625a2bcb5c1087e0765688b9a1f6e2d72af5b88dca526547564dada862751",
     "priorInstalledSha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
     "changedEntries": [
       "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class",
@@ -74,6 +89,7 @@
       "com/quzzar/vestige/apparatus/recipeviewer/FluxedFlintDisplays.class",
       "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class",
       "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class",
+      "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class",
       "data/vestige/magic_adjectives.json"
     ],
     "allExistingAssetsUnchanged": true,
@@ -91,8 +107,10 @@
       "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class": "cf52ba5cb32b41fa7747ba4921d848c5fc70ef2ee0b486b0b92aa36f935396a0",
       "com/quzzar/vestige/apparatus/recipeviewer/FluxedFlintDisplays.class": "91ae4036ce10aa7acbb44f90e48c719613e6e2971bba0b93c750e1df9db7074f",
       "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class": "be100a20175158af2c37b5dd8ad0a171b438390a5ad97caddb8e1b6d39deb5d3",
-      "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class": "e281f613314288af6e288359d7e178eeabb8b3cc6aaa2eb5e3142fe2bf2d4c82"
-    }
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class": "e281f613314288af6e288359d7e178eeabb8b3cc6aaa2eb5e3142fe2bf2d4c82",
+      "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class": "b09c1fa553d6df0f26c3a48c3c47b6be173e99ad928e87196a091b791248c570"
+    },
+    "nativeLoadedAssetsMatchJar": true
   },
   "scopedVerification": {
     "unitSuites": 47,
@@ -105,11 +123,20 @@
     "flintWorldCases": 21,
     "newFlintWorldCases": 7,
     "freshCompileWithoutBuildCache": true,
-    "nativePreview": "Stopped before rendering: Mac locked; requires unlocked client rerun",
-    "combinedInvocation": "test, packaging and all 372 world cases passed; final client task terminated with exit 143 because Mac was locked",
+    "nativePreview": "passed",
+    "combinedInvocation": "216 unit tests and 372 required world cases passed; packaging passed. Final isolated native invocation completed successfully after excluding the new mode from the general recorder.",
     "limitations": [
       "Optional JEI/EMI screens not opened",
       "Survival balance remains initial playtest tuning"
-    ]
-  }
+    ],
+    "nativeAssertions": 9,
+    "nativeFramesInspected": 5,
+    "nativeClientBuild": "success",
+    "nativeWithKithkyn": true,
+    "nativeLimitations": [
+      "No hovered tooltip is visible in the stored frames; exact translated names, rarity and glint are asserted in the actual client."
+    ],
+    "earlyAttempts": "Overlapping compilation and incomplete local cache fixed by fresh no-cache compilation. Initial native attempts were stopped; the new capture mode also activated the general recorder. The final recorder exclusion fixes the collision. The Mac was locked during the first UI inspection."
+  },
+  "sharedWorkspaceNote": "Preserved a separate unshipped Staff-preview guard in the shared recorder; the scoped recorder changes only the new Flint mode."
 }
