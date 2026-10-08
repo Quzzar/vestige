@@ -38,7 +38,7 @@ class WandComponentsTest {
         var bamboo=WandComponents.compile(dual,source(dual),WandComponents.Base.BAMBOO,MagicalThreadRecipe.Type.CALLOUS);
         assertEquals(1.2,dual.traits().resolve(bamboo.cast().modifiers()).rating(id("amplify")),1e-9);
     }
-    @Test void shapingCostsComposeOnceWhileSourceRecoveryRemainsSeparate() throws Exception {
+    @Test void shapingCostsComposeOnceAndPreserveExplicitAuthoredCooldowns() throws Exception {
         var fire=read("fireball");
         var scroll=new ScrollItems.Scroll(fire.id(),new LeylineShaping.Modifiers(1.1,1.2,.9,.65).traits(),new CastShaping(.65,true),List.of(new Spellshaping.Selection(id("reaching"),2)));
         var compiled=WandComponents.compile(fire,scroll,WandComponents.Base.STICK,MagicalThreadRecipe.Type.ENSORCELLED);
@@ -50,7 +50,8 @@ class WandComponentsTest {
         assertEquals(expected.modifiers(),compiled.cast().modifiers());
         double manaFactor=expected.shaping().adjustment().factors().getOrDefault("mana",1d)*.85;
         assertTrue(costs(compiled).contains(new SpellCost.Mana(Math.floor(28*manaFactor*.65+.5))));
-        assertTrue(costs(compiled).contains(new SpellCost.Time(23)));assertTrue(costs(compiled).contains(new SpellCost.Cooldown(65)));
+        assertTrue(costs(compiled).contains(new SpellCost.Time(23)));
+        assertTrue(costs(compiled).stream().noneMatch(SpellCost.Cooldown.class::isInstance));
         assertEquals(24,compiled.durability());assertEquals(1,compiled.wear());
         var longRecovery=new CastShaping(.65,true,new CastShaping.CostAdjustment(Map.of(),List.of(),0,0,20,0));
         assertEquals(List.of(new SpellCost.Cooldown(1950),new SpellCost.Time(20)),longRecovery.costs(List.of(new SpellCost.Cooldown(3000))));

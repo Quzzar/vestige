@@ -122,32 +122,32 @@ public final class StandingStoneTest {
         } finally { level.getServer().getPlayerList().remove(player); player.discard(); }
         h.succeed();
     }
+    private static List<ItemStack> stoneInputs(ItemStack shard, Item a, Item b) {
+        return List.of(shard, ItemStack.EMPTY, new ItemStack(a), ItemStack.EMPTY,
+                new ItemStack(Items.ENDER_PEARL), ItemStack.EMPTY, new ItemStack(b), ItemStack.EMPTY);
+    }
     @GameTest(template = "empty_9x3x9", batch = "standing_stones")
     public static void matchingMasonrySelectsEveryFinishWithoutChangingTheCopiedKey(GameTestHelper h) {
         var shard = shard(2); String key = AttunementShardItem.signature(shard).orElseThrow().key();
         for (var material : ApparatusMaterials.values()) {
             Item body = BuiltInRegistries.ITEM.get(material.body());
-            var offerings = List.of(new ItemStack(body, 3), ItemStack.EMPTY, shard.copy(), new ItemStack(Items.ENDER_PEARL), new ItemStack(body));
+            var offerings = stoneInputs(shard.copy(), body, body);
             var output = StandingStoneRecipe.result(offerings).orElseThrow();
             h.assertTrue(StandingStones.material(output).orElseThrow() == material && StandingStones.key(output).orElseThrow().equals(key),
                     "Wrong finish or changed attunement for " + material.id());
-            h.assertTrue(StandingStoneShape.fromKey(StandingStones.key(output).orElseThrow()) == StandingStoneShape.fromKey(key)
-                    && AttunementMark.fromKey(StandingStones.key(output).orElseThrow()).equals(AttunementMark.fromKey(key)),
-                    "Finish changed the signature-selected model or runes");
-            var reversed = new ArrayList<>(offerings); Collections.reverse(reversed);
-            h.assertTrue(ItemStack.isSameItemSameComponents(output, StandingStoneRecipe.result(reversed).orElseThrow()), "Recipe order changed finish");
-            h.assertTrue(StandingStoneRecipe.result(List.of(shard, new ItemStack(Items.ENDER_PEARL), new ItemStack(body),
-                    new ItemStack(BuiltInRegistries.ITEM.get(material.slab())))).isEmpty(), "A slab replaced a full masonry offering");
+            for (int rotation=0;rotation<4;rotation++) {
+                var rotated = new ArrayList<>(offerings); Collections.rotate(rotated,rotation*2);
+                h.assertTrue(ItemStack.isSameItemSameComponents(output, StandingStoneRecipe.result(rotated).orElseThrow()),"Rotation changed finish/key");
+            }
+            var wrong = new ArrayList<>(offerings); Collections.swap(wrong,2,4);
+            h.assertTrue(StandingStoneRecipe.result(wrong).isEmpty(),"Arbitrary permutation accepted");
+            h.assertTrue(StandingStoneRecipe.result(stoneInputs(shard,body,BuiltInRegistries.ITEM.get(material.slab()))).isEmpty(),"Slab replaced full body");
         }
-        h.assertTrue(StandingStoneRecipe.result(List.of(shard, new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.TUFF), new ItemStack(Items.QUARTZ_BLOCK))).isEmpty(),
-                "Mixed masonry finishes accepted");
-        h.assertTrue(StandingStoneRecipe.result(List.of(shard, new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.STONE_BRICKS, 2))).isEmpty(),
-                "One stack replaced two offering surfaces");
-        h.assertTrue(StandingStoneRecipe.result(List.of(shard, new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.TUFF), new ItemStack(Items.TUFF), new ItemStack(Items.DIRT))).isEmpty(),
-                "Extra offering accepted");
-        var original = StandingStoneRecipe.result(List.of(shard, new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.CHISELED_STONE_BRICKS), new ItemStack(Items.CHISELED_STONE_BRICKS))).orElseThrow();
-        h.assertTrue(StandingStones.material(original).orElseThrow() == ApparatusMaterials.STONE_BRICKS, "Original chiseled-brick alternative lost");
-        h.succeed();
+        h.assertTrue(StandingStoneRecipe.result(stoneInputs(shard,Items.TUFF,Items.QUARTZ_BLOCK)).isEmpty(),"Mixed bodies accepted");
+        var missing = new ArrayList<>(stoneInputs(shard,Items.TUFF,Items.TUFF)); missing.set(6,ItemStack.EMPTY);missing.set(2,new ItemStack(Items.TUFF,2));
+        h.assertTrue(StandingStoneRecipe.result(missing).isEmpty(),"Stack replaced second surface");
+        var original = StandingStoneRecipe.result(stoneInputs(shard,Items.CHISELED_STONE_BRICKS,Items.CHISELED_STONE_BRICKS)).orElseThrow();
+        h.assertTrue(StandingStones.material(original).orElseThrow()==ApparatusMaterials.STONE_BRICKS,"Original alternative lost");h.succeed();
     }
     @GameTest(template = "empty_9x3x9", batch = "standing_stones")
     public static void everyFinishPlacesAndDropsItsOwnMaterialAndExactBinding(GameTestHelper h) {
@@ -202,12 +202,12 @@ public final class StandingStoneTest {
         for (int i : new int[]{0, 2, 4, 6}) h.setBlock(centerPos.offset(geometry.offset(i)), ApparatusBlocks.PLINTH.get());
         var center = (OfferingBlockEntity) h.getBlockEntity(centerPos); var layout = RitualCrafting.layout(center);
         ItemStack shard = shard(2); String expected = AttunementShardItem.signature(shard).orElseThrow().key();
-        var inputs = List.of(shard.copyWithCount(3), new ItemStack(Items.ENDER_PEARL, 4), new ItemStack(Items.CHISELED_STONE_BRICKS, 2), new ItemStack(Items.CHISELED_STONE_BRICKS, 2));
+        var inputs = List.of(shard.copyWithCount(3), new ItemStack(Items.CHISELED_STONE_BRICKS, 2), new ItemStack(Items.ENDER_PEARL, 4), new ItemStack(Items.CHISELED_STONE_BRICKS, 2));
         for (int i = 0; i < 4; i++) layout.stands().get(i * 2).insert(inputs.get(i));
         layout.stands().get(0).installMaterial(new ItemStack(Items.GOLD_BLOCK));
         var outerPos = new BlockPos(7, 1, 7); h.setBlock(outerPos, ApparatusBlocks.PLINTH.get());
         var outer = (OfferingBlockEntity) h.getBlockEntity(outerPos); outer.insert(new ItemStack(Items.DIRT));
-        h.assertTrue(StandingStoneRecipe.result(List.of(new ItemStack(ScrollItems.ATTUNEMENT_SHARD.get()), inputs.get(1), inputs.get(2), inputs.get(3))).isEmpty(), "Unattuned shard accepted");
+        h.assertTrue(StandingStoneRecipe.result(stoneInputs(new ItemStack(ScrollItems.ATTUNEMENT_SHARD.get()),Items.CHISELED_STONE_BRICKS,Items.CHISELED_STONE_BRICKS)).isEmpty(), "Unattuned shard accepted");
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL), center) == RitualCrafting.Outcome.CRAFTING, "Stone ritual rejected");
         h.assertTrue(!outer.busy(), "Inactive outer offering was reserved"); h.setBlock(outerPos, Blocks.AIR);
         h.runAfterDelay(65, () -> {
@@ -222,7 +222,7 @@ public final class StandingStoneTest {
         var geometry = new LeylineShaping.Geometry(4, LeylineShaping.Shape.CROSS, 2, 0, LeylineShaping.Shape.DIAGONAL, 3, 0);
         for (int i : new int[]{0, 2, 4, 6}) h.setBlock(centerPos.offset(geometry.offset(i)), ApparatusBlocks.PLINTH.get());
         var center = (OfferingBlockEntity) h.getBlockEntity(centerPos); var layout = RitualCrafting.layout(center);
-        var inputs = List.of(shard(2), new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.CHISELED_STONE_BRICKS), new ItemStack(Items.CHISELED_STONE_BRICKS));
+        var inputs = List.of(shard(2), new ItemStack(Items.CHISELED_STONE_BRICKS), new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.CHISELED_STONE_BRICKS));
         for (int i = 0; i < 4; i++) layout.stands().get(i * 2).insert(inputs.get(i));
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL), center) == RitualCrafting.Outcome.CRAFTING, "Stone ritual rejected");
         h.runAfterDelay(10, () -> { layout.stands().get(0).remove(); layout.stands().get(0).insert(shard(3)); });

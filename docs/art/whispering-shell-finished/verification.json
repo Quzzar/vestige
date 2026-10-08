@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-06",
+  "status": "implemented, verified and packaged",
+  "baseline": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21
+  },
+  "selections": {
+    "homeboundEye": "A — Centered pearl",
+    "whisperingShell": "B — Deep coil"
+  },
+  "recipe": {
+    "output": "vestige:whispering_shell",
+    "count": 1,
+    "innerPlinths": 4,
+    "occupiedOfferingSurfaces": 3,
+    "offerings": [
+      "vestige:attunement_shard",
+      "minecraft:nautilus_shell",
+      "minecraft:sculk_sensor"
+    ],
+    "centerEmpty": true,
+    "inheritsOriginalVerifiedBlueprint": true
+  },
+  "package": {
+    "path": "run/whispering-shell-finished-build/libs/vestige-0.1.0.jar",
+    "sha256": "7be52c8c70775fa08b1626899e35a8ce757c76d132bbf69c2ec96e97d9acecef",
+    "bytes": 7691019,
+    "build": true,
+    "kithkynCompatibility": true,
+    "communicationMixinDeclared": true,
+    "captureFixtureExcluded": true,
+    "paperOverrideExcluded": true,
+    "sharedCheckoutBuild": true,
+    "installedByThisCloseout": false
+  },
+  "junit": {
+    "tests": 114,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 24,
+    "focusedShellTests": 7
+  },
+  "minecraftGameTests": {
+    "required": 14,
+    "passed": 14,
+    "focusedShellTests": 6,
+    "filter": "shell_|attunement|homebound_craft|homebound_cancel",
+    "freshWorld": true,
+    "log": "build.log",
+    "ranBeforeFinalClientOnlyPulsePlacementAdjustment": true
+  },
+  "client": {
+    "completedSuccessfully": true,
+    "actualGameClients": 1,
+    "inMemoryServerPacketClients": 2,
+    "privateDeliveryBothDirections": true,
+    "outsiderConversations": 0,
+    "normalAdvancedCustomTooltipParity": true,
+    "runePulseVisibleAboveHotbar": true,
+    "subjectiveAudioAudited": false,
+    "remoteHumanMultiplayerTested": false,
+    "authenticatedMojangSigningTested": false,
+    "syntheticSignatureBodyPreservationTested": true
+  },
+  "art": {
+    "originalSha256": {
+      "homebound_eye.png": "716aec5a00b5dbb5dce5305df963921dc7b49a4db8baceb6937ae43f8618b710",
+      "whispering_shell.png": "1e9a555a5d1ce097c289e0ff67a21d44bc6a1896784a0798e4f6a851e50f2da3"
+    },
+    "approvedPixelsAndAlphaPreserved": true,
+    "onlyTransparentPowerOfTwoCanvasPadding": true,
+    "productionCanvas": [
+      2048,
+      2048
+    ],
+    "resampling": false,
+    "audit": "docs/art/attuned-items-locked/author_assets.py --check"
+  },
+  "loadedAssets": {
+    "models/item/homebound_eye.json": {
+      "sha256": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+      "loadedSourcePackageParity": true
+    },
+    "textures/item/homebound_eye.png": {
+      "sha256": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+      "loadedSourcePackageParity": true
+    },
+    "models/item/whispering_shell.json": {
+      "sha256": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+      "loadedSourcePackageParity": true
+    },
+    "textures/item/whispering_shell.png": {
+      "sha256": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+      "loadedSourcePackageParity": true
+    }
+  },
+  "productionPreviewClasses": {
+    "com/quzzar/vestige/apparatus/WhisperingShellItem.class": {
+      "sha256": "2d2fa7ed2b8815c7d05820c110a870d3bacbdc7f44bb87f953b8fa114cfc4029",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/apparatus/WhisperingShellRecipe.class": {
+      "sha256": "f6e75d5e1d9de9d19ffeaa607c29f9051353d38cb7f8eba0faebd52f5321b055",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/ShellCuePayload$1.class": {
+      "sha256": "84f230f40847d462b5d89976fc9534b8418bb648830c08041dae335dd46c9070",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/ShellCuePayload.class": {
+      "sha256": "3f42297dfd035f31d77417acc601c6564803db87d45ef584153bb27f3b28daa7",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellChat$Transmission.class": {
+      "sha256": "75816c370c75a132557126e52eebd1f8bc0d03211e8673b2c818587107302cc9",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellChat.class": {
+      "sha256": "1f9a741d5d3ea15e68dbcdfbf111d20694137554f1ee9cd10df14cf3433a53d8",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$ChatPlayer$1.class": {
+      "sha256": "d751ccf0c9fb49f878d9aa50a5f1d499d1fc10b6592f07403a4fe09af82f17eb",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$ChatPlayer.class": {
+      "sha256": "68e5848623fe28a150de76d36754db49b93b19d734ff62aba886506dbc56bdf2",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$RecordingConnection.class": {
+      "sha256": "5de621011d60441e7611a9d928889fdae07064a9a8f8475aff6cf1d105e8c896",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest.class": {
+      "sha256": "044835ff599ab8e624b71d2f5ead7c72d9479aecf6ea1fa9e5adf88efbabd6e4",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/client/ShellFeedback$Registration.class": {
+      "sha256": "27807dbc2d72c5926fe3ca98a05e74bffe036005326219f587161045ec94169b",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/client/ShellFeedback.class": {
+      "sha256": "e8c0e5688938f773199bc71e8c950250dd6dbc5127763af94d70d19aedc30f03",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/mixin/ChatRecipientsMixin.class": {
+      "sha256": "bbad1733e0a40b24734c12bef35a721d028512c5cf3717f547f0f727797f66c3",
+      "productionPreviewParity": true
+    },
+    "com/quzzar/vestige/communication/mixin/ChatSubmissionMixin.class": {
+      "sha256": "06321a2239ee11f22f16f420280e9aa9c061b579314a4aa2e0647f86aa3ef7ea",
+      "productionPreviewParity": true
+    }
+  },
+  "packagedSources": {
+    "src/main/java/com/quzzar/vestige/apparatus/AttunementShardItem.java": {
+      "sha256": "608f9008733b2f961c78dc5683dff0cd6cd7026533431c6f8981db7a169863d0",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": {
+      "sha256": "f76e4fd8179ae7c0c190558b86d288233cb3e4ef1c3ca670f85fb7d5bb74bb0f",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": {
+      "sha256": "dd358f82793654db8d2b2e528a6b6512069b4d1372d15cc4adb1fd9b956eca7c",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellItem.java": {
+      "sha256": "348e6b4d752742a4e43c5541ce31565f68f42668805e3e1b4a02cd1e610f9e8c",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellRecipe.java": {
+      "sha256": "5aabdaa6e02726ef93657390db0343f28ff219a16a271d51e7d49caea197f6e9",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": {
+      "sha256": "3af05dbc176a733a396ca4048fd1156cf1ea12e8be25db0640c1eabe7b64bd9f",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": {
+      "sha256": "3905645c6ef2620c2212040ff0582d5c73d0a1722dd0893987670949bfc3e04b",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/ShellCuePayload.java": {
+      "sha256": "4cf710c2374d958a029666fcb5328b75c59ac5bc4c3870037595afee3dd716e3",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/WhisperingShellChat.java": {
+      "sha256": "169417bd6baf684c3a2c74ce82e33b65a61b6c6ac931f991d0ec9206e4f49ec5",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/WhisperingShellWorldTest.java": {
+      "sha256": "3658738afe13d3f6b7576a49a0604b2f78641533f2a9e7e29be84f5d11416cca",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/client/ShellFeedback.java": {
+      "sha256": "1ec4afec82ffe7f1d265cc067c9a9d879292e15d099a720c4b5b8c4b39bba196",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/mixin/ChatRecipientsMixin.java": {
+      "sha256": "379ca6c40ad547f77b30c2480cdf340ad81a89ddcfbe6cf90bdb84a190846d44",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/mixin/ChatSubmissionMixin.java": {
+      "sha256": "960cf98523cd39702a560d56db410a259a876acef87e010ac4ab8beea9f0b3fc",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": {
+      "sha256": "4b26f819731debd68bc558e7e866e8ae176eb544c1709a29b4ae7bae9e7d0ebb",
+      "sourceJarParity": true
+    }
+  },
+  "frames": {
+    "shell-native-menu.png": {
+      "sha256": "c5d5ece7f85b94365e95b9c82d035bd8a4423de84837ce33c2946c6f1dbedf47",
+      "width": 960,
+      "height": 720,
+      "nativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shell-bound-hover.png": {
+      "sha256": "fadd81082a934cf9f5b47cc864d6802b0795eef59f54d222e68f8e283fc0e7fa",
+      "width": 960,
+      "height": 720,
+      "nativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shell-and-eye-held.png": {
+      "sha256": "c746b3d55726b8ff141c1aaefcda84ea028979964f26ea6b72d212c34f1788c1",
+      "width": 960,
+      "height": 720,
+      "nativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shell-conversation-cue.png": {
+      "sha256": "f67ed00caa6715a24b4a74a5b6ac1698917cdeb32068b65ea96caa11ff2841c6",
+      "width": 960,
+      "height": 720,
+      "nativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shell-conversation.png": {
+      "sha256": "fe590ffd680d83ea1773b7d3192e230eda648c61a1ff7e2878ac748065e00b1c",
+      "width": 960,
+      "height": 720,
+      "nativeFramebuffer": true,
+      "visuallyInspected": true
+    }
+  },
+  "logs": {
+    "build.log": {
+      "sha256": "8c7ba9d4f5ddf2225abc8d4cd4fe1d765c27b4e3c74ca233f8b43b62d40f74ef",
+      "successful": true
+    },
+    "final-package.log": {
+      "sha256": "d404f86f1ae02cfb77773b691aadfc342bd1b450feaf8124b5485e12c2c712b8",
+      "successful": true
+    },
+    "client.log": {
+      "sha256": "e0faeb15cb952a4694f04f2b96623a83ca0de31139101c9615bad11cfdd5bb20",
+      "successful": true
+    }
+  },
+  "limits": [
+    "Local native player-chat packet delivery, not a remote human multiplayer session.",
+    "Authenticated session signing and unrelated chat-replacement mods were not exercised.",
+    "Native cues dispatched; subjective audio quality was not separately recorded or audited.",
+    "Third-person, head, dropped-item and frame art views are outside the five captured views.",
+    "No installed pack or existing world was replaced by this closeout."
+  ],
+  "resolvedAttempts": [
+    "Isolate generateModMetadata from concurrent Gradle outputs.",
+    "Declare cue channel on in-memory clients and guard production cue sends for non-negotiating clients.",
+    "Respect one offering per Plinth in test expectations.",
+    "Activate the replying peer Shell in hotbar slot eight.",
+    "Draw rune pulse above chat just above the hotbar."
+  ]
+}

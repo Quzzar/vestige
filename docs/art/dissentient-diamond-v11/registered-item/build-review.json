@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-08",
+  "command": "./gradlew build --offline --no-daemon --max-workers=1 (Java 21; 768 MiB Gradle heap)",
+  "outcome": "BUILD SUCCESSFUL in 2m 29s",
+  "unitTests": {
+    "tests": 195,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "testSuites": 44,
+  "jar": "build/libs/vestige-0.1.0.jar",
+  "jarSha256": "b18667bd272cd5745b6e35f3b4cd71aad849c62fe3053c2bcb88e2cd98cc055b",
+  "packagedResources": {
+    "assets/vestige/textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+    "assets/vestige/models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+    "assets/vestige/lang/en_us.json": "64e23c9b35a24fdeebd545325a40a32a4642fe92b7adaeece31489448f54c005"
+  },
+  "registeredIdPresentInPackagedClass": true,
+  "nativeReview": "native-review.json",
+  "approval": "../approval.json",
+  "log": "build.log.gz",
+  "worldTestSuiteRun": false,
+  "installationOrPublication": false
+}

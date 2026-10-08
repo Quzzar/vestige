@@ -1,0 +1,152 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:ray_of_frost",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Ray Of Frost",
+    "cast_type": "instant",
+    "cooldown_ticks": 300
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 40
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "beam",
+        "required": false,
+        "distance": {
+          "product": [
+            24,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 3
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                12,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "freeze",
+          "values": {
+            "ticks": 140
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 60,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:slowness"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "a7ddff",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "shards",
+            "color": "48badf",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.25,
+            "speed": 1.9,
+            "phase": 0,
+            "count": 9
+          },
+          {
+            "shape": "helix",
+            "color": "e7fbff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.875,
+            "speed": -1.2349999999999999,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "e7fbff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

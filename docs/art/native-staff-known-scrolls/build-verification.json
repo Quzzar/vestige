@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-07",
+  "scope": "Identified matching Staff scroll insertion and persistent selected button; local build and native client inspection",
+  "java": "21",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "unitTests": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focusedStaffWorldTests": {
+    "tests": 19,
+    "failures": 0,
+    "log": "staff-world.log"
+  },
+  "nativeClient": {
+    "checks": 50,
+    "captures": 9,
+    "manifest": "verification.json"
+  },
+  "build": "passed",
+  "kithkynPlatformCompatibility": "passed (without Kithkyn co-loading)",
+  "authoringChecks": [
+    "audit_staff_traits.py --check",
+    "author_staff_texture.py --check"
+  ],
+  "jar": {
+    "path": "build/native-staffs/libs/vestige-0.1.0.jar",
+    "sha256": "edff9f121a5e08f6d8e403b8e0f8628aa06c0a284450adf71d65b800ea8a1e9f",
+    "clientAssetHashesMatch": true
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/StaffMenu.java": "c03d25badb09465735032bf28629811aaf804e78c537e4bba2b7412a977a7dfc",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffWorldTest.java": "aa094ceb53167ed80bf99273422689a360d4e3318f473f4ccb1506b38c2c9168",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellKnowledge.java": "b7713160e3065ad943b2f6536c43c8225dff987c37ea4b361a835f23e7e00572",
+    "src/main/java/com/quzzar/vestige/apparatus/client/StaffScreen.java": "93282d00972e6fee2b671fb9b73a72131594a244e1207757b38d366dd8ac0e91",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeStaffCapture.java": "8f97d6e42681a16225d72775c754f691b2dfea696b4944a62ebc6a558b101cfd"
+  }
+}

@@ -20,7 +20,6 @@ public record RitualRecipe(ResourceLocation spell, String name, int circle, int 
         Set<Integer> seats = new HashSet<>();
         for (Part part : parts) if (part.seat < 0 || part.seat >= circle || !seats.add(part.seat)) throw new IllegalArgumentException("Duplicate or invalid seat");
         if (circle == 4 && parts.size() != 4) throw new IllegalArgumentException("Basic recipes fill all four slots");
-        if (circle == 8 && !seats.containsAll(List.of(0,2,4,6))) throw new IllegalArgumentException("Advanced recipes retain four inner ingredients");
         if (parts.stream().filter(p -> p.ingredient.items.contains(ResourceLocation.withDefaultNamespace("paper"))).count() != 1) throw new IllegalArgumentException("A crafting recipe needs exactly one Paper component");
     }
     public record Ingredient(List<ResourceLocation> items, List<ResourceLocation> tags) {

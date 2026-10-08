@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import com.quzzar.vestige.magic.definition.TraitModifier;
 
 /** Reusable effect composition. Leaf outcomes are executed by the world adapter. */
 public sealed interface SpellEffects extends SpellEffect {
@@ -74,6 +75,19 @@ public sealed interface SpellEffects extends SpellEffect {
         public CaptureValue { Objects.requireNonNull(key); Objects.requireNonNull(value); }
     }
 
+    /** Finite actor trait contributions; they affect future activations without changing existing snapshots. */
+    record GrantTraits(ResourceLocation group, List<TraitModifier> modifiers, SpellValue duration,
+                       TargetSpec target) implements SpellEffects {
+        public GrantTraits {
+            Objects.requireNonNull(group);
+            modifiers = List.copyOf(modifiers);
+            if (modifiers.isEmpty() || modifiers.size() > 64)
+                throw new IllegalArgumentException("Trait boosts need 1..64 modifiers");
+            Objects.requireNonNull(duration);
+            Objects.requireNonNull(target);
+        }
+    }
+
     record StoreTarget(ResourceLocation key) implements SpellEffects {
         public StoreTarget { Objects.requireNonNull(key); }
     }
@@ -94,13 +108,18 @@ public sealed interface SpellEffects extends SpellEffect {
     /** Ends the current manifestation and all behavior it owns. */
     record EndManifestation() implements SpellEffects { }
 
-    record Binding(ResourceLocation id, List<SpellTrigger> triggers, List<SpellEffect> effects, int durationTicks, int charges) {
+    record Binding(ResourceLocation id, List<SpellTrigger> triggers, List<SpellEffect> effects, int durationTicks, int charges,
+                   Optional<SpellValue> lifetime) {
+        public Binding(ResourceLocation id, List<SpellTrigger> triggers, List<SpellEffect> effects, int durationTicks, int charges) {
+            this(id, triggers, effects, durationTicks, charges, Optional.empty());
+        }
         public Binding {
             Objects.requireNonNull(id);
             triggers = List.copyOf(triggers);
             effects = List.copyOf(effects);
             positive(durationTicks);
             positive(charges);
+            Objects.requireNonNull(lifetime);
             if (triggers.isEmpty() || effects.isEmpty()) throw new IllegalArgumentException("Bindings need triggers and effects");
         }
     }

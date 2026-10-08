@@ -1,0 +1,316 @@
+{
+  "status": "Wardweave and Cinderweave formulas approved and implemented October 7; the other four clothing packages remain proposals.",
+  "items": [
+    {
+      "id": "wardweave",
+      "definition": {
+        "traits": {
+          "vestige:abjuration": 1,
+          "vestige:force": 1,
+          "vestige:time": 1,
+          "vestige:amplify": 1
+        },
+        "variables": {
+          "vestige:ward_duration": {
+            "product": [
+              4,
+              {
+                "trait": "vestige:time"
+              }
+            ]
+          },
+          "vestige:ward_ticks": {
+            "product": [
+              20,
+              {
+                "variable": "vestige:ward_duration"
+              }
+            ]
+          },
+          "vestige:protection": {
+            "product": [
+              2,
+              {
+                "trait": "vestige:force"
+              },
+              {
+                "trait": "vestige:amplify"
+              }
+            ]
+          },
+          "vestige:mana_bonus": 25
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:ward_duration",
+          "label": "Ward duration",
+          "unit": "seconds"
+        },
+        {
+          "key": "vestige:protection",
+          "label": "Next-hit protection",
+          "unit": "HP"
+        },
+        {
+          "key": "vestige:mana_bonus",
+          "label": "Maximum mana bonus",
+          "unit": "mana"
+        }
+      ],
+      "boosts": [
+        "time",
+        "force",
+        "amplify"
+      ],
+      "note": "One charge; first hit unchanged. Time and Force \u00d7 Amplify continue scaling without tuned upper ceilings. Values snapshot when the ward forms. Recovery stays a approved 12 seconds; absorbed hits still cause robe wear."
+    },
+    {
+      "id": "cinderweave",
+      "definition": {
+        "traits": {
+          "vestige:fire": 1,
+          "vestige:abjuration": 1,
+          "vestige:amplify": 1
+        },
+        "variables": {
+          "vestige:fire_reduction": {
+            "clamp": {
+              "value": {
+                "product": [
+                  0.25,
+                  {
+                    "trait": "vestige:fire"
+                  }
+                ]
+              },
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "vestige:fire_cap": {
+            "product": [
+              2,
+              {
+                "trait": "vestige:amplify"
+              }
+            ]
+          },
+          "vestige:mana_bonus": 25
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:fire_reduction",
+          "label": "Fire damage reduction",
+          "unit": "percent"
+        },
+        {
+          "key": "vestige:fire_cap",
+          "label": "Protection budget per fire hit",
+          "unit": "HP"
+        },
+        {
+          "key": "vestige:mana_bonus",
+          "label": "Maximum mana bonus",
+          "unit": "mana"
+        }
+      ],
+      "boosts": [
+        "fire",
+        "amplify"
+      ],
+      "note": "Use the smaller of the percentage result and the Amplify-scaled protection budget. Actual reduction stops at 100% of the hit; the HP budget has no tuned upper ceiling. Resolve traits per fire event; absorbed hits still cause robe wear."
+    },
+    {
+      "id": "wayfarer",
+      "definition": {
+        "traits": {
+          "vestige:motion": 1,
+          "vestige:transmutation": 1,
+          "vestige:time": 1,
+          "vestige:amplify": 1
+        },
+        "variables": {
+          "vestige:burst_duration": {
+            "product": [
+              3,
+              {
+                "trait": "vestige:time"
+              }
+            ]
+          },
+          "vestige:movement_bonus": {
+            "product": [
+              0.2,
+              {
+                "trait": "vestige:motion"
+              }
+            ]
+          },
+          "vestige:landing_protection": {
+            "product": [
+              4,
+              {
+                "trait": "vestige:amplify"
+              }
+            ]
+          }
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:burst_duration",
+          "label": "Burst duration",
+          "unit": "seconds"
+        },
+        {
+          "key": "vestige:movement_bonus",
+          "label": "Movement bonus",
+          "unit": "percent"
+        },
+        {
+          "key": "vestige:landing_protection",
+          "label": "One landing protection",
+          "unit": "HP"
+        }
+      ],
+      "boosts": [
+        "time",
+        "motion",
+        "amplify"
+      ],
+      "note": "One protected landing during the burst. Cost stays 5 mana; recovery stays 15 seconds."
+    },
+    {
+      "id": "dawnsight",
+      "definition": {
+        "traits": {
+          "vestige:light": 1,
+          "vestige:divination": 1,
+          "vestige:range": 1,
+          "vestige:time": 1
+        },
+        "variables": {
+          "vestige:reveal_duration": {
+            "product": [
+              6,
+              {
+                "trait": "vestige:time"
+              }
+            ]
+          },
+          "vestige:reveal_distance": {
+            "product": [
+              12,
+              {
+                "trait": "vestige:range"
+              }
+            ]
+          },
+          "vestige:target_limit": 8,
+          "vestige:mana_bonus": 10
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:reveal_duration",
+          "label": "Reveal duration",
+          "unit": "seconds"
+        },
+        {
+          "key": "vestige:reveal_distance",
+          "label": "Reveal distance",
+          "unit": "blocks"
+        },
+        {
+          "key": "vestige:target_limit",
+          "label": "Maximum creatures",
+          "unit": "creatures"
+        }
+      ],
+      "boosts": [
+        "time",
+        "range"
+      ],
+      "note": "Wearer-only reveal with line of sight. Cost stays 10 mana; the optional mana bonus still needs approval."
+    },
+    {
+      "id": "patchwork",
+      "definition": {
+        "traits": {
+          "vestige:space": 1,
+          "vestige:conjuration": 1
+        },
+        "variables": {
+          "vestige:pockets": 4,
+          "vestige:mana_bonus": 25
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:pockets",
+          "label": "Personal pockets",
+          "unit": "pockets"
+        },
+        {
+          "key": "vestige:mana_bonus",
+          "label": "Maximum mana bonus",
+          "unit": "mana"
+        }
+      ],
+      "boosts": [],
+      "note": "Pocket count stays fixed. Filled pockets cannot disappear when a temporary trait boost ends."
+    },
+    {
+      "id": "spiderstep",
+      "definition": {
+        "traits": {
+          "vestige:motion": 1,
+          "vestige:transmutation": 1
+        },
+        "variables": {
+          "vestige:climb_speed": {
+            "product": [
+              2,
+              {
+                "trait": "vestige:motion"
+              }
+            ]
+          },
+          "vestige:climb_speed_per_tick": {
+            "product": [
+              0.05,
+              {
+                "variable": "vestige:climb_speed"
+              }
+            ]
+          },
+          "vestige:mana_per_second": 2
+        },
+        "activation": "passive"
+      },
+      "parameters": [
+        {
+          "key": "vestige:climb_speed",
+          "label": "Climbing speed",
+          "unit": "blocks / second"
+        },
+        {
+          "key": "vestige:mana_per_second",
+          "label": "Mana while attached",
+          "unit": "mana / second"
+        }
+      ],
+      "boosts": [
+        "motion"
+      ],
+      "note": "Climbing and holding both spend mana. Vertical walls only; ordinary falling after release."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:thunderstorm",
+    "school": "irons_spellbooks:lightning",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Thunderstorm",
+    "cast_type": "long",
+    "cooldown_ticks": 2400
+  },
+  "rarity": "mythic",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 84
+    },
+    {
+      "type": "cooldown",
+      "ticks": 600
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:area",
+        "duration": 200,
+        "values": {
+          "radius": {
+            "product": [
+              8,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "follow_target": 1
+        },
+        "identifiers": {
+          "particle": "minecraft:electric_spark"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  8,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "relationship": "hostile",
+              "options": {
+                "count": 2,
+                "line_of_sight": 1
+              }
+            },
+            "effects": [
+              {
+                "type": "damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      6,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  },
+                  "ignore_invulnerability": 1
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": {
+            "product": [
+              8,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "helix",
+              "color": "5594ff",
+              "alpha": 0.85,
+              "width": 0.09,
+              "scale": 1.0,
+              "speed": 1.6,
+              "phase": 0,
+              "count": 14
+            },
+            {
+              "shape": "rays",
+              "color": "e5f4ff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.7,
+              "speed": -1.04,
+              "phase": 1.2,
+              "count": 7
+            },
+            {
+              "shape": "sparks",
+              "color": "e5f4ff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

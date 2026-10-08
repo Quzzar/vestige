@@ -19,10 +19,21 @@ public final class SpellRuntime implements AutoCloseable {
     private final Map<UUID, Cast> casts = new LinkedHashMap<>();
     private final Map<UUID, ActiveManifestation> manifestations = new LinkedHashMap<>();
     private final Map<UUID, ActiveBinding> bindings = new LinkedHashMap<>();
+    private record TraitBoostKey(UUID recipient, ResourceLocation definition, ResourceLocation group) { }
+    private record TraitBoost(List<TraitModifier> modifiers, long expires, Context context) { }
+    private final Map<TraitBoostKey, TraitBoost> traitBoosts = new LinkedHashMap<>();
     private record Recovery(UUID actor, ResourceLocation spell) { }
-    private final Map<Recovery, Long> cooldowns = new HashMap<>();
-    private record SourceRecovery(UUID actor,ResourceLocation spell,ResourceLocation group) { }
-    private final Map<SourceRecovery,Long> sourceCooldowns = new HashMap<>();
+    private final Map<Recovery, RecoverySnapshot> cooldowns = new HashMap<>();
+    public record RecoverySnapshot(long deadline, long duration) {
+        public RecoverySnapshot { if (deadline < 0 || duration <= 0) throw new IllegalArgumentException("Invalid recovery"); }
+    }
+    public record RecoveryProgress(long remainingTicks, long totalTicks) { }
+    /** Read-only actor-owned timing for private item presentation; variants share the definition identity. */
+    public Optional<RecoveryProgress> recovery(UUID actor, ResourceLocation definition) {
+        var state = cooldowns.get(new Recovery(actor, definition));
+        return state == null || state.deadline() <= tick ? Optional.empty()
+                : Optional.of(new RecoveryProgress(state.deadline() - tick, state.duration()));
+    }
     private final PriorityQueue<Task> tasks = new PriorityQueue<>(Comparator.comparingLong((Task t) -> t.due).thenComparingLong(t -> t.order));
     private long tick;
     private long order;
@@ -30,26 +41,44 @@ public final class SpellRuntime implements AutoCloseable {
 
     public SpellRuntime(SpellWorld world) { this.world = Objects.requireNonNull(world); }
 
-    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers, boolean discovered) {
+    /** Passive items and devices use this same resolver without creating a cast or spending resources. */
+    public MagicResolution resolve(MagicDefinition definition, UUID actor, Collection<TraitModifier> sourceModifiers) {
+        ensureOpen();
+        List<TraitModifier> modifiers = new ArrayList<>(sourceModifiers);
+        modifiers.addAll(world.traitModifiers(actor, definition));
+        traitBoosts.forEach((key, boost) -> {
+            if (key.recipient().equals(actor) && boost.expires() > tick && boost.context().live()
+                    && world.active(boost.context())) modifiers.addAll(boost.modifiers());
+        });
+        return MagicResolution.resolve(definition, modifiers);
+    }
+
+    /** Trusted item abilities share execution and payments while bypassing scroll discovery state. */
+    public Cast activate(ItemAbilityDefinition ability, SpellEvent event, Collection<TraitModifier> sourceModifiers,
+                         CastReservation reservation) {
+        return cast(ability, event, sourceModifiers, true, Optional.empty(), false, CastShaping.NONE, reservation);
+    }
+
+    public Cast cast(MagicDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers, boolean discovered) {
         return cast(spell, event, modifiers, discovered, Optional.empty());
     }
 
-    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+    public Cast cast(MagicDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode) {
         return cast(spell, event, modifiers, discovered, mode, false);
     }
 
     /** Resource bypass is restricted to explicit development callers; time still executes normally. */
-    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+    public Cast cast(MagicDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode, boolean freeResources) {
         return cast(spell,event,modifiers,discovered,mode,freeResources,CastShaping.NONE);
     }
-    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+    public Cast cast(MagicDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode, boolean freeResources, CastShaping shaping) {
         return cast(spell,event,modifiers,discovered,mode,freeResources,shaping,CastReservation.NONE);
     }
     /** A reserved source validates throughout preparation and commits once with initial payment. */
-    public Cast cast(SpellDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
+    public Cast cast(MagicDefinition spell, SpellEvent event, Collection<TraitModifier> modifiers,
                      boolean discovered, Optional<ResourceLocation> mode, boolean freeResources, CastShaping shaping,
                      CastReservation reservation) {
         Objects.requireNonNull(shaping);
@@ -59,7 +88,7 @@ public final class SpellRuntime implements AutoCloseable {
         if (!world.canActivate(event.actor(),spell)) return rejected(spell,event,Status.CONDITIONS_FAILED);
         if (mode.isPresent() && !spell.modes().containsKey(mode.get())) return rejected(spell, event, Status.CONDITIONS_FAILED);
         // One charge/channel at a time. Dormant recast sessions do not block other spells.
-        if (casts.values().stream().anyMatch(c -> c.actor.equals(event.actor())
+        if (spell.occupiesCasting() && casts.values().stream().anyMatch(c -> c.spell.occupiesCasting() && c.actor.equals(event.actor())
                 && !c.spell.id().equals(spell.id()) && c.status != Status.AWAITING_RECAST)) {
             return rejected(spell, event, Status.BUSY);
         }
@@ -81,13 +110,17 @@ public final class SpellRuntime implements AutoCloseable {
                 return existing;
             }
         }
-        if (!freeResources && cooldowns.getOrDefault(new Recovery(event.actor(), spell.id()), 0L) > tick) {
+        if (!freeResources && recovery(event.actor(), spell.id()).isPresent()) {
             return rejected(spell, event, Status.COOLDOWN);
         }
-        if (!freeResources && reservation.recovery().filter(r -> sourceCooldowns.getOrDefault(
-                new SourceRecovery(event.actor(),spell.id(),r.group()),0L)>tick).isPresent())
-            return rejected(spell,event,Status.COOLDOWN);
-        Cast cast = new Cast(spell, event.actor(), spell.traits().resolve(modifiers), discovered);
+        MagicResolution resolution;
+        try { resolution = resolve(spell, event.actor(), modifiers); }
+        catch (RuntimeException failure) {
+            Cast rejected = rejected(spell, event, Status.EFFECT_FAILED);
+            rejected.failure = failure.getMessage();
+            return rejected;
+        }
+        Cast cast = new Cast(spell, event.actor(), resolution, !(spell instanceof SpellDefinition) || discovered);
         cast.mode = mode;
         cast.freeResources = freeResources;
         cast.shaping = shaping;
@@ -113,6 +146,8 @@ public final class SpellRuntime implements AutoCloseable {
         task.needsPayment = true;
         if (chargeTicks > 0) {
             cast.status = Status.CHARGING;
+            cast.chargeStarted = tick;
+            cast.chargeTicks = chargeTicks;
             try { cast.observer.preparing(initial); }
             catch (RuntimeException failure) { cast.failure=failure.getMessage(); end(cast,Status.EFFECT_FAILED); return cast; }
             task.due = Math.addExact(tick, chargeTicks);
@@ -138,8 +173,8 @@ public final class SpellRuntime implements AutoCloseable {
     public void tick() {
         ensureOpen();
         tick++;
-        cooldowns.values().removeIf(deadline -> deadline <= tick);
-        sourceCooldowns.values().removeIf(deadline -> deadline <= tick);
+        traitBoosts.values().removeIf(boost -> boost.expires() <= tick || !boost.context().live() || !world.active(boost.context()));
+        cooldowns.values().removeIf(state -> state.deadline() <= tick);
         for (Cast cast : List.copyOf(casts.values())) {
             if (!cast.paymentCommitted && !cast.reservation.valid()) { end(cast, Status.INTERRUPTED); continue; }
             if (!world.active(cast.context)) { end(cast, Status.INTERRUPTED); continue; }
@@ -193,6 +228,9 @@ public final class SpellRuntime implements AutoCloseable {
 
     public int dispelActor(UUID actor) {
         int count = 0;
+        int previousBoosts = traitBoosts.size();
+        traitBoosts.keySet().removeIf(key -> key.recipient().equals(actor));
+        count += previousBoosts - traitBoosts.size();
         for (ActiveManifestation manifestation : List.copyOf(manifestations.values())) {
             if (manifestation.context.cast.actor.equals(actor) && dispel(manifestation.id)) count++;
         }
@@ -214,6 +252,18 @@ public final class SpellRuntime implements AutoCloseable {
     }
 
     public int activeCasts() { return casts.size(); }
+    /** The actor's initial preparation, using the final shaped time costs; channels/recasts are excluded. */
+    public Optional<Preparation> preparation(UUID actor) {
+        return casts.values().stream().filter(cast -> cast.actor.equals(actor) && cast.status == Status.CHARGING)
+                .findFirst().map(cast -> new Preparation(cast.id, tick - cast.chargeStarted, cast.chargeTicks));
+    }
+    public record Preparation(UUID castId, long elapsedTicks, long totalTicks) {
+        public Preparation {
+            Objects.requireNonNull(castId);
+            if (totalTicks <= 0 || elapsedTicks < 0 || elapsedTicks >= totalTicks)
+                throw new IllegalArgumentException("Invalid cast preparation");
+        }
+    }
     public int activeBindings() { return bindings.size(); }
     public int activeManifestations() { return manifestations.size(); }
     public List<UUID> manifestations(UUID castId) {
@@ -225,7 +275,7 @@ public final class SpellRuntime implements AutoCloseable {
         if (closed) return;
         for (Cast cast : List.copyOf(casts.values())) end(cast, Status.INTERRUPTED);
         for (ActiveManifestation manifestation : List.copyOf(manifestations.values())) remove(manifestation, EndReason.SERVER_STOP);
-        tasks.clear(); bindings.clear(); cooldowns.clear(); sourceCooldowns.clear(); closed = true;
+        tasks.clear(); bindings.clear(); traitBoosts.clear(); cooldowns.clear(); closed = true;
     }
 
     private void fire(ActiveBinding binding, SpellEvent event) {
@@ -272,11 +322,9 @@ public final class SpellRuntime implements AutoCloseable {
                 task.cast.reservation.commit();
                 task.cast.paymentCommitted = true;
                 if (!task.cast.freeResources) {
-                    task.cast.reservation.recovery().ifPresent(r -> sourceCooldowns.put(
-                            new SourceRecovery(task.cast.actor,task.cast.spell.id(),r.group()),Math.addExact(tick,r.ticks())));
                     long recovery = task.cast.costs.stream().filter(SpellCost.Cooldown.class::isInstance)
                             .map(SpellCost.Cooldown.class::cast).mapToLong(SpellCost.Cooldown::ticks).sum();
-                    if (recovery > 0) cooldowns.put(new Recovery(task.cast.actor, task.cast.spell.id()), Math.addExact(tick, recovery));
+                    if (recovery > 0) cooldowns.put(new Recovery(task.cast.actor, task.cast.spell.id()), new RecoverySnapshot(Math.addExact(tick, recovery), recovery));
                 }
                 double risk = ForfeitPolicy.DEFAULT.chance(task.cast.traits, task.cast.discovered);
                 if (risk > 0 && first.random() < risk) {
@@ -295,6 +343,18 @@ public final class SpellRuntime implements AutoCloseable {
                 switch (effect) {
                     case SpellEffects.Sequence sequence -> append(task, sequence.effects(), context);
                     case SpellEffects.Branch branch -> append(task, branch.condition().matches(context) ? branch.whenTrue() : branch.whenFalse(), context);
+                    case SpellEffects.GrantTraits grant -> {
+                        List<SpellSubject> targets = List.copyOf(world.select(grant.target(), context));
+                        if (targets.isEmpty() && grant.target().required()) throw new IllegalStateException("Trait boost has no valid subject");
+                        int duration = lifetime(context.number(grant.duration()));
+                        // A committed boost owns its lifetime after the triggering binding or delivery ends.
+                        Context owner = new Context(context.cast, context.event, context.target, context.chain, null);
+                        for (SpellSubject subject : targets) {
+                            if (!(subject instanceof SpellSubject.Entity entity)) throw new IllegalArgumentException("Trait boosts require an entity");
+                            traitBoosts.put(new TraitBoostKey(entity.id(), context.cast.spell.id(), grant.group()),
+                                    new TraitBoost(grant.modifiers(), Math.addExact(tick, duration), owner));
+                        }
+                    }
                     case SpellEffects.Delay delay -> {
                         if (!task.steps.isEmpty()) { task.due = Math.addExact(tick, delay.ticks()); tasks.add(task); return; }
                     }
@@ -324,6 +384,7 @@ public final class SpellRuntime implements AutoCloseable {
                     case SpellEffects.CaptureValue value -> context.setNumber(value.key(), context.number(value.value()));
                     case SpellEffects.StoreTarget value -> context.cast.anchors.put(value.key(), context.target);
                     case SpellEffects.AwaitRecast wait -> {
+                        if (!context.cast.spell.occupiesCasting()) throw new IllegalArgumentException("Reactive abilities cannot await a manual recast");
                         if (context.manifestation != null || task.cast.continuation != null) throw new IllegalStateException("Only one cast continuation can await a recast");
                         task.cast.status = Status.AWAITING_RECAST;
                         task.cast.recastDeadline = Math.addExact(tick, wait.timeoutTicks());
@@ -336,6 +397,7 @@ public final class SpellRuntime implements AutoCloseable {
                             double reduction = Math.min(pending.amount(), context.amount(context.number(action.values().get("amount"))));
                             if (action.type().equals(id("defer_pending_damage"))) context.add(id("deferred_damage"), reduction);
                             pending.reduce(reduction);
+                            if (reduction > 0 && !action.type().equals(id("reduce_pending_heal"))) castMitigated(context, reduction);
                         } else if (!world.execute(action, context)) throw new IllegalStateException("Leaf effect failed: " + action.type());
                     }
                     case SpellEffects.InstallBinding install -> {
@@ -360,6 +422,7 @@ public final class SpellRuntime implements AutoCloseable {
     }
 
     private void bind(SpellEffects.Binding definition, Context context) {
+        int duration = definition.lifetime().map(value -> lifetime(context.number(value))).orElse(definition.durationTicks());
         // Replace only the same behavior from the same caster and spell on the same subject.
         bindings.values().removeIf(b -> {
             if (!b.definition.id().equals(definition.id()) || !b.target.equals(context.target)
@@ -367,7 +430,7 @@ public final class SpellRuntime implements AutoCloseable {
             b.valid = false;
             return true;
         });
-        ActiveBinding binding = new ActiveBinding(definition, context, Math.addExact(tick, definition.durationTicks()));
+        ActiveBinding binding = new ActiveBinding(definition, context, Math.addExact(tick, duration));
         bindings.put(binding.id, binding);
         if (context.manifestation==null && com.quzzar.vestige.magic.effect.SpellCapabilities.ofPlan(definition.effects()).stream()
                 .anyMatch(c -> Set.of("reduce_pending_damage","defer_pending_damage").contains(c.getPath())))
@@ -387,7 +450,7 @@ public final class SpellRuntime implements AutoCloseable {
         if (values.containsKey("lifetime")) {
             if (definition.durationTicks()<0) throw new IllegalArgumentException("Persistent manifestations cannot be reshaped into timed ones");
             int lifetime=(int)Math.max(1,Math.min(240000,context.amount(values.get("lifetime"))));
-            definition=new SpellEffects.Manifestation(definition.kind(),lifetime,definition.values(),definition.identifiers(),definition.bindings(),definition.onHit(),definition.onTick(),definition.onEnd(),definition.interval(),definition.visual());
+            definition=new SpellEffects.Manifestation(definition.kind(),lifetime,definition.values(),definition.identifiers(),definition.bindings(),definition.onHit(),definition.onTick(),definition.onEnd(),definition.interval(),definition.visual().map(visual -> new com.quzzar.vestige.magic.presentation.SpellVisual(Math.min(2400,lifetime),visual.radius(),visual.height(),visual.layers(),visual.endsWithBindings(),visual.sound())));
         }
         ResourceLocation kind=definition.kind();
         SpellWorld.ManifestationHandle handle = world.manifest(definition, Map.copyOf(values), context)
@@ -451,8 +514,12 @@ public final class SpellRuntime implements AutoCloseable {
         }
     }
 
-    private Cast rejected(SpellDefinition spell, SpellEvent event, Status status) {
-        Cast cast = new Cast(spell, event.actor(), spell.traits(), true); cast.status = status; return cast;
+    private Cast rejected(MagicDefinition spell, SpellEvent event, Status status) {
+        Cast cast = new Cast(spell, event.actor(), new MagicResolution(spell.traits(), Map.of()), true); cast.status = status; return cast;
+    }
+    private static int lifetime(double ticks) {
+        if (!Double.isFinite(ticks) || ticks <= 0) throw new IllegalArgumentException("Magic lifetimes must be finite and positive");
+        return (int) Math.min(240000, Math.ceil(ticks));
     }
     private void ensureOpen() { if (closed) throw new IllegalStateException("Spell runtime is closed"); }
     private static ResourceLocation id(String name) { return ResourceLocation.fromNamespaceAndPath("vestige", name); }
@@ -463,9 +530,10 @@ public final class SpellRuntime implements AutoCloseable {
 
     public static final class Cast {
         private final UUID id = UUID.randomUUID();
-        private final SpellDefinition spell;
+        private final MagicDefinition spell;
         private final UUID actor;
         private final TraitProfile traits;
+        private final MagicResolution resolution;
         private final boolean discovered;
         private List<SpellCost> costs;
         private CastShaping shaping = CastShaping.NONE;
@@ -481,18 +549,25 @@ public final class SpellRuntime implements AutoCloseable {
         private Task continuation;
         private Context context;
         private long recastDeadline;
+        private long chargeStarted, chargeTicks;
         private int work;
         private boolean freeResources;
         private boolean paymentCommitted;
-        private Cast(SpellDefinition spell, UUID actor, TraitProfile traits, boolean discovered) {
-            this.spell = spell; this.actor = actor; this.traits = traits; this.discovered = discovered;
+        private Cast(MagicDefinition spell, UUID actor, MagicResolution resolution, boolean discovered) {
+            this.spell = spell; this.actor = actor; this.traits = resolution.traits(); this.resolution = resolution; this.discovered = discovered;
         }
         public UUID id() { return id; }
+        public MagicResolution resolution() { return resolution; }
         public Status status() { return status; }
         /** True after successful resource commitment, including a subsequent chaotic forfeit. */
         public boolean paymentCommitted() { return paymentCommitted; }
         public Optional<String> failure() { return Optional.ofNullable(failure); }
         public Map<ResourceLocation, ConditionValue> state() { return Map.copyOf(state); }
+    }
+
+    private void castMitigated(Context context, double amount) {
+        if (context.cast.paymentCommitted && context.live())
+            context.cast.observer.mitigated(amount, context);
     }
 
     /** Resolved cast facts available to reusable leaves and world adapters. */
@@ -538,7 +613,7 @@ public final class SpellRuntime implements AutoCloseable {
             cast.state.put(key,new ConditionValue.Decimal(used+allowed));return allowed;
         }
         public UUID castId() { return cast.id; }
-        public SpellDefinition spell() { return cast.spell; }
+        public MagicDefinition definition() { return cast.spell; }
         public TraitProfile traits() { return cast.traits; }
         public SpellSubject target() { return target; }
         public SpellEvent event() { return event; }
@@ -562,6 +637,7 @@ public final class SpellRuntime implements AutoCloseable {
         public double number(com.quzzar.vestige.magic.expression.SpellValue value) {
             double result = switch (Objects.requireNonNull(value, "effect value")) {
                 case com.quzzar.vestige.magic.expression.SpellValue.Fact fact -> ((ConditionValue.Decimal) value(fact.path()).orElseThrow(() -> new IllegalStateException("Missing numerical fact: " + fact.path()))).value();
+                case com.quzzar.vestige.magic.expression.SpellValue.Variable variable -> cast.resolution.variable(variable.key());
                 case com.quzzar.vestige.magic.expression.SpellValue.Sum sum -> sum.terms().stream().mapToDouble(this::number).sum();
                 case com.quzzar.vestige.magic.expression.SpellValue.Product product -> product.factors().stream().mapToDouble(this::number).reduce(1, (a, b) -> a * b);
                 case com.quzzar.vestige.magic.expression.SpellValue.Clamp clamp -> Math.max(clamp.minimum(),Math.min(clamp.maximum(),number(clamp.value())));
@@ -596,14 +672,23 @@ public final class SpellRuntime implements AutoCloseable {
         }
         private Map<ResourceLocation, ConditionValue> state() { return local!=null ? local : manifestation == null ? cast.state : manifestation.state; }
         private boolean live() {
-            return (cast.status == Status.RUNNING || cast.status == Status.CHARGING || cast.status == Status.AWAITING_RECAST || cast.status == Status.COMPLETED)
+            return cast.reservation.continues() && (cast.status == Status.RUNNING || cast.status == Status.CHARGING || cast.status == Status.AWAITING_RECAST || cast.status == Status.COMPLETED)
                     && (manifestation == null || manifestation.closing || manifestations.containsKey(manifestation.id))
                     && (binding == null || binding.valid && tick < binding.expires);
         }
         @Override public Optional<ConditionValue> value(ResourceLocation path) {
             if (path.equals(id("event/secondary"))) return Optional.of(new ConditionValue.Flag(chain.secondary()));
             if (manifestation!=null && manifestation.state.containsKey(path) && (local==null || !local.containsKey(path))) return Optional.of(manifestation.state.get(path));
-            if (path.equals(ConditionPaths.SPELL_RARITY)) return Optional.of(new ConditionValue.Text(cast.spell.rarity().id()));
+            if (path.equals(ConditionPaths.SPELL_RARITY)) return cast.spell instanceof SpellDefinition spell
+                    ? Optional.of(new ConditionValue.Text(spell.rarity().id())) : Optional.empty();
+            if (path.equals(id("magic/id"))) return Optional.of(new ConditionValue.Identifier(cast.spell.id()));
+            String variablePrefix = "magic/variable/";
+            if (path.getNamespace().equals("vestige") && path.getPath().startsWith(variablePrefix)) {
+                String[] parts = path.getPath().substring(variablePrefix.length()).split("/", 2);
+                if (parts.length == 2) return Optional.ofNullable(cast.resolution.variables().get(ResourceLocation.fromNamespaceAndPath(parts[0], parts[1])))
+                        .map(ConditionValue.Decimal::new);
+                return Optional.empty();
+            }
             if (state().containsKey(path)) return Optional.of(state().get(path));
             if (cast.state.containsKey(path)) return Optional.of(cast.state.get(path));
             if (event.facts().containsKey(path)) return Optional.of(event.facts().get(path));

@@ -36,11 +36,11 @@ public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustme
         double mana=totals.entrySet().stream().filter(e->e.getKey().type()==SpellCost.Mana.class).mapToDouble(Map.Entry::getValue).sum()*adjustment.factors().getOrDefault("mana",1d);
         if (mana>0 && adjustment.healthFraction()>0) {
             Key key=new Key(SpellCost.Health.class,null,null);
-            totals.merge(key,Math.ceil(mana*adjustment.healthFraction()/5)*2,Double::sum); examples.putIfAbsent(key,new SpellCost.Health(2));
+            totals.merge(key,(double)ResourceValuation.healthForMana(mana*adjustment.healthFraction()),Double::sum); examples.putIfAbsent(key,new SpellCost.Health(2));
         }
         if (mana>0 && adjustment.hungerFraction()>0) {
             Key key=new Key(SpellCost.Hunger.class,null,null);
-            totals.merge(key,Math.ceil(mana*adjustment.hungerFraction()/5),Double::sum); examples.putIfAbsent(key,new SpellCost.Hunger(1));
+            totals.merge(key,(double)ResourceValuation.foodForMana(mana*adjustment.hungerFraction()),Double::sum); examples.putIfAbsent(key,new SpellCost.Hunger(1));
         }
         var result=new ArrayList<SpellCost>();
         totals.forEach((key,total)->{

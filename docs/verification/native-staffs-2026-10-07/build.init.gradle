@@ -1,0 +1,9 @@
+allprojects {
+    if (project.projectDir == rootProject.projectDir) {
+        project.layout.buildDirectory.set(project.file('build/native-staffs'))
+    }
+}
+gradle.projectsEvaluated {
+    rootProject.neoForge.runs.named('gameTestServer').configure { jvmArguments.add('-Xmx1G') }
+    rootProject.neoForge.runs.named('effectsCapture').configure { jvmArguments.add('-Xmx1G') }
+}

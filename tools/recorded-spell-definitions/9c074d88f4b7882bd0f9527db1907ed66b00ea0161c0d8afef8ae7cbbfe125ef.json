@@ -1,0 +1,156 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:cone_of_cold",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Cone Of Cold",
+    "cast_type": "continuous",
+    "cooldown_ticks": 240
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 42
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "repeat",
+      "count": 16,
+      "interval": 4,
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "cone",
+            "required": false,
+            "distance": {
+              "product": [
+                10,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "angle": 35,
+              "count": 4
+            }
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    1.25,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            },
+            {
+              "type": "freeze",
+              "values": {
+                "ticks": 140
+              }
+            },
+            {
+              "type": "status",
+              "values": {
+                "duration": 40,
+                "amplifier": 0
+              },
+              "identifiers": {
+                "effect": "minecraft:slowness"
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": 0.85,
+            "height": 1.1,
+            "layers": [
+              {
+                "shape": "beam",
+                "color": "a7ddff",
+                "alpha": 0.9,
+                "width": 0.25,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "beam",
+                "color": "ffffff",
+                "alpha": 1,
+                "width": 0.06,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "shards",
+                "color": "48badf",
+                "alpha": 0.85,
+                "width": 0.045,
+                "scale": 1.5,
+                "speed": 1.2,
+                "phase": 0,
+                "count": 11
+              },
+              {
+                "shape": "ripple",
+                "color": "e7fbff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 1.0499999999999998,
+                "speed": -0.78,
+                "phase": 1.2,
+                "count": 5
+              },
+              {
+                "shape": "sparks",
+                "color": "e7fbff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

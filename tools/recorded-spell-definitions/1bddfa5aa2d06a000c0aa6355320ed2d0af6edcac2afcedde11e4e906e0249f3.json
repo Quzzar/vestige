@@ -1,0 +1,140 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:dragon_breath",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Dragon Breath",
+    "cast_type": "continuous",
+    "cooldown_ticks": 240
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:ender": 4,
+    "vestige:draconic": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "repeat",
+      "count": 16,
+      "interval": 4,
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "cone",
+            "required": false,
+            "distance": {
+              "product": [
+                10,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "angle": 35,
+              "count": 4
+            }
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    1.5,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": 0.85,
+            "height": 1.1,
+            "layers": [
+              {
+                "shape": "beam",
+                "color": "bbc6f2",
+                "alpha": 0.9,
+                "width": 0.25,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "beam",
+                "color": "ffffff",
+                "alpha": 1,
+                "width": 0.06,
+                "scale": 1,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              },
+              {
+                "shape": "tendrils",
+                "color": "b67cff",
+                "alpha": 0.85,
+                "width": 0.15,
+                "scale": 1.45,
+                "speed": 1.7,
+                "phase": 0,
+                "count": 7
+              },
+              {
+                "shape": "flare",
+                "color": "f4deff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 1.015,
+                "speed": -1.105,
+                "phase": 1.2,
+                "count": 3
+              },
+              {
+                "shape": "sparks",
+                "color": "f4deff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

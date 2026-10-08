@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-07",
+  "scope": "Native rarity-based staff wear including paid chaos, plus empty-slot presentation; local shared-source build",
+  "java": "21",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "wear": {
+    "common": 1,
+    "uncommon": 2,
+    "rare": 3,
+    "mythic": 4
+  },
+  "maximumDurabilityByCapacity": {
+    "2": 40,
+    "4": 80,
+    "6": 120
+  },
+  "unitTests": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focusedStaffWorldTests": {
+    "tests": 22,
+    "failures": 0,
+    "log": "staff-world.log"
+  },
+  "nativeClient": {
+    "checks": 52,
+    "captures": 10,
+    "manifest": "verification.json"
+  },
+  "build": "passed",
+  "kithkynPlatformCompatibility": "passed (without Kithkyn co-loading)",
+  "authoringChecks": [
+    "audit_staff_traits.py --check",
+    "author_staff_texture.py --check"
+  ],
+  "jar": {
+    "path": "build/native-staffs/libs/vestige-0.1.0.jar",
+    "sha256": "7f495d09d220848f3840e9e387e2e6996a42d7f118cc292fda6d26314b6103dd",
+    "clientAssetHashesMatch": true
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/StaffCasting.java": "5b8cb8d90ff6fc01c85eedcaf0c3ab494355a722ac085c19e5cf3e2df340aa28",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffData.java": "636543a6b7ca97aafb83f2784d0bcd33668add901a95179e2f93e53dc77dc005",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffWorldTest.java": "48b2766e984979bc75f3616b7c452d6d918bbcb4294026b9fe5f1ae5958b4cb7",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffMenu.java": "c03d25badb09465735032bf28629811aaf804e78c537e4bba2b7412a977a7dfc",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeStaffCapture.java": "419f52915168c8461208d286d0e2772675488d2386c0ad0510d5b1cf56cdb8a2",
+    "src/main/java/com/quzzar/vestige/apparatus/client/StaffScreen.java": "93282d00972e6fee2b671fb9b73a72131594a244e1207757b38d366dd8ac0e91"
+  }
+}

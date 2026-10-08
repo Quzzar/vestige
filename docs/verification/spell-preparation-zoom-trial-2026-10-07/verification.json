@@ -1,0 +1,113 @@
+{
+  "review_only": true,
+  "production_charging_cue": "native expanding crosshair edge",
+  "candidate": "up to 8% native-smoothed FOV zoom with item draw-back and unchanged crosshair",
+  "native_frames": 271,
+  "native_cast_checks": 11,
+  "views": [
+    {
+      "view": "scroll-wide",
+      "minimum_world_fov": 64.47839081287384,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-offhand",
+      "minimum_world_fov": 64.49456691741943,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "wand-wide",
+      "minimum_world_fov": 64.45533871650696,
+      "final_world_fov": 69.99965369701385,
+      "mana": 64.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "staff-left",
+      "minimum_world_fov": 64.43838238716125,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "cancel-wide",
+      "minimum_world_fov": 67.12031126022339,
+      "final_world_fov": 70.0,
+      "mana": 100.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-compact",
+      "minimum_world_fov": 64.44467425346375,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "staff-compact",
+      "minimum_world_fov": 64.45527613162994,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-snow",
+      "minimum_world_fov": 64.99756157398224,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-night",
+      "minimum_world_fov": 64.52202916145325,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": false
+    },
+    {
+      "view": "scroll-fov-off",
+      "minimum_world_fov": 70.0,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": true
+    },
+    {
+      "view": "scroll-third-person",
+      "minimum_world_fov": 70.0,
+      "final_world_fov": 70.0,
+      "mana": 58.0,
+      "preparation_cleared": true,
+      "zoom_excluded": true
+    }
+  ],
+  "compilation": "passed as part of runEffectsCapture",
+  "unit_tests_rerun": false,
+  "world_suite_rerun": false,
+  "source_snapshot": "/private/tmp/vestige-zoom-charge-trial-20261007-source",
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": "6366407d82f20b922de5af66a09c15c235317f5b43352aec4464294df06df32b",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationZoom.java": "4f26225c803a1b606db681305b178314960f7ea263448f340073de1d7a109df2",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc",
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": "ad032a1c4e24fc7ddd36c98adcea1fdfa1298a8f895942e8f89940a6a1c875c7"
+  },
+  "installed": false,
+  "production_java_modified_for_trial": false,
+  "video": "/Users/quzzar/Projects/vestige/docs/art/spell-preparation-zoom-trial/charging-comparison.mp4",
+  "video_sha256": "6b4a51daa583e680d7bf7c94cfc0caadd0d3efcb70ca3abca45070e97f79d856",
+  "video_duration_seconds": 8.5,
+  "decoded_video_frame_inspected": true
+}

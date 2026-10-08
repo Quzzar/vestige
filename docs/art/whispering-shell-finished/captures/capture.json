@@ -1,0 +1,25 @@
+{
+  "models/item/homebound_eye.json": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+  "textures/item/homebound_eye.png": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+  "models/item/whispering_shell.json": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+  "textures/item/whispering_shell.png": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+  "clientToMatchingPeer": true,
+  "outsiderReceived": 0,
+  "peerConversations": [
+    "A whisper from the shell.",
+    "Your whisper reached the matching shell."
+  ],
+  "captures": [
+    "shell-native-menu.png",
+    "shell-bound-hover.png",
+    "shell-and-eye-held.png",
+    "shell-conversation-cue.png",
+    "shell-conversation.png"
+  ],
+  "source": "Minecraft native framebuffer, registered production items; one real game client and two in-memory server packet clients",
+  "texturePixelsChanged": false,
+  "tooltip": [
+    "Whispering Shell",
+    "four colored shard runes"
+  ]
+}

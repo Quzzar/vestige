@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vestige · Thread imbuement study</title>
+<style>
+:root{color-scheme:dark;--background:#1c1b20;--ink:#eee8da;--muted:#aaa59d;--accent:#b9a5cc;--line:#403c43;--drawing-ink:#503722;--zoom:2;--holder:1;--space:24px;--pad:32px}
+*{box-sizing:border-box}body{margin:0;padding:var(--pad);background:var(--background);color:var(--ink);font-family:Georgia,serif}
+header{border-bottom:1px solid var(--line);padding-bottom:var(--space);margin-bottom:var(--space)}
+h1{font-size:28px;font-weight:400;margin:0 0 10px}p{font:13px/1.5 system-ui,sans-serif;color:var(--muted);margin:0}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px;font:13px system-ui,sans-serif}
+label{display:flex;gap:8px;align-items:center}select,button{font:inherit;border:1px solid var(--line);border-radius:3px;color:var(--ink);background:var(--background);padding:8px 10px}
+button{cursor:pointer}button[aria-pressed=true]{border-color:var(--accent);background:#51425f}
+button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space);max-width:1000px}
+h2{font-size:21px;font-weight:400;margin:0 0 8px}.study>p{min-height:40px;max-width:370px}
+.surface{width:calc(184px * var(--zoom) * var(--holder));height:calc(150px * var(--zoom) * var(--holder));position:relative;margin:18px 0 20px}
+.diagram{position:absolute;width:184px;height:150px;transform:scale(calc(var(--zoom) * var(--holder)));transform-origin:top left}
+canvas{position:absolute;left:0;top:0;width:184px;height:150px}
+.item{position:absolute;transform:translate(-50%,-50%);width:16px;height:16px;padding:0;border:0;border-radius:0;background:transparent;cursor:default}
+.item.socket{width:14px;height:14px}
+.item.material-frame{width:34px;height:34px}
+.item.material-frame:focus-visible{outline:none;background:#b9a5cc80}
+.frame-tooltip{display:none;position:absolute;z-index:4;left:15px;top:-6px;padding:4px 6px;background:#170f21f5;border:1px solid #6f4697;color:white;font:9px/12px monospace;white-space:nowrap;pointer-events:none}
+.frame-tooltip span{display:block;color:#aaa}.material-frame:hover~.frame-tooltip,.material-frame:focus-visible~.frame-tooltip{display:block}
+.item:hover,.item:focus-visible{background:#b9a5cc30;outline:1px solid var(--accent);outline-offset:1px}
+.tooltip{position:absolute;display:none;z-index:4;bottom:21px;left:-5px;white-space:nowrap;padding:4px 6px;color:#fff;background:#170f21f5;border:1px solid #6f4697;font:9px/12px monospace;pointer-events:none}
+.tooltip span{display:block;color:#aaa}.item:hover .tooltip,.item:focus-visible .tooltip{display:block}
+.summary{font-size:12px;max-width:370px}.summary strong{color:var(--ink);font-weight:500}
+.zoom-study{margin-top:14px;font:12px/1.5 system-ui,sans-serif;color:var(--muted)}.zoom-study summary{cursor:pointer}.zoom-study summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.zoom-study canvas{position:static;display:block;width:272px;height:272px;margin-top:10px}
+footer{border-top:1px solid var(--line);padding-top:18px;margin-top:22px;max-width:1000px}footer p{font-size:12px}
+@media(max-width:750px){:root{--pad:18px;--zoom:1.8}main{grid-template-columns:1fr}h1{font-size:25px}.surface{margin-left:0}.study>p{min-height:0}.controls{gap:8px}select{max-width:240px}}
+@media(max-width:360px){:root{--zoom:1.55}}
+</style>
+</head>
+<body>
+<header>
+ <h1>Imbuement on the String’s Plinth</h1>
+ <p>Three offerings are consumed. The installed block stays.</p>
+ <div class="controls">
+  <label>Thread <select id="thread"></select></label>
+  <button id="normal" aria-pressed="true">Normal recipe size</button>
+  <button id="reduced" aria-pressed="false">Reduced recipe size</button>
+ </div>
+</header>
+<main>
+ <section class="study" data-preview="frame"><h2>Fitted material frame</h2><p>The texture follows the illustrated rim, bevels and corner pieces.</p><div class="surface"><div class="diagram frame"><canvas></canvas></div></div><p class="summary"><strong>Hover the frame</strong> for the installed block; hover the String for the offering.</p><details class="zoom-study"><summary>Inspect frame close-up</summary><canvas class="detail" aria-label="Magnified material frame"></canvas></details></section>
+ <section class="study" data-preview="plain"><h2>Original frame</h2><p>The same Plinth illustration with its ordinary stone rim.</p><div class="surface"><div class="diagram plain"><canvas></canvas></div></div><p class="summary">Its shape, ink edges and clear center are preserved in the material version.</p><details class="zoom-study"><summary>Inspect original close-up</summary><canvas class="detail" aria-label="Magnified original frame"></canvas></details></section>
+</main>
+<footer><p>Layout study using the approved parchment art and unchanged Minecraft textures. String stands in for the unfinished thread sprite. This is a browser preview, not an in-game capture.</p></footer>
+<script>
+const threads=[
+ {name:'Ensorcelled Thread',material:'diamond_block',block:'Diamond Block'},
+ {name:'Callous Thread',material:'iron_block',block:'Iron Block'},
+ {name:'Smoldering Thread',material:'gold_block',block:'Gold Block'},
+ {name:'Laced Thread',material:'emerald_block',block:'Emerald Block'},
+ {name:'Consecrated Thread',material:'glowstone',block:'Glowstone'}
+];
+const source='../ritual-image-concepts/';
+const assets={paper:source+'parchment-v7.png',plinth:source+'plinth-v7.png',stone:source+'spellstone-v7.png',
+ string:'icons/string.png',amethyst_shard:'icons/amethyst_shard.png',honeycomb:'icons/honeycomb.png',
+ ...Object.fromEntries(threads.map(t=>[t.material,'icons/'+t.material+'.png']))};
+const images={};
+const points=[[92,28],[139,75],[92,122],[45,75]],center=[92,75];
+const select=document.getElementById('thread');
+for(const t of threads){const option=document.createElement('option');option.textContent=t.name;select.append(option)}
+function stroke(ctx,x1,y1,x2,y2,color){
+ ctx.fillStyle=color;const steps=Math.ceil(Math.max(Math.abs(x2-x1),Math.abs(y2-y1)));
+ for(let i=0;i<=steps;i++)ctx.fillRect(Math.round(x1+(x2-x1)*i/Math.max(1,steps)),Math.round(y1+(y2-y1)*i/Math.max(1,steps)),1,1);
+}
+function illustration(ctx,image,x,y,size){ctx.imageSmoothingEnabled=true;ctx.drawImage(image,x-size/2,y-size/2,size,size)}
+function nativeIcon(ctx,image,x,y,size=16){ctx.imageSmoothingEnabled=false;ctx.drawImage(image,x-size/2,y-size/2,size,size)}
+/** Contours authored in the unchanged Plinth illustration's actual 1254×1254 pixels. */
+const rimSourceSize=1254;
+const rimOuter=[[271,294],[342,294],[366,299],[469,299],[630,299],[787,299],[893,299],[914,294],[980,294],[991,305],[991,365],[990,387],[990,876],[990,900],[990,944],[980,958],[914,962],[893,958],[368,958],[346,965],[271,965],[260,950],[260,902],[267,878],[267,384],[259,358],[260,307]];
+const rimInner=[[357,340],[894,340],[900,355],[918,373],[943,379],[943,879],[916,891],[899,910],[895,921],[355,921],[347,908],[328,888],[314,879],[314,379],[330,370],[347,355]];
+function rimPath(){const path=new Path2D();for(const contour of [rimOuter,rimInner]){path.moveTo(...contour[0]);for(const point of contour.slice(1))path.lineTo(...point);path.closePath()}return path}
+function rimHitClip(){return 'polygon(evenodd,'+[...rimOuter,rimOuter[0],...rimInner,rimInner[0]].map(p=>p.map(v=>(v/rimSourceSize*100).toFixed(4)+'%').join(' ')).join(',')+')'}
+/** Replace only the illustrated stone rim, retaining its original ink and relief. */
+function materialFrame(ctx,image,x,y){
+ ctx.save();ctx.translate(x-17,y-17);ctx.scale(34/rimSourceSize,34/rimSourceSize);ctx.clip(rimPath(),'evenodd');
+ ctx.imageSmoothingEnabled=false;ctx.drawImage(image,0,0,rimSourceSize,rimSourceSize);
+ ctx.globalCompositeOperation='multiply';ctx.globalAlpha=.85;ctx.imageSmoothingEnabled=true;ctx.drawImage(images.plinth,0,0,rimSourceSize,rimSourceSize);ctx.restore();
+}
+function iconButton(diagram,x,y,label,role,isSocket=false){
+ const button=document.createElement('button');button.className='item'+(isSocket?' socket':'');button.style.left=x+'px';button.style.top=y+'px';button.setAttribute('aria-label',label+(role?', '+role:''));
+ const tip=document.createElement('span');tip.className='tooltip';tip.textContent=label;
+ if(role){const line=document.createElement('span');line.textContent=role;tip.append(line)}
+ button.append(tip);diagram.append(button);
+}
+function render(){
+ if(images.plinth.naturalWidth!==rimSourceSize||images.plinth.naturalHeight!==rimSourceSize)throw new Error('Rim contours do not match the Plinth artwork dimensions');
+ const t=threads[select.selectedIndex];
+ for(const diagram of document.querySelectorAll('.diagram')){
+  diagram.querySelectorAll('button,.frame-tooltip').forEach(b=>b.remove());
+  const canvas=diagram.querySelector('canvas');canvas.width=184*4;canvas.height=150*4;const ctx=canvas.getContext('2d');ctx.scale(4,4);
+  illustration(ctx,images.paper,...center,150);
+  const radius=47,step=2.2/radius,gap=1.3/radius;
+  for(let a=0;a<Math.PI*2;a+=step+gap)stroke(ctx,92+radius*Math.cos(a),75+radius*Math.sin(a),92+radius*Math.cos(a+step),75+radius*Math.sin(a+step),'#ad946e');
+  for(const p of points){
+   const d=Math.hypot(p[0]-92,p[1]-75),ux=(p[0]-92)/d,uy=(p[1]-75)/d,tx=92+ux*14.8,ty=75+uy*14.8;
+   stroke(ctx,p[0]-ux*14.5,p[1]-uy*14.5,tx,ty,'#503722');
+   stroke(ctx,tx,ty,tx+ux*2.7-uy*1.6,ty+uy*2.7+ux*1.6,'#503722');
+   stroke(ctx,tx,ty,tx+ux*2.7+uy*1.6,ty+uy*2.7-ux*1.6,'#503722');
+  }
+  for(const p of points)illustration(ctx,images.plinth,...p,34);
+  illustration(ctx,images.stone,...center,33);
+  const framed=diagram.classList.contains('frame');
+  if(framed){
+   materialFrame(ctx,images[t.material],...points[0]);
+   iconButton(diagram,...points[0],t.block,'Installed imbuement · retained',true);
+   const frame=diagram.querySelector('.socket');frame.classList.add('material-frame');frame.style.clipPath=rimHitClip();frame.querySelector('.tooltip').remove();
+   const tip=document.createElement('span');tip.className='frame-tooltip';tip.textContent=t.block;
+   const role=document.createElement('span');role.textContent='Installed imbuement · retained';tip.append(role);diagram.append(tip);
+  }
+  for(const [index,id] of ['string','amethyst_shard','honeycomb'].entries()){
+   const p=points[index];nativeIcon(ctx,images[id],...p);iconButton(diagram,...p,{string:'String',amethyst_shard:'Amethyst Shard',honeycomb:'Honeycomb'}[id],'Consumed offering');
+  }
+  nativeIcon(ctx,images.string,...center);iconButton(diagram,...center,t.name,'Result · sprite placeholder');
+  diagram.dataset.material=t.material;
+  const detail=diagram.closest('.study').querySelector('.detail');detail.width=272;detail.height=272;const enlarged=detail.getContext('2d');enlarged.scale(8,8);enlarged.fillStyle='#e7cca4';enlarged.fillRect(0,0,34,34);illustration(enlarged,images.plinth,17,17,34);if(framed)materialFrame(enlarged,images[t.material],17,17);nativeIcon(enlarged,images.string,17,17);
+ }
+ window.previewReady=true;
+}
+select.addEventListener('change',render);
+for(const [id,factor] of [['normal',1],['reduced',.68]])document.getElementById(id).addEventListener('click',()=>{
+ document.documentElement.style.setProperty('--holder',factor);document.getElementById('normal').setAttribute('aria-pressed',id==='normal');document.getElementById('reduced').setAttribute('aria-pressed',id==='reduced');
+});
+Promise.all(Object.entries(assets).map(([name,path])=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>{images[name]=image;resolve()};image.onerror=()=>reject(new Error('Missing preview asset: '+path));image.src=path}))).then(render).catch(error=>{window.previewError=error.message;throw error});
+</script>
+</body>
+</html>

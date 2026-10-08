@@ -1,0 +1,94 @@
+{
+  "textureUnchanged": true,
+  "basis": "../dissentient-diamond-v10/dissentient-diamond-16.png",
+  "textureSha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+  "textureBounds": [
+    2,
+    1,
+    13,
+    15
+  ],
+  "canvasCenterX": 8.0,
+  "occupiedEdgeCenterX": 7.5,
+  "guiTranslationTexels": [
+    0.5,
+    0,
+    0
+  ],
+  "renderedEdgeCenterX": 8.0,
+  "reason": "An eleven-texel footprint cannot have equal integer padding on a sixteen-texel canvas. A GUI-only half-texel translation centers it without resampling or repainting.",
+  "nativeMeasurements": [
+    {
+      "guiScale": 2,
+      "canvasBounds": [
+        836,
+        722,
+        868,
+        754
+      ],
+      "versions": [
+        {
+          "version": "v10",
+          "foregroundBounds": [
+            4,
+            2,
+            26,
+            30
+          ],
+          "foregroundPixels": 372,
+          "footprintCenterX": 15.0,
+          "canvasCenterX": 16.0
+        },
+        {
+          "version": "v11",
+          "foregroundBounds": [
+            5,
+            2,
+            27,
+            30
+          ],
+          "foregroundPixels": 372,
+          "footprintCenterX": 16.0,
+          "canvasCenterX": 16.0
+        }
+      ],
+      "sameRenderedSpriteAfterTranslation": true
+    },
+    {
+      "guiScale": 3,
+      "canvasBounds": [
+        774,
+        723,
+        822,
+        771
+      ],
+      "versions": [
+        {
+          "version": "v10",
+          "foregroundBounds": [
+            6,
+            3,
+            39,
+            45
+          ],
+          "foregroundPixels": 837,
+          "footprintCenterX": 22.5,
+          "canvasCenterX": 24.0
+        },
+        {
+          "version": "v11",
+          "foregroundBounds": [
+            7,
+            3,
+            41,
+            45
+          ],
+          "foregroundPixels": 873,
+          "footprintCenterX": 24.0,
+          "canvasCenterX": 24.0
+        }
+      ],
+      "rasterizationNote": "Half-texel translation falls between framebuffer pixels at GUI scale 3; the rasterized footprint is 34 rather than 33 pixels wide, centered exactly. Source texture and model scale are unchanged."
+    }
+  ]
+}

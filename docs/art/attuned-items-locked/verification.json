@@ -1,0 +1,167 @@
+{
+  "verifiedUtc": "2026-10-06T21:13:22.313176+00:00",
+  "engine": "Minecraft Java 1.21.1 / NeoForge 21.1.72",
+  "lockedSelections": [
+    {
+      "item": "homebound_eye",
+      "variant": "eye_a_centered_pearl",
+      "selection": "Eye A \u00b7 Centered pearl",
+      "source": "approved/homebound_eye.png",
+      "sha256": "716aec5a00b5dbb5dce5305df963921dc7b49a4db8baceb6937ae43f8618b710",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "solidBounds": [
+        317,
+        392,
+        940,
+        1053
+      ],
+      "approvedMenu": "../item-textures-native-v5/captures/eye-a.png"
+    },
+    {
+      "item": "whispering_shell",
+      "variant": "shell_b_deep_coil",
+      "selection": "Shell B \u00b7 Deep coil",
+      "source": "approved/whispering_shell.png",
+      "sha256": "1e9a555a5d1ce097c289e0ff67a21d44bc6a1896784a0798e4f6a851e50f2da3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "solidBounds": [
+        269,
+        286,
+        994,
+        999
+      ],
+      "approvedMenu": "../item-textures-native-v5/captures/shell-b.png"
+    }
+  ],
+  "checks": {
+    "all_original_approved_rgba_preserved": "PASS",
+    "only_transparent_padding_added": "PASS",
+    "47_loaded_assets_match_sources": "PASS",
+    "two_correct_native_models": "PASS",
+    "two_native_menu_views_visually_inspected": "PASS",
+    "approved_menu_shape_and_color_retained": "PASS",
+    "native_atlas_mip_level_four_retained": "PASS",
+    "production_package_matches_locked_assets": "PASS",
+    "preview_fixture_excluded_from_production": "PASS",
+    "production_build": "PASS",
+    "kithkyn_compatibility": "PASS",
+    "homebound_eye_gameplay_classes_unchanged": "PASS"
+  },
+  "unitTests": {
+    "tests": 107,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "menuComparisons": [
+    {
+      "item": "homebound_eye",
+      "differentIconPixels": 530,
+      "differentSurroundingPixels": 0,
+      "meanMaximumRgbDifference": 0.5082465277777778,
+      "maximumRgbDifference": 47,
+      "note": "Native atlas now retains mip level 4 instead of the study atlas dropping to 0; very small filtering differences are limited to the icon. Original artwork RGBA is exact."
+    },
+    {
+      "item": "whispering_shell",
+      "differentIconPixels": 527,
+      "differentSurroundingPixels": 0,
+      "meanMaximumRgbDifference": 0.5707465277777778,
+      "maximumRgbDifference": 30,
+      "note": "Native atlas now retains mip level 4 instead of the study atlas dropping to 0; very small filtering differences are limited to the icon. Original artwork RGBA is exact."
+    }
+  ],
+  "loadedAssetSha256": {
+    "vestige:textures/item/homebound_eye.png": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+    "vestige:models/item/homebound_eye.json": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+    "vestige:textures/item/whispering_shell.png": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+    "vestige:models/item/whispering_shell.json": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+    "minecraft:models/item/paper.json": "044713a212b8ea170d4063522f4bd83bbf4b9c919b2f28cf452c393c2722c3e2",
+    "minecraft:textures/gui/container/generic_54.png": "1ca0500b1be97ba0dda9290bc16b554829b63de691cefe7dcbfd3078cae8c268",
+    "minecraft:textures/item/bone.png": "f5f2a37e7466f2983c00550874a2a94d2d006eae52b0e73acb722fadeb9bdb3b",
+    "minecraft:textures/item/coal.png": "31a5bf332d28c65e0e83368d4008b31c471023ae391e4533f80cd80ad13f54e0",
+    "minecraft:textures/item/iron_ingot.png": "4625aa2c32c74bd6796c7ba8e7ee6300db8d2f24fb38c9d9324a63b262a44391",
+    "minecraft:textures/item/flint.png": "ba7c3c7a261bfcbc2f1d8c67b808d8bce73ff8f7445aa76d8dc62a7f28198fc0",
+    "minecraft:textures/item/ender_pearl.png": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a",
+    "minecraft:textures/item/spider_eye.png": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06",
+    "minecraft:textures/item/nautilus_shell.png": "ffb92d9a596e7942f3348719c1784181e05a1d4d17615f73942ca7fbd3db8125",
+    "minecraft:textures/item/string.png": "ded6537ee0356cfd3a0024fccd1a7ee478b58279a0bace73b689cc62369d26da",
+    "minecraft:textures/item/leather.png": "7af3f49400e6a71b9695ee304fb8398c50f52204d361ccdd7517e52aeefb5054",
+    "minecraft:textures/item/feather.png": "56513599c70b5da268ebf37e3245ef1f0fc9645a8b654aedd69069ec2f757513",
+    "minecraft:textures/item/redstone.png": "6d0e6a1fd54142cd3de649e1100c428733512b322a0b0a530f62eae9f86881ec",
+    "minecraft:textures/item/lapis_lazuli.png": "261b626e66fc29d6a28990ac36c74a04afa2e1d03daff00c5f3b3e5a79463a14",
+    "minecraft:textures/item/amethyst_shard.png": "24fa75f6b75202d890019ec7a901d525918cfacd3e8c0e6cb0580c7b7933b363",
+    "minecraft:textures/item/echo_shard.png": "7e7cb2e26fbb10be5911c7bfc6a6773c48b0ec1395cd8478de6e118f043d9097",
+    "minecraft:textures/item/glass_bottle.png": "6a09a39bb6c41bc92bd5eca1f51caf5b582a85f68206b164476c8e14a4669416",
+    "minecraft:textures/item/honey_bottle.png": "c41e02d9398446543c77a4a50678715d6182004e8f170c6b5c12d84578fe5d98",
+    "minecraft:textures/item/snowball.png": "4e4dff01a4935f58ad5a3f80700b4b85062baa0b395736b2e53e189107673d81",
+    "minecraft:textures/item/arrow.png": "9dfc345c4ae71a7bab003d3d15f420376910162a000a99832e9ca63a51bc85dd",
+    "minecraft:textures/item/iron_sword.png": "ed1fa2f83955583e70a19791455d13989e8bd93b1d7240e775a57141022bed6b",
+    "minecraft:textures/item/iron_pickaxe.png": "b211a9b920d8f22ce5451780855155644d14ca7b85ab16d31f9c0b572cdda7ee",
+    "minecraft:textures/item/bow.png": "6f62b5a5eac576af20f1ddd79e69df37b19a036691aa26b7523753f995e3dd8d",
+    "minecraft:textures/item/shears.png": "63be8d8865a04be4109aaae4fbb5d5b94c573e0f9f52ba79b444660eefce33d8",
+    "minecraft:textures/item/fishing_rod.png": "eaf66dce8f2dfccdc95c8b2c8df7d715bb4a337dfa250a227a9eb58b73b0602c",
+    "minecraft:textures/item/bucket.png": "3f14980d6d2dea8d547e44104a55a51d62bee71bd45f16068113b279b3d2d042",
+    "minecraft:textures/item/bread.png": "7e0e4a9fcb8bd4b85820ee3aa7ea83b66f08687cd907a8d38cc98281b41fac1d",
+    "minecraft:textures/item/apple.png": "9b1aef1aaa41229dbe2bc97657b8650527b14cc20a6236e823f1682c4d44c5a2",
+    "minecraft:textures/block/cobblestone.png": "bcda95fdf5afa91747657aa198fc0b69ebf44141de30a718075f74045e9a5def",
+    "minecraft:textures/block/oak_log.png": "060c93128fb65aa350a84e4b6576e616c47d40211bbe537cfe923a81d072e30c",
+    "minecraft:textures/block/oak_planks.png": "3a33db67a3ba30537d0890a5cb37c8087ca336be89cbb1393a71c23224e361a8",
+    "minecraft:textures/block/torch.png": "329db8f31720564ca9c6eeb3bafb98bb30a4d277e958e55806720cc01dbf296d",
+    "minecraft:textures/block/dirt.png": "1f0f0e619e7dfe683ea45b9254859f14b0ed5f1debdb242ea878828575be5bf0",
+    "minecraft:textures/item/wheat.png": "9ed5d3338d238528fa04c9fd86bd1e5f87a194576eed3f5e6bb86dcf18470039",
+    "minecraft:textures/item/carrot.png": "113a62e7fbee7d2874268f62c7ca5db3dc9b1dc538f7ff5aaa0fae5a4f1f3e0d",
+    "minecraft:textures/item/potato.png": "a1262dfc5ef931f6708dcdf06a294d76de82ea05d7c0ff068636961f665f5a32",
+    "minecraft:textures/item/cooked_beef.png": "07d08a99d1b51230aa7edf4e6a890130cce02a6a5fa64407850354192bfdbea3",
+    "minecraft:textures/item/diamond_sword.png": "5634a8cb79a70beb306210de9ec492fc2d4dc8f739372683e9882ef06bf63008",
+    "minecraft:textures/item/diamond_pickaxe.png": "7672c209d0c66c43d297b3d04513c9e789d03f5ea6ff1e564a4dbc1fd78a5c88",
+    "minecraft:textures/item/iron_axe.png": "8dea40bac06c6f14bb0ad9e8b47de63250f6d6a46ae9439b85ddd1377f1edb49",
+    "minecraft:textures/item/iron_shovel.png": "c9d36d59ec53ebc631bd24930f62087c316eef39bd237d8bb69cb2bb629dfae5",
+    "minecraft:textures/item/water_bucket.png": "0efb2f243397e7d82a9a9e97b6e8fc39fc6c7972bf86b9b6ed97e7101b79c0a1",
+    "minecraft:textures/item/compass_16.png": "0b14eabd82b84a1273057baac58cff50279329e15260b16b711e5a49ffdc56a4"
+  },
+  "sourceAndCaptureSha256": {
+    "docs/art/attuned-items-locked/approved/homebound_eye.png": "716aec5a00b5dbb5dce5305df963921dc7b49a4db8baceb6937ae43f8618b710",
+    "src/main/resources/assets/vestige/textures/item/homebound_eye.png": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+    "src/main/resources/assets/vestige/models/item/homebound_eye.json": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+    "docs/art/attuned-items-locked/approved/whispering_shell.png": "1e9a555a5d1ce097c289e0ff67a21d44bc6a1896784a0798e4f6a851e50f2da3",
+    "src/main/resources/assets/vestige/textures/item/whispering_shell.png": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+    "src/main/resources/assets/vestige/models/item/whispering_shell.json": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+    "docs/art/attuned-items-locked/captures/eye-a.png": "4df71a7788284f3ae0ae2a702f7e15536813b3ebe6bde2a3edac757d1f972f87",
+    "docs/art/attuned-items-locked/captures/shell-b.png": "f995bd7977d53dceaeed8da7130ede9312e4c7b483c1ee27309e1bd441b4b3e8",
+    "docs/art/attuned-items-locked/selection.json": "52a1dc5e6f98c2add9c785f952d43f7be461d35466ddc47bb8ccdb4ecae18cf2",
+    "docs/art/attuned-items-locked/asset-details.json": "393bc9e33bb91d2f18bf5c656aa337e8e4f375f80247b0efe32269bf628b985a",
+    "docs/art/attuned-items-locked/pinned-generated-parent.json": "63190611202e75ad7b812bc9a4b31bd53f3e186895d7b53e5e280b0d1e30a67a",
+    "docs/art/attuned-items-locked/LockedTextureImport.java": "8e26403ce1835bfe7df76b83a8071743f47fb82da961964a19186ae24a5a5e12",
+    "docs/art/attuned-items-locked/author_assets.py": "4f770eab0b7160477c34302720c4549bdd67e97f3d141bb6f384cb2f5f89b5a2",
+    "docs/art/attuned-items-locked/verify_assets.py": "d8ee0a7d8dc34f2aebf688f87affa7060c5151b815609f02fc479ed6c579953b",
+    "docs/art/attuned-items-locked/isolated-preview.gradle": "5811d5f82ef4bb3594f216ffa0f3faea0b36e21d13612bc4ed209ff8abb3e2db",
+    "docs/art/attuned-items-locked/production-build.gradle": "4b49f600cec65c3c5afd35ae3e6c591b55ab1fd22ae9ce2d461a95e40bfc7ef5",
+    "docs/art/attuned-items-locked/captures/capture.json": "aff846f31716517114b98b2988b75d2c26c9272954139e24fa1646d6e58a9717",
+    "docs/art/attuned-items-locked/preview-source/com/quzzar/vestige/apparatus/client/LockedItemTextureCapture.java": "5b59deb9fb9e282018eed234ba1bc45096ba6e139f40d9c45be4a234a77d2241",
+    "docs/art/attuned-items-locked/preview-resources/assets/minecraft/models/item/paper.json": "044713a212b8ea170d4063522f4bd83bbf4b9c919b2f28cf452c393c2722c3e2"
+  },
+  "compiledCaptureSha256": {
+    "run/attuned-items-locked-build/classes/java/main/com/quzzar/vestige/apparatus/client/LockedItemTextureCapture.class": "c298ea62dfa4172758155b2051f5a94534c0ae94d72b25cbb3fa5e0b729c8130",
+    "run/attuned-items-locked-build/classes/java/main/com/quzzar/vestige/apparatus/client/LockedItemTextureCapture$CaptureHost.class": "2cfd3f6f40f23dbde14a4aaae21efe22dd274e4cb1ac9eb9782510e04eea0cd6",
+    "run/attuned-items-locked-build/classes/java/main/com/quzzar/vestige/apparatus/client/LockedItemTextureCapture$ReviewScreen.class": "4a8514b55be76405af38cd8c3ef69f10db2b67eac710ccad44f8a776f3122739"
+  },
+  "productionJar": {
+    "path": "run/attuned-items-locked-production-build/libs/vestige-0.1.0.jar",
+    "sha256": "01de169773131e21f70bd40c720aef452921905c93c28a6868745d23c5238242"
+  },
+  "limits": [
+    "High-resolution artwork is the explicitly approved native menu appearance; not a literal 16x16 texture",
+    "Native GUI verifies an unbound production Eye, with no attunement mark or glint",
+    "Shell artwork is production-ready but Shell registration/chat gameplay remains unimplemented",
+    "Normalized hand/head/frame/ground transforms are authored but not visually captured",
+    "World mechanics and multiplayer were not rerun for this asset-only change",
+    "No installed game files replaced"
+  ]
+}

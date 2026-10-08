@@ -16,7 +16,7 @@ The [100-source Pathfinder selection](pathfinder-spell-selection.md) lists all 1
 | Rarity | Expected overall value and eventual availability, independent of traits | Common, uncommon, rare, or mythic |
 | Traditions | The magical traditions associated with the spell; more than one is allowed | Arcane and primal |
 | Traits | A flat set of names and numerical ratings | Fire 4, evocation 4, amplify 1 |
-| Costs | Authored resources, charge, and recovery | 28 mana, 20 ticks of charge, 100 ticks of recovery |
+| Costs | Authored resources and preparation | 28 mana, 20 ticks of charge; no ordinary spell cooldown |
 | Triggers | Events that start the spell or activate its temporary reactions | Primary interaction; incoming damage |
 | Targets | Which subjects an effect selects | A hostile creature on the aim ray; enemies near an impact |
 | Effect plan | Ordered actions, delays, repetitions, branches, and callbacks | Launch, then damage and ignite on impact |
@@ -65,10 +65,6 @@ This is the complete [Force Arrow definition](../src/main/resources/data/vestige
     {
       "type": "mana",
       "amount": 14
-    },
-    {
-      "type": "cooldown",
-      "ticks": 40
     }
   ],
   "triggers": [
@@ -145,7 +141,7 @@ A listed trait matters numerically only where the plan reads it. Heartstop lists
 
 ### Fireball as a projectile with an impact plan
 
-**Traditions:** arcane and primal. **Traits:** fire 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 28 mana, 20-tick charge (1 seconds), and a 5-second native cooldown.
+**Traditions:** arcane and primal. **Traits:** fire 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 28 mana, 20-tick charge (1 seconds).
 
 The caster launches a projectile at speed 1 block per tick, with a travel budget of `32 × range` blocks. On impact, it selects up to six hostile living creatures within `3 × area` blocks, deals `8 × amplify` damage to each, and ignites them for two seconds. At baseline, the authored hit is eight health points, equivalent to four hearts before mitigation; burning is additional vanilla behavior.
 
@@ -155,7 +151,7 @@ For an illustrative cast resolved to amplify 2, range 1.5, and area 2, the formu
 
 ### Heartstop as deferred damage
 
-**Tradition:** occult. **Traits:** blood 4, abjuration 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 80 mana, no initial charge, and a 30-second native cooldown.
+**Tradition:** occult. **Traits:** blood 4, abjuration 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 80 mana, no initial charge.
 
 The spell attaches a six-second status manifestation to the caster and initializes a damage accumulator. Its incoming damage binding runs before damage commits, stores the amount it defers, and reduces that pending amount to zero. When the manifestation ends normally, its end callback deals half the stored amount to the caster. For example, 20 deferred damage produces an authored repayment of 10 damage.
 
@@ -165,7 +161,7 @@ The binding has 10,000 finite charges. Amplify, range, and area do not change th
 
 ### Echoing Strikes as an attacker reaction
 
-**Tradition:** arcane. **Traits:** ender 4, evocation 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 38 mana, no initial charge, and a 15-second native cooldown.
+**Tradition:** arcane. **Traits:** ender 4, evocation 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 38 mana, no initial charge.
 
 A ten-second status manifestation installs a binding on the attacker with three charges. Each eligible nonmagical damage event selects that event's victim and applies another hit worth `0.5 × reported event damage × amplify`. An event reporting eight damage therefore produces an authored four-damage echo at baseline. Range and area are unused.
 
@@ -175,7 +171,7 @@ The magical-event guard keeps its own magical echo from consuming further charge
 
 ### Portal as a cast with a second placement
 
-**Tradition:** arcane. **Traits:** ender 4, space 4, teleportation 4, amplify 1, range 1, area 1. **Authored cost:** 48 mana, no initial charge, and a 20-second native cooldown.
+**Tradition:** arcane. **Traits:** ender 4, space 4, teleportation 4, amplify 1, range 1, area 1. **Authored cost:** 48 mana, no initial charge.
 
 The first input captures an aimed position within `48 × range` blocks. The session waits up to 2,400 ticks, or two minutes, for another input of the same spell and mode. The next input captures a second position and creates linked endpoints for 1,200 ticks, or one minute. A resumed session pays once; the second placement is a continuation of the original cast.
 
@@ -185,7 +181,7 @@ Endpoints in the same dimension must be at least two blocks apart. They transfer
 
 ### Raise Dead as an owned summon cohort
 
-**Tradition:** occult. **Traits:** death 4, necromancy 4, conjuration 4, amplify 1, range 1, area 1. **Authored cost:** 60 mana, 30-tick charge (1.5 seconds), and a 30-second native cooldown.
+**Tradition:** occult. **Traits:** death 4, necromancy 4, conjuration 4, amplify 1, range 1, area 1. **Authored cost:** 60 mana, 30-tick charge (1.5 seconds).
 
 The effect plan creates two zombies with iron swords and one skeleton with a bow. Leather helmets protect those bodies from ordinary daylight burning. The native ownership layer supplies following and combat behavior. Their maximum lifetime is 600 ticks, or thirty seconds; recasting the waiting session dismisses its cohort early.
 
@@ -195,7 +191,7 @@ None of its scaling traits is read. Its source school is Blood, while its native
 
 ### Root as a destructible restraint
 
-**Tradition:** primal. **Traits:** plant 4, abjuration 4, amplify 1, range 1, area 1. **Authored cost:** 26 mana, 20-tick charge (1 seconds), and a 10-second native cooldown.
+**Tradition:** primal. **Traits:** plant 4, abjuration 4, amplify 1, range 1, area 1. **Authored cost:** 26 mana, 20-tick charge (1 seconds).
 
 The spell selects an aimed hostile creature within `24 × range` blocks and creates a tether lasting four seconds. The tether has a backing anchor authored with ten health points and constrains the target around its initial position, with a radius of half a block. Every five ticks, it refreshes 25 ticks of vanilla Slowness V. Destroying or dispelling the anchor stops the tether and refreshes; the last slowness application can remain briefly until its own expiry.
 
@@ -205,7 +201,7 @@ Amplify and area are unused. Root is a restraint built from tether and status pr
 
 ### Chain Lightning as reusable chained targeting
 
-**Traditions:** arcane and primal. **Traits:** lightning 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 32 mana, 10-tick charge (0.5 seconds), and a 6-second native cooldown.
+**Traditions:** arcane and primal. **Traits:** lightning 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 32 mana, 10-tick charge (0.5 seconds).
 
 A chain selector finds an initial aimed hostile creature within `32 × range` blocks and follows up to three more nearby hostiles, for four targets total. Each jump has a fixed six-block search distance and respects the selector's visibility rules. Every selected creature receives `6 × amplify` damage. Area is unused, and range scales initial reach rather than the six-block jump distance.
 
@@ -215,17 +211,17 @@ A chain selector finds an initial aimed hostile creature within `32 × range` bl
 
 The batches add 48, 16 and 36 independent definitions, for 100 `pf2_` IDs. The source rank/cantrip flag describes the published spell; these native costs and outcomes come from Vestige tuning. Source rarity is retained per spell, while native rarity reflects its Minecraft role.
 
-| Spell / native ID | Native rarity | Mana / charge / recovery | Current native outcome |
+| Spell / native ID | Native rarity | Mana / charge | Current native outcome |
 |---|---|---|---|
-| `pf2_electric_arc` | common | 8 / immediate / 1.2 s | Four HP each to at most two distinct creatures; sixteen-block initial reach, four-block visible jump. |
-| `pf2_shield` | common | 6 / immediate / 3 s | Personal three-second ward, reducing one hit by three HP. Existing Iron Shield remains a stationary destructible barrier. |
-| `pf2_bind_undead` | rare | 34 / 0.8 s / 15 s | Control one existing undead mob for eight seconds; expiry/dispel releases the body and restores its prior target. |
-| `pf2_field_of_life` | rare | 40 / 1 s / 11 s | Six delayed one-second pulses: heal living creatures one HP or damage undead two HP, up to six creatures per pulse. Living enemies and the caster can receive healing. |
-| `pf2_regenerate` | rare | 38 / 0.8 s / 13 s | Eight delayed healing pulses of 1.5 HP; fire damage ends the cast. |
-| `pf2_gentle_breeze` | uncommon | 26 / 0.6 s / 8 s | Six HP once per living recipient after three seconds of continuous sampled occupancy; leaving resets progress, undead excluded. |
-| `pf2_flicker` | uncommon | 28 / 0.5 s / 9 s | Four quarter-hit nonmagical reductions and three safe random teleport attempts over six seconds; blocked destinations skip the pulse. |
-| `pf2_heal` / `pf2_harm` | uncommon | 24 / 0.6 s / 6 s | Eight HP restoration or harm to one aimed recipient, reversing living/undead eligibility. |
-| `pf2_cataclysm` | mythic | 90 / 2 s / 30 s | Four eight-HP surges one second apart at a fixed area, with burning, slowing and a final launch. Maximum six targets per phase; leaving the area or interrupting the channel reduces the outcome. |
+| `pf2_electric_arc` | common | 8 / immediate | Four HP each to at most two distinct creatures; sixteen-block initial reach, four-block visible jump. |
+| `pf2_shield` | common | 6 / immediate | Personal three-second ward, reducing one hit by three HP. Existing Iron Shield remains a stationary destructible barrier. |
+| `pf2_bind_undead` | rare | 34 / 0.8 s | Control one existing undead mob for eight seconds; expiry/dispel releases the body and restores its prior target. |
+| `pf2_field_of_life` | rare | 40 / 1 s | Six delayed one-second pulses: heal living creatures one HP or damage undead two HP, up to six creatures per pulse. Living enemies and the caster can receive healing. |
+| `pf2_regenerate` | rare | 38 / 0.8 s | Eight delayed healing pulses of 1.5 HP; fire damage ends the cast. |
+| `pf2_gentle_breeze` | uncommon | 26 / 0.6 s | Six HP once per living recipient after three seconds of continuous sampled occupancy; leaving resets progress, undead excluded. |
+| `pf2_flicker` | uncommon | 28 / 0.5 s | Four quarter-hit nonmagical reductions and three safe random teleport attempts over six seconds; blocked destinations skip the pulse. |
+| `pf2_heal` / `pf2_harm` | uncommon | 24 / 0.6 s | Eight HP restoration or harm to one aimed recipient, reversing living/undead eligibility. |
+| `pf2_cataclysm` | mythic | 90 / 2 s | Four eight-HP surges one second apart at a fixed area, with burning, slowing and a final launch. Maximum six targets per phase; leaving the area or interrupting the channel reduces the outcome. |
 
 Pathfinder descriptive traits use relative unit one, with explicitly calibrated coefficients; source rank does not inflate trait ratings. Typed fire, freezing and lightning use Minecraft damage tags, while undead eligibility uses the entity-type tag. Tabletop saves, spell slots and automatic heightening are omitted. Full differences and citations appear in the [Pathfinder ledger](design/pathfinder-spell-conversions.md), and every executable plan appears below.
 
@@ -257,7 +253,7 @@ Use an operator account in a development world:
 /vestige_magic dispel
 ```
 
-`cast` explicitly bypasses resource costs and native cooldowns for development, while preserving charge/channel timing, recasts, and volatility. To exercise balance, use `/vestige_magic mana 100` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival. Paid casts enforce authored mana and per-spell recovery; Creative bypasses resource payment but retains recovery. Recasts pay once and can resume during their existing cooldown. One active charge/channel per caster prevents simultaneous channel stacking; dormant recast sessions permit other spells. Players have 100 mana, full on first spawn and death/respawn, and recover 2 mana per second after a five-second expenditure delay. The mana gauge is visible only below full. Capacity progression remains deferred. Reload/restart resets active sessions and recovery timers. Normal wand controls, discovery, and progression remain deferred.
+`cast` bypasses resource costs for development, preserving charge/channel timing, recasts and volatility. Use `/vestige_magic mana 100` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival to exercise payment. Ordinary spell cooldowns were removed on October 7, 2026: spells pay their authored resources at release and can prepare again when their active charge/channel ends. A subtle first-person zoom of up to 3% and a straight item draw-back show initial preparation. The native crosshair remains unchanged; the camera smoothly returns after release or cancellation. Recasts pay once; dormant recast sessions permit other spells. Creative bypasses resources but retains timing and unknown/volatile risk. Wands, staffs and scrolls add no equipment recovery. Each initial wand cast still commits deterministic wear with its resource payment. Players have 100 mana, full on first spawn and death/respawn, and recover 2 mana per second after a five-second expenditure delay; each mana-using item shows vanilla cooldown-style shading only while its own next mana payment is unaffordable. The pooled mana balance has no visible meter. Reload/restart resets active sessions and any explicit data-pack spell cooldowns. Broader progression remains deferred.
 
 For Portal, aim at one position and cast, then aim somewhere else and cast again. For Raise Dead, cast once to summon and again to dismiss the waiting cohort. Interrupt stops unfinished casting work; dispel removes owned active manifestations. Spell-specific callbacks can make ending a spell consequential, as with Heartstop.
 

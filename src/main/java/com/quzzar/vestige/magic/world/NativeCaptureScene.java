@@ -77,6 +77,7 @@ public final class NativeCaptureScene {
 
     public static List<Job> jobs(String filter, String kind) {
         if (kind.equals("ritual")) return List.of(new Job("vestige:ritual_idle",0,"Ready ingredients before activation",kind),
+                new Job("vestige:ritual_capacity",0,"Missing outer Plinths: outward reach and collapse",kind),
                 new Job("vestige:ritual_hints",0,"Reference scroll hints and placement movement",kind),
                 new Job("vestige:ritual_success",0,"Solved five-part recipe",kind),
                 new Job("vestige:ritual_reference_success",0,"Flat reference and finished scroll",kind),
@@ -1032,8 +1033,13 @@ public final class NativeCaptureScene {
         }
         ritualCenter=(com.quzzar.vestige.apparatus.OfferingBlockEntity)level.getBlockEntity(center);
         var layout=com.quzzar.vestige.apparatus.RitualCrafting.layout(ritualCenter);
-        var recipe=com.quzzar.vestige.apparatus.RitualCrafting.catalog().recipes().get(VestigeMainMod.location(advanced ? "pf2_flicker" : "fireball"));
-        if(distributed) {
+        var recipe=com.quzzar.vestige.apparatus.RitualCrafting.catalog().recipes().get(VestigeMainMod.location(advanced || spell.endsWith("capacity") ? "pf2_flicker" : "fireball"));
+        if(spell.endsWith("capacity")) {
+            ritualCenter.insert(com.quzzar.vestige.apparatus.ScrollItems.scroll(recipe.spell()));
+            layout.stands().get(0).insert(new ItemStack(Items.PAPER));
+            layout.stands().get(2).insert(new ItemStack(Items.CLOCK));
+            scenario="Eight-slot Flicker reference on four inner Plinths. The pale rune ring reaches beyond the existing nodes, then collapses; offerings and reference remain untouched.";
+        } else if(distributed) {
             ritualCenter.insert(com.quzzar.vestige.apparatus.ScrollItems.scroll(recipe.spell()));
             for(var part:recipe.parts())layout.stands().get(part.seat()).insert(new ItemStack(Items.DIRT));
             label(villager(server,center.getX()+1.5,center.getY(),center.getZ()+1.5),"Center blast");

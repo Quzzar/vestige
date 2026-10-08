@@ -1,0 +1,144 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1651",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Resist Energy",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 353",
+      "rank": 2,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1651"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "divine",
+    "occult",
+    "primal"
+  ],
+  "traits": {
+    "vestige:fire": 1,
+    "vestige:abjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 18
+    },
+    {
+      "type": "cooldown",
+      "ticks": 220
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:pf2/resist_fire",
+            "duration": 200,
+            "charges": 6,
+            "triggers": [
+              {
+                "id": "vestige:pf2/resist_fire/trigger",
+                "event": "vestige:damage_calculating",
+                "conditions": [
+                  {
+                    "type": "compare",
+                    "path": "vestige:event/fire",
+                    "operation": "equal",
+                    "expected": true
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "reduce_pending_damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      0.5,
+                      {
+                        "fact": "vestige:event/damage_amount"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shield",
+              "color": "48badf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.1,
+              "speed": 0.45,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "helix",
+              "color": "e7fbff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.77,
+              "speed": -0.29250000000000004,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "e7fbff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

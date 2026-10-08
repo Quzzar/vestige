@@ -1,0 +1,597 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": [
+    {
+      "segments": [
+        {
+          "italic": false,
+          "text": "Wayfarer Boots"
+        }
+      ],
+      "durability": 65,
+      "name": "Wayfarer Boots",
+      "mask": 0
+    },
+    {
+      "segments": [
+        {
+          "italic": true,
+          "text": "Nimble "
+        },
+        {
+          "italic": false,
+          "text": "Wayfarer Boots"
+        }
+      ],
+      "durability": 65,
+      "name": "Nimble Wayfarer Boots",
+      "mask": 9
+    },
+    {
+      "segments": [
+        {
+          "italic": true,
+          "text": "Unfaltering "
+        },
+        {
+          "italic": false,
+          "text": "Wayfarer Boots"
+        }
+      ],
+      "durability": 98,
+      "name": "Unfaltering Wayfarer Boots",
+      "mask": 15
+    },
+    {
+      "sha256": "2a8459d0144961421ec381c9693eb6cadbccf717ac34a899a16eb38d7a691d5a",
+      "loadedResource": "textures/item/wayfarer_boots.png"
+    },
+    {
+      "sha256": "9a51a865359598e4a333e33fdc757e124d8df86944d86a5b5cc75c961c4be66f",
+      "loadedResource": "textures/models/armor/wayfarer_layer_1.png"
+    },
+    {
+      "sha256": "d033c6ec6b08b8160455968363797a13c24abcc7fb4d95ab971afb130b4d399d",
+      "loadedResource": "models/item/wayfarer_boots.json"
+    },
+    {
+      "remainingAfterPayment": 95,
+      "recoveryTicks": 300,
+      "paidMana": 5,
+      "activation": "real integrated-server ability/payment"
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-000.png",
+      "seconds": 0.807017709,
+      "shortage": 1.0,
+      "recovery": 0.93986666
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-001.png",
+      "seconds": 1.068264959,
+      "shortage": 1.0,
+      "recovery": 0.9061333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-002.png",
+      "seconds": 1.319354667,
+      "shortage": 1.0,
+      "recovery": 0.8896666
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-003.png",
+      "seconds": 1.565396084,
+      "shortage": 1.0,
+      "recovery": 0.8729333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-004.png",
+      "seconds": 1.7661275,
+      "shortage": 1.0,
+      "recovery": 0.8758667
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-005.png",
+      "seconds": 1.983601584,
+      "shortage": 1.0,
+      "recovery": 0.858
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-006.png",
+      "seconds": 2.195068459,
+      "shortage": 1.0,
+      "recovery": 0.8405333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-007.png",
+      "seconds": 2.400221834,
+      "shortage": 1.0,
+      "recovery": 0.8235333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-008.png",
+      "seconds": 2.61509125,
+      "shortage": 1.0,
+      "recovery": 0.816
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-009.png",
+      "seconds": 2.829218917,
+      "shortage": 1.0,
+      "recovery": 0.8016
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-010.png",
+      "seconds": 3.042324459,
+      "shortage": 1.0,
+      "recovery": 0.7874
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-011.png",
+      "seconds": 3.260589625,
+      "shortage": 1.0,
+      "recovery": 0.77293336
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-012.png",
+      "seconds": 3.474772584,
+      "shortage": 1.0,
+      "recovery": 0.7585333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-013.png",
+      "seconds": 3.697717959,
+      "shortage": 1.0,
+      "recovery": 0.7403334
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-014.png",
+      "seconds": 3.916033709,
+      "shortage": 1.0,
+      "recovery": 0.7225333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-015.png",
+      "seconds": 4.128939542,
+      "shortage": 1.0,
+      "recovery": 0.715
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-016.png",
+      "seconds": 4.329746459,
+      "shortage": 1.0,
+      "recovery": 0.7015333
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-017.png",
+      "seconds": 4.532851542,
+      "shortage": 1.0,
+      "recovery": 0.68799996
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-018.png",
+      "seconds": 4.740219959,
+      "shortage": 1.0,
+      "recovery": 0.67413336
+    },
+    {
+      "mana": 0.0,
+      "file": "readiness/frame-019.png",
+      "seconds": 4.941879584,
+      "shortage": 1.0,
+      "recovery": 0.6574
+    },
+    {
+      "mana": 0.30000000000000004,
+      "file": "readiness/frame-020.png",
+      "seconds": 5.142786292,
+      "shortage": 0.94,
+      "recovery": 0.64066666
+    },
+    {
+      "mana": 0.7999999999999999,
+      "file": "readiness/frame-021.png",
+      "seconds": 5.343402167,
+      "shortage": 0.84,
+      "recovery": 0.63733333
+    },
+    {
+      "mana": 1.3,
+      "file": "readiness/frame-022.png",
+      "seconds": 5.559884875,
+      "shortage": 0.74,
+      "recovery": 0.61966664
+    },
+    {
+      "mana": 1.8000000000000005,
+      "file": "readiness/frame-023.png",
+      "seconds": 5.765808375,
+      "shortage": 0.64,
+      "recovery": 0.6059333
+    },
+    {
+      "mana": 1.8000000000000005,
+      "file": "readiness/frame-024.png",
+      "seconds": 5.969839292,
+      "shortage": 0.64,
+      "recovery": 0.5923333
+    },
+    {
+      "mana": 2.3000000000000007,
+      "file": "readiness/frame-025.png",
+      "seconds": 6.176245709,
+      "shortage": 0.54,
+      "recovery": 0.5750667
+    },
+    {
+      "mana": 2.800000000000001,
+      "file": "readiness/frame-026.png",
+      "seconds": 6.393325042,
+      "shortage": 0.44,
+      "recovery": 0.55733335
+    },
+    {
+      "mana": 3.3000000000000016,
+      "file": "readiness/frame-027.png",
+      "seconds": 6.601903625,
+      "shortage": 0.34,
+      "recovery": 0.5500667
+    },
+    {
+      "mana": 3.800000000000002,
+      "file": "readiness/frame-028.png",
+      "seconds": 6.815120667,
+      "shortage": 0.24,
+      "recovery": 0.5359333
+    },
+    {
+      "mana": 4.300000000000001,
+      "file": "readiness/frame-029.png",
+      "seconds": 7.020334125,
+      "shortage": 0.14,
+      "recovery": 0.5222666
+    },
+    {
+      "mana": 4.300000000000001,
+      "file": "readiness/frame-030.png",
+      "seconds": 7.22114825,
+      "shortage": 0.14,
+      "recovery": 0.50879997
+    },
+    {
+      "mana": 4.799999999999999,
+      "file": "readiness/frame-031.png",
+      "seconds": 7.429003459,
+      "shortage": 0.04,
+      "recovery": 0.49159998
+    },
+    {
+      "mana": 5.299999999999997,
+      "file": "readiness/frame-032.png",
+      "seconds": 7.6431805,
+      "shortage": 0.0,
+      "recovery": 0.47399998
+    },
+    {
+      "mana": 5.799999999999995,
+      "file": "readiness/frame-033.png",
+      "seconds": 7.846414625,
+      "shortage": 0.0,
+      "recovery": 0.46713334
+    },
+    {
+      "mana": 6.299999999999994,
+      "file": "readiness/frame-034.png",
+      "seconds": 8.054856459,
+      "shortage": 0.0,
+      "recovery": 0.45326665
+    },
+    {
+      "mana": 6.799999999999992,
+      "file": "readiness/frame-035.png",
+      "seconds": 8.256510625,
+      "shortage": 0.0,
+      "recovery": 0.43993333
+    },
+    {
+      "mana": 6.799999999999992,
+      "file": "readiness/frame-036.png",
+      "seconds": 8.457875917,
+      "shortage": 0.0,
+      "recovery": 0.4264
+    },
+    {
+      "mana": 7.29999999999999,
+      "file": "readiness/frame-037.png",
+      "seconds": 8.673178334,
+      "shortage": 0.0,
+      "recovery": 0.40866667
+    },
+    {
+      "mana": 7.799999999999988,
+      "file": "readiness/frame-038.png",
+      "seconds": 8.878439042,
+      "shortage": 0.0,
+      "recovery": 0.39833334
+    },
+    {
+      "mana": 8.299999999999986,
+      "file": "readiness/frame-039.png",
+      "seconds": 9.084258875,
+      "shortage": 0.0,
+      "recovery": 0.38459998
+    },
+    {
+      "mana": 8.799999999999985,
+      "file": "readiness/frame-040.png",
+      "seconds": 9.294300292,
+      "shortage": 0.0,
+      "recovery": 0.37053332
+    },
+    {
+      "mana": 9.299999999999983,
+      "file": "readiness/frame-041.png",
+      "seconds": 9.5036925,
+      "shortage": 0.0,
+      "recovery": 0.35666665
+    },
+    {
+      "mana": 9.299999999999983,
+      "file": "readiness/frame-042.png",
+      "seconds": 9.707987417,
+      "shortage": 0.0,
+      "recovery": 0.34306666
+    },
+    {
+      "mana": 9.799999999999981,
+      "file": "readiness/frame-043.png",
+      "seconds": 9.910748709,
+      "shortage": 0.0,
+      "recovery": 0.3262
+    },
+    {
+      "mana": 10.29999999999998,
+      "file": "readiness/frame-044.png",
+      "seconds": 10.128382667,
+      "shortage": 0.0,
+      "recovery": 0.31493333
+    },
+    {
+      "mana": 10.799999999999978,
+      "file": "readiness/frame-045.png",
+      "seconds": 10.33058675,
+      "shortage": 0.0,
+      "recovery": 0.30146667
+    },
+    {
+      "mana": 11.299999999999976,
+      "file": "readiness/frame-046.png",
+      "seconds": 10.533182084,
+      "shortage": 0.0,
+      "recovery": 0.28800002
+    },
+    {
+      "mana": 11.799999999999974,
+      "file": "readiness/frame-047.png",
+      "seconds": 10.751571917,
+      "shortage": 0.0,
+      "recovery": 0.27339998
+    },
+    {
+      "mana": 11.799999999999974,
+      "file": "readiness/frame-048.png",
+      "seconds": 10.955656334,
+      "shortage": 0.0,
+      "recovery": 0.25653332
+    },
+    {
+      "mana": 12.299999999999972,
+      "file": "readiness/frame-049.png",
+      "seconds": 11.162639584,
+      "shortage": 0.0,
+      "recovery": 0.24279998
+    },
+    {
+      "mana": 12.79999999999997,
+      "file": "readiness/frame-050.png",
+      "seconds": 11.367775209,
+      "shortage": 0.0,
+      "recovery": 0.2324
+    },
+    {
+      "mana": 13.299999999999969,
+      "file": "readiness/frame-051.png",
+      "seconds": 11.570204459,
+      "shortage": 0.0,
+      "recovery": 0.22213334
+    },
+    {
+      "mana": 13.799999999999967,
+      "file": "readiness/frame-052.png",
+      "seconds": 11.77636075,
+      "shortage": 0.0,
+      "recovery": 0.2084
+    },
+    {
+      "mana": 13.799999999999967,
+      "file": "readiness/frame-053.png",
+      "seconds": 11.98512325,
+      "shortage": 0.0,
+      "recovery": 0.1912
+    },
+    {
+      "mana": 14.299999999999965,
+      "file": "readiness/frame-054.png",
+      "seconds": 12.1871915,
+      "shortage": 0.0,
+      "recovery": 0.1744
+    },
+    {
+      "mana": 14.799999999999963,
+      "file": "readiness/frame-055.png",
+      "seconds": 12.4001535,
+      "shortage": 0.0,
+      "recovery": 0.15686665
+    },
+    {
+      "mana": 15.299999999999962,
+      "file": "readiness/frame-056.png",
+      "seconds": 12.618780292,
+      "shortage": 0.0,
+      "recovery": 0.13913332
+    },
+    {
+      "mana": 15.79999999999996,
+      "file": "readiness/frame-057.png",
+      "seconds": 12.825720459,
+      "shortage": 0.0,
+      "recovery": 0.12566666
+    },
+    {
+      "mana": 16.29999999999996,
+      "file": "readiness/frame-058.png",
+      "seconds": 13.030640459,
+      "shortage": 0.0,
+      "recovery": 0.111999996
+    },
+    {
+      "mana": 16.29999999999996,
+      "file": "readiness/frame-059.png",
+      "seconds": 13.244287,
+      "shortage": 0.0,
+      "recovery": 0.10773333
+    },
+    {
+      "mana": 16.79999999999997,
+      "file": "readiness/frame-060.png",
+      "seconds": 13.452282709,
+      "shortage": 0.0,
+      "recovery": 0.09053332
+    },
+    {
+      "mana": 17.299999999999976,
+      "file": "readiness/frame-061.png",
+      "seconds": 13.654860334,
+      "shortage": 0.0,
+      "recovery": 0.07373333
+    },
+    {
+      "mana": 17.799999999999983,
+      "file": "readiness/frame-062.png",
+      "seconds": 13.857125375,
+      "shortage": 0.0,
+      "recovery": 0.05693333
+    },
+    {
+      "mana": 18.29999999999999,
+      "file": "readiness/frame-063.png",
+      "seconds": 14.057491709,
+      "shortage": 0.0,
+      "recovery": 0.04013333
+    },
+    {
+      "mana": 18.799999999999997,
+      "file": "readiness/frame-064.png",
+      "seconds": 14.2686675,
+      "shortage": 0.0,
+      "recovery": 0.025733327
+    },
+    {
+      "mana": 18.799999999999997,
+      "file": "readiness/frame-065.png",
+      "seconds": 14.471559167,
+      "shortage": 0.0,
+      "recovery": 0.025466662
+    },
+    {
+      "mana": 19.300000000000004,
+      "file": "readiness/frame-066.png",
+      "seconds": 14.687741625,
+      "shortage": 0.0,
+      "recovery": 0.0075999945
+    },
+    {
+      "mana": 19.80000000000001,
+      "file": "readiness/frame-067.png",
+      "seconds": 14.903496667,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 20.30000000000002,
+      "file": "readiness/frame-068.png",
+      "seconds": 15.119408125,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 20.800000000000026,
+      "file": "readiness/frame-069.png",
+      "seconds": 15.31999625,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 21.300000000000033,
+      "file": "readiness/frame-070.png",
+      "seconds": 15.524322959,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 21.300000000000033,
+      "file": "readiness/frame-071.png",
+      "seconds": 15.741201167,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 21.80000000000004,
+      "file": "readiness/frame-072.png",
+      "seconds": 15.945156042,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 22.300000000000047,
+      "file": "readiness/frame-073.png",
+      "seconds": 16.152580125,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 22.800000000000054,
+      "file": "readiness/frame-074.png",
+      "seconds": 16.364453917,
+      "shortage": 0.0,
+      "recovery": 0.0
+    },
+    {
+      "mana": 23.30000000000006,
+      "file": "readiness/frame-075.png",
+      "seconds": 16.567856834,
+      "shortage": 0.0,
+      "recovery": 0.0
+    }
+  ],
+  "source": "Unedited main render target / registered items and production readiness packets"
+}

@@ -22,7 +22,7 @@ public final class ScrollCasting {
     private static final Map<Player, Pending> PENDING = new IdentityHashMap<>();
     private ScrollCasting() { }
     public static boolean cast(Player player, ItemStack stack) {
-        if (WandCasting.awaiting(player)) return false;
+        if (WandCasting.awaiting(player) || StaffCasting.awaiting(player)) return false;
         Pending existing = PENDING.get(player);
         if (existing != null) return existing.cast.status() == SpellRuntime.Status.AWAITING_RECAST && recast(player);
         var data = ScrollItems.scroll(stack).orElse(null);
@@ -82,6 +82,12 @@ public final class ScrollCasting {
     }
     public static void cancelAll() { PENDING.clear(); }
     static boolean awaiting(Player player) { return PENDING.containsKey(player); }
+    /** Presentation follows only the hand reserved by this exact initial cast. */
+    public static java.util.Optional<InteractionHand> preparingHand(Player player, java.util.UUID castId) {
+        var pending = PENDING.get(player);
+        return pending != null && pending.cast.id().equals(castId) && pending.cast.status() == SpellRuntime.Status.CHARGING
+                ? java.util.Optional.of(pending.hand) : java.util.Optional.empty();
+    }
     @SubscribeEvent public static void stop(ServerStoppedEvent event) { PENDING.keySet().removeIf(p -> p.getServer() == event.getServer()); }
     private static final class Pending {
         final Player player; final InteractionHand hand; final ItemStack reserved; final ScrollItems.Scroll data; final SpellRuntime.Cast cast;

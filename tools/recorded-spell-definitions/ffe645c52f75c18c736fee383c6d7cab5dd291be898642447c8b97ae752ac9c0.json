@@ -1,0 +1,118 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1694",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Summon Animal",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 360",
+      "rank": 1,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1694"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:life": 1,
+    "vestige:conjuration": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 30
+    },
+    {
+      "type": "cooldown",
+      "ticks": 400
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:summon",
+        "duration": 400,
+        "values": {
+          "count": 1,
+          "health": 16,
+          "attack_damage": 3
+        },
+        "identifiers": {
+          "entity": "minecraft:wolf"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 1,
+        "visual": {
+          "duration": 400,
+          "radius": 0.8,
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "leaves",
+              "color": "4bba6b",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 0.9,
+              "speed": 0.7,
+              "phase": 0,
+              "count": 7
+            },
+            {
+              "shape": "sigil",
+              "color": "d7ff9d",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.63,
+              "speed": -0.45499999999999996,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "d7ff9d",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "await_recast",
+      "timeout": 400
+    },
+    {
+      "type": "dismiss_manifestations"
+    }
+  ]
+}

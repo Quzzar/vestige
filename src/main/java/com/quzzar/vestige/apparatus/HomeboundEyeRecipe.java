@@ -8,11 +8,11 @@ import java.util.*;
 /** A four-offering device ritual. Only the Spider Eye's own socket selects payment. */
 public final class HomeboundEyeRecipe {
     private HomeboundEyeRecipe() { }
-    public static List<Item> ingredients() { return List.of(ScrollItems.ATTUNEMENT_SHARD.get(), Items.SPIDER_EYE, Items.ENDER_PEARL, Items.FLINT); }
+    public static List<Item> ingredients() { return List.of(ScrollItems.ATTUNEMENT_SHARD.get(), Items.FLINT, Items.SPIDER_EYE, Items.ENDER_PEARL); }
     public static boolean matches(List<ItemStack> items) {
-        var remaining = new ArrayList<>(ingredients());
-        for (var item : items) if (!item.isEmpty() && !remaining.remove(item.getItem())) return false;
-        return remaining.isEmpty() && items.stream().filter(i -> i.is(ScrollItems.ATTUNEMENT_SHARD.get())).allMatch(i -> AttunementShardItem.signature(i).isPresent());
+        return FourSlotPattern.matches(items, ingredients()) && java.util.stream.IntStream.range(0, 4)
+                .mapToObj(i -> items.get(i * 2)).filter(i -> i.is(ScrollItems.ATTUNEMENT_SHARD.get()))
+                .allMatch(i -> AttunementShardItem.signature(i).isPresent());
     }
     public static Optional<HomeboundEyeItem.Payment> payment(ItemStack material) {
         if (material.isEmpty()) return Optional.of(HomeboundEyeItem.Payment.DURABILITY);

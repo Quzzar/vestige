@@ -1,0 +1,1128 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": [
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-white-gui-2",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-orange-gui-2",
+      "durability": 80,
+      "fabricColor": 16351261,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-magenta-gui-2",
+      "durability": 80,
+      "fabricColor": 13061821,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-light_blue-gui-2",
+      "durability": 80,
+      "fabricColor": 3847130,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-yellow-gui-2",
+      "durability": 80,
+      "fabricColor": 16701501,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-lime-gui-2",
+      "durability": 80,
+      "fabricColor": 8439583,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-pink-gui-2",
+      "durability": 80,
+      "fabricColor": 15961002,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-gray-gui-2",
+      "durability": 80,
+      "fabricColor": 4673362,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-light_gray-gui-2",
+      "durability": 80,
+      "fabricColor": 10329495,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-cyan-gui-2",
+      "durability": 80,
+      "fabricColor": 1481884,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-purple-gui-2",
+      "durability": 80,
+      "fabricColor": 8991416,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-blue-gui-2",
+      "durability": 80,
+      "fabricColor": 3949738,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-brown-gui-2",
+      "durability": 80,
+      "fabricColor": 8606770,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-green-gui-2",
+      "durability": 80,
+      "fabricColor": 6192150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-red-gui-2",
+      "durability": 80,
+      "fabricColor": 11546150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-black-gui-2",
+      "durability": 80,
+      "fabricColor": 1908001,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-white-gui-3",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-orange-gui-3",
+      "durability": 80,
+      "fabricColor": 16351261,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-magenta-gui-3",
+      "durability": 80,
+      "fabricColor": 13061821,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-light_blue-gui-3",
+      "durability": 80,
+      "fabricColor": 3847130,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-yellow-gui-3",
+      "durability": 80,
+      "fabricColor": 16701501,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-lime-gui-3",
+      "durability": 80,
+      "fabricColor": 8439583,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-pink-gui-3",
+      "durability": 80,
+      "fabricColor": 15961002,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-gray-gui-3",
+      "durability": 80,
+      "fabricColor": 4673362,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-light_gray-gui-3",
+      "durability": 80,
+      "fabricColor": 10329495,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-cyan-gui-3",
+      "durability": 80,
+      "fabricColor": 1481884,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-purple-gui-3",
+      "durability": 80,
+      "fabricColor": 8991416,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-blue-gui-3",
+      "durability": 80,
+      "fabricColor": 3949738,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-brown-gui-3",
+      "durability": 80,
+      "fabricColor": 8606770,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-green-gui-3",
+      "durability": 80,
+      "fabricColor": 6192150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-red-gui-3",
+      "durability": 80,
+      "fabricColor": 11546150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-black-gui-3",
+      "durability": 80,
+      "fabricColor": 1908001,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-white-gui-2",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-orange-gui-2",
+      "durability": 80,
+      "fabricColor": 16351261,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-magenta-gui-2",
+      "durability": 80,
+      "fabricColor": 13061821,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-light_blue-gui-2",
+      "durability": 80,
+      "fabricColor": 3847130,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-yellow-gui-2",
+      "durability": 80,
+      "fabricColor": 16701501,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-lime-gui-2",
+      "durability": 80,
+      "fabricColor": 8439583,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-pink-gui-2",
+      "durability": 80,
+      "fabricColor": 15961002,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-gray-gui-2",
+      "durability": 80,
+      "fabricColor": 4673362,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-light_gray-gui-2",
+      "durability": 80,
+      "fabricColor": 10329495,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-cyan-gui-2",
+      "durability": 80,
+      "fabricColor": 1481884,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-purple-gui-2",
+      "durability": 80,
+      "fabricColor": 8991416,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-blue-gui-2",
+      "durability": 80,
+      "fabricColor": 3949738,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-brown-gui-2",
+      "durability": 80,
+      "fabricColor": 8606770,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-green-gui-2",
+      "durability": 80,
+      "fabricColor": 6192150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-red-gui-2",
+      "durability": 80,
+      "fabricColor": 11546150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-black-gui-2",
+      "durability": 80,
+      "fabricColor": 1908001,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-white-gui-3",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-orange-gui-3",
+      "durability": 80,
+      "fabricColor": 16351261,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-magenta-gui-3",
+      "durability": 80,
+      "fabricColor": 13061821,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-light_blue-gui-3",
+      "durability": 80,
+      "fabricColor": 3847130,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-yellow-gui-3",
+      "durability": 80,
+      "fabricColor": 16701501,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-lime-gui-3",
+      "durability": 80,
+      "fabricColor": 8439583,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-pink-gui-3",
+      "durability": 80,
+      "fabricColor": 15961002,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-gray-gui-3",
+      "durability": 80,
+      "fabricColor": 4673362,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-light_gray-gui-3",
+      "durability": 80,
+      "fabricColor": 10329495,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-cyan-gui-3",
+      "durability": 80,
+      "fabricColor": 1481884,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-purple-gui-3",
+      "durability": 80,
+      "fabricColor": 8991416,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-blue-gui-3",
+      "durability": 80,
+      "fabricColor": 3949738,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-brown-gui-3",
+      "durability": 80,
+      "fabricColor": 8606770,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-green-gui-3",
+      "durability": 80,
+      "fabricColor": 6192150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-red-gui-3",
+      "durability": 80,
+      "fabricColor": 11546150,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-black-gui-3",
+      "durability": 80,
+      "fabricColor": 1908001,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "wardweave-white-armor-layers",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    },
+    {
+      "poses": [
+        "front",
+        "side",
+        "back",
+        "walking",
+        "crouching"
+      ],
+      "view": "cinderweave-white-armor-layers",
+      "durability": 80,
+      "fabricColor": 16383998,
+      "models": [
+        "WIDE",
+        "SLIM"
+      ],
+      "trimUntinted": true
+    }
+  ],
+  "source": "Minecraft main render target"
+}

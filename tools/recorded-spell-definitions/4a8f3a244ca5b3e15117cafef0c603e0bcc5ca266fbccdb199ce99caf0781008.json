@@ -1,0 +1,146 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:sonic_boom",
+    "school": "irons_spellbooks:eldritch",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Sonic Boom",
+    "cast_type": "long",
+    "cooldown_ticks": 500
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:sonic": 4,
+    "vestige:evocation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 44
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "utterance"
+    },
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "beam",
+        "required": false,
+        "distance": {
+          "product": [
+            20,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "through_blocks": 1,
+          "radius": 0.75,
+          "count": 3
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                14,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "knockback",
+          "values": {
+            "strength": 0.8
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "cad7e5",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "ripple",
+            "color": "216278",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.7,
+            "speed": 2.5,
+            "phase": 0,
+            "count": 7
+          },
+          {
+            "shape": "rays",
+            "color": "53ead3",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.19,
+            "speed": -1.625,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "53ead3",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

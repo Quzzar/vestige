@@ -36,6 +36,7 @@ jobs:
           python3 tools/document_spell_art.py --check
           python3 tools/export_spell_effects.py --check
           python3 tools/test_spell_balance.py
+          python3 tools/author_magic_adjectives.py --check
           python3 tools/test_spell_presentation.py
           python3 tools/test_native_capture.py
           python3 tools/encode_native_capture.py --check --complete

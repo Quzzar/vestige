@@ -2680,7 +2680,7 @@
     {
       "id": "fasting",
       "name": "Fasting",
-      "description": "Exchange a quarter of adjusted mana for one hunger point per five mana, rounded up.",
+      "description": "Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.",
       "pairs": [
         {
           "offering": "minecraft:bread",
@@ -2696,7 +2696,7 @@
     {
       "id": "exhausting",
       "name": "Exhausting",
-      "description": "Amplify \u00d71.05 per contribution.",
+      "description": "Increase Amplify by 25% per degree at 35% more mana per degree.",
       "pairs": [
         {
           "offering": "minecraft:phantom_membrane",
@@ -2710,12 +2710,11 @@
         {
           "trait": "amplify",
           "operation": "MULTIPLY",
-          "amount": 1.05
+          "amount": 1.25
         }
       ],
       "cost_factors": {
-        "mana": 0.94,
-        "cooldown": 1.2
+        "mana": 1.35
       }
     },
     {

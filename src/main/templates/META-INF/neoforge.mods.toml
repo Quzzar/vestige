@@ -32,3 +32,12 @@ type="optional"
 versionRange="${kithkyn_version_range}"
 ordering="AFTER"
 side="BOTH"
+
+[[mixins]]
+config="vestige.communication.mixins.json"
+
+[[mixins]]
+config="vestige.equipment.mixins.json"
+
+[[mixins]]
+config="vestige.apparatus.client.mixins.json"

@@ -1,0 +1,121 @@
+{
+  "traits": {
+    "vestige:motion": 1,
+    "vestige:transmutation": 1,
+    "vestige:time": 1,
+    "vestige:amplify": 1
+  },
+  "variables": {
+    "vestige:burst_duration": {
+      "product": [
+        3,
+        {
+          "trait": "vestige:time"
+        }
+      ]
+    },
+    "vestige:burst_ticks": {
+      "product": [
+        20,
+        {
+          "variable": "vestige:burst_duration"
+        }
+      ]
+    },
+    "vestige:movement_bonus": {
+      "product": [
+        0.2,
+        {
+          "trait": "vestige:motion"
+        }
+      ]
+    },
+    "vestige:landing_protection": {
+      "product": [
+        4,
+        {
+          "trait": "vestige:amplify"
+        }
+      ]
+    }
+  },
+  "activation": "reactive",
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 5
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:wayfarer/jump",
+      "event": "vestige:jump",
+      "conditions": [
+        {
+          "type": "compare",
+          "path": "vestige:magic/variable/vestige/burst_ticks",
+          "operation": "greater_than",
+          "expected": 0
+        },
+        {
+          "type": "compare",
+          "path": "vestige:magic/variable/vestige/movement_bonus",
+          "operation": "greater_than",
+          "expected": 0
+        },
+        {
+          "type": "compare",
+          "path": "vestige:magic/variable/vestige/landing_protection",
+          "operation": "greater_than",
+          "expected": 0
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "install_binding",
+      "target": {
+        "selection": "self",
+        "options": {}
+      },
+      "binding": {
+        "id": "vestige:wayfarer/landing",
+        "duration": 60,
+        "charges": 1,
+        "lifetime": {
+          "variable": "vestige:burst_ticks"
+        },
+        "triggers": [
+          {
+            "id": "vestige:wayfarer/protect",
+            "event": "vestige:armor_damage_calculating",
+            "conditions": [
+              {
+                "type": "compare",
+                "path": "vestige:event/wayfarer_landing",
+                "operation": "greater_than",
+                "expected": 0
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "type": "reduce_pending_damage",
+            "values": {
+              "amount": {
+                "variable": "vestige:landing_protection"
+              }
+            },
+            "identifiers": {}
+          }
+        ]
+      }
+    }
+  ]
+}

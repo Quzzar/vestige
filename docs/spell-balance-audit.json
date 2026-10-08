@@ -1,6 +1,6 @@
 {
   "policy": {
-    "status": "Native outcome/cost baseline for 214 spells: 110 Iron adaptations, 100 Pathfinder adaptations and four examples. Trait units remain relative.",
+    "status": "October 7, 2026: ordinary spell cooldowns removed from all 214 native spells. Mana, preparation, outcomes and relative trait units retain their authored baselines; equipment recovery is separate.",
     "rarities": {
       "common": {
         "spells": [
@@ -238,1498 +238,1498 @@
         "role": "reactive protection",
         "mana": 72,
         "charge_ticks": 0,
-        "cooldown_ticks": 600,
-        "review": "Three full-hit dodges within three seconds; thirty-second recovery replaces unlimited six-second immunity."
+        "cooldown_ticks": 0,
+        "review": "Three full-hit dodges within three seconds; finite hit budget replaces unlimited six-second immunity."
       },
       "acid_orb": {
         "role": "area debuff",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "3 HP in radius 2 plus brief Weakness; lower damage pays for disruption."
       },
       "acupuncture": {
         "role": "draining attack",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "Five 1.5-HP targeted needles, at most 1.875 HP leech; reliable convergence costs more than a bolt."
       },
       "angel_wing": {
         "role": "flight utility",
         "mana": 40,
         "charge_ticks": 10,
-        "cooldown_ticks": 400,
-        "review": "Ten seconds of temporary flight with owned cleanup; twenty-second recovery leaves exposure windows."
+        "cooldown_ticks": 0,
+        "review": "Ten seconds of temporary flight with owned cleanup."
       },
       "arcane_lock": {
         "role": "persistent utility",
         "mana": 20,
         "charge_ticks": 0,
-        "cooldown_ticks": 40,
-        "review": "Owner-only container toggle; persistent access utility, short recovery without combat power."
+        "cooldown_ticks": 0,
+        "review": "Owner-only container toggle; persistent access utility without combat power."
       },
       "arcane_shackle": {
         "role": "multi control",
         "mana": 42,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Up to three four-second tethers, each with ten destructible HP; wider control pays more than Root."
       },
       "arrow_volley": {
         "role": "distributed attack",
         "mana": 42,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Twelve 3-HP rain arrows, at most four hits per creature; accuracy determines actual damage."
       },
       "ascension": {
         "role": "mobility area",
         "mana": 36,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Upward launch, four-second Slow Falling, and 5 HP close burst; safety utility carries much of its value."
       },
       "ball_lightning": {
         "role": "persistent attack",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "5 HP impact plus up to eight 1-HP area pulses; slow delivery exposes the orb."
       },
       "black_hole": {
         "role": "persistent control attack",
         "mana": 88,
         "charge_ticks": 20,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "Up to sixteen 2-HP pulses over eight seconds in radius 5 with moderate pull; six targets per pulse, destructible."
       },
       "blaze_storm": {
         "role": "channel attack",
         "mana": 42,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Ten 2-HP projectiles over 2.7 seconds plus brief fire; aim, obstruction, interruption constrain output."
       },
       "blessing_of_life": {
         "role": "target healing",
         "mana": 15,
         "charge_ticks": 20,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "5 HP to one ally; matches Heal while trading self access for reach."
       },
       "blight": {
         "role": "healing suppression",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
-        "review": "Ten seconds of 50% healing suppression plus Poison; specialized value against sustain, cooldown exceeds debuff."
+        "cooldown_ticks": 0,
+        "review": "Ten seconds of 50% healing suppression plus Poison; specialized value against sustain."
       },
       "blizzard": {
         "role": "persistent control attack",
         "mana": 46,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Up to twelve 1.5-HP pulses over six seconds, radius 5 with brief refreshed slow/freeze; destructible field."
       },
       "blood_needles": {
         "role": "draining area",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "Five 2-HP spread needles; 10 HP requires all hits, with at most 2.5 HP leech."
       },
       "blood_slash": {
         "role": "draining piercing",
         "mana": 26,
         "charge_ticks": 10,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "7 HP to at most three pierced creatures, 15% actual-damage leech; narrow line rather than a broad blast."
       },
       "blood_step": {
         "role": "escape",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 120,
-        "review": "Eight-block teleport and two-second invisibility; longer recovery pays for aggro clearing."
+        "cooldown_ticks": 0,
+        "review": "Eight-block teleport and two-second invisibility; mana pays for aggro clearing."
       },
       "burning_dash": {
         "role": "mobility attack",
         "mana": 26,
         "charge_ticks": 0,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "6 HP once per contacted creature plus short burn; eight collision checks cannot multiply damage."
       },
       "chain_creeper": {
         "role": "conditional chain attack",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "6-HP initial blast, bounded two-generation death propagation; spread depends on killing marked victims."
       },
       "chain_lightning": {
         "role": "linked attack",
         "mana": 32,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
-        "review": "6 HP across up to four visible linked targets; higher aggregate value pays for mana and recovery."
+        "cooldown_ticks": 0,
+        "review": "6 HP across up to four visible linked targets; higher aggregate value pays for mana."
       },
       "charge": {
         "role": "self buff",
         "mana": 22,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
-        "review": "Ten seconds of Speed II and Haste I, fifteen-second recovery; movement tradeoff versus party Haste."
+        "cooldown_ticks": 0,
+        "review": "Ten seconds of Speed II and Haste I; movement tradeoff versus party Haste."
       },
       "cleanse": {
         "role": "support utility",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Remove harmful statuses from at most six allies; narrow reactive value with no healing."
       },
       "cone_of_cold": {
         "role": "channel control attack",
         "mana": 42,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1.25-HP cone pulses over three seconds plus freeze/slow; shorter reach and interruptible channel."
       },
       "counterspell": {
         "role": "reactive utility",
         "mana": 36,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Twenty-four-block ray interrupt/dispel; no damage, but removes buffs, summons, and casting."
       },
       "devour": {
         "role": "draining execution",
         "mana": 38,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "6 HP and 15% leech at five-block range; killing blow grants 2 max HP for thirty seconds."
       },
       "divine_smite": {
         "role": "weapon area",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "6 HP plus half weapon damage in a three-block melee cone; equipment bonus is not multiplied by amplify."
       },
       "dragon_breath": {
         "role": "channel area attack",
         "mana": 44,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1.5-HP cone pulses; removed nested per-victim splash to stop crowd-density multiplication."
       },
       "earthquake": {
         "role": "persistent attack",
         "mana": 48,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Up to twelve 2-HP pulses over six seconds in radius 5 with brief slow; destructible stationary field."
       },
       "echoing_strikes": {
         "role": "weapon reaction",
         "mana": 38,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Three 50%-damage ordinary-hit echoes within ten seconds; finite charges and no recursive magical procs."
       },
       "eldritch_blast": {
         "role": "recast piercing",
         "mana": 44,
         "charge_ticks": 0,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Three separately aimed 6-HP beams, up to four targets each; five-second aim window per recast."
       },
       "electrocute": {
         "role": "channel attack",
         "mana": 44,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1.5-HP cone pulses; greater direct output than status channels, no secondary status."
       },
       "evasion": {
         "role": "reactive protection",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 240,
-        "review": "One complete hit dodge within five seconds; twelve-second recovery prevents permanent immunity."
+        "cooldown_ticks": 0,
+        "review": "One complete hit dodge within five seconds."
       },
       "fang_strike": {
         "role": "line attack",
         "mana": 22,
         "charge_ticks": 10,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "6 HP once per creature along eight ground eruptions; overlapping points do not stack."
       },
       "fang_swirl": {
         "role": "area attack",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "6 HP once per creature around an aimed radius-3 ring; coverage compensates for geometry gaps."
       },
       "fang_ward": {
         "role": "close area",
         "mana": 22,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "6 HP once per creature on a radius-3 defensive ring; positional gaps matter."
       },
       "fire_arrow": {
         "role": "area attack",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP in radius 2 and brief fire; faster projectile but smaller area than Fireball."
       },
       "fire_breath": {
         "role": "channel attack",
         "mana": 42,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1.25-HP cone pulses plus brief fire; interruption and short reach constrain output."
       },
       "fireball": {
         "role": "area attack",
         "mana": 28,
         "charge_ticks": 20,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP in radius 3 and brief fire; slower charged delivery pays for wider coverage."
       },
       "firebolt": {
         "role": "single attack",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 40,
-        "review": "5 HP plus two seconds of fire; short recovery and no area."
+        "cooldown_ticks": 0,
+        "review": "5 HP plus two seconds of fire; no area."
       },
       "firecracker": {
         "role": "area attack",
         "mana": 14,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "4 HP in radius 2 with knockback; lobbed travel trades reliability for area."
       },
       "firefly_swarm": {
         "role": "conditional damage over time",
         "mana": 42,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Up to ten HP over five seconds per body; two death-spread generations of two targets each."
       },
       "flaming_barrage": {
         "role": "recast attack",
         "mana": 36,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Five 3-HP individually aimed burning shots; six-second windows, one payment, finite ammunition."
       },
       "flaming_strike": {
         "role": "weapon area",
         "mana": 22,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "4 HP plus half weapon damage and fire in melee; shorter reach offsets equipment scaling."
       },
       "force_arrow": {
         "role": "single attack",
         "mana": 14,
         "charge_ticks": 0,
-        "cooldown_ticks": 40,
+        "cooldown_ticks": 0,
         "review": "7 HP without secondary status; compensates for Firebolt's burning and Icicle's freezing."
       },
       "fortify": {
         "role": "party protection",
         "mana": 30,
         "charge_ticks": 10,
-        "cooldown_ticks": 300,
-        "review": "Four absorption HP for up to four allies, ten seconds; fifteen-second recovery limits refresh."
+        "cooldown_ticks": 0,
+        "review": "Four absorption HP for up to four allies, ten seconds."
       },
       "frost_step": {
         "role": "escape control",
         "mana": 26,
         "charge_ticks": 0,
-        "cooldown_ticks": 140,
+        "cooldown_ticks": 0,
         "review": "Four-block teleport leaves a three-second freezing field; no direct damage."
       },
       "frostbite": {
         "role": "weapon buff",
         "mana": 26,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Next three ordinary hits within ten seconds freeze and mark one death shatter each; finite proc count."
       },
       "frostwave": {
         "role": "close area",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "7 HP in radius 4 with freeze and knockback; close exposure trades against ranged area."
       },
       "gluttony": {
         "role": "resource utility",
         "mana": 10,
         "charge_ticks": 0,
-        "cooldown_ticks": 400,
+        "cooldown_ticks": 0,
         "review": "Three food conversions in ten seconds at 6 mana per nutrition; food and hunger gates, 100 mana cap."
       },
       "gravity_fissure": {
         "role": "moving field",
         "mana": 44,
         "charge_ticks": 10,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Up to ten 1.5-HP pulses with pull over five seconds; field moves and can be destroyed."
       },
       "greater_heal": {
         "role": "self healing",
         "mana": 42,
         "charge_ticks": 40,
-        "cooldown_ticks": 300,
-        "review": "Fixed 12-HP heal after two seconds, fifteen-second recovery; max-health builds do not inflate healing."
+        "cooldown_ticks": 0,
+        "review": "Fixed 12-HP heal after two seconds; max-health builds do not inflate healing."
       },
       "guiding_bolt": {
         "role": "support attack",
         "mana": 22,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "3 HP plus a ten-second projectile mark; conditional team value rather than high base damage."
       },
       "gust": {
         "role": "close control attack",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "6 HP in an eight-block cone and strong push; lower damage pays for displacement."
       },
       "haste": {
         "role": "party utility",
         "mana": 26,
         "charge_ticks": 10,
-        "cooldown_ticks": 500,
+        "cooldown_ticks": 0,
         "review": "Speed I and Haste I for four allies, twenty seconds; no attack or spell multiplier."
       },
       "heal": {
         "role": "self healing",
         "mana": 15,
         "charge_ticks": 20,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "5 HP after a one-second charge; no instant sustained healing loop."
       },
       "healing_circle": {
         "role": "persistent party healing",
         "mana": 48,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Up to twelve HP per ally over six seconds, four allies; requires staying in a destructible radius-3 field."
       },
       "heartstop": {
         "role": "deferred protection",
         "mana": 80,
         "charge_ticks": 0,
-        "cooldown_ticks": 600,
-        "review": "Six seconds of damage deferral followed by 50% repayment; thirty-second recovery, repayment survives dispel."
+        "cooldown_ticks": 0,
+        "review": "Six seconds of damage deferral followed by 50% repayment; repayment survives dispel."
       },
       "heat_surge": {
         "role": "close area",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "7 HP in radius 4 with fire and knockback; consistent with Frostwave and Shockwave."
       },
       "ice_block": {
         "role": "area attack",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "12 HP and freeze in radius 3; heavy slow projectile trades reliability for a burst."
       },
       "ice_spikes": {
         "role": "line attack",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "12 HP once per creature along ground eruptions, plus narrow freezing cone; overlaps cannot stack."
       },
       "ice_tomb": {
         "role": "defensive healing",
         "mana": 40,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "One full-hit ward and up to five HP over five seconds; immobilization and first-hit break constrain healing."
       },
       "icicle": {
         "role": "single attack",
         "mana": 14,
         "charge_ticks": 0,
-        "cooldown_ticks": 50,
-        "review": "6 HP with freezing; slightly slower recovery than pure Force Arrow."
+        "cooldown_ticks": 0,
+        "review": "6 HP with freezing."
       },
       "interposing_earth": {
         "role": "reactive protection",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "2 HP reduction on one hit within three seconds; cheap, brief common defense."
       },
       "invisibility": {
         "role": "escape utility",
         "mana": 26,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Ten-second invisibility and aggro clear, broken by attacking; no protected offensive uptime."
       },
       "lightning_bolt": {
         "role": "aimed area",
         "mana": 28,
         "charge_ticks": 20,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "9 HP in a small aimed radius-2 burst; accuracy and charge offset immediate point delivery."
       },
       "lightning_lance": {
         "role": "piercing attack",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP through at most three creatures, long narrow delivery; matches Magic Arrow."
       },
       "lob_creeper": {
         "role": "area attack",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "6 HP in radius 3; slower lob costs less than burning Fireball."
       },
       "magic_arrow": {
         "role": "piercing attack",
         "mana": 26,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP through at most three creatures; no burn or control."
       },
       "magic_missile": {
         "role": "single attack",
         "mana": 16,
         "charge_ticks": 0,
-        "cooldown_ticks": 50,
+        "cooldown_ticks": 0,
         "review": "6 HP; homing increases reliability while slow travel exposes the shot."
       },
       "magma_bomb": {
         "role": "persistent area attack",
         "mana": 44,
         "charge_ticks": 20,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "8 HP impact and up to ten 1-HP residual pulses, radius 3 plus fire; slow lob and destructible field."
       },
       "oakskin": {
         "role": "sustained protection",
         "mana": 28,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "25% reduction on six ordinary non-fire hits within ten seconds; bypassed by magic/fire."
       },
       "pf2_air_bubble": {
         "role": "Native utility, protection or control",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "At most five seconds of conditional water/suffocation rescue; closes after safe breathing resumes."
       },
       "pf2_arctic_rift": {
         "role": "cold line/control",
         "mana": 64,
         "charge_ticks": 32,
-        "cooldown_ticks": 300,
-        "review": "Twenty-two HP and five-second slowing require alignment, charge and fifteen-second recovery."
+        "cooldown_ticks": 0,
+        "review": "Twenty-two HP and five-second slowing require alignment and charge."
       },
       "pf2_bind_undead": {
         "role": "temporary control",
         "mana": 34,
         "charge_ticks": 16,
-        "cooldown_ticks": 300,
-        "review": "No created mob or damage; eight-second control, single undead Mob, long recovery; dispel/expiry restores ownership and prior target."
+        "cooldown_ticks": 0,
+        "review": "No created mob or damage; eight-second control, single undead Mob; dispel/expiry restores ownership and prior target."
       },
       "pf2_breathe_fire": {
         "role": "cone damage",
         "mana": 18,
         "charge_ticks": 8,
-        "cooldown_ticks": 70,
+        "cooldown_ticks": 0,
         "review": "Seven direct HP each plus burning; short range, four-target cap and visible charge."
       },
       "pf2_cataclysm": {
         "role": "multiphase area channel",
         "mana": 90,
         "charge_ticks": 40,
-        "cooldown_ticks": 600,
-        "review": "Thirty-two HP ceiling over four phases, six targets per phase, two-second charge then three-second channel; ninety energy and thirty-second recovery."
+        "cooldown_ticks": 0,
+        "review": "Thirty-two HP ceiling over four phases, six targets per phase, two-second charge then three-second channel; ninety energy."
       },
       "pf2_caustic_blast": {
         "role": "small area damage",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 30,
+        "cooldown_ticks": 0,
         "review": "Three HP each, three victims maximum, small radius; armor corrosion represented by brief Weakness."
       },
       "pf2_chain_lightning": {
         "role": "bounded chained damage",
         "mana": 42,
         "charge_ticks": 20,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Twelve HP per creature, six targets, five-block jumps; isolated foes receive only a single hit."
       },
       "pf2_cinder_swarm": {
         "role": "attached control attack",
         "mana": 28,
         "charge_ticks": 12,
-        "cooldown_ticks": 140,
+        "cooldown_ticks": 0,
         "review": "Ten direct fire HP across five pulses on captured victim plus short Blindness; eight-HP backing, no bystander splash."
       },
       "pf2_clairvoyance": {
         "role": "Native utility, protection or control",
         "mana": 32,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Eight-second stationary client sensor within twenty blocks; body stays vulnerable and hurt closes view."
       },
       "pf2_collective_transposition": {
         "role": "Native utility, protection or control",
         "mana": 44,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Three consenting allies move only after every loaded, supported formation destination validates."
       },
       "pf2_containment": {
         "role": "Native utility, protection or control",
         "mana": 36,
         "charge_ticks": 10,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Five-second two-way movement enclosure; incoming attacks consume a shared 16 HP durability pool."
       },
       "pf2_create_water": {
         "role": "Native utility, protection or control",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "One cauldron layer per cast; no infinite placed fluid or copied inventory stack."
       },
       "pf2_creation": {
         "role": "Native utility, protection or control",
         "mana": 26,
         "charge_ticks": 30,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Finite step, platform or low cover; no items, containers or harvestable resources."
       },
       "pf2_detect_magic": {
         "role": "presence sensing",
         "mana": 8,
         "charge_ticks": 4,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "Sixteen-block native/equipped-enchantment presence, private answer only; no identification or progression."
       },
       "pf2_divine_lance": {
         "role": "spirit damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Five HP on one visible creature, without a secondary status or area."
       },
       "pf2_eclipse_burst": {
         "role": "area damage/control",
         "mana": 62,
         "charge_ticks": 30,
-        "cooldown_ticks": 280,
-        "review": "Twenty HP plus short blindness/Weakness, six targets; charge and fourteen-second recovery price the control."
+        "cooldown_ticks": 0,
+        "review": "Twenty HP plus short blindness/Weakness, six targets; charge prices the control."
       },
       "pf2_electric_arc": {
         "role": "two-target damage",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 24,
+        "cooldown_ticks": 0,
         "review": "Four HP per victim, two targets maximum; requires an initial visible target and a nearby second victim."
       },
       "pf2_enfeeble": {
         "role": "attack debuff",
         "mana": 10,
         "charge_ticks": 0,
-        "cooldown_ticks": 70,
+        "cooldown_ticks": 0,
         "review": "Single-target six-second attack reduction; does not reduce ranged attacks or spell potency."
       },
       "pf2_enlarge": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Physical 1.5 scale and one-block player reach bonus for eight seconds; clearance gate."
       },
       "pf2_falling_stars": {
         "role": "meteor channel",
         "mana": 70,
         "charge_ticks": 36,
-        "cooldown_ticks": 360,
+        "cooldown_ticks": 0,
         "review": "Thirty direct HP maximum per creature plus burning, with charge and a interruptible channel; needs open delivery space."
       },
       "pf2_false_vitality": {
         "role": "temporary vitality",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 180,
-        "review": "Four temporary HP, expiry and nine-second recovery prevent a sustained shield loop."
+        "cooldown_ticks": 0,
+        "review": "Four temporary HP with finite expiry."
       },
       "pf2_fear": {
         "role": "combat debuff",
         "mana": 10,
         "charge_ticks": 0,
-        "cooldown_ticks": 70,
+        "cooldown_ticks": 0,
         "review": "No damage, short attack/movement reduction; vanilla status-resistant creatures retain their immunity."
       },
       "pf2_field_of_life": {
         "role": "living healing/undead damage",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 220,
+        "cooldown_ticks": 0,
         "review": "Six healing or twelve undead damage per creature over six seconds, six-target cap; enemies who are living also receive healing."
       },
       "pf2_figment": {
         "role": "distraction utility",
         "mana": 12,
         "charge_ticks": 4,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Four-second six-block hostile lure, one-hit backing, no damage or arbitrary imagery."
       },
       "pf2_fire_shield": {
         "role": "reactive shield",
         "mana": 34,
         "charge_ticks": 12,
-        "cooldown_ticks": 220,
+        "cooldown_ticks": 0,
         "review": "Up to nine HP blocked and six reactive HP across three hits against attackers within four blocks; four freezing hits additionally halved, eight-second expiry."
       },
       "pf2_fireball": {
         "role": "area burst",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Fourteen HP per creature, five targets, visible charge and traveling delivery; impact can be blocked."
       },
       "pf2_fleet_step": {
         "role": "short movement",
         "mana": 10,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
-        "review": "Short strong speed burst with five-second recovery, no damage or flight."
+        "cooldown_ticks": 0,
+        "review": "Short strong speed burst, no damage or flight."
       },
       "pf2_flicker": {
         "role": "reactive evasive mobility",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Four quarter-hit reductions over six seconds, native magic bypasses; three safe random teleport attempts can be obstructed."
       },
       "pf2_floating_flame": {
         "role": "sustained area",
         "mana": 22,
         "charge_ticks": 12,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Ten delayed pulses totaling fifteen HP only if a victim stays in a small fixed area; three-target cap."
       },
       "pf2_force_barrage": {
         "role": "homing volley",
         "mana": 18,
         "charge_ticks": 8,
-        "cooldown_ticks": 70,
-        "review": "Nine HP ceiling, three shared hits, homing and moderate reach paid for with charge and recovery."
+        "cooldown_ticks": 0,
+        "review": "Nine HP ceiling, three shared hits, homing and moderate reach paid for with charge and mana."
       },
       "pf2_freezing_rain": {
         "role": "Native utility, protection or control",
         "mana": 30,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Eight-second ground-slip and native perception patch; zero direct damage."
       },
       "pf2_frostbite": {
         "role": "cold damage/control",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Four damage with two-second Weakness and freezing state; one target."
       },
       "pf2_gecko_grip": {
         "role": "Native utility, protection or control",
         "mana": 18,
         "charge_ticks": 10,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Eight seconds of wall-contact climbing; no collision-free flight."
       },
       "pf2_gentle_breeze": {
         "role": "occupancy-gated healing",
         "mana": 26,
         "charge_ticks": 12,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Six HP per eligible living creature once after three uninterrupted seconds, four recipients per scan; leaving resets progress and undead receive none."
       },
       "pf2_gentle_landing": {
         "role": "fall protection",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "Five-second preventive fall utility; no healing, teleport, automatic reaction or ally targeting."
       },
       "pf2_glass_shield": {
         "role": "reactive protection",
         "mana": 16,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
-        "review": "Three HP blocked and three attacker HP once, three-second ward; short reach and recovery constrain retaliation."
+        "cooldown_ticks": 0,
+        "review": "Three HP blocked and three attacker HP once, three-second ward; short reach constrains retaliation."
       },
       "pf2_gouging_claw": {
         "role": "melee damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Six direct HP plus two-second Wither requires three-block melee positioning."
       },
       "pf2_gravity_well": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "One zero-damage inward impulse to four enemies at an aimed anchor; no persistent damage vortex."
       },
       "pf2_grease": {
         "role": "ground control",
         "mana": 16,
         "charge_ticks": 6,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Four-second radius-two patch, three-target cap, mild shove and Slowness II; no direct damage."
       },
       "pf2_grim_tendrils": {
         "role": "line damage",
         "mana": 18,
         "charge_ticks": 10,
-        "cooldown_ticks": 70,
+        "cooldown_ticks": 0,
         "review": "Six damage plus short Wither in a narrow line; four-target cap."
       },
       "pf2_harm": {
         "role": "undead heal/living harm",
         "mana": 24,
         "charge_ticks": 12,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "Eight healing or living damage, one aimed recipient; undead eligibility keeps outcome branches exclusive."
       },
       "pf2_haste": {
         "role": "movement/work speed",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 240,
-        "review": "Eight seconds of dual utility, twelve-second recovery; no automatic direct damage bonus."
+        "cooldown_ticks": 0,
+        "review": "Eight seconds of dual utility; no automatic direct damage bonus."
       },
       "pf2_heal": {
         "role": "living heal/undead harm",
         "mana": 24,
         "charge_ticks": 12,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "Eight healing or undead damage, one aimed recipient; ranged eligibility replaces multi-action variants."
       },
       "pf2_hydraulic_push": {
         "role": "damage/knockback",
         "mana": 16,
         "charge_ticks": 8,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "Seven HP plus displacement; knockback depends on body, collisions and knockback resistance."
       },
       "pf2_ignition": {
         "role": "fire damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Four ranged or six close damage, short vanilla burn; close positioning trades safety for damage."
       },
       "pf2_illusory_creature": {
         "role": "destructible decoy",
         "mana": 22,
         "charge_ticks": 10,
-        "cooldown_ticks": 160,
-        "review": "Six-second silent stationary one-HP wolf lure, no attacks; finite distraction with eight-second recovery."
+        "cooldown_ticks": 0,
+        "review": "Six-second silent stationary one-HP wolf lure, no attacks; finite distraction."
       },
       "pf2_illusory_object": {
         "role": "Native utility, protection or control",
         "mana": 12,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Non-solid static three-block preset silhouette with no damage or inventory object."
       },
       "pf2_invisibility": {
         "role": "stealth utility",
         "mana": 26,
         "charge_ticks": 8,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Eight seconds of vanilla invisibility, committed damage ends refresh; held items remain visible and no ongoing decorative aura."
       },
       "pf2_item_facade": {
         "role": "Native utility, protection or control",
         "mana": 10,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Ten-second held-item cosmetic condition label and illusory glimmer; no real repair/enchantment."
       },
       "pf2_lightning_bolt": {
         "role": "piercing line",
         "mana": 36,
         "charge_ticks": 16,
-        "cooldown_ticks": 140,
+        "cooldown_ticks": 0,
         "review": "Fourteen HP per aligned victim, no lingering status; requires line positioning."
       },
       "pf2_magic_passage": {
         "role": "Native utility, protection or control",
         "mana": 44,
         "charge_ticks": 20,
-        "cooldown_ticks": 400,
+        "cooldown_ticks": 0,
         "review": "Two-high ordinary-stone passage three blocks deep, safe exit, twelve-second owned restoration."
       },
       "pf2_magnetic_attraction": {
         "role": "Native utility, protection or control",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Pull at most eight eligible loose metal stacks; preserves stack identity, no equipment theft."
       },
       "pf2_mirror_image": {
         "role": "Native utility, protection or control",
         "mana": 26,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Three eligible direct-attack image interceptions at five HP each; explosion, fire and projectile bypass."
       },
       "pf2_mud_pit": {
         "role": "persistent ground control",
         "mana": 24,
         "charge_ticks": 8,
-        "cooldown_ticks": 140,
+        "cooldown_ticks": 0,
         "review": "Six-second radius-2.5 Slowness III patch, four targets, finite breakable marker; no terrain replacement or damage."
       },
       "pf2_needle_darts": {
         "role": "bounded volley",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Three two-HP contacts share a three-hit cast cap; projectiles can be intercepted."
       },
       "pf2_peaceful_bubble": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Ten-second traversable native targeting/render/scrying boundary; no general damage wall."
       },
       "pf2_pet_cache": {
         "role": "Native utility, protection or control",
         "mana": 20,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Ten-second owned companion shelter preserving UUID, health and inventory with emergency return journal."
       },
       "pf2_protection": {
         "role": "finite protection",
         "mana": 16,
         "charge_ticks": 0,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Finite four-hit, eight-second mitigation; unlike Shield the value follows incoming damage but cannot fully negate it."
       },
       "pf2_protector_tree": {
         "role": "Native utility, protection or control",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "One shared 16 HP pool for three captured consenting nearby allies, backed by four temporary logs and seventeen leaves; each missing trunk reduces maximum remaining protection by one quarter. Supported clear placement and owned-cell cleanup preserve edits."
       },
       "pf2_puff_of_poison": {
         "role": "poison damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 30,
+        "cooldown_ticks": 0,
         "review": "Low direct damage and ten-block reach; poison does not bypass vanilla immunity or kill by itself."
       },
       "pf2_read_aura": {
         "role": "held-item inspection",
         "mana": 10,
         "charge_ticks": 40,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "Two-second paid examination of current held item; enchantment presence only, no general identification."
       },
       "pf2_regenerate": {
         "role": "interruptible regeneration",
         "mana": 38,
         "charge_ticks": 16,
-        "cooldown_ticks": 260,
+        "cooldown_ticks": 0,
         "review": "Eight delayed healing pulses totaling twelve, interrupted by fire; slower and less reliable than an immediate heal."
       },
       "pf2_repulsion": {
         "role": "Native utility, protection or control",
         "mana": 36,
         "charge_ticks": 10,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Six-second inward enemy movement boundary; outgoing, allied and ranged passage remain open."
       },
       "pf2_resist_energy": {
         "role": "fire resistance",
         "mana": 18,
         "charge_ticks": 0,
-        "cooldown_ticks": 220,
+        "cooldown_ticks": 0,
         "review": "Six eligible hits at fifty percent mitigation, ten-second expiry; ordinary hits do not consume charges."
       },
       "pf2_revealing_light": {
         "role": "reveal utility",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Six-second reveal, no direct damage, four-target cap; affects friendly creatures in the area too."
       },
       "pf2_rust_cloud": {
         "role": "persistent obscuring attack",
         "mana": 36,
         "charge_ticks": 16,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Ten direct HP across five pulses, four victims, radius three and refreshed Blindness; fixed radius, breakable backing."
       },
       "pf2_scatter_scree": {
         "role": "terrain control",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 30,
+        "cooldown_ticks": 0,
         "review": "Three direct HP plus a fixed three-second small field; maximum three affected creatures per pulse."
       },
       "pf2_see_the_unseen": {
         "role": "Native utility, protection or control",
         "mana": 20,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Private invisible-creature silhouettes for ten seconds; no public glowing or invisibility removal."
       },
       "pf2_shape_stone": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Move one existing ordinary stone cell within six blocks; volume conserved, permission-gated, no drops."
       },
       "pf2_share_life": {
         "role": "Native utility, protection or control",
         "mana": 26,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "At most eight actual HP transfer to the consenting caster; half-hit fraction and one-HP reserve."
       },
       "pf2_shield": {
         "role": "single-hit ward",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
-        "review": "At most three HP prevented once; three-second expiry and three-second recovery."
+        "cooldown_ticks": 0,
+        "review": "At most three HP prevented once; three-second expiry."
       },
       "pf2_shrink": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Physical half scale and reduced reach for eight seconds; owned restoration checks clearance."
       },
       "pf2_silence": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Eight-second acoustic region; only explicitly authored utterance actions lose vocal delivery."
       },
       "pf2_slashing_gust": {
         "role": "two-target air strike",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 24,
+        "cooldown_ticks": 0,
         "review": "Four HP per victim and two-target cap; both victims must align with the corridor."
       },
       "pf2_slow": {
         "role": "movement/work debuff",
         "mana": 22,
         "charge_ticks": 8,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Single target, five-second movement/work debuff, no damage or forced immobilization."
       },
       "pf2_soothe": {
         "role": "healing/debuff relief",
         "mana": 18,
         "charge_ticks": 8,
-        "cooldown_ticks": 90,
+        "cooldown_ticks": 0,
         "review": "Seven self healing plus one specific cleanse, requires charge; cannot cleanse all adverse effects."
       },
       "pf2_spirit_blast": {
         "role": "spirit area burst",
         "mana": 44,
         "charge_ticks": 24,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Sixteen HP, five targets, three-block burst; longer charge than simpler rare attacks."
       },
       "pf2_spiritual_armament": {
         "role": "sustained spirit strikes",
         "mana": 22,
         "charge_ticks": 12,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Fifteen HP over five seconds, single target and delayed pulses; dispersal removes the effect."
       },
       "pf2_spout": {
         "role": "water splash",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 30,
+        "cooldown_ticks": 0,
         "review": "Three HP per victim with a small lift; three-target cap and two-block radius."
       },
       "pf2_status": {
         "role": "Native utility, protection or control",
         "mana": 12,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "Fifteen-second private coarse health, affliction count and direction for three consenting nearby allies."
       },
       "pf2_summon_animal": {
         "role": "combat summon",
         "mana": 30,
         "charge_ticks": 20,
-        "cooldown_ticks": 400,
-        "review": "One sixteen-HP three-attack wolf for twenty seconds; recast dismisses, recovery equals lifetime, vanilla AI."
+        "cooldown_ticks": 0,
+        "review": "One sixteen-HP three-attack wolf for twenty seconds; recast dismisses, vanilla AI."
       },
       "pf2_summon_elemental": {
         "role": "Native utility, protection or control",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Choose finite earth cover, air interception, water firefighting or fire pressure capped at 12 shared HP."
       },
       "pf2_summon_fey": {
         "role": "Native utility, protection or control",
         "mana": 28,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Stationary fey support body slows enemies at most four times; no melee AI."
       },
       "pf2_summon_plant_or_fungus": {
         "role": "Native utility, protection or control",
         "mana": 28,
         "charge_ticks": 20,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Stationary healing plant with six shared actual HP or an eight-HP guard fungus; fifteen seconds."
       },
       "pf2_tangle_vine": {
         "role": "single-target control",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 40,
+        "cooldown_ticks": 0,
         "review": "No direct damage; three-second control can be broken by destroying the six-HP marker."
       },
       "pf2_telekinetic_projectile": {
         "role": "projectile damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Six damage on projectile contact; requires aim and can miss or strike terrain."
       },
       "pf2_thunderstrike": {
         "role": "single-target burst",
         "mana": 20,
         "charge_ticks": 12,
-        "cooldown_ticks": 80,
-        "review": "Nine HP with three-second Weakness, single target, charge and four-second recovery."
+        "cooldown_ticks": 0,
+        "review": "Nine HP with three-second Weakness, single target and charge."
       },
       "pf2_time_jump": {
         "role": "Native utility, protection or control",
         "mana": 34,
         "charge_ticks": 0,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "One second of anchored temporal absence: interaction/casting suppressed and damage delayed by immunity window."
       },
       "pf2_translocate": {
         "role": "safe local mobility",
         "mana": 26,
         "charge_ticks": 8,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "Twenty-block visible local teleport, dry supported loaded destination; failed placement spends paid resources."
       },
       "pf2_vampiric_feast": {
         "role": "drain/temporary HP",
         "mana": 24,
         "charge_ticks": 12,
-        "cooldown_ticks": 100,
-        "review": "Eight close-range HP with conditional four temporary HP; short absorption lifetime and five-second recovery."
+        "cooldown_ticks": 0,
+        "review": "Eight close-range HP with conditional four temporary HP; short absorption lifetime."
       },
       "pf2_vitality_lash": {
         "role": "undead-only damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Seven HP is specialized to undead; living creatures consume a cast with no harmful outcome."
       },
       "pf2_void_warp": {
         "role": "living-only damage",
         "mana": 6,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Five HP and short Weakness balanced by the undead exclusion."
       },
       "pf2_wall_of_ice": {
         "role": "Native utility, protection or control",
         "mana": 42,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Five-by-three real breakable ice cover for ten seconds, one-block thickness, progressive safe lift and one-second collapse. Width caps at nine; unsupported/obstructed placement fails. No authored damage, water or harvested blocks; broken/replaced cells stay untouched."
       },
       "pf2_wall_of_stone": {
         "role": "Native utility, protection or control",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Finite solid seven-by-three cover with 40 HP; no harvestable blocks or damage."
       },
       "pf2_wall_of_water": {
         "role": "Native utility, protection or control",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Five-by-three confined water wall for ten seconds: immersion, fire removal and physical-projectile drag; supported air required, edits preserved, no harvested water or spreading descendants. Magic deliveries continue."
       },
       "pf2_water_breathing": {
         "role": "Native utility, protection or control",
         "mana": 12,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "Three willing nearby allies gain thirty seconds of Water Breathing; no damage protection."
       },
       "pf2_water_walk": {
         "role": "Native utility, protection or control",
         "mana": 18,
         "charge_ticks": 10,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Eight seconds of contact support on water surface; crouching permits entry, no airborne lift."
       },
       "pf2_weapon_storm": {
         "role": "weapon-scaled area",
         "mana": 38,
         "charge_ticks": 20,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Thirteen HP with the audit six-HP weapon; five targets and short nine-block cone, visible charge."
       },
       "pf2_wooden_double": {
         "role": "Native utility, protection or control",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "One heavy hit receives at most six HP mitigation and a safe sidestep; overflow remains."
       },
       "pf2_zephyr_slip": {
         "role": "Native utility, protection or control",
         "mana": 22,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "One inward hostile crossing attempts a supported three-block directional retreat."
       },
       "planar_sight": {
         "role": "perception utility",
         "mana": 32,
         "charge_ticks": 10,
-        "cooldown_ticks": 500,
+        "cooldown_ticks": 0,
         "review": "Twenty-second, twenty-four-block reveal of up to sixteen creatures; shared Glowing exposes information to everyone."
       },
       "pocket_dimension": {
         "role": "persistent spatial utility",
         "mana": 60,
         "charge_ticks": 40,
-        "cooldown_ticks": 600,
-        "review": "Owned persistent room, charged access and thirty-second recovery; return from inside uses the same charge and recovery; room boundaries also restore the saved entry point."
+        "cooldown_ticks": 0,
+        "review": "Owned persistent room with charged access; return from inside uses the same charge; room boundaries also restore the saved entry point."
       },
       "poison_arrow": {
         "role": "status attack",
         "mana": 16,
         "charge_ticks": 0,
-        "cooldown_ticks": 70,
+        "cooldown_ticks": 0,
         "review": "4 HP and short Poison, with a two-second small cloud; Poison cannot kill and some mobs resist it."
       },
       "poison_breath": {
         "role": "channel status attack",
         "mana": 42,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1-HP cone pulses plus short Poison; immunity and nonlethal status make it situational."
       },
       "poison_splash": {
         "role": "area debuff",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "3 HP and five-second Poison in radius 4; situational resistances and nonlethal Poison limit output."
       },
       "portal": {
         "role": "spatial utility",
         "mana": 48,
         "charge_ticks": 0,
-        "cooldown_ticks": 400,
+        "cooldown_ticks": 0,
         "review": "Two endpoints within forty-eight-block aim, one-minute lifetime; second cast within two minutes and bounce protection."
       },
       "raise_dead": {
         "role": "combat summons",
         "mana": 60,
         "charge_ticks": 30,
-        "cooldown_ticks": 600,
-        "review": "Three low-health vanilla undead for thirty seconds; paid recovery equals lifetime, recast dismisses cohort."
+        "cooldown_ticks": 0,
+        "review": "Three low-health vanilla undead for thirty seconds; recast dismisses cohort."
       },
       "raise_hell": {
         "role": "weapon area attack",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "10 HP plus half weapon damage in a five-block melee cone with fire/push; exposed charged attack."
       },
       "ray_of_frost": {
         "role": "piercing control attack",
         "mana": 40,
         "charge_ticks": 10,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "12 HP to three beam targets over twenty-four blocks with three-second Slow; precision and short charge."
       },
       "ray_of_siphoning": {
         "role": "draining channel",
         "mana": 44,
         "charge_ticks": 0,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Sixteen single-target 1-HP pulses, 50% actual-damage healing; corpse, armor, and interruption reduce healing."
       },
       "recall": {
         "role": "travel utility",
         "mana": 30,
         "charge_ticks": 40,
-        "cooldown_ticks": 400,
-        "review": "Return to spawn after a two-second vulnerable charge; twenty-second recovery prevents escape spam."
+        "cooldown_ticks": 0,
+        "review": "Return to spawn after a two-second vulnerable charge."
       },
       "root": {
         "role": "single control",
         "mana": 26,
         "charge_ticks": 20,
-        "cooldown_ticks": 200,
-        "review": "Four-second tether with ten destructible HP, single victim; ten-second recovery prevents permanent lock."
+        "cooldown_ticks": 0,
+        "review": "Four-second tether with ten destructible HP, single victim."
       },
       "sacrifice": {
         "role": "summon conversion",
         "mana": 36,
         "charge_ticks": 10,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "6 HP plus 25% sacrificed summon health in radius 3, six targets; consumes another spell's paid living body."
       },
       "scapegoat": {
         "role": "decoy utility",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Fifteen-second destructible goat diversion; indirect control without damage."
       },
       "scorch": {
         "role": "delayed area",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP and fire in radius 2.5 after fifteen ticks; warning delay offsets precise ground delivery."
       },
       "sculk_tentacles": {
         "role": "persistent control attack",
         "mana": 44,
         "charge_ticks": 20,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "Up to five 4-HP pulses with brief Blindness in radius 4; stationary destructible field."
       },
       "shadow_slash": {
         "role": "weapon mobility",
         "mana": 30,
         "charge_ticks": 10,
-        "cooldown_ticks": 140,
+        "cooldown_ticks": 0,
         "review": "Blink to target and strike a five-block cone for 5 HP plus half weapon damage; higher cost than stationary swings."
       },
       "shield": {
         "role": "projectile protection",
         "mana": 26,
         "charge_ticks": 0,
-        "cooldown_ticks": 240,
+        "cooldown_ticks": 0,
         "review": "Ten-second stationary radius-2 ward with twenty destructible HP; melee and movement counter it."
       },
       "shockwave": {
         "role": "close area",
         "mana": 28,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "7 HP in radius 4.5 with knockback; no burn/freeze, slightly wider than comparable bursts."
       },
       "slow": {
         "role": "single control",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
-        "review": "Four seconds of Slowness II and Mining Fatigue I; no damage, cooldown exceeds control duration."
+        "cooldown_ticks": 0,
+        "review": "Four seconds of Slowness II and Mining Fatigue I; no damage."
       },
       "snowball": {
         "role": "area control",
         "mana": 14,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Radius 2.5 freezing and three seconds of Slowness II; no direct damage."
       },
       "sonic_boom": {
         "role": "piercing attack",
         "mana": 44,
         "charge_ticks": 20,
-        "cooldown_ticks": 180,
+        "cooldown_ticks": 0,
         "review": "14 HP through walls to three beam targets at twenty blocks; narrow tolerance and charge pay for bypass."
       },
       "spectral_hammer": {
         "role": "mining utility",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 80,
+        "cooldown_ticks": 0,
         "review": "Tool-aware 3x3 face, hardness and event checks; up to nine blocks at higher cost than Touch Dig."
       },
       "spider_aspect": {
         "role": "conditional weapon buff",
         "mana": 24,
         "charge_ticks": 0,
-        "cooldown_ticks": 300,
+        "cooldown_ticks": 0,
         "review": "Next three ordinary hits within ten seconds gain 3 HP only against Poison; no unlimited enchantment procs."
       },
       "starfall": {
         "role": "channel area attack",
         "mana": 88,
         "charge_ticks": 0,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "Twenty exploding meteors over 3.6 seconds, at most 40 direct HP per creature; obstruction, travel, and hit cap."
       },
       "stomp": {
         "role": "close control attack",
         "mana": 24,
         "charge_ticks": 10,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "8 HP and launch in a narrow forward cone; positional risk pays for area and disruption."
       },
       "summon_ender_chest": {
         "role": "inventory utility",
         "mana": 16,
         "charge_ticks": 0,
-        "cooldown_ticks": 100,
+        "cooldown_ticks": 0,
         "review": "Remote access to vanilla personal storage; no duplication or combat damage."
       },
       "summon_horse": {
         "role": "travel summon",
         "mana": 24,
         "charge_ticks": 20,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "One tamed saddled twenty-HP mount for two minutes; noncombat mount cannot multiply attack value."
       },
       "summon_polar_bear": {
         "role": "combat summon",
         "mana": 42,
         "charge_ticks": 30,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "One twenty-four-HP bear for thirty seconds; durable melee body balanced against fragile multi summons."
       },
       "summon_swords": {
         "role": "combat summons",
         "mana": 54,
         "charge_ticks": 30,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "Three eight-HP armed vex carriers for thirty seconds; vanilla AI and low health limit uptime."
       },
       "summon_vex": {
         "role": "combat summons",
         "mana": 40,
         "charge_ticks": 20,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "Two eight-HP vexes for thirty seconds; flying bodies pay more than one common melee minion."
       },
       "summon_zombie": {
         "role": "combat summon",
         "mana": 28,
         "charge_ticks": 20,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "One sixteen-HP zombie for thirty seconds; replacement and finite lifetime prevent cohort accumulation."
       },
       "sunbeam": {
         "role": "channel piercing attack",
         "mana": 44,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Sixteen 1.5-HP pulses to three beam targets over three seconds; replaces the former 105-HP channel."
       },
       "telekinesis": {
         "role": "single control",
         "mana": 42,
         "charge_ticks": 0,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Four-second grip, three 4-HP collisions maximum; walls cannot trigger unlimited damage every two ticks."
       },
       "teleport": {
         "role": "mobility",
         "mana": 15,
         "charge_ticks": 0,
-        "cooldown_ticks": 80,
-        "review": "Eight-block collision-checked movement, four-second recovery; cannot endlessly chain instant escapes."
+        "cooldown_ticks": 0,
+        "review": "Eight-block collision-checked movement."
       },
       "throw": {
         "role": "weapon attack",
         "mana": 12,
         "charge_ticks": 0,
-        "cooldown_ticks": 60,
+        "cooldown_ticks": 0,
         "review": "Held item is consumed into a recoverable projectile; weapon damage is external equipment, with travel risk."
       },
       "thunderstorm": {
         "role": "persistent attack",
         "mana": 84,
         "charge_ticks": 20,
-        "cooldown_ticks": 600,
+        "cooldown_ticks": 0,
         "review": "Ten 6-HP strikes per eligible creature over ten seconds, two visible targets per pulse, eight-block reach; follows the caster, with greater single-target output than stationary singularities."
       },
       "touch_dig": {
         "role": "mining utility",
         "mana": 8,
         "charge_ticks": 0,
-        "cooldown_ticks": 20,
-        "review": "One hardness-limited block, tool/drop and cancellation rules; one block per second."
+        "cooldown_ticks": 0,
+        "review": "One hardness-limited block per cast, tool/drop and cancellation rules."
       },
       "volt_strike": {
         "role": "mobility attack",
         "mana": 38,
         "charge_ticks": 0,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "12 HP once per contacted creature along a dash; expensive stronger counterpart of Burning Dash."
       },
       "wall_of_fire": {
         "role": "persistent barrier attack",
         "mana": 48,
         "charge_ticks": 0,
-        "cooldown_ticks": 200,
+        "cooldown_ticks": 0,
         "review": "Six-second wall, sixteen-block maximum length, twelve 2-HP pulses; breakable backing and two-point setup."
       },
       "wisp": {
         "role": "persistent attack",
         "mana": 36,
         "charge_ticks": 10,
-        "cooldown_ticks": 160,
+        "cooldown_ticks": 0,
         "review": "Up to ten 1-HP pulses in a following radius-2 field; tracks target but deals less than stationary fields."
       },
       "wither_skull": {
         "role": "status area",
         "mana": 30,
         "charge_ticks": 10,
-        "cooldown_ticks": 120,
+        "cooldown_ticks": 0,
         "review": "6 HP plus five-second Wither in radius 2; slow shot offsets potentially lethal status damage."
       },
       "wololo": {
         "role": "cosmetic utility",
         "mana": 3,
         "charge_ticks": 20,
-        "cooldown_ticks": 20,
+        "cooldown_ticks": 0,
         "review": "Only recolors sheep; low cost reflects cosmetic value, not raw school traits."
       }
     }

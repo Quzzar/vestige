@@ -1,0 +1,43 @@
+> Task :createArtifactManifest UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                        ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                                                                         ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:28: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setExperienceLevels(50); player.setExperiencePoints(0); return player;
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:290: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(pos.south()));
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:318: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); var nearby = Vec3.atBottomCenterOf(pos.south()); player.setPos(nearby);
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:336: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var extra = new ArrayList<UUID>(); var player = h.makeMockServerPlayerInLevel();
+                                                         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 warnings
+
+> Task :generateModMetadata UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes
+
+> Task :compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :downloadAssets UP-TO-DATE
+> Task :writeNeoForgeTestClasspath
+> Task :prepareNeoForgeTestFiles
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses
+> Task :test
+
+BUILD SUCCESSFUL in 26s
+11 actionable tasks: 5 executed, 6 up-to-date

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-07",
+  "architecture": "Implemented shared spell/item definition, resolution and runtime",
+  "clothingGamePlay": "Not registered; individual abilities and formulas awaiting approval",
+  "unitTests": {
+    "tests": 172,
+    "failures": 0,
+    "errors": 0
+  },
+  "minecraftTests": {
+    "required": 290,
+    "passed": 290,
+    "freshWorld": "build/item-ability-full-gametest"
+  },
+  "build": "Passed",
+  "formulaGrammar": "All six proposals parsed by native Java grammar",
+  "reviewBundle": "Source JSON agrees with generated bundle; scripts pass syntax checks",
+  "visualVerification": {
+    "verified": false,
+    "reason": "Browser security blocked the local file URL",
+    "priorEvidence": "review.jpg and verification.json cover the page before trait controls"
+  },
+  "logs": {
+    "build": "/private/tmp/vestige-magic-abilities-build.log",
+    "world": "/private/tmp/vestige-magic-abilities-world-full.log"
+  }
+}

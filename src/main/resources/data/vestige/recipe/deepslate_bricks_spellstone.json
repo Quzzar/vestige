@@ -4,8 +4,8 @@
   "group": "vestige_spellstone",
   "pattern": [
     "DSD",
-    "BAB",
-    "BBB"
+    "SAS",
+    "S S"
   ],
   "key": {
     "D": {
@@ -13,9 +13,6 @@
     },
     "A": {
       "item": "minecraft:amethyst_block"
-    },
-    "B": {
-      "item": "minecraft:deepslate_bricks"
     },
     "S": {
       "item": "minecraft:deepslate_brick_slab"

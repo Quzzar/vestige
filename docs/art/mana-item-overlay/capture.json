@@ -1,0 +1,3250 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "source": "Native item decorations / private server packets",
+  "checks": [
+    {
+      "casts": 10,
+      "view": "ten-real-casts",
+      "mana": 40.0,
+      "remainingScrolls": 6
+    },
+    {
+      "casts": 16,
+      "view": "sixteen-real-casts",
+      "mana": 4.0,
+      "spareScrolls": 16
+    }
+  ],
+  "frames": [
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-000.png",
+      "seconds": 0.019320375,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-001.png",
+      "seconds": 0.228541959,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-002.png",
+      "seconds": 0.442931792,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-003.png",
+      "seconds": 0.646931792,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-004.png",
+      "seconds": 0.847434709,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-005.png",
+      "seconds": 1.064749875,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-006.png",
+      "seconds": 1.277358542,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-007.png",
+      "seconds": 1.486935042,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-008.png",
+      "seconds": 1.689931917,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-009.png",
+      "seconds": 1.896324042,
+      "width": 1920
+    },
+    {
+      "mana": 100.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "ready/frame-010.png",
+      "seconds": 2.096692709,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-000.png",
+      "seconds": 0.01591425,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-001.png",
+      "seconds": 0.216695583,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-002.png",
+      "seconds": 0.433396708,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-003.png",
+      "seconds": 0.650664,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-004.png",
+      "seconds": 0.863903041,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-005.png",
+      "seconds": 1.07863425,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-006.png",
+      "seconds": 1.295153208,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-007.png",
+      "seconds": 1.496397333,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-008.png",
+      "seconds": 1.711755708,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-009.png",
+      "seconds": 1.926991583,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "partial/frame-010.png",
+      "seconds": 2.140863875,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-000.png",
+      "seconds": 0.015849791,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-001.png",
+      "seconds": 0.230518375,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-002.png",
+      "seconds": 0.441292375,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-003.png",
+      "seconds": 0.651967791,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-004.png",
+      "seconds": 0.864555791,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-005.png",
+      "seconds": 1.06521175,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-006.png",
+      "seconds": 1.281015875,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-007.png",
+      "seconds": 1.499388875,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-008.png",
+      "seconds": 1.71202675,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-009.png",
+      "seconds": 1.918401291,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "empty/frame-010.png",
+      "seconds": 2.121591333,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-000.png",
+      "seconds": 0.017427042,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-001.png",
+      "seconds": 0.220772667,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-002.png",
+      "seconds": 0.422113458,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-003.png",
+      "seconds": 0.638353583,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-004.png",
+      "seconds": 0.840913833,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-005.png",
+      "seconds": 1.043593167,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-006.png",
+      "seconds": 1.245222667,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-007.png",
+      "seconds": 1.446643167,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-008.png",
+      "seconds": 1.647746833,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-009.png",
+      "seconds": 1.849970125,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "inventory/frame-010.png",
+      "seconds": 2.052691708,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-000.png",
+      "seconds": 0.018440542,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-001.png",
+      "seconds": 0.22807575,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-002.png",
+      "seconds": 0.436238709,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-003.png",
+      "seconds": 0.646737875,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-004.png",
+      "seconds": 0.863891209,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-005.png",
+      "seconds": 1.075494542,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-006.png",
+      "seconds": 1.284652,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-007.png",
+      "seconds": 1.495236167,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-008.png",
+      "seconds": 1.704633292,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-009.png",
+      "seconds": 1.913845167,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.0,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "staff-selection/frame-010.png",
+      "seconds": 2.124579042,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-000.png",
+      "seconds": 0.017048292,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-001.png",
+      "seconds": 0.217905208,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-002.png",
+      "seconds": 0.432561792,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-003.png",
+      "seconds": 0.650179875,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-004.png",
+      "seconds": 0.86658175,
+      "width": 1920
+    },
+    {
+      "mana": 40.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.04761905,
+        0.2857143,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-005.png",
+      "seconds": 1.06832175,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-006.png",
+      "seconds": 1.270408875,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-007.png",
+      "seconds": 1.477176917,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-008.png",
+      "seconds": 1.692805708,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-009.png",
+      "seconds": 1.904233,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-010.png",
+      "seconds": 2.116202792,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-011.png",
+      "seconds": 2.332354875,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-012.png",
+      "seconds": 2.543861167,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-013.png",
+      "seconds": 2.744244417,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-014.png",
+      "seconds": 2.950324875,
+      "width": 1920
+    },
+    {
+      "mana": 4.0,
+      "shortages": [
+        0.0,
+        0.71428573,
+        0.85714287,
+        0.9047619,
+        0.9285714,
+        0.8333333,
+        0.85714287,
+        0.8666667,
+        0.33333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "repeated-casts/frame-015.png",
+      "seconds": 3.155854792,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-000.png",
+      "seconds": 0.01659225,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-001.png",
+      "seconds": 0.230717416,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-002.png",
+      "seconds": 0.445188333,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-003.png",
+      "seconds": 0.649970916,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-004.png",
+      "seconds": 0.855062083,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-005.png",
+      "seconds": 1.056556916,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-006.png",
+      "seconds": 1.257404083,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-007.png",
+      "seconds": 1.470379416,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-008.png",
+      "seconds": 1.678564583,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-009.png",
+      "seconds": 1.88549125,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-010.png",
+      "seconds": 2.100851166,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-011.png",
+      "seconds": 2.316802125,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-012.png",
+      "seconds": 2.530000208,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-013.png",
+      "seconds": 2.735378166,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-014.png",
+      "seconds": 2.939929083,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-015.png",
+      "seconds": 3.141089166,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-016.png",
+      "seconds": 3.35554775,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-017.png",
+      "seconds": 3.571300416,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-018.png",
+      "seconds": 3.784955041,
+      "width": 1920
+    },
+    {
+      "mana": 0.0,
+      "shortages": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-019.png",
+      "seconds": 3.992725541,
+      "width": 1920
+    },
+    {
+      "mana": 0.2,
+      "shortages": [
+        0.96666664,
+        0.98571426,
+        0.99285716,
+        0.99523807,
+        0.99642855,
+        0.9916667,
+        0.99285716,
+        0.99333334,
+        0.96666664
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-020.png",
+      "seconds": 4.208457583,
+      "width": 1920
+    },
+    {
+      "mana": 0.7,
+      "shortages": [
+        0.8833333,
+        0.95,
+        0.975,
+        0.98333335,
+        0.9875,
+        0.97083336,
+        0.975,
+        0.9766667,
+        0.8833333
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-021.png",
+      "seconds": 4.419617666,
+      "width": 1920
+    },
+    {
+      "mana": 1.2,
+      "shortages": [
+        0.8,
+        0.9142857,
+        0.95714283,
+        0.9714286,
+        0.9785714,
+        0.95,
+        0.95714283,
+        0.96,
+        0.8
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-022.png",
+      "seconds": 4.637784708,
+      "width": 1920
+    },
+    {
+      "mana": 1.7000000000000004,
+      "shortages": [
+        0.71666664,
+        0.87857145,
+        0.9392857,
+        0.9595238,
+        0.9696429,
+        0.9291667,
+        0.9392857,
+        0.9433333,
+        0.71666664
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-023.png",
+      "seconds": 4.85316425,
+      "width": 1920
+    },
+    {
+      "mana": 1.7000000000000004,
+      "shortages": [
+        0.71666664,
+        0.87857145,
+        0.9392857,
+        0.9595238,
+        0.9696429,
+        0.9291667,
+        0.9392857,
+        0.9433333,
+        0.71666664
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-024.png",
+      "seconds": 5.056092291,
+      "width": 1920
+    },
+    {
+      "mana": 2.2000000000000006,
+      "shortages": [
+        0.6333333,
+        0.8428571,
+        0.92142856,
+        0.947619,
+        0.9607143,
+        0.90833336,
+        0.92142856,
+        0.9266667,
+        0.6333333
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-025.png",
+      "seconds": 5.271112041,
+      "width": 1920
+    },
+    {
+      "mana": 2.700000000000001,
+      "shortages": [
+        0.55,
+        0.80714285,
+        0.9035714,
+        0.9357143,
+        0.95178574,
+        0.8875,
+        0.9035714,
+        0.91,
+        0.55
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-026.png",
+      "seconds": 5.477764083,
+      "width": 1920
+    },
+    {
+      "mana": 3.2000000000000015,
+      "shortages": [
+        0.46666667,
+        0.7714286,
+        0.8857143,
+        0.9238095,
+        0.94285715,
+        0.8666667,
+        0.8857143,
+        0.8933333,
+        0.46666667
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-027.png",
+      "seconds": 5.685088083,
+      "width": 1920
+    },
+    {
+      "mana": 3.700000000000002,
+      "shortages": [
+        0.38333333,
+        0.73571426,
+        0.86785716,
+        0.91190475,
+        0.93392855,
+        0.84583336,
+        0.86785716,
+        0.87666667,
+        0.38333333
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-028.png",
+      "seconds": 5.886252583,
+      "width": 1920
+    },
+    {
+      "mana": 4.200000000000001,
+      "shortages": [
+        0.3,
+        0.7,
+        0.85,
+        0.9,
+        0.925,
+        0.825,
+        0.85,
+        0.86,
+        0.3
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-029.png",
+      "seconds": 6.087636916,
+      "width": 1920
+    },
+    {
+      "mana": 4.200000000000001,
+      "shortages": [
+        0.3,
+        0.7,
+        0.85,
+        0.9,
+        0.925,
+        0.825,
+        0.85,
+        0.86,
+        0.3
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-030.png",
+      "seconds": 6.299806916,
+      "width": 1920
+    },
+    {
+      "mana": 4.699999999999999,
+      "shortages": [
+        0.21666667,
+        0.6642857,
+        0.83214283,
+        0.88809526,
+        0.9160714,
+        0.8041667,
+        0.83214283,
+        0.8433333,
+        0.21666667
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-031.png",
+      "seconds": 6.500117333,
+      "width": 1920
+    },
+    {
+      "mana": 5.1999999999999975,
+      "shortages": [
+        0.13333334,
+        0.62857145,
+        0.8142857,
+        0.8761905,
+        0.9071429,
+        0.78333336,
+        0.8142857,
+        0.82666665,
+        0.13333334
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-032.png",
+      "seconds": 6.702203791,
+      "width": 1920
+    },
+    {
+      "mana": 5.699999999999996,
+      "shortages": [
+        0.05,
+        0.5928571,
+        0.79642856,
+        0.8642857,
+        0.8982143,
+        0.7625,
+        0.79642856,
+        0.81,
+        0.05
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-033.png",
+      "seconds": 6.908443,
+      "width": 1920
+    },
+    {
+      "mana": 6.199999999999994,
+      "shortages": [
+        0.0,
+        0.55714285,
+        0.7785714,
+        0.85238093,
+        0.88928574,
+        0.7416667,
+        0.7785714,
+        0.79333335,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-034.png",
+      "seconds": 7.118975041,
+      "width": 1920
+    },
+    {
+      "mana": 6.699999999999992,
+      "shortages": [
+        0.0,
+        0.5214286,
+        0.7607143,
+        0.8404762,
+        0.88035715,
+        0.72083336,
+        0.7607143,
+        0.77666664,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-035.png",
+      "seconds": 7.325712166,
+      "width": 1920
+    },
+    {
+      "mana": 6.699999999999992,
+      "shortages": [
+        0.0,
+        0.5214286,
+        0.7607143,
+        0.8404762,
+        0.88035715,
+        0.72083336,
+        0.7607143,
+        0.77666664,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-036.png",
+      "seconds": 7.528158541,
+      "width": 1920
+    },
+    {
+      "mana": 7.19999999999999,
+      "shortages": [
+        0.0,
+        0.4857143,
+        0.74285716,
+        0.82857144,
+        0.87142855,
+        0.7,
+        0.74285716,
+        0.76,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-037.png",
+      "seconds": 7.734421041,
+      "width": 1920
+    },
+    {
+      "mana": 7.699999999999989,
+      "shortages": [
+        0.0,
+        0.45,
+        0.725,
+        0.81666666,
+        0.8625,
+        0.6791667,
+        0.725,
+        0.74333334,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-038.png",
+      "seconds": 7.935847541,
+      "width": 1920
+    },
+    {
+      "mana": 8.199999999999987,
+      "shortages": [
+        0.0,
+        0.41428572,
+        0.70714283,
+        0.8047619,
+        0.8535714,
+        0.65833336,
+        0.70714283,
+        0.7266667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-039.png",
+      "seconds": 8.142663,
+      "width": 1920
+    },
+    {
+      "mana": 8.699999999999985,
+      "shortages": [
+        0.0,
+        0.37857142,
+        0.6892857,
+        0.79285717,
+        0.8446429,
+        0.6375,
+        0.6892857,
+        0.71,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-040.png",
+      "seconds": 8.346137708,
+      "width": 1920
+    },
+    {
+      "mana": 8.699999999999985,
+      "shortages": [
+        0.0,
+        0.37857142,
+        0.6892857,
+        0.79285717,
+        0.8446429,
+        0.6375,
+        0.6892857,
+        0.71,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-041.png",
+      "seconds": 8.547865375,
+      "width": 1920
+    },
+    {
+      "mana": 9.199999999999983,
+      "shortages": [
+        0.0,
+        0.34285715,
+        0.67142856,
+        0.7809524,
+        0.8357143,
+        0.6166667,
+        0.67142856,
+        0.6933333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-042.png",
+      "seconds": 8.749748791,
+      "width": 1920
+    },
+    {
+      "mana": 9.699999999999982,
+      "shortages": [
+        0.0,
+        0.30714285,
+        0.6535714,
+        0.7690476,
+        0.82678574,
+        0.59583336,
+        0.6535714,
+        0.6766667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-043.png",
+      "seconds": 8.951270833,
+      "width": 1920
+    },
+    {
+      "mana": 10.19999999999998,
+      "shortages": [
+        0.0,
+        0.27142859,
+        0.6357143,
+        0.75714284,
+        0.81785715,
+        0.575,
+        0.6357143,
+        0.66,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-044.png",
+      "seconds": 9.154486083,
+      "width": 1920
+    },
+    {
+      "mana": 10.699999999999978,
+      "shortages": [
+        0.0,
+        0.23571429,
+        0.61785716,
+        0.74523807,
+        0.80892855,
+        0.5541667,
+        0.61785716,
+        0.6433333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-045.png",
+      "seconds": 9.356550875,
+      "width": 1920
+    },
+    {
+      "mana": 11.199999999999976,
+      "shortages": [
+        0.0,
+        0.2,
+        0.6,
+        0.73333335,
+        0.8,
+        0.53333336,
+        0.6,
+        0.62666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-046.png",
+      "seconds": 9.568021583,
+      "width": 1920
+    },
+    {
+      "mana": 11.199999999999976,
+      "shortages": [
+        0.0,
+        0.2,
+        0.6,
+        0.73333335,
+        0.8,
+        0.53333336,
+        0.6,
+        0.62666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-047.png",
+      "seconds": 9.784675541,
+      "width": 1920
+    },
+    {
+      "mana": 11.699999999999974,
+      "shortages": [
+        0.0,
+        0.16428572,
+        0.58214283,
+        0.7214286,
+        0.7910714,
+        0.5125,
+        0.58214283,
+        0.61,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-048.png",
+      "seconds": 9.993311875,
+      "width": 1920
+    },
+    {
+      "mana": 12.199999999999973,
+      "shortages": [
+        0.0,
+        0.12857144,
+        0.5642857,
+        0.7095238,
+        0.7821429,
+        0.49166667,
+        0.5642857,
+        0.5933333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-049.png",
+      "seconds": 10.197973208,
+      "width": 1920
+    },
+    {
+      "mana": 12.69999999999997,
+      "shortages": [
+        0.0,
+        0.092857145,
+        0.54642856,
+        0.697619,
+        0.7732143,
+        0.47083333,
+        0.54642856,
+        0.57666665,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-050.png",
+      "seconds": 10.403560333,
+      "width": 1920
+    },
+    {
+      "mana": 13.199999999999969,
+      "shortages": [
+        0.0,
+        0.057142857,
+        0.5285714,
+        0.6857143,
+        0.76428574,
+        0.45,
+        0.5285714,
+        0.56,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-051.png",
+      "seconds": 10.621286833,
+      "width": 1920
+    },
+    {
+      "mana": 13.699999999999967,
+      "shortages": [
+        0.0,
+        0.021428572,
+        0.5107143,
+        0.6738095,
+        0.75535715,
+        0.42916667,
+        0.5107143,
+        0.54333335,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-052.png",
+      "seconds": 10.829643208,
+      "width": 1920
+    },
+    {
+      "mana": 13.699999999999967,
+      "shortages": [
+        0.0,
+        0.021428572,
+        0.5107143,
+        0.6738095,
+        0.75535715,
+        0.42916667,
+        0.5107143,
+        0.54333335,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-053.png",
+      "seconds": 11.041461666,
+      "width": 1920
+    },
+    {
+      "mana": 14.199999999999966,
+      "shortages": [
+        0.0,
+        0.0,
+        0.49285713,
+        0.66190475,
+        0.74642855,
+        0.40833333,
+        0.49285713,
+        0.52666664,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-054.png",
+      "seconds": 11.245113041,
+      "width": 1920
+    },
+    {
+      "mana": 14.699999999999964,
+      "shortages": [
+        0.0,
+        0.0,
+        0.475,
+        0.65,
+        0.7375,
+        0.3875,
+        0.475,
+        0.51,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-055.png",
+      "seconds": 11.446018083,
+      "width": 1920
+    },
+    {
+      "mana": 15.199999999999962,
+      "shortages": [
+        0.0,
+        0.0,
+        0.45714286,
+        0.63809526,
+        0.7285714,
+        0.36666667,
+        0.45714286,
+        0.49333334,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-056.png",
+      "seconds": 11.648148541,
+      "width": 1920
+    },
+    {
+      "mana": 15.69999999999996,
+      "shortages": [
+        0.0,
+        0.0,
+        0.43928573,
+        0.6261905,
+        0.7196429,
+        0.34583333,
+        0.43928573,
+        0.47666666,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-057.png",
+      "seconds": 11.863245083,
+      "width": 1920
+    },
+    {
+      "mana": 16.19999999999996,
+      "shortages": [
+        0.0,
+        0.0,
+        0.42142856,
+        0.6142857,
+        0.7107143,
+        0.325,
+        0.42142856,
+        0.46,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-058.png",
+      "seconds": 12.06349525,
+      "width": 1920
+    },
+    {
+      "mana": 16.19999999999996,
+      "shortages": [
+        0.0,
+        0.0,
+        0.42142856,
+        0.6142857,
+        0.7107143,
+        0.325,
+        0.42142856,
+        0.46,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-059.png",
+      "seconds": 12.279039916,
+      "width": 1920
+    },
+    {
+      "mana": 16.699999999999967,
+      "shortages": [
+        0.0,
+        0.0,
+        0.40357143,
+        0.60238093,
+        0.70178574,
+        0.30416667,
+        0.40357143,
+        0.44333333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-060.png",
+      "seconds": 12.490823291,
+      "width": 1920
+    },
+    {
+      "mana": 17.199999999999974,
+      "shortages": [
+        0.0,
+        0.0,
+        0.3857143,
+        0.5904762,
+        0.69285715,
+        0.28333333,
+        0.3857143,
+        0.42666668,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-061.png",
+      "seconds": 12.702131291,
+      "width": 1920
+    },
+    {
+      "mana": 17.69999999999998,
+      "shortages": [
+        0.0,
+        0.0,
+        0.36785713,
+        0.57857144,
+        0.68392855,
+        0.2625,
+        0.36785713,
+        0.41,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-062.png",
+      "seconds": 12.913648916,
+      "width": 1920
+    },
+    {
+      "mana": 18.19999999999999,
+      "shortages": [
+        0.0,
+        0.0,
+        0.35,
+        0.56666666,
+        0.675,
+        0.24166666,
+        0.35,
+        0.39333335,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-063.png",
+      "seconds": 13.128320333,
+      "width": 1920
+    },
+    {
+      "mana": 18.699999999999996,
+      "shortages": [
+        0.0,
+        0.0,
+        0.33214286,
+        0.5547619,
+        0.6660714,
+        0.22083333,
+        0.33214286,
+        0.37666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-064.png",
+      "seconds": 13.340236541,
+      "width": 1920
+    },
+    {
+      "mana": 18.699999999999996,
+      "shortages": [
+        0.0,
+        0.0,
+        0.33214286,
+        0.5547619,
+        0.6660714,
+        0.22083333,
+        0.33214286,
+        0.37666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-065.png",
+      "seconds": 13.552947458,
+      "width": 1920
+    },
+    {
+      "mana": 19.200000000000003,
+      "shortages": [
+        0.0,
+        0.0,
+        0.31428573,
+        0.54285717,
+        0.6571429,
+        0.2,
+        0.31428573,
+        0.36,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-066.png",
+      "seconds": 13.758317875,
+      "width": 1920
+    },
+    {
+      "mana": 19.70000000000001,
+      "shortages": [
+        0.0,
+        0.0,
+        0.29642856,
+        0.5309524,
+        0.6482143,
+        0.17916666,
+        0.29642856,
+        0.34333333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-067.png",
+      "seconds": 13.968425541,
+      "width": 1920
+    },
+    {
+      "mana": 20.200000000000017,
+      "shortages": [
+        0.0,
+        0.0,
+        0.27857143,
+        0.5190476,
+        0.63928574,
+        0.15833333,
+        0.27857143,
+        0.32666665,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-068.png",
+      "seconds": 14.179376083,
+      "width": 1920
+    },
+    {
+      "mana": 20.700000000000024,
+      "shortages": [
+        0.0,
+        0.0,
+        0.2607143,
+        0.50714284,
+        0.63035715,
+        0.1375,
+        0.2607143,
+        0.31,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-069.png",
+      "seconds": 14.388739958,
+      "width": 1920
+    },
+    {
+      "mana": 21.20000000000003,
+      "shortages": [
+        0.0,
+        0.0,
+        0.24285714,
+        0.4952381,
+        0.62142855,
+        0.11666667,
+        0.24285714,
+        0.29333332,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-070.png",
+      "seconds": 14.594180791,
+      "width": 1920
+    },
+    {
+      "mana": 21.20000000000003,
+      "shortages": [
+        0.0,
+        0.0,
+        0.24285714,
+        0.4952381,
+        0.62142855,
+        0.11666667,
+        0.24285714,
+        0.29333332,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-071.png",
+      "seconds": 14.802314208,
+      "width": 1920
+    },
+    {
+      "mana": 21.70000000000004,
+      "shortages": [
+        0.0,
+        0.0,
+        0.225,
+        0.48333332,
+        0.6125,
+        0.09583333,
+        0.225,
+        0.27666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-072.png",
+      "seconds": 15.006592416,
+      "width": 1920
+    },
+    {
+      "mana": 22.200000000000045,
+      "shortages": [
+        0.0,
+        0.0,
+        0.20714286,
+        0.47142857,
+        0.6035714,
+        0.075,
+        0.20714286,
+        0.26,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-073.png",
+      "seconds": 15.216398583,
+      "width": 1920
+    },
+    {
+      "mana": 22.700000000000053,
+      "shortages": [
+        0.0,
+        0.0,
+        0.18928571,
+        0.4595238,
+        0.5946429,
+        0.054166667,
+        0.18928571,
+        0.24333334,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-074.png",
+      "seconds": 15.419214333,
+      "width": 1920
+    },
+    {
+      "mana": 23.20000000000006,
+      "shortages": [
+        0.0,
+        0.0,
+        0.17142858,
+        0.44761905,
+        0.5857143,
+        0.033333335,
+        0.17142858,
+        0.22666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-075.png",
+      "seconds": 15.619707625,
+      "width": 1920
+    },
+    {
+      "mana": 23.700000000000067,
+      "shortages": [
+        0.0,
+        0.0,
+        0.15357143,
+        0.43571427,
+        0.57678574,
+        0.0125,
+        0.15357143,
+        0.21,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-076.png",
+      "seconds": 15.824725916,
+      "width": 1920
+    },
+    {
+      "mana": 23.700000000000067,
+      "shortages": [
+        0.0,
+        0.0,
+        0.15357143,
+        0.43571427,
+        0.57678574,
+        0.0125,
+        0.15357143,
+        0.21,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-077.png",
+      "seconds": 16.036465666,
+      "width": 1920
+    },
+    {
+      "mana": 24.200000000000074,
+      "shortages": [
+        0.0,
+        0.0,
+        0.13571429,
+        0.42380953,
+        0.56785715,
+        0.0,
+        0.13571429,
+        0.19333333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-078.png",
+      "seconds": 16.246246416,
+      "width": 1920
+    },
+    {
+      "mana": 24.70000000000008,
+      "shortages": [
+        0.0,
+        0.0,
+        0.11785714,
+        0.41190475,
+        0.55892855,
+        0.0,
+        0.11785714,
+        0.17666666,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-079.png",
+      "seconds": 16.447230416,
+      "width": 1920
+    },
+    {
+      "mana": 25.200000000000088,
+      "shortages": [
+        0.0,
+        0.0,
+        0.1,
+        0.4,
+        0.55,
+        0.0,
+        0.1,
+        0.16,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-080.png",
+      "seconds": 16.657987625,
+      "width": 1920
+    },
+    {
+      "mana": 25.700000000000095,
+      "shortages": [
+        0.0,
+        0.0,
+        0.08214286,
+        0.38809523,
+        0.5410714,
+        0.0,
+        0.08214286,
+        0.14333333,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-081.png",
+      "seconds": 16.863027458,
+      "width": 1920
+    },
+    {
+      "mana": 26.200000000000102,
+      "shortages": [
+        0.0,
+        0.0,
+        0.06428572,
+        0.37619048,
+        0.5321429,
+        0.0,
+        0.06428572,
+        0.12666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-082.png",
+      "seconds": 17.071959625,
+      "width": 1920
+    },
+    {
+      "mana": 26.200000000000102,
+      "shortages": [
+        0.0,
+        0.0,
+        0.06428572,
+        0.37619048,
+        0.5321429,
+        0.0,
+        0.06428572,
+        0.12666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-083.png",
+      "seconds": 17.274107541,
+      "width": 1920
+    },
+    {
+      "mana": 26.70000000000011,
+      "shortages": [
+        0.0,
+        0.0,
+        0.046428572,
+        0.3642857,
+        0.5232143,
+        0.0,
+        0.046428572,
+        0.11,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-084.png",
+      "seconds": 17.490648791,
+      "width": 1920
+    },
+    {
+      "mana": 27.200000000000117,
+      "shortages": [
+        0.0,
+        0.0,
+        0.028571429,
+        0.35238096,
+        0.51428574,
+        0.0,
+        0.028571429,
+        0.093333334,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-085.png",
+      "seconds": 17.704156125,
+      "width": 1920
+    },
+    {
+      "mana": 27.700000000000124,
+      "shortages": [
+        0.0,
+        0.0,
+        0.010714286,
+        0.34047619,
+        0.50535715,
+        0.0,
+        0.010714286,
+        0.07666667,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-086.png",
+      "seconds": 17.918120833,
+      "width": 1920
+    },
+    {
+      "mana": 28.20000000000013,
+      "shortages": [
+        0.0,
+        0.0,
+        0.0,
+        0.32857144,
+        0.49642858,
+        0.0,
+        0.0,
+        0.06,
+        0.0
+      ],
+      "guiScale": 4,
+      "height": 1080,
+      "file": "recovery/frame-087.png",
+      "seconds": 18.129723458,
+      "width": 1920
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-000.png",
+      "seconds": 0.016341875,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-001.png",
+      "seconds": 0.231743583,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-002.png",
+      "seconds": 0.43267725,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-003.png",
+      "seconds": 0.649532791,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-004.png",
+      "seconds": 0.849562291,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-005.png",
+      "seconds": 1.051611833,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-006.png",
+      "seconds": 1.252346333,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-007.png",
+      "seconds": 1.454400166,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-008.png",
+      "seconds": 1.654591916,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-009.png",
+      "seconds": 1.857529083,
+      "width": 1280
+    },
+    {
+      "mana": 14.0,
+      "shortages": [
+        0.0,
+        0.0,
+        0.5,
+        0.6666667,
+        0.75,
+        0.41666666,
+        0.5,
+        0.53333336,
+        0.0
+      ],
+      "guiScale": 2,
+      "height": 720,
+      "file": "compact/frame-010.png",
+      "seconds": 2.073858083,
+      "width": 1280
+    }
+  ]
+}

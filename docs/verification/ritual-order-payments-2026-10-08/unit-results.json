@@ -1,0 +1,260 @@
+{
+  "com.quzzar.vestige.magic.definition.SpecialTraitsTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.LeylineShapingTest": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.equipment.MagicArmorRecipeTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.world.ItemManaPayloadTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.world.PreparationPayloadTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.WandDisplaysTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.RitualRecipeShapeTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.FragmentSymbolsTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.travel.StoneNetworkTest": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.NamedMagicSourceTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.presentation.ManaReadinessTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.CausalChainTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.FragmentDiscoveryTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.StaffRecipeTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.WandRecipeTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.definition.SpellTriggerTypesTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.definition.TraitProfileTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.condition.BuiltInConditionTest": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.WandTipsTest": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.OrderedConstructionTest": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.CastShapingTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.definition.SpellDefinitionTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.presentation.SpellVisualTest": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.RitualDisplaysTest": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.ForfeitPolicyTest": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.CastObserverTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.UnifiedMagicTest": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.travel.PlayerExperienceTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.StaffDataTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.AttunementMarkTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.SpellshapingTest": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.WhisperingShellTest": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.travel.StandingStoneShapeTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.data.SpellJsonTest": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.AttunementTest": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.WandComponentsTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.SpellRuntimeTest": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.runtime.CastReservationTest": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.MagicalThreadRecipeTest": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.travel.StandingStoneFareTest": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.HomeboundEyeTest": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.apparatus.MundaneStaffProfileTest": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "com.quzzar.vestige.magic.data.EquipmentFormulaTest": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

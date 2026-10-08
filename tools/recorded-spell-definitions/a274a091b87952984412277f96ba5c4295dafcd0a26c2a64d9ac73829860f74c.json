@@ -1,0 +1,172 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:frost_step",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Frost Step",
+    "cast_type": "instant",
+    "cooldown_ticks": 240
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:teleportation": 4,
+    "vestige:illusion": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 140
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:area",
+        "duration": 60,
+        "values": {
+          "radius": {
+            "product": [
+              3,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          }
+        },
+        "identifiers": {
+          "particle": "minecraft:snowflake"
+        },
+        "bindings": [],
+        "on_hit": [],
+        "on_tick": [
+          {
+            "type": "for_each",
+            "target": {
+              "selection": "near_target",
+              "required": false,
+              "distance": {
+                "product": [
+                  3,
+                  {
+                    "trait": "vestige:area"
+                  }
+                ]
+              },
+              "relationship": "hostile",
+              "options": {
+                "count": 6
+              }
+            },
+            "effects": [
+              {
+                "type": "freeze",
+                "values": {
+                  "ticks": 140
+                }
+              },
+              {
+                "type": "status",
+                "values": {
+                  "duration": 100,
+                  "amplifier": 0
+                },
+                "identifiers": {
+                  "effect": "minecraft:slowness"
+                }
+              }
+            ]
+          }
+        ],
+        "on_end": [],
+        "interval": 10,
+        "visual": {
+          "duration": 60,
+          "radius": {
+            "product": [
+              3,
+              {
+                "trait": "vestige:area"
+              }
+            ]
+          },
+          "height": 0.08,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "48badf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.1,
+              "speed": -1.3,
+              "phase": 0,
+              "count": 7
+            },
+            {
+              "shape": "slash",
+              "color": "e7fbff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.77,
+              "speed": 0.8450000000000001,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "e7fbff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            4,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "teleport"
+        }
+      ]
+    }
+  ]
+}

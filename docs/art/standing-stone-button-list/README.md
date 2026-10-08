@@ -20,6 +20,6 @@ All thirteen captured class hashes match the final package. All 335 compiled cla
 
 The inspected jar is installed in **Prism → Kithkyn Testing** at SHA-256 `0373e5f199b37264807c50315e158dc2c630b5b24ab2ddd5326d94d77946d2f4`. [`prism-install.json`](prism-install.json) records the backup and verified atomic replacement. Minecraft was not restarted; restart that instance to load the change. Other mods and existing worlds were not changed.
 
-![Native destination buttons](native/list-wide.png)
+![Native destination buttons](/Users/quzzar/Projects/vestige/docs/art/standing-stone-button-list/native/list-wide.png)
 
-![Native name editor](native/editing-wide.png)
+![Native name editor](/Users/quzzar/Projects/vestige/docs/art/standing-stone-button-list/native/editing-wide.png)

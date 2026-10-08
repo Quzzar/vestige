@@ -18,6 +18,6 @@ Interaction references inspected for this pass were the centered actionable work
 
 The editable in-conversation source is `standing-stone-menu-sketches.html` in the calling chat's explicitly writable visualization directory. Inspection images and `inspection.json` are stored beside this record. All three designs were rendered at **736- and 320-pixel browser widths**, in both themes, including 64-character names. The wrapper leaves 704/288 pixels for the content. Local name edits, pages, cost previews and immediate destination actions pass in all twelve views, without horizontal overflow or JavaScript errors. The first inspection caught the sandbox blocking form submission; the final version uses native button/Enter handling and was rechecked. The diagnostic rename image is not acceptance evidence.
 
-![Three layout proposals](three-layouts.png)
+![Three layout proposals](/Users/quzzar/Projects/vestige/docs/art/standing-stone-menu-sketches/three-layouts.png)
 
 Native appearance and gameplay tests are deferred until a layout is selected; no production Java, assets or Prism installation is changed in this pass.

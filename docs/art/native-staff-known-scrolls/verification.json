@@ -1,0 +1,309 @@
+{
+  "assetSha256": {
+    "models/item/staff.json": "ea7bb2a7f953d5b3ff64c1d1ec08f9969420920c3ac9b5c3318110d22abf9718",
+    "textures/item/staff.png": "3d1c3d8e0c2d57345dd726953a9cf6b6e4aa98155f80934e5ed8a1e2fc713345"
+  },
+  "checks": [
+    {
+      "check": "Menu heading includes affinity and active spell at capacity 2",
+      "passed": true
+    },
+    {
+      "check": "Item and menu names agree at capacity 2",
+      "passed": true
+    },
+    {
+      "check": "Native menu exposes only the visible rows at capacity 2",
+      "passed": true
+    },
+    {
+      "check": "Server menu retains all 2 slots",
+      "passed": true
+    },
+    {
+      "check": "All slot buttons retain fixed height",
+      "passed": true
+    },
+    {
+      "check": "Identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Second identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Only the active spell has the persistent selected state",
+      "passed": true
+    },
+    {
+      "check": "Rows have no slot numbers",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "two-slots",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Selection updates the open menu to the newly active known spell",
+      "passed": true
+    },
+    {
+      "check": "Persistent selected styling follows the new active spell",
+      "passed": true
+    },
+    {
+      "check": "Selecting a slot spends no durability",
+      "passed": true
+    },
+    {
+      "check": "Selection updates the actual item name",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "selected-firebolt",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Menu heading includes affinity and active spell at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Item and menu names agree at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Native menu exposes only the visible rows at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Server menu retains all 6 slots",
+      "passed": true
+    },
+    {
+      "check": "All slot buttons retain fixed height",
+      "passed": true
+    },
+    {
+      "check": "Identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Second identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Only the active spell has the persistent selected state",
+      "passed": true
+    },
+    {
+      "check": "Rows have no slot numbers",
+      "passed": true
+    },
+    {
+      "check": "Stored shaping is visible",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "six-slots",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Native cursor receives the exact stored augment variant",
+      "passed": true
+    },
+    {
+      "check": "Picking up a scroll clears its staff binding",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "carried-scroll",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Real inventory slot receives removed scroll",
+      "passed": true
+    },
+    {
+      "check": "Shift-click restores the same variant without applying shaping again",
+      "passed": true
+    },
+    {
+      "check": "Restoring scroll consumes exactly its inventory item",
+      "passed": true
+    },
+    {
+      "check": "Scrolling exposes last three native slots and hides first three",
+      "passed": true
+    },
+    {
+      "check": "Shift-click distributes a stack into three empty bindings, one scroll each",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "filled-scrolled-slots",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Last scrolled scroll slot maps to its original server index",
+      "passed": true
+    },
+    {
+      "check": "Removed last-slot scroll returns to inventory",
+      "passed": true
+    },
+    {
+      "check": "Identified scroll without the staff affinity is rejected by server slots",
+      "passed": true
+    },
+    {
+      "check": "Client prevents optimistic insertion of an unknown matching scroll",
+      "passed": true
+    },
+    {
+      "check": "Server rejects unknown Fire scroll sent by a real Shift-click packet",
+      "passed": true
+    },
+    {
+      "gui": [
+        640,
+        480
+      ],
+      "capture": "scrolled-slots",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Clicking a scrolled slot removes the correct server-indexed binding",
+      "passed": true
+    },
+    {
+      "check": "Closing returns the carried scroll exactly once",
+      "passed": true
+    },
+    {
+      "check": "All scroll transfers preserve staff wear",
+      "passed": true
+    },
+    {
+      "check": "Menu heading includes affinity and active spell at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Item and menu names agree at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Native menu exposes only the visible rows at capacity 6",
+      "passed": true
+    },
+    {
+      "check": "Server menu retains all 6 slots",
+      "passed": true
+    },
+    {
+      "check": "All slot buttons retain fixed height",
+      "passed": true
+    },
+    {
+      "check": "Identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Second identified binding reveals its name",
+      "passed": true
+    },
+    {
+      "check": "Only the active spell has the persistent selected state",
+      "passed": true
+    },
+    {
+      "check": "Rows have no slot numbers",
+      "passed": true
+    },
+    {
+      "check": "Stored shaping is visible",
+      "passed": true
+    },
+    {
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "six-slots-small",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "held-staff",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "gui": [
+        960,
+        720
+      ],
+      "capture": "after-cast",
+      "pixels": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "check": "Real use packet casts with normal mana and exactly one wear",
+      "passed": true
+    },
+    {
+      "check": "Rejected unknown scroll remains unidentified",
+      "passed": true
+    }
+  ],
+  "source": "Unedited Minecraft framebuffer",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

@@ -1,0 +1,356 @@
+Starting a Gradle Daemon, 1 busy and 1 incompatible and 2 stopped Daemons could not be reused, use --status for details
+Daemon JVM discovery is an incubating feature.
+> Task :createArtifactManifest UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                        ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/world/PrivateSpaceTest.java:20: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var first=helper.makeMockServerPlayerInLevel(); var second=helper.makeMockServerPlayerInLevel();
+                                                                         ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:28: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setExperienceLevels(50); player.setExperiencePoints(0); return player;
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:290: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); player.setPos(Vec3.atBottomCenterOf(pos.south()));
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:318: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var player = h.makeMockServerPlayerInLevel(); var nearby = Vec3.atBottomCenterOf(pos.south()); player.setPos(nearby);
+                      ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/travel/StandingStoneTest.java:336: warning: [removal] makeMockServerPlayerInLevel() in GameTestHelper has been deprecated and marked for removal
+        var extra = new ArrayList<UUID>(); var player = h.makeMockServerPlayerInLevel();
+                                                         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+6 warnings
+
+> Task :generateModMetadata UP-TO-DATE
+> Task :processResources
+> Task :classes
+> Task :jarJar NO-SOURCE
+> Task :jar
+
+> Task :javadoc
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for type
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for actor
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for target
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for pending
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for cause
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/SpellEvent.java:9: warning: no @param for facts
+public record SpellEvent(ResourceLocation type, UUID actor, Optional<SpellSubject> target,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for castingCost
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for roundAmounts
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java:7: warning: no @param for adjustment
+public record CastShaping(double castingCost, boolean roundAmounts, CostAdjustment adjustment) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for kind
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for durationTicks
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for values
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for identifiers
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for bindings
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onHit
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onTick
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for onEnd
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for interval
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:109: warning: no @param for visual
+    record Manifestation(ResourceLocation kind, int durationTicks, Map<String, SpellValue> values,
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:82: warning: no @param for timeoutTicks
+    record AwaitRecast(int timeoutTicks) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:73: warning: no @param for key
+    record CaptureValue(ResourceLocation key, SpellValue value) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:73: warning: no @param for value
+    record CaptureValue(ResourceLocation key, SpellValue value) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:56: warning: no @param for visual
+    record Visual(SpellVisual visual) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for group
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for perTarget
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for total
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:46: warning: no @param for effects
+    record Limited(ResourceLocation group,int perTarget,int total,List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:41: warning: no @param for effects
+    record Secondary(List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for count
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for interval
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:36: warning: no @param for effects
+    record Repeat(int count, int interval, List<SpellEffect> effects) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/effect/SpellEffects.java:31: warning: no @param for ticks
+    record Delay(int ticks) implements SpellEffects {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellDefinition.java:21: warning: no @param for modes
+public record SpellDefinition(
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellDefinition.java:21: warning: no @param for source
+public record SpellDefinition(
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for selection
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for distance
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for required
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for options
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/TargetSpec.java:7: warning: no @param for relationship
+public record TargetSpec(Selection selection, SpellValue distance, boolean required,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellCost.java:12: warning: no @param for ticks
+    record Cooldown(int ticks) implements SpellCost {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for spell
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for school
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for revision
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for displayName
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for castType
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for cooldownTicks
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:10: warning: no @param for reference
+public record SpellSource(ResourceLocation spell, Optional<ResourceLocation> school, String revision, String displayName,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for system
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for edition
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for publication
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for rank
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for cantrip
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for rarity
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellSource.java:24: warning: no @param for url
+    public record Reference(String system, String edition, String publication, int rank, boolean cantrip, String rarity, URI url) {
+           ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for id
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for costs
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/definition/SpellMode.java:8: warning: no @param for effects
+public record SpellMode(ResourceLocation id, List<SpellCost> costs, List<SpellEffect> effects) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:25: warning: no @param for path
+    record Fact(ResourceLocation path) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for value
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for minimum
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/expression/SpellValue.java:19: warning: no @param for maximum
+    record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {
+    ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for lease
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for dimension
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for kind
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for entityId
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for entity
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for center
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for radius
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for duration
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellSensePayload.java:12: warning: no @param for stop
+public record SpellSensePayload(UUID lease, ResourceLocation dimension, String kind, int entityId, UUID entity,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for id
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for dimension
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for visual
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for points
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for seed
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for elapsed
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for follow
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for stop
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisualPayload.java:15: warning: no @param for burst
+public record SpellVisualPayload(UUID id, ResourceLocation dimension, SpellVisual.Resolved visual,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for duration
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for radius
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for height
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for layers
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for endsWithBindings
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/magic/presentation/SpellVisual.java:10: warning: no @param for sound
+public record SpellVisual(int duration, SpellValue radius, double height, List<Layer> layers,
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/AttunementMark.java:12: warning: no @param for runes
+public record AttunementMark(List<Rune> runes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for spell
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for name
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for circle
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for color
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for parts
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java:16: warning: no @param for clues
+public record RitualRecipe(ResourceLocation spell, String name, int circle, int color, List<Part> parts, List<String> clues) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualInputs.java:9: warning: no @param for geometry
+public record RitualInputs(LeylineShaping.Geometry geometry, List<Node> nodes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/RitualInputs.java:9: warning: no @param for nodes
+public record RitualInputs(LeylineShaping.Geometry geometry, List<Node> nodes) {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for page
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for last
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for refresh
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplayPayload.java:25: warning: no @param for entries
+public record RitualDisplayPayload(int page, boolean last, boolean refresh, List<RitualDisplays.Entry> entries) implements CustomPacketPayload {
+       ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/ApparatusBlock.java:100: warning: no @param for state
+    public static boolean exposed(BlockState state) {
+                          ^
+/Users/quzzar/Projects/vestige/src/main/java/com/quzzar/vestige/apparatus/ApparatusBlock.java:100: warning: no @return
+    public static boolean exposed(BlockState state) {
+                          ^
+100 warnings
+
+> Task :javadocJar
+> Task :sourcesJar
+> Task :assemble
+
+> Task :compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :downloadAssets UP-TO-DATE
+> Task :writeNeoForgeTestClasspath UP-TO-DATE
+> Task :prepareNeoForgeTestFiles UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses
+> Task :test
+> Task :check
+> Task :build
+
+BUILD SUCCESSFUL in 3m 34s
+15 actionable tasks: 8 executed, 7 up-to-date

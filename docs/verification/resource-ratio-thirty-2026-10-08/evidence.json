@@ -1,0 +1,51 @@
+{
+  "ratio": {
+    "health_hp": 2,
+    "food_points": 4,
+    "experience_points": 30,
+    "mana": 30
+  },
+  "java": 21,
+  "unit_tests": {
+    "tests": 189,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "world_tests": 11,
+  "world_filter": "homebound_|shaping_payment|player_mana",
+  "checks": [
+    "test",
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer",
+    "author_spellshaping.py --check",
+    "test_spell_balance.py (17 tests)"
+  ],
+  "sources": {
+    "AGENTS.md": "6403365e70880c82340d604f278454847feb03b9b5685ed79d7c5540aa9ef133",
+    "docs/design/resource-payments.md": "d3862a63ba03e151157695a1e036f433a6f61c210bda8e4ef5a340c73ace1577",
+    "docs/design/kairotic-hourglass.md": "8a05eae4266991521078e1898edf0399e156a7f1cea8e4a3b4bf3acfa0dcac2b",
+    "docs/design/spellshaping.md": "0287a73e03aa1b57f7e2f1351a50c6d2cd97996693aa9b9f917eb8feae38a36b",
+    "docs/design/attuned-devices.md": "381c9a30fa30b28c373fac0064c35f76f3dfd51fd2a3e093e5246fecb9229e06",
+    "docs/resource-payment-balance-review.md": "74e9dda7589a269c63dd7660fb3cea2041fd2101c3ba165a87238f363b3b1279",
+    "tools/author_spellshaping.py": "d7c89d8d4c1451ac42c0e1256d2df3f3f5f5045ed059244f46019fe06202df8e",
+    "src/main/resources/data/vestige/spellshaping_rules.json": "c3f60fd59283ff715ffd55f38132d50e238d8eefd54c73093246011d7b681265",
+    "src/main/java/com/quzzar/vestige/magic/runtime/ResourceValuation.java": "804e5027b5fd3a84ee293ac9fb1f9cad0ee7fe09be1c3f92d69260308f840295",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeItem.java": "d4924da24b6c87437e4b52f3e48655f96647f0702b6de0b4bc891b4c0f26ba77",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.java": "66971afa8d7f4320ab743e8a1c152a53c7e2b0af5f8ad761e1740c7f5ba97be9",
+    "src/test/java/com/quzzar/vestige/magic/runtime/CastShapingTest.java": "9e51576fae8f2b5579f226ce6518ee298eeb501b097216fc7abe1190966993a6",
+    "src/test/java/com/quzzar/vestige/apparatus/HomeboundEyeTest.java": "573f3a5efb664164af246f3dd353a3e545172a85e753819a7cb40df8e9b21e56",
+    "src/test/java/com/quzzar/vestige/apparatus/SpellshapingTest.java": "37e272538ad39d2126f02250125bc82b7c59723c0e22c3f25f6f6edd13890edf"
+  },
+  "packaged": {
+    "com/quzzar/vestige/magic/runtime/ResourceValuation.class": "cc20fbf5ee826393b0aa25ba433fbcb8dc8d54a2a3e2067f3207cacd37c6745c",
+    "com/quzzar/vestige/apparatus/HomeboundEyeItem.class": "0a59661b5797ba0bb394958909627fc1535865422d632d57d1a80d4398c99ef9",
+    "com/quzzar/vestige/apparatus/HomeboundEyeItem$Payment.class": "b084ecef45535c3d3268d644bdb6c14bec61679442a4784c5a3902a067a4ee30",
+    "com/quzzar/vestige/apparatus/HomeboundEyeWorldTest.class": "5b6ebdf86d02c1af87fd75555306cdca92c8e14f1b2855319f7d19ea07655f45",
+    "data/vestige/spellshaping_rules.json": "c3f60fd59283ff715ffd55f38132d50e238d8eefd54c73093246011d7b681265"
+  },
+  "source_archive_matches_current_main_sources": true,
+  "jar_sha256": "eca40fd335d81204ea303836d0787325c764c445a3c9b5697b9f246344bee432",
+  "jar_path": "/private/tmp/vestige-resource-ratio-thirty-build/libs/vestige-0.1.0.jar"
+}

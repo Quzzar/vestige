@@ -16,6 +16,30 @@ public final class SpellJson {
     public static List<SpellEffect> readPlan(JsonArray json) { return effects(json,0); }
     public static List<SpellCost> readCosts(JsonArray json) { return costs(json); }
     public static SpellValue readValue(JsonElement json) { return value(json,0); }
+    /** Uses exactly the same trait, formula, trigger, effect and payment grammar as spells. */
+    public static ItemAbilityDefinition readAbility(ResourceLocation id, JsonObject json) {
+        List<SpellTrigger> triggers = triggers(array(json, "triggers"), 0);
+        return new ItemAbilityDefinition(id, readTraits(json), readVariables(json), costs(array(json, "costs")),
+                triggers, effects(array(json, "effects"), 0), json.has("activation")
+                ? ItemAbilityDefinition.Activation.valueOf(text(json, "activation").toUpperCase(Locale.ROOT))
+                : triggers.isEmpty() ? ItemAbilityDefinition.Activation.PASSIVE : ItemAbilityDefinition.Activation.ACTIVE);
+    }
+    private static TraitProfile readTraits(JsonObject json) {
+        Map<ResourceLocation, Double> traits = new LinkedHashMap<>();
+        object(json, "traits").entrySet().forEach(entry -> {
+            if (traits.put(identifier(entry.getKey()), number(entry.getValue())) != null)
+                throw new JsonParseException("Duplicate trait identity: " + entry.getKey());
+        });
+        return new TraitProfile(traits);
+    }
+    private static Map<ResourceLocation, SpellValue> readVariables(JsonObject json) {
+        Map<ResourceLocation, SpellValue> variables = new LinkedHashMap<>();
+        object(json, "variables").entrySet().forEach(entry -> {
+            if (variables.put(identifier(entry.getKey()), value(entry.getValue(), 0)) != null)
+                throw new JsonParseException("Duplicate variable identity: " + entry.getKey());
+        });
+        return variables;
+    }
     public static SpellDefinition read(ResourceLocation id, JsonObject json) {
         SpellRarity rarity = json.has("rarity")
                 ? SpellRarity.fromId(text(json, "rarity")).orElseThrow(() -> new JsonParseException("Unknown spell rarity: " + json.get("rarity")))
@@ -24,8 +48,6 @@ public final class SpellJson {
         for (JsonElement value : required(json, "traditions").getAsJsonArray()) {
             traditions.add(Tradition.fromId(value.getAsString()).orElseThrow(() -> new JsonParseException("Unknown tradition: " + value)));
         }
-        Map<ResourceLocation, Double> traits = new LinkedHashMap<>();
-        object(json, "traits").entrySet().forEach(entry -> traits.put(identifier(entry.getKey()), number(entry.getValue())));
         Map<ResourceLocation, SpellMode> modes = new LinkedHashMap<>();
         for (JsonElement entry : array(json, "modes")) {
             JsonObject mode = entry.getAsJsonObject();
@@ -49,7 +71,7 @@ public final class SpellJson {
                     origin.has("cast_type") ? Optional.of(text(origin, "cast_type")) : Optional.empty(),
                     origin.has("cooldown_ticks") ? OptionalInt.of(integer(origin, "cooldown_ticks")) : OptionalInt.empty(), reference));
         }
-        return new SpellDefinition(id, rarity, traditions, new TraitProfile(traits), costs(array(json, "costs")), triggers(array(json, "triggers"), 0), effects(array(json, "effects"), 0), modes, source);
+        return new SpellDefinition(id, rarity, traditions, readTraits(json), costs(array(json, "costs")), triggers(array(json, "triggers"), 0), effects(array(json, "effects"), 0), modes, source, readVariables(json));
     }
 
     private static List<SpellCost> costs(JsonArray json) {
@@ -100,6 +122,8 @@ public final class SpellJson {
                 case "visual" -> new SpellEffects.Visual(visual(object(effect, "visual"), depth + 1));
                 case "set_value" -> new SpellEffects.SetValue(identifier(text(effect, "key")), scalar(required(effect, "value")));
                 case "capture_value" -> new SpellEffects.CaptureValue(identifier(text(effect, "key")), value(required(effect, "value"), depth + 1));
+                case "grant_traits" -> new SpellEffects.GrantTraits(identifier(text(effect, "group")), traitModifiers(array(effect, "modifiers")),
+                        value(required(effect, "duration"), depth + 1), target(object(effect, "target"), depth + 1));
                 case "store_target" -> new SpellEffects.StoreTarget(identifier(text(effect, "key")));
                 case "await_recast" -> new SpellEffects.AwaitRecast(integer(effect, "timeout"));
                 case "install_binding" -> new SpellEffects.InstallBinding(binding(object(effect, "binding"), depth + 1), target(object(effect, "target"), depth + 1));
@@ -119,7 +143,18 @@ public final class SpellJson {
     private static SpellEffects.Binding binding(JsonObject json, int depth) {
         checkDepth(depth);
         return new SpellEffects.Binding(identifier(text(json, "id")), triggers(array(json, "triggers"), depth + 1), effects(array(json, "effects"), depth + 1),
-                integer(json, "duration"), integer(json, "charges"));
+                integer(json, "duration"), integer(json, "charges"),
+                json.has("lifetime") ? Optional.of(value(json.get("lifetime"), depth + 1)) : Optional.empty());
+    }
+    private static List<TraitModifier> traitModifiers(JsonArray json) {
+        List<TraitModifier> modifiers = new ArrayList<>();
+        for (JsonElement entry : json) {
+            JsonObject modifier = entry.getAsJsonObject();
+            modifiers.add(new TraitModifier(identifier(text(modifier, "trait")),
+                    TraitModifier.Operation.valueOf(text(modifier, "operation").toUpperCase(Locale.ROOT)),
+                    number(required(modifier, "amount"))));
+        }
+        return List.copyOf(modifiers);
     }
     private static SpellEffects.Manifestation manifestation(JsonObject json, int depth) {
         checkDepth(depth);
@@ -181,6 +216,7 @@ public final class SpellJson {
         JsonObject object = json.getAsJsonObject();
         if (object.size() != 1) throw new JsonParseException("A value expression needs one operator");
         if (object.has("trait")) return new SpellValue.Trait(identifier(text(object, "trait")));
+        if (object.has("variable")) return new SpellValue.Variable(identifier(text(object, "variable")));
         if (object.has("fact")) return new SpellValue.Fact(identifier(text(object, "fact")));
         if (object.has("clamp")) { var bounds=object.getAsJsonObject("clamp"); return new SpellValue.Clamp(value(required(bounds,"value"),depth+1),number(required(bounds,"minimum")),number(required(bounds,"maximum"))); }
         List<SpellValue> terms = new ArrayList<>();

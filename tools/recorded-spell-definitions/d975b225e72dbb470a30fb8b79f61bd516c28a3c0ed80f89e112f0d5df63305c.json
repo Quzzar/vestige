@@ -1,0 +1,213 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1508",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Eclipse Burst",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 328",
+      "rank": 7,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1508"
+    }
+  },
+  "rarity": "mythic",
+  "traditions": [
+    "arcane",
+    "divine",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 1,
+    "vestige:void": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 30
+    },
+    {
+      "type": "mana",
+      "amount": 62
+    },
+    {
+      "type": "cooldown",
+      "ticks": 280
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            28,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "near_target",
+            "required": false,
+            "distance": {
+              "product": [
+                4,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "count": 6
+            }
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    20,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {
+                "damage_type": "minecraft:freeze"
+              }
+            },
+            {
+              "type": "status",
+              "values": {
+                "duration": 60,
+                "amplifier": 0
+              },
+              "identifiers": {
+                "effect": "minecraft:blindness"
+              }
+            },
+            {
+              "type": "status",
+              "values": {
+                "duration": 100,
+                "amplifier": 0
+              },
+              "identifiers": {
+                "effect": "minecraft:weakness"
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": {
+              "product": [
+                4,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "height": 0.25,
+            "layers": [
+              {
+                "shape": "vortex",
+                "color": "57418f",
+                "alpha": 0.85,
+                "width": 0.22,
+                "scale": 1.05,
+                "speed": -1.6,
+                "phase": 0,
+                "count": 12
+              },
+              {
+                "shape": "rays",
+                "color": "d992ff",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 0.735,
+                "speed": 1.04,
+                "phase": 1.2,
+                "count": 6
+              },
+              {
+                "shape": "sparks",
+                "color": "d992ff",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ],
+            "sound": {
+              "id": "minecraft:entity.generic.explode",
+              "volume": 0.6,
+              "pitch": 1.1
+            }
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "vortex",
+            "color": "57418f",
+            "alpha": 0.85,
+            "width": 0.22,
+            "scale": 1.05,
+            "speed": -1.6,
+            "phase": 0,
+            "count": 12
+          },
+          {
+            "shape": "rays",
+            "color": "d992ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.735,
+            "speed": 1.04,
+            "phase": 1.2,
+            "count": 6
+          },
+          {
+            "shape": "sparks",
+            "color": "d992ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

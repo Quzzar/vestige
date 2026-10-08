@@ -28,6 +28,12 @@ public final class PedestalCompatibilityTest {
 
     @GameTest(template = "empty_3x3x3", batch = "pedestal_compat")
     public static void recipesAndUnlocksFollowProviderAndItemAvailability(GameTestHelper h) {
+        boolean nativeConstruction = !ModList.get().isLoaded("supplementaries");
+        h.assertTrue(h.getLevel().getRecipeManager().byKey(VestigeMainMod.location("plinth")).isPresent() == nativeConstruction,
+                "Native Stone Bricks Plinth construction competes with Supplementaries or is missing standalone");
+        h.assertTrue((h.getLevel().getServer().getAdvancements().get(
+                VestigeMainMod.location("recipes/plinth")) != null) == nativeConstruction,
+                "Native Plinth recipe-book unlock differs from construction availability");
         for (String provider : PROVIDERS) {
             ResourceLocation source = ResourceLocation.fromNamespaceAndPath(provider, "pedestal");
             ResourceLocation recipe = VestigeMainMod.location("compat/" + provider + "/plinth");
@@ -37,6 +43,35 @@ public final class PedestalCompatibilityTest {
             h.assertTrue((h.getLevel().getServer().getAdvancements().get(
                     VestigeMainMod.location("recipes/compat/" + provider + "/plinth")) != null) == available,
                     "Recipe-book unlock did not follow the conversion condition: " + provider);
+        }
+        h.succeed();
+    }
+
+    @GameTest(template = "empty_3x3x3", batch = "pedestal_compat")
+    public static void supplementariesKeepsItsConstructionRecipeBeforePlinthConversion(GameTestHelper h) {
+        if (!ModList.get().isLoaded("supplementaries")) {
+            h.succeed();
+            return;
+        }
+        var pedestal = BuiltInRegistries.ITEM.get(ResourceLocation.parse("supplementaries:pedestal"));
+        for (var center : List.of(Items.STONE_BRICKS, Items.CHISELED_STONE_BRICKS)) {
+            var input = CraftingInput.of(3, 3, List.of(
+                    Items.STONE_BRICK_SLAB, Items.STONE_BRICK_SLAB, Items.STONE_BRICK_SLAB,
+                    Items.AIR, center, Items.AIR,
+                    Items.STONE_BRICK_SLAB, Items.STONE_BRICK_SLAB, Items.STONE_BRICK_SLAB
+            ).stream().map(ItemStack::new).toList());
+            var selected = h.getLevel().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, input, h.getLevel()).orElseThrow();
+            h.assertTrue(selected.id().equals(ResourceLocation.parse("supplementaries:pedestal")),
+                    "Stone Brick construction no longer selects Supplementaries' own pedestal recipe");
+            var output = selected.value().assemble(input, h.getLevel().registryAccess());
+            h.assertTrue(output.is(pedestal) && output.getCount() == 2,
+                    "Supplementaries pedestal construction changed output or count");
+            var conversionInput = CraftingInput.of(1, 1, List.of(output));
+            var conversion = h.getLevel().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, conversionInput, h.getLevel()).orElseThrow();
+            var plinth = conversion.value().assemble(conversionInput, h.getLevel().registryAccess());
+            h.assertTrue(conversion.id().equals(VestigeMainMod.location("compat/supplementaries/plinth"))
+                            && plinth.is(ApparatusBlocks.PLINTH.get().asItem()) && plinth.getCount() == 1,
+                    "Crafted Supplementaries pedestal did not convert one-for-one to a Stone Bricks Plinth");
         }
         h.succeed();
     }

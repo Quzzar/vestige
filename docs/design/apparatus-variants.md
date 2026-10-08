@@ -1,6 +1,6 @@
 # Apparatus variants and embedded imbuements
 
-**Accepted October 5, 2026.** Plinth and Spellstone each support all **36 Minecraft 1.21.1 stone and masonry stair materials**, excluding wood, bamboo mosaic and Copper. Every selected full block has a matching craftable slab, confirmed against the [36 pinned vanilla slab recipes](../research/vanilla-apparatus-slabs-1.21.1.json). These are cosmetic finishes, sharing identical ritual behavior, hardness, offering capacity and saved state.
+**Palette accepted October 5, 2026; construction and names updated October 7.** Plinth and Spellstone each support all **36 Minecraft 1.21.1 stone and masonry stair materials**, excluding wood, bamboo mosaic and Copper. Every selected full block has a matching craftable slab, confirmed against the [36 pinned vanilla slab recipes](../research/vanilla-apparatus-slabs-1.21.1.json). These are cosmetic finishes, sharing identical ritual behavior, hardness, offering capacity and saved state.
 
 The [canonical manifest](apparatus-materials.json) supplies block/slab ingredients and texture mappings. The [pinned vanilla inventory](../research/vanilla-stair-materials-1.21.1.json) records source stair recipes and model textures. Raw End Stone and raw Deepslate are superseded by End Stone Bricks and worked Deepslate finishes. Earlier wall-based and fourteen-material palettes remain historical decisions.
 
@@ -10,12 +10,14 @@ Use the same material's full block (`B`) and slab (`S`) throughout each recipe. 
 
 ```text
 Spellstone (1)    Plinths (2)
-D S D            S B S
-B A B            . B .
-B B B            S B S
+D S D            S S S
+S A S            . B .
+S . S            S S S
 ```
 
-Spellstone costs five full blocks, one slab, two Diamonds and one Amethyst Block. Two Plinths cost three full blocks and four slabs. Recipes are exact shaped recipes, with individual recipe-book unlocks. Mixed block/slab finishes do not match.
+The owner's October 7 grids make one Spellstone from five matching slabs, two Diamonds and one Amethyst Block, and two Plinths from one full block and six matching slabs. Recipes are exact shaped recipes, with individual recipe-book unlocks. Mixed finishes do not match. The October 5 construction grids are superseded.
+
+When Supplementaries is installed, the native Stone Bricks Plinth recipe and its unlock are skipped. Its unchanged pedestal recipe produces two Supplementaries pedestals, each convertible into one Stone Bricks Plinth through the existing optional recipe. The other 35 Plinth finishes and all 36 Spellstone recipes stay native. Iron's optional pedestal conversion remains available independently. [Material crafting](material-crafting.md#optional-pedestal-conversions) records the integrations.
 
 | Finish | Full block | Slab |
 | --- | --- | --- |
@@ -37,7 +39,7 @@ Spellstone costs five full blocks, one slab, two Diamonds and one Amethyst Block
 | Bricks | `minecraft:bricks` | `minecraft:brick_slab` |
 | Mud Bricks | `minecraft:mud_bricks` | `minecraft:mud_brick_slab` |
 | Quartz | `minecraft:quartz_block` | `minecraft:quartz_slab` |
-| Smooth Quartz Block | `minecraft:smooth_quartz` | `minecraft:smooth_quartz_slab` |
+| Smooth Quartz | `minecraft:smooth_quartz` | `minecraft:smooth_quartz_slab` |
 | Prismarine | `minecraft:prismarine` | `minecraft:prismarine_slab` |
 | Prismarine Bricks | `minecraft:prismarine_bricks` | `minecraft:prismarine_brick_slab` |
 | Dark Prismarine | `minecraft:dark_prismarine` | `minecraft:dark_prismarine_slab` |
@@ -87,4 +89,4 @@ Stone Bricks retain the baseline IDs `vestige:spellstone` and `vestige:plinth`. 
 
 `python3 tools/author_apparatus_models.py` packages the approved models, purple glyph, role shapes, material enum, construction recipes, self loot, pickaxe tags and recipe unlocks. `--check` detects drift. The review author remains `docs/art/apparatus-concepts/author_models.py`.
 
-[World tests](../../src/main/java/com/quzzar/vestige/apparatus/ApparatusTest.java) exercise all 72 recipes and their counts, mismatched slab rejection, placement, collision, mining drops, offering interactions, independent socket/result storage, persistence and client synchronization. [Leyline tests](../../src/main/java/com/quzzar/vestige/apparatus/LeylineTest.java) exercise mixed-finish crafting, unchanged shaping and identical attunement keys with retained sockets. Current actual client evidence and verification results are recorded in [apparatus models](apparatus-models.md) and [development status](../development-status.md).
+[World tests](../../src/main/java/com/quzzar/vestige/apparatus/ApparatusTest.java) exercise available native recipes and their counts, mismatched slab and superseded-grid rejection, placement, collision, mining drops, offering interactions, independent socket/result storage, persistence and client synchronization. [Leyline tests](../../src/main/java/com/quzzar/vestige/apparatus/LeylineTest.java) exercise mixed-finish crafting, unchanged shaping and identical attunement keys with retained sockets. Current actual client evidence and verification results are recorded in [apparatus models](apparatus-models.md) and [development status](../development-status.md).

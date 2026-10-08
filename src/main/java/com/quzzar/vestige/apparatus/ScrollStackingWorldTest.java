@@ -65,6 +65,35 @@ public final class ScrollStackingWorldTest {
     }
 
     @GameTest(template = "empty_9x3x9", batch = "scroll_stacking")
+    public static void sameCombinedAdjectiveDoesNotMergeVariantsOrPermitMixedWandBinding(GameTestHelper h) {
+        var a = ScrollItems.shapedScroll(id("fireball"), new LeylineShaping.Modifiers(1, 1, 1, 1), List.of(
+                new Spellshaping.Selection(id("reaching"), 1), new Spellshaping.Selection(id("chilling"), 1)));
+        var b = ScrollItems.shapedScroll(id("fireball"), new LeylineShaping.Modifiers(1, 1, 1, 1), List.of(
+                new Spellshaping.Selection(id("widening"), 1), new Spellshaping.Selection(id("chilling"), 1)));
+        for (var stack : List.of(a, b)) {
+            var terms = ScrollItems.scroll(stack).orElseThrow().augments().stream().map(s ->
+                    com.quzzar.vestige.magic.presentation.MagicAdjectives.Adjustment.spellshaping(s.id(), s.degree())).toList();
+            h.assertTrue(com.quzzar.vestige.magic.presentation.MagicAdjectives.words(id("spell_scroll"), terms)
+                    .equals(List.of("Confluent")), "Fixture did not share the combined adjective");
+        }
+        var player = h.makeMockPlayer(GameType.SURVIVAL);
+        player.getInventory().add(a.copyWithCount(2)); player.getInventory().add(b.copyWithCount(2));
+        h.assertTrue(player.getInventory().items.stream().filter(s -> !s.isEmpty()).count() == 2
+                && !ItemStack.isSameItemSameComponents(a, b), "Display alias merged different magic");
+        var seats = new java.util.ArrayList<ItemStack>(java.util.Collections.nCopies(8, ItemStack.EMPTY));
+        seats.set(WandRecipe.BASE, new ItemStack(net.minecraft.world.item.Items.STICK));
+        seats.set(WandRecipe.THREAD, new ItemStack(ScrollItems.ENSORCELLED_THREAD.get()));
+        seats.set(WandRecipe.SCROLL_A, a); seats.set(WandRecipe.SCROLL_B, a.copy()); seats.set(WandRecipe.SCROLL_C, b);
+        h.assertTrue(WandRecipe.match(seats).isEmpty(), "Mixed variants bound by display name");
+        seats.set(WandRecipe.SCROLL_C, a.copy());
+        h.assertTrue(WandRecipe.match(seats).isPresent(), "Exact variants no longer match");
+        for (var stack : List.of(a, b)) h.assertTrue(ItemStack.matches(stack,
+                ItemStack.parse(h.getLevel().registryAccess(), stack.save(h.getLevel().registryAccess())).orElseThrow()),
+                "Display naming changed saved magic");
+        h.succeed();
+    }
+
+    @GameTest(template = "empty_9x3x9", batch = "scroll_stacking")
     public static void splitAndSavePreserveCountAndExactShaping(GameTestHelper h) {
         var stack = reaching(2, 1.2).copyWithCount(16);
         var data = ScrollItems.scroll(stack).orElseThrow();
@@ -80,7 +109,7 @@ public final class ScrollStackingWorldTest {
     }
 
     @GameTest(template = "empty_9x3x9", batch = "scroll_stacking_cast", timeoutTicks = 100)
-    public static void successfulCastConsumesOneAndCooldownPreservesTheRest(GameTestHelper h) {
+    public static void successfulRepeatsConsumeOneScrollAndOnePaymentEach(GameTestHelper h) {
         var player = h.makeMockPlayer(GameType.SURVIVAL);
         var spell = id("pf2_shield");
         SpellKnowledge.identify(player, spell);
@@ -93,13 +122,13 @@ public final class ScrollStackingWorldTest {
                             && ItemStack.isSameItemSameComponents(original, player.getMainHandItem()),
                     "Cast consumed multiple scrolls or changed the remaining magic");
             double mana = player.getPersistentData().getDouble("vestige:mana");
-            h.assertTrue(!ScrollCasting.cast(player, player.getMainHandItem())
-                            && player.getMainHandItem().getCount() == 15
-                            && player.getPersistentData().getDouble("vestige:mana") == mana,
-                    "Cooldown rejection consumed another scroll or payment");
+            h.assertTrue(ScrollCasting.cast(player, player.getMainHandItem())
+                            && player.getMainHandItem().getCount() == 14
+                            && player.getPersistentData().getDouble("vestige:mana") == mana - 6,
+                    "Repeat did not consume exactly one scroll and one payment");
         });
         h.runAfterDelay(80, () -> {
-            h.assertTrue(player.getMainHandItem().getCount() == 15, "Settling consumed the scroll stack twice");
+            h.assertTrue(player.getMainHandItem().getCount() == 14, "Settling consumed the scroll stack twice");
             NativeMagic.session(h.getLevel().getServer()).runtime().dispelActor(player.getUUID());
             h.succeed();
         });

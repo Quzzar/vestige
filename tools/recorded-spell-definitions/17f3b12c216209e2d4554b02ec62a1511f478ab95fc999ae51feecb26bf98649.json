@@ -1,0 +1,496 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:chain_creeper",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Chain Creeper",
+    "cast_type": "long",
+    "cooldown_ticks": 300
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:evocation": 4,
+    "vestige:conjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 40
+    },
+    {
+      "type": "cooldown",
+      "ticks": 160
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            32,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "for_each",
+          "target": {
+            "selection": "near_target",
+            "required": false,
+            "distance": {
+              "product": [
+                3,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "relationship": "hostile",
+            "options": {
+              "count": 6
+            }
+          },
+          "effects": [
+            {
+              "type": "install_binding",
+              "target": {
+                "selection": "current",
+                "required": true
+              },
+              "binding": {
+                "id": "vestige:chain_start",
+                "duration": 200,
+                "charges": 1,
+                "triggers": [
+                  {
+                    "id": "vestige:chain_start/trigger",
+                    "event": "vestige:die",
+                    "conditions": []
+                  }
+                ],
+                "effects": [
+                  {
+                    "type": "for_each",
+                    "target": {
+                      "selection": "near_target",
+                      "required": false,
+                      "distance": {
+                        "product": [
+                          5,
+                          {
+                            "trait": "vestige:area"
+                          }
+                        ]
+                      },
+                      "relationship": "hostile",
+                      "options": {
+                        "count": 6
+                      }
+                    },
+                    "effects": [
+                      {
+                        "type": "install_binding",
+                        "target": {
+                          "selection": "current",
+                          "required": true
+                        },
+                        "binding": {
+                          "id": "vestige:chain_2",
+                          "duration": 200,
+                          "charges": 1,
+                          "triggers": [
+                            {
+                              "id": "vestige:chain_2/trigger",
+                              "event": "vestige:die",
+                              "conditions": []
+                            }
+                          ],
+                          "effects": [
+                            {
+                              "type": "for_each",
+                              "target": {
+                                "selection": "near_target",
+                                "required": false,
+                                "distance": {
+                                  "product": [
+                                    5,
+                                    {
+                                      "trait": "vestige:area"
+                                    }
+                                  ]
+                                },
+                                "relationship": "hostile",
+                                "options": {
+                                  "count": 6
+                                }
+                              },
+                              "effects": [
+                                {
+                                  "type": "install_binding",
+                                  "target": {
+                                    "selection": "current",
+                                    "required": true
+                                  },
+                                  "binding": {
+                                    "id": "vestige:chain_1",
+                                    "duration": 200,
+                                    "charges": 1,
+                                    "triggers": [
+                                      {
+                                        "id": "vestige:chain_1/trigger",
+                                        "event": "vestige:die",
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "effects": [
+                                      {
+                                        "type": "for_each",
+                                        "target": {
+                                          "selection": "near_target",
+                                          "required": false,
+                                          "distance": {
+                                            "product": [
+                                              5,
+                                              {
+                                                "trait": "vestige:area"
+                                              }
+                                            ]
+                                          },
+                                          "relationship": "hostile",
+                                          "options": {
+                                            "count": 6
+                                          }
+                                        },
+                                        "effects": [
+                                          {
+                                            "type": "damage",
+                                            "values": {
+                                              "amount": {
+                                                "product": [
+                                                  6,
+                                                  {
+                                                    "trait": "vestige:amplify"
+                                                  }
+                                                ]
+                                              },
+                                              "ignore_invulnerability": 1
+                                            }
+                                          }
+                                        ],
+                                        "visual": {
+                                          "duration": 24,
+                                          "radius": {
+                                            "product": [
+                                              5,
+                                              {
+                                                "trait": "vestige:area"
+                                              }
+                                            ]
+                                          },
+                                          "height": 0.25,
+                                          "layers": [
+                                            {
+                                              "shape": "rays",
+                                              "color": "8bac29",
+                                              "alpha": 0.85,
+                                              "width": 0.085,
+                                              "scale": 1.0,
+                                              "speed": 1.6,
+                                              "phase": 0,
+                                              "count": 10
+                                            },
+                                            {
+                                              "shape": "shards",
+                                              "color": "e0ff8d",
+                                              "alpha": 0.7,
+                                              "width": 0.04,
+                                              "scale": 0.7,
+                                              "speed": -1.04,
+                                              "phase": 1.2,
+                                              "count": 5
+                                            },
+                                            {
+                                              "shape": "sparks",
+                                              "color": "e0ff8d",
+                                              "alpha": 0.65,
+                                              "width": 0.04,
+                                              "scale": 0.8,
+                                              "speed": 1,
+                                              "phase": 0,
+                                              "count": 8
+                                            }
+                                          ],
+                                          "sound": {
+                                            "id": "minecraft:entity.generic.explode",
+                                            "volume": 0.6,
+                                            "pitch": 1.1
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "damage",
+                                  "values": {
+                                    "amount": {
+                                      "product": [
+                                        6,
+                                        {
+                                          "trait": "vestige:amplify"
+                                        }
+                                      ]
+                                    },
+                                    "ignore_invulnerability": 1
+                                  }
+                                }
+                              ],
+                              "visual": {
+                                "duration": 24,
+                                "radius": {
+                                  "product": [
+                                    5,
+                                    {
+                                      "trait": "vestige:area"
+                                    }
+                                  ]
+                                },
+                                "height": 0.25,
+                                "layers": [
+                                  {
+                                    "shape": "rays",
+                                    "color": "8bac29",
+                                    "alpha": 0.85,
+                                    "width": 0.085,
+                                    "scale": 1.0,
+                                    "speed": 1.6,
+                                    "phase": 0,
+                                    "count": 10
+                                  },
+                                  {
+                                    "shape": "shards",
+                                    "color": "e0ff8d",
+                                    "alpha": 0.7,
+                                    "width": 0.04,
+                                    "scale": 0.7,
+                                    "speed": -1.04,
+                                    "phase": 1.2,
+                                    "count": 5
+                                  },
+                                  {
+                                    "shape": "sparks",
+                                    "color": "e0ff8d",
+                                    "alpha": 0.65,
+                                    "width": 0.04,
+                                    "scale": 0.8,
+                                    "speed": 1,
+                                    "phase": 0,
+                                    "count": 8
+                                  }
+                                ],
+                                "sound": {
+                                  "id": "minecraft:entity.generic.explode",
+                                  "volume": 0.6,
+                                  "pitch": 1.1
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "damage",
+                        "values": {
+                          "amount": {
+                            "product": [
+                              6,
+                              {
+                                "trait": "vestige:amplify"
+                              }
+                            ]
+                          },
+                          "ignore_invulnerability": 1
+                        }
+                      }
+                    ],
+                    "visual": {
+                      "duration": 24,
+                      "radius": {
+                        "product": [
+                          5,
+                          {
+                            "trait": "vestige:area"
+                          }
+                        ]
+                      },
+                      "height": 0.25,
+                      "layers": [
+                        {
+                          "shape": "rays",
+                          "color": "8bac29",
+                          "alpha": 0.85,
+                          "width": 0.085,
+                          "scale": 1.0,
+                          "speed": 1.6,
+                          "phase": 0,
+                          "count": 10
+                        },
+                        {
+                          "shape": "shards",
+                          "color": "e0ff8d",
+                          "alpha": 0.7,
+                          "width": 0.04,
+                          "scale": 0.7,
+                          "speed": -1.04,
+                          "phase": 1.2,
+                          "count": 5
+                        },
+                        {
+                          "shape": "sparks",
+                          "color": "e0ff8d",
+                          "alpha": 0.65,
+                          "width": 0.04,
+                          "scale": 0.8,
+                          "speed": 1,
+                          "phase": 0,
+                          "count": 8
+                        }
+                      ],
+                      "sound": {
+                        "id": "minecraft:entity.generic.explode",
+                        "volume": 0.6,
+                        "pitch": 1.1
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    6,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            }
+          ],
+          "visual": {
+            "duration": 24,
+            "radius": {
+              "product": [
+                3,
+                {
+                  "trait": "vestige:area"
+                }
+              ]
+            },
+            "height": 0.25,
+            "layers": [
+              {
+                "shape": "rays",
+                "color": "8bac29",
+                "alpha": 0.85,
+                "width": 0.085,
+                "scale": 1.0,
+                "speed": 1.6,
+                "phase": 0,
+                "count": 10
+              },
+              {
+                "shape": "shards",
+                "color": "e0ff8d",
+                "alpha": 0.7,
+                "width": 0.04,
+                "scale": 0.7,
+                "speed": -1.04,
+                "phase": 1.2,
+                "count": 5
+              },
+              {
+                "shape": "sparks",
+                "color": "e0ff8d",
+                "alpha": 0.65,
+                "width": 0.04,
+                "scale": 0.8,
+                "speed": 1,
+                "phase": 0,
+                "count": 8
+              }
+            ],
+            "sound": {
+              "id": "minecraft:entity.generic.explode",
+              "volume": 0.6,
+              "pitch": 1.1
+            }
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "rays",
+            "color": "8bac29",
+            "alpha": 0.85,
+            "width": 0.085,
+            "scale": 1.0,
+            "speed": 1.6,
+            "phase": 0,
+            "count": 10
+          },
+          {
+            "shape": "shards",
+            "color": "e0ff8d",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": -1.04,
+            "phase": 1.2,
+            "count": 5
+          },
+          {
+            "shape": "sparks",
+            "color": "e0ff8d",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

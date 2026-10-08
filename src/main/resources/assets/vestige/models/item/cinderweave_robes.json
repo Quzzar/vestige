@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/cinderweave_robes",
+    "layer1": "vestige:item/cinderweave_robes_overlay"
+  }
+}

@@ -1,0 +1,6 @@
+gradle.projectsLoaded {
+    rootProject.layout.buildDirectory.set(new File(rootProject.projectDir, 'run/robes-mantles-review-build'))
+}
+gradle.projectsEvaluated {
+    rootProject.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+}

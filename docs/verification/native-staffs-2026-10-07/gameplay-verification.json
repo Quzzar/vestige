@@ -1,0 +1,56 @@
+{
+  "platform": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.72",
+    "java": 21
+  },
+  "unit_tests": {
+    "tests": 139,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "minecraft_staff_tests": {
+    "required": 13,
+    "passed": 13,
+    "failed": 0
+  },
+  "build": "passed",
+  "kithkyn_platform_check": "passed in preceding same-source build; Kithkyn not co-loaded in these tests",
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/StaffRecipe.java": "13759e1a4d7febee5195d443d97fd924b6ccf8a4261fff7bade726739bffae6c",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffCasting.java": "4528d2abc6c7f97f30c7a13bab2624a4d2abbc86956a37b02393fd811dbcdc55",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffWorldTest.java": "c78d2bfc620721f825d987871639151ae0fbb66396acc3ad54f1db0ce32d7b20",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffSelection.java": "c14e09893685af5c526e67fe43deba8f68e35c82bcf2572534ac4a0d0fa1d92d",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffData.java": "86f36abf3f0238977dc18ef3a801725fbf8ea2786d3372f987770c4c6c3552f6",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellStaffItem.java": "334dacb64da13fb6366a9a79596437b254b97b40707a8ee0b573bbd80e1796ca",
+    "src/main/java/com/quzzar/vestige/apparatus/client/StaffScreen.java": "2f99925f73f44729d734346e8ad44875cc06ad1007e6023a853af84ef81b0511",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeStaffCapture.java": "25b4c633f11f84082e437afc0785787e62f614aebc92ae20436637f8abce5cb8",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "fa978a542afac736f32f460119b1ab374a21f8cd5599fb81163e9c3ca0982f6b",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollCasting.java": "609c23c83f95922e77f1528559ef90cda5d616df2cfafd57ae3facc890b89e72",
+    "src/main/java/com/quzzar/vestige/apparatus/WandCasting.java": "451f21b2ddb30e228a1797c5c57e08dad1223dc83fb48e80b6706f6fb46608bd",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollRecastPayload.java": "951eb50c15b7311dd75a4c448ca505ed0b51be0537ee2d798be020242eab1012",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "020ec5796e57246ca960a9f575c5cfcb1331d34e5ccdacbad5f8f4214564b4d5",
+    "src/main/java/com/quzzar/vestige/magic/world/NativeMagic.java": "82c86bca286289df5606460b6220ed067eafa5fe4179b17a93a5eb068edbfa7e",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "78f1aed208dc87949f2e9262bdb7f8f72f17949fe0771613c7647c2ffddf75f6",
+    "src/test/java/com/quzzar/vestige/apparatus/StaffDataTest.java": "91e300daf37fe713181c038b03bb5314c6c7d85346fc942bdb84e1d35e5af756",
+    "src/test/java/com/quzzar/vestige/apparatus/StaffRecipeTest.java": "32da9cb5e912e6d8bab785df430088c20299e6a6a151293664517fab67f36c1c",
+    "src/main/resources/assets/vestige/models/item/staff.json": "f8831918542f4bc2e1f8b6ee614862ce06e2959646b5beb91f0bd7b1106a8fd5",
+    "src/main/resources/assets/vestige/textures/item/staff.png": "3d1c3d8e0c2d57345dd726953a9cf6b6e4aa98155f80934e5ed8a1e2fc713345",
+    "src/main/resources/assets/vestige/lang/en_us.json": "9230093b75cb7c1f5efd5204276f0c333f8f78aa58c7c5efb629b3b551e90a3d",
+    "tools/audit_staff_traits.py": "160b7a07da20336bb6a89ee4ec554073a449286922115c500de523d33cfd7c63",
+    "tools/author_staff_texture.py": "3855f99b2c9a3bcb19936f622f8548bb7105faba7b1cd604610c83ee40da5959"
+  },
+  "package": {
+    "path": "build/native-staffs/libs/vestige-0.1.0.jar",
+    "bytes": 7852057,
+    "sha256": "46407d636fbbda668b47d0d2a5987d15abd8d615b510ff391324ba6425d30cf5"
+  },
+  "boundaries": [
+    "shared checkout package includes other chat changes; not an isolated staff release",
+    "no Prism installation",
+    "client verification is recorded separately after completion",
+    "initial menu test failed on unnegotiated Minecraft mock player; final fixture records a negotiated payload and passes",
+    "first final launch lacked Gradle-cache write permission; authorized rerun passes"
+  ]
+}

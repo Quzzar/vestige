@@ -1,0 +1,124 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "build": "passed",
+  "kithkynCompatibility": "passed",
+  "unit": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "staffTraits": "passed",
+  "staffTextures": "passed",
+  "nativeFrames": 277,
+  "sourceChecks": [
+    {
+      "view": "scroll-wide",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "scroll-offhand",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "wand-wide",
+      "preparationCleared": true,
+      "mana": 64.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "staff-left",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "cancel-wide",
+      "preparationCleared": true,
+      "mana": 100.0,
+      "remainingScrolls": 4
+    },
+    {
+      "view": "scroll-compact",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "staff-compact",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "scroll-snow",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "scroll-night",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    }
+  ],
+  "ownedSourceHashes": {
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationCrosshair.java": {
+      "workspace": "c7cf7a7116052053775a9597de8022f735331c72da2ee91d012a7c33e8d2ff7c",
+      "verified": "c7cf7a7116052053775a9597de8022f735331c72da2ee91d012a7c33e8d2ff7c"
+    },
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": {
+      "workspace": "e1668d307a882de745bd3f4b8b169aa412c1bc6a8a91fc86a58994ec464bb3f1",
+      "verified": "e1668d307a882de745bd3f4b8b169aa412c1bc6a8a91fc86a58994ec464bb3f1"
+    },
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": {
+      "workspace": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc",
+      "verified": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc"
+    },
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": {
+      "workspace": "e196481b3926f55afbffa69795388c6ec117985dc108854dccb83363b959e145",
+      "verified": "e196481b3926f55afbffa69795388c6ec117985dc108854dccb83363b959e145"
+    },
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/ManaDisplay.java": {
+      "workspace": "cc5b4f8104fb9ac797102c839102173cf65ddffce9c0b59218cf773583fa28c4",
+      "verified": "cc5b4f8104fb9ac797102c839102173cf65ddffce9c0b59218cf773583fa28c4"
+    }
+  },
+  "artifact": {
+    "path": "/Users/quzzar/Projects/vestige/build/crosshair-preparation-review/libs/vestige-0.1.0.jar",
+    "sha256": "c793146e762ebe83c6daf40cd0088990a095c1673647ad1833c35789bd8b9f84",
+    "requiredEntries": [
+      "com/quzzar/vestige/magic/world/client/PreparationCrosshair.class",
+      "com/quzzar/vestige/magic/world/client/PreparationHud.class",
+      "com/quzzar/vestige/magic/world/client/PreparationItemAnimation.class",
+      "assets/vestige/textures/gui/mana.png"
+    ],
+    "obsoleteBarRendererAbsent": true
+  },
+  "nativeRawFrames": "/private/tmp/vestige-crosshair-charge-frames-final",
+  "visualInspection": [
+    "scroll",
+    "wand",
+    "staff left arm",
+    "offhand",
+    "cancellation",
+    "GUI scales 4 and 2",
+    "snow",
+    "dark nighttime ground",
+    "decoded demo"
+  ],
+  "limits": [
+    "No new world GameTest run; the prior 55 focused preparation tests remain prior evidence.",
+    "No custom resource-pack reload or full F3 live inspection.",
+    "No remote multiplayer or third-person gesture inspection.",
+    "No installed game profile was replaced.",
+    "Verified frozen shared-source snapshot; subsequent unrelated concurrent edits are excluded."
+  ]
+}

@@ -1,0 +1,1741 @@
+{
+  "manaClears": "top to bottom",
+  "source": "Minecraft main render target",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "recoveryClears": "top to bottom",
+  "exampleManaPrice": 12,
+  "manaArgb": "7FFFFFFF",
+  "recoveryArgb": "7FFFFFFF",
+  "frames": [
+    {
+      "file": "vanilla-scale-3/frame-0000.png",
+      "seconds": 0.217156708,
+      "shortage": 1.0,
+      "recovery": 0.9826666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0001.png",
+      "seconds": 0.416888541,
+      "shortage": 1.0,
+      "recovery": 0.9697333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0002.png",
+      "seconds": 0.622698875,
+      "shortage": 1.0,
+      "recovery": 0.95606667,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0003.png",
+      "seconds": 0.813128083,
+      "shortage": 1.0,
+      "recovery": 0.94326663,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0004.png",
+      "seconds": 1.019745916,
+      "shortage": 1.0,
+      "recovery": 0.9295333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0005.png",
+      "seconds": 1.225345791,
+      "shortage": 1.0,
+      "recovery": 0.9158667,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0006.png",
+      "seconds": 1.422681416,
+      "shortage": 1.0,
+      "recovery": 0.90253335,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0007.png",
+      "seconds": 1.576360458,
+      "shortage": 1.0,
+      "recovery": 0.8921333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0008.png",
+      "seconds": 1.736481875,
+      "shortage": 1.0,
+      "recovery": 0.8815333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0009.png",
+      "seconds": 1.871185708,
+      "shortage": 1.0,
+      "recovery": 0.8724666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0010.png",
+      "seconds": 2.014357541,
+      "shortage": 1.0,
+      "recovery": 0.86286664,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0011.png",
+      "seconds": 2.145057916,
+      "shortage": 1.0,
+      "recovery": 0.85406655,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0012.png",
+      "seconds": 2.290153416,
+      "shortage": 1.0,
+      "recovery": 0.8444666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0013.png",
+      "seconds": 2.421426916,
+      "shortage": 1.0,
+      "recovery": 0.8357333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0014.png",
+      "seconds": 2.565933208,
+      "shortage": 1.0,
+      "recovery": 0.82613325,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0015.png",
+      "seconds": 2.702705375,
+      "shortage": 1.0,
+      "recovery": 0.817,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0016.png",
+      "seconds": 2.860142083,
+      "shortage": 1.0,
+      "recovery": 0.8066666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0017.png",
+      "seconds": 3.032467625,
+      "shortage": 1.0,
+      "recovery": 0.7951333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0018.png",
+      "seconds": 3.226732791,
+      "shortage": 1.0,
+      "recovery": 0.78233325,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0019.png",
+      "seconds": 3.419329458,
+      "shortage": 1.0,
+      "recovery": 0.7694666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0020.png",
+      "seconds": 3.612268458,
+      "shortage": 1.0,
+      "recovery": 0.7566666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0021.png",
+      "seconds": 3.806607083,
+      "shortage": 1.0,
+      "recovery": 0.74359995,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0022.png",
+      "seconds": 4.005296625,
+      "shortage": 1.0,
+      "recovery": 0.73039997,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0023.png",
+      "seconds": 4.197749708,
+      "shortage": 1.0,
+      "recovery": 0.7175333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0024.png",
+      "seconds": 4.359901291,
+      "shortage": 1.0,
+      "recovery": 0.7066666,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0025.png",
+      "seconds": 4.546497666,
+      "shortage": 1.0,
+      "recovery": 0.6942,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0026.png",
+      "seconds": 4.719055416,
+      "shortage": 1.0,
+      "recovery": 0.68286663,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0027.png",
+      "seconds": 4.898225416,
+      "shortage": 1.0,
+      "recovery": 0.6707333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0028.png",
+      "seconds": 5.079547875,
+      "shortage": 1.0,
+      "recovery": 0.6587333,
+      "mana": 0.0,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0029.png",
+      "seconds": 5.226931791,
+      "shortage": 0.96666664,
+      "recovery": 0.64879996,
+      "mana": 0.4,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0030.png",
+      "seconds": 5.393169833,
+      "shortage": 0.925,
+      "recovery": 0.6377333,
+      "mana": 0.8999999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0031.png",
+      "seconds": 5.539942916,
+      "shortage": 0.925,
+      "recovery": 0.62793326,
+      "mana": 0.8999999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0032.png",
+      "seconds": 5.698649541,
+      "shortage": 0.8833333,
+      "recovery": 0.6173333,
+      "mana": 1.4000000000000001,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0033.png",
+      "seconds": 5.850294166,
+      "shortage": 0.84166664,
+      "recovery": 0.6071999,
+      "mana": 1.9000000000000006,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0034.png",
+      "seconds": 6.00083075,
+      "shortage": 0.84166664,
+      "recovery": 0.5971999,
+      "mana": 1.9000000000000006,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0035.png",
+      "seconds": 6.151616541,
+      "shortage": 0.8,
+      "recovery": 0.5871333,
+      "mana": 2.400000000000001,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0036.png",
+      "seconds": 6.298546375,
+      "shortage": 0.8,
+      "recovery": 0.5774,
+      "mana": 2.400000000000001,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0037.png",
+      "seconds": 6.466076375,
+      "shortage": 0.7583333,
+      "recovery": 0.5663333,
+      "mana": 2.9000000000000012,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0038.png",
+      "seconds": 6.63460575,
+      "shortage": 0.71666664,
+      "recovery": 0.55506665,
+      "mana": 3.4000000000000017,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0039.png",
+      "seconds": 6.786351541,
+      "shortage": 0.71666664,
+      "recovery": 0.5448666,
+      "mana": 3.4000000000000017,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0040.png",
+      "seconds": 6.949110833,
+      "shortage": 0.675,
+      "recovery": 0.5339999,
+      "mana": 3.900000000000002,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0041.png",
+      "seconds": 7.127588708,
+      "shortage": 0.6333333,
+      "recovery": 0.5221333,
+      "mana": 4.4,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0042.png",
+      "seconds": 7.306160333,
+      "shortage": 0.6333333,
+      "recovery": 0.51013327,
+      "mana": 4.4,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0043.png",
+      "seconds": 7.47072625,
+      "shortage": 0.59166664,
+      "recovery": 0.4993333,
+      "mana": 4.899999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0044.png",
+      "seconds": 7.660665333,
+      "shortage": 0.55,
+      "recovery": 0.4867333,
+      "mana": 5.399999999999997,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0045.png",
+      "seconds": 7.841330625,
+      "shortage": 0.55,
+      "recovery": 0.47473326,
+      "mana": 5.399999999999997,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0046.png",
+      "seconds": 8.033187458,
+      "shortage": 0.5083333,
+      "recovery": 0.46193328,
+      "mana": 5.899999999999995,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0047.png",
+      "seconds": 8.2330155,
+      "shortage": 0.46666667,
+      "recovery": 0.44859996,
+      "mana": 6.399999999999993,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0048.png",
+      "seconds": 8.422408833,
+      "shortage": 0.425,
+      "recovery": 0.43593332,
+      "mana": 6.8999999999999915,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0049.png",
+      "seconds": 8.615454,
+      "shortage": 0.38333333,
+      "recovery": 0.42319998,
+      "mana": 7.39999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0050.png",
+      "seconds": 8.806369375,
+      "shortage": 0.38333333,
+      "recovery": 0.4102666,
+      "mana": 7.39999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0051.png",
+      "seconds": 8.996921041,
+      "shortage": 0.34166667,
+      "recovery": 0.39766663,
+      "mana": 7.899999999999988,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0052.png",
+      "seconds": 9.1866085,
+      "shortage": 0.3,
+      "recovery": 0.385,
+      "mana": 8.399999999999986,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0053.png",
+      "seconds": 9.37782875,
+      "shortage": 0.25833333,
+      "recovery": 0.37219992,
+      "mana": 8.899999999999984,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0054.png",
+      "seconds": 9.565755,
+      "shortage": 0.25833333,
+      "recovery": 0.35966665,
+      "mana": 8.899999999999984,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0055.png",
+      "seconds": 9.73946275,
+      "shortage": 0.21666667,
+      "recovery": 0.34793326,
+      "mana": 9.399999999999983,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0056.png",
+      "seconds": 9.892277791,
+      "shortage": 0.175,
+      "recovery": 0.33773327,
+      "mana": 9.89999999999998,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0057.png",
+      "seconds": 10.027742708,
+      "shortage": 0.175,
+      "recovery": 0.3286666,
+      "mana": 9.89999999999998,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0058.png",
+      "seconds": 10.178131625,
+      "shortage": 0.13333334,
+      "recovery": 0.31866658,
+      "mana": 10.399999999999979,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0059.png",
+      "seconds": 10.333290708,
+      "shortage": 0.13333334,
+      "recovery": 0.30833334,
+      "mana": 10.399999999999979,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0060.png",
+      "seconds": 10.487348875,
+      "shortage": 0.09166667,
+      "recovery": 0.29806662,
+      "mana": 10.899999999999977,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0061.png",
+      "seconds": 10.639445291,
+      "shortage": 0.05,
+      "recovery": 0.28786662,
+      "mana": 11.399999999999975,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0062.png",
+      "seconds": 10.794175375,
+      "shortage": 0.05,
+      "recovery": 0.2776,
+      "mana": 11.399999999999975,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0063.png",
+      "seconds": 10.972014791,
+      "shortage": 0.008333334,
+      "recovery": 0.26593333,
+      "mana": 11.899999999999974,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0064.png",
+      "seconds": 11.153607041,
+      "shortage": 0.0,
+      "recovery": 0.25366658,
+      "mana": 12.399999999999972,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0065.png",
+      "seconds": 11.333070791,
+      "shortage": 0.0,
+      "recovery": 0.24186666,
+      "mana": 12.399999999999972,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0066.png",
+      "seconds": 11.512991791,
+      "shortage": 0.0,
+      "recovery": 0.22986664,
+      "mana": 12.89999999999997,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0067.png",
+      "seconds": 11.6953605,
+      "shortage": 0.0,
+      "recovery": 0.2176,
+      "mana": 13.399999999999968,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0068.png",
+      "seconds": 11.852075791,
+      "shortage": 0.0,
+      "recovery": 0.20719992,
+      "mana": 13.399999999999968,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0069.png",
+      "seconds": 12.0348565,
+      "shortage": 0.0,
+      "recovery": 0.19506663,
+      "mana": 13.899999999999967,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0070.png",
+      "seconds": 12.202375625,
+      "shortage": 0.0,
+      "recovery": 0.18379995,
+      "mana": 14.399999999999965,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0071.png",
+      "seconds": 12.360573041,
+      "shortage": 0.0,
+      "recovery": 0.1732666,
+      "mana": 14.899999999999963,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0072.png",
+      "seconds": 12.5207445,
+      "shortage": 0.0,
+      "recovery": 0.16253327,
+      "mana": 14.899999999999963,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0073.png",
+      "seconds": 12.684036958,
+      "shortage": 0.0,
+      "recovery": 0.15166667,
+      "mana": 15.399999999999961,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0074.png",
+      "seconds": 12.840041083,
+      "shortage": 0.0,
+      "recovery": 0.14126658,
+      "mana": 15.399999999999961,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0075.png",
+      "seconds": 13.004323583,
+      "shortage": 0.0,
+      "recovery": 0.13033324,
+      "mana": 15.89999999999996,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0076.png",
+      "seconds": 13.19975575,
+      "shortage": 0.0,
+      "recovery": 0.11753327,
+      "mana": 16.399999999999963,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0077.png",
+      "seconds": 13.374600166,
+      "shortage": 0.0,
+      "recovery": 0.10599996,
+      "mana": 16.89999999999997,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0078.png",
+      "seconds": 13.5656445,
+      "shortage": 0.0,
+      "recovery": 0.0932666,
+      "mana": 16.89999999999997,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0079.png",
+      "seconds": 13.751165916,
+      "shortage": 0.0,
+      "recovery": 0.08073334,
+      "mana": 17.399999999999977,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0080.png",
+      "seconds": 13.945853333,
+      "shortage": 0.0,
+      "recovery": 0.06793325,
+      "mana": 17.899999999999984,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0081.png",
+      "seconds": 14.116971166,
+      "shortage": 0.0,
+      "recovery": 0.056466572,
+      "mana": 18.39999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0082.png",
+      "seconds": 14.299312875,
+      "shortage": 0.0,
+      "recovery": 0.0441333,
+      "mana": 18.39999999999999,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0083.png",
+      "seconds": 14.480294,
+      "shortage": 0.0,
+      "recovery": 0.03219991,
+      "mana": 18.9,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0084.png",
+      "seconds": 14.654994333,
+      "shortage": 0.0,
+      "recovery": 0.020466615,
+      "mana": 19.400000000000006,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0085.png",
+      "seconds": 14.814179625,
+      "shortage": 0.0,
+      "recovery": 0.009866638,
+      "mana": 19.400000000000006,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0086.png",
+      "seconds": 14.985245125,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 19.900000000000013,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0087.png",
+      "seconds": 15.145549541,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.40000000000002,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0088.png",
+      "seconds": 15.30167275,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.40000000000002,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0089.png",
+      "seconds": 15.469942583,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.900000000000027,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0090.png",
+      "seconds": 15.648168416,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.400000000000034,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0091.png",
+      "seconds": 15.820827416,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.400000000000034,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-3/frame-0092.png",
+      "seconds": 15.996742416,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.90000000000004,
+      "guiScale": 3,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0000.png",
+      "seconds": 0.200605584,
+      "shortage": 1.0,
+      "recovery": 0.98399997,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0001.png",
+      "seconds": 0.370849625,
+      "shortage": 1.0,
+      "recovery": 0.97319996,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0002.png",
+      "seconds": 0.543832834,
+      "shortage": 1.0,
+      "recovery": 0.96159995,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0003.png",
+      "seconds": 0.710909292,
+      "shortage": 1.0,
+      "recovery": 0.9504,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0004.png",
+      "seconds": 0.881966334,
+      "shortage": 1.0,
+      "recovery": 0.9390666,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0005.png",
+      "seconds": 1.0565925,
+      "shortage": 1.0,
+      "recovery": 0.9271999,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0006.png",
+      "seconds": 1.2263535,
+      "shortage": 1.0,
+      "recovery": 0.91613334,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0007.png",
+      "seconds": 1.399298667,
+      "shortage": 1.0,
+      "recovery": 0.90439993,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0008.png",
+      "seconds": 1.596949292,
+      "shortage": 1.0,
+      "recovery": 0.8912666,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0009.png",
+      "seconds": 1.792003167,
+      "shortage": 1.0,
+      "recovery": 0.8782666,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0010.png",
+      "seconds": 1.991459625,
+      "shortage": 1.0,
+      "recovery": 0.8650665,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0011.png",
+      "seconds": 2.179093625,
+      "shortage": 1.0,
+      "recovery": 0.8525999,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0012.png",
+      "seconds": 2.366577375,
+      "shortage": 1.0,
+      "recovery": 0.8398,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0013.png",
+      "seconds": 2.514293709,
+      "shortage": 1.0,
+      "recovery": 0.8298665,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0014.png",
+      "seconds": 2.658436084,
+      "shortage": 1.0,
+      "recovery": 0.82019997,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0015.png",
+      "seconds": 2.821743167,
+      "shortage": 1.0,
+      "recovery": 0.80946654,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0016.png",
+      "seconds": 2.978407584,
+      "shortage": 1.0,
+      "recovery": 0.7989333,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0017.png",
+      "seconds": 3.139351,
+      "shortage": 1.0,
+      "recovery": 0.7882666,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0018.png",
+      "seconds": 3.31082925,
+      "shortage": 1.0,
+      "recovery": 0.7768667,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0019.png",
+      "seconds": 3.495000292,
+      "shortage": 1.0,
+      "recovery": 0.76460004,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0020.png",
+      "seconds": 3.672922084,
+      "shortage": 1.0,
+      "recovery": 0.75279987,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0021.png",
+      "seconds": 3.847182834,
+      "shortage": 1.0,
+      "recovery": 0.7410667,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0022.png",
+      "seconds": 4.03128025,
+      "shortage": 1.0,
+      "recovery": 0.72893333,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0023.png",
+      "seconds": 4.221550417,
+      "shortage": 1.0,
+      "recovery": 0.71639997,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0024.png",
+      "seconds": 4.386531,
+      "shortage": 1.0,
+      "recovery": 0.7050665,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0025.png",
+      "seconds": 4.5609645,
+      "shortage": 1.0,
+      "recovery": 0.6935333,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0026.png",
+      "seconds": 4.753997125,
+      "shortage": 1.0,
+      "recovery": 0.68073326,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0027.png",
+      "seconds": 4.920547625,
+      "shortage": 1.0,
+      "recovery": 0.6695333,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0028.png",
+      "seconds": 5.100186667,
+      "shortage": 1.0,
+      "recovery": 0.65759987,
+      "mana": 0.0,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0029.png",
+      "seconds": 5.285016167,
+      "shortage": 0.96666664,
+      "recovery": 0.6454,
+      "mana": 0.4,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0030.png",
+      "seconds": 5.485818834,
+      "shortage": 0.925,
+      "recovery": 0.63206667,
+      "mana": 0.8999999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0031.png",
+      "seconds": 5.64562225,
+      "shortage": 0.925,
+      "recovery": 0.62119997,
+      "mana": 0.8999999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0032.png",
+      "seconds": 5.841366209,
+      "shortage": 0.8833333,
+      "recovery": 0.6085333,
+      "mana": 1.4000000000000001,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0033.png",
+      "seconds": 6.040865334,
+      "shortage": 0.84166664,
+      "recovery": 0.59513324,
+      "mana": 1.9000000000000006,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0034.png",
+      "seconds": 6.241370625,
+      "shortage": 0.8,
+      "recovery": 0.58159995,
+      "mana": 2.400000000000001,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0035.png",
+      "seconds": 6.400928667,
+      "shortage": 0.8,
+      "recovery": 0.5708667,
+      "mana": 2.400000000000001,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0036.png",
+      "seconds": 6.570083125,
+      "shortage": 0.7583333,
+      "recovery": 0.5596,
+      "mana": 2.9000000000000012,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0037.png",
+      "seconds": 6.758459292,
+      "shortage": 0.71666664,
+      "recovery": 0.54699993,
+      "mana": 3.4000000000000017,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0038.png",
+      "seconds": 6.93824025,
+      "shortage": 0.675,
+      "recovery": 0.53513324,
+      "mana": 3.900000000000002,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0039.png",
+      "seconds": 7.124703667,
+      "shortage": 0.675,
+      "recovery": 0.52266663,
+      "mana": 3.900000000000002,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0040.png",
+      "seconds": 7.321174084,
+      "shortage": 0.6333333,
+      "recovery": 0.50960004,
+      "mana": 4.4,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0041.png",
+      "seconds": 7.507526125,
+      "shortage": 0.59166664,
+      "recovery": 0.49713337,
+      "mana": 4.899999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0042.png",
+      "seconds": 7.680020834,
+      "shortage": 0.55,
+      "recovery": 0.48559996,
+      "mana": 5.399999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0043.png",
+      "seconds": 7.857093292,
+      "shortage": 0.55,
+      "recovery": 0.47380006,
+      "mana": 5.399999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0044.png",
+      "seconds": 8.028984125,
+      "shortage": 0.5083333,
+      "recovery": 0.4623999,
+      "mana": 5.899999999999995,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0045.png",
+      "seconds": 8.203996459,
+      "shortage": 0.46666667,
+      "recovery": 0.45073324,
+      "mana": 6.399999999999993,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0046.png",
+      "seconds": 8.378073625,
+      "shortage": 0.46666667,
+      "recovery": 0.43920004,
+      "mana": 6.399999999999993,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0047.png",
+      "seconds": 8.533847,
+      "shortage": 0.425,
+      "recovery": 0.42859986,
+      "mana": 6.8999999999999915,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0048.png",
+      "seconds": 8.70958125,
+      "shortage": 0.38333333,
+      "recovery": 0.41686666,
+      "mana": 7.39999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0049.png",
+      "seconds": 8.870740834,
+      "shortage": 0.38333333,
+      "recovery": 0.4060667,
+      "mana": 7.39999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0050.png",
+      "seconds": 9.003300125,
+      "shortage": 0.34166667,
+      "recovery": 0.39713338,
+      "mana": 7.899999999999988,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0051.png",
+      "seconds": 9.147018042,
+      "shortage": 0.34166667,
+      "recovery": 0.3876666,
+      "mana": 7.899999999999988,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0052.png",
+      "seconds": 9.305295459,
+      "shortage": 0.3,
+      "recovery": 0.37706664,
+      "mana": 8.399999999999986,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0053.png",
+      "seconds": 9.460391167,
+      "shortage": 0.25833333,
+      "recovery": 0.3667332,
+      "mana": 8.899999999999984,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0054.png",
+      "seconds": 9.617854375,
+      "shortage": 0.25833333,
+      "recovery": 0.35633323,
+      "mana": 8.899999999999984,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0055.png",
+      "seconds": 9.785359834,
+      "shortage": 0.21666667,
+      "recovery": 0.34513327,
+      "mana": 9.399999999999983,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0056.png",
+      "seconds": 9.98122675,
+      "shortage": 0.175,
+      "recovery": 0.3321999,
+      "mana": 9.89999999999998,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0057.png",
+      "seconds": 10.185264,
+      "shortage": 0.13333334,
+      "recovery": 0.31866658,
+      "mana": 10.399999999999979,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0058.png",
+      "seconds": 10.344640584,
+      "shortage": 0.13333334,
+      "recovery": 0.30779988,
+      "mana": 10.399999999999979,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0059.png",
+      "seconds": 10.495875209,
+      "shortage": 0.09166667,
+      "recovery": 0.29773337,
+      "mana": 10.899999999999977,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0060.png",
+      "seconds": 10.634338584,
+      "shortage": 0.09166667,
+      "recovery": 0.28839988,
+      "mana": 10.899999999999977,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0061.png",
+      "seconds": 10.7656745,
+      "shortage": 0.05,
+      "recovery": 0.27966654,
+      "mana": 11.399999999999975,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0062.png",
+      "seconds": 10.896656709,
+      "shortage": 0.05,
+      "recovery": 0.27093324,
+      "mana": 11.399999999999975,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0063.png",
+      "seconds": 11.034075959,
+      "shortage": 0.008333334,
+      "recovery": 0.26179993,
+      "mana": 11.899999999999974,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0064.png",
+      "seconds": 11.168077417,
+      "shortage": 0.0,
+      "recovery": 0.2527999,
+      "mana": 12.399999999999972,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0065.png",
+      "seconds": 11.298016709,
+      "shortage": 0.0,
+      "recovery": 0.2441333,
+      "mana": 12.399999999999972,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0066.png",
+      "seconds": 11.422895834,
+      "shortage": 0.0,
+      "recovery": 0.23579997,
+      "mana": 12.89999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0067.png",
+      "seconds": 11.550362459,
+      "shortage": 0.0,
+      "recovery": 0.22733337,
+      "mana": 12.89999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0068.png",
+      "seconds": 11.684488792,
+      "shortage": 0.0,
+      "recovery": 0.2184666,
+      "mana": 13.399999999999968,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0069.png",
+      "seconds": 11.820576042,
+      "shortage": 0.0,
+      "recovery": 0.20940003,
+      "mana": 13.399999999999968,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0070.png",
+      "seconds": 11.957490584,
+      "shortage": 0.0,
+      "recovery": 0.20026672,
+      "mana": 13.899999999999967,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0071.png",
+      "seconds": 12.114569709,
+      "shortage": 0.0,
+      "recovery": 0.18993327,
+      "mana": 13.899999999999967,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0072.png",
+      "seconds": 12.275621792,
+      "shortage": 0.0,
+      "recovery": 0.1791333,
+      "mana": 14.399999999999965,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0073.png",
+      "seconds": 12.438398625,
+      "shortage": 0.0,
+      "recovery": 0.1682666,
+      "mana": 14.899999999999963,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0074.png",
+      "seconds": 12.599289917,
+      "shortage": 0.0,
+      "recovery": 0.15753336,
+      "mana": 14.899999999999963,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0075.png",
+      "seconds": 12.756641375,
+      "shortage": 0.0,
+      "recovery": 0.14713338,
+      "mana": 15.399999999999961,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0076.png",
+      "seconds": 12.922214375,
+      "shortage": 0.0,
+      "recovery": 0.13606669,
+      "mana": 15.89999999999996,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0077.png",
+      "seconds": 13.090227792,
+      "shortage": 0.0,
+      "recovery": 0.12480001,
+      "mana": 15.89999999999996,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0078.png",
+      "seconds": 13.264530084,
+      "shortage": 0.0,
+      "recovery": 0.1132666,
+      "mana": 16.399999999999963,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0079.png",
+      "seconds": 13.424340625,
+      "shortage": 0.0,
+      "recovery": 0.102466635,
+      "mana": 16.89999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0080.png",
+      "seconds": 13.580770792,
+      "shortage": 0.0,
+      "recovery": 0.09199992,
+      "mana": 16.89999999999997,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0081.png",
+      "seconds": 13.71988525,
+      "shortage": 0.0,
+      "recovery": 0.08279989,
+      "mana": 17.399999999999977,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0082.png",
+      "seconds": 13.888353459,
+      "shortage": 0.0,
+      "recovery": 0.07146668,
+      "mana": 17.399999999999977,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0083.png",
+      "seconds": 14.045191375,
+      "shortage": 0.0,
+      "recovery": 0.06106669,
+      "mana": 17.899999999999984,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0084.png",
+      "seconds": 14.204441625,
+      "shortage": 0.0,
+      "recovery": 0.050466716,
+      "mana": 18.39999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0085.png",
+      "seconds": 14.365787625,
+      "shortage": 0.0,
+      "recovery": 0.039800007,
+      "mana": 18.39999999999999,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0086.png",
+      "seconds": 14.511987167,
+      "shortage": 0.0,
+      "recovery": 0.029933268,
+      "mana": 18.9,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0087.png",
+      "seconds": 14.645734875,
+      "shortage": 0.0,
+      "recovery": 0.020933228,
+      "mana": 18.9,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0088.png",
+      "seconds": 14.777201709,
+      "shortage": 0.0,
+      "recovery": 0.012266642,
+      "mana": 19.400000000000006,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0089.png",
+      "seconds": 14.908644667,
+      "shortage": 0.0,
+      "recovery": 0.0033998617,
+      "mana": 19.900000000000013,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0090.png",
+      "seconds": 15.050520792,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 19.900000000000013,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0091.png",
+      "seconds": 15.182063459,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.40000000000002,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0092.png",
+      "seconds": 15.35055025,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.40000000000002,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0093.png",
+      "seconds": 15.494026667,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.900000000000027,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0094.png",
+      "seconds": 15.62982,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 20.900000000000027,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0095.png",
+      "seconds": 15.766767625,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.400000000000034,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0096.png",
+      "seconds": 15.897066334,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.400000000000034,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0097.png",
+      "seconds": 16.048953417,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 21.90000000000004,
+      "guiScale": 2,
+      "sameDirection": true
+    },
+    {
+      "file": "vanilla-scale-2/frame-0098.png",
+      "seconds": 16.186031334,
+      "shortage": 0.0,
+      "recovery": 0.0,
+      "mana": 22.40000000000005,
+      "guiScale": 2,
+      "sameDirection": true
+    }
+  ],
+  "cooldownTicks": 300,
+  "scope": "Native UI prototype; actual server mana regeneration and native client cooldown timer. Candidate overlays do not add item abilities."
+}

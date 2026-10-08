@@ -1,0 +1,39 @@
+{
+  "status": "Owner-approved appearance",
+  "approvedLocalDate": "2026-10-08",
+  "timezone": "America/New_York",
+  "ownerStatement": "Yeah, this is fine. This is sufficient.",
+  "scope": "Mana and recovery use the same vanilla translucent white (0x7FFFFFFF) and normal top-to-bottom clearing. Each layer clears independently; overlapping areas composite both fills. The v3 native preview is the accepted appearance.",
+  "manaArgb": "7FFFFFFF",
+  "recoveryArgb": "7FFFFFFF",
+  "clearingDirection": "top to bottom",
+  "overlap": "Two independent alpha-composited fills",
+  "evidence": [
+    {
+      "file": "docs/art/item-readiness-overlay-v3/vanilla-preview.gif",
+      "sha256": "372b63737f5d9810261015d9cfe9d76daa18a5550bb2b6a23e9c5159ff88c59b"
+    },
+    {
+      "file": "docs/art/item-readiness-overlay-v3/captures/capture.json",
+      "sha256": "4ea64041cca26994707502f33afb3ddc4a98f5ab2355df6c200030ce9355e07e"
+    },
+    {
+      "file": "docs/verification/item-readiness-vanilla-2026-10-08/verification.json",
+      "sha256": "1ef545fce67cae696c80e206701c841865b239625ac3f8393fb459e1c2e7a6b1"
+    },
+    {
+      "file": "docs/verification/item-readiness-vanilla-2026-10-08/source/NativeReadinessPreview.java",
+      "sha256": "5a5e6a7520dd9a0f2632dfc096f34d2c629f8fef8f8dea75a6dd84ffca32854d"
+    },
+    {
+      "file": "docs/art/item-readiness-overlay-v3/videos/vanilla-scale-3.mp4",
+      "sha256": "691a23ff17b3132e8d6fb79b63bc38fcc94166154d42908e1562e1ed8a1fcaa2"
+    },
+    {
+      "file": "docs/art/item-readiness-overlay-v3/videos/vanilla-scale-2.mp4",
+      "sha256": "3c265fc7e75da74f4a70af510833e3728f736211eca8cb50c2178480fc5e5fed"
+    }
+  ],
+  "implementationStatus": "Appearance accepted. Production readiness integration and existing-item imbuement work remain follow-up work. The display example does not approve new item costs or cooldowns.",
+  "documentationPass": "Records acceptance of the previously verified native preview. No production UI/gameplay change, client rerun, publication or installation."
+}

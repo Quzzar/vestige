@@ -1,0 +1,81 @@
+{
+  "build": "passed",
+  "kithkynCompatibility": "passed",
+  "unit": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeFrames": 268,
+  "sourceChecks": [
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-wide"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-offhand"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 64.0,
+      "preparationCleared": true,
+      "view": "wand-wide"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "staff-left"
+    },
+    {
+      "remainingScrolls": 4,
+      "mana": 100.0,
+      "preparationCleared": true,
+      "view": "cancel-wide"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-compact"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "staff-compact"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-snow"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-night"
+    }
+  ],
+  "source": "/private/tmp/vestige-crosshair-edge-20261007-source",
+  "ownedSourceHashes": {
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationCrosshair.java": "d4067bbad9c87450919a5f139677a797354124f23120310a2de6dbc266f27f60",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": "e1668d307a882de745bd3f4b8b169aa412c1bc6a8a91fc86a58994ec464bb3f1",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc",
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": "247b72abda901457a9e88dbe30d6debe0dbc5036bcc20685545e1b7957cadfe6"
+  },
+  "artifact": "/Users/quzzar/Projects/vestige/build/crosshair-native-edge-review/libs/vestige-0.1.0.jar",
+  "artifactSha256": "3e487252fa7f4aff07df86c2b79846304a817a18884a6f669a8961d387b9d612",
+  "nativeCrosshairAll17PixelsPreservedInStableContrastFrames": 35,
+  "nativeInversionEdgeVerifiedAllViews": true,
+  "edgeClearedAllViews": true,
+  "worldSuiteRerun": false,
+  "installed": false
+}

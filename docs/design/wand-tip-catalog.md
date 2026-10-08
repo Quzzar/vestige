@@ -4,7 +4,7 @@
 
 **Reconfirmed October 7, 2026:** the owner explicitly locked these eight effect directions and requested publication. Quartz, Redstone, Nautilus Shell and Magma Cream remain deferred, along with the other specialist candidates. Broad casting and common damage/healing/protection capabilities define eligibility; each tip must have a meaningful tradeoff, and utility spells must have several useful choices. The coefficients remain initial playtest tuning. The implementation and verification section below records actual behavior separately from later candidates.
 
-The [component palette](wand-components.md) contains the seven base profiles and five thread profiles. The [wand direction](wand-crafting.md) records accepted ingredients, exact-scroll matching, a sixty-second cooldown and initial twenty durability. The full proposal therefore covers seven bases, five threads and twenty-eight candidate tips. A wand has one base, one thread and at most one tip; it cannot equip several tips at once.
+The [component palette](wand-components.md) contains the seven base profiles and five thread profiles. The [wand direction](wand-crafting.md) records accepted ingredients, exact-scroll matching, no additional equipment recovery and an initial twenty-durability foundation. The full proposal therefore covers seven bases, five threads and twenty-eight candidate tips. A wand has one base, one thread and at most one tip; it cannot equip several tips at once.
 
 ## Component roles and metrics
 
@@ -15,7 +15,7 @@ The [component palette](wand-components.md) contains the seven base profiles and
 | Thread | How the wand conducts and pays for magic | Mana, preparation, maximum durability, wear and compatible riders |
 | Tip | Another property beyond the source's existing magic | Secondary outcomes, movement, delivery, protection, resource recovery and explicit trait scaling |
 
-Twenty maximum durability and sixty seconds between uses remain the accepted starting constraints. A preparation reduction does not shorten that minute. Maximum durability, durability spent per cast, mana, health, hunger, material costs, charge time and finite effect lifetime are separate channels. Increasing one must not silently change the others.
+The initial twenty-durability foundation now spans eighteen to thirty-two maximum durability through base/core contributions. The owner removed the separate sixty-second recovery on October 7; composed resources, preparation/channel time and wear govern repeated use. Maximum durability, durability spent per cast, mana, health, hunger, material costs, charge time and finite effect lifetime are separate channels. Increasing one must not silently change the others.
 
 Affinity checks the bound scroll's resolved traits before equipment contributions. A Copper tip cannot seed Lightning and thereby make a Lightning Rod qualify for its own affinity bonus. Source Spellshaping may already supply a relevant trait; equipment must not create a feedback loop that repeatedly qualifies and boosts itself.
 
@@ -44,7 +44,7 @@ The owner supports proceeding with this direction provided tips remain broadly r
 
 Apply prices through the existing typed payment machinery, with deterministic whole wear and final payment rounding. Mana-only percentages must not become free benefits on a zero-mana source: such tips need an explicitly authored small flat mana fee or another meaningful price. Set that generic fee policy during tuning rather than creating named-spell exceptions or excluding utility wholesale. Emerald requires actually paid mana for a rebate; an all-nonmana cast cannot create mana from nothing.
 
-The sixty-second reuse constraint remains separate from preparation. Source shaping and core effects compose with these prices once. The goal is several useful choices rather than one tip that dominates every spell; the current draft numbers still require compatibility audits and actual gameplay balancing.
+There is no extra wand reuse timer. Source shaping and core effects compose with these prices once, preserving preparation and deterministic wear. The goal is several useful choices rather than one tip that dominates every spell; the current draft numbers still require compatibility audits and actual gameplay balancing.
 
 ## Alignment with the pinned Iron materials
 
@@ -219,7 +219,7 @@ This differs from Amethyst's echo on the original recipient: the afterimage belo
 
 ### Nether Quartz and Inscribing
 
-A qualifying primary damaging hit leaves a visible mark on that recipient for **6 seconds**. The caster's next qualifying primary native spell hit can consume it for **15% additional damage, capped at 2 HP**. Start with mana ×1.10 for the marking wand. The follow-up may come from a scroll or a different native spell; it does not require waiting through the wand's minute-long cooldown.
+A qualifying primary damaging hit leaves a visible mark on that recipient for **6 seconds**. The caster's next qualifying primary native spell hit can consume it for **15% additional damage, capped at 2 HP**. Start with mana ×1.10 for the marking wand. The follow-up may come from another wand cast, a scroll or a different native spell.
 
 A weapon hit or secondary rider cannot consume or refresh the mark. The extra outcome retains secondary lineage and cannot create another mark. Keep at most one mark per caster/recipient pair and a finite per-cast recipient limit. Memory and Time can be explicit inputs for an owned mark definition. This direction needs a reusable mark and next-primary-outcome consumer; it is not an existing universal trait effect. The mark belongs to its caster, so another player's spell cannot spend it accidentally. Its two-cast combat sequence makes it a later candidate rather than a foundation for the broad initial palette.
 
@@ -233,7 +233,7 @@ Ordinary movement and the caster's teleport spells continue to operate. Foreign 
 
 Increase an eligible projectile's travel speed by a proposed **25%**, using Motion in an explicit delivery expression. Keep its maximum distance, lifetime ceiling and per-target hit budget. Reaching already on the scroll still controls its own supported range.
 
-This changes time to contact, not charge time or the wand's sixty-second cooldown. Instant beams and already saturated or unsupported delivery implementations receive no paid change. A delivery consumer must resolve speed/lifetime constraints together so greater speed does not accidentally grant greater range.
+This changes time to contact while retaining charge time. Instant beams and already saturated or unsupported delivery implementations receive no paid change. A delivery consumer must resolve speed/lifetime constraints together so greater speed does not accidentally grant greater range.
 
 ### Glowstone Dust and Illuminating
 
@@ -320,11 +320,11 @@ Player-facing feedback remains visual/audio. A small delayed echo, a mark on the
 5. **Preserve causal budgets.** Secondary echoes, burns, bursts and recovery cannot trigger more equipment/Spellshaping riders. Inherit the existing contact/recipient ceilings and add the smaller authored tip-wide limits. One callback, field tick or projectile cannot reset the budget.
 6. **Compose prices by channel.** Source, body, thread and tip contributions resolve through the same typed cost system. Round final payments once. Mana discounts do not discount wear, health, hunger or items unless an explicit rule changes that channel. Refunds use the committed amount in the eligible resource channel.
 7. **Keep deterministic wear.** Start with one wear per committed cast plus authored whole extra wear. Maximum durability changes the total capacity; wear changes how quickly it is spent. The proposed last use follows ordinary durability breaking rather than leaving an otherwise unusable partial charge; precise commitment still belongs to native implementation design.
-8. **Keep the accepted reuse floor.** A cast may require at least the accepted sixty seconds and any longer resolved native recovery. Preparation is separate. Per-player cooldown sharing and inventory-swap prevention remain a separate owner decision.
+8. **Preserve the accepted casting costs.** Equipment adds no reuse timer. Repeated casts retain composed preparation and typed resource costs, with deterministic wear on every initial payment. Paid recasts do not spend again. Explicit data-pack spell cooldown costs remain supported.
 9. **Own temporary effects.** Marks, resistance, movement observations, pulses and protection have finite recipients, durations and cleanup. Canceled preparation removes preparation-only modifiers. No active equipment effect becomes permanent through saving, disconnecting or rebinding.
 10. **Reject structural no-ops.** An incompatible plan or saturated existing effect must not consume construction inputs for a tip that cannot change anything. A conditional tip can still have no payoff on an individual miss, blocked move or full-health recipient; compatibility does not guarantee success on every cast.
 
-After-cast tip behavior also passes the source's native activation and volatile gates. A forfeited spell does not become a free Pearl movement or resource-return activation. Payments, wear and recovery still follow their committed native boundary; preparation-only modifiers clean up even when the cast never produces an outcome.
+After-cast tip behavior also passes the source's native activation and volatile gates. A forfeited spell does not become a free Pearl movement or resource-return activation. Payments and wear still follow their committed native boundary; preparation-only modifiers clean up even when the cast never produces an outcome.
 
 For example, Ensorcelled ×0.85 and a Refracting tip ×1.20 produce **×1.02 new mana scaling**, before final rounding and in addition to the source's existing supported modifiers. A Blaze Rod Fire match adds its single affinity contribution. The source's Reaching contribution remains intact, and the extra splash uses its own bounded outcome budget.
 
@@ -343,4 +343,4 @@ These are compositional appearances, not separate images for every spell or thre
 
 Choose the desired tip count and actual effects before final art. Reuse supported bounded damage/healing, movement, status and protection primitives where they express the chosen behavior. Echo scheduling, next-hit marks, mana rebates, specialized drag, native teleport guards and movement wounds need explicit reusable consumers rather than per-spell branches. Verify each selected rule with compatible native spells and persistence/payment/cancellation behavior; inspect the actual client for artwork and cues.
 
-The first implementation remains native wand binding, stored source/component identities, deterministic durability and coherent cooldown/payment commitment. Component behaviors follow after their selection and tuning. The [executable Spellshaping ledger](../spellshaping-recipes.md) continues to contain shipped rules only; none of this proposed equipment catalogue changes those material/socket recipes.
+The first implementation remains native wand binding, stored source/component identities, deterministic durability and coherent resource/wear commitment. Component behaviors follow after their selection and tuning. The [executable Spellshaping ledger](../spellshaping-recipes.md) continues to contain shipped rules only; none of this proposed equipment catalogue changes those material/socket recipes.

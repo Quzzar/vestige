@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_breeze_rod": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "minecraft:breeze_rod" } ] } },
+    "has_the_recipe": { "trigger": "minecraft:recipe_unlocked", "conditions": { "recipe": "vestige:breeze_rod_staff" } }
+  },
+  "requirements": [ [ "has_breeze_rod", "has_the_recipe" ] ],
+  "rewards": { "recipes": [ "vestige:breeze_rod_staff" ] }
+}

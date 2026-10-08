@@ -1,0 +1,267 @@
+{
+  "captured_at_utc": "2026-10-08T14:27:38.429880+00:00",
+  "git_head": "b9b436deaa07ea857d935b7e1adc2ff490546de3",
+  "scope": "Current shared working tree; static source/data inventory and arithmetic, no gameplay changes or new Java/world/client run.",
+  "manifests": [
+    {
+      "directory": "src/main/resources/data/vestige/recipe",
+      "file_count": 83,
+      "path_and_content_manifest_sha256": "76eb1dd655737196e0d9cc3fa2956911d38515e0ccdd3def34d98854a74098d9"
+    },
+    {
+      "directory": "src/main/resources/data/vestige/ritual_recipes",
+      "file_count": 214,
+      "path_and_content_manifest_sha256": "c435264078fcc988687ef61b9cafd524e0bb4d9dca9c379814dc802166e77481"
+    },
+    {
+      "directory": "src/main/resources/data/vestige/runtime_spells",
+      "file_count": 214,
+      "path_and_content_manifest_sha256": "531de7d530e2cc506afc90e1de89483248f965309e89721e79651f89a013f525"
+    }
+  ],
+  "ordinary_recipe_types": {
+    "minecraft:crafting_shaped": 79,
+    "minecraft:crafting_shapeless": 3,
+    "vestige:scroll_dismantling": 1
+  },
+  "ordinary_shapeless_recipes": [
+    "src/main/resources/data/vestige/recipe/compat/irons_spellbooks/plinth.json",
+    "src/main/resources/data/vestige/recipe/compat/supplementaries/plinth.json",
+    "src/main/resources/data/vestige/recipe/echo_shard.json"
+  ],
+  "shaped_spell_capacities": {
+    "8": 75,
+    "4": 139
+  },
+  "base_and_mode_cost_types": {
+    "mana": 220,
+    "time": 132
+  },
+  "shapeless_ritual_operation_families": [
+    "fragment_discovery",
+    "attunement_shard",
+    "magical_threads",
+    "homebound_eye",
+    "whispering_shell",
+    "standing_stone",
+    "fluxed_flint_construction",
+    "fluxed_flint_repair"
+  ],
+  "selected_authored_rules": [
+    {
+      "id": "bloodbound",
+      "pairs": [
+        {
+          "offering": "minecraft:fermented_spider_eye",
+          "material": "minecraft:soul_sand"
+        }
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.05
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "health_exchange": 0.25
+    },
+    {
+      "id": "fasting",
+      "pairs": [
+        {
+          "offering": "minecraft:bread",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "hunger_exchange": 0.25,
+      "max_degree": 3
+    },
+    {
+      "id": "exhausting",
+      "pairs": [
+        {
+          "offering": "minecraft:phantom_membrane",
+          "material": "minecraft:iron_block"
+        }
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.05
+        }
+      ],
+      "cost_factors": {
+        "mana": 0.94,
+        "cooldown": 1.2
+      }
+    },
+    {
+      "id": "famished",
+      "pairs": [
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:moss_block"
+        }
+      ],
+      "traits": [
+        {
+          "trait": "amplify",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.02
+      },
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "sustaining",
+      "pairs": [
+        {
+          "offering": "minecraft:glistering_melon_slice",
+          "material": "minecraft:amethyst_block"
+        },
+        {
+          "offering": "minecraft:golden_carrot",
+          "material": "minecraft:moss_block"
+        },
+        {
+          "offering": "minecraft:amethyst_shard",
+          "material": "minecraft:amethyst_block"
+        }
+      ],
+      "traits": [
+        {
+          "trait": "life",
+          "operation": "MULTIPLY",
+          "amount": 1.15
+        },
+        {
+          "trait": "time",
+          "operation": "MULTIPLY",
+          "amount": 1.1
+        }
+      ],
+      "cost_factors": {
+        "mana": 1.08
+      },
+      "costs": [
+        {
+          "type": "hunger",
+          "amount": 2
+        }
+      ],
+      "max_degree": 2
+    }
+  ],
+  "arithmetic_witnesses": {
+    "description": "Python arithmetic evaluated from the current Java source formula and authored constants; not new world measurements.",
+    "twenty_mana_single_exchange": {
+      "base_mana": 20,
+      "geometry_cost_factor": 1,
+      "mana_factor": 1.02,
+      "exchanged_fraction": 0.25,
+      "adjusted_mana": 20.4,
+      "final_mana": 15,
+      "bloodbound_health_hp": 4,
+      "bloodbound_hearts": 2,
+      "fasting_food_points": 2,
+      "fasting_full_hunger_icons": 1.0
+    },
+    "exhausting_cone_of_cold": {
+      "base_mana": 42,
+      "mana_factor": 0.94,
+      "final_mana": 39,
+      "amplify_factor": 1.05,
+      "executable_cooldown_costs": 0
+    }
+  },
+  "homebound_eye_max_durability": 30,
+  "homebound_eye_prices": {
+    "DURABILITY": {
+      "wear": 6,
+      "resource_amount": 0,
+      "returns_from_fresh": 5
+    },
+    "HEALTH": {
+      "wear": 1,
+      "resource_amount": 6,
+      "returns_from_fresh": 30
+    },
+    "HUNGER": {
+      "wear": 2,
+      "resource_amount": 6,
+      "returns_from_fresh": 15
+    },
+    "EXPERIENCE": {
+      "wear": 2,
+      "resource_amount": 25,
+      "returns_from_fresh": 15
+    },
+    "MANA": {
+      "wear": 2,
+      "resource_amount": 30,
+      "returns_from_fresh": 15
+    }
+  },
+  "executed_checks": [
+    {
+      "command": "python3 tools/author_ritual_recipes.py --check",
+      "result": "pass; 214 recipes; no rotational/alternative collisions"
+    },
+    {
+      "command": "python3 tools/test_ritual_recipes.py",
+      "result": "pass; 11 tests"
+    },
+    {
+      "command": "python3 tools/author_spellshaping.py --check",
+      "result": "pass; 56 rules; pairings unique; candidate unchanged ingredient routes"
+    },
+    {
+      "command": "python3 tools/test_spell_balance.py",
+      "result": "pass; 17 tests"
+    }
+  ],
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "084ca35ec9e4dc200d4526bb58c20342ea57bf9330453105be9e71a7ec5a7baf",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java": "2ec690c6c2efd0a3e251c69bd40da3d4d678a5356b85b32c209d35e51ddc662f",
+    "src/main/java/com/quzzar/vestige/apparatus/Attunement.java": "4f05337ad1f7937a2b78b43b45e3afc929c3f02f7a23d51063579a3d2283a4f8",
+    "src/main/java/com/quzzar/vestige/apparatus/AttunementShardItem.java": "608f9008733b2f961c78dc5683dff0cd6cd7026533431c6f8981db7a169863d0",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadRecipe.java": "12e585504f06a69f0735f81bf1d52047f84602f3ba2ab8feb0b02fefd8b4e538",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeRecipe.java": "af173bba21d7b19123aa00cfb4836257ddad16a1949273ce092c62dde49ea342",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeItem.java": "cf82239cac88425aa4949be69d81f2513d714ddcc6078836a6a0b164957d1a40",
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellRecipe.java": "97ebe6f4699a9df769dbd0c0b3ee3614ad2b4f7f01a5833ab4b74c8f0bfe8f5e",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "c561767298ed89c9b8f5c6421d23b3c03f68b4a51a12a6703b31724dedc34160",
+    "src/main/java/com/quzzar/vestige/apparatus/WandRecipe.java": "7f962651bb05d91e96831ac750ea16f31cc08106aeb0af02f4a11ffdbeb6e264",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffRecipe.java": "c670811c8c1d773f8efd105f30e767357c5e3c9be21a778bf633595717cf0cce",
+    "src/main/java/com/quzzar/vestige/apparatus/WandComponents.java": "c8836ded0433267f3d00f0815d3116c366ca1394646926aa0a11fc2a55ff96ec",
+    "src/main/java/com/quzzar/vestige/apparatus/WandTips.java": "5098b6ba328f009a637de7b435e4d9b53dae6a85473d0186cacbb158c4fb04da",
+    "src/main/java/com/quzzar/vestige/apparatus/Spellshaping.java": "0e649a82857c761bfdf6d94900bad1085831dd8aee9755d11b961eee2756a431",
+    "src/main/java/com/quzzar/vestige/equipment/MagicArmorRecipe.java": "4654f613679d00124b9b4d35c9762441d0b5c418b4cc5930d1e2ebb1b1a312dc",
+    "src/main/java/com/quzzar/vestige/magic/runtime/CastShaping.java": "6843e679132ce7512ccaac4a10ba831b9f0dc6651f0cd3a4bc13d78f1bb9ae6b",
+    "src/main/java/com/quzzar/vestige/magic/definition/SpellCost.java": "59533e32404cb687d597d9e6d1591fbef624553ecb54872152bf6b026acb1590",
+    "src/main/java/com/quzzar/vestige/magic/world/MinecraftSpellWorld.java": "4689e3fce34369b9d8d4398a23d51b22ac38889429a00376e967e0c98368e55a",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneRecipe.java": "66620df661adba9dfba7627a863382061368721881451ba196f2048794f5d9d9",
+    "src/main/java/com/quzzar/vestige/travel/StandingStoneFare.java": "cadb483192e9047aaed9ffd2241e6002c1d438ca5de5ba8cf85c0647e284e2fd",
+    "src/main/java/com/quzzar/vestige/magic/world/SpellActions.java": "ee0994c5f7bb8bbe1bf5f00ff3b4135e2ee25c4e87aaf23b44f11298bb6d6415",
+    "src/main/resources/data/vestige/spellshaping_rules.json": "8e0b36d90a5a7f6965c8ef5e3ce1c7f7dfc68aaff94dd8c152bb2db0afdcac5e",
+    "tools/author_spellshaping.py": "5f43d312fc15286d4e787aedf8dea2a877befa369db72c1b8ab1ecbd086fa745",
+    "tools/audit_spell_balance.py": "b0851b7aecbf08b639f4e6bcff9c279585ce3c2d1f1ce5cbc1197adb10a89b8a",
+    "tools/document_spell_balance.py": "7244aee9cea7d1068d0e8da040e131da6b8af552d592a2f45f4ce443958ec76c",
+    "tools/test_spell_balance.py": "cb16bd933171760b67496a2c0ecdd9105ae0008dc5019985c443c6f421d01002",
+    "src/main/java/com/quzzar/vestige/apparatus/SpellshapingWorldTest.java": "9d8ae2edf0097d04aa1138c2b0bbbbd17a9b52906fc3cd152fea7a53ad15d072"
+  }
+}

@@ -41,7 +41,7 @@ public final class HomeboundEyeWorldTest {
         var geometry = new LeylineShaping.Geometry(4, LeylineShaping.Shape.CROSS, 2, 0, LeylineShaping.Shape.CROSS, 1, 0);
         for (int i : List.of(0, 2, 4, 6)) h.setBlock(CENTER.offset(geometry.offset(i)), ApparatusBlocks.PLINTH.get());
         var layout = RitualCrafting.layout((OfferingBlockEntity) h.getBlockEntity(CENTER));
-        var inputs = List.of(shard(), new ItemStack(Items.SPIDER_EYE), new ItemStack(Items.ENDER_PEARL), new ItemStack(Items.FLINT));
+        var inputs = List.of(shard(), new ItemStack(Items.FLINT), new ItemStack(Items.SPIDER_EYE), new ItemStack(Items.ENDER_PEARL));
         for (int i = 0; i < 4; i++) layout.stands().get(i * 2).insert(inputs.get(i));
         return layout;
     }
@@ -49,22 +49,22 @@ public final class HomeboundEyeWorldTest {
     public static void recipeCopiesKeyAndCraftingOriginAndUsesOnlyTheSpiderEyesSocket(GameTestHelper h) {
         var layout = ritual(h); var key = AttunementShardItem.signature(layout.items().get(0)).orElseThrow().key();
         h.assertTrue(layout.stands().get(0).installMaterial(new ItemStack(Items.SOUL_SAND)), "Could not install other socket");
-        h.assertTrue(layout.stands().get(2).installMaterial(new ItemStack(Items.AMETHYST_BLOCK)), "Could not install selector");
+        h.assertTrue(layout.stands().get(4).installMaterial(new ItemStack(Items.AMETHYST_BLOCK)), "Could not install selector");
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL), layout.center()) == RitualCrafting.Outcome.CRAFTING, "Device recipe rejected");
         h.runAfterDelay(45, () -> {
             var result = RitualTestOutput.stack(layout.center()); var binding = HomeboundEyeItem.binding(result).orElseThrow();
             h.assertTrue(binding.key().equals(key) && binding.origin().equals(layout.center().getBlockPos())
                     && binding.dimension().equals(h.getLevel().dimension()) && binding.payment() == HomeboundEyeItem.Payment.MANA, "Craft lost key/origin/local selector");
             h.assertTrue(result.getMaxDamage() == 30 && result.getDamageValue() == 0 && layout.items().stream().allMatch(ItemStack::isEmpty), "Craft did not consume exactly once");
-            h.assertTrue(layout.stands().get(2).materialItem().is(Items.AMETHYST_BLOCK), "Craft consumed the embedded material"); h.succeed();
+            h.assertTrue(layout.stands().get(4).materialItem().is(Items.AMETHYST_BLOCK), "Craft consumed the embedded material"); h.succeed();
         });
     }
     @GameTest(template = "empty_9x3x9", batch = "homebound_cancel", timeoutTicks = 80)
     public static void changedSelectorCancelsTheQueuedCraftWithoutConsumption(GameTestHelper h) {
-        var layout = ritual(h); layout.stands().get(2).installMaterial(new ItemStack(Items.LAPIS_BLOCK));
+        var layout = ritual(h); layout.stands().get(4).installMaterial(new ItemStack(Items.LAPIS_BLOCK));
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL), layout.center()) == RitualCrafting.Outcome.CRAFTING, "XP recipe rejected");
         h.runAfterDelay(10, () -> {
-            var block = layout.stands().get(2); block.unlock(); block.removeMaterial(); block.installMaterial(new ItemStack(Items.MOSS_BLOCK));
+            var block = layout.stands().get(4); block.unlock(); block.removeMaterial(); block.installMaterial(new ItemStack(Items.MOSS_BLOCK));
         });
         h.runAfterDelay(50, () -> {
             h.assertTrue(RitualTestOutput.stack(layout.center()).isEmpty() && layout.items().stream().filter(i -> !i.isEmpty()).count() == 4, "Changed selector partially committed"); h.succeed();
@@ -76,15 +76,26 @@ public final class HomeboundEyeWorldTest {
         try (var player = com.quzzar.vestige.gametest.SurvivalTestPlayer.create(h)) {
         for (var payment : HomeboundEyeItem.Payment.values()) {
             player.setHealth(20); player.getFoodData().setFoodLevel(20); NativeMana.set(player, 100);
-            player.setExperienceLevels(5); player.setExperiencePoints(0); player.totalExperience = 1;
+            player.setExperienceLevels(10); player.setExperiencePoints(0); player.totalExperience = 1;
             long xp = PlayerExperience.available(player); player.setPos(Vec3.atBottomCenterOf(origin.east(3)));
             var item = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, payment);
+            var beforeName = item.get(net.minecraft.core.component.DataComponents.CUSTOM_DATA);
+            String prefix = switch (payment) {
+                case DURABILITY -> ""; case HEALTH -> "Bloodbound "; case HUNGER -> "Fasting ";
+                case EXPERIENCE -> "Erudite "; case MANA -> "Charged ";
+            };
+            var name = item.getHoverName();
+            h.assertTrue(name.getString().startsWith(prefix) && name.getString().endsWith(
+                    net.minecraft.network.chat.Component.translatable("item.vestige.homebound_eye").getString()), "Wrong Eye adjective");
+            h.assertTrue(item.get(net.minecraft.core.component.DataComponents.CUSTOM_DATA).equals(beforeName), "Naming mutated the saved key/route");
+            if (!prefix.isEmpty()) h.assertTrue(name.getSiblings().getFirst().getStyle().isItalic()
+                    && !name.getSiblings().getLast().getStyle().isItalic(), "Eye adjective style leaked into title");
             h.assertTrue(HomeboundEyeItem.returnHome(player, item), "Return failed for " + payment);
             h.assertTrue(player.position().distanceToSqr(Vec3.atCenterOf(origin)) < 10 && item.getDamageValue() == payment.wear, "Wrong arrival/wear");
-            h.assertTrue(player.getHealth() == (payment == HomeboundEyeItem.Payment.HEALTH ? 14 : 20), "Wrong health debit");
-            h.assertTrue(player.getFoodData().getFoodLevel() == (payment == HomeboundEyeItem.Payment.HUNGER ? 14 : 20), "Wrong hunger debit");
+            h.assertTrue(player.getHealth() == (payment == HomeboundEyeItem.Payment.HEALTH ? 18 : 20), "Wrong health debit");
+            h.assertTrue(player.getFoodData().getFoodLevel() == (payment == HomeboundEyeItem.Payment.HUNGER ? 16 : 20), "Wrong hunger debit");
             h.assertTrue(NativeMana.amount(player) == (payment == HomeboundEyeItem.Payment.MANA ? 70 : 100), "Wrong mana debit");
-            h.assertTrue(PlayerExperience.available(player) == xp - (payment == HomeboundEyeItem.Payment.EXPERIENCE ? 25 : 0), "XP relied on stale total counter");
+            h.assertTrue(PlayerExperience.available(player) == xp - (payment == HomeboundEyeItem.Payment.EXPERIENCE ? 30 : 0), "XP relied on stale total counter");
             h.assertTrue(HomeboundEyeItem.binding(item).orElseThrow().key().equals(KEY), "Use changed attunement");
         }
         var ordinary = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.DURABILITY);
@@ -101,8 +112,17 @@ public final class HomeboundEyeWorldTest {
         var start = player.position(); NativeMana.set(player, 29);
         var mana = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.MANA);
         h.assertTrue(!HomeboundEyeItem.returnHome(player, mana) && NativeMana.amount(player) == 29 && mana.getDamageValue() == 0 && player.position().equals(start), "Unaffordable return spent something");
-        player.setHealth(6); var health = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.HEALTH);
-        h.assertTrue(!HomeboundEyeItem.returnHome(player, health) && player.getHealth() == 6 && health.getDamageValue() == 0, "Health route killed player");
+        player.setHealth(2); var health = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.HEALTH);
+        h.assertTrue(!HomeboundEyeItem.returnHome(player, health) && player.getHealth() == 2 && health.getDamageValue() == 0, "Health route killed player");
+        player.getFoodData().setFoodLevel(3);
+        var hunger = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.HUNGER);
+        h.assertTrue(!HomeboundEyeItem.returnHome(player, hunger) && player.getFoodData().getFoodLevel() == 3
+                && hunger.getDamageValue() == 0 && player.position().equals(start), "Insufficient hunger partially committed");
+        player.setExperienceLevels(3); player.setExperiencePoints(2);
+        var experience = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.EXPERIENCE);
+        h.assertTrue(PlayerExperience.available(player) == 29 && !HomeboundEyeItem.returnHome(player, experience)
+                && PlayerExperience.available(player) == 29 && experience.getDamageValue() == 0
+                && player.position().equals(start), "Insufficient XP partially committed");
         NativeMana.set(player, 100); h.getLevel().setBlock(origin, Blocks.AIR.defaultBlockState(), 3);
         h.assertTrue(!HomeboundEyeItem.returnHome(player, mana) && NativeMana.amount(player) == 100 && mana.getDamageValue() == 0, "Missing Spellstone charged");
         site(h.getLevel(), origin);
@@ -116,7 +136,7 @@ public final class HomeboundEyeWorldTest {
     public static void canceledOrModifiedXpDebitCannotGrantTravel(GameTestHelper h) {
         var origin = h.absolutePos(CENTER); site(h.getLevel(), origin);
         try (var player = com.quzzar.vestige.gametest.SurvivalTestPlayer.create(h)) { player.setPos(Vec3.atBottomCenterOf(origin.east(3)));
-        player.setExperienceLevels(5); player.setExperiencePoints(0); var before = PlayerExperience.Snapshot.of(player); var start = player.position();
+        player.setExperienceLevels(10); player.setExperiencePoints(0); var before = PlayerExperience.Snapshot.of(player); var start = player.position();
         var item = HomeboundEyeItem.bound(KEY, h.getLevel().dimension(), origin, HomeboundEyeItem.Payment.EXPERIENCE);
         java.util.function.Consumer<PlayerXpEvent.XpChange> cancel = event -> { if (event.getEntity() == player) event.setCanceled(true); };
         NeoForge.EVENT_BUS.addListener(cancel);

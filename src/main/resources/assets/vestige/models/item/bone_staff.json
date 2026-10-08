@@ -1,0 +1,14 @@
+{
+  "parent": "vestige:item/mundane_staff",
+  "textures": {
+    "layer0": "vestige:item/bone_staff"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "vestige:guarding": 1
+      },
+      "model": "vestige:item/bone_staff_guard"
+    }
+  ]
+}

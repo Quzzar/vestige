@@ -1,0 +1,357 @@
+{
+  "models/item/homebound_eye.json": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+  "textures/item/homebound_eye.png": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+  "models/item/whispering_shell.json": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+  "textures/item/whispering_shell.png": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+  "channelCopper": "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff",
+  "channelGold": "2712f81cd35639e928b93929a3f7ccb59ec7abfc406519e8df663f17f305f034",
+  "source": "Unedited native Minecraft framebuffer; one actual game client and four in-memory server packet clients.",
+  "captures": [
+    "hotbar-unselected-inventory.png",
+    "hotbar-unselected-message.png",
+    "inventory-listening-inventory.png",
+    "inventory-listening-message.png",
+    "offhand-message.png",
+    "multiple-active-inventory.png",
+    "multiple-active-message.png",
+    "shared-copper-message.png",
+    "shared-gold-message.png",
+    "duplicate-copper-message.png",
+    "ordinary-chat-message.png",
+    "unmatched-gold-message.png",
+    "shared-both-message.png"
+  ],
+  "situations": [
+    {
+      "id": "hotbar-unselected",
+      "message": "My pickaxe is selected. Copper still hears me.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 0,
+          "messages": 0
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "j \u003e Dev - My pickaxe is selected. Copper still hears me."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "inventory-listening",
+      "message": "You can hear Copper with your shell put away.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 0,
+          "messages": 0
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "j \u003e CopperPeer - You can hear Copper with your shell put away."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "offhand",
+      "message": "My offhand shell sends this to Copper.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 0,
+          "messages": 0
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "j \u003e Dev - My offhand shell sends this to Copper."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "multiple-active",
+      "message": "One message to both Copper and Gold.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [
+        "2712f81cd35639e928b93929a3f7ccb59ec7abfc406519e8df663f17f305f034",
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "actualClientListeningKeys": [
+        "2712f81cd35639e928b93929a3f7ccb59ec7abfc406519e8df663f17f305f034",
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "n \u0026 j \u003e Dev - One message to both Copper and Gold."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "shared-copper",
+      "message": "One message to both Copper and Gold.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "j \u003e BothPeer - One message to both Copper and Gold."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "shared-gold",
+      "message": "One message to both Copper and Gold.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "2712f81cd35639e928b93929a3f7ccb59ec7abfc406519e8df663f17f305f034"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "n \u003e BothPeer - One message to both Copper and Gold."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "duplicate-copper",
+      "message": "Two matching Copper shells. One message.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 0,
+          "messages": 0
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "j \u003e Dev - Two matching Copper shells. One message."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "ordinary-chat",
+      "message": "My shell is put away. This is ordinary chat.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 0,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 0,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 0,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 1
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "\u003cDev\u003e My shell is put away. This is ordinary chat."
+      ],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "unmatched-gold",
+      "message": "Only Gold hears this message.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 0,
+          "messages": 0
+        },
+        "GoldPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 0,
+      "actualClientRenderedMessages": [],
+      "allAssertionsPassed": true
+    },
+    {
+      "id": "shared-both",
+      "message": "Both channels carry this reply from me.",
+      "selectedHotbarSlot": 2,
+      "actualClientActiveKeys": [],
+      "actualClientListeningKeys": [
+        "2712f81cd35639e928b93929a3f7ccb59ec7abfc406519e8df663f17f305f034",
+        "57db223e1eac0e13b0d7937e41f9dfda7ed2aa4117cb1470d9e7b9c6a0a3b9ff"
+      ],
+      "recipientPackets": {
+        "CopperPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "GoldPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "BothPeer": {
+          "cues": 1,
+          "messages": 1
+        },
+        "NoShellPeer": {
+          "cues": 0,
+          "messages": 0
+        }
+      },
+      "actualClientMessageCount": 1,
+      "actualClientRenderedMessages": [
+        "n \u0026 j \u003e BothPeer - Both channels carry this reply from me."
+      ],
+      "allAssertionsPassed": true
+    }
+  ],
+  "chatPresentation": "one inventory-corner symbol per shared full key, joined by gray \u0026; symbols \u003e sender - message",
+  "channelRoutingChanged": false
+}

@@ -1,0 +1,2110 @@
+{
+  "version": 1,
+  "mixed_word": "Confluent",
+  "terms": [
+    {
+      "id": "vestige:spellshaping/reaching",
+      "word": "Reaching",
+      "meaning": "Range \u00d71.3 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/widening",
+      "word": "Widening",
+      "meaning": "Area \u00d71.2 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/focused",
+      "word": "Focused",
+      "meaning": "Amplify \u00d71.12 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/piercing",
+      "word": "Piercing",
+      "meaning": "Extra native projectile penetration, limited to four pierces.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/seeking",
+      "word": "Seeking",
+      "meaning": "Native projectiles steer toward an eligible target found at release.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/forked",
+      "word": "Forked",
+      "meaning": "Increase a native projectile fan; existing hit and rider budgets remain shared.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 3
+    },
+    {
+      "id": "vestige:spellshaping/enduring",
+      "word": "Enduring",
+      "meaning": "Extend finite supported manifestations without independently extending event bindings.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/patient",
+      "word": "Patient",
+      "meaning": "Twenty extra charge ticks per contribution reduce mana payment.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/hurried",
+      "word": "Hurried",
+      "meaning": "Shorter charge at a higher mana price.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 4
+    },
+    {
+      "id": "vestige:spellshaping/delayed",
+      "word": "Delayed",
+      "meaning": "A visible cue precedes a two-second delayed release.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/bleeding",
+      "word": "Bleeding",
+      "meaning": "Positive primary damage opens one bounded wound.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/shocking",
+      "word": "Shocking",
+      "meaning": "Add a small electrical rider after an eligible hit.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/kindled",
+      "word": "Kindled",
+      "meaning": "Ignite a compatible damaged recipient.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/chilling",
+      "word": "Chilling",
+      "meaning": "Cold contact leaves brief movement impairment.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/freezing",
+      "word": "Freezing",
+      "meaning": "A sufficiently qualified cold impact builds a finite frozen state.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/hindering",
+      "word": "Hindering",
+      "meaning": "Apply brief Slow after a qualifying outcome.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/envenomed",
+      "word": "Envenomed",
+      "meaning": "Add bounded poison to an eligible damaged recipient.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/interrupting",
+      "word": "Interrupting",
+      "meaning": "A qualifying impact interrupts one active supported channel.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/marking",
+      "word": "Marking",
+      "meaning": "Leave a visible tracking mark after a qualified contact.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/repelling",
+      "word": "Repelling",
+      "meaning": "Drive a hit recipient away from the declared impact origin.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/drawing",
+      "word": "Drawing",
+      "meaning": "Bring a qualified recipient toward an explicit anchor.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/lifting",
+      "word": "Lifting",
+      "meaning": "Briefly lift a qualified subject.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/unbalancing",
+      "word": "Unbalancing",
+      "meaning": "Apply a short physical stumble after contact.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/echoing",
+      "word": "Echoing",
+      "meaning": "A supported direct outcome repeats at reduced strength.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/mending",
+      "word": "Mending",
+      "meaning": "Add finite regeneration after an eligible heal.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/restoring",
+      "word": "Restoring",
+      "meaning": "Strengthen or replace a specifically eligible recovery outcome.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/cleansing",
+      "word": "Cleansing",
+      "meaning": "Couple eligible healing to a limited removal of harmful statuses.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/purifying",
+      "word": "Purifying",
+      "meaning": "Remove explicitly selected harmful statuses after an eligible protective/healing result.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/invigorating",
+      "word": "Invigorating",
+      "meaning": "Healing briefly energizes a recipient.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/quieting",
+      "word": "Quieting",
+      "meaning": "Suppress authored casting cues that own a sound.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/veiled",
+      "word": "Veiled",
+      "meaning": "A compatible non-damaging utility cast grants brief invisibility.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/excavating",
+      "word": "Excavating",
+      "meaning": "Increase the supported mining hardness threshold.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/gathering",
+      "word": "Gathering",
+      "meaning": "Range \u00d71.2 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/shaping",
+      "word": "Shaping",
+      "meaning": "Range \u00d71.2 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/warded",
+      "word": "Warded",
+      "meaning": "After successful entity protection, add an owned four-second ward with 2 charges and 1 base mitigation per hit.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/absorbing",
+      "word": "Absorbing",
+      "meaning": "After successful entity protection, add an owned four-second ward with 1 charges and 4 base mitigation per hit.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/conjuring",
+      "word": "Conjuring",
+      "meaning": "Increase explicitly authored construct or summon health.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/revealing",
+      "word": "Revealing",
+      "meaning": "After detection or illumination, briefly outline up to eight nearby invisible creatures per cast without removing their invisibility.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/anchored",
+      "word": "Anchored",
+      "meaning": "Freeze a moving field whose actual pulses query around its own position; target-locked and already stationary fields are incompatible.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:spellshaping/reflecting",
+      "word": "Reflecting",
+      "meaning": "Add a three-second protective halo that returns up to two incoming vanilla arrows or tridents; native spell deliveries are excluded.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/frugal",
+      "word": "Frugal",
+      "meaning": "Amplify \u00d70.85 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/reckless",
+      "word": "Reckless",
+      "meaning": "Amplify \u00d71.15 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/votive",
+      "word": "Votive",
+      "meaning": "Amplify \u00d71.12 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/greedy",
+      "word": "Greedy",
+      "meaning": "Amplify \u00d71.15 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/sacrificial",
+      "word": "Sacrificial",
+      "meaning": "Amplify \u00d71.1 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/famished",
+      "word": "Famished",
+      "meaning": "Amplify \u00d71.1 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/bloodbound",
+      "word": "Bloodbound",
+      "meaning": "Amplify \u00d71.05 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/fasting",
+      "word": "Fasting",
+      "meaning": "Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 3
+    },
+    {
+      "id": "vestige:spellshaping/exhausting",
+      "word": "Exhausting",
+      "meaning": "Increase Amplify by 25% per degree at 35% more mana per degree.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/charged",
+      "word": "Charged",
+      "meaning": "Amplify \u00d71.15 per contribution.",
+      "kind": "individual",
+      "status": "Implemented spell adjustment",
+      "max_degree": 8
+    },
+    {
+      "id": "vestige:spellshaping/vampiric",
+      "word": "Vampiric",
+      "meaning": "One owned wound whose qualifying ticks return a bounded restoration portion to the caster.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/hemorrhagic",
+      "word": "Hemorrhagic",
+      "meaning": "One finite wound reserves a calibrated portion for a normal-expiry terminal pulse.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/tempestuous",
+      "word": "Tempestuous",
+      "meaning": "One charged windburst deals a calibrated electrical outcome and pushes eligible recipients from its center.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/glacial",
+      "word": "Glacial",
+      "meaning": "One lingering cold field slows or builds freeze on qualified occupants.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/stormbound",
+      "word": "Stormbound",
+      "meaning": "One temporary electrical relay field joins a bounded set of selected contacts.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:spellshaping/sustaining",
+      "word": "Sustaining",
+      "meaning": "One recovery plan uses a declared hunger payment to support calibrated ongoing restoration.",
+      "kind": "compound",
+      "status": "Implemented spell adjustment",
+      "max_degree": 2
+    },
+    {
+      "id": "vestige:wand_tip/amethyst",
+      "word": "Resonating",
+      "meaning": "A bounded delayed echo of a supported damage or healing outcome.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/diamond",
+      "word": "Refracting",
+      "meaning": "A bounded distribution of supported damage or healing to nearby recipients.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/emerald",
+      "word": "Reclaiming",
+      "meaning": "A conditional rebate of actually paid mana, with additional wear.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/ender_pearl",
+      "word": "Elusive",
+      "meaning": "An optional short caster backstep after a supported cast.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/copper",
+      "word": "Conductive",
+      "meaning": "An additional bounded electrical outcome after eligible damage.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/iron",
+      "word": "Repelling",
+      "meaning": "An additional bounded push after eligible damage, healing or protection.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/ghast_tear",
+      "word": "Renewing",
+      "meaning": "A bounded caster restoration following the authored successful outcome.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "id": "vestige:wand_tip/netherite",
+      "word": "Steadfast",
+      "meaning": "Caster stability with additional mana and preparation.",
+      "kind": "individual",
+      "status": "Implemented wand tip",
+      "max_degree": 1
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/fleeting",
+      "word": "Fleeting",
+      "meaning": "Shorter positional recall at a lower mana price.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/enduring",
+      "word": "Enduring",
+      "meaning": "Longer positional recall at a higher mana price.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/reinforced",
+      "word": "Reinforced",
+      "meaning": "More carrier durability at a higher activation mana price.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/frugal",
+      "word": "Frugal",
+      "meaning": "Less activation mana with less carrier durability.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/bloodbound",
+      "word": "Bloodbound",
+      "meaning": "Exchange part of activation mana for health through the shared valuation.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/fasting",
+      "word": "Fasting",
+      "meaning": "Exchange part of activation mana for food through the shared valuation.",
+      "status": "Hourglass design; gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:hourglass/erudite",
+      "word": "Erudite",
+      "meaning": "Exchange part of activation mana for experience points through the shared valuation.",
+      "status": "Hourglass name authored; shared XP payment and gameplay pending"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:wayfarer/swift",
+      "word": "Swift",
+      "meaning": "A faster, shorter movement burst: Motion \u00d71.50 and Time \u00d72/3.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:wayfarer/enduring",
+      "word": "Enduring",
+      "meaning": "A longer movement burst: Time \u00d71.20 and mana \u00d71.12.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:wayfarer/reinforced",
+      "word": "Reinforced",
+      "meaning": "More carrier durability with increased mana: maximum durability \u00d71.50 and mana \u00d71.25.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:wayfarer/quickened",
+      "word": "Quickened",
+      "meaning": "Shorter actor recovery with increased mana: recovery \u00d70.80 and mana \u00d71.25. This changes recovery, not preparation.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:homebound_eye/health",
+      "word": "Bloodbound",
+      "meaning": "A health-backed return with reduced carrier wear.",
+      "status": "Implemented Homebound Eye payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:homebound_eye/hunger",
+      "word": "Fasting",
+      "meaning": "A food-backed return with reduced carrier wear.",
+      "status": "Implemented Homebound Eye payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:homebound_eye/experience",
+      "word": "Erudite",
+      "meaning": "An experience-point-backed return with reduced carrier wear.",
+      "status": "Implemented Homebound Eye payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:homebound_eye/mana",
+      "word": "Charged",
+      "meaning": "A mana-backed return with reduced carrier wear.",
+      "status": "Implemented Homebound Eye payment"
+    }
+  ],
+  "combinations": [
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Ephemeral",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/frugal": 1
+      },
+      "meaning": "Recent recall and a cheaper, shorter-lived vessel.",
+      "status": "Name authored; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Stalwart",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/reinforced": 1
+      },
+      "meaning": "Longer recall and a more durable vessel.",
+      "status": "Name authored; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Relentless",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Longer recall, a more durable vessel and health-backed payment.",
+      "status": "Name authored; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Striding",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/enduring": 1
+      },
+      "meaning": "Faster movement with the longer-burst contribution.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Surefooted",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/reinforced": 1
+      },
+      "meaning": "Faster movement with a more durable vessel.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Nimble",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "Faster movement and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Stalwart",
+      "requires": {
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/reinforced": 1
+      },
+      "meaning": "A longer burst and more durable construction.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Tireless",
+      "requires": {
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "A longer burst and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Dependable",
+      "requires": {
+        "vestige:wayfarer/reinforced": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "More durable construction and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Dauntless",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/reinforced": 1
+      },
+      "meaning": "Faster movement, the longer-burst contribution and more durable construction.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Restless",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "Faster movement, the longer-burst contribution and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Agile",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/reinforced": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "Faster movement, more durable construction and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Resolute",
+      "requires": {
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/reinforced": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "A longer burst, more durable construction and shorter recovery.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:wayfarer_boots",
+      "word": "Unfaltering",
+      "requires": {
+        "vestige:wayfarer/swift": 1,
+        "vestige:wayfarer/enduring": 1,
+        "vestige:wayfarer/reinforced": 1,
+        "vestige:wayfarer/quickened": 1
+      },
+      "meaning": "All four Wayfarer adjustments, with each contribution and price retained.",
+      "status": "Implemented Wayfarer adjustment"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Expansive",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Greater reach and wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Expansive",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Greater reach and wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Commanding",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/focused": 1
+      },
+      "meaning": "Greater reach and potency.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Commanding",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/focused": 1
+      },
+      "meaning": "Greater reach and potency.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Lacerating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Greater reach with an authored bleeding rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Lacerating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Greater reach with an authored bleeding rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Scourging",
+      "requires": {
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Wider coverage with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Scourging",
+      "requires": {
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Wider coverage with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Rending",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Potency with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Rending",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Potency with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Pursuing",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Greater reach with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Pursuing",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Greater reach with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Hunting",
+      "requires": {
+        "vestige:spellshaping/piercing": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Penetration with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Hunting",
+      "requires": {
+        "vestige:spellshaping/piercing": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Penetration with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Swarming",
+      "requires": {
+        "vestige:spellshaping/forked": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Additional supported recipients with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Swarming",
+      "requires": {
+        "vestige:spellshaping/forked": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Additional supported recipients with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Bristling",
+      "requires": {
+        "vestige:spellshaping/forked": 1,
+        "vestige:spellshaping/piercing": 1
+      },
+      "meaning": "Additional supported recipients with penetration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Bristling",
+      "requires": {
+        "vestige:spellshaping/forked": 1,
+        "vestige:spellshaping/piercing": 1
+      },
+      "meaning": "Additional supported recipients with penetration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Overwhelming",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Potency with wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Overwhelming",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Potency with wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Pervasive",
+      "requires": {
+        "vestige:spellshaping/enduring": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Duration with wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Pervasive",
+      "requires": {
+        "vestige:spellshaping/enduring": 1,
+        "vestige:spellshaping/widening": 1
+      },
+      "meaning": "Duration with wider coverage.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Subdued",
+      "requires": {
+        "vestige:spellshaping/enduring": 1,
+        "vestige:spellshaping/quieting": 1
+      },
+      "meaning": "Duration with quieting.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Subdued",
+      "requires": {
+        "vestige:spellshaping/enduring": 1,
+        "vestige:spellshaping/quieting": 1
+      },
+      "meaning": "Duration with quieting.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Fulminating",
+      "requires": {
+        "vestige:spellshaping/kindled": 1,
+        "vestige:spellshaping/shocking": 1
+      },
+      "meaning": "Authored ignition and electrical riders.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Fulminating",
+      "requires": {
+        "vestige:spellshaping/kindled": 1,
+        "vestige:spellshaping/shocking": 1
+      },
+      "meaning": "Authored ignition and electrical riders.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Searing",
+      "requires": {
+        "vestige:spellshaping/kindled": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Ignition with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Searing",
+      "requires": {
+        "vestige:spellshaping/kindled": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Ignition with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Numbing",
+      "requires": {
+        "vestige:spellshaping/chilling": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Chilling with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Numbing",
+      "requires": {
+        "vestige:spellshaping/chilling": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Chilling with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Biting",
+      "requires": {
+        "vestige:spellshaping/freezing": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Freezing with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Biting",
+      "requires": {
+        "vestige:spellshaping/freezing": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Freezing with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Venomous",
+      "requires": {
+        "vestige:spellshaping/envenomed": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Poison with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Venomous",
+      "requires": {
+        "vestige:spellshaping/envenomed": 1,
+        "vestige:spellshaping/bleeding": 1
+      },
+      "meaning": "Poison with bleeding.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Stalking",
+      "requires": {
+        "vestige:spellshaping/marking": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Marking with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Stalking",
+      "requires": {
+        "vestige:spellshaping/marking": 1,
+        "vestige:spellshaping/seeking": 1
+      },
+      "meaning": "Marking with targeting assistance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Staggering",
+      "requires": {
+        "vestige:spellshaping/repelling": 1,
+        "vestige:spellshaping/unbalancing": 1
+      },
+      "meaning": "Push with unbalancing.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Staggering",
+      "requires": {
+        "vestige:spellshaping/repelling": 1,
+        "vestige:spellshaping/unbalancing": 1
+      },
+      "meaning": "Push with unbalancing.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Turbulent",
+      "requires": {
+        "vestige:spellshaping/drawing": 1,
+        "vestige:spellshaping/repelling": 1
+      },
+      "meaning": "Independent pull and push contributions.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Turbulent",
+      "requires": {
+        "vestige:spellshaping/drawing": 1,
+        "vestige:spellshaping/repelling": 1
+      },
+      "meaning": "Independent pull and push contributions.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Buffeting",
+      "requires": {
+        "vestige:spellshaping/lifting": 1,
+        "vestige:spellshaping/repelling": 1
+      },
+      "meaning": "Lift with push.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Buffeting",
+      "requires": {
+        "vestige:spellshaping/lifting": 1,
+        "vestige:spellshaping/repelling": 1
+      },
+      "meaning": "Lift with push.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Salubrious",
+      "requires": {
+        "vestige:spellshaping/mending": 1,
+        "vestige:spellshaping/cleansing": 1
+      },
+      "meaning": "Healing with cleansing.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Salubrious",
+      "requires": {
+        "vestige:spellshaping/mending": 1,
+        "vestige:spellshaping/cleansing": 1
+      },
+      "meaning": "Healing with cleansing.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Revitalizing",
+      "requires": {
+        "vestige:spellshaping/mending": 1,
+        "vestige:spellshaping/invigorating": 1
+      },
+      "meaning": "Healing with invigoration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Revitalizing",
+      "requires": {
+        "vestige:spellshaping/mending": 1,
+        "vestige:spellshaping/invigorating": 1
+      },
+      "meaning": "Healing with invigoration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Hallowed",
+      "requires": {
+        "vestige:spellshaping/purifying": 1,
+        "vestige:spellshaping/warded": 1
+      },
+      "meaning": "Purification with protection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Hallowed",
+      "requires": {
+        "vestige:spellshaping/purifying": 1,
+        "vestige:spellshaping/warded": 1
+      },
+      "meaning": "Purification with protection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Deflecting",
+      "requires": {
+        "vestige:spellshaping/warded": 1,
+        "vestige:spellshaping/reflecting": 1
+      },
+      "meaning": "Protection with reflection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Deflecting",
+      "requires": {
+        "vestige:spellshaping/warded": 1,
+        "vestige:spellshaping/reflecting": 1
+      },
+      "meaning": "Protection with reflection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Sheltering",
+      "requires": {
+        "vestige:spellshaping/absorbing": 1,
+        "vestige:spellshaping/reflecting": 1
+      },
+      "meaning": "Absorption with reflection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Sheltering",
+      "requires": {
+        "vestige:spellshaping/absorbing": 1,
+        "vestige:spellshaping/reflecting": 1
+      },
+      "meaning": "Absorption with reflection.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Discerning",
+      "requires": {
+        "vestige:spellshaping/revealing": 1,
+        "vestige:spellshaping/marking": 1
+      },
+      "meaning": "Revelation with marking.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Discerning",
+      "requires": {
+        "vestige:spellshaping/revealing": 1,
+        "vestige:spellshaping/marking": 1
+      },
+      "meaning": "Revelation with marking.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Covert",
+      "requires": {
+        "vestige:spellshaping/veiled": 1,
+        "vestige:spellshaping/quieting": 1
+      },
+      "meaning": "Concealment with quieting.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Covert",
+      "requires": {
+        "vestige:spellshaping/veiled": 1,
+        "vestige:spellshaping/quieting": 1
+      },
+      "meaning": "Concealment with quieting.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Prospecting",
+      "requires": {
+        "vestige:spellshaping/excavating": 1,
+        "vestige:spellshaping/gathering": 1
+      },
+      "meaning": "Excavation with gathering.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Prospecting",
+      "requires": {
+        "vestige:spellshaping/excavating": 1,
+        "vestige:spellshaping/gathering": 1
+      },
+      "meaning": "Excavation with gathering.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Thrifty",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:spellshaping/patient": 1
+      },
+      "meaning": "Lower mana with longer preparation.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Thrifty",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:spellshaping/patient": 1
+      },
+      "meaning": "Lower mana with longer preparation.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Fervent",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/bloodbound": 1
+      },
+      "meaning": "Potency with health-backed payment.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Fervent",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/bloodbound": 1
+      },
+      "meaning": "Potency with health-backed payment.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Abstemious",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:spellshaping/fasting": 1
+      },
+      "meaning": "Lower mana with food-backed payment.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Abstemious",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:spellshaping/fasting": 1
+      },
+      "meaning": "Lower mana with food-backed payment.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Strenuous",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/exhausting": 1
+      },
+      "meaning": "Independent potency contributions and their prices.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Strenuous",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/exhausting": 1
+      },
+      "meaning": "Independent potency contributions and their prices.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Economical",
+      "requires": {
+        "vestige:spellshaping/hurried": 1,
+        "vestige:spellshaping/frugal": 1
+      },
+      "meaning": "Faster preparation with mana economy.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Economical",
+      "requires": {
+        "vestige:spellshaping/hurried": 1,
+        "vestige:spellshaping/frugal": 1
+      },
+      "meaning": "Faster preparation with mana economy.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Reverberant",
+      "requires": {
+        "vestige:spellshaping/echoing": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "An echo rider with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Reverberant",
+      "requires": {
+        "vestige:spellshaping/echoing": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "An echo rider with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Crackling",
+      "requires": {
+        "vestige:spellshaping/echoing": 1,
+        "vestige:spellshaping/shocking": 1
+      },
+      "meaning": "An echo rider with an electrical rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Crackling",
+      "requires": {
+        "vestige:spellshaping/echoing": 1,
+        "vestige:spellshaping/shocking": 1
+      },
+      "meaning": "An echo rider with an electrical rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Radiating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/forked": 1
+      },
+      "meaning": "Greater reach with additional supported recipients.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Radiating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/forked": 1
+      },
+      "meaning": "Greater reach with additional supported recipients.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Blazing",
+      "requires": {
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/kindled": 1
+      },
+      "meaning": "Wider coverage with ignition.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Blazing",
+      "requires": {
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/kindled": 1
+      },
+      "meaning": "Wider coverage with ignition.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Abiding",
+      "requires": {
+        "vestige:spellshaping/anchored": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "Anchoring with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Abiding",
+      "requires": {
+        "vestige:spellshaping/anchored": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "Anchoring with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Tenacious",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "Potency with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Tenacious",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/enduring": 1
+      },
+      "meaning": "Potency with supported duration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Incisive",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/piercing": 1
+      },
+      "meaning": "Potency with penetration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Incisive",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:spellshaping/piercing": 1
+      },
+      "meaning": "Potency with penetration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Obscuring",
+      "requires": {
+        "vestige:spellshaping/veiled": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Concealment with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Obscuring",
+      "requires": {
+        "vestige:spellshaping/veiled": 1,
+        "vestige:spellshaping/hindering": 1
+      },
+      "meaning": "Concealment with movement hindrance.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:spell_scroll",
+      "word": "Dominating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/focused": 1
+      },
+      "meaning": "Greater reach, wider coverage and potency.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Dominating",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:spellshaping/widening": 1,
+        "vestige:spellshaping/focused": 1
+      },
+      "meaning": "Greater reach, wider coverage and potency.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Resounding",
+      "requires": {
+        "vestige:spellshaping/echoing": 1,
+        "vestige:wand_tip/amethyst": 1
+      },
+      "meaning": "Authored spell echo plus the separately bounded tip echo.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Prismatic",
+      "requires": {
+        "vestige:spellshaping/focused": 1,
+        "vestige:wand_tip/diamond": 1
+      },
+      "meaning": "Potency plus the tip distribution.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Provident",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:wand_tip/emerald": 1
+      },
+      "meaning": "Mana economy plus the conditional tip rebate.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Rapacious",
+      "requires": {
+        "vestige:spellshaping/bloodbound": 1,
+        "vestige:wand_tip/emerald": 1
+      },
+      "meaning": "Health-backed spell payment plus the conditional tip rebate.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Wandering",
+      "requires": {
+        "vestige:spellshaping/reaching": 1,
+        "vestige:wand_tip/ender_pearl": 1
+      },
+      "meaning": "Greater reach plus the optional caster backstep.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Evasive",
+      "requires": {
+        "vestige:spellshaping/veiled": 1,
+        "vestige:wand_tip/ender_pearl": 1
+      },
+      "meaning": "Concealment plus the optional caster backstep.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Galvanic",
+      "requires": {
+        "vestige:spellshaping/shocking": 1,
+        "vestige:wand_tip/copper": 1
+      },
+      "meaning": "Independent electrical spell and tip riders.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Incandescent",
+      "requires": {
+        "vestige:spellshaping/kindled": 1,
+        "vestige:wand_tip/copper": 1
+      },
+      "meaning": "Ignition plus the electrical tip rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Forceful",
+      "requires": {
+        "vestige:spellshaping/repelling": 1,
+        "vestige:wand_tip/iron": 1
+      },
+      "meaning": "Independent spell and tip pushes.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Immovable",
+      "requires": {
+        "vestige:spellshaping/warded": 1,
+        "vestige:wand_tip/netherite": 1
+      },
+      "meaning": "Spell protection plus caster stability.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Rejuvenating",
+      "requires": {
+        "vestige:spellshaping/mending": 1,
+        "vestige:wand_tip/ghast_tear": 1
+      },
+      "meaning": "Spell healing plus bounded caster restoration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Wholesome",
+      "requires": {
+        "vestige:spellshaping/cleansing": 1,
+        "vestige:wand_tip/ghast_tear": 1
+      },
+      "meaning": "Cleansing plus bounded caster restoration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Sanctifying",
+      "requires": {
+        "vestige:spellshaping/purifying": 1,
+        "vestige:wand_tip/ghast_tear": 1
+      },
+      "meaning": "Purification plus bounded caster restoration.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Splintering",
+      "requires": {
+        "vestige:spellshaping/piercing": 1,
+        "vestige:wand_tip/diamond": 1
+      },
+      "meaning": "Penetration plus the tip distribution.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Shredding",
+      "requires": {
+        "vestige:spellshaping/bleeding": 1,
+        "vestige:wand_tip/diamond": 1
+      },
+      "meaning": "Bleeding plus the tip distribution.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Haunting",
+      "requires": {
+        "vestige:spellshaping/seeking": 1,
+        "vestige:wand_tip/amethyst": 1
+      },
+      "meaning": "Targeting assistance plus the bounded tip echo.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Jolting",
+      "requires": {
+        "vestige:spellshaping/hindering": 1,
+        "vestige:wand_tip/copper": 1
+      },
+      "meaning": "Movement hindrance plus the electrical tip rider.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Prudent",
+      "requires": {
+        "vestige:spellshaping/frugal": 1,
+        "vestige:wand_tip/netherite": 1
+      },
+      "meaning": "Mana economy plus caster stability.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Sonorous",
+      "requires": {
+        "vestige:spellshaping/enduring": 1,
+        "vestige:wand_tip/amethyst": 1
+      },
+      "meaning": "Supported duration plus the bounded tip echo.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:wand",
+      "word": "Iridescent",
+      "requires": {
+        "vestige:spellshaping/widening": 1,
+        "vestige:wand_tip/diamond": 1
+      },
+      "meaning": "Wider coverage plus the tip distribution.",
+      "status": "Implemented contributions; display alias"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Resilient",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/reinforced": 1
+      },
+      "meaning": "Fleeting + reinforced; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Measured",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/frugal": 1
+      },
+      "meaning": "Enduring + frugal; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Sanguine",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Fleeting + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Spare",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Fleeting + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Retrospective",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Fleeting + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Unyielding",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Enduring + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Ascetic",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Enduring + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Recollective",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Enduring + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Hardened",
+      "requires": {
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Reinforced + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Abstinent",
+      "requires": {
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Reinforced + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Studious",
+      "requires": {
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Reinforced + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Miserly",
+      "requires": {
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Frugal + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Austere",
+      "requires": {
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Frugal + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Scholarly",
+      "requires": {
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Frugal + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Intrepid",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Fleeting + reinforced + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Tempered",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Fleeting + reinforced + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Deliberate",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Fleeting + reinforced + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Fugitive",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Fleeting + frugal + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Spartan",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Fleeting + frugal + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Resourceful",
+      "requires": {
+        "vestige:hourglass/fleeting": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Fleeting + frugal + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Monastic",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Enduring + reinforced + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Sagacious",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/reinforced": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Enduring + reinforced + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Unflagging",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/bloodbound": 1
+      },
+      "meaning": "Enduring + frugal + bloodbound; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Forbearing",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/fasting": 1
+      },
+      "meaning": "Enduring + frugal + fasting; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    },
+    {
+      "family": "vestige:kairotic_hourglass",
+      "word": "Contemplative",
+      "requires": {
+        "vestige:hourglass/enduring": 1,
+        "vestige:hourglass/frugal": 1,
+        "vestige:hourglass/erudite": 1
+      },
+      "meaning": "Enduring + frugal + erudite; each authored contribution retains its own trade-off.",
+      "status": "Name reserved; hourglass gameplay pending"
+    }
+  ]
+}

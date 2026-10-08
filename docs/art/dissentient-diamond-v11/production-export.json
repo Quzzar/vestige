@@ -1,0 +1,45 @@
+{
+  "source": "dissentient-diamond-16.png",
+  "generator": "Unchanged v10 imagegen texture; GUI-only horizontal alignment in item model",
+  "reference": "docs/art/native-item-textures/vanilla/diamond.png",
+  "referenceSha256": "b27b081fde6a794dfb52d37f4ab2a86931ce127323f786a27cea41d2dbe913a2",
+  "sourceSha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+  "texture": "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png",
+  "model": "src/main/resources/assets/vestige/models/item/dissentient_diamond.json",
+  "size": [
+    16,
+    16
+  ],
+  "bounds": [
+    2,
+    1,
+    13,
+    15
+  ],
+  "palette": [
+    "#03869a",
+    "#03b6c4",
+    "#103548",
+    "#145e53",
+    "#155365",
+    "#54f6f2",
+    "#abfaf7"
+  ],
+  "opaquePixels": 93,
+  "hardAlpha": true,
+  "transparentMargin": true,
+  "exactNativeExport": true,
+  "textureSha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+  "modelSha256": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+  "selectedForInventoryReview": true,
+  "ownerAccepted": true,
+  "nativeReviewed": true,
+  "guiTranslation": [
+    0.5,
+    0,
+    0
+  ],
+  "note": "V11 retains every v10 pixel and centers its odd-width silhouette with a half-texel GUI translation. Other display contexts retain their existing transforms.",
+  "nativeReceipt": "native-review.json",
+  "approval": "approval.json"
+}

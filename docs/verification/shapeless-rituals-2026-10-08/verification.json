@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-08",
+  "environment": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "sourceSnapshot": "/private/tmp/vestige-shapeless-ritual-20261008-source",
+  "scope": "Frozen combined working build based on the previous repair snapshot; the fourteen listed changed files match the root checkout at staging.",
+  "unitTests": {
+    "tests": 181,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "worldTests": {
+    "required": 342,
+    "passed": 342
+  },
+  "kithkyn": "Version compatibility passed; co-load disabled for final full/world/client run.",
+  "arrangementChecks": {
+    "orderedRepairPairs": 56,
+    "flintConstructionPermutations": 1680,
+    "shellPlacements": 336,
+    "threadTypes": 5,
+    "placementsPerThreadType": 336
+  },
+  "nativeClient": {
+    "checks": [
+      {
+        "check": "Translated native item name",
+        "passed": true
+      },
+      {
+        "check": "Eight-slot fixture has only two outer offerings",
+        "passed": true
+      },
+      {
+        "check": "Native outer-only activation enters repair lifecycle",
+        "passed": true
+      },
+      {
+        "check": "Actual dropped staff differs only by ten restored durability",
+        "passed": true
+      },
+      {
+        "check": "Catalyst spends ten points and target is consumed once",
+        "passed": true
+      }
+    ],
+    "inspectedFrames": [
+      "held-and-offered.png",
+      "repair-in-progress.png",
+      "repaired-output.png",
+      "durability-after-repair.png"
+    ],
+    "assetSha256": {
+      "models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+      "textures/item/fluxed_flint.png": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3"
+    }
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "c561767298ed89c9b8f5c6421d23b3c03f68b4a51a12a6703b31724dedc34160",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "084ca35ec9e4dc200d4526bb58c20342ea57bf9330453105be9e71a7ec5a7baf",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadRecipe.java": "12e585504f06a69f0735f81bf1d52047f84602f3ba2ab8feb0b02fefd8b4e538",
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellRecipe.java": "97ebe6f4699a9df769dbd0c0b3ee3614ad2b4f7f01a5833ab4b74c8f0bfe8f5e",
+    "src/main/java/com/quzzar/vestige/apparatus/HomeboundEyeRecipe.java": "af173bba21d7b19123aa00cfb4836257ddad16a1949273ce092c62dde49ea342",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualRecipe.java": "2ec690c6c2efd0a3e251c69bd40da3d4d678a5356b85b32c209d35e51ddc662f",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": "df7a23410c22fed3a857d578527036c915b368c96ecc298be6d48be6a1603d43",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "bcc9ae28b2426e30402a38e544ddf99d770c05f59aec473185e36cc7bc200546",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadWorldTest.java": "7567b2c4760c76857e3f7015d3fc227dc59c62e53b70bc64e3c33257f459868f",
+    "src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java": "6efc94d7491445f819cec4fde69e551736c1b0298b0ae06a5961cb5a7b1d83b4",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "33cb0414ae36e23cd97d7dd0ce739bb9b4322c89fb6d0ad5595cebeac858c180",
+    "src/test/java/com/quzzar/vestige/apparatus/WhisperingShellTest.java": "ac29c0dc688e714e8bdd378736e876c1e09bb828ccc9650c36ba84701c66af4a",
+    "src/test/java/com/quzzar/vestige/apparatus/MagicalThreadRecipeTest.java": "54b9e2879a37e8e60bc5d112e135403dbb491d49264c7ce15e2cfe8823fdfd18",
+    "src/test/java/com/quzzar/vestige/apparatus/RitualRecipeShapeTest.java": "8794643fe2efdaa26cc2dd6422413b625a1d62da34058d13a59512d289d5d77f"
+  },
+  "reviewArtifacts": {
+    "vestige-0.1.0.jar": {
+      "path": "/Users/quzzar/Projects/vestige/build/shapeless-ritual-review/libs/vestige-0.1.0.jar",
+      "sha256": "018086f10edffda9eb8d32a6a756efe8898f53e42fc089916fa6823c49ae82c0"
+    },
+    "vestige-0.1.0-sources.jar": {
+      "path": "/Users/quzzar/Projects/vestige/build/shapeless-ritual-review/libs/vestige-0.1.0-sources.jar",
+      "sha256": "345c4221ba1335aa1421cbbfc11850463edddab0000fc973aaf968783a295d10"
+    }
+  },
+  "installed": false,
+  "published": false,
+  "limitations": [
+    "No new JEI/EMI capture",
+    "No remote multiplayer or survival balance pass",
+    "Shaped catalog recipes retain their authored patterns; only the general inner-fill schema restriction was removed",
+    "Incomplete outer rings do not supply eight-slot capacity"
+  ]
+}

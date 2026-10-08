@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vestige:item/dissentient_diamond"
+  },
+  "display": {
+    "gui": {
+      "translation": [0.5, 0, 0]
+    }
+  }
+}

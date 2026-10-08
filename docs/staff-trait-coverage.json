@@ -1,0 +1,4913 @@
+{
+  "scope": "Checked-in native base traits only; equipment and shaping cannot qualify a missing affinity.",
+  "spell_count": 214,
+  "excluded_affinities": [
+    "vestige:amplify",
+    "vestige:area",
+    "vestige:range"
+  ],
+  "traits": {
+    "vestige:abjuration": {
+      "allowed_affinity": true,
+      "count": 34,
+      "spells": [
+        {
+          "spell": "vestige:abyssal_shroud",
+          "name": "Abyssal Shroud"
+        },
+        {
+          "spell": "vestige:arcane_lock",
+          "name": "Arcane Lock"
+        },
+        {
+          "spell": "vestige:arcane_shackle",
+          "name": "Arcane Shackle"
+        },
+        {
+          "spell": "vestige:cleanse",
+          "name": "Cleanse"
+        },
+        {
+          "spell": "vestige:counterspell",
+          "name": "Counterspell"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:fang_ward",
+          "name": "Fang Ward"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:interposing_earth",
+          "name": "Interposing Earth"
+        },
+        {
+          "spell": "vestige:oakskin",
+          "name": "Oakskin"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_containment",
+          "name": "Containment"
+        },
+        {
+          "spell": "vestige:pf2_fire_shield",
+          "name": "Fire Shield"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_gentle_landing",
+          "name": "Gentle Landing"
+        },
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        },
+        {
+          "spell": "vestige:pf2_protection",
+          "name": "Protection"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_repulsion",
+          "name": "Repulsion"
+        },
+        {
+          "spell": "vestige:pf2_resist_energy",
+          "name": "Resist Energy"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:pf2_silence",
+          "name": "Silence"
+        },
+        {
+          "spell": "vestige:pf2_tangle_vine",
+          "name": "Tangle Vine"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        },
+        {
+          "spell": "vestige:root",
+          "name": "Root"
+        },
+        {
+          "spell": "vestige:shield",
+          "name": "Shield"
+        }
+      ]
+    },
+    "vestige:acid": {
+      "allowed_affinity": true,
+      "count": 2,
+      "spells": [
+        {
+          "spell": "vestige:acid_orb",
+          "name": "Acid Spit"
+        },
+        {
+          "spell": "vestige:pf2_caustic_blast",
+          "name": "Caustic Blast"
+        }
+      ]
+    },
+    "vestige:air": {
+      "allowed_affinity": true,
+      "count": 11,
+      "spells": [
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_gentle_landing",
+          "name": "Gentle Landing"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_slashing_gust",
+          "name": "Slashing Gust"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_thunderstrike",
+          "name": "Thunderstrike"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        }
+      ]
+    },
+    "vestige:amplify": {
+      "allowed_affinity": false,
+      "count": 214,
+      "spells": [
+        {
+          "spell": "vestige:abyssal_shroud",
+          "name": "Abyssal Shroud"
+        },
+        {
+          "spell": "vestige:acid_orb",
+          "name": "Acid Spit"
+        },
+        {
+          "spell": "vestige:acupuncture",
+          "name": "Acupuncture"
+        },
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:arcane_lock",
+          "name": "Arcane Lock"
+        },
+        {
+          "spell": "vestige:arcane_shackle",
+          "name": "Arcane Shackle"
+        },
+        {
+          "spell": "vestige:arrow_volley",
+          "name": "Arrow Volley"
+        },
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:ball_lightning",
+          "name": "Ball Lightning"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:blaze_storm",
+          "name": "Blaze Storm"
+        },
+        {
+          "spell": "vestige:blessing_of_life",
+          "name": "Blessing Of Life"
+        },
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        },
+        {
+          "spell": "vestige:blizzard",
+          "name": "Blizzard"
+        },
+        {
+          "spell": "vestige:blood_needles",
+          "name": "Blood Needles"
+        },
+        {
+          "spell": "vestige:blood_slash",
+          "name": "Blood Slash"
+        },
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:burning_dash",
+          "name": "Burning Dash"
+        },
+        {
+          "spell": "vestige:chain_creeper",
+          "name": "Chain Creeper"
+        },
+        {
+          "spell": "vestige:chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:cleanse",
+          "name": "Cleanse"
+        },
+        {
+          "spell": "vestige:cone_of_cold",
+          "name": "Cone Of Cold"
+        },
+        {
+          "spell": "vestige:counterspell",
+          "name": "Counterspell"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:divine_smite",
+          "name": "Divine Smite"
+        },
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        },
+        {
+          "spell": "vestige:earthquake",
+          "name": "Earthquake"
+        },
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:eldritch_blast",
+          "name": "Eldritch Blast"
+        },
+        {
+          "spell": "vestige:electrocute",
+          "name": "Electrocute"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:fang_strike",
+          "name": "Fang Strike"
+        },
+        {
+          "spell": "vestige:fang_swirl",
+          "name": "Fang Swirl"
+        },
+        {
+          "spell": "vestige:fang_ward",
+          "name": "Fang Ward"
+        },
+        {
+          "spell": "vestige:fire_arrow",
+          "name": "Fire Arrow"
+        },
+        {
+          "spell": "vestige:fire_breath",
+          "name": "Fire Breath"
+        },
+        {
+          "spell": "vestige:fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:firebolt",
+          "name": "Firebolt"
+        },
+        {
+          "spell": "vestige:firecracker",
+          "name": "Firecracker"
+        },
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:flaming_barrage",
+          "name": "Flaming Barrage"
+        },
+        {
+          "spell": "vestige:flaming_strike",
+          "name": "Flaming Strike"
+        },
+        {
+          "spell": "vestige:force_arrow",
+          "name": "Force Arrow"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:frostwave",
+          "name": "Frostwave"
+        },
+        {
+          "spell": "vestige:gluttony",
+          "name": "Gluttony"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:greater_heal",
+          "name": "Greater Heal"
+        },
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:heat_surge",
+          "name": "Heat Surge"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:icicle",
+          "name": "Icicle"
+        },
+        {
+          "spell": "vestige:interposing_earth",
+          "name": "Interposing Earth"
+        },
+        {
+          "spell": "vestige:invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:lightning_lance",
+          "name": "Lightning Lance"
+        },
+        {
+          "spell": "vestige:lob_creeper",
+          "name": "Lob Creeper"
+        },
+        {
+          "spell": "vestige:magic_arrow",
+          "name": "Magic Arrow"
+        },
+        {
+          "spell": "vestige:magic_missile",
+          "name": "Magic Missile"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:oakskin",
+          "name": "Oakskin"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_arctic_rift",
+          "name": "Arctic Rift"
+        },
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_breathe_fire",
+          "name": "Breathe Fire"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_caustic_blast",
+          "name": "Caustic Blast"
+        },
+        {
+          "spell": "vestige:pf2_chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:pf2_cinder_swarm",
+          "name": "Cinder Swarm"
+        },
+        {
+          "spell": "vestige:pf2_clairvoyance",
+          "name": "Clairvoyance"
+        },
+        {
+          "spell": "vestige:pf2_collective_transposition",
+          "name": "Collective Transposition"
+        },
+        {
+          "spell": "vestige:pf2_containment",
+          "name": "Containment"
+        },
+        {
+          "spell": "vestige:pf2_create_water",
+          "name": "Create Water"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_detect_magic",
+          "name": "Detect Magic"
+        },
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_electric_arc",
+          "name": "Electric Arc"
+        },
+        {
+          "spell": "vestige:pf2_enfeeble",
+          "name": "Enfeeble"
+        },
+        {
+          "spell": "vestige:pf2_enlarge",
+          "name": "Enlarge"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_false_vitality",
+          "name": "False Vitality"
+        },
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_field_of_life",
+          "name": "Field of Life"
+        },
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_fire_shield",
+          "name": "Fire Shield"
+        },
+        {
+          "spell": "vestige:pf2_fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:pf2_fleet_step",
+          "name": "Fleet Step"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_floating_flame",
+          "name": "Floating Flame"
+        },
+        {
+          "spell": "vestige:pf2_force_barrage",
+          "name": "Force Barrage"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_gentle_landing",
+          "name": "Gentle Landing"
+        },
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        },
+        {
+          "spell": "vestige:pf2_gouging_claw",
+          "name": "Gouging Claw"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        },
+        {
+          "spell": "vestige:pf2_grim_tendrils",
+          "name": "Grim Tendrils"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_hydraulic_push",
+          "name": "Hydraulic Push"
+        },
+        {
+          "spell": "vestige:pf2_ignition",
+          "name": "Ignition"
+        },
+        {
+          "spell": "vestige:pf2_illusory_creature",
+          "name": "Illusory Creature"
+        },
+        {
+          "spell": "vestige:pf2_illusory_object",
+          "name": "Illusory Object"
+        },
+        {
+          "spell": "vestige:pf2_invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:pf2_item_facade",
+          "name": "Item Facade"
+        },
+        {
+          "spell": "vestige:pf2_lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_mirror_image",
+          "name": "Mirror Image"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_needle_darts",
+          "name": "Needle Darts"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_protection",
+          "name": "Protection"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_puff_of_poison",
+          "name": "Puff of Poison"
+        },
+        {
+          "spell": "vestige:pf2_read_aura",
+          "name": "Read Aura"
+        },
+        {
+          "spell": "vestige:pf2_regenerate",
+          "name": "Regenerate"
+        },
+        {
+          "spell": "vestige:pf2_repulsion",
+          "name": "Repulsion"
+        },
+        {
+          "spell": "vestige:pf2_resist_energy",
+          "name": "Resist Energy"
+        },
+        {
+          "spell": "vestige:pf2_revealing_light",
+          "name": "Revealing Light"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_scatter_scree",
+          "name": "Scatter Scree"
+        },
+        {
+          "spell": "vestige:pf2_see_the_unseen",
+          "name": "See the Unseen"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:pf2_shrink",
+          "name": "Shrink"
+        },
+        {
+          "spell": "vestige:pf2_silence",
+          "name": "Silence"
+        },
+        {
+          "spell": "vestige:pf2_slashing_gust",
+          "name": "Slashing Gust"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        },
+        {
+          "spell": "vestige:pf2_spirit_blast",
+          "name": "Spirit Blast"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:pf2_spout",
+          "name": "Spout"
+        },
+        {
+          "spell": "vestige:pf2_status",
+          "name": "Status"
+        },
+        {
+          "spell": "vestige:pf2_summon_animal",
+          "name": "Summon Animal"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_tangle_vine",
+          "name": "Tangle Vine"
+        },
+        {
+          "spell": "vestige:pf2_telekinetic_projectile",
+          "name": "Telekinetic Projectile"
+        },
+        {
+          "spell": "vestige:pf2_thunderstrike",
+          "name": "Thunderstrike"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:pf2_vitality_lash",
+          "name": "Vitality Lash"
+        },
+        {
+          "spell": "vestige:pf2_void_warp",
+          "name": "Void Warp"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        },
+        {
+          "spell": "vestige:pf2_weapon_storm",
+          "name": "Weapon Storm"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        },
+        {
+          "spell": "vestige:planar_sight",
+          "name": "Planar Sight"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:poison_arrow",
+          "name": "Poison Arrow"
+        },
+        {
+          "spell": "vestige:poison_breath",
+          "name": "Poison Spray"
+        },
+        {
+          "spell": "vestige:poison_splash",
+          "name": "Poison Splash"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:ray_of_frost",
+          "name": "Ray Of Frost"
+        },
+        {
+          "spell": "vestige:ray_of_siphoning",
+          "name": "Ray Of Siphoning"
+        },
+        {
+          "spell": "vestige:recall",
+          "name": "Recall"
+        },
+        {
+          "spell": "vestige:root",
+          "name": "Root"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        },
+        {
+          "spell": "vestige:scapegoat",
+          "name": "Scapegoat"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        },
+        {
+          "spell": "vestige:shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:shockwave",
+          "name": "Shockwave"
+        },
+        {
+          "spell": "vestige:slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:snowball",
+          "name": "Snowball"
+        },
+        {
+          "spell": "vestige:sonic_boom",
+          "name": "Sonic Boom"
+        },
+        {
+          "spell": "vestige:spectral_hammer",
+          "name": "Spectral Hammer"
+        },
+        {
+          "spell": "vestige:spider_aspect",
+          "name": "Aspect of the Spider"
+        },
+        {
+          "spell": "vestige:starfall",
+          "name": "Starfall"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:summon_horse",
+          "name": "Summon Horse"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        },
+        {
+          "spell": "vestige:summon_vex",
+          "name": "Summon Vex"
+        },
+        {
+          "spell": "vestige:summon_zombie",
+          "name": "Summon Zombie"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        },
+        {
+          "spell": "vestige:teleport",
+          "name": "Teleport"
+        },
+        {
+          "spell": "vestige:throw",
+          "name": "Throw"
+        },
+        {
+          "spell": "vestige:thunderstorm",
+          "name": "Thunderstorm"
+        },
+        {
+          "spell": "vestige:touch_dig",
+          "name": "Touch Dig"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        },
+        {
+          "spell": "vestige:wall_of_fire",
+          "name": "Wall Of Fire"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        },
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        },
+        {
+          "spell": "vestige:wololo",
+          "name": "Wololo"
+        }
+      ]
+    },
+    "vestige:area": {
+      "allowed_affinity": false,
+      "count": 210,
+      "spells": [
+        {
+          "spell": "vestige:abyssal_shroud",
+          "name": "Abyssal Shroud"
+        },
+        {
+          "spell": "vestige:acid_orb",
+          "name": "Acid Spit"
+        },
+        {
+          "spell": "vestige:acupuncture",
+          "name": "Acupuncture"
+        },
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:arcane_shackle",
+          "name": "Arcane Shackle"
+        },
+        {
+          "spell": "vestige:arrow_volley",
+          "name": "Arrow Volley"
+        },
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:ball_lightning",
+          "name": "Ball Lightning"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:blaze_storm",
+          "name": "Blaze Storm"
+        },
+        {
+          "spell": "vestige:blessing_of_life",
+          "name": "Blessing Of Life"
+        },
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        },
+        {
+          "spell": "vestige:blizzard",
+          "name": "Blizzard"
+        },
+        {
+          "spell": "vestige:blood_needles",
+          "name": "Blood Needles"
+        },
+        {
+          "spell": "vestige:blood_slash",
+          "name": "Blood Slash"
+        },
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:burning_dash",
+          "name": "Burning Dash"
+        },
+        {
+          "spell": "vestige:chain_creeper",
+          "name": "Chain Creeper"
+        },
+        {
+          "spell": "vestige:chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:cleanse",
+          "name": "Cleanse"
+        },
+        {
+          "spell": "vestige:cone_of_cold",
+          "name": "Cone Of Cold"
+        },
+        {
+          "spell": "vestige:counterspell",
+          "name": "Counterspell"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:divine_smite",
+          "name": "Divine Smite"
+        },
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        },
+        {
+          "spell": "vestige:earthquake",
+          "name": "Earthquake"
+        },
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:eldritch_blast",
+          "name": "Eldritch Blast"
+        },
+        {
+          "spell": "vestige:electrocute",
+          "name": "Electrocute"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:fang_strike",
+          "name": "Fang Strike"
+        },
+        {
+          "spell": "vestige:fang_swirl",
+          "name": "Fang Swirl"
+        },
+        {
+          "spell": "vestige:fang_ward",
+          "name": "Fang Ward"
+        },
+        {
+          "spell": "vestige:fire_arrow",
+          "name": "Fire Arrow"
+        },
+        {
+          "spell": "vestige:fire_breath",
+          "name": "Fire Breath"
+        },
+        {
+          "spell": "vestige:fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:firebolt",
+          "name": "Firebolt"
+        },
+        {
+          "spell": "vestige:firecracker",
+          "name": "Firecracker"
+        },
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:flaming_barrage",
+          "name": "Flaming Barrage"
+        },
+        {
+          "spell": "vestige:flaming_strike",
+          "name": "Flaming Strike"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:frostwave",
+          "name": "Frostwave"
+        },
+        {
+          "spell": "vestige:gluttony",
+          "name": "Gluttony"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:greater_heal",
+          "name": "Greater Heal"
+        },
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:heat_surge",
+          "name": "Heat Surge"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:icicle",
+          "name": "Icicle"
+        },
+        {
+          "spell": "vestige:invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:lightning_lance",
+          "name": "Lightning Lance"
+        },
+        {
+          "spell": "vestige:lob_creeper",
+          "name": "Lob Creeper"
+        },
+        {
+          "spell": "vestige:magic_arrow",
+          "name": "Magic Arrow"
+        },
+        {
+          "spell": "vestige:magic_missile",
+          "name": "Magic Missile"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:oakskin",
+          "name": "Oakskin"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_arctic_rift",
+          "name": "Arctic Rift"
+        },
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_breathe_fire",
+          "name": "Breathe Fire"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_caustic_blast",
+          "name": "Caustic Blast"
+        },
+        {
+          "spell": "vestige:pf2_chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:pf2_cinder_swarm",
+          "name": "Cinder Swarm"
+        },
+        {
+          "spell": "vestige:pf2_clairvoyance",
+          "name": "Clairvoyance"
+        },
+        {
+          "spell": "vestige:pf2_collective_transposition",
+          "name": "Collective Transposition"
+        },
+        {
+          "spell": "vestige:pf2_containment",
+          "name": "Containment"
+        },
+        {
+          "spell": "vestige:pf2_create_water",
+          "name": "Create Water"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_detect_magic",
+          "name": "Detect Magic"
+        },
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_electric_arc",
+          "name": "Electric Arc"
+        },
+        {
+          "spell": "vestige:pf2_enfeeble",
+          "name": "Enfeeble"
+        },
+        {
+          "spell": "vestige:pf2_enlarge",
+          "name": "Enlarge"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_false_vitality",
+          "name": "False Vitality"
+        },
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_field_of_life",
+          "name": "Field of Life"
+        },
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_fire_shield",
+          "name": "Fire Shield"
+        },
+        {
+          "spell": "vestige:pf2_fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:pf2_fleet_step",
+          "name": "Fleet Step"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_floating_flame",
+          "name": "Floating Flame"
+        },
+        {
+          "spell": "vestige:pf2_force_barrage",
+          "name": "Force Barrage"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_gentle_landing",
+          "name": "Gentle Landing"
+        },
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        },
+        {
+          "spell": "vestige:pf2_gouging_claw",
+          "name": "Gouging Claw"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        },
+        {
+          "spell": "vestige:pf2_grim_tendrils",
+          "name": "Grim Tendrils"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_hydraulic_push",
+          "name": "Hydraulic Push"
+        },
+        {
+          "spell": "vestige:pf2_ignition",
+          "name": "Ignition"
+        },
+        {
+          "spell": "vestige:pf2_illusory_creature",
+          "name": "Illusory Creature"
+        },
+        {
+          "spell": "vestige:pf2_illusory_object",
+          "name": "Illusory Object"
+        },
+        {
+          "spell": "vestige:pf2_invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:pf2_item_facade",
+          "name": "Item Facade"
+        },
+        {
+          "spell": "vestige:pf2_lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_mirror_image",
+          "name": "Mirror Image"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_needle_darts",
+          "name": "Needle Darts"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_protection",
+          "name": "Protection"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_puff_of_poison",
+          "name": "Puff of Poison"
+        },
+        {
+          "spell": "vestige:pf2_read_aura",
+          "name": "Read Aura"
+        },
+        {
+          "spell": "vestige:pf2_regenerate",
+          "name": "Regenerate"
+        },
+        {
+          "spell": "vestige:pf2_repulsion",
+          "name": "Repulsion"
+        },
+        {
+          "spell": "vestige:pf2_resist_energy",
+          "name": "Resist Energy"
+        },
+        {
+          "spell": "vestige:pf2_revealing_light",
+          "name": "Revealing Light"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_scatter_scree",
+          "name": "Scatter Scree"
+        },
+        {
+          "spell": "vestige:pf2_see_the_unseen",
+          "name": "See the Unseen"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:pf2_shrink",
+          "name": "Shrink"
+        },
+        {
+          "spell": "vestige:pf2_silence",
+          "name": "Silence"
+        },
+        {
+          "spell": "vestige:pf2_slashing_gust",
+          "name": "Slashing Gust"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        },
+        {
+          "spell": "vestige:pf2_spirit_blast",
+          "name": "Spirit Blast"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:pf2_spout",
+          "name": "Spout"
+        },
+        {
+          "spell": "vestige:pf2_status",
+          "name": "Status"
+        },
+        {
+          "spell": "vestige:pf2_summon_animal",
+          "name": "Summon Animal"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_tangle_vine",
+          "name": "Tangle Vine"
+        },
+        {
+          "spell": "vestige:pf2_telekinetic_projectile",
+          "name": "Telekinetic Projectile"
+        },
+        {
+          "spell": "vestige:pf2_thunderstrike",
+          "name": "Thunderstrike"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:pf2_vitality_lash",
+          "name": "Vitality Lash"
+        },
+        {
+          "spell": "vestige:pf2_void_warp",
+          "name": "Void Warp"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        },
+        {
+          "spell": "vestige:pf2_weapon_storm",
+          "name": "Weapon Storm"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        },
+        {
+          "spell": "vestige:planar_sight",
+          "name": "Planar Sight"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:poison_arrow",
+          "name": "Poison Arrow"
+        },
+        {
+          "spell": "vestige:poison_breath",
+          "name": "Poison Spray"
+        },
+        {
+          "spell": "vestige:poison_splash",
+          "name": "Poison Splash"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:ray_of_frost",
+          "name": "Ray Of Frost"
+        },
+        {
+          "spell": "vestige:ray_of_siphoning",
+          "name": "Ray Of Siphoning"
+        },
+        {
+          "spell": "vestige:recall",
+          "name": "Recall"
+        },
+        {
+          "spell": "vestige:root",
+          "name": "Root"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        },
+        {
+          "spell": "vestige:scapegoat",
+          "name": "Scapegoat"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        },
+        {
+          "spell": "vestige:shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:shockwave",
+          "name": "Shockwave"
+        },
+        {
+          "spell": "vestige:slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:snowball",
+          "name": "Snowball"
+        },
+        {
+          "spell": "vestige:sonic_boom",
+          "name": "Sonic Boom"
+        },
+        {
+          "spell": "vestige:spectral_hammer",
+          "name": "Spectral Hammer"
+        },
+        {
+          "spell": "vestige:spider_aspect",
+          "name": "Aspect of the Spider"
+        },
+        {
+          "spell": "vestige:starfall",
+          "name": "Starfall"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:summon_horse",
+          "name": "Summon Horse"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        },
+        {
+          "spell": "vestige:summon_vex",
+          "name": "Summon Vex"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        },
+        {
+          "spell": "vestige:teleport",
+          "name": "Teleport"
+        },
+        {
+          "spell": "vestige:throw",
+          "name": "Throw"
+        },
+        {
+          "spell": "vestige:thunderstorm",
+          "name": "Thunderstorm"
+        },
+        {
+          "spell": "vestige:touch_dig",
+          "name": "Touch Dig"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        },
+        {
+          "spell": "vestige:wall_of_fire",
+          "name": "Wall Of Fire"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        },
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        },
+        {
+          "spell": "vestige:wololo",
+          "name": "Wololo"
+        }
+      ]
+    },
+    "vestige:blood": {
+      "allowed_affinity": true,
+      "count": 10,
+      "spells": [
+        {
+          "spell": "vestige:acupuncture",
+          "name": "Acupuncture"
+        },
+        {
+          "spell": "vestige:blood_needles",
+          "name": "Blood Needles"
+        },
+        {
+          "spell": "vestige:blood_slash",
+          "name": "Blood Slash"
+        },
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:ray_of_siphoning",
+          "name": "Ray Of Siphoning"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        }
+      ]
+    },
+    "vestige:conjuration": {
+      "allowed_affinity": true,
+      "count": 40,
+      "spells": [
+        {
+          "spell": "vestige:chain_creeper",
+          "name": "Chain Creeper"
+        },
+        {
+          "spell": "vestige:fang_strike",
+          "name": "Fang Strike"
+        },
+        {
+          "spell": "vestige:fang_swirl",
+          "name": "Fang Swirl"
+        },
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:interposing_earth",
+          "name": "Interposing Earth"
+        },
+        {
+          "spell": "vestige:lob_creeper",
+          "name": "Lob Creeper"
+        },
+        {
+          "spell": "vestige:pf2_cinder_swarm",
+          "name": "Cinder Swarm"
+        },
+        {
+          "spell": "vestige:pf2_collective_transposition",
+          "name": "Collective Transposition"
+        },
+        {
+          "spell": "vestige:pf2_create_water",
+          "name": "Create Water"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_floating_flame",
+          "name": "Floating Flame"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:pf2_summon_animal",
+          "name": "Summon Animal"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:scapegoat",
+          "name": "Scapegoat"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:summon_horse",
+          "name": "Summon Horse"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        },
+        {
+          "spell": "vestige:summon_vex",
+          "name": "Summon Vex"
+        },
+        {
+          "spell": "vestige:summon_zombie",
+          "name": "Summon Zombie"
+        },
+        {
+          "spell": "vestige:wall_of_fire",
+          "name": "Wall Of Fire"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        }
+      ]
+    },
+    "vestige:curse": {
+      "allowed_affinity": true,
+      "count": 1,
+      "spells": [
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        }
+      ]
+    },
+    "vestige:death": {
+      "allowed_affinity": true,
+      "count": 6,
+      "spells": [
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        },
+        {
+          "spell": "vestige:summon_zombie",
+          "name": "Summon Zombie"
+        },
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        }
+      ]
+    },
+    "vestige:divination": {
+      "allowed_affinity": true,
+      "count": 7,
+      "spells": [
+        {
+          "spell": "vestige:pf2_clairvoyance",
+          "name": "Clairvoyance"
+        },
+        {
+          "spell": "vestige:pf2_detect_magic",
+          "name": "Detect Magic"
+        },
+        {
+          "spell": "vestige:pf2_read_aura",
+          "name": "Read Aura"
+        },
+        {
+          "spell": "vestige:pf2_revealing_light",
+          "name": "Revealing Light"
+        },
+        {
+          "spell": "vestige:pf2_see_the_unseen",
+          "name": "See the Unseen"
+        },
+        {
+          "spell": "vestige:pf2_status",
+          "name": "Status"
+        },
+        {
+          "spell": "vestige:planar_sight",
+          "name": "Planar Sight"
+        }
+      ]
+    },
+    "vestige:draconic": {
+      "allowed_affinity": true,
+      "count": 1,
+      "spells": [
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        }
+      ]
+    },
+    "vestige:dream": {
+      "allowed_affinity": true,
+      "count": 2,
+      "spells": [
+        {
+          "spell": "vestige:pf2_illusory_object",
+          "name": "Illusory Object"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        }
+      ]
+    },
+    "vestige:earth": {
+      "allowed_affinity": true,
+      "count": 16,
+      "spells": [
+        {
+          "spell": "vestige:earthquake",
+          "name": "Earthquake"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:interposing_earth",
+          "name": "Interposing Earth"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_scatter_scree",
+          "name": "Scatter Scree"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:touch_dig",
+          "name": "Touch Dig"
+        }
+      ]
+    },
+    "vestige:emotion": {
+      "allowed_affinity": true,
+      "count": 2,
+      "spells": [
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        }
+      ]
+    },
+    "vestige:enchantment": {
+      "allowed_affinity": true,
+      "count": 7,
+      "spells": [
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        },
+        {
+          "spell": "vestige:slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:spider_aspect",
+          "name": "Aspect of the Spider"
+        }
+      ]
+    },
+    "vestige:ender": {
+      "allowed_affinity": true,
+      "count": 11,
+      "spells": [
+        {
+          "spell": "vestige:arcane_shackle",
+          "name": "Arcane Shackle"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:counterspell",
+          "name": "Counterspell"
+        },
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        },
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:starfall",
+          "name": "Starfall"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        }
+      ]
+    },
+    "vestige:evocation": {
+      "allowed_affinity": true,
+      "count": 78,
+      "spells": [
+        {
+          "spell": "vestige:acid_orb",
+          "name": "Acid Spit"
+        },
+        {
+          "spell": "vestige:arrow_volley",
+          "name": "Arrow Volley"
+        },
+        {
+          "spell": "vestige:ball_lightning",
+          "name": "Ball Lightning"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:blaze_storm",
+          "name": "Blaze Storm"
+        },
+        {
+          "spell": "vestige:blizzard",
+          "name": "Blizzard"
+        },
+        {
+          "spell": "vestige:blood_needles",
+          "name": "Blood Needles"
+        },
+        {
+          "spell": "vestige:blood_slash",
+          "name": "Blood Slash"
+        },
+        {
+          "spell": "vestige:chain_creeper",
+          "name": "Chain Creeper"
+        },
+        {
+          "spell": "vestige:chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:cone_of_cold",
+          "name": "Cone Of Cold"
+        },
+        {
+          "spell": "vestige:divine_smite",
+          "name": "Divine Smite"
+        },
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        },
+        {
+          "spell": "vestige:earthquake",
+          "name": "Earthquake"
+        },
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:eldritch_blast",
+          "name": "Eldritch Blast"
+        },
+        {
+          "spell": "vestige:electrocute",
+          "name": "Electrocute"
+        },
+        {
+          "spell": "vestige:fang_strike",
+          "name": "Fang Strike"
+        },
+        {
+          "spell": "vestige:fang_swirl",
+          "name": "Fang Swirl"
+        },
+        {
+          "spell": "vestige:fang_ward",
+          "name": "Fang Ward"
+        },
+        {
+          "spell": "vestige:fire_arrow",
+          "name": "Fire Arrow"
+        },
+        {
+          "spell": "vestige:fire_breath",
+          "name": "Fire Breath"
+        },
+        {
+          "spell": "vestige:fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:firebolt",
+          "name": "Firebolt"
+        },
+        {
+          "spell": "vestige:firecracker",
+          "name": "Firecracker"
+        },
+        {
+          "spell": "vestige:flaming_barrage",
+          "name": "Flaming Barrage"
+        },
+        {
+          "spell": "vestige:flaming_strike",
+          "name": "Flaming Strike"
+        },
+        {
+          "spell": "vestige:force_arrow",
+          "name": "Force Arrow"
+        },
+        {
+          "spell": "vestige:frostwave",
+          "name": "Frostwave"
+        },
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:heat_surge",
+          "name": "Heat Surge"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:icicle",
+          "name": "Icicle"
+        },
+        {
+          "spell": "vestige:lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:lightning_lance",
+          "name": "Lightning Lance"
+        },
+        {
+          "spell": "vestige:lob_creeper",
+          "name": "Lob Creeper"
+        },
+        {
+          "spell": "vestige:magic_arrow",
+          "name": "Magic Arrow"
+        },
+        {
+          "spell": "vestige:magic_missile",
+          "name": "Magic Missile"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:pf2_arctic_rift",
+          "name": "Arctic Rift"
+        },
+        {
+          "spell": "vestige:pf2_breathe_fire",
+          "name": "Breathe Fire"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_caustic_blast",
+          "name": "Caustic Blast"
+        },
+        {
+          "spell": "vestige:pf2_chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_electric_arc",
+          "name": "Electric Arc"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:pf2_force_barrage",
+          "name": "Force Barrage"
+        },
+        {
+          "spell": "vestige:pf2_frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:pf2_ignition",
+          "name": "Ignition"
+        },
+        {
+          "spell": "vestige:pf2_lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:pf2_needle_darts",
+          "name": "Needle Darts"
+        },
+        {
+          "spell": "vestige:pf2_puff_of_poison",
+          "name": "Puff of Poison"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_slashing_gust",
+          "name": "Slashing Gust"
+        },
+        {
+          "spell": "vestige:pf2_spirit_blast",
+          "name": "Spirit Blast"
+        },
+        {
+          "spell": "vestige:pf2_weapon_storm",
+          "name": "Weapon Storm"
+        },
+        {
+          "spell": "vestige:poison_arrow",
+          "name": "Poison Arrow"
+        },
+        {
+          "spell": "vestige:poison_breath",
+          "name": "Poison Spray"
+        },
+        {
+          "spell": "vestige:poison_splash",
+          "name": "Poison Splash"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:ray_of_frost",
+          "name": "Ray Of Frost"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        },
+        {
+          "spell": "vestige:shockwave",
+          "name": "Shockwave"
+        },
+        {
+          "spell": "vestige:snowball",
+          "name": "Snowball"
+        },
+        {
+          "spell": "vestige:sonic_boom",
+          "name": "Sonic Boom"
+        },
+        {
+          "spell": "vestige:starfall",
+          "name": "Starfall"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        },
+        {
+          "spell": "vestige:throw",
+          "name": "Throw"
+        },
+        {
+          "spell": "vestige:thunderstorm",
+          "name": "Thunderstorm"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        },
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        }
+      ]
+    },
+    "vestige:fire": {
+      "allowed_affinity": true,
+      "count": 23,
+      "spells": [
+        {
+          "spell": "vestige:blaze_storm",
+          "name": "Blaze Storm"
+        },
+        {
+          "spell": "vestige:burning_dash",
+          "name": "Burning Dash"
+        },
+        {
+          "spell": "vestige:fire_arrow",
+          "name": "Fire Arrow"
+        },
+        {
+          "spell": "vestige:fire_breath",
+          "name": "Fire Breath"
+        },
+        {
+          "spell": "vestige:fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:firebolt",
+          "name": "Firebolt"
+        },
+        {
+          "spell": "vestige:flaming_barrage",
+          "name": "Flaming Barrage"
+        },
+        {
+          "spell": "vestige:flaming_strike",
+          "name": "Flaming Strike"
+        },
+        {
+          "spell": "vestige:heat_surge",
+          "name": "Heat Surge"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:pf2_breathe_fire",
+          "name": "Breathe Fire"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_cinder_swarm",
+          "name": "Cinder Swarm"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_fire_shield",
+          "name": "Fire Shield"
+        },
+        {
+          "spell": "vestige:pf2_fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:pf2_floating_flame",
+          "name": "Floating Flame"
+        },
+        {
+          "spell": "vestige:pf2_ignition",
+          "name": "Ignition"
+        },
+        {
+          "spell": "vestige:pf2_resist_energy",
+          "name": "Resist Energy"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:wall_of_fire",
+          "name": "Wall Of Fire"
+        }
+      ]
+    },
+    "vestige:force": {
+      "allowed_affinity": true,
+      "count": 14,
+      "spells": [
+        {
+          "spell": "vestige:firecracker",
+          "name": "Firecracker"
+        },
+        {
+          "spell": "vestige:force_arrow",
+          "name": "Force Arrow"
+        },
+        {
+          "spell": "vestige:magic_arrow",
+          "name": "Magic Arrow"
+        },
+        {
+          "spell": "vestige:magic_missile",
+          "name": "Magic Missile"
+        },
+        {
+          "spell": "vestige:pf2_containment",
+          "name": "Containment"
+        },
+        {
+          "spell": "vestige:pf2_force_barrage",
+          "name": "Force Barrage"
+        },
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_repulsion",
+          "name": "Repulsion"
+        },
+        {
+          "spell": "vestige:pf2_shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:pf2_telekinetic_projectile",
+          "name": "Telekinetic Projectile"
+        },
+        {
+          "spell": "vestige:shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:spectral_hammer",
+          "name": "Spectral Hammer"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        }
+      ]
+    },
+    "vestige:glass": {
+      "allowed_affinity": true,
+      "count": 1,
+      "spells": [
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        }
+      ]
+    },
+    "vestige:holy": {
+      "allowed_affinity": true,
+      "count": 18,
+      "spells": [
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:blessing_of_life",
+          "name": "Blessing Of Life"
+        },
+        {
+          "spell": "vestige:cleanse",
+          "name": "Cleanse"
+        },
+        {
+          "spell": "vestige:divine_smite",
+          "name": "Divine Smite"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:greater_heal",
+          "name": "Greater Heal"
+        },
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_field_of_life",
+          "name": "Field of Life"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_protection",
+          "name": "Protection"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:pf2_vitality_lash",
+          "name": "Vitality Lash"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        }
+      ]
+    },
+    "vestige:ice": {
+      "allowed_affinity": true,
+      "count": 18,
+      "spells": [
+        {
+          "spell": "vestige:blizzard",
+          "name": "Blizzard"
+        },
+        {
+          "spell": "vestige:cone_of_cold",
+          "name": "Cone Of Cold"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:frostwave",
+          "name": "Frostwave"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:icicle",
+          "name": "Icicle"
+        },
+        {
+          "spell": "vestige:pf2_arctic_rift",
+          "name": "Arctic Rift"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:ray_of_frost",
+          "name": "Ray Of Frost"
+        },
+        {
+          "spell": "vestige:snowball",
+          "name": "Snowball"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        }
+      ]
+    },
+    "vestige:illusion": {
+      "allowed_affinity": true,
+      "count": 14,
+      "spells": [
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_illusory_creature",
+          "name": "Illusory Creature"
+        },
+        {
+          "spell": "vestige:pf2_illusory_object",
+          "name": "Illusory Object"
+        },
+        {
+          "spell": "vestige:pf2_invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:pf2_item_facade",
+          "name": "Item Facade"
+        },
+        {
+          "spell": "vestige:pf2_mirror_image",
+          "name": "Mirror Image"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        },
+        {
+          "spell": "vestige:scapegoat",
+          "name": "Scapegoat"
+        }
+      ]
+    },
+    "vestige:life": {
+      "allowed_affinity": true,
+      "count": 26,
+      "spells": [
+        {
+          "spell": "vestige:blessing_of_life",
+          "name": "Blessing Of Life"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:gluttony",
+          "name": "Gluttony"
+        },
+        {
+          "spell": "vestige:greater_heal",
+          "name": "Greater Heal"
+        },
+        {
+          "spell": "vestige:heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_enfeeble",
+          "name": "Enfeeble"
+        },
+        {
+          "spell": "vestige:pf2_false_vitality",
+          "name": "False Vitality"
+        },
+        {
+          "spell": "vestige:pf2_field_of_life",
+          "name": "Field of Life"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_regenerate",
+          "name": "Regenerate"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        },
+        {
+          "spell": "vestige:pf2_status",
+          "name": "Status"
+        },
+        {
+          "spell": "vestige:pf2_summon_animal",
+          "name": "Summon Animal"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_vitality_lash",
+          "name": "Vitality Lash"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:summon_horse",
+          "name": "Summon Horse"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        }
+      ]
+    },
+    "vestige:light": {
+      "allowed_affinity": true,
+      "count": 5,
+      "spells": [
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:pf2_mirror_image",
+          "name": "Mirror Image"
+        },
+        {
+          "spell": "vestige:pf2_revealing_light",
+          "name": "Revealing Light"
+        },
+        {
+          "spell": "vestige:pf2_see_the_unseen",
+          "name": "See the Unseen"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        }
+      ]
+    },
+    "vestige:lightning": {
+      "allowed_affinity": true,
+      "count": 15,
+      "spells": [
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:ball_lightning",
+          "name": "Ball Lightning"
+        },
+        {
+          "spell": "vestige:chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:electrocute",
+          "name": "Electrocute"
+        },
+        {
+          "spell": "vestige:lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:lightning_lance",
+          "name": "Lightning Lance"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:pf2_electric_arc",
+          "name": "Electric Arc"
+        },
+        {
+          "spell": "vestige:pf2_lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:pf2_thunderstrike",
+          "name": "Thunderstrike"
+        },
+        {
+          "spell": "vestige:shockwave",
+          "name": "Shockwave"
+        },
+        {
+          "spell": "vestige:thunderstorm",
+          "name": "Thunderstorm"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        }
+      ]
+    },
+    "vestige:metal": {
+      "allowed_affinity": true,
+      "count": 6,
+      "spells": [
+        {
+          "spell": "vestige:arrow_volley",
+          "name": "Arrow Volley"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_needle_darts",
+          "name": "Needle Darts"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_weapon_storm",
+          "name": "Weapon Storm"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        }
+      ]
+    },
+    "vestige:mind": {
+      "allowed_affinity": true,
+      "count": 6,
+      "spells": [
+        {
+          "spell": "vestige:pf2_detect_magic",
+          "name": "Detect Magic"
+        },
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_illusory_creature",
+          "name": "Illusory Creature"
+        },
+        {
+          "spell": "vestige:pf2_read_aura",
+          "name": "Read Aura"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        }
+      ]
+    },
+    "vestige:motion": {
+      "allowed_affinity": true,
+      "count": 21,
+      "spells": [
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:burning_dash",
+          "name": "Burning Dash"
+        },
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:pf2_fleet_step",
+          "name": "Fleet Step"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_hydraulic_push",
+          "name": "Hydraulic Push"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_spout",
+          "name": "Spout"
+        },
+        {
+          "spell": "vestige:pf2_telekinetic_projectile",
+          "name": "Telekinetic Projectile"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        },
+        {
+          "spell": "vestige:throw",
+          "name": "Throw"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        }
+      ]
+    },
+    "vestige:necromancy": {
+      "allowed_affinity": true,
+      "count": 15,
+      "spells": [
+        {
+          "spell": "vestige:acupuncture",
+          "name": "Acupuncture"
+        },
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_enfeeble",
+          "name": "Enfeeble"
+        },
+        {
+          "spell": "vestige:pf2_false_vitality",
+          "name": "False Vitality"
+        },
+        {
+          "spell": "vestige:pf2_grim_tendrils",
+          "name": "Grim Tendrils"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:pf2_void_warp",
+          "name": "Void Warp"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:ray_of_siphoning",
+          "name": "Ray Of Siphoning"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        },
+        {
+          "spell": "vestige:summon_zombie",
+          "name": "Summon Zombie"
+        }
+      ]
+    },
+    "vestige:oil": {
+      "allowed_affinity": true,
+      "count": 1,
+      "spells": [
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        }
+      ]
+    },
+    "vestige:plant": {
+      "allowed_affinity": true,
+      "count": 7,
+      "spells": [
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_tangle_vine",
+          "name": "Tangle Vine"
+        },
+        {
+          "spell": "vestige:root",
+          "name": "Root"
+        }
+      ]
+    },
+    "vestige:poison": {
+      "allowed_affinity": true,
+      "count": 6,
+      "spells": [
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        },
+        {
+          "spell": "vestige:pf2_puff_of_poison",
+          "name": "Puff of Poison"
+        },
+        {
+          "spell": "vestige:poison_arrow",
+          "name": "Poison Arrow"
+        },
+        {
+          "spell": "vestige:poison_breath",
+          "name": "Poison Spray"
+        },
+        {
+          "spell": "vestige:poison_splash",
+          "name": "Poison Splash"
+        },
+        {
+          "spell": "vestige:spider_aspect",
+          "name": "Aspect of the Spider"
+        }
+      ]
+    },
+    "vestige:polymorph": {
+      "allowed_affinity": true,
+      "count": 4,
+      "spells": [
+        {
+          "spell": "vestige:pf2_enlarge",
+          "name": "Enlarge"
+        },
+        {
+          "spell": "vestige:pf2_gouging_claw",
+          "name": "Gouging Claw"
+        },
+        {
+          "spell": "vestige:pf2_shrink",
+          "name": "Shrink"
+        },
+        {
+          "spell": "vestige:wololo",
+          "name": "Wololo"
+        }
+      ]
+    },
+    "vestige:range": {
+      "allowed_affinity": false,
+      "count": 212,
+      "spells": [
+        {
+          "spell": "vestige:abyssal_shroud",
+          "name": "Abyssal Shroud"
+        },
+        {
+          "spell": "vestige:acid_orb",
+          "name": "Acid Spit"
+        },
+        {
+          "spell": "vestige:acupuncture",
+          "name": "Acupuncture"
+        },
+        {
+          "spell": "vestige:angel_wing",
+          "name": "Angel Wings"
+        },
+        {
+          "spell": "vestige:arcane_lock",
+          "name": "Arcane Lock"
+        },
+        {
+          "spell": "vestige:arcane_shackle",
+          "name": "Arcane Shackle"
+        },
+        {
+          "spell": "vestige:arrow_volley",
+          "name": "Arrow Volley"
+        },
+        {
+          "spell": "vestige:ascension",
+          "name": "Ascension"
+        },
+        {
+          "spell": "vestige:ball_lightning",
+          "name": "Ball Lightning"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:blaze_storm",
+          "name": "Blaze Storm"
+        },
+        {
+          "spell": "vestige:blessing_of_life",
+          "name": "Blessing Of Life"
+        },
+        {
+          "spell": "vestige:blight",
+          "name": "Blight"
+        },
+        {
+          "spell": "vestige:blizzard",
+          "name": "Blizzard"
+        },
+        {
+          "spell": "vestige:blood_needles",
+          "name": "Blood Needles"
+        },
+        {
+          "spell": "vestige:blood_slash",
+          "name": "Blood Slash"
+        },
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:burning_dash",
+          "name": "Burning Dash"
+        },
+        {
+          "spell": "vestige:chain_creeper",
+          "name": "Chain Creeper"
+        },
+        {
+          "spell": "vestige:chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:charge",
+          "name": "Charge"
+        },
+        {
+          "spell": "vestige:cleanse",
+          "name": "Cleanse"
+        },
+        {
+          "spell": "vestige:cone_of_cold",
+          "name": "Cone Of Cold"
+        },
+        {
+          "spell": "vestige:counterspell",
+          "name": "Counterspell"
+        },
+        {
+          "spell": "vestige:devour",
+          "name": "Devour"
+        },
+        {
+          "spell": "vestige:divine_smite",
+          "name": "Divine Smite"
+        },
+        {
+          "spell": "vestige:dragon_breath",
+          "name": "Dragon Breath"
+        },
+        {
+          "spell": "vestige:earthquake",
+          "name": "Earthquake"
+        },
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:eldritch_blast",
+          "name": "Eldritch Blast"
+        },
+        {
+          "spell": "vestige:electrocute",
+          "name": "Electrocute"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:fang_strike",
+          "name": "Fang Strike"
+        },
+        {
+          "spell": "vestige:fang_swirl",
+          "name": "Fang Swirl"
+        },
+        {
+          "spell": "vestige:fang_ward",
+          "name": "Fang Ward"
+        },
+        {
+          "spell": "vestige:fire_arrow",
+          "name": "Fire Arrow"
+        },
+        {
+          "spell": "vestige:fire_breath",
+          "name": "Fire Breath"
+        },
+        {
+          "spell": "vestige:fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:firebolt",
+          "name": "Firebolt"
+        },
+        {
+          "spell": "vestige:firecracker",
+          "name": "Firecracker"
+        },
+        {
+          "spell": "vestige:firefly_swarm",
+          "name": "Firefly Swarm"
+        },
+        {
+          "spell": "vestige:flaming_barrage",
+          "name": "Flaming Barrage"
+        },
+        {
+          "spell": "vestige:flaming_strike",
+          "name": "Flaming Strike"
+        },
+        {
+          "spell": "vestige:force_arrow",
+          "name": "Force Arrow"
+        },
+        {
+          "spell": "vestige:fortify",
+          "name": "Fortify"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:frostwave",
+          "name": "Frostwave"
+        },
+        {
+          "spell": "vestige:gluttony",
+          "name": "Gluttony"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:greater_heal",
+          "name": "Greater Heal"
+        },
+        {
+          "spell": "vestige:guiding_bolt",
+          "name": "Guiding Bolt"
+        },
+        {
+          "spell": "vestige:gust",
+          "name": "Gust"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:healing_circle",
+          "name": "Healing Circle"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:heat_surge",
+          "name": "Heat Surge"
+        },
+        {
+          "spell": "vestige:ice_block",
+          "name": "Ice Block"
+        },
+        {
+          "spell": "vestige:ice_spikes",
+          "name": "Ice Spikes"
+        },
+        {
+          "spell": "vestige:ice_tomb",
+          "name": "Ice Tomb"
+        },
+        {
+          "spell": "vestige:icicle",
+          "name": "Icicle"
+        },
+        {
+          "spell": "vestige:invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:lightning_lance",
+          "name": "Lightning Lance"
+        },
+        {
+          "spell": "vestige:lob_creeper",
+          "name": "Lob Creeper"
+        },
+        {
+          "spell": "vestige:magic_arrow",
+          "name": "Magic Arrow"
+        },
+        {
+          "spell": "vestige:magic_missile",
+          "name": "Magic Missile"
+        },
+        {
+          "spell": "vestige:magma_bomb",
+          "name": "Magma Bomb"
+        },
+        {
+          "spell": "vestige:oakskin",
+          "name": "Oakskin"
+        },
+        {
+          "spell": "vestige:pf2_air_bubble",
+          "name": "Air Bubble"
+        },
+        {
+          "spell": "vestige:pf2_arctic_rift",
+          "name": "Arctic Rift"
+        },
+        {
+          "spell": "vestige:pf2_bind_undead",
+          "name": "Bind Undead"
+        },
+        {
+          "spell": "vestige:pf2_breathe_fire",
+          "name": "Breathe Fire"
+        },
+        {
+          "spell": "vestige:pf2_cataclysm",
+          "name": "Cataclysm"
+        },
+        {
+          "spell": "vestige:pf2_caustic_blast",
+          "name": "Caustic Blast"
+        },
+        {
+          "spell": "vestige:pf2_chain_lightning",
+          "name": "Chain Lightning"
+        },
+        {
+          "spell": "vestige:pf2_cinder_swarm",
+          "name": "Cinder Swarm"
+        },
+        {
+          "spell": "vestige:pf2_clairvoyance",
+          "name": "Clairvoyance"
+        },
+        {
+          "spell": "vestige:pf2_collective_transposition",
+          "name": "Collective Transposition"
+        },
+        {
+          "spell": "vestige:pf2_containment",
+          "name": "Containment"
+        },
+        {
+          "spell": "vestige:pf2_create_water",
+          "name": "Create Water"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_detect_magic",
+          "name": "Detect Magic"
+        },
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_electric_arc",
+          "name": "Electric Arc"
+        },
+        {
+          "spell": "vestige:pf2_enfeeble",
+          "name": "Enfeeble"
+        },
+        {
+          "spell": "vestige:pf2_enlarge",
+          "name": "Enlarge"
+        },
+        {
+          "spell": "vestige:pf2_falling_stars",
+          "name": "Falling Stars"
+        },
+        {
+          "spell": "vestige:pf2_false_vitality",
+          "name": "False Vitality"
+        },
+        {
+          "spell": "vestige:pf2_fear",
+          "name": "Fear"
+        },
+        {
+          "spell": "vestige:pf2_field_of_life",
+          "name": "Field of Life"
+        },
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_fire_shield",
+          "name": "Fire Shield"
+        },
+        {
+          "spell": "vestige:pf2_fireball",
+          "name": "Fireball"
+        },
+        {
+          "spell": "vestige:pf2_fleet_step",
+          "name": "Fleet Step"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_floating_flame",
+          "name": "Floating Flame"
+        },
+        {
+          "spell": "vestige:pf2_force_barrage",
+          "name": "Force Barrage"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_frostbite",
+          "name": "Frostbite"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_gentle_breeze",
+          "name": "Gentle Breeze"
+        },
+        {
+          "spell": "vestige:pf2_gentle_landing",
+          "name": "Gentle Landing"
+        },
+        {
+          "spell": "vestige:pf2_glass_shield",
+          "name": "Glass Shield"
+        },
+        {
+          "spell": "vestige:pf2_gouging_claw",
+          "name": "Gouging Claw"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_grease",
+          "name": "Grease"
+        },
+        {
+          "spell": "vestige:pf2_grim_tendrils",
+          "name": "Grim Tendrils"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_heal",
+          "name": "Heal"
+        },
+        {
+          "spell": "vestige:pf2_hydraulic_push",
+          "name": "Hydraulic Push"
+        },
+        {
+          "spell": "vestige:pf2_ignition",
+          "name": "Ignition"
+        },
+        {
+          "spell": "vestige:pf2_illusory_creature",
+          "name": "Illusory Creature"
+        },
+        {
+          "spell": "vestige:pf2_illusory_object",
+          "name": "Illusory Object"
+        },
+        {
+          "spell": "vestige:pf2_invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:pf2_item_facade",
+          "name": "Item Facade"
+        },
+        {
+          "spell": "vestige:pf2_lightning_bolt",
+          "name": "Lightning Bolt"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_mirror_image",
+          "name": "Mirror Image"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_needle_darts",
+          "name": "Needle Darts"
+        },
+        {
+          "spell": "vestige:pf2_peaceful_bubble",
+          "name": "Peaceful Bubble"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_protection",
+          "name": "Protection"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_puff_of_poison",
+          "name": "Puff of Poison"
+        },
+        {
+          "spell": "vestige:pf2_read_aura",
+          "name": "Read Aura"
+        },
+        {
+          "spell": "vestige:pf2_regenerate",
+          "name": "Regenerate"
+        },
+        {
+          "spell": "vestige:pf2_repulsion",
+          "name": "Repulsion"
+        },
+        {
+          "spell": "vestige:pf2_resist_energy",
+          "name": "Resist Energy"
+        },
+        {
+          "spell": "vestige:pf2_revealing_light",
+          "name": "Revealing Light"
+        },
+        {
+          "spell": "vestige:pf2_rust_cloud",
+          "name": "Rust Cloud"
+        },
+        {
+          "spell": "vestige:pf2_scatter_scree",
+          "name": "Scatter Scree"
+        },
+        {
+          "spell": "vestige:pf2_see_the_unseen",
+          "name": "See the Unseen"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_share_life",
+          "name": "Share Life"
+        },
+        {
+          "spell": "vestige:pf2_shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:pf2_shrink",
+          "name": "Shrink"
+        },
+        {
+          "spell": "vestige:pf2_silence",
+          "name": "Silence"
+        },
+        {
+          "spell": "vestige:pf2_slashing_gust",
+          "name": "Slashing Gust"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_soothe",
+          "name": "Soothe"
+        },
+        {
+          "spell": "vestige:pf2_spirit_blast",
+          "name": "Spirit Blast"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:pf2_spout",
+          "name": "Spout"
+        },
+        {
+          "spell": "vestige:pf2_status",
+          "name": "Status"
+        },
+        {
+          "spell": "vestige:pf2_summon_animal",
+          "name": "Summon Animal"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_summon_fey",
+          "name": "Summon Fey"
+        },
+        {
+          "spell": "vestige:pf2_summon_plant_or_fungus",
+          "name": "Summon Plant or Fungus"
+        },
+        {
+          "spell": "vestige:pf2_tangle_vine",
+          "name": "Tangle Vine"
+        },
+        {
+          "spell": "vestige:pf2_telekinetic_projectile",
+          "name": "Telekinetic Projectile"
+        },
+        {
+          "spell": "vestige:pf2_thunderstrike",
+          "name": "Thunderstrike"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:pf2_vitality_lash",
+          "name": "Vitality Lash"
+        },
+        {
+          "spell": "vestige:pf2_void_warp",
+          "name": "Void Warp"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_ice",
+          "name": "Wall of Ice"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        },
+        {
+          "spell": "vestige:pf2_weapon_storm",
+          "name": "Weapon Storm"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        },
+        {
+          "spell": "vestige:pf2_zephyr_slip",
+          "name": "Zephyr Slip"
+        },
+        {
+          "spell": "vestige:planar_sight",
+          "name": "Planar Sight"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:poison_arrow",
+          "name": "Poison Arrow"
+        },
+        {
+          "spell": "vestige:poison_breath",
+          "name": "Poison Spray"
+        },
+        {
+          "spell": "vestige:poison_splash",
+          "name": "Poison Splash"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:raise_dead",
+          "name": "Raise Dead"
+        },
+        {
+          "spell": "vestige:raise_hell",
+          "name": "Raise Hell"
+        },
+        {
+          "spell": "vestige:ray_of_frost",
+          "name": "Ray Of Frost"
+        },
+        {
+          "spell": "vestige:ray_of_siphoning",
+          "name": "Ray Of Siphoning"
+        },
+        {
+          "spell": "vestige:recall",
+          "name": "Recall"
+        },
+        {
+          "spell": "vestige:root",
+          "name": "Root"
+        },
+        {
+          "spell": "vestige:sacrifice",
+          "name": "Sacrifice"
+        },
+        {
+          "spell": "vestige:scapegoat",
+          "name": "Scapegoat"
+        },
+        {
+          "spell": "vestige:scorch",
+          "name": "Scorch"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        },
+        {
+          "spell": "vestige:shield",
+          "name": "Shield"
+        },
+        {
+          "spell": "vestige:shockwave",
+          "name": "Shockwave"
+        },
+        {
+          "spell": "vestige:slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:snowball",
+          "name": "Snowball"
+        },
+        {
+          "spell": "vestige:sonic_boom",
+          "name": "Sonic Boom"
+        },
+        {
+          "spell": "vestige:spectral_hammer",
+          "name": "Spectral Hammer"
+        },
+        {
+          "spell": "vestige:spider_aspect",
+          "name": "Aspect of the Spider"
+        },
+        {
+          "spell": "vestige:starfall",
+          "name": "Starfall"
+        },
+        {
+          "spell": "vestige:stomp",
+          "name": "Stomp"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:summon_horse",
+          "name": "Summon Horse"
+        },
+        {
+          "spell": "vestige:summon_polar_bear",
+          "name": "Summon Polar Bear"
+        },
+        {
+          "spell": "vestige:summon_swords",
+          "name": "Summon Swords"
+        },
+        {
+          "spell": "vestige:summon_vex",
+          "name": "Summon Vex"
+        },
+        {
+          "spell": "vestige:sunbeam",
+          "name": "Sunbeam"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        },
+        {
+          "spell": "vestige:teleport",
+          "name": "Teleport"
+        },
+        {
+          "spell": "vestige:throw",
+          "name": "Throw"
+        },
+        {
+          "spell": "vestige:thunderstorm",
+          "name": "Thunderstorm"
+        },
+        {
+          "spell": "vestige:touch_dig",
+          "name": "Touch Dig"
+        },
+        {
+          "spell": "vestige:volt_strike",
+          "name": "Volt Strike"
+        },
+        {
+          "spell": "vestige:wall_of_fire",
+          "name": "Wall Of Fire"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        },
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        },
+        {
+          "spell": "vestige:wololo",
+          "name": "Wololo"
+        }
+      ]
+    },
+    "vestige:shadow": {
+      "allowed_affinity": true,
+      "count": 3,
+      "spells": [
+        {
+          "spell": "vestige:pf2_invisibility",
+          "name": "Invisibility"
+        },
+        {
+          "spell": "vestige:sculk_tentacles",
+          "name": "Sculk Tentacles"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        }
+      ]
+    },
+    "vestige:sonic": {
+      "allowed_affinity": true,
+      "count": 3,
+      "spells": [
+        {
+          "spell": "vestige:pf2_figment",
+          "name": "Figment"
+        },
+        {
+          "spell": "vestige:pf2_silence",
+          "name": "Silence"
+        },
+        {
+          "spell": "vestige:sonic_boom",
+          "name": "Sonic Boom"
+        }
+      ]
+    },
+    "vestige:space": {
+      "allowed_affinity": true,
+      "count": 13,
+      "spells": [
+        {
+          "spell": "vestige:pf2_clairvoyance",
+          "name": "Clairvoyance"
+        },
+        {
+          "spell": "vestige:pf2_collective_transposition",
+          "name": "Collective Transposition"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_gravity_well",
+          "name": "Gravity Well"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_pet_cache",
+          "name": "Pet Cache"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:recall",
+          "name": "Recall"
+        },
+        {
+          "spell": "vestige:summon_ender_chest",
+          "name": "Summon Ender Chest"
+        },
+        {
+          "spell": "vestige:teleport",
+          "name": "Teleport"
+        }
+      ]
+    },
+    "vestige:spirit": {
+      "allowed_affinity": true,
+      "count": 5,
+      "spells": [
+        {
+          "spell": "vestige:pf2_divine_lance",
+          "name": "Divine Lance"
+        },
+        {
+          "spell": "vestige:pf2_spirit_blast",
+          "name": "Spirit Blast"
+        },
+        {
+          "spell": "vestige:pf2_spiritual_armament",
+          "name": "Spiritual Armament"
+        },
+        {
+          "spell": "vestige:summon_vex",
+          "name": "Summon Vex"
+        },
+        {
+          "spell": "vestige:wisp",
+          "name": "Wisp"
+        }
+      ]
+    },
+    "vestige:stone": {
+      "allowed_affinity": true,
+      "count": 5,
+      "spells": [
+        {
+          "spell": "vestige:interposing_earth",
+          "name": "Interposing Earth"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_scatter_scree",
+          "name": "Scatter Scree"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_stone",
+          "name": "Wall of Stone"
+        }
+      ]
+    },
+    "vestige:teleportation": {
+      "allowed_affinity": true,
+      "count": 10,
+      "spells": [
+        {
+          "spell": "vestige:blood_step",
+          "name": "Blood Step"
+        },
+        {
+          "spell": "vestige:evasion",
+          "name": "Evasion"
+        },
+        {
+          "spell": "vestige:frost_step",
+          "name": "Frost Step"
+        },
+        {
+          "spell": "vestige:pf2_flicker",
+          "name": "Flicker"
+        },
+        {
+          "spell": "vestige:pf2_translocate",
+          "name": "Translocate"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        },
+        {
+          "spell": "vestige:portal",
+          "name": "Portal"
+        },
+        {
+          "spell": "vestige:recall",
+          "name": "Recall"
+        },
+        {
+          "spell": "vestige:shadow_slash",
+          "name": "Shadow Slash"
+        },
+        {
+          "spell": "vestige:teleport",
+          "name": "Teleport"
+        }
+      ]
+    },
+    "vestige:time": {
+      "allowed_affinity": true,
+      "count": 7,
+      "spells": [
+        {
+          "spell": "vestige:echoing_strikes",
+          "name": "Echoing Strikes"
+        },
+        {
+          "spell": "vestige:haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:heartstop",
+          "name": "Heartstop"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:slow",
+          "name": "Slow"
+        }
+      ]
+    },
+    "vestige:transmutation": {
+      "allowed_affinity": true,
+      "count": 20,
+      "spells": [
+        {
+          "spell": "vestige:gluttony",
+          "name": "Gluttony"
+        },
+        {
+          "spell": "vestige:pf2_enlarge",
+          "name": "Enlarge"
+        },
+        {
+          "spell": "vestige:pf2_fleet_step",
+          "name": "Fleet Step"
+        },
+        {
+          "spell": "vestige:pf2_gecko_grip",
+          "name": "Gecko Grip"
+        },
+        {
+          "spell": "vestige:pf2_gouging_claw",
+          "name": "Gouging Claw"
+        },
+        {
+          "spell": "vestige:pf2_haste",
+          "name": "Haste"
+        },
+        {
+          "spell": "vestige:pf2_item_facade",
+          "name": "Item Facade"
+        },
+        {
+          "spell": "vestige:pf2_magic_passage",
+          "name": "Magic Passage"
+        },
+        {
+          "spell": "vestige:pf2_magnetic_attraction",
+          "name": "Magnetic Attraction"
+        },
+        {
+          "spell": "vestige:pf2_regenerate",
+          "name": "Regenerate"
+        },
+        {
+          "spell": "vestige:pf2_shape_stone",
+          "name": "Shape Stone"
+        },
+        {
+          "spell": "vestige:pf2_shrink",
+          "name": "Shrink"
+        },
+        {
+          "spell": "vestige:pf2_slow",
+          "name": "Slow"
+        },
+        {
+          "spell": "vestige:pf2_time_jump",
+          "name": "Time Jump"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        },
+        {
+          "spell": "vestige:spectral_hammer",
+          "name": "Spectral Hammer"
+        },
+        {
+          "spell": "vestige:telekinesis",
+          "name": "Telekinesis"
+        },
+        {
+          "spell": "vestige:touch_dig",
+          "name": "Touch Dig"
+        },
+        {
+          "spell": "vestige:wololo",
+          "name": "Wololo"
+        }
+      ]
+    },
+    "vestige:unholy": {
+      "allowed_affinity": true,
+      "count": 1,
+      "spells": [
+        {
+          "spell": "vestige:wither_skull",
+          "name": "Wither Skull"
+        }
+      ]
+    },
+    "vestige:void": {
+      "allowed_affinity": true,
+      "count": 11,
+      "spells": [
+        {
+          "spell": "vestige:abyssal_shroud",
+          "name": "Abyssal Shroud"
+        },
+        {
+          "spell": "vestige:black_hole",
+          "name": "Black Hole"
+        },
+        {
+          "spell": "vestige:eldritch_blast",
+          "name": "Eldritch Blast"
+        },
+        {
+          "spell": "vestige:gravity_fissure",
+          "name": "Gravity Fissure"
+        },
+        {
+          "spell": "vestige:pf2_eclipse_burst",
+          "name": "Eclipse Burst"
+        },
+        {
+          "spell": "vestige:pf2_grim_tendrils",
+          "name": "Grim Tendrils"
+        },
+        {
+          "spell": "vestige:pf2_harm",
+          "name": "Harm"
+        },
+        {
+          "spell": "vestige:pf2_vampiric_feast",
+          "name": "Vampiric Feast"
+        },
+        {
+          "spell": "vestige:pf2_void_warp",
+          "name": "Void Warp"
+        },
+        {
+          "spell": "vestige:planar_sight",
+          "name": "Planar Sight"
+        },
+        {
+          "spell": "vestige:pocket_dimension",
+          "name": "Pocket Dimension"
+        }
+      ]
+    },
+    "vestige:water": {
+      "allowed_affinity": true,
+      "count": 9,
+      "spells": [
+        {
+          "spell": "vestige:pf2_create_water",
+          "name": "Create Water"
+        },
+        {
+          "spell": "vestige:pf2_freezing_rain",
+          "name": "Freezing Rain"
+        },
+        {
+          "spell": "vestige:pf2_hydraulic_push",
+          "name": "Hydraulic Push"
+        },
+        {
+          "spell": "vestige:pf2_mud_pit",
+          "name": "Mud Pit"
+        },
+        {
+          "spell": "vestige:pf2_spout",
+          "name": "Spout"
+        },
+        {
+          "spell": "vestige:pf2_summon_elemental",
+          "name": "Summon Elemental"
+        },
+        {
+          "spell": "vestige:pf2_wall_of_water",
+          "name": "Wall of Water"
+        },
+        {
+          "spell": "vestige:pf2_water_breathing",
+          "name": "Water Breathing"
+        },
+        {
+          "spell": "vestige:pf2_water_walk",
+          "name": "Water Walk"
+        }
+      ]
+    },
+    "vestige:wood": {
+      "allowed_affinity": true,
+      "count": 4,
+      "spells": [
+        {
+          "spell": "vestige:oakskin",
+          "name": "Oakskin"
+        },
+        {
+          "spell": "vestige:pf2_creation",
+          "name": "Creation"
+        },
+        {
+          "spell": "vestige:pf2_protector_tree",
+          "name": "Protector Tree"
+        },
+        {
+          "spell": "vestige:pf2_wooden_double",
+          "name": "Wooden Double"
+        }
+      ]
+    }
+  }
+}

@@ -16,7 +16,7 @@ The [100-source Pathfinder selection](pathfinder-spell-selection.md) lists all 1
 | Rarity | Expected overall value and eventual availability, independent of traits | Common, uncommon, rare, or mythic |
 | Traditions | The magical traditions associated with the spell; more than one is allowed | Arcane and primal |
 | Traits | A flat set of names and numerical ratings | Fire 4, evocation 4, amplify 1 |
-| Costs | Authored resources, charge, and recovery | 28 mana, 20 ticks of charge, 100 ticks of recovery |
+| Costs | Authored resources and preparation | 28 mana, 20 ticks of charge; no ordinary spell cooldown |
 | Triggers | Events that start the spell or activate its temporary reactions | Primary interaction; incoming damage |
 | Targets | Which subjects an effect selects | A hostile creature on the aim ray; enemies near an impact |
 | Effect plan | Ordered actions, delays, repetitions, branches, and callbacks | Launch, then damage and ignite on impact |
@@ -65,10 +65,6 @@ This is the complete [Force Arrow definition](../src/main/resources/data/vestige
     {
       "type": "mana",
       "amount": 14
-    },
-    {
-      "type": "cooldown",
-      "ticks": 40
     }
   ],
   "triggers": [
@@ -145,7 +141,7 @@ A listed trait matters numerically only where the plan reads it. Heartstop lists
 
 ### Fireball as a projectile with an impact plan
 
-**Traditions:** arcane and primal. **Traits:** fire 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 28 mana, 20-tick charge (1 seconds), and a 5-second native cooldown.
+**Traditions:** arcane and primal. **Traits:** fire 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 28 mana, 20-tick charge (1 seconds).
 
 The caster launches a projectile at speed 1 block per tick, with a travel budget of `32 × range` blocks. On impact, it selects up to six hostile living creatures within `3 × area` blocks, deals `8 × amplify` damage to each, and ignites them for two seconds. At baseline, the authored hit is eight health points, equivalent to four hearts before mitigation; burning is additional vanilla behavior.
 
@@ -155,7 +151,7 @@ For an illustrative cast resolved to amplify 2, range 1.5, and area 2, the formu
 
 ### Heartstop as deferred damage
 
-**Tradition:** occult. **Traits:** blood 4, abjuration 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 80 mana, no initial charge, and a 30-second native cooldown.
+**Tradition:** occult. **Traits:** blood 4, abjuration 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 80 mana, no initial charge.
 
 The spell attaches a six-second status manifestation to the caster and initializes a damage accumulator. Its incoming damage binding runs before damage commits, stores the amount it defers, and reduces that pending amount to zero. When the manifestation ends normally, its end callback deals half the stored amount to the caster. For example, 20 deferred damage produces an authored repayment of 10 damage.
 
@@ -165,7 +161,7 @@ The binding has 10,000 finite charges. Amplify, range, and area do not change th
 
 ### Echoing Strikes as an attacker reaction
 
-**Tradition:** arcane. **Traits:** ender 4, evocation 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 38 mana, no initial charge, and a 15-second native cooldown.
+**Tradition:** arcane. **Traits:** ender 4, evocation 4, time 4, amplify 1, range 1, area 1. **Authored cost:** 38 mana, no initial charge.
 
 A ten-second status manifestation installs a binding on the attacker with three charges. Each eligible nonmagical damage event selects that event's victim and applies another hit worth `0.5 × reported event damage × amplify`. An event reporting eight damage therefore produces an authored four-damage echo at baseline. Range and area are unused.
 
@@ -175,7 +171,7 @@ The magical-event guard keeps its own magical echo from consuming further charge
 
 ### Portal as a cast with a second placement
 
-**Tradition:** arcane. **Traits:** ender 4, space 4, teleportation 4, amplify 1, range 1, area 1. **Authored cost:** 48 mana, no initial charge, and a 20-second native cooldown.
+**Tradition:** arcane. **Traits:** ender 4, space 4, teleportation 4, amplify 1, range 1, area 1. **Authored cost:** 48 mana, no initial charge.
 
 The first input captures an aimed position within `48 × range` blocks. The session waits up to 2,400 ticks, or two minutes, for another input of the same spell and mode. The next input captures a second position and creates linked endpoints for 1,200 ticks, or one minute. A resumed session pays once; the second placement is a continuation of the original cast.
 
@@ -185,7 +181,7 @@ Endpoints in the same dimension must be at least two blocks apart. They transfer
 
 ### Raise Dead as an owned summon cohort
 
-**Tradition:** occult. **Traits:** death 4, necromancy 4, conjuration 4, amplify 1, range 1, area 1. **Authored cost:** 60 mana, 30-tick charge (1.5 seconds), and a 30-second native cooldown.
+**Tradition:** occult. **Traits:** death 4, necromancy 4, conjuration 4, amplify 1, range 1, area 1. **Authored cost:** 60 mana, 30-tick charge (1.5 seconds).
 
 The effect plan creates two zombies with iron swords and one skeleton with a bow. Leather helmets protect those bodies from ordinary daylight burning. The native ownership layer supplies following and combat behavior. Their maximum lifetime is 600 ticks, or thirty seconds; recasting the waiting session dismisses its cohort early.
 
@@ -195,7 +191,7 @@ None of its scaling traits is read. Its source school is Blood, while its native
 
 ### Root as a destructible restraint
 
-**Tradition:** primal. **Traits:** plant 4, abjuration 4, amplify 1, range 1, area 1. **Authored cost:** 26 mana, 20-tick charge (1 seconds), and a 10-second native cooldown.
+**Tradition:** primal. **Traits:** plant 4, abjuration 4, amplify 1, range 1, area 1. **Authored cost:** 26 mana, 20-tick charge (1 seconds).
 
 The spell selects an aimed hostile creature within `24 × range` blocks and creates a tether lasting four seconds. The tether has a backing anchor authored with ten health points and constrains the target around its initial position, with a radius of half a block. Every five ticks, it refreshes 25 ticks of vanilla Slowness V. Destroying or dispelling the anchor stops the tether and refreshes; the last slowness application can remain briefly until its own expiry.
 
@@ -205,7 +201,7 @@ Amplify and area are unused. Root is a restraint built from tether and status pr
 
 ### Chain Lightning as reusable chained targeting
 
-**Traditions:** arcane and primal. **Traits:** lightning 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 32 mana, 10-tick charge (0.5 seconds), and a 6-second native cooldown.
+**Traditions:** arcane and primal. **Traits:** lightning 4, evocation 4, amplify 1, range 1, area 1. **Authored cost:** 32 mana, 10-tick charge (0.5 seconds).
 
 A chain selector finds an initial aimed hostile creature within `32 × range` blocks and follows up to three more nearby hostiles, for four targets total. Each jump has a fixed six-block search distance and respects the selector's visibility rules. Every selected creature receives `6 × amplify` damage. Area is unused, and range scales initial reach rather than the six-block jump distance.
 
@@ -215,17 +211,17 @@ A chain selector finds an initial aimed hostile creature within `32 × range` bl
 
 The batches add 48, 16 and 36 independent definitions, for 100 `pf2_` IDs. The source rank/cantrip flag describes the published spell; these native costs and outcomes come from Vestige tuning. Source rarity is retained per spell, while native rarity reflects its Minecraft role.
 
-| Spell / native ID | Native rarity | Mana / charge / recovery | Current native outcome |
+| Spell / native ID | Native rarity | Mana / charge | Current native outcome |
 |---|---|---|---|
-| `pf2_electric_arc` | common | 8 / immediate / 1.2 s | Four HP each to at most two distinct creatures; sixteen-block initial reach, four-block visible jump. |
-| `pf2_shield` | common | 6 / immediate / 3 s | Personal three-second ward, reducing one hit by three HP. Existing Iron Shield remains a stationary destructible barrier. |
-| `pf2_bind_undead` | rare | 34 / 0.8 s / 15 s | Control one existing undead mob for eight seconds; expiry/dispel releases the body and restores its prior target. |
-| `pf2_field_of_life` | rare | 40 / 1 s / 11 s | Six delayed one-second pulses: heal living creatures one HP or damage undead two HP, up to six creatures per pulse. Living enemies and the caster can receive healing. |
-| `pf2_regenerate` | rare | 38 / 0.8 s / 13 s | Eight delayed healing pulses of 1.5 HP; fire damage ends the cast. |
-| `pf2_gentle_breeze` | uncommon | 26 / 0.6 s / 8 s | Six HP once per living recipient after three seconds of continuous sampled occupancy; leaving resets progress, undead excluded. |
-| `pf2_flicker` | uncommon | 28 / 0.5 s / 9 s | Four quarter-hit nonmagical reductions and three safe random teleport attempts over six seconds; blocked destinations skip the pulse. |
-| `pf2_heal` / `pf2_harm` | uncommon | 24 / 0.6 s / 6 s | Eight HP restoration or harm to one aimed recipient, reversing living/undead eligibility. |
-| `pf2_cataclysm` | mythic | 90 / 2 s / 30 s | Four eight-HP surges one second apart at a fixed area, with burning, slowing and a final launch. Maximum six targets per phase; leaving the area or interrupting the channel reduces the outcome. |
+| `pf2_electric_arc` | common | 8 / immediate | Four HP each to at most two distinct creatures; sixteen-block initial reach, four-block visible jump. |
+| `pf2_shield` | common | 6 / immediate | Personal three-second ward, reducing one hit by three HP. Existing Iron Shield remains a stationary destructible barrier. |
+| `pf2_bind_undead` | rare | 34 / 0.8 s | Control one existing undead mob for eight seconds; expiry/dispel releases the body and restores its prior target. |
+| `pf2_field_of_life` | rare | 40 / 1 s | Six delayed one-second pulses: heal living creatures one HP or damage undead two HP, up to six creatures per pulse. Living enemies and the caster can receive healing. |
+| `pf2_regenerate` | rare | 38 / 0.8 s | Eight delayed healing pulses of 1.5 HP; fire damage ends the cast. |
+| `pf2_gentle_breeze` | uncommon | 26 / 0.6 s | Six HP once per living recipient after three seconds of continuous sampled occupancy; leaving resets progress, undead excluded. |
+| `pf2_flicker` | uncommon | 28 / 0.5 s | Four quarter-hit nonmagical reductions and three safe random teleport attempts over six seconds; blocked destinations skip the pulse. |
+| `pf2_heal` / `pf2_harm` | uncommon | 24 / 0.6 s | Eight HP restoration or harm to one aimed recipient, reversing living/undead eligibility. |
+| `pf2_cataclysm` | mythic | 90 / 2 s | Four eight-HP surges one second apart at a fixed area, with burning, slowing and a final launch. Maximum six targets per phase; leaving the area or interrupting the channel reduces the outcome. |
 
 Pathfinder descriptive traits use relative unit one, with explicitly calibrated coefficients; source rank does not inflate trait ratings. Typed fire, freezing and lightning use Minecraft damage tags, while undead eligibility uses the entity-type tag. Tabletop saves, spell slots and automatic heightening are omitted. Full differences and citations appear in the [Pathfinder ledger](design/pathfinder-spell-conversions.md), and every executable plan appears below.
 
@@ -257,7 +253,7 @@ Use an operator account in a development world:
 /vestige_magic dispel
 ```
 
-`cast` explicitly bypasses resource costs and native cooldowns for development, while preserving charge/channel timing, recasts, and volatility. To exercise balance, use `/vestige_magic mana 100` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival. Paid casts enforce authored mana and per-spell recovery; Creative bypasses resource payment but retains recovery. Recasts pay once and can resume during their existing cooldown. One active charge/channel per caster prevents simultaneous channel stacking; dormant recast sessions permit other spells. Players have 100 mana, full on first spawn and death/respawn, and recover 2 mana per second after a five-second expenditure delay. The mana gauge is visible only below full. Capacity progression remains deferred. Reload/restart resets active sessions and recovery timers. Normal wand controls, discovery, and progression remain deferred.
+`cast` bypasses resource costs for development, preserving charge/channel timing, recasts and volatility. Use `/vestige_magic mana 100` followed by `/vestige_magic cast_balanced vestige:fireball` in Survival to exercise payment. Ordinary spell cooldowns were removed on October 7, 2026: spells pay their authored resources at release and can prepare again when their active charge/channel ends. A subtle first-person zoom of up to 3% and a straight item draw-back show initial preparation. The native crosshair remains unchanged; the camera smoothly returns after release or cancellation. Recasts pay once; dormant recast sessions permit other spells. Creative bypasses resources but retains timing and unknown/volatile risk. Wands, staffs and scrolls add no equipment recovery. Each initial wand cast still commits deterministic wear with its resource payment. Players have 100 mana, full on first spawn and death/respawn, and recover 2 mana per second after a five-second expenditure delay; each mana-using item shows vanilla cooldown-style shading only while its own next mana payment is unaffordable. The pooled mana balance has no visible meter. Reload/restart resets active sessions and any explicit data-pack spell cooldowns. Broader progression remains deferred.
 
 For Portal, aim at one position and cast, then aim somewhere else and cast again. For Raise Dead, cast once to summon and again to dismiss the waiting cohort. Interrupt stops unfinished casting work; dispel removes owned active manifestations. Spell-specific callbacks can make ending a spell consequential, as with Heartstop.
 
@@ -295,7 +291,7 @@ Lock an aimed container for its owner; casting on an owned lock unlocks it.
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `abjuration` 5, `amplify` 1, `range` 1 |
-| Authored costs | 20 mana; native recovery 40 ticks (2 s) |
+| Authored costs | 20 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -327,7 +323,7 @@ Launch a force projectile that damages its struck creature.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `force` 4, `evocation` 4, `amplify` 1, `range` 1 |
-| Authored costs | 14 mana; native recovery 40 ticks (2 s) |
+| Authored costs | 14 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -359,7 +355,7 @@ A brief one-hit ward reduces the next incoming damage amount.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 5, `stone` 3, `abjuration` 4, `conjuration` 2, `amplify` 1 |
-| Authored costs | 8 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | None |
@@ -390,7 +386,7 @@ Summon one owned zombie for thirty seconds.
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `death` 4, `necromancy` 5, `conjuration` 3, `amplify` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 28 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 20 ticks (1 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify` |
@@ -425,7 +421,7 @@ Breathe through water or suffocation until safe air resumes, with a five-second 
 | Rarity | common |
 | Traditions | arcane, divine, primal |
 | Trait ratings | `air` 1, `life` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -456,7 +452,7 @@ A wide cold rift deals twenty-two HP and heavily slows at most six enemies.
 | Rarity | mythic |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 32 ticks (1.6 s); 64 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 32 ticks (1.6 s); 64 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -487,7 +483,7 @@ Temporarily control one existing undead mob for eight seconds.
 | Rarity | rare |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `death` 1, `necromancy` 1, `enchantment` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 16 ticks (0.8 s); 34 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 16 ticks (0.8 s); 34 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -519,7 +515,7 @@ Breathe a short cone of fire into at most four enemies.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 18 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -549,7 +545,7 @@ Channel four elemental surges into one fixed area for up to thirty-two direct HP
 | Rarity | mythic |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `fire` 1, `ice` 1, `lightning` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 40 ticks (2 s); 90 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 40 ticks (2 s); 90 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -595,7 +591,7 @@ Splash acid over a small three-target area.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `acid` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 30 ticks (1.5 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -627,7 +623,7 @@ Lightning jumps through up to six visible enemies for twelve HP each.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 42 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 20 ticks (1 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -656,7 +652,7 @@ A following firefly swarm burns its captured creature for ten direct HP over fiv
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 28 mana; native recovery 140 ticks (7 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -695,7 +691,7 @@ See through a stationary sensor up to twenty blocks away for eight seconds; dama
 | Rarity | rare |
 | Traditions | arcane, occult |
 | Trait ratings | `divination` 1, `space` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 32 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 32 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -725,7 +721,7 @@ Move three willing nearby allies into a supported formation at the aimed destina
 | Rarity | rare |
 | Traditions | arcane, occult |
 | Trait ratings | `space` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 44 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -754,7 +750,7 @@ Enclose the aimed enemy within a two-way movement boundary for five seconds; out
 | Rarity | rare |
 | Traditions | arcane, occult |
 | Trait ratings | `force` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 36 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -787,7 +783,7 @@ Add one water layer to an aimed cauldron.
 | Rarity | common |
 | Traditions | arcane, divine, primal |
 | Trait ratings | `water` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -816,7 +812,7 @@ Assemble a temporary wooden cover, step or platform for twenty seconds.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `wood` 1, `plant` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 30 ticks (1.5 s); 26 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 30 ticks (1.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -887,7 +883,7 @@ Privately report whether native manifestations or equipped enchanted items are w
 | Rarity | common |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `mind` 1, `divination` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 4 ticks (0.2 s); 8 mana; native recovery 60 ticks (3 s) |
+| Authored costs | initial charge 4 ticks (0.2 s); 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -916,7 +912,7 @@ Strike one creature with a five-HP spiritual lance.
 | Rarity | common |
 | Traditions | divine |
 | Trait ratings | `spirit` 1, `holy` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -945,7 +941,7 @@ An eclipse blast deals twenty HP and briefly blinds and weakens up to six enemie
 | Rarity | mythic |
 | Traditions | arcane, divine, primal |
 | Trait ratings | `ice` 1, `void` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 30 ticks (1.5 s); 62 mana; native recovery 280 ticks (14 s) |
+| Authored costs | initial charge 30 ticks (1.5 s); 62 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -978,7 +974,7 @@ Arc to the aimed creature and at most one nearby enemy, dealing four HP to each.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 24 ticks (1.2 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1007,7 +1003,7 @@ Weaken one creature’s melee attacks for six seconds.
 | Rarity | common |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `life` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 10 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -1036,7 +1032,7 @@ Become physically one-and-a-half size for eight seconds, with one extra block of
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `polymorph` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1067,7 +1063,7 @@ Channel twelve falling stars; each creature can take at most six five-HP impacts
 | Rarity | mythic |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `earth` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 36 ticks (1.8 s); 70 mana; native recovery 360 ticks (18 s) |
+| Authored costs | initial charge 36 ticks (1.8 s); 70 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1106,7 +1102,7 @@ Gain four temporary absorption HP for eight seconds.
 | Rarity | common |
 | Traditions | arcane, occult |
 | Trait ratings | `life` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 180 ticks (9 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1135,7 +1131,7 @@ Frighten one enemy, reducing its melee strength and movement briefly.
 | Rarity | common |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `emotion` 1, `mind` 1, `illusion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 10 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -1165,7 +1161,7 @@ A six-second life field heals living creatures and hurts undead each second.
 | Rarity | rare |
 | Traditions | divine, primal |
 | Trait ratings | `life` 1, `holy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 220 ticks (11 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1202,7 +1198,7 @@ A stationary four-second light-and-sound figment draws nearby hostile mobs towar
 | Rarity | common |
 | Traditions | arcane, occult |
 | Trait ratings | `mind` 1, `illusion` 1, `sonic` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 4 ticks (0.2 s); 12 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 4 ticks (0.2 s); 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -1237,7 +1233,7 @@ An eight-second fire shield blocks three hits and burns nearby attackers, with l
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 34 mana; native recovery 220 ticks (11 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 34 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1274,7 +1270,7 @@ A fireball bursts for fourteen direct HP and burning against up to five enemies.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1311,7 +1307,7 @@ Gain Speed III for five seconds.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 10 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1340,7 +1336,7 @@ For six seconds, reduce four nonmagical hits by a quarter and attempt a short sa
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `space` 1, `teleportation` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1377,7 +1373,7 @@ A fixed floating flame pulses fifteen direct HP over five seconds to each linger
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 22 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1411,7 +1407,7 @@ Three homing force bolts deliver up to nine HP to an aimed enemy.
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `force` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 18 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1448,7 +1444,7 @@ An eight-second rain patch makes moving grounded creatures slide and obscures na
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 1, `water` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 30 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -1480,7 +1476,7 @@ Chill an aimed creature for four HP and briefly weaken it.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1511,7 +1507,7 @@ Climb when touching a wall for eight seconds; crouch to release the grip.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `plant` 1, `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 18 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1541,7 +1537,7 @@ A six-second restorative field heals each living visitor six HP once after three
 | Rarity | uncommon |
 | Traditions | divine, occult, primal |
 | Trait ratings | `air` 1, `life` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 26 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1578,7 +1574,7 @@ Gain five seconds of Slow Falling.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `air` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1607,7 +1603,7 @@ A three-second glass ward blocks three HP once and lashes a nearby attacker for 
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `glass` 1, `force` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 16 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1641,7 +1637,7 @@ A short claw sweep wounds one enemy for six HP and a brief lingering injury.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `polymorph` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1671,7 +1667,7 @@ Collapse the formation of at most four enemies toward one aimed anchor with a si
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `force` 1, `space` 1, `motion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -1706,7 +1702,7 @@ A four-second patch slows and nudges up to three hostile creatures each half-sec
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `oil` 1, `earth` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 6 ticks (0.3 s); 16 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 6 ticks (0.3 s); 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -1742,7 +1738,7 @@ A narrow void line damages four creatures at most, leaving brief lingering injur
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `void` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 18 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1774,7 +1770,7 @@ A ranged void pulse heals undead for eight HP or harms one living creature for e
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `void` 1, `death` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 24 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1806,7 +1802,7 @@ Gain Speed II and Haste II for eight seconds.
 | Rarity | uncommon |
 | Traditions | arcane, occult, primal |
 | Trait ratings | `time` 1, `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 240 ticks (12 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -1836,7 +1832,7 @@ A ranged vitality pulse heals one living creature for eight HP or harms undead f
 | Rarity | uncommon |
 | Traditions | divine, primal |
 | Trait ratings | `life` 1, `holy` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 24 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1868,7 +1864,7 @@ A water jet deals seven HP and forcefully pushes one creature.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `water` 1, `motion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 16 mana; native recovery 60 ticks (3 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1898,7 +1894,7 @@ Burn one aimed creature; six direct HP within three blocks, four farther away, p
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -1931,7 +1927,7 @@ A stationary one-hit wolf-shaped decoy distracts hostile mobs for at most six se
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `mind` 1, `illusion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 22 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -1965,7 +1961,7 @@ Show a stationary, non-solid object silhouette for ten seconds.
 | Rarity | common |
 | Traditions | arcane, occult |
 | Trait ratings | `illusion` 1, `dream` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 12 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2000,7 +1996,7 @@ Stay invisible for eight seconds; dealing committed damage ends this cast and it
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `shadow` 1, `illusion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 26 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2039,7 +2035,7 @@ Overlay an illusory pristine-condition label and held-item glimmer for ten secon
 | Rarity | common |
 | Traditions | arcane, occult |
 | Trait ratings | `illusion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 10 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2069,7 +2065,7 @@ A narrow lightning line deals fourteen HP to up to five enemies.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 16 ticks (0.8 s); 36 mana; native recovery 140 ticks (7 s) |
+| Authored costs | initial charge 16 ticks (0.8 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -2098,7 +2094,7 @@ Open a two-high, three-deep ordinary-stone passage for twelve seconds, then rest
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `space` 1, `stone` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 44 mana; native recovery 400 ticks (20 s) |
+| Authored costs | initial charge 20 ticks (1 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2128,7 +2124,7 @@ Pull up to eight nearby loose metal stacks toward your hand.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `metal` 1, `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2157,7 +2153,7 @@ Three copies of the caster’s live model and equipment each absorb up to five H
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `illusion` 1, `light` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 26 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -2189,7 +2185,7 @@ A six-second mud patch strongly slows at most four hostile creatures, fading sho
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `water` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 24 mana; native recovery 140 ticks (7 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -2224,7 +2220,7 @@ Three needles converge on one aimed creature for at most six direct HP.
 | Rarity | common |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `metal` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -2260,7 +2256,7 @@ A traversable ten-second bubble conceals creatures across its edge from native t
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `dream` 1, `illusion` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 24 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -2292,7 +2288,7 @@ Shelter your existing tame companion for ten seconds, returning the same UUID an
 | Rarity | uncommon |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `space` 1, `life` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 20 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 20 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2321,7 +2317,7 @@ Reduce four incoming hits by twenty percent within eight seconds.
 | Rarity | uncommon |
 | Traditions | divine, occult |
 | Trait ratings | `holy` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 16 mana; native recovery 180 ticks (9 s) |
+| Authored costs | 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2352,7 +2348,7 @@ Grow an oak tree from real temporary logs and leaves. Its sixteen-HP pool protec
 | Rarity | rare |
 | Traditions | primal |
 | Trait ratings | `plant` 1, `wood` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -2390,7 +2386,7 @@ A close poison puff deals three HP and poisons one creature for three seconds.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `poison` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 30 ticks (1.5 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -2420,7 +2416,7 @@ After two seconds of examination, privately report whether the currently held ob
 | Rarity | common |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `mind` 1, `divination` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 40 ticks (2 s); 10 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 40 ticks (2 s); 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2449,7 +2445,7 @@ Regenerate twelve HP over eight seconds unless fire damage ends the effect.
 | Rarity | rare |
 | Traditions | divine, primal |
 | Trait ratings | `life` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 16 ticks (0.8 s); 38 mana; native recovery 260 ticks (13 s) |
+| Authored costs | initial charge 16 ticks (0.8 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -2483,7 +2479,7 @@ A six-second boundary rejects enemies crossing inward, while allies and outgoing
 | Rarity | rare |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `force` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 36 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -2515,7 +2511,7 @@ Halve six incoming fire hits within ten seconds.
 | Rarity | uncommon |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `fire` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 18 mana; native recovery 220 ticks (11 s) |
+| Authored costs | 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2546,7 +2542,7 @@ Reveal up to four creatures with Glowing and strip their invisibility.
 | Rarity | common |
 | Traditions | arcane, divine, occult, primal |
 | Trait ratings | `light` 1, `divination` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -2579,7 +2575,7 @@ A five-second abrasive cloud deals at most ten direct HP per creature and briefl
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `metal` 1, `air` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 16 ticks (0.8 s); 36 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 16 ticks (0.8 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -2615,7 +2611,7 @@ An initial three-HP stone burst leaves a three-second slowing patch.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `stone` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 30 ticks (1.5 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -2654,7 +2650,7 @@ Privately outline nearby invisible creatures for ten seconds.
 | Rarity | uncommon |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `light` 1, `divination` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 20 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 20 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2686,7 +2682,7 @@ Capture one ordinary stone cell; recast within five seconds to move it to a near
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `stone` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 24 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2718,7 +2714,7 @@ Transfer half an ally’s incoming damage to yourself, up to eight actual HP tot
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `life` 1, `blood` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 26 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -2750,7 +2746,7 @@ A three-second ward reduces the next incoming hit by three HP.
 | Rarity | common |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `force` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -2781,7 +2777,7 @@ Become physically half size for eight seconds, with reduced player reach.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `polymorph` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -2812,7 +2808,7 @@ Suppress positional sounds and explicitly vocal native delivery within a three-b
 | Rarity | uncommon |
 | Traditions | divine, occult |
 | Trait ratings | `sonic` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -2844,7 +2840,7 @@ A narrow gust cuts at most two creatures in its path.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `air` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 24 ticks (1.2 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -2873,7 +2869,7 @@ Slow one creature’s movement and block work for five seconds.
 | Rarity | uncommon |
 | Traditions | arcane, occult, primal |
 | Trait ratings | `time` 1, `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 22 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -2903,7 +2899,7 @@ Heal seven HP and remove Weakness from yourself.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `emotion` 1, `life` 1, `enchantment` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 18 mana; native recovery 90 ticks (4.5 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -2933,7 +2929,7 @@ A spiritual detonation strikes up to five enemies for sixteen HP.
 | Rarity | rare |
 | Traditions | divine, occult |
 | Trait ratings | `spirit` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 24 ticks (1.2 s); 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 24 ticks (1.2 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -2964,7 +2960,7 @@ A spirit weapon follows one target for ten one-and-a-half-HP strikes.
 | Rarity | uncommon |
 | Traditions | divine, occult |
 | Trait ratings | `spirit` 1, `holy` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 22 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -3000,7 +2996,7 @@ An aimed water spout damages and lifts up to three creatures.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `water` 1, `motion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 30 ticks (1.5 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -3032,7 +3028,7 @@ Privately monitor three consenting nearby allies’ coarse health, affliction co
 | Rarity | common |
 | Traditions | divine, occult, primal |
 | Trait ratings | `life` 1, `divination` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 12 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -3064,7 +3060,7 @@ Summon one sixteen-HP allied wolf for twenty seconds; recasting dismisses it.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `life` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 30 mana; native recovery 400 ticks (20 s) |
+| Authored costs | initial charge 20 ticks (1 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -3098,7 +3094,7 @@ Choose earth cover, air projectile drag, water firefighting or a fire-pressure b
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `air` 1, `water` 1, `fire` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3189,7 +3185,7 @@ A fragile fey support silhouette spends four tricks briefly slowing nearby enemi
 | Rarity | uncommon |
 | Traditions | occult, primal |
 | Trait ratings | `mind` 1, `illusion` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 28 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -3225,7 +3221,7 @@ Summon a stationary healing plant with six shared healing HP, or a fungus with e
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `plant` 1, `life` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 28 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -3282,7 +3278,7 @@ A breakable vine marker tethers and slows one enemy for three seconds.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `plant` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 40 ticks (2 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -3315,7 +3311,7 @@ Hurl a six-HP telekinetic stone.
 | Rarity | common |
 | Traditions | arcane, occult |
 | Trait ratings | `force` 1, `motion` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3349,7 +3345,7 @@ A thunderbolt deals nine HP and briefly weakens an aimed creature.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 1, `air` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 20 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 20 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3379,7 +3375,7 @@ Briefly step out of time for one second, anchoring the body and suppressing atta
 | Rarity | rare |
 | Traditions | arcane, occult |
 | Trait ratings | `time` 1, `space` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 34 mana; native recovery 240 ticks (12 s) |
+| Authored costs | 34 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -3409,7 +3405,7 @@ Teleport to a visible dry, supported empty position within twenty blocks.
 | Rarity | uncommon |
 | Traditions | arcane, occult |
 | Trait ratings | `space` 1, `teleportation` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 8 ticks (0.4 s); 26 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 8 ticks (0.4 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -3439,7 +3435,7 @@ A close draining touch deals eight HP and grants four temporary HP if it causes 
 | Rarity | uncommon |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `void` 1, `blood` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 12 ticks (0.6 s); 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 12 ticks (0.6 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3474,7 +3470,7 @@ A vitality lash deals seven HP to undead and leaves living creatures unharmed.
 | Rarity | common |
 | Traditions | divine, primal |
 | Trait ratings | `life` 1, `holy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3504,7 +3500,7 @@ Warp living flesh for five HP and a brief weakness; undead are unaffected.
 | Rarity | common |
 | Traditions | arcane, divine, occult |
 | Trait ratings | `void` 1, `necromancy` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 6 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 6 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3536,7 +3532,7 @@ Raise a five-by-three wall of individually breakable ice blocks, lifting occupan
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 1, `conjuration` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 42 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -3571,7 +3567,7 @@ Raise a seven-by-three solid, 40-HP stone panel for fifteen seconds.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `earth` 1, `stone` 1, `conjuration` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -3606,7 +3602,7 @@ Raise a five-by-three traversable wall of real conjured water for ten seconds, e
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `water` 1, `abjuration` 1, `conjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -3640,7 +3636,7 @@ Give up to three willing nearby allies thirty seconds of Water Breathing.
 | Rarity | common |
 | Traditions | arcane, divine, primal |
 | Trait ratings | `water` 1, `life` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 12 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -3671,7 +3667,7 @@ Stand and move on nearby water surfaces for eight seconds; crouch to enter the w
 | Rarity | uncommon |
 | Traditions | arcane, divine, primal |
 | Trait ratings | `water` 1, `motion` 1, `transmutation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 18 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 18 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -3701,7 +3697,7 @@ A weapon storm sweeps up to five enemies with ten HP plus half the caster’s at
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `metal` 1, `evocation` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3730,7 +3726,7 @@ The first hit of at least eight HP sheds up to six HP and attempts a safe sidewa
 | Rarity | uncommon |
 | Traditions | arcane, occult, primal |
 | Trait ratings | `wood` 1, `illusion` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 200 ticks (10 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -3762,7 +3758,7 @@ The first enemy entering a two-block boundary triggers a safe three-block retrea
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `air` 1, `motion` 1, `abjuration` 1, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 22 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -3799,7 +3795,7 @@ Five needles converge on the aimed creature and steal life.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `necromancy` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3836,7 +3832,7 @@ A fan of five needles transfers a quarter of damage to the caster.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3873,7 +3869,7 @@ A piercing slash steals life from each struck creature.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 26 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3909,7 +3905,7 @@ Short teleport followed by invisibility and cleared pursuit.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `teleportation` 4, `illusion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 120 ticks (6 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -3941,7 +3937,7 @@ A bite pulls and drains its victim; a killing bite grants temporary maximum heal
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `necromancy` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 38 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -3981,7 +3977,7 @@ Defer damage for six seconds, then suffer half the accumulated amount.
 | Rarity | mythic |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `abjuration` 4, `time` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 80 mana; native recovery 600 ticks (30 s) |
+| Authored costs | 80 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4018,7 +4014,7 @@ Three owned undead fight for the caster; recast dismisses them.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `death` 4, `necromancy` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 30 ticks (1.5 s); 60 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 30 ticks (1.5 s); 60 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4062,7 +4058,7 @@ A single-target channeled ray heals half the actual damage dealt.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `blood` 4, `necromancy` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4093,7 +4089,7 @@ Detonate an owned summon, scaling damage with its remaining health.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `death` 4, `blood` 4, `necromancy` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 36 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4123,7 +4119,7 @@ Slow skull projectile inflicts a withering blast.
 | Rarity | uncommon |
 | Traditions | occult |
 | Trait ratings | `death` 4, `unholy` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 30 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4163,7 +4159,7 @@ A projectile tethers up to three creatures for four seconds.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 42 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -4200,7 +4196,7 @@ A fixed singularity pulls nearby creatures and pulses damage.
 | Rarity | mythic |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `void` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 88 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 20 ticks (1 s); 88 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4235,7 +4231,7 @@ Interrupt casting, dispel attached native effects, remove effects, or banish sum
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 36 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -4264,7 +4260,7 @@ Channel a damaging dragon cone.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `draconic` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 44 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4294,7 +4290,7 @@ Three ordinary attacks within ten seconds produce an extra hit worth 50% of thei
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `evocation` 4, `time` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 38 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -4327,7 +4323,7 @@ A one-charge dodge protects against the next incoming hit for five seconds.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `abjuration` 4, `teleportation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 240 ticks (12 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4358,7 +4354,7 @@ A moving singularity drags creatures along its path.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `void` 4, `motion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -4393,7 +4389,7 @@ Charged piercing arrow.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `force` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 26 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4428,7 +4424,7 @@ Homing missile steers toward the aimed creature.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `force` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 16 mana; native recovery 50 ticks (2.5 s) |
+| Authored costs | 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4463,7 +4459,7 @@ Two casts place linked, bidirectional teleport endpoints.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `space` 4, `teleportation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 48 mana; native recovery 400 ticks (20 s) |
+| Authored costs | 48 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -4496,7 +4492,7 @@ Return to a valid respawn location or world spawn.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `space` 4, `teleportation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 40 ticks (2 s); 30 mana; native recovery 400 ticks (20 s) |
+| Authored costs | initial charge 40 ticks (2 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4524,7 +4520,7 @@ Blink behind the aimed target and slash nearby enemies with weapon scaling.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `shadow` 4, `teleportation` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 30 mana; native recovery 140 ticks (7 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4555,7 +4551,7 @@ Channel twenty exploding meteors; each creature can take at most ten impacts.
 | Rarity | mythic |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 88 mana; native recovery 600 ticks (30 s) |
+| Authored costs | 88 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4593,7 +4589,7 @@ Open the caster’s vanilla ender chest inventory.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `space` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 16 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4621,7 +4617,7 @@ Three owned flying weapon carriers fight until dismissed.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `ender` 4, `conjuration` 4, `metal` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 30 ticks (1.5 s); 54 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 30 ticks (1.5 s); 54 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4670,7 +4666,7 @@ Collision-checked short-range teleport.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `space` 4, `teleportation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 15 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 15 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -4703,7 +4699,7 @@ Rain twelve arrows over the aimed area; each creature can take at most four impa
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `metal` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 42 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4739,7 +4735,7 @@ An initial blast marks victims; their deaths propagate bounded nearby blasts.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4788,7 +4784,7 @@ A line of eight ground eruptions strikes ahead.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 22 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -4816,7 +4812,7 @@ A ring of eruptions appears at the aimed position.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `conjuration` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4845,7 +4841,7 @@ A ring of ground eruptions defends the caster.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 22 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -4874,7 +4870,7 @@ A lobbed firework bursts with damage and knockback.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `force` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 14 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 14 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -4911,7 +4907,7 @@ A broad gust damages and pushes enemies away.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `air` 4, `motion` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -4941,7 +4937,7 @@ Turn invisible and clear pursuit; attacking ends the effect.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `illusion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 26 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -4978,7 +4974,7 @@ A gravity-driven creeper bomb damages an area.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `evocation` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -5014,7 +5010,7 @@ A goat decoy attracts nearby hostile mobs for fifteen seconds.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `conjuration` 4, `illusion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -5045,7 +5041,7 @@ A stationary destructible ward intercepts projectiles.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `abjuration` 4, `force` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 26 mana; native recovery 240 ticks (12 s) |
+| Authored costs | 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -5077,7 +5073,7 @@ Slow the aimed creature’s movement and digging for four seconds.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `time` 4, `enchantment` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -5107,7 +5103,7 @@ Mine a tool-aware 3×3 face of breakable blocks; honor block-break cancellation.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `force` 4, `transmutation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 80 ticks (4 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -5136,7 +5132,7 @@ Summon a tamed, saddled owned horse for two minutes; recast dismisses it.
 | Rarity | uncommon |
 | Traditions | arcane |
 | Trait ratings | `conjuration` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 24 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 20 ticks (1 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -5170,7 +5166,7 @@ Two owned flying minions fight and follow; recast dismisses them.
 | Rarity | rare |
 | Traditions | arcane |
 | Trait ratings | `conjuration` 4, `spirit` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -5205,7 +5201,7 @@ Throw one held item with weapon damage; recover it at impact or expiry.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `motion` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5242,7 +5238,7 @@ Change an aimed sheep to a random wool color.
 | Rarity | common |
 | Traditions | arcane |
 | Trait ratings | `transmutation` 4, `polymorph` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 3 mana; native recovery 20 ticks (1 s) |
+| Authored costs | initial charge 20 ticks (1 s); 3 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -5276,7 +5272,7 @@ Channel a stream of ten burning firebolts.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 42 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5313,7 +5309,7 @@ Dash forward, burning each contacted creature once.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `motion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 26 mana; native recovery 120 ticks (6 s) |
+| Authored costs | 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5347,7 +5343,7 @@ An explosive burning arrow.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -5383,7 +5379,7 @@ Channel a cone of damaging flame.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 42 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5414,7 +5410,7 @@ A charged fireball explodes on impact.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 28 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 20 ticks (1 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -5450,7 +5446,7 @@ A fast burning bolt.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 40 ticks (2 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5485,7 +5481,7 @@ Five separately aimed fireballs share one recast session with six seconds to aim
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 36 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5531,7 +5527,7 @@ A weapon-scaled burning melee sweep.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 22 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5561,7 +5557,7 @@ An outward burst burns and repels nearby enemies.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -5592,7 +5588,7 @@ A lobbed bomb leaves a damaging magma field.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `earth` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 20 ticks (1 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -5637,7 +5633,7 @@ A ground slam adds half the held weapon’s damage to a fiery eruption.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `earth` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5668,7 +5664,7 @@ A delayed ground eruption burns the aimed area.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `earth` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -5701,7 +5697,7 @@ Two casts draw a six-second burning segment that intercepts projectiles.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `fire` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 48 mana; native recovery 200 ticks (10 s) |
+| Authored costs | 48 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5741,7 +5737,7 @@ Grant temporary flight; owned cleanup restores prior flight permission.
 | Rarity | rare |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `air` 4, `motion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 40 mana; native recovery 400 ticks (20 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -5772,7 +5768,7 @@ Heal an aimed allied creature.
 | Rarity | common |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 15 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 20 ticks (1 s); 15 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5801,7 +5797,7 @@ Remove harmful status effects from nearby allies.
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -5830,7 +5826,7 @@ A holy melee strike adds half the held weapon’s damage.
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 80 ticks (4 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5859,7 +5855,7 @@ Up to four nearby allies gain four absorption HP for ten seconds.
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `abjuration` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 30 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 30 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -5888,7 +5884,7 @@ Restore up to twelve HP to the caster after a charge.
 | Rarity | rare |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 40 ticks (2 s); 42 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 40 ticks (2 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -5917,7 +5913,7 @@ A bolt marks its target and bends nearby projectiles toward it.
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `light` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 22 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -5955,7 +5951,7 @@ Up to four nearby allies gain mining and movement speed.
 | Rarity | uncommon |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `time` 4, `enchantment` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 26 mana; native recovery 500 ticks (25 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -5985,7 +5981,7 @@ Restore a moderate amount of health to the caster.
 | Rarity | common |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 15 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 20 ticks (1 s); 15 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -6014,7 +6010,7 @@ A persistent circle heals up to four allied creatures inside it.
 | Rarity | rare |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `life` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 48 mana; native recovery 300 ticks (15 s) |
+| Authored costs | initial charge 20 ticks (1 s); 48 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6048,7 +6044,7 @@ A sustained piercing beam deals repeated holy damage.
 | Rarity | rare |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `light` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 44 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6078,7 +6074,7 @@ A following wisp field repeatedly damages creatures near its target.
 | Rarity | rare |
 | Traditions | divine |
 | Trait ratings | `holy` 4, `spirit` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 36 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6117,7 +6113,7 @@ A lingering blizzard freezes and slows creatures inside it.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 46 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 46 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6153,7 +6149,7 @@ Channel a freezing cone that slows victims.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 42 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6185,7 +6181,7 @@ Teleport away while a freezing decoy field remains at the departure point.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `teleportation` 4, `illusion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 26 mana; native recovery 140 ticks (7 s) |
+| Authored costs | 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -6221,7 +6217,7 @@ Three ordinary attacks freeze targets; marked deaths shatter into nearby enemies
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `enchantment` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 26 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -6262,7 +6258,7 @@ A radial frost blast repels creatures.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -6293,7 +6289,7 @@ Throw a heavy block of ice that bursts on impact.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `conjuration` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6329,7 +6325,7 @@ A ground line of eight eruptions freezes creatures.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `earth` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6359,7 +6355,7 @@ A protective tomb heals while immobilizing the caster; the first hit breaks it.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `abjuration` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 40 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -6395,7 +6391,7 @@ A fast icicle freezes its victim.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 14 mana; native recovery 50 ticks (2.5 s) |
+| Authored costs | 14 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6430,7 +6426,7 @@ A piercing frost ray slows and freezes creatures.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 40 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6461,7 +6457,7 @@ An explosive snowball freezes and slows an area for three seconds.
 | Rarity | common |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 14 mana; native recovery 100 ticks (5 s) |
+| Authored costs | 14 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area`, `range` |
 | Listed scaling traits unused by plan | `amplify` |
@@ -6498,7 +6494,7 @@ An owned polar bear follows and fights; recast dismisses it.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `ice` 4, `conjuration` 4, `life` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 30 ticks (1.5 s); 42 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 30 ticks (1.5 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -6536,7 +6532,7 @@ Launch upward with slow falling while shocking nearby enemies.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `air` 4, `motion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 36 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 36 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -6569,7 +6565,7 @@ A slow orb leaves a lingering electrical field on impact.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 40 mana; native recovery 160 ticks (8 s) |
+| Authored costs | initial charge 20 ticks (1 s); 40 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6609,7 +6605,7 @@ Lightning jumps between four visible nearby creatures.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 32 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 32 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6638,7 +6634,7 @@ A ten-second charge grants movement and mining speed.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `motion` 4, `enchantment` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 22 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 22 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -6668,7 +6664,7 @@ Channel an electrical cone.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 44 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6698,7 +6694,7 @@ Strike the aimed point with an electrical burst.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 28 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 20 ticks (1 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6729,7 +6725,7 @@ A piercing lightning projectile.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6764,7 +6760,7 @@ A wide electrical shockwave knocks enemies away.
 | Rarity | uncommon |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -6794,7 +6790,7 @@ A ten-second storm follows the caster and strikes up to two visible nearby enemi
 | Rarity | mythic |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 84 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 20 ticks (1 s); 84 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area` |
 | Listed scaling traits unused by plan | `range` |
@@ -6828,7 +6824,7 @@ Dash through enemies, damaging each contacted creature once.
 | Rarity | rare |
 | Traditions | arcane, primal |
 | Trait ratings | `lightning` 4, `motion` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 38 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -6865,7 +6861,7 @@ Spit acid into an area, weakening victims.
 | Rarity | common |
 | Traditions | primal |
 | Trait ratings | `acid` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 12 mana; native recovery 60 ticks (3 s) |
+| Authored costs | 12 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -6902,7 +6898,7 @@ The next three ordinary attacks within ten seconds add damage when the victim is
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `poison` 4, `enchantment` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 24 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify` |
 | Listed scaling traits unused by plan | `area`, `range` |
@@ -6936,7 +6932,7 @@ Halve the victim’s incoming healing and apply poison.
 | Rarity | rare |
 | Traditions | primal |
 | Trait ratings | `curse` 4, `poison` 4, `necromancy` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 38 mana; native recovery 240 ticks (12 s) |
+| Authored costs | initial charge 20 ticks (1 s); 38 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -6969,7 +6965,7 @@ A ground field repeatedly damages and slows creatures.
 | Rarity | rare |
 | Traditions | primal |
 | Trait ratings | `earth` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 48 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 48 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -7004,7 +7000,7 @@ A damaging swarm follows its victim and spreads on death through two generations
 | Rarity | rare |
 | Traditions | primal |
 | Trait ratings | `plant` 4, `life` 4, `conjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 42 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -7052,7 +7048,7 @@ Up to three foods consumed within ten seconds convert nutrition into native mana
 | Rarity | common |
 | Traditions | primal |
 | Trait ratings | `life` 4, `transmutation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 10 mana; native recovery 400 ticks (20 s) |
+| Authored costs | 10 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -7085,7 +7081,7 @@ Reduce up to six ordinary non-fire hits by 25% within ten seconds.
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `wood` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 28 mana; native recovery 300 ticks (15 s) |
+| Authored costs | 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -7116,7 +7112,7 @@ A poison arrow leaves a brief poisonous cloud.
 | Rarity | common |
 | Traditions | primal |
 | Trait ratings | `poison` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 16 mana; native recovery 70 ticks (3.5 s) |
+| Authored costs | 16 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -7157,7 +7153,7 @@ Splash poison across an aimed area.
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `poison` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 28 mana; native recovery 120 ticks (6 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 28 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -7189,7 +7185,7 @@ Channel a poisonous cone.
 | Rarity | rare |
 | Traditions | primal |
 | Trait ratings | `poison` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 42 mana; native recovery 160 ticks (8 s) |
+| Authored costs | 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -7220,7 +7216,7 @@ Anchor and heavily slow an aimed creature for four seconds or until its ten-HP t
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `plant` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 26 mana; native recovery 200 ticks (10 s) |
+| Authored costs | initial charge 20 ticks (1 s); 26 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -7253,7 +7249,7 @@ A forward ground wave damages and launches enemies.
 | Rarity | uncommon |
 | Traditions | primal |
 | Trait ratings | `earth` 4, `evocation` 4, `motion` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 24 mana; native recovery 100 ticks (5 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 24 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -7283,7 +7279,7 @@ Break a hardness-limited aimed block using the held tool and normal drops.
 | Rarity | common |
 | Traditions | primal |
 | Trait ratings | `earth` 4, `transmutation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 8 mana; native recovery 20 ticks (1 s) |
+| Authored costs | 8 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |
@@ -7316,7 +7312,7 @@ Dodge up to three incoming hits within three seconds.
 | Rarity | mythic |
 | Traditions | occult |
 | Trait ratings | `void` 4, `abjuration` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 72 mana; native recovery 600 ticks (30 s) |
+| Authored costs | 72 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -7347,7 +7343,7 @@ Three separately aimed piercing beams share a recast session with five seconds t
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `void` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -7381,7 +7377,7 @@ Reveal up to sixteen nearby creatures through walls for twenty seconds.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `divination` 4, `void` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 10 ticks (0.5 s); 32 mana; native recovery 500 ticks (25 s) |
+| Authored costs | initial charge 10 ticks (0.5 s); 32 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `area` |
 | Listed scaling traits unused by plan | `amplify`, `range` |
@@ -7415,7 +7411,7 @@ Enter a persistent private room; casting inside returns to the saved entry point
 | Rarity | mythic |
 | Traditions | occult |
 | Trait ratings | `space` 4, `void` 4, `conjuration` 4, `teleportation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 40 ticks (2 s); 60 mana; native recovery 600 ticks (30 s) |
+| Authored costs | initial charge 40 ticks (2 s); 60 mana |
 | Start triggers | primary on interact |
 | Traits actually read | None |
 | Listed scaling traits unused by plan | `amplify`, `area`, `range` |
@@ -7443,7 +7439,7 @@ Tentacle pulses damage and briefly blind creatures in an aimed area.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `shadow` 4, `conjuration` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 20 ticks (1 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `area`, `range` |
 | Listed scaling traits unused by plan | None |
@@ -7478,7 +7474,7 @@ A piercing sonic beam passes through solid blocks.
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `sonic` 4, `evocation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | initial charge 20 ticks (1 s); 44 mana; native recovery 180 ticks (9 s) |
+| Authored costs | initial charge 20 ticks (1 s); 44 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `amplify`, `range` |
 | Listed scaling traits unused by plan | `area` |
@@ -7509,7 +7505,7 @@ Hold the originally aimed creature for four seconds; at most three collisions in
 | Rarity | rare |
 | Traditions | occult |
 | Trait ratings | `force` 4, `motion` 4, `transmutation` 4, `amplify` 1, `range` 1, `area` 1 |
-| Authored costs | 42 mana; native recovery 200 ticks (10 s) |
+| Authored costs | 42 mana |
 | Start triggers | primary on interact |
 | Traits actually read | `range` |
 | Listed scaling traits unused by plan | `amplify`, `area` |

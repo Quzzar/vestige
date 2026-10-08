@@ -1,0 +1,107 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/944",
+    "revision": "aon-2026-10-01; Secrets of Magic errata 2.0 (2024-12-16)",
+    "name": "Magnetic Attraction",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "legacy",
+      "publication": "Secrets of Magic p. 114",
+      "rank": 2,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=944"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:metal": 1,
+    "vestige:motion": 1,
+    "vestige:transmutation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 12
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "gather_items",
+          "values": {
+            "radius": {
+              "product": [
+                8,
+                {
+                  "trait": "vestige:range"
+                }
+              ]
+            },
+            "count": 8
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "helix",
+            "color": "99aabf",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 1.2,
+            "speed": -1.8,
+            "phase": 0,
+            "count": 7
+          },
+          {
+            "shape": "shards",
+            "color": "eef5ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.84,
+            "speed": 1.1700000000000002,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "eef5ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "traits": {
+    "vestige:fire": 1,
+    "vestige:abjuration": 1,
+    "vestige:amplify": 1
+  },
+  "variables": {
+    "vestige:fire_reduction": {
+      "clamp": {
+        "value": {
+          "product": [
+            0.25,
+            {
+              "trait": "vestige:fire"
+            }
+          ]
+        },
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "vestige:fire_cap": {
+      "product": [
+        2,
+        {
+          "trait": "vestige:amplify"
+        }
+      ]
+    },
+    "vestige:mana_bonus": 25
+  },
+  "activation": "passive",
+  "costs": [],
+  "triggers": [],
+  "effects": []
+}

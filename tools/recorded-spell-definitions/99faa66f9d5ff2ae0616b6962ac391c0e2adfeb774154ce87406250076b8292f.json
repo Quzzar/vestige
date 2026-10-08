@@ -1,0 +1,99 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:teleport",
+    "school": "irons_spellbooks:ender",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Teleport",
+    "cast_type": "instant",
+    "cooldown_ticks": 120
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:space": 4,
+    "vestige:teleportation": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 15
+    },
+    {
+      "type": "cooldown",
+      "ticks": 80
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "aimed_position",
+        "required": true,
+        "distance": {
+          "product": [
+            8,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "type": "teleport"
+        }
+      ]
+    },
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "vortex",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.22,
+            "scale": 1.0,
+            "speed": -1.4,
+            "phase": 0,
+            "count": 6
+          },
+          {
+            "shape": "motes",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": 0.9099999999999999,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

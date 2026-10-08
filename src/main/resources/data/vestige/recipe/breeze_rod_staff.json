@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [ "S", "S" ],
+  "key": { "S": { "item": "minecraft:breeze_rod" } },
+  "result": { "id": "vestige:breeze_rod_staff", "count": 1 }
+}

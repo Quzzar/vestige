@@ -1,0 +1,367 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:firefly_swarm",
+    "school": "irons_spellbooks:nature",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Firefly Swarm",
+    "cast_type": "long",
+    "cooldown_ticks": 400
+  },
+  "rarity": "rare",
+  "traditions": [
+    "primal"
+  ],
+  "traits": {
+    "vestige:plant": 4,
+    "vestige:life": 4,
+    "vestige:conjuration": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 42
+    },
+    {
+      "type": "cooldown",
+      "ticks": 200
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            32,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "create_manifestation",
+          "target": {
+            "selection": "current",
+            "required": true
+          },
+          "manifestation": {
+            "kind": "vestige:status",
+            "duration": 100,
+            "values": {},
+            "identifiers": {
+              "particle": "minecraft:spore_blossom_air"
+            },
+            "bindings": [
+              {
+                "id": "vestige:swarm_spread_2",
+                "duration": 200,
+                "charges": 1,
+                "triggers": [
+                  {
+                    "id": "vestige:swarm_spread_2/trigger",
+                    "event": "vestige:die",
+                    "conditions": []
+                  }
+                ],
+                "effects": [
+                  {
+                    "type": "for_each",
+                    "target": {
+                      "selection": "near_target",
+                      "required": false,
+                      "distance": {
+                        "product": [
+                          5,
+                          {
+                            "trait": "vestige:area"
+                          }
+                        ]
+                      },
+                      "relationship": "hostile",
+                      "options": {
+                        "count": 2
+                      }
+                    },
+                    "effects": [
+                      {
+                        "type": "create_manifestation",
+                        "target": {
+                          "selection": "current",
+                          "required": true
+                        },
+                        "manifestation": {
+                          "kind": "vestige:status",
+                          "duration": 100,
+                          "values": {},
+                          "identifiers": {
+                            "particle": "minecraft:spore_blossom_air"
+                          },
+                          "bindings": [
+                            {
+                              "id": "vestige:swarm_spread_1",
+                              "duration": 200,
+                              "charges": 1,
+                              "triggers": [
+                                {
+                                  "id": "vestige:swarm_spread_1/trigger",
+                                  "event": "vestige:die",
+                                  "conditions": []
+                                }
+                              ],
+                              "effects": [
+                                {
+                                  "type": "for_each",
+                                  "target": {
+                                    "selection": "near_target",
+                                    "required": false,
+                                    "distance": {
+                                      "product": [
+                                        5,
+                                        {
+                                          "trait": "vestige:area"
+                                        }
+                                      ]
+                                    },
+                                    "relationship": "hostile",
+                                    "options": {
+                                      "count": 2
+                                    }
+                                  },
+                                  "effects": [
+                                    {
+                                      "type": "create_manifestation",
+                                      "target": {
+                                        "selection": "current",
+                                        "required": true
+                                      },
+                                      "manifestation": {
+                                        "kind": "vestige:status",
+                                        "duration": 100,
+                                        "values": {},
+                                        "identifiers": {
+                                          "particle": "minecraft:spore_blossom_air"
+                                        },
+                                        "bindings": [],
+                                        "on_hit": [],
+                                        "on_tick": [
+                                          {
+                                            "type": "damage",
+                                            "values": {
+                                              "amount": {
+                                                "product": [
+                                                  2,
+                                                  {
+                                                    "trait": "vestige:amplify"
+                                                  }
+                                                ]
+                                              },
+                                              "ignore_invulnerability": 1
+                                            }
+                                          }
+                                        ],
+                                        "on_end": [],
+                                        "interval": 20,
+                                        "visual": {
+                                          "duration": 100,
+                                          "radius": 1.15,
+                                          "height": 1,
+                                          "layers": [
+                                            {
+                                              "shape": "motes",
+                                              "color": "ffd45a",
+                                              "alpha": 0.85,
+                                              "width": 0.045,
+                                              "scale": 1.1,
+                                              "speed": 1.65,
+                                              "phase": 0,
+                                              "count": 18
+                                            },
+                                            {
+                                              "shape": "wings",
+                                              "color": "fffbe1",
+                                              "alpha": 0.7,
+                                              "width": 0.04,
+                                              "scale": 0.77,
+                                              "speed": -1.0725,
+                                              "phase": 1.2,
+                                              "count": 9
+                                            },
+                                            {
+                                              "shape": "sparks",
+                                              "color": "fffbe1",
+                                              "alpha": 0.65,
+                                              "width": 0.04,
+                                              "scale": 0.8,
+                                              "speed": 1,
+                                              "phase": 0,
+                                              "count": 8
+                                            }
+                                          ],
+                                          "sound": {
+                                            "id": "minecraft:block.amethyst_block.resonate",
+                                            "volume": 0.6,
+                                            "pitch": 1.1
+                                          }
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "on_hit": [],
+                          "on_tick": [
+                            {
+                              "type": "damage",
+                              "values": {
+                                "amount": {
+                                  "product": [
+                                    2,
+                                    {
+                                      "trait": "vestige:amplify"
+                                    }
+                                  ]
+                                },
+                                "ignore_invulnerability": 1
+                              }
+                            }
+                          ],
+                          "on_end": [],
+                          "interval": 20,
+                          "visual": {
+                            "duration": 100,
+                            "radius": 1.15,
+                            "height": 1,
+                            "layers": [
+                              {
+                                "shape": "motes",
+                                "color": "ffd45a",
+                                "alpha": 0.85,
+                                "width": 0.045,
+                                "scale": 1.1,
+                                "speed": 1.65,
+                                "phase": 0,
+                                "count": 18
+                              },
+                              {
+                                "shape": "wings",
+                                "color": "fffbe1",
+                                "alpha": 0.7,
+                                "width": 0.04,
+                                "scale": 0.77,
+                                "speed": -1.0725,
+                                "phase": 1.2,
+                                "count": 9
+                              },
+                              {
+                                "shape": "sparks",
+                                "color": "fffbe1",
+                                "alpha": 0.65,
+                                "width": 0.04,
+                                "scale": 0.8,
+                                "speed": 1,
+                                "phase": 0,
+                                "count": 8
+                              }
+                            ],
+                            "ends_with_bindings": true,
+                            "sound": {
+                              "id": "minecraft:block.amethyst_block.resonate",
+                              "volume": 0.6,
+                              "pitch": 1.1
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "on_hit": [],
+            "on_tick": [
+              {
+                "type": "damage",
+                "values": {
+                  "amount": {
+                    "product": [
+                      2,
+                      {
+                        "trait": "vestige:amplify"
+                      }
+                    ]
+                  },
+                  "ignore_invulnerability": 1
+                }
+              }
+            ],
+            "on_end": [],
+            "interval": 20,
+            "visual": {
+              "duration": 100,
+              "radius": 1.15,
+              "height": 1,
+              "layers": [
+                {
+                  "shape": "motes",
+                  "color": "ffd45a",
+                  "alpha": 0.85,
+                  "width": 0.045,
+                  "scale": 1.1,
+                  "speed": 1.65,
+                  "phase": 0,
+                  "count": 18
+                },
+                {
+                  "shape": "wings",
+                  "color": "fffbe1",
+                  "alpha": 0.7,
+                  "width": 0.04,
+                  "scale": 0.77,
+                  "speed": -1.0725,
+                  "phase": 1.2,
+                  "count": 9
+                },
+                {
+                  "shape": "sparks",
+                  "color": "fffbe1",
+                  "alpha": 0.65,
+                  "width": 0.04,
+                  "scale": 0.8,
+                  "speed": 1,
+                  "phase": 0,
+                  "count": 8
+                }
+              ],
+              "ends_with_bindings": true,
+              "sound": {
+                "id": "minecraft:block.amethyst_block.resonate",
+                "volume": 0.6,
+                "pitch": 1.1
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

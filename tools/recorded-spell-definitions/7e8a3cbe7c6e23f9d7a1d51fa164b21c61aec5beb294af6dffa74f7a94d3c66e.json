@@ -1,0 +1,185 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:invisibility",
+    "school": "irons_spellbooks:evocation",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Invisibility",
+    "cast_type": "long",
+    "cooldown_ticks": 900
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane"
+  ],
+  "traits": {
+    "vestige:illusion": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": 200,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:invisibility"
+          }
+        },
+        {
+          "type": "aggro_clear"
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "motes",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 0.8,
+            "speed": -1.1,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "vortex",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.5599999999999999,
+            "speed": 0.7150000000000001,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:break_invisibility",
+            "duration": 200,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:break_invisibility/trigger",
+                "event": "vestige:damage_dealt",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "self",
+                  "required": true
+                },
+                "effects": [
+                  {
+                    "type": "remove_status",
+                    "identifiers": {
+                      "effect": "minecraft:invisibility"
+                    }
+                  }
+                ],
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.8,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "motes",
+                      "color": "b67cff",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 0.8,
+                      "speed": -1.1,
+                      "phase": 0,
+                      "count": 5
+                    },
+                    {
+                      "shape": "vortex",
+                      "color": "f4deff",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.5599999999999999,
+                      "speed": 0.7150000000000001,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "f4deff",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "end_manifestation"
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20
+      }
+    }
+  ]
+}

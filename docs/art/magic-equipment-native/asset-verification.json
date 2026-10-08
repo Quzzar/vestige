@@ -1,0 +1,90 @@
+{
+  "assets": {
+    "textures/item/wardweave_robes.png": {
+      "sha256": "4f3357a7d66f1185f7339e805a4743f499d48488fbf250e70bb87bea636fc23b",
+      "dimensions": [
+        16,
+        16
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": true
+    },
+    "textures/models/armor/wardweave_layer_1.png": {
+      "sha256": "6555f958c247b759473687416b1efff871e79b4718777d4af946a0e68a50ce70",
+      "dimensions": [
+        64,
+        32
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": true
+    },
+    "textures/item/wardweave_robes_overlay.png": {
+      "sha256": "9c21b4fcab5b4b7cf4734d9fab62a9677bfc726f51eb58257292072bcc8df54c",
+      "dimensions": [
+        16,
+        16
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": false
+    },
+    "textures/models/armor/wardweave_layer_1_overlay.png": {
+      "sha256": "7b65179a7fdb560ae344123b393146fa2badaaa57ad69b135f0b12ec90ae0cab",
+      "dimensions": [
+        64,
+        32
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": false
+    },
+    "models/item/wardweave_robes.json": {
+      "sha256": "35acf782c747d8e82f10bc09a498bd7a261a7ce65f185d8f0421149116b1e849"
+    },
+    "textures/item/cinderweave_robes.png": {
+      "sha256": "79918aa33830ca16e4f53d30057812cba41bd683e38741da7e3903c9bdffde8f",
+      "dimensions": [
+        16,
+        16
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": true
+    },
+    "textures/models/armor/cinderweave_layer_1.png": {
+      "sha256": "a2ef75b9e38eee4587130b1adcba9d9bd3b6d3febe973a66381ae234d9870bfa",
+      "dimensions": [
+        64,
+        32
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": true
+    },
+    "textures/item/cinderweave_robes_overlay.png": {
+      "sha256": "71709f29c0dbc4c3f1cdadfe47ee0067d094fc2d1a47a3d9142f1093a157e656",
+      "dimensions": [
+        16,
+        16
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": false
+    },
+    "textures/models/armor/cinderweave_layer_1_overlay.png": {
+      "sha256": "ea5f72e4228980a8ed98dd8ae87fd954357754a04d1fdf4a114ed430ff1c0f34",
+      "dimensions": [
+        64,
+        32
+      ],
+      "alpha": "hard",
+      "grayscaleFabric": false
+    },
+    "models/item/cinderweave_robes.json": {
+      "sha256": "a7f4114e857ec3d65761a94d8b06a7d57b431e9c7a25df799e9de33b02325880"
+    }
+  },
+  "nativeViews": 64,
+  "nativeChecks": "Passed; all 16 colors, GUI 2/3, WIDE/SLIM",
+  "inspectedFrames": [
+    "wardweave-white-gui-2",
+    "wardweave-blue-gui-2",
+    "cinderweave-blue-gui-3",
+    "cinderweave-black-gui-2"
+  ]
+}

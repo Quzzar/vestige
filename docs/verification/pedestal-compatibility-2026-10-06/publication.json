@@ -1,0 +1,231 @@
+{
+  "releasedCommit": "b2cde2880958cb6695807ceb566cd415b5235bdc",
+  "testIsolationFollowupCommit": "87f7d1b50ade929f23719911218ec1b918c420cd",
+  "githubCI": {
+    "attempt": 2,
+    "conclusion": "success",
+    "headSha": "87f7d1b50ade929f23719911218ec1b918c420cd",
+    "jobs": [
+      {
+        "completedAt": "2026-10-07T04:08:38Z",
+        "conclusion": "success",
+        "databaseId": 112625964844,
+        "name": "build",
+        "startedAt": "2026-10-07T04:07:06Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-07T04:07:10Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-07T04:07:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:07:20Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7.0.1",
+            "number": 2,
+            "startedAt": "2026-10-07T04:07:10Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:07:20Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-java@v6.0.1",
+            "number": 3,
+            "startedAt": "2026-10-07T04:07:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:07:20Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v7.0.0",
+            "number": 4,
+            "startedAt": "2026-10-07T04:07:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:07:30Z",
+            "conclusion": "success",
+            "name": "Run gradle/actions/setup-gradle@v6.4.0",
+            "number": 5,
+            "startedAt": "2026-10-07T04:07:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:07:32Z",
+            "conclusion": "success",
+            "name": "Verify spell recipes, balance, documentation and actual recordings",
+            "number": 6,
+            "startedAt": "2026-10-07T04:07:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:31Z",
+            "conclusion": "success",
+            "name": "Build and test standalone Vestige",
+            "number": 7,
+            "startedAt": "2026-10-07T04:07:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:32Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v7.0.1",
+            "number": 8,
+            "startedAt": "2026-10-07T04:08:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:33Z",
+            "conclusion": "success",
+            "name": "Preserve test reports and server logs",
+            "number": 9,
+            "startedAt": "2026-10-07T04:08:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:35Z",
+            "conclusion": "success",
+            "name": "Post Run gradle/actions/setup-gradle@v6.4.0",
+            "number": 15,
+            "startedAt": "2026-10-07T04:08:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:35Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v7.0.0",
+            "number": 16,
+            "startedAt": "2026-10-07T04:08:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:35Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-java@v6.0.1",
+            "number": 17,
+            "startedAt": "2026-10-07T04:08:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:36Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7.0.1",
+            "number": 18,
+            "startedAt": "2026-10-07T04:08:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:08:36Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-10-07T04:08:36Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Quzzar/vestige/actions/runs/37569465060/job/112625964844"
+      },
+      {
+        "completedAt": "2026-10-07T04:01:54Z",
+        "conclusion": "success",
+        "databaseId": 112625966157,
+        "name": "cast-gallery",
+        "startedAt": "2026-10-07T04:01:29Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-07T04:01:30Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-07T04:01:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:42Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7.0.1",
+            "number": 2,
+            "startedAt": "2026-10-07T04:01:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:44Z",
+            "conclusion": "success",
+            "name": "Run oven-sh/setup-bun@v2",
+            "number": 3,
+            "startedAt": "2026-10-07T04:01:42Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:45Z",
+            "conclusion": "success",
+            "name": "Run bun install --frozen-lockfile",
+            "number": 4,
+            "startedAt": "2026-10-07T04:01:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:45Z",
+            "conclusion": "success",
+            "name": "Run bun test",
+            "number": 5,
+            "startedAt": "2026-10-07T04:01:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:51Z",
+            "conclusion": "success",
+            "name": "Run bun run build",
+            "number": 6,
+            "startedAt": "2026-10-07T04:01:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:52Z",
+            "conclusion": "success",
+            "name": "Post Run oven-sh/setup-bun@v2",
+            "number": 11,
+            "startedAt": "2026-10-07T04:01:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:52Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7.0.1",
+            "number": 12,
+            "startedAt": "2026-10-07T04:01:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-07T04:01:52Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "startedAt": "2026-10-07T04:01:52Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/Quzzar/vestige/actions/runs/37569465060/job/112625966157"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/Quzzar/vestige/actions/runs/37569465060"
+  },
+  "successfulWorldTests": 206,
+  "ciCompletion": [
+    "build\tBuild and test standalone Vestige\t2026-10-07T04:08:29.3102358Z [04:08:29] [Server thread/INFO] [minecraft/GameTestServer]: ========= 206 GAME TESTS COMPLETE IN 18.70 s ======================",
+    "build\tBuild and test standalone Vestige\t2026-10-07T04:08:29.3103366Z [04:08:29] [Server thread/INFO] [minecraft/GameTestServer]: All 206 required tests passed :)",
+    "build\tBuild and test standalone Vestige\t2026-10-07T04:08:30.7015630Z BUILD SUCCESSFUL in 57s"
+  ],
+  "initialReleaseCI": "https://github.com/Quzzar/vestige/actions/runs/37567858811",
+  "initialReleaseFailedAttempts": 2,
+  "followupFirstAttempt": "Existing column-cap test failed; orphan regression passed.",
+  "followupSecondAttempt": "All jobs pass; all 206 required world tests pass.",
+  "installedSha256": "d6351b2f7bf269bcfa6d62c7c59f177656551268459f2503a47f1d6a48e37155",
+  "installedPackageUnchangedAfterTestOnlyFollowup": true
+}

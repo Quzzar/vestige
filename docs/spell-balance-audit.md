@@ -8,7 +8,7 @@ The detailed report includes baseline parameters after trait substitution, retai
 
 Area coverage is a geometric proxy: doubling a queried radius gives 4× planar footprint or 8× volume. Neither figure promises that many targets. Amplify and area boosts together can compound to 8× aggregate damage under uniform planar target density, or 16× under uniform volumetric density, before target limits and world constraints.
 
-Current attack formulas generally read amplify, while semantic school traits such as evocation classify the spell. Doubling an unused evocation rating leaves numerical parameters unchanged. Original Iron cooldowns remain provenance. Native cooldown costs are enforced by paid casting; the development `cast` command bypasses payment and recovery. See the complete balance review for role/outcome tuning.
+Current attack formulas generally read amplify, while semantic school traits such as evocation classify the spell. Doubling an unused evocation rating leaves numerical parameters unchanged. Original Iron cooldowns remain provenance. The shipped catalog has no ordinary spell cooldown costs as of October 7, 2026; the development `cast` command bypasses payment. Equipment recovery is separate. See the complete balance review for role/outcome tuning.
 
 Policy and formulas: [Spell rarity and balance](design/spell-balance.md). Detailed expression responses: [JSON audit](spell-balance-audit.json).
 

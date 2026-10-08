@@ -1,0 +1,151 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1462",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Chain Lightning",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 319",
+      "rank": 6,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1462"
+    }
+  },
+  "rarity": "rare",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:lightning": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 20
+    },
+    {
+      "type": "mana",
+      "amount": 42
+    },
+    {
+      "type": "cooldown",
+      "ticks": 180
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "chain",
+        "required": true,
+        "distance": {
+          "product": [
+            24,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile",
+        "options": {
+          "count": 6,
+          "jump": 5
+        }
+      },
+      "effects": [
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                12,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          },
+          "identifiers": {
+            "damage_type": "minecraft:lightning_bolt"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "arc",
+            "color": "4bafff",
+            "alpha": 0.95,
+            "width": 0.19,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "arc",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.0608,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "helix",
+            "color": "5594ff",
+            "alpha": 0.85,
+            "width": 0.09,
+            "scale": 1.25,
+            "speed": 2.7,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "rays",
+            "color": "e5f4ff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.875,
+            "speed": -1.7550000000000001,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "e5f4ff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ],
+        "sound": {
+          "id": "minecraft:block.amethyst_block.chime",
+          "volume": 0.6,
+          "pitch": 1.1
+        }
+      }
+    }
+  ]
+}

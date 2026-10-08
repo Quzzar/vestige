@@ -1,0 +1,13 @@
+// A production build, isolated from concurrent client runs and art-only fixtures.
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/whispering-shell-finished-build'))
+        project.afterEvaluate {
+            project.tasks.named('generateModMetadata').configure {
+                into project.layout.buildDirectory.dir('generated/sources/modMetadata')
+            }
+            project.tasks.named('runGameTestServer').configure { maxHeapSize = '2G' }
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+        }
+    }
+}

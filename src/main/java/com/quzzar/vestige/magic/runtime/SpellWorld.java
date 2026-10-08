@@ -17,7 +17,10 @@ public interface SpellWorld {
     boolean pay(List<SpellCost> costs, SpellRuntime.Context context);
     boolean active(SpellRuntime.Context context);
     /** Activation gate checked before charge/payment and before continuation input. */
-    default boolean canActivate(java.util.UUID actor, com.quzzar.vestige.magic.definition.SpellDefinition spell) { return true; }
+    default boolean canActivate(java.util.UUID actor, com.quzzar.vestige.magic.definition.MagicDefinition definition) { return true; }
+    /** Trusted wearer/world contributions; source-local components are supplied by the activation caller. */
+    default List<com.quzzar.vestige.magic.definition.TraitModifier> traitModifiers(java.util.UUID actor,
+            com.quzzar.vestige.magic.definition.MagicDefinition definition) { return List.of(); }
     void forfeit(SpellRuntime.Context context);
     boolean execute(SpellEffects.Action action, SpellRuntime.Context context);
     /** Ordered, already-selected points. Cosmetic adapters must not perform another target query. */

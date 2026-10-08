@@ -1,0 +1,8 @@
+> Task :testClasses UP-TO-DATE
+> Task :test
+> Task :build
+> Task :verifyKithkynCompatibility
+> Task :runGameTestServer
+[11:03:11] [Server thread/INFO] [minecraft/GameTestServer]: ========= 9 GAME TESTS COMPLETE IN 981.4 ms ======================
+[11:03:11] [Server thread/INFO] [minecraft/GameTestServer]: All 9 required tests passed :)
+BUILD SUCCESSFUL in 37s

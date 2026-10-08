@@ -31,19 +31,26 @@ public final class AttunementShardItem extends Item {
                 new Attunement.Node(n.seat()%2,n.offset(),BuiltInRegistries.ITEM.getKey(n.offering().getItem()),n.offering().isEmpty() ? 0 : 1,
                         n.material().isEmpty() ? Optional.empty() : Optional.of(BuiltInRegistries.ITEM.getKey(n.material().getItem())))).toList());
         var stack=new ItemStack(ScrollItems.ATTUNEMENT_SHARD.get());
-        CustomData.update(DataComponents.CUSTOM_DATA,stack,tag -> {
-            tag.putInt("vestige_attunement_version",Attunement.VERSION); tag.putInt("slots",signature.slots()); tag.putString("inner_shape",signature.innerShape().name());
-            signature.outerShape().ifPresent(s -> tag.putString("outer_shape",s.name())); tag.putString("key",signature.key());
-            ListTag nodes=new ListTag();
-            for (var n:signature.nodes()) { CompoundTag entry=new CompoundTag(); entry.putInt("layer",n.layer()); entry.putIntArray("offset",new int[]{n.offset().getX(),n.offset().getY(),n.offset().getZ()});
-                entry.putString("ingredient",n.ingredient().toString()); entry.putInt("count",n.count()); n.material().ifPresent(m -> entry.putString("material",m.toString()));nodes.add(entry); }
-            tag.put("nodes",nodes);
-        });
+        stack.set(DataComponents.CUSTOM_DATA, CustomData.of(encodeSignature(signature)));
         stack.set(DataComponents.ENCHANTMENT_GLINT_OVERRIDE,true); return stack;
+    }
+    /** Canonical bounded fields only; incidental shard metadata never becomes a device component. */
+    public static CompoundTag encodeSignature(Attunement.Signature signature) {
+        var tag = new CompoundTag();
+        tag.putInt("vestige_attunement_version",Attunement.VERSION); tag.putInt("slots",signature.slots()); tag.putString("inner_shape",signature.innerShape().name());
+        signature.outerShape().ifPresent(s -> tag.putString("outer_shape",s.name())); tag.putString("key",signature.key());
+        ListTag nodes=new ListTag();
+        for (var n:signature.nodes()) { CompoundTag entry=new CompoundTag(); entry.putInt("layer",n.layer()); entry.putIntArray("offset",new int[]{n.offset().getX(),n.offset().getY(),n.offset().getZ()});
+            entry.putString("ingredient",n.ingredient().toString()); entry.putInt("count",n.count()); n.material().ifPresent(m -> entry.putString("material",m.toString()));nodes.add(entry); }
+        tag.put("nodes",nodes);
+        return tag;
     }
     public static Optional<Attunement.Signature> signature(ItemStack stack) {
         if (!stack.is(ScrollItems.ATTUNEMENT_SHARD.get())) return Optional.empty();
-        var tag=stack.getOrDefault(DataComponents.CUSTOM_DATA,CustomData.EMPTY).copyTag();
+        return readSignature(stack.getOrDefault(DataComponents.CUSTOM_DATA,CustomData.EMPTY).copyTag());
+    }
+    /** Devices retain and verify the original shard blueprint without changing its item identity. */
+    public static Optional<Attunement.Signature> readSignature(CompoundTag tag) {
         if (tag.getInt("slots")!=8 || tag.getInt("vestige_attunement_version")!=Attunement.VERSION || tag.getString("key").length()!=64) return Optional.empty();
         try {
             var list=tag.getList("nodes",Tag.TAG_COMPOUND); if (list.size()!=tag.getInt("slots") || list.size()>8) return Optional.empty();

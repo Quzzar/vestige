@@ -1,0 +1,25 @@
+{
+  "preparedAtUTC": "2026-10-06T23:35:39.276921+00:00",
+  "instance": "Kithkyn Testing",
+  "installedJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "baseJar": "/Users/quzzar/Projects/vestige/run/crane-bag-shipped-install/base-c5897ac3df89623aeeac3b6092eefd294d47714c2b8a4876e8af1a19743db5ff.jar",
+  "baseSha256": "c5897ac3df89623aeeac3b6092eefd294d47714c2b8a4876e8af1a19743db5ff",
+  "stagedJar": "/Users/quzzar/Projects/vestige/run/crane-bag-shipped-install/vestige-0.1.0.jar",
+  "stagedSha256": "de262f9fe8cbbff6343e2837075ff6849cc7106f40d044da2ccfd57c7b53c2f0",
+  "changedMembers": [
+    "assets/vestige/models/item/crane_bag.json"
+  ],
+  "addedMembers": [
+    "assets/vestige/textures/item/crane_bag.png"
+  ],
+  "unchangedMembers": 3296,
+  "textureSha256": "2c8eeebdd4bf6c555d829ff99d0d9694da7f82e3254db7aa42a16628349212e8",
+  "scope": "Only approved Crane Bag model and PNG; all other installed ZIP member bytes retained.",
+  "restartPerformed": false,
+  "installed": true,
+  "installedAtUTC": "2026-10-06T23:35:39.328315+00:00",
+  "installedSha256": "de262f9fe8cbbff6343e2837075ff6849cc7106f40d044da2ccfd57c7b53c2f0",
+  "backupJar": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/crane-bag-gathered-20261006T233539287695Z/vestige-0.1.0.jar",
+  "backupSha256": "c5897ac3df89623aeeac3b6092eefd294d47714c2b8a4876e8af1a19743db5ff",
+  "atomicReplacement": true
+}

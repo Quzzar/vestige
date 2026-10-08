@@ -1,0 +1,80 @@
+{
+  "build": "passed",
+  "kithkynCompatibility": "passed",
+  "unit": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeFrames": 276,
+  "sourceChecks": [
+    {
+      "view": "scroll-wide",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "scroll-offhand",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "wand-wide",
+      "preparationCleared": true,
+      "mana": 64.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "staff-left",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "cancel-wide",
+      "preparationCleared": true,
+      "mana": 100.0,
+      "remainingScrolls": 4
+    },
+    {
+      "view": "scroll-compact",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "staff-compact",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 1
+    },
+    {
+      "view": "scroll-snow",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    },
+    {
+      "view": "scroll-night",
+      "preparationCleared": true,
+      "mana": 58.0,
+      "remainingScrolls": 3
+    }
+  ],
+  "source": "/private/tmp/vestige-crosshair-contrast-20261007-source",
+  "ownedSourceHashes": {
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationCrosshair.java": "88462fc71ca15bed93705fe349a5061dd8365ad4c07fba75e539022a56c5e4a6",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": "e1668d307a882de745bd3f4b8b169aa412c1bc6a8a91fc86a58994ec464bb3f1",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": "dcac655ece347f3bfcbb4da7db0fa6aa20a5ba7babe547b19faa910bd13f7cbc",
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": "c3d69651d606254787bebb0e2572dec77ee01070367931342e6872d45c432562"
+  },
+  "artifact": "/Users/quzzar/Projects/vestige/build/crosshair-preparation-contrast-review/libs/vestige-0.1.0.jar",
+  "artifactSha256": "bebe83bed439cca52048cbe10ece0b40dae0e4cba798005480c9e98023ba243d",
+  "chargedBlackAndWhiteEdgeVerifiedAllViews": true,
+  "ordinaryCrosshairRestoredAllViews": true,
+  "worldSuiteRerun": false,
+  "installed": false
+}

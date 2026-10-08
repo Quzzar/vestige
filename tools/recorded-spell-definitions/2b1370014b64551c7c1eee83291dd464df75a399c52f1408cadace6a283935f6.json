@@ -1,0 +1,252 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:devour",
+    "school": "irons_spellbooks:blood",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Devour",
+    "cast_type": "instant",
+    "cooldown_ticks": 400
+  },
+  "rarity": "rare",
+  "traditions": [
+    "occult"
+  ],
+  "traits": {
+    "vestige:blood": 4,
+    "vestige:necromancy": 4,
+    "vestige:life": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 38
+    },
+    {
+      "type": "cooldown",
+      "ticks": 200
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            5,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "install_binding",
+          "target": {
+            "selection": "current",
+            "required": true
+          },
+          "binding": {
+            "id": "vestige:devoured",
+            "duration": 20,
+            "charges": 1,
+            "triggers": [
+              {
+                "id": "vestige:devoured/trigger",
+                "event": "vestige:die",
+                "conditions": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "self",
+                  "required": true
+                },
+                "effects": [
+                  {
+                    "type": "grant_max_health",
+                    "values": {
+                      "amount": {
+                        "product": [
+                          2,
+                          {
+                            "trait": "vestige:amplify"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "create_manifestation",
+                    "target": {
+                      "selection": "self",
+                      "required": true
+                    },
+                    "manifestation": {
+                      "kind": "vestige:status",
+                      "duration": 600,
+                      "values": {},
+                      "identifiers": {},
+                      "bindings": [],
+                      "on_hit": [],
+                      "on_tick": [],
+                      "on_end": [
+                        {
+                          "type": "remove_attribute"
+                        }
+                      ],
+                      "interval": 1,
+                      "visual": {
+                        "duration": 600,
+                        "radius": 1.15,
+                        "height": 1,
+                        "layers": [
+                          {
+                            "shape": "fangs",
+                            "color": "c92551",
+                            "alpha": 0.85,
+                            "width": 0.045,
+                            "scale": 1.5,
+                            "speed": 0.9,
+                            "phase": 0,
+                            "count": 6
+                          },
+                          {
+                            "shape": "helix",
+                            "color": "ffd0b7",
+                            "alpha": 0.7,
+                            "width": 0.04,
+                            "scale": 1.0499999999999998,
+                            "speed": -0.5850000000000001,
+                            "phase": 1.2,
+                            "count": 3
+                          },
+                          {
+                            "shape": "sparks",
+                            "color": "ffd0b7",
+                            "alpha": 0.65,
+                            "width": 0.04,
+                            "scale": 0.8,
+                            "speed": 1,
+                            "phase": 0,
+                            "count": 8
+                          }
+                        ],
+                        "sound": {
+                          "id": "minecraft:block.amethyst_block.resonate",
+                          "volume": 0.6,
+                          "pitch": 1.1
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "pull",
+          "values": {
+            "strength": 0.3
+          }
+        },
+        {
+          "type": "damage",
+          "values": {
+            "amount": {
+              "product": [
+                6,
+                {
+                  "trait": "vestige:amplify"
+                }
+              ]
+            },
+            "ignore_invulnerability": 1
+          }
+        },
+        {
+          "type": "leech",
+          "values": {
+            "fraction": 0.15
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "eb6684",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "fangs",
+            "color": "c92551",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.5,
+            "speed": 0.9,
+            "phase": 0,
+            "count": 6
+          },
+          {
+            "shape": "helix",
+            "color": "ffd0b7",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 1.0499999999999998,
+            "speed": -0.5850000000000001,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "ffd0b7",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

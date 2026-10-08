@@ -1,0 +1,147 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1677",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Slow",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 357",
+      "rank": 3,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1677"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "occult",
+    "primal"
+  ],
+  "traits": {
+    "vestige:time": 1,
+    "vestige:motion": 1,
+    "vestige:transmutation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 8
+    },
+    {
+      "type": "mana",
+      "amount": 22
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            20,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": 100,
+            "amplifier": 2
+          },
+          "identifiers": {
+            "effect": "minecraft:slowness"
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 100,
+            "amplifier": 1
+          },
+          "identifiers": {
+            "effect": "minecraft:mining_fatigue"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "c9beff",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "clock",
+            "color": "b67cff",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.0,
+            "speed": -0.4,
+            "phase": 0,
+            "count": 5
+          },
+          {
+            "shape": "chain",
+            "color": "f4deff",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": 0.26,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "f4deff",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

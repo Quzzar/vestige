@@ -1,0 +1,34 @@
+[
+  {
+    "name": "electroblob-wizard",
+    "repo": "Electroblob77/Wizardry",
+    "revision": "fe5d05a7a134836dd972e3680a900619c7e9c134",
+    "path": "src/main/resources/assets/ebwizardry/textures/armour/wizard_armour.png",
+    "url": "https://github.com/Electroblob77/Wizardry/blob/fe5d05a7a134836dd972e3680a900619c7e9c134/src/main/resources/assets/ebwizardry/textures/armour/wizard_armour.png",
+    "purpose": "Visual study only; not a production asset"
+  },
+  {
+    "name": "electroblob-sage",
+    "repo": "Electroblob77/Wizardry",
+    "revision": "fe5d05a7a134836dd972e3680a900619c7e9c134",
+    "path": "src/main/resources/assets/ebwizardry/textures/armour/sage_armour.png",
+    "url": "https://github.com/Electroblob77/Wizardry/blob/fe5d05a7a134836dd972e3680a900619c7e9c134/src/main/resources/assets/ebwizardry/textures/armour/sage_armour.png",
+    "purpose": "Visual study only; not a production asset"
+  },
+  {
+    "name": "iron-pyromancer",
+    "repo": "iron431/irons-spells-n-spellbooks",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "path": "src/main/resources/assets/irons_spellbooks/textures/models/armor/pyromancer.png",
+    "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/assets/irons_spellbooks/textures/models/armor/pyromancer.png",
+    "purpose": "Visual study only; not a production asset"
+  },
+  {
+    "name": "iron-wizard",
+    "repo": "iron431/irons-spells-n-spellbooks",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "path": "src/main/resources/assets/irons_spellbooks/textures/models/armor/wizard.png",
+    "url": "https://github.com/iron431/irons-spells-n-spellbooks/blob/e4056af90302d37eb1739f5ff05020b020e6e252/src/main/resources/assets/irons_spellbooks/textures/models/armor/wizard.png",
+    "purpose": "Visual study only; not a production asset"
+  }
+]

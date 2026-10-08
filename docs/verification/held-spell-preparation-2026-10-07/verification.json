@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-07",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "unitTests": {
+    "tests": 173,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "requiredWorldTests": 55,
+  "worldFilter": "cast_preparation|wand|staff|player_mana|item_mana",
+  "nativeFrames": 213,
+  "nativeChecks": [
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-wide"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-offhand"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 64.0,
+      "preparationCleared": true,
+      "view": "wand-wide"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "staff-left"
+    },
+    {
+      "remainingScrolls": 4,
+      "mana": 100.0,
+      "preparationCleared": true,
+      "view": "cancel-wide"
+    },
+    {
+      "remainingScrolls": 3,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "scroll-compact"
+    },
+    {
+      "remainingScrolls": 1,
+      "mana": 58.0,
+      "preparationCleared": true,
+      "view": "staff-compact"
+    }
+  ],
+  "productionBuild": "passed",
+  "kithkynCompatibility": "passed",
+  "staffTraitAudit": "passed",
+  "staffTextureAudit": "passed",
+  "reviewJar": "/Users/quzzar/Projects/vestige/build/held-spell-preparation-review/libs/vestige-0.1.0.jar",
+  "jarSha256": "dda386fd07c17061baa8b7d2726553d46f42fca3ace064f3fcab178f7835473f",
+  "ownedSourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollCasting.java": "5a046fce85a4544e11d2b57f7f76e5ae073e8b491233882ccba72f90891f2308",
+    "src/main/java/com/quzzar/vestige/apparatus/WandCasting.java": "0ee36ae5cf93285a09685e5f572d594331790ed02ffa87ad0231632bb59fa904",
+    "src/main/java/com/quzzar/vestige/apparatus/StaffCasting.java": "6361cb231f5bd35cb427b157d3f15005098da54aa534366cfc631a09120d7748",
+    "src/main/java/com/quzzar/vestige/magic/world/PreparationPayload.java": "59c9c31f6598d89c5796ebb227309b29251e573158dab7d623d5269d1fcb198c",
+    "src/main/java/com/quzzar/vestige/magic/world/NativePreparation.java": "2dcbed93850370b28d3b907db3d57e0dc683222cf65b9f40efe7a2d3611346c2",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationHud.java": "4461e9dc7f9da5c57a41662653a0f7beda617ba43ffc3946ec547dc295278412",
+    "src/main/java/com/quzzar/vestige/magic/world/client/PreparationItemAnimation.java": "dd64a387c4f1bad9d818de0ed3c084f070c08f6e9fe764d5a8515ac2bb7b1da9",
+    "src/main/java/com/quzzar/vestige/magic/world/client/NativePreparationCapture.java": "78dec2ed7250c8c966f5338c3a8a1905d6ca7867ed692f18583fcfea0448e789",
+    "src/main/java/com/quzzar/vestige/magic/world/PreparationSourceTest.java": "0ea3cb699306111655c407b6579b28842d7f367712bf94f0b1ed0c4140c109d0",
+    "src/test/java/com/quzzar/vestige/magic/world/PreparationPayloadTest.java": "793dbf60ad42babfe804b4aa97ff9089b8d42f52c9ce46619cf74f407d820131"
+  },
+  "limitations": [
+    "First-person held-item presentation; third-person pose is unchanged.",
+    "Integrated-server native capture; remote multiplayer appearance was not inspected.",
+    "Focused world regressions; unrelated full world suite was not rerun.",
+    "Review artifact staged; no running game profile replaced."
+  ],
+  "correctedInspectionFindings": [
+    "Reduced camera draw-back and increased inward travel after the first scroll capture clipped too far offscreen.",
+    "Capture expectation corrected to the Ensorcelled wand core's final 50-tick charge, rather than the source scroll's 40 ticks.",
+    "Mirrored draw yaw adjusted from -6 to +12 degrees to preserve the left-hand staff face."
+  ]
+}

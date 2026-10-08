@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Independent native worn-boot study for selected Feather Tabs C direction",
+  "references": [
+    "docs/art/magic-equipment-native/sources/vanilla-leather-layer-1.png",
+    "docs/art/magic-equipment-v1/preview-resources/assets/vestige/textures/item/wayfarer_c.png"
+  ],
+  "transparentBackground": true,
+  "generatedSource": "source/worn-generated.png",
+  "export": "tools/author_wayfarer_art.py: dominant nondithered native cells, exact vanilla leg UV net, hard alpha. Generated study regions are mapped into the atlas; source is not shipped directly.",
+  "inventorySource": "Selected Feather Tabs C; aspect-preserving export to a 16 by 16 canvas with one-pixel margin.",
+  "designBrief": "Create a Minecraft 1.21.1 native 64 by 32 armor texture study for Wayfarer Boots. Use the supplied vanilla leather armor atlas only for pixel language and UV reference, and the selected Feather Tabs boots for design. Brown leather, dark brown soles, small fixed ivory feather tabs and restrained muted green laces. Hard edged native texels, no gradients or decorative glow, no robe, cape, hat or body armor. The leg UV net starts at x0 y16, four faces 4 pixels wide each; keep upper legs transparent and place boot fabric on lower leg faces. Preserve transparent unused areas and sole cap. Native block shading, independently authored pixels, not copied reference assets.",
+  "note": "Design brief records the generation constraints; the source PNG and exact exporter are pinned. The prior transient tool request was not retained verbatim."
+}

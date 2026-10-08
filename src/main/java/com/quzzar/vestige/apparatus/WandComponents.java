@@ -10,7 +10,6 @@ import java.util.*;
 
 /** Trusted equipment profiles. The scroll is compiled once, then equipment contributes separately. */
 public final class WandComponents {
-    public static final int COOLDOWN_TICKS = 1200;
     public enum Base {
         STICK(Items.STICK,24), BAMBOO(Items.BAMBOO,18,"plant","wood"),
         BONE(Items.BONE,20,"death","necromancy"), BLAZE_ROD(Items.BLAZE_ROD,20,"fire"),

@@ -1,0 +1,296 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:frostbite",
+    "school": "irons_spellbooks:ice",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Frostbite",
+    "cast_type": "instant",
+    "cooldown_ticks": 1200
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:ice": 4,
+    "vestige:enchantment": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:frostbite",
+            "duration": 200,
+            "charges": 3,
+            "triggers": [
+              {
+                "id": "vestige:frostbite/trigger",
+                "event": "vestige:damage_dealt",
+                "conditions": [
+                  {
+                    "type": "compare",
+                    "path": "vestige:event/magical",
+                    "operation": "equal",
+                    "expected": false
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "event_target",
+                  "required": true
+                },
+                "effects": [
+                  {
+                    "type": "freeze",
+                    "values": {
+                      "ticks": 140
+                    }
+                  },
+                  {
+                    "type": "status",
+                    "values": {
+                      "duration": 60,
+                      "amplifier": 0
+                    },
+                    "identifiers": {
+                      "effect": "minecraft:slowness"
+                    }
+                  },
+                  {
+                    "type": "install_binding",
+                    "target": {
+                      "selection": "current",
+                      "required": true
+                    },
+                    "binding": {
+                      "id": "vestige:shatter",
+                      "duration": 200,
+                      "charges": 1,
+                      "triggers": [
+                        {
+                          "id": "vestige:shatter/trigger",
+                          "event": "vestige:die",
+                          "conditions": []
+                        }
+                      ],
+                      "effects": [
+                        {
+                          "type": "for_each",
+                          "target": {
+                            "selection": "near_target",
+                            "required": false,
+                            "distance": {
+                              "product": [
+                                3,
+                                {
+                                  "trait": "vestige:area"
+                                }
+                              ]
+                            },
+                            "relationship": "hostile",
+                            "options": {
+                              "count": 6
+                            }
+                          },
+                          "effects": [
+                            {
+                              "type": "damage",
+                              "values": {
+                                "amount": {
+                                  "product": [
+                                    5,
+                                    {
+                                      "trait": "vestige:amplify"
+                                    }
+                                  ]
+                                },
+                                "ignore_invulnerability": 1
+                              }
+                            },
+                            {
+                              "type": "freeze",
+                              "values": {
+                                "ticks": 140
+                              }
+                            }
+                          ],
+                          "visual": {
+                            "duration": 24,
+                            "radius": {
+                              "product": [
+                                3,
+                                {
+                                  "trait": "vestige:area"
+                                }
+                              ]
+                            },
+                            "height": 0.25,
+                            "layers": [
+                              {
+                                "shape": "shards",
+                                "color": "48badf",
+                                "alpha": 0.85,
+                                "width": 0.045,
+                                "scale": 1.15,
+                                "speed": 0.6,
+                                "phase": 0,
+                                "count": 6
+                              },
+                              {
+                                "shape": "helix",
+                                "color": "e7fbff",
+                                "alpha": 0.7,
+                                "width": 0.04,
+                                "scale": 0.8049999999999999,
+                                "speed": -0.39,
+                                "phase": 1.2,
+                                "count": 3
+                              },
+                              {
+                                "shape": "sparks",
+                                "color": "e7fbff",
+                                "alpha": 0.65,
+                                "width": 0.04,
+                                "scale": 0.8,
+                                "speed": 1,
+                                "phase": 0,
+                                "count": 8
+                              }
+                            ],
+                            "sound": {
+                              "id": "minecraft:entity.generic.explode",
+                              "volume": 0.6,
+                              "pitch": 1.1
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.8,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "shards",
+                      "color": "48badf",
+                      "alpha": 0.85,
+                      "width": 0.045,
+                      "scale": 1.15,
+                      "speed": 0.6,
+                      "phase": 0,
+                      "count": 6
+                    },
+                    {
+                      "shape": "helix",
+                      "color": "e7fbff",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.8049999999999999,
+                      "speed": -0.39,
+                      "phase": 1.2,
+                      "count": 3
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "e7fbff",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "shards",
+              "color": "48badf",
+              "alpha": 0.85,
+              "width": 0.045,
+              "scale": 1.15,
+              "speed": 0.6,
+              "phase": 0,
+              "count": 6
+            },
+            {
+              "shape": "helix",
+              "color": "e7fbff",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.8049999999999999,
+              "speed": -0.39,
+              "phase": 1.2,
+              "count": 3
+            },
+            {
+              "shape": "sparks",
+              "color": "e7fbff",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

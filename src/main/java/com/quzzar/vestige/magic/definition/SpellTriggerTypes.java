@@ -28,6 +28,8 @@ public final class SpellTriggerTypes {
     public static final ResourceLocation DAMAGE_DEALT = id("damage_dealt");
     public static final ResourceLocation DAMAGE_TAKEN = id("damage_taken");
     public static final ResourceLocation DAMAGE_CALCULATING = id("damage_calculating");
+    /** Accepted damage after shield/hurt immunity and before armor; worn-source protections use this stage. */
+    public static final ResourceLocation ARMOR_DAMAGE_CALCULATING = id("armor_damage_calculating");
     public static final ResourceLocation ATTACK_TARGETED = id("attack_targeted");
     public static final ResourceLocation SAVE_REQUESTED = id("save_requested");
     public static final ResourceLocation HEAL_DEALT = id("heal_dealt");
@@ -68,6 +70,7 @@ public final class SpellTriggerTypes {
             DAMAGE_DEALT,
             DAMAGE_TAKEN,
             DAMAGE_CALCULATING,
+            ARMOR_DAMAGE_CALCULATING,
             ATTACK_TARGETED,
             SAVE_REQUESTED,
             HEAL_DEALT,

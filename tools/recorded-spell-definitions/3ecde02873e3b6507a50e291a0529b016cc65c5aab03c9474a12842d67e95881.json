@@ -1,0 +1,219 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1736",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Vampiric Feast",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 365",
+      "rank": 3,
+      "cantrip": false,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1736"
+    }
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "arcane",
+    "divine",
+    "occult"
+  ],
+  "traits": {
+    "vestige:void": 1,
+    "vestige:blood": 1,
+    "vestige:necromancy": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 12
+    },
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 100
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            4,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "branch",
+          "condition": {
+            "type": "tagged",
+            "path": "vestige:target/entity_type",
+            "tag": "minecraft:undead"
+          },
+          "then": [],
+          "else": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    8,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              }
+            },
+            {
+              "type": "branch",
+              "condition": {
+                "type": "compare",
+                "path": "vestige:last_damage",
+                "operation": "greater_than",
+                "expected": 0
+              },
+              "then": [
+                {
+                  "type": "for_each",
+                  "target": {
+                    "selection": "self",
+                    "required": true
+                  },
+                  "effects": [
+                    {
+                      "type": "status",
+                      "values": {
+                        "duration": 100,
+                        "amplifier": 0
+                      },
+                      "identifiers": {
+                        "effect": "minecraft:absorption"
+                      }
+                    }
+                  ],
+                  "visual": {
+                    "duration": 24,
+                    "radius": 0.8,
+                    "height": 0.08,
+                    "layers": [
+                      {
+                        "shape": "fangs",
+                        "color": "c92551",
+                        "alpha": 0.85,
+                        "width": 0.045,
+                        "scale": 1.35,
+                        "speed": -0.9,
+                        "phase": 0,
+                        "count": 10
+                      },
+                      {
+                        "shape": "helix",
+                        "color": "ffd0b7",
+                        "alpha": 0.7,
+                        "width": 0.04,
+                        "scale": 0.945,
+                        "speed": 0.5850000000000001,
+                        "phase": 1.2,
+                        "count": 5
+                      },
+                      {
+                        "shape": "sparks",
+                        "color": "ffd0b7",
+                        "alpha": 0.65,
+                        "width": 0.04,
+                        "scale": 0.8,
+                        "speed": 1,
+                        "phase": 0,
+                        "count": 8
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "eb6684",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "fangs",
+            "color": "c92551",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.35,
+            "speed": -0.9,
+            "phase": 0,
+            "count": 10
+          },
+          {
+            "shape": "helix",
+            "color": "ffd0b7",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.945,
+            "speed": 0.5850000000000001,
+            "phase": 1.2,
+            "count": 5
+          },
+          {
+            "shape": "sparks",
+            "color": "ffd0b7",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -96,7 +96,17 @@ public final class MinecraftSpellWorld implements SpellWorld {
         };
     }
     @Override public boolean active(SpellRuntime.Context context) { LivingEntity caster = actor(context); return caster != null && caster.isAlive() && !caster.isRemoved(); }
-    @Override public boolean canActivate(UUID actor, SpellDefinition spell) {
+    @Override public List<TraitModifier> traitModifiers(UUID actor, MagicDefinition definition) {
+        if (!(entity(actor) instanceof LivingEntity wearer)) return List.of();
+        List<TraitModifier> modifiers = new ArrayList<>();
+        for (EquipmentSlot slot : EquipmentSlot.values()) {
+            ItemStack stack = wearer.getItemBySlot(slot);
+            if (!stack.isEmpty() && stack.getItem() instanceof TraitProvidingItem provider)
+                modifiers.addAll(provider.traitModifiers(stack, slot, definition));
+        }
+        return List.copyOf(modifiers);
+    }
+    @Override public boolean canActivate(UUID actor, MagicDefinition spell) {
         return !features.absent(actor) && !features.remote(actor)
                 && (!(entity(actor) instanceof LivingEntity caster) || !com.quzzar.vestige.magic.effect.SpellCapabilities.of(spell).contains(ResourceLocation.parse("vestige:utterance"))
                 || !features.silent(caster.position(),(ServerLevel)caster.level()));
@@ -120,8 +130,8 @@ public final class MinecraftSpellWorld implements SpellWorld {
                 if (path.equals(ConditionPaths.SOURCE_COUNT)) return decimal(caster.getMainHandItem().getCount());
                 if (path.equals(ConditionPaths.SOURCE_CUSTOM_NAME) && caster.getMainHandItem().has(net.minecraft.core.component.DataComponents.CUSTOM_NAME)) return Optional.of(new ConditionValue.Text(caster.getMainHandItem().getHoverName().getString()));
                 if (path.equals(ConditionPaths.ACTOR_MANA)) return decimal(NativeMana.amount(caster));
-                if (path.equals(ConditionPaths.ACTOR_MAX_MANA)) return decimal(NativeMana.MAX);
-                if (path.equals(ConditionPaths.ACTOR_MANA_PERCENT)) return decimal(NativeMana.amount(caster) / NativeMana.MAX);
+                if (path.equals(ConditionPaths.ACTOR_MAX_MANA)) return decimal(NativeMana.maximum(caster));
+                if (path.equals(ConditionPaths.ACTOR_MANA_PERCENT)) return decimal(NativeMana.amount(caster) / NativeMana.maximum(caster));
                 if (path.equals(ConditionPaths.TARGET_ENTITY_TYPE) && subject != null) return identifier(BuiltInRegistries.ENTITY_TYPE.getKey(subject.getType()));
                 if (path.equals(ConditionPaths.TARGET_HEALTH) && subject instanceof LivingEntity living) return decimal(living.getHealth());
                 if (name.equals("vestige:target/max_health") && subject instanceof LivingEntity living) return decimal(living.getMaxHealth());

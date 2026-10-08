@@ -1,0 +1,174 @@
+{
+  "source": {
+    "spell": "pathfinder2e:aon/1565",
+    "revision": "aon-2026-10-01; Player Core errata Spring 2026, 1st Printing (2026-02-06)",
+    "name": "Ignition",
+    "reference": {
+      "system": "pathfinder_second_edition",
+      "edition": "remaster",
+      "publication": "Player Core p. 336",
+      "rank": 1,
+      "cantrip": true,
+      "rarity": "common",
+      "url": "https://2e.aonprd.com/Spells.aspx?ID=1565"
+    }
+  },
+  "rarity": "common",
+  "traditions": [
+    "arcane",
+    "primal"
+  ],
+  "traits": {
+    "vestige:fire": 1,
+    "vestige:evocation": 1,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 6
+    },
+    {
+      "type": "cooldown",
+      "ticks": 20
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "entity_ray",
+        "required": true,
+        "distance": {
+          "product": [
+            16,
+            {
+              "trait": "vestige:range"
+            }
+          ]
+        },
+        "relationship": "hostile"
+      },
+      "effects": [
+        {
+          "type": "branch",
+          "condition": {
+            "type": "compare",
+            "path": "vestige:target/distance",
+            "operation": "less_than_or_equal",
+            "expected": 3
+          },
+          "then": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    6,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {
+                "damage_type": "minecraft:in_fire"
+              }
+            }
+          ],
+          "else": [
+            {
+              "type": "damage",
+              "values": {
+                "amount": {
+                  "product": [
+                    4,
+                    {
+                      "trait": "vestige:amplify"
+                    }
+                  ]
+                },
+                "ignore_invulnerability": 1
+              },
+              "identifiers": {
+                "damage_type": "minecraft:in_fire"
+              }
+            }
+          ]
+        },
+        {
+          "type": "ignite",
+          "values": {
+            "seconds": 2
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.85,
+        "height": 1.1,
+        "layers": [
+          {
+            "shape": "beam",
+            "color": "ff9d42",
+            "alpha": 0.9,
+            "width": 0.25,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "beam",
+            "color": "ffffff",
+            "alpha": 1,
+            "width": 0.06,
+            "scale": 1,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "flare",
+            "color": "f85b25",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 1.0,
+            "speed": 1.6,
+            "phase": 0,
+            "count": 4
+          },
+          {
+            "shape": "slash",
+            "color": "ffe4a1",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": -1.04,
+            "phase": 1.2,
+            "count": 3
+          },
+          {
+            "shape": "sparks",
+            "color": "ffe4a1",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

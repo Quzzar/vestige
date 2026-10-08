@@ -1,6 +1,6 @@
 # Homebound Eye · selected Flint refinement
 
-**Historical production draft, October 6:** the owner discarded the previous art directions after rejecting this sprite and two further studies. The current [four fresh Eye and four fresh Shell concepts](../item-textures-native-v4/README.md) are shown separately among vanilla items. This folder preserves the previous production draft and its gameplay/package evidence. Flint remains the accepted recipe ingredient; selecting a replacement appearance is outstanding.
+**Superseded production draft, October 6:** the owner locked **Eye A, Centered pearl**, from the later refinements. The [new canonical asset and native review](../attuned-items-locked/README.md) replace this old flint sprite. This folder preserves historical art, recipe and gameplay/package evidence. Flint remains the accepted recipe ingredient.
 
 **Owner-selected direction, October 6, 2026.** This refines H (Chipped Flint) from the [eight material concepts](../homebound-eye-concepts-v1/README.md). The owner selected Flint as the fourth offering, requested simpler Minecraft-style pixels and a Spider Eye red center, then selected Ender Pearl teal-green for the eye-shaped area around that red center.
 

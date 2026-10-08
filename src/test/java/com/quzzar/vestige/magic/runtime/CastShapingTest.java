@@ -22,6 +22,29 @@ class CastShapingTest {
         var duplicates=new CastShaping(1,true,new CastShaping.CostAdjustment(java.util.Map.of(),List.of(new SpellCost.Mana(.4)),0,0));
         assertEquals(List.of(new SpellCost.Mana(1)),duplicates.costs(List.of(new SpellCost.Mana(.4))));
     }
+    @Test void oneHeartAndTwoHungerIconsBuyThirtyManaAndMixedExchangeIsCapped() {
+        var blood=new CastShaping(1,true,new CastShaping.CostAdjustment(java.util.Map.of(),List.of(),.25,0));
+        var fasting=new CastShaping(1,true,new CastShaping.CostAdjustment(java.util.Map.of(),List.of(),0,.25));
+        assertEquals(List.of(new SpellCost.Mana(90),new SpellCost.Health(2)),blood.costs(List.of(new SpellCost.Mana(120))));
+        assertEquals(List.of(new SpellCost.Mana(90),new SpellCost.Hunger(4)),fasting.costs(List.of(new SpellCost.Mana(120))));
+        assertEquals(List.of(new SpellCost.Mana(1),new SpellCost.Health(2)),blood.costs(List.of(new SpellCost.Mana(1))));
+        var mixed=new CastShaping(1,true,new CastShaping.CostAdjustment(java.util.Map.of(),List.of(),.5,.25));
+        assertEquals(List.of(new SpellCost.Mana(20),new SpellCost.Health(4),new SpellCost.Hunger(3)),mixed.costs(List.of(new SpellCost.Mana(80))));
+        assertEquals(2,ResourceValuation.healthForMana(30));
+        assertEquals(4,ResourceValuation.foodForMana(30));
+        assertEquals(30,ResourceValuation.experienceForMana(30));
+        assertEquals(4,ResourceValuation.healthForMana(60));
+        assertEquals(8,ResourceValuation.foodForMana(60));
+        assertEquals(60,ResourceValuation.experienceForMana(60));
+        assertEquals(1,ResourceValuation.foodForMana(7.5));
+        assertEquals(2,ResourceValuation.foodForMana(Math.nextUp(7.5)));
+        assertEquals(1,ResourceValuation.experienceForMana(1));
+        for(double invalid:List.of(-1d,Double.NaN,Double.POSITIVE_INFINITY,Double.MAX_VALUE)) {
+            assertThrows(IllegalArgumentException.class,()->ResourceValuation.healthForMana(invalid));
+            assertThrows(IllegalArgumentException.class,()->ResourceValuation.foodForMana(invalid));
+            assertThrows(IllegalArgumentException.class,()->ResourceValuation.experienceForMana(invalid));
+        }
+    }
     @Test void finalAmountsRoundWhileRatiosSpeedsAndIntermediateProductsKeepPrecision() {
         var shaped=new CastShaping(1,true);
         assertEquals(5,shaped.value("amount",2.25*2));

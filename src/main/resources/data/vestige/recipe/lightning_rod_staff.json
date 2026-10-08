@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [ "S", "S" ],
+  "key": { "S": { "item": "minecraft:lightning_rod" } },
+  "result": { "id": "vestige:lightning_rod_staff", "count": 1 }
+}

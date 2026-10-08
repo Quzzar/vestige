@@ -10,7 +10,7 @@ public final class SpellVisualNetwork {
     private SpellVisualNetwork() { }
     @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event) {
         // The handler is invoked only on the logical client; dedicated servers never load its renderer.
-        event.registrar("4").playToClient(SpellVisualPayload.TYPE, SpellVisualPayload.STREAM_CODEC,
+        event.registrar("5").playToClient(SpellVisualPayload.TYPE, SpellVisualPayload.STREAM_CODEC,
                 (payload, context) -> com.quzzar.vestige.magic.presentation.client.SpellVisualClient.receive(payload));
         event.registrar("4").playToClient(SpellSensePayload.TYPE, SpellSensePayload.STREAM_CODEC,
                 (payload, context) -> com.quzzar.vestige.magic.presentation.client.SpellSenseClient.receive(payload));

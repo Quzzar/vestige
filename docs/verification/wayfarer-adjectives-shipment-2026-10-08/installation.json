@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-08T19:22:04.196795+00:00",
+  "target": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261008-152204-wayfarer-adjectives/vestige-0.1.0.jar",
+  "previous_sha256": "201c7974425df87e72c815c63b711b6700e4cb92318de3e48c27542321395b97",
+  "installed_sha256": "3ba781c1883c9eaf473cb22b29507090d2cd7dc2a64957a1b8e116105fd4e353",
+  "source": "/private/tmp/vestige-shipment-build/libs/vestige-0.1.0.jar",
+  "requires_client_restart": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "vestige:item/mundane_staff_guard",
+  "textures": {
+    "layer0": "vestige:item/lightning_rod_staff"
+  }
+}

@@ -37,6 +37,30 @@ class NativeCaptureVerification(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'Changed video'):
             capture.check([self.row], False)
 
+    def test_only_proven_cooldown_removal_can_reuse_an_operator_recording(self):
+        original = {'effects': [{'type': 'unchanged'}], 'costs': [{'type': 'mana', 'amount': 20},
+                    {'type': 'time', 'ticks': 10}, {'type': 'cooldown', 'ticks': 60}],
+                    'modes': [{'costs': [{'type': 'mana', 'amount': 5}, {'type': 'cooldown', 'ticks': 40}]}]}
+        self.source.write_text(json.dumps(original))
+        recorded_hash = capture.digest(self.source)
+        self.row['definitionSha256'] = recorded_hash
+        frozen = capture.ROOT / 'tools/recorded-spell-definitions' / (recorded_hash + '.json')
+        frozen.parent.mkdir(parents=True); frozen.write_bytes(self.source.read_bytes())
+        revised = capture.without_spell_cooldowns(original)
+        self.source.write_text(json.dumps(revised))
+        self.assertEqual(1, capture.check([self.row], False))
+        for changed in [revised | {'effects': [{'type': 'different'}]},
+                        revised | {'costs': [{'type': 'mana', 'amount': 21}, {'type': 'time', 'ticks': 10}]},
+                        revised | {'costs': [{'type': 'mana', 'amount': 20}, {'type': 'time', 'ticks': 11}]},
+                        revised | {'presentation': {'color': 'different'}},
+                        revised | {'modes': [{'costs': [{'type': 'mana', 'amount': 6}]}]}]:
+            self.source.write_text(json.dumps(changed))
+            with self.assertRaisesRegex(AssertionError, 'predates spell definition'):
+                capture.check([self.row], False)
+        self.source.write_text(json.dumps(revised)); frozen.write_bytes(b'changed original')
+        with self.assertRaisesRegex(AssertionError, 'predates spell definition'):
+            capture.check([self.row], False)
+
     def test_a_partial_collection_cannot_pass_complete_verification(self):
         with self.assertRaisesRegex(AssertionError, 'Missing 1 actual cast clips'):
             capture.check([self.row], True)

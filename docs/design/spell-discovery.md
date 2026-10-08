@@ -150,7 +150,7 @@ Native scroll casting reads persistent per-player identification through `SpellK
 
 ## Related equipment ideas retained for future design
 
-The owner's October 6 [wand construction and magical string design](wand-crafting.md) now has implemented untipped binding, seven base and five thread profiles, deterministic durability and an additional sixty-second wand cooldown. Durability replaces the briefly considered random break chance and is adjusted by components. Scrolls stack to sixteen by exact stored item components; casting and dismantling still consume one scroll per operation. The five thread components and shared imbuement-selected recipe are implemented. Eight locked additional tip effects, dynamically derived wand displays, final artwork and testing-pack installation remain outstanding. Wand casting never identifies spells.
+The owner's October 6 [wand construction and magical string design](wand-crafting.md) now has implemented untipped/tipped binding, seven base and five thread profiles, eight selected tips and deterministic durability. The owner removed additional wand recovery on October 7; composed resources, preparation/channel time and wear govern repeated use. Durability replaces the briefly considered random break chance and is adjusted by components. Scrolls stack to sixteen by exact stored item components; casting and dismantling still consume one scroll per operation. The five thread components and shared imbuement-selected recipe are implemented. Eight locked additional tip effects, dynamically derived wand displays and native artwork are implemented; testing-pack installation remains separate. Wand casting never identifies spells.
 
 These are the owner's earlier proposals, not completed items or finalized tuning:
 

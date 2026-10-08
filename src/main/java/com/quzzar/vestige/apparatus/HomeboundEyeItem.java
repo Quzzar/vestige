@@ -1,6 +1,9 @@
 package com.quzzar.vestige.apparatus;
 
 import com.quzzar.vestige.magic.world.NativeMana;
+import com.quzzar.vestige.magic.runtime.ResourceValuation;
+import com.quzzar.vestige.magic.presentation.MagicAdjectives;
+import com.quzzar.vestige.VestigeMainMod;
 import com.quzzar.vestige.travel.PlayerExperience;
 import com.quzzar.vestige.travel.StoneNetwork;
 import com.quzzar.vestige.travel.NearbyTeleport;
@@ -26,11 +29,17 @@ import java.util.*;
 /** A fixed crafting-site address, copied attunement and independently selected payment. */
 public final class HomeboundEyeItem extends Item {
     public static final int DURABILITY = 30;
+    public static final int RESOURCE_RETURN_MANA = ResourceValuation.MANA_PER_HEART;
     public enum Payment {
-        DURABILITY(6, 0), HEALTH(1, 6), HUNGER(2, 6), EXPERIENCE(2, 25), MANA(2, 30);
+        DURABILITY(6, 0), HEALTH(2, ResourceValuation.healthForMana(RESOURCE_RETURN_MANA)),
+        HUNGER(2, ResourceValuation.foodForMana(RESOURCE_RETURN_MANA)), EXPERIENCE(2, ResourceValuation.experienceForMana(RESOURCE_RETURN_MANA)), MANA(2, RESOURCE_RETURN_MANA);
         public final int wear, cost;
         Payment(int wear, int cost) { this.wear = wear; this.cost = cost; }
         public String id() { return name().toLowerCase(Locale.ROOT); }
+        public List<MagicAdjectives.Adjustment> adjectives() {
+            return this == DURABILITY ? List.of() : List.of(new MagicAdjectives.Adjustment(
+                    VestigeMainMod.location("homebound_eye/" + id()), 1));
+        }
         public Component description() { return Component.translatable("item.vestige.homebound_eye.payment." + id()); }
     }
     public record Binding(String key, ResourceKey<Level> dimension, BlockPos origin, Payment payment) {
@@ -59,6 +68,11 @@ public final class HomeboundEyeItem extends Item {
         catch (IllegalArgumentException invalid) { return Optional.empty(); }
     }
     @Override public boolean isFoil(ItemStack item) { return binding(item).isPresent(); }
+    @Override public Component getName(ItemStack item) {
+        return binding(item).<Component>map(value -> MagicAdjectives.prefix(
+                VestigeMainMod.location("homebound_eye"), value.payment().adjectives()).append(super.getName(item)))
+                .orElseGet(() -> super.getName(item));
+    }
     @Override public void appendHoverText(ItemStack item, TooltipContext context, List<Component> text, TooltipFlag flag) {
         binding(item).ifPresent(value -> {
             text.add(AttunementMark.fromKey(value.key()).component());

@@ -1,0 +1,193 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:spider_aspect",
+    "school": "irons_spellbooks:nature",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Aspect of the Spider",
+    "cast_type": "instant",
+    "cooldown_ticks": 1800
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "primal"
+  ],
+  "traits": {
+    "vestige:poison": 4,
+    "vestige:enchantment": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 24
+    },
+    {
+      "type": "cooldown",
+      "ticks": 300
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "create_manifestation",
+      "target": {
+        "selection": "self",
+        "required": true
+      },
+      "manifestation": {
+        "kind": "vestige:status",
+        "duration": 200,
+        "values": {},
+        "identifiers": {},
+        "bindings": [
+          {
+            "id": "vestige:spider_bite",
+            "duration": 200,
+            "charges": 3,
+            "triggers": [
+              {
+                "id": "vestige:spider_bite/trigger",
+                "event": "vestige:damage_dealt",
+                "conditions": [
+                  {
+                    "type": "compare",
+                    "path": "vestige:event/magical",
+                    "operation": "equal",
+                    "expected": false
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "type": "for_each",
+                "target": {
+                  "selection": "event_target",
+                  "required": true
+                },
+                "effects": [
+                  {
+                    "type": "branch",
+                    "condition": {
+                      "type": "compare",
+                      "path": "vestige:target/status/minecraft/poison",
+                      "operation": "equal",
+                      "expected": true
+                    },
+                    "then": [
+                      {
+                        "type": "damage",
+                        "values": {
+                          "amount": {
+                            "product": [
+                              3,
+                              {
+                                "trait": "vestige:amplify"
+                              }
+                            ]
+                          },
+                          "ignore_invulnerability": 1
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "visual": {
+                  "duration": 24,
+                  "radius": 0.8,
+                  "height": 0.08,
+                  "layers": [
+                    {
+                      "shape": "tendrils",
+                      "color": "8bac29",
+                      "alpha": 0.85,
+                      "width": 0.15,
+                      "scale": 1.05,
+                      "speed": 0.85,
+                      "phase": 0,
+                      "count": 8
+                    },
+                    {
+                      "shape": "motes",
+                      "color": "e0ff8d",
+                      "alpha": 0.7,
+                      "width": 0.04,
+                      "scale": 0.735,
+                      "speed": -0.5525,
+                      "phase": 1.2,
+                      "count": 4
+                    },
+                    {
+                      "shape": "sparks",
+                      "color": "e0ff8d",
+                      "alpha": 0.65,
+                      "width": 0.04,
+                      "scale": 0.8,
+                      "speed": 1,
+                      "phase": 0,
+                      "count": 8
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "on_hit": [],
+        "on_tick": [],
+        "on_end": [],
+        "interval": 20,
+        "visual": {
+          "duration": 200,
+          "radius": 1.15,
+          "height": 1,
+          "layers": [
+            {
+              "shape": "tendrils",
+              "color": "8bac29",
+              "alpha": 0.85,
+              "width": 0.15,
+              "scale": 1.05,
+              "speed": 0.85,
+              "phase": 0,
+              "count": 8
+            },
+            {
+              "shape": "motes",
+              "color": "e0ff8d",
+              "alpha": 0.7,
+              "width": 0.04,
+              "scale": 0.735,
+              "speed": -0.5525,
+              "phase": 1.2,
+              "count": 4
+            },
+            {
+              "shape": "sparks",
+              "color": "e0ff8d",
+              "alpha": 0.65,
+              "width": 0.04,
+              "scale": 0.8,
+              "speed": 1,
+              "phase": 0,
+              "count": 8
+            }
+          ],
+          "ends_with_bindings": true,
+          "sound": {
+            "id": "minecraft:block.amethyst_block.resonate",
+            "volume": 0.6,
+            "pitch": 1.1
+          }
+        }
+      }
+    }
+  ]
+}

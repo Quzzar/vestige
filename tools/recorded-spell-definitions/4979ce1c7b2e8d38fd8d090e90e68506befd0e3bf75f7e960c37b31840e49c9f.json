@@ -1,0 +1,122 @@
+{
+  "source": {
+    "spell": "irons_spellbooks:haste",
+    "school": "irons_spellbooks:holy",
+    "revision": "e4056af90302d37eb1739f5ff05020b020e6e252",
+    "name": "Haste",
+    "cast_type": "long",
+    "cooldown_ticks": 1600
+  },
+  "rarity": "uncommon",
+  "traditions": [
+    "divine"
+  ],
+  "traits": {
+    "vestige:holy": 4,
+    "vestige:time": 4,
+    "vestige:enchantment": 4,
+    "vestige:amplify": 1,
+    "vestige:range": 1,
+    "vestige:area": 1
+  },
+  "costs": [
+    {
+      "type": "time",
+      "ticks": 10
+    },
+    {
+      "type": "mana",
+      "amount": 26
+    },
+    {
+      "type": "cooldown",
+      "ticks": 500
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:primary",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "for_each",
+      "target": {
+        "selection": "nearby_entities",
+        "required": false,
+        "distance": {
+          "product": [
+            4,
+            {
+              "trait": "vestige:area"
+            }
+          ]
+        },
+        "relationship": "ally",
+        "options": {
+          "count": 4
+        }
+      },
+      "effects": [
+        {
+          "type": "status",
+          "values": {
+            "duration": 400,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:haste"
+          }
+        },
+        {
+          "type": "status",
+          "values": {
+            "duration": 400,
+            "amplifier": 0
+          },
+          "identifiers": {
+            "effect": "minecraft:speed"
+          }
+        }
+      ],
+      "visual": {
+        "duration": 24,
+        "radius": 0.8,
+        "height": 0.08,
+        "layers": [
+          {
+            "shape": "clock",
+            "color": "ffd45a",
+            "alpha": 0.85,
+            "width": 0.045,
+            "scale": 0.85,
+            "speed": 1.8,
+            "phase": 0,
+            "count": 8
+          },
+          {
+            "shape": "helix",
+            "color": "fffbe1",
+            "alpha": 0.7,
+            "width": 0.04,
+            "scale": 0.595,
+            "speed": -1.1700000000000002,
+            "phase": 1.2,
+            "count": 4
+          },
+          {
+            "shape": "sparks",
+            "color": "fffbe1",
+            "alpha": 0.65,
+            "width": 0.04,
+            "scale": 0.8,
+            "speed": 1,
+            "phase": 0,
+            "count": 8
+          }
+        ]
+      }
+    }
+  ]
+}

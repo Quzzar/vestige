@@ -1,0 +1,7 @@
+1501: [11:23:36] [Render thread/ERROR] [ne.ne.bu.EventBus/EVENTBUS]: Exception caught during firing event: Thread viewer capture timed out
+1522: java.lang.IllegalStateException: Thread viewer capture timed out
+1550: java.lang.IllegalStateException: Thread viewer capture timed out
+1605: [11:23:42] [Render thread/ERROR] [ne.ne.bu.EventBus/EVENTBUS]: Exception caught during firing event: Thread viewer capture timed out
+1626: java.lang.IllegalStateException: Thread viewer capture timed out
+1665: java.lang.IllegalStateException: Thread viewer capture timed out
+1853: BUILD FAILED in 4m 31s

@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-06",
+  "status": "verified center flash removal",
+  "productionBehaviorChange": "Deletes the Shell HUD drawing, layer registration and transient state. Existing cue packet plays the quiet sound only. Compact channel chat and item badges remain.",
+  "package": {
+    "path": "run/whispering-shell-chat-only-production-build/libs/vestige-0.1.0.jar",
+    "sha256": "247be1710fcade6da4a546e911a93e46f9d38d1e4d14e76347ec79ff96449eb1",
+    "bytes": 7736213,
+    "build": true,
+    "kithkynCompatibility": true,
+    "captureFixtureExcluded": true,
+    "paperOverrideExcluded": true,
+    "sharedCheckoutBuild": true,
+    "installedByThisReview": false
+  },
+  "junit": {
+    "tests": 121,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "suites": 25
+  },
+  "nativeScenarios": {
+    "passed": 10,
+    "actualSurvivalClients": 1,
+    "inMemoryServerPacketClients": 4,
+    "frames": 13,
+    "allFinalFramesVisuallyInspected": true,
+    "manifest": "captures/capture.json",
+    "centerFlashAbsentInOutgoingAndIncomingFrames": true
+  },
+  "priorMinecraftWorldTests": {
+    "passed": 14,
+    "focusedShellTests": 6,
+    "log": "docs/art/whispering-shell-symbol-chat/production.log",
+    "serverChatAndBindingClassFilesUnchanged": true,
+    "notRepeatedForClientOnlyOverlayRemoval": true
+  },
+  "loadedAssets": {
+    "models/item/homebound_eye.json": {
+      "sha256": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f",
+      "loadedSourcePackageParity": true
+    },
+    "textures/item/homebound_eye.png": {
+      "sha256": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+      "loadedSourcePackageParity": true
+    },
+    "models/item/whispering_shell.json": {
+      "sha256": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced",
+      "loadedSourcePackageParity": true
+    },
+    "textures/item/whispering_shell.png": {
+      "sha256": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+      "loadedSourcePackageParity": true
+    }
+  },
+  "sources": {
+    "src/main/java/com/quzzar/vestige/apparatus/AttunementShardItem.java": {
+      "sha256": "608f9008733b2f961c78dc5683dff0cd6cd7026533431c6f8981db7a169863d0",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": {
+      "sha256": "05fc74b62cf4edf8148f5fee2fea027ac4503867c61f94b8ff07b87250dd9a21",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": {
+      "sha256": "a0006580c88807d16cd6b96d1e60f17ed3e2c7f000c771c86c907f7e05accfa7",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellItem.java": {
+      "sha256": "348e6b4d752742a4e43c5541ce31565f68f42668805e3e1b4a02cd1e610f9e8c",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/WhisperingShellRecipe.java": {
+      "sha256": "5aabdaa6e02726ef93657390db0343f28ff219a16a271d51e7d49caea197f6e9",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": {
+      "sha256": "c53124b4a7fc488b5619ce1b3b7173249aa5d519fb0af7e035cde0eb4e822e90",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": {
+      "sha256": "2eabc2fc9e47deb11be863d7ee2ab029ccafadd5e2c1276b3453113d186428a9",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/ShellCuePayload.java": {
+      "sha256": "4cf710c2374d958a029666fcb5328b75c59ac5bc4c3870037595afee3dd716e3",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/WhisperingShellChat.java": {
+      "sha256": "5d8ba60ee3efe0333c7dfedb28aa9a956bf5caa5ca886abb96db1246562eadf8",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/WhisperingShellWorldTest.java": {
+      "sha256": "8e43f3b2b2defaaff68ce0e567bbd6588e3e9791cc7325b68c20fe0d4decfc30",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/client/ShellFeedback.java": {
+      "sha256": "d470606d6c0c30e06ae15795d061b170310752ef4f9b226ebc5682ef1aea9e41",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/mixin/ChatRecipientsMixin.java": {
+      "sha256": "379ca6c40ad547f77b30c2480cdf340ad81a89ddcfbe6cf90bdb84a190846d44",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/communication/mixin/ChatSubmissionMixin.java": {
+      "sha256": "960cf98523cd39702a560d56db410a259a876acef87e010ac4ab8beea9f0b3fc",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": {
+      "sha256": "5a6c971baa2124fd5fdc4a85a485ed69ee38e9ace5b5432f0ce2de867a3a2803",
+      "sourceJarParity": true
+    },
+    "src/main/java/com/quzzar/vestige/apparatus/AttunementMark.java": {
+      "sha256": "8d2da2ef43f0c789c685dae6ec336bde70def88a81cc43809314e69c88453b95",
+      "sourceJarParity": true
+    }
+  },
+  "shellClasses": {
+    "com/quzzar/vestige/apparatus/AttunementMark.class": {
+      "sha256": "601d92797e30853cbe48661d2288ebbb7018ddbf467a1b9305a7f12c7eba5ef9",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/apparatus/AttunementMark$Rune.class": {
+      "sha256": "5f663a97dc5b10722b583955b921be68eb313c31ee4e7a60e24ac69f6779bde3",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/apparatus/WhisperingShellItem.class": {
+      "sha256": "2d2fa7ed2b8815c7d05820c110a870d3bacbdc7f44bb87f953b8fa114cfc4029",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/apparatus/WhisperingShellRecipe.class": {
+      "sha256": "f6e75d5e1d9de9d19ffeaa607c29f9051353d38cb7f8eba0faebd52f5321b055",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$RecordingConnection.class": {
+      "sha256": "5de621011d60441e7611a9d928889fdae07064a9a8f8475aff6cf1d105e8c896",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellChat$Transmission.class": {
+      "sha256": "645572d98a86e1b8edfc981ed7b73426cd1ce4c3341e7956ab2c18dab6df2a38",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/ShellCuePayload.class": {
+      "sha256": "3f42297dfd035f31d77417acc601c6564803db87d45ef584153bb27f3b28daa7",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/mixin/ChatRecipientsMixin.class": {
+      "sha256": "bbad1733e0a40b24734c12bef35a721d028512c5cf3717f547f0f727797f66c3",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/mixin/ChatSubmissionMixin.class": {
+      "sha256": "06321a2239ee11f22f16f420280e9aa9c061b579314a4aa2e0647f86aa3ef7ea",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$ChatPlayer.class": {
+      "sha256": "68e5848623fe28a150de76d36754db49b93b19d734ff62aba886506dbc56bdf2",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellChat.class": {
+      "sha256": "fdbd018c4a5ff603b5dbfba3896a5f6ba4bc8462ae3afbf1fe01232adb694c72",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/ShellCuePayload$1.class": {
+      "sha256": "84f230f40847d462b5d89976fc9534b8418bb648830c08041dae335dd46c9070",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest.class": {
+      "sha256": "8456ad6141dc99214a6186a0400de8285936da270127ec364fe4fdd513708b68",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/WhisperingShellWorldTest$ChatPlayer$1.class": {
+      "sha256": "d751ccf0c9fb49f878d9aa50a5f1d499d1fc10b6592f07403a4fe09af82f17eb",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": true
+    },
+    "com/quzzar/vestige/communication/client/ShellFeedback.class": {
+      "sha256": "5dc7dd422a314abc82b62814fe89ca6c55e2d25ec9b781ddf75b91731b35aac1",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": false
+    },
+    "com/quzzar/vestige/communication/client/ShellFeedback$Registration.class": {
+      "sha256": "189e2a8a64fbc079e89369d9e28619c9537a2425bdbc37c86fb12a03e141fd6e",
+      "productionPreviewParity": true,
+      "unchangedFromCompactSymbolReview": false
+    }
+  },
+  "frames": {
+    "hotbar-unselected-inventory.png": {
+      "sha256": "daa40cf2519846aa2871774c57f08e6cf808d84597a270b9646fbd053ad66fcf",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "hotbar-unselected-message.png": {
+      "sha256": "d7d1c26577582ec009baa63eea00e01673b438cbc5d29e51ef4b97a37ca88c61",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "inventory-listening-inventory.png": {
+      "sha256": "88300571419a05d5739076d3fd01c8ca262726b207010a2a002bd1e8fe0069b3",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "inventory-listening-message.png": {
+      "sha256": "4b330cdf0ee99e79039c1b934963c732b2be1390212efcd803c62767ade4a00b",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "offhand-message.png": {
+      "sha256": "f6b601e2656dcaa99e5aa86ef91dc42a68f91bf8e2286a124b86c87bdc4e9d34",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "multiple-active-inventory.png": {
+      "sha256": "2242527dd4b849a4f5925d47567bbe500338c5a7d19ce7404d9e69fc54b9848d",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "multiple-active-message.png": {
+      "sha256": "535e59c99119cbb7d3d076d6b9ab635d3df42d96b44e90e24a17f766f482e527",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shared-copper-message.png": {
+      "sha256": "f38065dd0b6cd63d2a3e97a6b2e3a24f462293e1dd45f794746e4de1cbd8faae",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shared-gold-message.png": {
+      "sha256": "9ee395afd2702720555d2d437f9e089d1202b12428da39c1990217e69ab0aec7",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "duplicate-copper-message.png": {
+      "sha256": "a1203af85bcc3dcc8808b9771fa7b77400be9e7d81292c2573ac1dea243ee4dd",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "ordinary-chat-message.png": {
+      "sha256": "99dcbf06db1bbe78765dd7f90c3cdfe8da35ff228838c4786738871bdecffac7",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "unmatched-gold-message.png": {
+      "sha256": "d3613e1d9b8c746e2b07747fd0553b95e8c86fc0bbd1a6105a20c90e0f721d13",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    },
+    "shared-both-message.png": {
+      "sha256": "b9eba848c907d076b96e9a583f42a9de98d8a5a12ea74ad83e3aeaeb4bd99f35",
+      "dimensions": [
+        960,
+        720
+      ],
+      "uneditedNativeFramebuffer": true,
+      "visuallyInspected": true
+    }
+  },
+  "logs": {
+    "client.log": {
+      "sha256": "8c52163c68e8fe6663784e61646e42f2b0f4b1f9411a9f293374d530848209b5",
+      "successful": true
+    },
+    "production.log": {
+      "sha256": "23df4259d94515cb5cc8a2b59032fa03e215b6c35963790bd81bd4eb337ac7b5",
+      "successful": true
+    }
+  },
+  "gallery": {
+    "path": "docs/art/whispering-shell-chat-only/gallery.html",
+    "sha256": "f7c48d99a3149e0ff9928bbd3ff87c6af6760f20b5ae483a41fe9ad2d410fcc0",
+    "images": 16,
+    "allImageReferencesExist": true,
+    "visibleTabNavigated": false,
+    "browserOpenAttempt": "Blocked by browser URL security policy; no workaround or further browser action attempted."
+  },
+  "limits": [
+    "Local integrated-world capture, not remote human multiplayer.",
+    "Authenticated Mojang signing and subjective audio quality not exercised.",
+    "No installed pack or existing world was replaced."
+  ]
+}

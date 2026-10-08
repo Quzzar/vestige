@@ -1,0 +1,60 @@
+[
+  {
+    "item": "homebound_eye",
+    "variant": "eye_a_centered_pearl",
+    "approvedSha256": "716aec5a00b5dbb5dce5305df963921dc7b49a4db8baceb6937ae43f8618b710",
+    "atlasDimensions": [
+      2048,
+      2048
+    ],
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        8.376701966717095,
+        -6.385779122541603,
+        0
+      ],
+      "scale": [
+        2.7110438729198183,
+        2.7110438729198183,
+        1
+      ]
+    },
+    "normalization": "14 native GUI pixels; parent ground/head/hand/frame transforms composed with the same artwork normalization",
+    "textureSha256": "24b2b58acd678b5e582c11f2aa93970b9a1551d3f760858298011c4b3bc0681f",
+    "modelSha256": "ba5bf20e88edfb4771bb3744606bcc669e290fdc51afd7ffffbd38572421e01f"
+  },
+  {
+    "item": "whispering_shell",
+    "variant": "shell_b_deep_coil",
+    "approvedSha256": "1e9a555a5d1ce097c289e0ff67a21d44bc6a1896784a0798e4f6a851e50f2da3",
+    "atlasDimensions": [
+      2048,
+      2048
+    ],
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        7.5793103448275865,
+        -7.366896551724138,
+        0
+      ],
+      "scale": [
+        2.4717241379310346,
+        2.4717241379310346,
+        1
+      ]
+    },
+    "normalization": "14 native GUI pixels; parent ground/head/hand/frame transforms composed with the same artwork normalization",
+    "textureSha256": "0d669a6faf64a60b8aba86c24073e2812fb9d0e58426ee50f05acdf7c8b7cc5c",
+    "modelSha256": "5b897f89a24609cdd5a195c97378b715dbfc5160b5ea194052a827b766c0fced"
+  }
+]

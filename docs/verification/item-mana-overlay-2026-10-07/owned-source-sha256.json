@@ -1,0 +1,18 @@
+{
+  "src/main/java/com/quzzar/vestige/magic/presentation/ManaReadiness.java": "e82bdbd86ceef9529ab3e4b3722191262a0edc5032bb5799fe4c67d2dc2bf5d2",
+  "src/main/java/com/quzzar/vestige/apparatus/ManaItemCosts.java": "1b55595fb8905876bc083a48ffec36aa20817595413f29a60bc55098f5288b9d",
+  "src/main/java/com/quzzar/vestige/magic/world/ItemManaPayload.java": "27b4994004cba10f6432afe21a1090d786a7b18dcfcbf80e60bb9d414f576a11",
+  "src/main/java/com/quzzar/vestige/magic/world/NativeItemMana.java": "6751beb9045ae54d22c898a39949ec1047af245933cdd1c2a0965cc8a38c9cd4",
+  "src/main/java/com/quzzar/vestige/magic/world/client/ItemManaOverlay.java": "33064e7323d2cb9a79ea1bd8a4989c455195c21714b54b3b27666598626ae1e5",
+  "src/main/java/com/quzzar/vestige/magic/world/ManaPayload.java": "e145e621c961b4c431b1f3f87d3198a6b0856799629ad592355f54f45833bc11",
+  "src/main/java/com/quzzar/vestige/magic/world/NativeMana.java": "8c21d782d06af0d19b16128d0eda4e432a3c35fc7ade4f78a1150731f124695d",
+  "src/main/java/com/quzzar/vestige/magic/presentation/client/ManaDisplay.java": "2eb24915c2cc15c4fcb51cb6c217954fd2939cf78857733cde3f237bdb1c55d4",
+  "src/main/java/com/quzzar/vestige/magic/world/ItemManaTest.java": "832c754e72898ca53ae128b40fbcbfb34463bd9449eb505e0d30cfc08b60a8e0",
+  "src/main/java/com/quzzar/vestige/magic/world/client/NativeItemManaCapture.java": "f63baac429286032bf1edc07a2b6cfb60f33df9af661af8ab4dac0e0a3b9ed6f",
+  "src/main/java/com/quzzar/vestige/magic/world/client/NativeManaCapture.java": "d5a9e1c78d773c48b5c186d59500bf616ab413e88fef296ca20c1398b19dc59e",
+  "src/main/java/com/quzzar/vestige/travel/client/NativeStoneCapture.java": "a6b1812c03865907c6f6989d8f7ab829c0cb950650db5e4a582568560399b289",
+  "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "3890314615d7248540974c78a045897c5862c914278c72b7f765804bdcb27461",
+  "src/main/resources/assets/vestige/textures/gui/mana.png": "3e4cc02b5fbfaa238ee1319aa4b2307fd7464a59f47c49d9d061799f52f47f0a",
+  "src/test/java/com/quzzar/vestige/magic/presentation/ManaReadinessTest.java": "2ddbdcf99b9942cb3bf0484555e0c5469dbd80d80d3158e366f7b82a93ebe604",
+  "src/test/java/com/quzzar/vestige/magic/world/ItemManaPayloadTest.java": "3e30d99cf01916ec36f750abc9692808351fdef12cffeac0e9b2d5b0fcf5358b"
+}

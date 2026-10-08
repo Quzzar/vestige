@@ -18,7 +18,7 @@ class RitualDisplaysTest {
         assertEquals(5,displays.stream().map(RitualDisplays.Entry::id).distinct().count());
         for(int i=0;i<displays.size();i++) {
             var display=displays.get(i);var type=MagicalThreadRecipe.types().get(i);
-            assertTrue(display.shapeless());assertFalse(display.concealed());assertEquals(4,display.capacity());
+            assertFalse(display.shapeless());assertFalse(display.concealed());assertEquals(4,display.capacity());
             assertEquals(type.item(),display.output().getItem());assertEquals(1,display.output().getCount());
             assertEquals(List.of(0,2,4),display.offerings().stream().map(RitualDisplays.Offering::seat).toList());
             assertEquals(MagicalThreadRecipe.ingredients().stream().map(net.minecraft.core.registries.BuiltInRegistries.ITEM::getKey).toList(),

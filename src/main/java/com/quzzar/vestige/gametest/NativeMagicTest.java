@@ -181,20 +181,18 @@ public final class NativeMagicTest {
         });
     }
     @GameTest(template="empty_3x3x3", batch="balance", timeoutTicks=65)
-    public static void balancedCastingPaysOnceAndRejectsCooldownWithoutSpendingAgain(GameTestHelper helper) {
+    public static void balancedCastingPaysForEveryImmediateRepeat(GameTestHelper helper) {
         var caster=caster(helper,0); var session=NativeMagic.session(helper.getLevel().getServer());
         caster.getPersistentData().putDouble("vestige:mana",200);
         var spell=NativeMagic.spells().spells().get(VestigeMainMod.location("force_arrow"));
         var event=SpellEvent.of(SpellTriggerTypes.INTERACT,caster.getUUID(),null);
         successful(helper,session.runtime().cast(spell,event,List.of(),true));
         require(helper,caster.getPersistentData().getDouble("vestige:mana")==186,"Force Arrow did not spend its fourteen mana");
-        require(helper,session.runtime().cast(spell,event,List.of(),true).status()==SpellRuntime.Status.COOLDOWN,"Immediate paid repeat bypassed recovery");
-        require(helper,caster.getPersistentData().getDouble("vestige:mana")==186,"Rejected repeat spent mana");
-        helper.runAfterDelay(41,()-> {
-            successful(helper,session.runtime().cast(spell,event,List.of(),true));
-            require(helper,caster.getPersistentData().getDouble("vestige:mana")==172,"Recovery did not permit another paid cast");
-            cleanup(helper,caster); helper.succeed();
-        });
+        successful(helper,session.runtime().cast(spell,event,List.of(),true));
+        require(helper,caster.getPersistentData().getDouble("vestige:mana")==172,"Immediate repeat retained recovery or skipped payment");
+        successful(helper,session.runtime().cast(spell,event,List.of(),true));
+        require(helper,caster.getPersistentData().getDouble("vestige:mana")==158,"Repeat did not pay exactly once");
+        cleanup(helper,caster); helper.succeed();
     }
 
     @GameTest(template="empty_3x3x3", batch="balance", timeoutTicks=170)

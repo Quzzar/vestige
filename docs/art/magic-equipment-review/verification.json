@@ -1,0 +1,44 @@
+[
+  {
+    "imageLoaded": true,
+    "name": "Wardweave Robes",
+    "noOverflow": true,
+    "recipe": "Accepted recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  },
+  {
+    "imageLoaded": true,
+    "name": "Cinderweave Robes",
+    "noOverflow": true,
+    "recipe": "Accepted recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  },
+  {
+    "imageLoaded": true,
+    "name": "Wayfarer Boots",
+    "noOverflow": true,
+    "recipe": "Proposed recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  },
+  {
+    "imageLoaded": true,
+    "name": "Dawnsight Hood",
+    "noOverflow": true,
+    "recipe": "Proposed recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  },
+  {
+    "imageLoaded": true,
+    "name": "Patchwork Robes",
+    "noOverflow": true,
+    "recipe": "Proposed recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  },
+  {
+    "imageLoaded": true,
+    "name": "Spiderstep Boots",
+    "noOverflow": true,
+    "recipe": "Proposed recipe · Eight offerings",
+    "status": "Awaiting approval · Proposed stats"
+  }
+]

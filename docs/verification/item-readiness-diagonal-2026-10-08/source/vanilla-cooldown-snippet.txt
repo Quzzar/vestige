@@ -1,0 +1,9 @@
+            LocalPlayer localplayer = this.minecraft.player;
+            float f = localplayer == null
+                ? 0.0F
+                : localplayer.getCooldowns().getCooldownPercent(stack.getItem(), this.minecraft.getTimer().getGameTimeDeltaPartialTick(true));
+            if (f > 0.0F) {
+                int i1 = y + Mth.floor(16.0F * (1.0F - f));
+                int j1 = i1 + Mth.ceil(16.0F * f);
+                this.fill(RenderType.guiOverlay(), x, i1, x + 16, j1, Integer.MAX_VALUE);
+            }

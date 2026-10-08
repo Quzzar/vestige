@@ -1,0 +1,14 @@
+gradle.beforeProject { project ->
+    if (project.projectDir.name == 'vestige') {
+        project.layout.buildDirectory.set(project.file('run/whispering-shell-finished-preview-build'))
+        project.afterEvaluate {
+            project.tasks.named('generateModMetadata').configure {
+                into project.layout.buildDirectory.dir('generated/sources/modMetadata')
+            }
+            project.sourceSets.main.java.srcDir(project.file('docs/art/whispering-shell-finished/preview-source'))
+            project.neoForge.runs.effectsCapture.programArguments.set(['--width', '480', '--height', '360'])
+            project.tasks.withType(JavaCompile).configureEach { options.incremental = false }
+            project.tasks.named('runEffectsCapture').configure { maxHeapSize = '2G' }
+        }
+    }
+}

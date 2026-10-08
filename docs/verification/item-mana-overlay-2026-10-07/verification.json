@@ -1,0 +1,19 @@
+{
+  "units": {
+    "tests": 166,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focusedWorldTests": 10,
+  "nativeFrames": 170,
+  "sourceSnapshot": "/private/tmp/vestige-item-mana-20261007-source",
+  "deletedSources": [
+    "src/main/java/com/quzzar/vestige/magic/world/client/ManaHud.java"
+  ],
+  "artifact": "/Users/quzzar/Projects/vestige/build/mana-item-overlay-review/libs/vestige-0.1.0.jar",
+  "artifactSha256": "60ef16486540db031f5cb1c450466d3aa7adb4e4968076cf7b0eed4c6a645b25",
+  "installed": false,
+  "wandRecovery": "Existing sixty-second source recovery retained pending optional owner decision",
+  "clientEvidence": "Two native window sizes, inventory, selected staff, 10/16 real casts and real recovery; integrated transport, no remote session"
+}

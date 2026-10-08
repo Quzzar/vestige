@@ -1,0 +1,23 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/Users/quzzar/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/native-platform-0.22-milestone-26.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed.
+Timed out waiting for finished message from client socket connection from /127.0.0.1:49434 to /127.0.0.1:50400. Discarding connection.
+> Task :verifyKithkynCompatibility
+> Task :jarJar NO-SOURCE
+> Task :processTestResources UP-TO-DATE
+> Task :prepareEffectsCapture
+> Task :generateModMetadata UP-TO-DATE
+> Task :createArtifactManifest UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :buildKithkyn UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :writeNeoForgeTestClasspath UP-TO-DATE
+> Task :prepareNeoForgeTestFiles UP-TO-DATE
+> Task :writeEffectsCaptureLegacyClasspath UP-TO-DATE
+> Task :prepareEffectsCaptureRun UP-TO-DATE
+> Task :sourcesJar
+> Task :compileJava

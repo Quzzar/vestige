@@ -1,0 +1,113 @@
+{
+  "traits": {
+    "vestige:abjuration": 1,
+    "vestige:force": 1,
+    "vestige:time": 1,
+    "vestige:amplify": 1
+  },
+  "variables": {
+    "vestige:ward_duration": {
+      "product": [
+        4,
+        {
+          "trait": "vestige:time"
+        }
+      ]
+    },
+    "vestige:ward_ticks": {
+      "product": [
+        20,
+        {
+          "variable": "vestige:ward_duration"
+        }
+      ]
+    },
+    "vestige:protection": {
+      "product": [
+        2,
+        {
+          "trait": "vestige:force"
+        },
+        {
+          "trait": "vestige:amplify"
+        }
+      ]
+    },
+    "vestige:mana_bonus": 25
+  },
+  "activation": "reactive",
+  "costs": [
+    {
+      "type": "cooldown",
+      "ticks": 240
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:wardweave/hurt",
+      "event": "vestige:damage_taken",
+      "conditions": [
+        {
+          "type": "compare",
+          "path": "vestige:event/damage_amount",
+          "operation": "greater_than",
+          "expected": 0
+        },
+        {
+          "type": "compare",
+          "path": "vestige:magic/variable/vestige/ward_ticks",
+          "operation": "greater_than",
+          "expected": 0
+        },
+        {
+          "type": "compare",
+          "path": "vestige:magic/variable/vestige/protection",
+          "operation": "greater_than",
+          "expected": 0
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "install_binding",
+      "target": {
+        "selection": "self",
+        "options": {}
+      },
+      "binding": {
+        "id": "vestige:wardweave/charge",
+        "duration": 80,
+        "charges": 1,
+        "lifetime": {
+          "variable": "vestige:ward_ticks"
+        },
+        "triggers": [
+          {
+            "id": "vestige:wardweave/protect",
+            "event": "vestige:armor_damage_calculating",
+            "conditions": [
+              {
+                "type": "compare",
+                "path": "vestige:event/damage_amount",
+                "operation": "greater_than",
+                "expected": 0
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "type": "reduce_pending_damage",
+            "values": {
+              "amount": {
+                "variable": "vestige:protection"
+              }
+            },
+            "identifiers": {}
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -71,6 +71,15 @@ class SpellVisualTest {
         assertTrue(VisualGeometry.opacity(7.9f, 8) < .1);
         assertEquals(0, VisualGeometry.opacity(8, 8));
     }
+    @Test void pulseReachesOutOnceThenReturnsCompletelyToItsOrigin() {
+        assertEquals(0,VisualGeometry.pulseRadius(-1));
+        assertEquals(0,VisualGeometry.pulseRadius(0));
+        assertEquals(1,VisualGeometry.pulseRadius(.65f),1e-6);
+        assertTrue(VisualGeometry.pulseRadius(.4f)>VisualGeometry.pulseRadius(.2f));
+        assertTrue(VisualGeometry.pulseRadius(.75f)>VisualGeometry.pulseRadius(.9f));
+        assertEquals(0,VisualGeometry.pulseRadius(1));
+        assertEquals(0,VisualGeometry.pulseRadius(2));
+    }
     @Test void coilingAndOrganicPathsRemainFiniteAndKeepTheirPhysicalAnchors() {
         for(Vec3 end:List.of(new Vec3(8,2,0),new Vec3(0,8,0),Vec3.ZERO)) {
             var path=VisualGeometry.helix(Vec3.ZERO,end,1.2,2,4);

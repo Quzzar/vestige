@@ -82,6 +82,28 @@ class SpellshapingTest {
         var greater=Spellshaping.compile(read("fireball"),List.of(selection("shocking",2)),List.of(),new CastShaping(1,true));
         assertEquals(1.15*1.15,greater.spell().traits().resolve(greater.modifiers()).rating(id("lightning")),1e-9);assertEquals("Greater Shocking",Spellshaping.name(selection("shocking",2)));assertEquals("Grand Shocking",Spellshaping.name(selection("shocking",3)));
     }
+    @Test void mixedBloodboundAndFastingNeverExchangeMoreThanThreeQuartersOfMana() throws Exception {
+        var base=read("cone_of_cold");
+        var compiled=Spellshaping.compile(base,List.of(selection("bloodbound",3),selection("fasting",3)),List.of(),new CastShaping(1,true));
+        assertEquals(.375,compiled.shaping().adjustment().healthFraction(),1e-9);
+        assertEquals(.375,compiled.shaping().adjustment().hungerFraction(),1e-9);
+        var costs=compiled.shaping().costs(List.of(new SpellCost.Mana(80)));
+        assertEquals(23,costs.stream().filter(c->c instanceof SpellCost.Mana).mapToDouble(c->((SpellCost.Mana)c).amount()).sum());
+        assertEquals(4,costs.stream().filter(c->c instanceof SpellCost.Health).mapToDouble(c->((SpellCost.Health)c).amount()).sum());
+        assertEquals(5,costs.stream().filter(c->c instanceof SpellCost.Hunger).mapToInt(c->((SpellCost.Hunger)c).amount()).sum());
+    }
+    @Test void exhaustingBuysMorePowerWithActualManaInsteadOfAnAbsentCooldown() throws Exception {
+        var base=read("cone_of_cold");
+        for(int degree=1;degree<=3;degree++) {
+            var compiled=Spellshaping.compile(base,List.of(selection("exhausting",degree)),List.of(),new CastShaping(1,true));
+            assertEquals(base.traits().rating(id("amplify"))*Math.pow(1.25,degree),
+                    base.traits().resolve(compiled.modifiers()).rating(id("amplify")),1e-9);
+            double mana=base.costs().stream().filter(c->c instanceof SpellCost.Mana).mapToDouble(c->((SpellCost.Mana)c).amount()).sum();
+            var paid=compiled.shaping().costs(base.costs());
+            assertEquals(Math.floor(mana*Math.pow(1.35,degree)+.5),paid.stream().filter(c->c instanceof SpellCost.Mana).mapToDouble(c->((SpellCost.Mana)c).amount()).sum());
+            assertTrue(paid.stream().noneMatch(c->c instanceof SpellCost.Cooldown));
+        }
+    }
     private static SpellDefinition direct(List<SpellEffect> plan){return new SpellDefinition(id("test"),Set.of(Tradition.ARCANE),new TraitProfile(Map.of(id("amplify"),1d,id("range"),1d,id("blood"),4d)),List.of(new SpellCost.Mana(10)),List.of(new SpellTrigger(id("cast"),SpellTriggerTypes.INTERACT,List.of())),plan);}
     @Test void saturatedDeliveryRejectsRatherThanChargingForNoBenefit()throws Exception{
         var original=read("fireball");

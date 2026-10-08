@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 import java.util.List;
@@ -186,13 +187,15 @@ public final class ApparatusTest {
     }
 
     @GameTest(template = "empty_3x3x3", batch = "apparatus_recipes")
-    public static void allSeventyTwoRecipesUseMatchingBlocksAndSlabsAndCorrectOutputCounts(GameTestHelper h) {
+    public static void availableConstructionRecipesUseMatchingMaterialsAndCorrectOutputCounts(GameTestHelper h) {
         for (var material : ApparatusMaterials.values()) for (var role : ApparatusBlock.Role.values()) {
+            if (material == ApparatusMaterials.STONE_BRICKS && role == ApparatusBlock.Role.PLINTH
+                    && ModList.get().isLoaded("supplementaries")) continue;
             var b=BuiltInRegistries.ITEM.get(material.body()); var s=BuiltInRegistries.ITEM.get(material.slab());
             h.assertTrue(b!=Items.AIR && s!=Items.AIR, "Missing vanilla full block/slab: "+material.id());
             var grid=(role==ApparatusBlock.Role.SPELLSTONE
-                    ? List.of(Items.DIAMOND,s,Items.DIAMOND,b,Items.AMETHYST_BLOCK,b,b,b,b)
-                    : List.of(s,b,s,Items.AIR,b,Items.AIR,s,b,s)).stream().map(ItemStack::new).toList();
+                    ? List.of(Items.DIAMOND,s,Items.DIAMOND,s,Items.AMETHYST_BLOCK,s,s,Items.AIR,s)
+                    : List.of(s,s,s,Items.AIR,b,Items.AIR,s,s,s)).stream().map(ItemStack::new).toList();
             var input = CraftingInput.of(3, 3, grid);
             var recipe = h.getLevel().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, input, h.getLevel()).orElseThrow();
             h.assertTrue(recipe.id().equals(VestigeMainMod.location(material.blockName(role))), "Wrong construction finish: "+material.id());
@@ -202,6 +205,11 @@ public final class ApparatusTest {
             var mixed=new java.util.ArrayList<>(grid);
             mixed.set(role==ApparatusBlock.Role.SPELLSTONE ? 1 : 0, new ItemStack(material==ApparatusMaterials.STONE ? Items.TUFF_SLAB : Items.STONE_SLAB));
             h.assertTrue(h.getLevel().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, CraftingInput.of(3,3,mixed), h.getLevel()).isEmpty(), "Mixed slabs incorrectly accepted");
+            var oldGrid = (role == ApparatusBlock.Role.SPELLSTONE
+                    ? List.of(Items.DIAMOND,s,Items.DIAMOND,b,Items.AMETHYST_BLOCK,b,b,b,b)
+                    : List.of(s,b,s,Items.AIR,b,Items.AIR,s,b,s)).stream().map(ItemStack::new).toList();
+            h.assertTrue(h.getLevel().getRecipeManager().getRecipeFor(RecipeType.CRAFTING,
+                    CraftingInput.of(3,3,oldGrid), h.getLevel()).isEmpty(), "Superseded construction grid still matches");
         }
         h.succeed();
     }

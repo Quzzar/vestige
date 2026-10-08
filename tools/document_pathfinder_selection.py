@@ -117,7 +117,7 @@ def report(data):
         costs={c['type']:c.get('amount',c.get('ticks')) for c in native['costs']}
         rank=('cantrip ' if source['cantrip'] else '')+str(source['rank'])
         slug=row['native_id'].removeprefix('vestige:')
-        lines.append(f'| [{source["display_name"]}]({source["url"]}) / {native_link(slug)} | {rank} | {native["rarity"]} | {costs["mana"]}; {costs.get("time",0)/20:g}/{costs["cooldown"]/20:g} | {native["behavior"]} |')
+        lines.append(f'| [{source["display_name"]}]({source["url"]}) / {native_link(slug)} | {rank} | {native["rarity"]} | {costs["mana"]}; {costs.get("time",0)/20:g}/{costs.get("cooldown",0)/20:g} | {native["behavior"]} |')
     lines += ['', '## Deliberately excluded overlap', '']
     for excluded in data['excluded_overlap']:
         lines.append(f'- **{excluded["candidate"]}:** {excluded["reason"]}')

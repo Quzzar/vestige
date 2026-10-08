@@ -9,11 +9,17 @@ import java.util.Objects;
 /**
  * A numerical value that an effect can resolve from a cast's trait profile.
  */
-public sealed interface SpellValue permits SpellValue.Constant, SpellValue.Trait, SpellValue.Sum, SpellValue.Product, SpellValue.Fact, SpellValue.Clamp {
+public sealed interface SpellValue permits SpellValue.Constant, SpellValue.Trait, SpellValue.Sum, SpellValue.Product, SpellValue.Fact, SpellValue.Clamp, SpellValue.Variable {
     /**
      * Resolves this value against the supplied trait profile.
      */
     double resolve(TraitProfile traits);
+
+    /** A named formula resolved against the activation's immutable trait snapshot. */
+    record Variable(ResourceLocation key) implements SpellValue {
+        public Variable { Objects.requireNonNull(key); }
+        @Override public double resolve(TraitProfile traits) { throw new IllegalStateException("A variable requires a magic resolution"); }
+    }
 
     /** Explicit authored limits on a complete numerical expression. */
     record Clamp(SpellValue value,double minimum,double maximum) implements SpellValue {

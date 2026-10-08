@@ -311,7 +311,8 @@ def definitions():
         native = 'pf2_' + name
         assert rarity_map[native] == RARITIES[native], native
         tuning = policy['spells'][native]
-        costs = [{'type':'mana','amount':tuning['mana']},{'type':'cooldown','ticks':tuning['cooldown_ticks']}]
+        costs = [{'type':'mana','amount':tuning['mana']}]
+        if tuning['cooldown_ticks']: costs.append({'type':'cooldown','ticks':tuning['cooldown_ticks']})
         if tuning['charge_ticks']: costs.insert(0,{'type':'time','ticks':tuning['charge_ticks']})
         effects, traits = RECIPES[name]
         result[native] = {'source': {'spell':f'pathfinder2e:aon/{row["aon_id"]}', 'revision':row['revision'], 'name':row['display_name'],
@@ -330,7 +331,7 @@ def ledger():
     lines = ['# Pathfinder 2e spell conversion ledger','',
              '**100 native adaptations** across the first 48-spell batch, a 16-spell expansion and 36 utility conversions, added October 1, 2026. The complete Vestige catalog now has **214 spells**: 110 Iron adaptations, 100 Pathfinder adaptations and four native examples.', '',
              'Source rules were verified against [Archives of Nethys](https://2e.aonprd.com/Spells.aspx). Exact page IDs, publications, ranks, source rarity and the applied errata snapshot are frozen in [pathfinder-spells.json](../../tools/pathfinder-spells.json). See the [first-batch research](../research/pathfinder-spell-batch.md), [expansion research](../research/pathfinder-expansion-batch.md), [diverse-batch research](../research/pathfinder-diverse-batch.md) and [credits](../../CREDITS.md).', '',
-             'These are Minecraft adaptations with original native plans and balance coefficients. They do not execute a tabletop rules engine: no d20 saves, spell slots, automatic heightening, three-action economy, sanctification, critical degrees, or copied text/assets. Source-common does not imply native-common. Source ranks and rarity do not multiply traits or costs. Native mana, charge and recovery are authored independently in [the balance policy](../../tools/spell-balance-policy.json). All descriptive traits use relative unit 1; only explicitly read scaling traits affect the plans.', '',
+             'These are Minecraft adaptations with original native plans and balance coefficients. They do not execute a tabletop rules engine: no d20 saves, spell slots, automatic heightening, three-action economy, sanctification, critical degrees, or copied text/assets. Source-common does not imply native-common. Source ranks and rarity do not multiply traits or costs. Native mana and charge are authored independently; ordinary spell cooldowns were removed on October 7, 2026 in [the balance policy](../../tools/spell-balance-policy.json). All descriptive traits use relative unit 1; only explicitly read scaling traits affect the plans.', '',
              'New IDs use `vestige:pf2_<source_name>` so names such as Shield, Fireball, Chain Lightning and Slow coexist with existing adaptations. The Pathfinder Shield is a one-hit personal ward; Iron Shield remains a stationary destructible barrier. No existing definition is replaced. Wands, discovery and progression remain deferred.', '',
              'Regenerate with `python3 tools/convert_pathfinder_spells.py`; `--check` verifies both definitions and this ledger. Shared authoring helpers live in `tools/spell_authoring.py`; recipes are explicit, with no generic fallback. Development casting uses `/vestige_magic cast vestige:pf2_<name>` or paid `/vestige_magic cast_balanced vestige:pf2_<name>` after setting test mana.', '',
              '| Native spell / source | Source rank | Native rarity | Native behavior | Adaptation differences |','|---|---|---|---|---|']
