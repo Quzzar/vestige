@@ -53,10 +53,34 @@ Each participating input has its own roll: center first when present, then ascen
 
 The triggering input survives **unchanged**. Every other participating input is destroyed, including a nontriggering reference when present. No output or success remainder is created. Terrain, apparatus, socket materials, offerings outside the selected valid layout and existing loose items remain protected by the native distributed failure bursts. A Flint-triggered repair therefore loses the target but preserves Flint without wear. A volatile target can instead trigger, preserve itself and destroy the Flint; this follows the same general rule.
 
-Intrinsic item traits come from `RitualTraitSource`. Flint supplies its immutable profile. A native Staff's one fixed affinity supplies one trait point; contained scrolls do not become intrinsic Staff traits. A scroll offered as an input uses its actual native spell profile and stored trait modifiers. Wands do not automatically inherit the traits of their stored source spell. Future magical items can expose their own intrinsic profiles through the same interface rather than introducing another probability system.
+Intrinsic item traits come from `RitualTraitSource`. Flint resolves its immutable base profile with its validated crafted imbuements through `TraitProfile.resolve`; the shared failure policy consumes that result. A native Staff's one fixed affinity supplies one trait point; contained scrolls do not become intrinsic Staff traits. A scroll offered as an input uses its actual native spell profile and stored trait modifiers. Wands do not automatically inherit the traits of their stored source spell. Future magical items can expose their own intrinsic profiles through the same interface rather than introducing another probability system.
+
+## Crafted imbuements
+
+**Owner authorized October 8, 2026:** implement the previously discussed Fluxed Flint imbuements. The following two choices and their numerical trade-offs are starting implementation tuning. They use the unchanged ordered construction recipe and existing retained socket interactions; the shipped blue sprite, Rare name color and native shimmer stay the same.
+
+| Offering | Installed socket block | Choice | Authored factors |
+| --- | --- | --- | --- |
+| Dissentient Diamond | Quartz Block | Stabilized | Volatile ×0.5; maximum repair budget ×0.75 |
+| Either Netherite Ingot | Iron Block | Reinforced | Maximum repair budget ×1.5; Volatile ×1.5 |
+
+| Full item name | Total repair budget | Volatile | Flint's own backfire chance |
+| --- | ---: | ---: | ---: |
+| Fluxed Flint | 128 | 2 | 10% |
+| *Stabilized* Fluxed Flint | 96 | 1 | 5% |
+| *Reinforced* Fluxed Flint | 192 | 3 | 15% |
+| *Braced* Fluxed Flint | 144 | 1.5 | 7.5% |
+
+Both choices compose once. Braced is the shared catalog's exact full-set display alias, preserving both contributions; only the prefix is italic. Stabilization still risks losing a nontriggering target, and any volatile target retains its separate independent roll. These percentages describe the Flint input, not a promise about the total ritual risk.
+
+Quartz's stabilizing role is an explicitly authored Vestige crystal-structure convention for this one pairing, not an Iron fact or a universal material property. Iron's reinforcement role follows the established authored carrier-durability convention without adopting upstream quality values. Both blocks already belong to the accepted socket set. Whole rotations keep each offering/socket pair together. Either of the identical opposite ingot offerings can select Reinforced, but installing Iron on both rejects a duplicate degree-one contribution freely. Known spell-only offering/socket routes, such as Flint / Gold Block's Excavating, reject rather than consuming an ineffective imbuement. Unmatched decorative pairings remain neutral. Outer sockets and offerings stay inactive during four-slot construction.
+
+Imbuements are selected while making a fresh catalyst; an existing Flint is never re-crafted or refilled. Plain existing stacks remain valid without rewriting their components. `ItemImbuements` stores trusted versioned IDs at degree one; coefficients and maximum budgets come from native code. Unknown IDs, duplicate selections, wrong family/degrees, mismatched maximum durability, unbreakable or exhausted stacks cannot repair. Invalid data conservatively retains the ordinary intrinsic volatility when offered in another ritual, rather than supplying a risk-free forged input. Successful repair copies the exact offered Flint and spends only restored points, retaining its selections, custom components and existing wear; save/load preserves the variant. The operation's 25% target cap is unchanged, and installed materials during repair do not modify a previously crafted catalyst.
+
+All four public construction variants are derived from the same live palette in both optional recipe viewers. Their diagrams show the retained socket materials on the correct offering. Dynamic per-target repair outputs remain separate work.
 
 ## Remaining design choices
 
-The expensive composition, 128-point budget, 25% operation cap and Volatile 2 need survival playtesting. Stabilization through imbuements or a permanent upgrade remains a proposal; no material currently reduces Flint risk. A public dynamic repair viewer presentation is also separate work: its exact output depends on the offered target's complete data, so it is not represented by a misleading fixed output recipe. The public Flint construction recipe is available in viewers.
+The expensive composition, base and imbued repair budgets, 25% operation cap and volatility trade-offs need survival playtesting. A public dynamic repair viewer presentation is also separate work: its exact output depends on the offered target's complete data, so it is not represented by a misleading fixed output recipe. Craft-time stabilization and reinforcement are implemented; no post-crafting upgrade/refill operation is introduced.
 
 Historical per-equipment Amethyst/Iron/thread repair proposals are superseded by this shared catalyst route. [Restoration folklore research](../research/magical-restoration-folklore.md) supplied thematic context; Fluxed Flint is an original name and mechanic, not a claim that folklore describes this exact object.
