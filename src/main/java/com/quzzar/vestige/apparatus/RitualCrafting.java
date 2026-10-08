@@ -90,9 +90,11 @@ public final class RitualCrafting {
                 if (flints.size()!=1) return Outcome.INVALID;
                 var selected=flints.getFirst();
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
-                return begin(selected,player,FluxedFlintRecipe.create(selected.items()).orElseThrow(),
+                var inputs=RitualInputs.capture(selected);var output=FluxedFlintRecipe.result(inputs);
+                if (output.isEmpty()) return Outcome.INVALID;
+                return begin(selected,player,output.get(),
                         java.util.stream.IntStream.range(0,8).filter(i -> !selected.items().get(i).isEmpty()).boxed().toList(),
-                        0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+                        0xf4e5ff,inputs,random,Outcome.CRAFTING);
             }
             var staffLayouts=new ArrayList<>(candidates);staffLayouts.addAll(advanced);
             var staffs=staffLayouts.stream().filter(l -> StaffRecipe.match(l.items(),l.geometry().slots()).isPresent()).toList();

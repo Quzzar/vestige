@@ -53,7 +53,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Reclaiming | `vestige:wand_tip/emerald` — Implemented wand tip | A conditional rebate of actually paid mana, with additional wear. |
 | Reflecting | `vestige:spellshaping/reflecting` — Implemented spell adjustment | Add a three-second protective halo that returns up to two incoming vanilla arrows or tridents; native spell deliveries are excluded. |
 | Refracting | `vestige:wand_tip/diamond` — Implemented wand tip | A bounded distribution of supported damage or healing to nearby recipients. |
-| Reinforced | `vestige:hourglass/reinforced` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25. |
+| Reinforced | `vestige:hourglass/reinforced` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment<br>`vestige:fluxed_flint/reinforced` — Implemented Fluxed Flint adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25.<br>One and a half times the repair budget and intrinsic volatility. |
 | Renewing | `vestige:wand_tip/ghast_tear` — Implemented wand tip | A bounded caster restoration following the authored successful outcome. |
 | Repelling | `vestige:spellshaping/repelling` — Implemented spell adjustment<br>`vestige:wand_tip/iron` — Implemented wand tip | Drive a hit recipient away from the declared impact origin.<br>An additional bounded push after eligible damage, healing or protection. |
 | Resonating | `vestige:wand_tip/amethyst` — Implemented wand tip | A bounded delayed echo of a supported damage or healing outcome. |
@@ -63,6 +63,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Seeking | `vestige:spellshaping/seeking` — Implemented spell adjustment | Native projectiles steer toward an eligible target found at release. |
 | Shaping | `vestige:spellshaping/shaping` — Implemented spell adjustment | Range ×1.2 per contribution. |
 | Shocking | `vestige:spellshaping/shocking` — Implemented spell adjustment | Add a small electrical rider after an eligible hit. |
+| Stabilized | `vestige:fluxed_flint/stabilized` — Implemented Fluxed Flint adjustment | Half intrinsic volatility and three quarters of the repair budget. |
 | Steadfast | `vestige:wand_tip/netherite` — Implemented wand tip | Caster stability with additional mana and preparation. |
 | Swift | `vestige:wayfarer/swift` — Implemented Wayfarer adjustment | A faster, shorter movement burst: Motion ×1.50 and Time ×2/3. |
 | Unbalancing | `vestige:spellshaping/unbalancing` — Implemented spell adjustment | Apply a short physical stumble after contact. |
@@ -222,6 +223,7 @@ These names describe the exact complete set below. The underlying adjustments st
 | Unflagging | `vestige:kairotic_hourglass` | Enduring + Frugal + Bloodbound | Enduring + frugal + bloodbound; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
 | Forbearing | `vestige:kairotic_hourglass` | Enduring + Frugal + Fasting | Enduring + frugal + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
 | Contemplative | `vestige:kairotic_hourglass` | Enduring + Frugal + Erudite | Enduring + frugal + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
+| Braced | `vestige:fluxed_flint` | Stabilized + Reinforced | Stabilized + Reinforced; both budget and volatility factors compose once. Implemented Fluxed Flint adjustment. |
 
 ## Implemented mechanical compounds
 
@@ -250,7 +252,7 @@ These name five crafting components; they are not additional wand prefixes. Thei
 
 ## Scope and coverage
 
-Inventory: **62 distinct individual words**, **145 display combinations**, **six mechanical compounds**, **five thread component names**.
+Inventory: **63 distinct individual words**, **146 display combinations**, **six mechanical compounds**, **five thread component names**.
 
 Scrolls, bound wands and staff stored-scroll labels use one italic adjective for a mixture. Supported Homebound Eye payment routes use their individual adjective; its ordinary durability route keeps the plain title. Wayfarer uses its complete finite matrix. Hourglass names are reserved design entries, not implemented gameplay. Plain items, spell titles, rarity colors, affinity names, cosmetic finishes and attunement runes are not inferred into this catalog.
 
@@ -317,3 +319,12 @@ Ordinary / Greater / Grand are existing degree labels, not three different adjus
 | *Unflagging* Kairotic Hourglass (design only) | Enduring + Frugal + Bloodbound |
 | *Forbearing* Kairotic Hourglass (design only) | Enduring + Frugal + Fasting |
 | *Contemplative* Kairotic Hourglass (design only) | Enduring + Frugal + Erudite |
+
+`vestige:fluxed_flint` has exhaustive naming coverage for its **4** declared combinations, including the unmodified item and individual adjustments. Gameplay reachability is checked by its own recipe tests.
+
+| Full item name | Underlying adjustments |
+| --- | --- |
+| Fluxed Flint | None |
+| *Reinforced* Fluxed Flint | Reinforced |
+| *Stabilized* Fluxed Flint | Stabilized |
+| *Braced* Fluxed Flint | Stabilized + Reinforced |

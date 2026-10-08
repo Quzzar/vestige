@@ -1,5 +1,9 @@
 # Breaking changes
 
+## October 8, 2026: crafted Fluxed Flint imbuements
+
+Fluxed Flint construction now compiles retained local socket selections: Dissentient Diamond / Quartz selects Stabilized, and either Netherite Ingot / Iron selects Reinforced. The four exact variants have 128/96/192/144 repair points and 10/5/15/7.5% intrinsic failure chances. Existing ordinary stacks remain valid without rewriting or migration. Imbued stacks store shared bounded item selections and an authored maximum-durability component; invalid selections or forged budgets reject repair. Names use the shared adjective catalog, including Braced for the full combination. Base ingredients, artwork, rarity, shimmer, operation cap, exact copies and independent volatility order remain unchanged. Optional recipe viewers add three public variant patterns.
+
 ## October 8, 2026: revised Fluxed Flint ingredient chain
 
 Dissentient Diamond now crafts through the four-seat inner ritual Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder, producing one ingredient. Fluxed Flint construction becomes Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot. Whole quarter-turns are equivalent; duplicate offerings occupy separate Plinths. The provisional Diamond Block/Echo Shard recipe is removed. Both public viewer patterns follow the new recipes. Flint's violet accents become diamond blue, preserving its silhouette/model, repair budget, volatility and exact target-copy semantics. Saved item and network formats are unchanged; there is no migration or installation.

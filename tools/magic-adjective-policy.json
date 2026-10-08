@@ -78,25 +78,25 @@
     {
       "id": "vestige:wayfarer/swift",
       "word": "Swift",
-      "meaning": "A faster, shorter movement burst: Motion ×1.50 and Time ×2/3.",
+      "meaning": "A faster, shorter movement burst: Motion \u00d71.50 and Time \u00d72/3.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/enduring",
       "word": "Enduring",
-      "meaning": "A longer movement burst: Time ×1.20 and mana ×1.12.",
+      "meaning": "A longer movement burst: Time \u00d71.20 and mana \u00d71.12.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/reinforced",
       "word": "Reinforced",
-      "meaning": "More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25.",
+      "meaning": "More carrier durability with increased mana: maximum durability \u00d71.50 and mana \u00d71.25.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
       "id": "vestige:wayfarer/quickened",
       "word": "Quickened",
-      "meaning": "Shorter actor recovery with increased mana: recovery ×0.80 and mana ×1.25. This changes recovery, not preparation.",
+      "meaning": "Shorter actor recovery with increased mana: recovery \u00d70.80 and mana \u00d71.25. This changes recovery, not preparation.",
       "status": "Implemented Wayfarer adjustment"
     },
     {
@@ -122,6 +122,18 @@
       "word": "Charged",
       "meaning": "A mana-backed return with reduced carrier wear.",
       "status": "Implemented Homebound Eye payment"
+    },
+    {
+      "id": "vestige:fluxed_flint/stabilized",
+      "word": "Stabilized",
+      "meaning": "Half intrinsic volatility and three quarters of the repair budget.",
+      "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "id": "vestige:fluxed_flint/reinforced",
+      "word": "Reinforced",
+      "meaning": "One and a half times the repair budget and intrinsic volatility.",
+      "status": "Implemented Fluxed Flint adjustment"
     }
   ],
   "combinations": [
@@ -1594,6 +1606,16 @@
       },
       "meaning": "Enduring + frugal + erudite; each authored contribution retains its own trade-off.",
       "status": "Implemented Kairotic Hourglass adjustment"
+    },
+    {
+      "family": "vestige:fluxed_flint",
+      "word": "Braced",
+      "requires": {
+        "vestige:fluxed_flint/stabilized": 1,
+        "vestige:fluxed_flint/reinforced": 1
+      },
+      "meaning": "Stabilized + Reinforced; both budget and volatility factors compose once.",
+      "status": "Implemented Fluxed Flint adjustment"
     }
   ],
   "complete_families": [
@@ -1631,6 +1653,18 @@
           "vestige:hourglass/bloodbound",
           "vestige:hourglass/fasting",
           "vestige:hourglass/erudite"
+        ]
+      ]
+    },
+    {
+      "id": "vestige:fluxed_flint",
+      "label": "Fluxed Flint",
+      "groups": [
+        [
+          "vestige:fluxed_flint/stabilized"
+        ],
+        [
+          "vestige:fluxed_flint/reinforced"
         ]
       ]
     }

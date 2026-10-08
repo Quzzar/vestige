@@ -45,6 +45,91 @@ public final class FluxedFlintTest {
         return layout;
     }
     @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void combinedImbuementsCraftWithEitherIngotAndRetainSocketsAndInactiveOuterItems(GameTestHelper h) {
+        var center=structure(h,true);var layout=LeylineStructure.find(center,4).getFirst();
+        for(int i=0;i<4;i++) layout.stands().get((i*2+2)%8).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
+        layout.stands().get(0).installMaterial(new ItemStack(Items.IRON_BLOCK));
+        layout.stands().get(6).installMaterial(new ItemStack(Items.QUARTZ_BLOCK));
+        var outer=(OfferingBlockEntity)h.getBlockEntity(CENTER.offset(GEOMETRY.offset(1)));outer.insert(new ItemStack(Items.PAPER));
+        h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Construction ingredients rolled");})==RitualCrafting.Outcome.CRAFTING,"Imbued construction rejected");
+        h.runAfterDelay(45,()->{
+            var expected=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(3));
+            h.assertTrue(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Combined construction did not preserve both choices");
+            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER),"Wrong layer consumed");
+            h.assertTrue(layout.stands().get(0).materialItem().is(Items.IRON_BLOCK) && layout.stands().get(6).materialItem().is(Items.QUARTZ_BLOCK),"Sockets consumed");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint")
+    public static void allImbuedRiskBoundariesUseSharedIndependentVolatilityAndProtectTheTrigger(GameTestHelper h) {
+        var center=structure(h,true);var layout=LeylineStructure.find(center,8).getFirst();
+        double[] chances={.1,.05,.15,.075};
+        for(int i=0;i<4;i++) {
+            double chance=chances[i];var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(i));
+            layout.stands().get(1).insert(catalyst);layout.stands().get(7).insert(staff());var inputs=RitualInputs.capture(layout);
+            h.assertTrue(RitualVolatility.culprit(ItemStack.EMPTY,inputs,List.of(7,1),0,()->Math.nextUp(chance)).isEmpty(),"Above variant boundary backfired");
+            h.assertTrue(RitualVolatility.culprit(ItemStack.EMPTY,inputs,List.of(7,1),0,()->Math.nextDown(chance)).orElseThrow()==1,"Below variant boundary did not trigger");
+            layout.stands().get(1).remove();layout.stands().get(7).remove();
+        }
+        h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void stabilizedRepairPreservesAllComponentsAndSelectionsThroughSaveAndReload(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(1));catalyst.setDamageValue(5);
+        CustomData.update(DataComponents.CUSTOM_DATA,catalyst,tag -> tag.putString("unrelated","keep"));
+        catalyst.set(DataComponents.CONTAINER,ItemContainerContents.fromItems(List.of(new ItemStack(Items.DIAMOND,2))));
+        catalyst=ItemStack.parse(h.getLevel().registryAccess(),catalyst.save(h.getLevel().registryAccess())).orElseThrow();
+        var originalCatalyst=catalyst.copy();var originalTarget=staff();var layout=offer(h,originalTarget,catalyst);
+        // Six percent succeeds only after stabilization; the ordinary Flint would backfire.
+        h.assertTrue(RitualCrafting.activate(player(h),layout.center(),()->.06)==RitualCrafting.Outcome.CRAFTING,"Stabilized risk not used by activation");
+        h.runAfterDelay(45,()->{
+            var expected=originalTarget.copy();expected.setDamageValue(19);var worn=originalCatalyst.copy();worn.setDamageValue(25);
+            h.assertTrue(ItemStack.matches(expected,RitualTestOutput.stack(layout.center())),"Target components changed");
+            h.assertTrue(ItemStack.matches(worn,layout.stands().get(0).displayedItem()),"Remainder lost selections or unrelated data");
+            var reloaded=ItemStack.parse(h.getLevel().registryAccess(),worn.save(h.getLevel().registryAccess())).orElseThrow();
+            h.assertTrue(ItemStack.matches(worn,reloaded) && FluxedFlintImbuements.read(reloaded).orElseThrow().durability()==96,"Reload lost budget or variant");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void stabilizedBackfireStillPreservesExactFlintAndDestroysTheTarget(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(1));catalyst.setDamageValue(17);var layout=offer(h,staff(),catalyst);
+        h.assertTrue(RitualCrafting.activate(player(h),layout.center(),()->.04)==RitualCrafting.Outcome.EXPLOSION_PENDING,"Stabilization removed risk entirely");
+        h.runAfterDelay(25,()->{
+            h.assertTrue(ItemStack.matches(catalyst,layout.stands().get(0).displayedItem()),"Backfire changed catalyst or selections");
+            h.assertTrue(layout.stands().get(4).displayedItem().isEmpty() && RitualTestOutput.stack(layout.center()).isEmpty(),"Backfire retained target or produced output");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void changingCatalystSelectionCancelsWithoutWearOrTargetConsumption(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(1));catalyst.setDamageValue(3);var target=staff();var layout=offer(h,target,catalyst);
+        RitualCrafting.activate(player(h),layout.center(),()->1);
+        var replacement=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(3));replacement.setDamageValue(3);
+        h.runAfterDelay(5,()->{layout.stands().get(0).remove();layout.stands().get(0).insert(replacement);});
+        h.runAfterDelay(45,()->{h.assertTrue(ItemStack.matches(replacement,layout.stands().get(0).displayedItem()) && ItemStack.matches(target,layout.stands().get(4).displayedItem()),"Canceled change partially paid");h.assertTrue(RitualTestOutput.stack(layout.center()).isEmpty() && !layout.center().busy(),"Canceled change produced output or leaked reservation");h.succeed();});
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void changingConstructionSocketCancelsBeforeConsumingAnyOffering(GameTestHelper h) {
+        var center=structure(h,false);var layout=RitualCrafting.layout(center);
+        for(int i=0;i<4;i++) layout.stands().get(i*2).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
+        layout.stands().get(4).installMaterial(new ItemStack(Items.QUARTZ_BLOCK));var before=layout.items().stream().map(ItemStack::copy).toList();
+        RitualCrafting.activate(player(h),center,()->1);
+        h.runAfterDelay(5,()->{var node=layout.stands().get(4);node.unlock();node.removeMaterial();});
+        h.runAfterDelay(45,()->{h.assertTrue(java.util.stream.IntStream.range(0,8).allMatch(i->ItemStack.matches(before.get(i),layout.items().get(i))),"Socket edit consumed offerings");h.assertTrue(RitualTestOutput.stack(center).isEmpty() && !center.busy(),"Socket edit produced output or leaked reservation");h.succeed();});
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint")
+    public static void everyVariantSpendsItsLastPointAndRejectsForgedOrDuplicateImbuementsFreely(GameTestHelper h) {
+        var seats=new ArrayList<ItemStack>(Collections.nCopies(8,ItemStack.EMPTY));seats.set(7,staff());
+        for(var variant:FluxedFlintImbuements.variants()) {
+            var catalyst=FluxedFlintImbuements.create(variant);catalyst.setDamageValue(variant.durability()-1);seats.set(1,catalyst);
+            var repair=FluxedFlintRecipe.repair(seats).orElseThrow();h.assertTrue(repair.output().getDamageValue()==38 && repair.remainingCatalyst().isEmpty(),"Last variant point overpaid or survived");
+            catalyst.set(DataComponents.MAX_DAMAGE,1000);h.assertTrue(FluxedFlintRecipe.repair(seats).isEmpty(),"Forged budget accepted");
+        }
+        var center=structure(h,false);var layout=RitualCrafting.layout(center);
+        for(int i=0;i<4;i++) layout.stands().get(i*2).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
+        layout.stands().get(2).installMaterial(new ItemStack(Items.IRON_BLOCK));layout.stands().get(6).installMaterial(new ItemStack(Items.IRON_BLOCK));
+        h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Invalid construction rolled");})==RitualCrafting.Outcome.INVALID,"Duplicate adjustment accepted");
+        h.assertTrue(layout.items().stream().filter(s->!s.isEmpty()).count()==4 && !center.busy(),"Rejected construction spent or reserved inputs");h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
     public static void expensiveConstructionConsumesFourOfferingsAndProducesOneFlint(GameTestHelper h) {
         var center=structure(h,false);var layout=RitualCrafting.layout(center);
         for (int i=0;i<4;i++) layout.stands().get(i*2).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));

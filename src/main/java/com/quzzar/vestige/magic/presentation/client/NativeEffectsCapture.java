@@ -45,7 +45,7 @@ public final class NativeEffectsCapture {
     private NativeEffectsCapture() { }
     /** Exercise vanilla food consumption through the actual client input and use-item packet. */
     @SubscribeEvent public static void input(net.neoforged.neoforge.client.event.ClientTickEvent.Pre event) {
-        if(OUTPUT==null || List.of("fluxed_flint","magic_equipment","wayfarer","wand_recipes","wands","items","apparatus_items","mundane_staffs","mundane_staff_motion","recipes","thread_recipes","equipment_studies","staff_slots","staff_combat","scroll_knowledge","stone_network","standing_models","standing_family","mana","item_mana","preparation","shell_finished").contains(System.getProperty("vestige.capture.kind","cast")))return;
+        if(OUTPUT==null || List.of("fluxed_flint_imbuements","fluxed_flint","magic_equipment","wayfarer","wand_recipes","wands","items","apparatus_items","mundane_staffs","mundane_staff_motion","recipes","thread_recipes","equipment_studies","staff_slots","staff_combat","scroll_knowledge","stone_network","standing_models","standing_family","mana","item_mana","preparation","shell_finished").contains(System.getProperty("vestige.capture.kind","cast")))return;
         Minecraft mc=Minecraft.getInstance();
         mc.options.keyUse.setDown(state==4 && SCENE.eating());
         var camera=SCENE.apparatusCamera();
@@ -62,7 +62,7 @@ public final class NativeEffectsCapture {
         }
     }
     @SubscribeEvent public static void frame(RenderFrameEvent.Post event) {
-        if (OUTPUT==null || state==9 || List.of("fluxed_flint","magic_equipment","wayfarer","wand_recipes","wands","items","apparatus_items","mundane_staffs","mundane_staff_motion","recipes","thread_recipes","equipment_studies","staff_slots","staff_combat","scroll_knowledge","stone_network","standing_models","standing_family","mana","item_mana","preparation","shell_finished").contains(System.getProperty("vestige.capture.kind","cast"))) return;
+        if (OUTPUT==null || state==9 || List.of("fluxed_flint_imbuements","fluxed_flint","magic_equipment","wayfarer","wand_recipes","wands","items","apparatus_items","mundane_staffs","mundane_staff_motion","recipes","thread_recipes","equipment_studies","staff_slots","staff_combat","scroll_knowledge","stone_network","standing_models","standing_family","mana","item_mana","preparation","shell_finished").contains(System.getProperty("vestige.capture.kind","cast"))) return;
         Minecraft mc=Minecraft.getInstance(); long now=System.nanoTime();
         if(state>=2 && state<=5 && mc.getSingleplayerServer()==null) {
             state=9;mc.options.keyUse.setDown(false);
