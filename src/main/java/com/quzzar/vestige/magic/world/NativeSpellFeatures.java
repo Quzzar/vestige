@@ -167,6 +167,8 @@ final class NativeSpellFeatures {
             super(d,v,c,caster,level,body); behavior=identifier("behavior","none"); budget=n("budget",0,32);
             recipients=level.getEntitiesOfClass(LivingEntity.class,body.getBoundingBox().inflate(n("radius",3,12)),e -> consent(caster,e) && !(e instanceof SpellAnchor))
                     .stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(body))).limit((long)n("count",3,6)).map(Entity::getUUID).toList();
+            if (behavior.equals("protect")) for (UUID recipient:recipients)
+                context.resolved(CastObserver.Kind.PROTECTION,1,new SpellSubject.Entity(recipient));
         }
         @Override public void tick() {
             super.tick();
@@ -179,7 +181,8 @@ final class NativeSpellFeatures {
             try {
                 if (behavior.equals("heal") && budget>0) for (UUID id : recipients) {
                     if (world.entity(id) instanceof LivingEntity e && e.isAlive() && e.level()==level && e.distanceToSqr(body)<=n("radius",4,12)*n("radius",4,12)) {
-                        float before=e.getHealth(); e.heal((float)Math.min(budget,n("amount",1,8))); budget-=Math.max(0,e.getHealth()-before);
+                        float before=e.getHealth(); e.heal((float)Math.min(budget,n("amount",1,8))); double actual=Math.max(0,e.getHealth()-before); budget-=actual;
+                        context.resolved(CastObserver.Kind.HEAL,actual,new SpellSubject.Entity(e.getUUID()));
                     }
                 }
                 if (behavior.equals("debilitate") && budget>0) for (LivingEntity e : nearby(body.position(),n("radius",4,12),level)) if (!world.ally(caster,e)) {
@@ -187,7 +190,8 @@ final class NativeSpellFeatures {
                 }
                 if (behavior.equals("extinguish")) nearby(body.position(),n("radius",4,12),level).stream().filter(e -> world.ally(caster,e)).limit(3).forEach(Entity::clearFire);
                 if (behavior.equals("pressure") && budget>0) for (LivingEntity e : nearby(body.position(),n("radius",3,12),level)) if (!world.ally(caster,e)) {
-                    double amount=Math.min(budget,n("amount",2,6)); e.invulnerableTime=0; e.hurt(caster.damageSources().indirectMagic(body,caster),(float)amount); budget-=amount; if (budget<=0) break;
+                    double amount=Math.min(budget,n("amount",2,6)); float before=e.getHealth(); e.invulnerableTime=0; e.hurt(caster.damageSources().indirectMagic(body,caster),(float)amount); budget-=amount;
+                    context.resolved(CastObserver.Kind.DAMAGE,Math.max(0,before-e.getHealth()),new SpellSubject.Entity(e.getUUID())); if (budget<=0) break;
                 }
                 if (behavior.equals("intercept")) for (Projectile p : level.getEntitiesOfClass(Projectile.class,body.getBoundingBox().inflate(n("radius",3,12))))
                     if (!(p instanceof SpellProjectile) && p.getOwner()!=caster) p.setDeltaMovement(p.getDeltaMovement().scale(.5));

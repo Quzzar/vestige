@@ -38,7 +38,9 @@ public record RitualDisplayPayload(int page, boolean last, boolean refresh, List
                 var rarity=SpellRarity.fromId(b.readUtf(16)).orElseThrow(() -> new IllegalArgumentException("Invalid scroll rarity"));int capacity=b.readUnsignedByte();
                 var offerings=new ArrayList<RitualDisplays.Offering>();int parts=bounded(b,8);
                 for(int j=0;j<parts;j++)offerings.add(new RitualDisplays.Offering(b.readUnsignedByte(),new RitualRecipe.Ingredient(ids(b,8),ids(b,4))));
-                entries.add(new RitualDisplays.Entry(id,spell,identified,rarity,capacity,offerings));
+                var imbuements=new ArrayList<RitualDisplays.Imbuement>();int materials=bounded(b,8);
+                for(int j=0;j<materials;j++)imbuements.add(new RitualDisplays.Imbuement(b.readUnsignedByte(),id(b)));
+                entries.add(new RitualDisplays.Entry(id,spell,identified,rarity,capacity,offerings,imbuements));
             }
             return new RitualDisplayPayload(page,last,refresh,entries);
         }
@@ -47,6 +49,8 @@ public record RitualDisplayPayload(int page, boolean last, boolean refresh, List
             for(var e:p.entries) {
                 id(b,e.id());b.writeBoolean(e.spell().isPresent());e.spell().ifPresent(s -> id(b,s));b.writeBoolean(e.identified());b.writeUtf(e.rarity().id(),16);b.writeByte(e.capacity());b.writeVarInt(e.offerings().size());
                 for(var o:e.offerings()){b.writeByte(o.seat());ids(b,o.ingredient().items());ids(b,o.ingredient().tags());}
+                b.writeVarInt(e.imbuements().size());
+                for(var m:e.imbuements()){b.writeByte(m.seat());id(b,m.material());}
             }
         }
     };
@@ -59,7 +63,7 @@ public record RitualDisplayPayload(int page, boolean last, boolean refresh, List
     @EventBusSubscriber(modid=VestigeMainMod.MOD_ID,bus=EventBusSubscriber.Bus.MOD)
     public static final class Registration {
         @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event) {
-            event.registrar("4").playToClient(TYPE,CODEC,(payload,context) -> RitualViewerClient.accept(payload));
+            event.registrar("5").playToClient(TYPE,CODEC,(payload,context) -> RitualViewerClient.accept(payload));
         }
     }
     @EventBusSubscriber(modid=VestigeMainMod.MOD_ID)

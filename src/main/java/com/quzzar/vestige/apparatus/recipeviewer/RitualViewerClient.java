@@ -19,7 +19,7 @@ public final class RitualViewerClient {
     private static final List<RitualDisplays.Entry> pending=new ArrayList<>();
     private static int nextPage;
     private RitualViewerClient() { }
-    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.homeboundEye());return List.copyOf(all);}
+    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.homeboundEye());all.addAll(RitualDisplays.threads());return List.copyOf(all);}
     public static void accept(RitualDisplayPayload payload) {
         if(payload.page()==0){pending.clear();nextPage=0;}
         if(payload.page()!=nextPage++)throw new IllegalArgumentException("Out-of-order ritual display page");
@@ -33,15 +33,15 @@ public final class RitualViewerClient {
             var connection=Minecraft.getInstance().getConnection();
             if(payload.refresh() && connection!=null) {
                 if(ModList.get().isLoaded("emi")) {
-                    // EMI waits for both resource events before rebuilding its plugin recipes.
-                    NeoForge.EVENT_BUS.post(new RecipesUpdatedEvent(connection.getRecipeManager()));
-                    NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.event.TagsUpdatedEvent(
-                            connection.registryAccess(),true,connection.getConnection().isMemoryConnection()));
+                    com.quzzar.vestige.apparatus.recipeviewer.emi.EmiLiveRefresh.request();
                 }
                 else if(ModList.get().isLoaded("jei"))com.quzzar.vestige.apparatus.recipeviewer.jei.VestigeJeiPlugin.refresh();
             }
             // Login and datapack synchronization use the ensuing vanilla recipe event.
         }
     }
-    @SubscribeEvent public static void logout(ClientPlayerNetworkEvent.LoggingOut event){spells=List.of();pending.clear();nextPage=0;SpellKnowledge.updateVisible(Map.of());}
+    @SubscribeEvent public static void tick(net.neoforged.neoforge.client.event.ClientTickEvent.Post event){
+        if(ModList.get().isLoaded("emi"))com.quzzar.vestige.apparatus.recipeviewer.emi.EmiLiveRefresh.tick();
+    }
+    @SubscribeEvent public static void logout(ClientPlayerNetworkEvent.LoggingOut event){spells=List.of();pending.clear();nextPage=0;SpellKnowledge.updateVisible(Map.of());if(ModList.get().isLoaded("emi"))com.quzzar.vestige.apparatus.recipeviewer.emi.EmiLiveRefresh.clear();}
 }

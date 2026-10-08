@@ -3,6 +3,7 @@
 ## Current project and decisions
 
 - [Development status](development-status.md): implemented work, verification, and remaining milestones.
+- [Minecraft art and pixel scale](design/minecraft-art.md): required texture workflow, native pixel density, shading, conversion pitfalls and actual-client review; includes the approved thread baseline.
 - [Repository and builds](repository.md): GitHub checks, downloadable jars, standalone testing and contribution workflow.
 - [Spell reference](spell-reference.md): all 214 spells, worked examples, trait ratings, scaling, costs, targeting, effect plans, and current appearance.
 - [Spell rarity and balance](design/spell-balance.md): four rarities, relative ratings, formula calibration, boost leverage, and comparisons within rarity.
@@ -20,6 +21,9 @@
 - [Executable Spellshaping recipes](spellshaping-recipes.md): 50 individual augments, six compounds, automatic routes and typed payments.
 - [Spellshaping implementation](design/spellshaping.md): supported behavior, compatibility and limits; the unimplemented proposal catalog has been removed.
 - [Scroll discovery and progression](design/spell-discovery.md): implemented unknown/identified states, scroll-only identification and mixed-fragment trait intersections with slot-counted average weights; the shared apparatus direction now follows Plinth rituals.
+- [Wand crafting and magical string cores](design/wand-crafting.md): implemented exact three-scroll binding, seven bases, five thread profiles, deterministic wear and sixty-second wand recovery. Threads share String, Amethyst Shard and Honeycomb. Eight locked additional tip effects, dynamically derived wand displays, final artwork and testing-pack installation remain outstanding.
+- [Wand component palette](design/wand-components.md): implemented initial base/thread profiles, exact source shaping, typed payments and deterministic wear; selected additional tips remain outstanding.
+- [Wand tip ideas and combinations](design/wand-tip-catalog.md): the locked eight-tip direction, draft prices and combinations, plus twenty later candidates. Tips add distinct effects beyond existing scroll shaping; implementation and coverage verification remain outstanding.
 - [Original Wizardry scroll-name colors](research/electroblob-scroll-name-colors.md): pinned white unknown/known scroll names, glyph rendering, separate spellbook tier colors and the separately accepted native rarity-color mapping.
 - [Native scroll rarity colors](art/scroll-rarity-colors/README.md): inspected unknown/identified colors, italic augments and independent recipe memory in JEI and EMI.
 - [Ritual recipe viewers](design/recipe-viewers.md): optional JEI/EMI displays with an ancient four/eight-Plinth sketch, central result, per-player identification, recipes concealed until successful crafting, and server-synchronized capacities.

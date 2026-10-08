@@ -1,0 +1,9 @@
+gradle.projectsEvaluated {
+    def p = rootProject
+    p.neoForge.runs.named('gameTestServer').configure { jvmArguments.add('-Xmx1G') }
+    p.neoForge.runs.named('effectsCapture').configure { jvmArguments.add('-Xmx2G') }
+    def local = p.configurations.getByName('localRuntime')
+    local.dependencies.removeAll { dep -> dep instanceof org.gradle.api.artifacts.FileCollectionDependency && dep.files.files.any { it.name.startsWith('kithkyn-') } }
+    p.dependencies.add('localRuntime', p.files('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/kithkyn-1.0.0.jar'))
+    p.dependencies.add('localRuntime', p.files('/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/NaturesCompass-1.21.1-3.4.0-neoforge.jar'))
+}

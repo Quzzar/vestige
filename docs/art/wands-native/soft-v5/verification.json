@@ -1,0 +1,307 @@
+{
+  "status": "Native preview ready; uncommitted, not published or installed",
+  "sourceArtwork": "../source-art/wand-components-v5.png",
+  "sourceArtworkSha256": "2e4f4189b7cd6047c19840e620fa1b7bede99c08d1df3e38d61529334ec75d16",
+  "promptSet": "../source-art/prompts-v5.json",
+  "generationMode": "Built-in image_gen edit, transparent background",
+  "export": "Nondithered median-cut shade ramps; exact v4 opacity masks and positioning; new palette source, reserved gold binding shades",
+  "actualTextureSize": [
+    16,
+    16
+  ],
+  "composedWands": 63,
+  "all63ConnectedAndPadded": true,
+  "layers": [
+    {
+      "file": "textures/item/wands/base_stick.png",
+      "sha256": "de51074b1c83f51a9f07675bdd49b0453f4bd53c8f77a545d46d7f78c236ab99",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "d5e8a3eac12e6240fe82704aa3fc7f7372cd638cb9454a8b50cefe18f1f90c6c",
+      "v5OpacitySha256": "d5e8a3eac12e6240fe82704aa3fc7f7372cd638cb9454a8b50cefe18f1f90c6c"
+    },
+    {
+      "file": "textures/item/wands/base_bamboo.png",
+      "sha256": "765111e41f94c020576adc7f45253c4869054058896225525822c39d407e2283",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "7d2a65e37826ffdea0a73a5adbb2dacea43c860d14b9afa46f9c3bd711a9fa69",
+      "v5OpacitySha256": "7d2a65e37826ffdea0a73a5adbb2dacea43c860d14b9afa46f9c3bd711a9fa69"
+    },
+    {
+      "file": "textures/item/wands/base_bone.png",
+      "sha256": "dca7e4a658a04ffa04e2c7f7ccbc8388ea38e9adf7c8e3936c7fb4f5026df505",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "b92b4d0f1e92279d1575e2b23840bcbc7b2a743b76b6dfcbe3edc8d12156b288",
+      "v5OpacitySha256": "b92b4d0f1e92279d1575e2b23840bcbc7b2a743b76b6dfcbe3edc8d12156b288"
+    },
+    {
+      "file": "textures/item/wands/base_blaze_rod.png",
+      "sha256": "c31c01857222a30b43310f953463cead484bfd00f130ba8397bae55fb03bdc37",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "a66b7f1ec2a89295cd394e247027666b44a22d5dfd27cc53f3d4b23fe81ad0f6",
+      "v5OpacitySha256": "a66b7f1ec2a89295cd394e247027666b44a22d5dfd27cc53f3d4b23fe81ad0f6"
+    },
+    {
+      "file": "textures/item/wands/base_breeze_rod.png",
+      "sha256": "08911d2ade8c4a93cd686d9bd1f5945656768cd018e8041b4b9fd78705008be8",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "19a339be38514f152555a3051935024c896edda9e8371bb96ebb68fcf75c9eb6",
+      "v5OpacitySha256": "19a339be38514f152555a3051935024c896edda9e8371bb96ebb68fcf75c9eb6"
+    },
+    {
+      "file": "textures/item/wands/base_end_rod.png",
+      "sha256": "69555c9946fcc97615e427f7b2c2fe5ece5f42d6ba8ec8316ed36657da33f0f6",
+      "bounds": [
+        3,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 7,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "d360c5aaf80686fc359bed594884011805be8c0d5a6722fe7c84bc685c36b42f",
+      "v5OpacitySha256": "d360c5aaf80686fc359bed594884011805be8c0d5a6722fe7c84bc685c36b42f"
+    },
+    {
+      "file": "textures/item/wands/base_lightning_rod.png",
+      "sha256": "1563d2d24bd333b3a067e9e7ae99c7f38433dfb66960a0942c4de9ade25f8157",
+      "bounds": [
+        2,
+        2,
+        13,
+        15
+      ],
+      "opaqueColours": 8,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "08c21aec0f355c6cad3f6f1e231a56b5edf828785318cb856ad9fb7ead25a163",
+      "v5OpacitySha256": "08c21aec0f355c6cad3f6f1e231a56b5edf828785318cb856ad9fb7ead25a163"
+    },
+    {
+      "file": "textures/item/wands/tip_amethyst.png",
+      "sha256": "8f391f7fa53a683e579fef5e05d760f44d85fcc82ab900a7be271e3b7eba7340",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754",
+      "v5OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754"
+    },
+    {
+      "file": "textures/item/wands/tip_diamond.png",
+      "sha256": "48de4c5f232702a1ddf6902d267019aba005d4508bdfde4e3246c8e95d58db16",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754",
+      "v5OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754"
+    },
+    {
+      "file": "textures/item/wands/tip_emerald.png",
+      "sha256": "5273e185bde25c2e003f439623003752b76ed0d8c19dea31c4700c7b76c34e6f",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754",
+      "v5OpacitySha256": "0ae5a4a79b9a21cb70436aada6b621ce6abd0ae76e4b9a46034b502d9cf66754"
+    },
+    {
+      "file": "textures/item/wands/tip_ender_pearl.png",
+      "sha256": "f651e63318a84e172de517a2634840ede123df0b4253a1694f3787dd5806f7b2",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "e2b54c464e612a86010e16718ac0082327b2e8f50293f0e1accfd18eec277c61",
+      "v5OpacitySha256": "e2b54c464e612a86010e16718ac0082327b2e8f50293f0e1accfd18eec277c61"
+    },
+    {
+      "file": "textures/item/wands/tip_copper.png",
+      "sha256": "9333c6708891fe1d406bb9ac21e49a58ff30928b35a06a9bdeef705cad7401b5",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291",
+      "v5OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291"
+    },
+    {
+      "file": "textures/item/wands/tip_iron.png",
+      "sha256": "c87119675cd4138571d7ab600ee7243f54e445e2b9d0903c02308d4482cb9c75",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291",
+      "v5OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291"
+    },
+    {
+      "file": "textures/item/wands/tip_ghast_tear.png",
+      "sha256": "a7ac8cd7cdae4595a9a72b049b52bd4f38c78d9b77c93fc75add6d57186b6862",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 3,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "00056dce94fad72a74eaee7613cd7627bf08c9ae1f91d06f6d5a9a875276c716",
+      "v5OpacitySha256": "00056dce94fad72a74eaee7613cd7627bf08c9ae1f91d06f6d5a9a875276c716"
+    },
+    {
+      "file": "textures/item/wands/tip_netherite.png",
+      "sha256": "4f510ce03422bcd42fa250613d5ee44e3a8ae7c6114134d0266b0768f332fb18",
+      "bounds": [
+        10,
+        1,
+        14,
+        5
+      ],
+      "opaqueColours": 4,
+      "transparentBorder": 1,
+      "binaryAlpha": true,
+      "v4OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291",
+      "v5OpacitySha256": "74a222e4230784006ef817ebaebd75a84c92c490ddf46c5a96c3601ddf5e6291"
+    }
+  ],
+  "unchangedThreads": [
+    {
+      "file": "textures/item/ensorcelled_thread.png",
+      "sha256": "7b797173145ff4f12474ea7ec109410ece20b3c164ef4363dae6e6adea5f4ece"
+    },
+    {
+      "file": "textures/item/callous_thread.png",
+      "sha256": "57b2c8296871027cd1998d5f235828d1af02d5f6ec94b907912b4ef95b0308c9"
+    },
+    {
+      "file": "textures/item/smoldering_thread.png",
+      "sha256": "d1305c46cad6dca4fd3639f8b65b8b1141ebbe6ddb2164db5237604ffacfbe37"
+    },
+    {
+      "file": "textures/item/laced_thread.png",
+      "sha256": "120fdda65466cf9a866689cf2c96b081c2975477ca5f29eba862267a31950181"
+    },
+    {
+      "file": "textures/item/consecrated_thread.png",
+      "sha256": "877be36b7eab5e340775adbfbc13e762a04d1017145e2c752e18ada0a5d934f4"
+    }
+  ],
+  "installedArtifactLeftUnchangedSha256": "3a9948135686f2262ab1ac94e561ae0f31d097c7209db992a24939e50e15ffcc",
+  "nativeLoadedTexturesMatchProduction": true,
+  "nativeFrames": [
+    {
+      "file": "inventory/wands-and-threads.png",
+      "sha256": "3c722bd10ba8932d8782bb3044e20f7b398c61986ef4bd428f3a1a8d9dbb6473",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer"
+    },
+    {
+      "file": "inventory/beside-vanilla-materials.png",
+      "sha256": "0c8360f1d1dad13e7dacfde4ffa068937bd4ffcb8a6701cd1832539fac8570c9",
+      "framebufferSize": [
+        1920,
+        1440
+      ],
+      "source": "Unedited native Minecraft framebuffer"
+    }
+  ],
+  "logs": [
+    {
+      "file": "logs/vestige-wands-inventory-soft-v5.log.gz",
+      "decodedSha256": "d615030aa9db53ff170c274c90f54c85cc27ebaa50b8efd69f4c124987d6aab5",
+      "sha256": "f7f20e031509174d7d3f02ea58a7e3ce9c1a772547a2d838f7e75f46a4cbfa53",
+      "completed": true
+    },
+    {
+      "file": "logs/vestige-wands-soft-v5-package.log.gz",
+      "decodedSha256": "bfb365e4a5c5a7cfadf7c4759bf993cc5eba0d98d5759572c8be32a715a4155d",
+      "sha256": "5305a28af3ebfe84a938a5af8d91387398c6bd0c26806cd44b2a538859af6e1b",
+      "completed": true
+    }
+  ],
+  "isolatedPackage": {
+    "sha256": "8585644b73077af953bc5edd79580d8a23db3523cf0925869ea0c8abe844890a",
+    "texturesVerified": 20,
+    "productionJavaChanges": false,
+    "modelsUnchanged": true,
+    "temporaryCaptureClassExcluded": true
+  },
+  "all15SilhouettesExactlyMatchV4": true
+}

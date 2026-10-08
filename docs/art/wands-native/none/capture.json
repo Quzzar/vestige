@@ -1,0 +1,14 @@
+{
+  "viewer": "none",
+  "source": "Minecraft framebuffer and native recipe APIs",
+  "exactSourceReceived": true,
+  "captures": [
+    {
+      "case": "no-viewer",
+      "recipes": 4987,
+      "screen": "world",
+      "matches": 0,
+      "guiScale": 4
+    }
+  ]
+}

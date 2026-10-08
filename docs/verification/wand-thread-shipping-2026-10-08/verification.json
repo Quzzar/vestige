@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-08",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.72",
+  "java": 21,
+  "installedJarSha256": "201c7974425df87e72c815c63b711b6700e4cb92318de3e48c27542321395b97",
+  "sourceManifestFiles": 3337,
+  "sourceScope": "Frozen combined shared-checkout snapshot from the start of this shipping pass; subsequent unrelated changes are excluded.",
+  "combined": {
+    "unit": {
+      "tests": 179,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "requiredWorldTests": 316,
+    "focusedFinalWorldTests": 17,
+    "productionBuild": true,
+    "installedKithkynCompatibility": true
+  },
+  "publication": {
+    "unit": {
+      "tests": 137,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "requiredWorldTests": 254,
+    "codeCommit": "b7fdabd2f3e8f9666155fe9617f7202521ef5c44",
+    "ciRun": "https://github.com/Quzzar/vestige/actions/runs/37730088733",
+    "ciBuild": "SUCCESS",
+    "ciCastGallery": "SUCCESS"
+  },
+  "client": {
+    "inventoryFrames": 4,
+    "jeiWandCases": 5,
+    "jeiThreadCases": 11,
+    "allTwentyLoadedSpritesMatchInstalledJar": true,
+    "allFiveThreadsCosmeticFoilWithoutEnchantments": true,
+    "fullTestingPackModSetLoadedForThreadViewer": true
+  },
+  "installedKithkynSha256": "182c68e44eb5a1fdf50a1529621ec24535e945a3b70720d79901413b84004d2c",
+  "jeiSha256": "ef13d6d38e394c13520475dfd6df1aa74a0c7c76f6e253acc7d1d425bcbcf6d9",
+  "captureHarnessExcludedFromInstalledJar": true,
+  "productionChanges": [
+    "Vanilla cosmetic enchantment shimmer on the five magical threads; approved PNGs unchanged."
+  ],
+  "verificationChanges": [
+    "Two full real-drop thread-to-wand-to-paid-cast world tests.",
+    "Plinth ejection regression tracks the actual uniquely marked item after deliberate movement; no gameplay change.",
+    "Art-ledger generator preserves the canonical Minecraft art guide link."
+  ],
+  "limitations": [
+    "EMI was not recaptured in this pass; its earlier native evidence is historical.",
+    "Remote multiplayer, encounter balance and long-session feel were not tested in this pass.",
+    "Published wand foundation is scoped separately from the combined local snapshot, which contains approved concurrent features and the later no-extra-wand-recovery decision."
+  ],
+  "logSha256": {
+    "combined-build-world.log.gz": "878bbcbef38034ccf96b6b36233b72f761ce1809db211f135ff4d8f4f96c29a0",
+    "focused-chain-plinth.log.gz": "4a2a88390100fd0b177b9c230ba02cc1aebf101c6d2944390ea1257afb9f1e83",
+    "publication-build-world.log.gz": "ad6680e8cc4e900de51a741bf4aa3ee2e20f60216d6ee294f22010694b9396e6",
+    "native-inventory.log.gz": "90c74705b778b84b3d63ede686642a5715c5a69df1fea156f9e905a6a3990a59",
+    "native-wand-viewer.log.gz": "de4a82eace04a549e5be0d2f2835e09a0ffc07a7499f6d0460dc249fdc386b4a",
+    "native-thread-viewer.log.gz": "70463aa359da15b0a2ce7a1610c44e4686690458018c01f265438d1284c860e4",
+    "ci-generator-failure.log.gz": "72edf8e5e659479ddab5900059a7ec85e535fe0660f75145e17a97ae90ab2aea",
+    "ci-plinth-observation-failure.log.gz": "607d6cb00acfbe4c191641385dcb28cb2dffeaf9541c0da881532f8e22309448",
+    "ci-moved-drop-reproduction.log.gz": "a5e36dd4291a3c97e73ffea426988243faccf94c342898416ece83c1ffe97610"
+  }
+}

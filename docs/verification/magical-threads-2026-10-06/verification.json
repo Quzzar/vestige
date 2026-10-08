@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-06",
+  "scope": "Five magical thread components and shared imbuement-selected ritual",
+  "unit_tests": {
+    "tests": 118,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_unit_tests": 4,
+  "world_tests": {
+    "passed": 15,
+    "new_thread_tests": 12,
+    "regression_tests": 3
+  },
+  "build": "passed",
+  "standalone_with_kithkyn": false,
+  "recipe": {
+    "offerings": {
+      "minecraft:string": 1,
+      "minecraft:amethyst_shard": 1,
+      "minecraft:honeycomb": 1
+    },
+    "output_count": 1,
+    "active_slots": 4,
+    "occupied_slots": 3,
+    "selector": "String offering socket"
+  },
+  "selectors": {
+    "diamond_block": "ensorcelled_thread",
+    "iron_block": "callous_thread",
+    "gold_block": "smoldering_thread",
+    "emerald_block": "laced_thread",
+    "glowstone": "consecrated_thread"
+  },
+  "source_sha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadRecipe.java": "c700080db6af6ea46df597a7eb91ee6d1889e9dceb5730b845c641de71168950",
+    "src/main/java/com/quzzar/vestige/apparatus/MagicalThreadWorldTest.java": "4e95aab375a6aff3cd5100ec291b034ea0e9217325eb39058a8f04cbb1bb4f5a",
+    "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java": "a0006580c88807d16cd6b96d1e60f17ed3e2c7f000c771c86c907f7e05accfa7",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "05fc74b62cf4edf8148f5fee2fea027ac4503867c61f94b8ff07b87250dd9a21",
+    "src/test/java/com/quzzar/vestige/apparatus/MagicalThreadRecipeTest.java": "3b0afc01e78b1d91d5b7efb51d05d21bdd833eb1ffa7f70db15f6f31dd573c12"
+  },
+  "resource_sha256": {
+    "assets/vestige/models/item/ensorcelled_thread.json": "fd33db24bc1355a81dac952de457e63f47543d65d135cc259d629b003c179d69",
+    "assets/vestige/models/item/callous_thread.json": "fd33db24bc1355a81dac952de457e63f47543d65d135cc259d629b003c179d69",
+    "assets/vestige/models/item/smoldering_thread.json": "fd33db24bc1355a81dac952de457e63f47543d65d135cc259d629b003c179d69",
+    "assets/vestige/models/item/laced_thread.json": "fd33db24bc1355a81dac952de457e63f47543d65d135cc259d629b003c179d69",
+    "assets/vestige/models/item/consecrated_thread.json": "fd33db24bc1355a81dac952de457e63f47543d65d135cc259d629b003c179d69",
+    "assets/vestige/lang/en_us.json": "89291f20b616815cdea4001e8788a6fddc07d58fd98e221e7513aa1205f37d3b"
+  },
+  "art": "Temporary vanilla minecraft:item/string model references; no appearance approval or native visual capture",
+  "default_stack_limit": 64,
+  "final_stack_tuning": "undecided",
+  "recipe_viewers": "Separate chat owns implementation; not implemented in this pass",
+  "wand_runtime": "not implemented",
+  "component_bonuses": "undecided",
+  "installed_pack_updated": false,
+  "jar": {
+    "path": "/Users/quzzar/Projects/vestige/build/magical-threads/libs/vestige-0.1.0.jar",
+    "sha256": "91b06bc396d464706cac52b5847b14b46b7c1e85ca329d14e88204b9a001d181"
+  },
+  "sources_jar": {
+    "path": "/Users/quzzar/Projects/vestige/build/magical-threads/libs/vestige-0.1.0-sources.jar",
+    "sha256": "e5d2dd4d46760b612f64a9f4455951c7f60d6bbc7b1a8325b34515810b214064"
+  },
+  "log": {
+    "path": "/private/tmp/vestige-magical-threads-validation.log",
+    "sha256": "3302b24c6097c1f2c8b896cc65f9d1d7d9b5754a0ea71c130ed61f34548f5eef"
+  },
+  "limitations": [
+    "No installed-pack replacement",
+    "No native visual inspection",
+    "Remote multiplayer not exercised",
+    "Optional recipe viewer integrations and Kithkyn co-load not run in this standalone mechanics pass"
+  ]
+}

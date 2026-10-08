@@ -66,6 +66,28 @@ public final class RitualCrafting {
         List<Layout> candidates=LeylineStructure.find(center,recipe==null ? 4 : recipe.circle());
         if (recipe==null) {
             var advanced=LeylineStructure.find(center,8);
+            var wands=advanced.stream().filter(l -> WandRecipe.match(l.items()).isPresent()).toList();
+            if (!wands.isEmpty()) {
+                if (wands.size()!=1) return Outcome.INVALID;
+                var selected=wands.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var output=WandRecipe.result(selected.items());
+                if (output.isEmpty()) return Outcome.INVALID;
+                begin(selected,player,output.get(),WandRecipe.match(selected.items()).orElseThrow().occupied(),false,0xf4e5ff,RitualInputs.capture(selected));
+                return Outcome.CRAFTING;
+            }
+            var threads=candidates.stream().filter(l -> MagicalThreadRecipe.matches(l.items())).toList();
+            if (!threads.isEmpty()) {
+                if (threads.size()!=1) return Outcome.INVALID;
+                var selected=threads.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var inputs=RitualInputs.capture(selected);
+                var output=MagicalThreadRecipe.result(inputs);
+                if (output.isEmpty()) return Outcome.INVALID;
+                var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
+                begin(selected,player,output.get(),occupied,false,0xf4e5ff,inputs);
+                return Outcome.CRAFTING;
+            }
             var eyes=candidates.stream().filter(l -> HomeboundEyeRecipe.matches(l.items())).toList();
             if (!eyes.isEmpty()) {
                 if (eyes.size()!=1) return Outcome.INVALID;

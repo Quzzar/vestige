@@ -1,0 +1,42 @@
+{
+  "captures": [
+    {
+      "guiScale": 4,
+      "matches": 1,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "recipes": 4987,
+      "case": "untipped"
+    },
+    {
+      "guiScale": 4,
+      "matches": 1,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "recipes": 4987,
+      "case": "resonating"
+    },
+    {
+      "guiScale": 4,
+      "matches": 1,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "recipes": 4987,
+      "case": "steadfast-utility"
+    },
+    {
+      "guiScale": 4,
+      "matches": 1,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "recipes": 4987,
+      "case": "exact-shaped-source"
+    },
+    {
+      "guiScale": 6,
+      "matches": 1,
+      "screen": "mezz.jei.gui.recipes.RecipesGui",
+      "recipes": 4987,
+      "case": "reduced-shaped-source"
+    }
+  ],
+  "exactSourceReceived": true,
+  "source": "Minecraft framebuffer and native recipe APIs",
+  "viewer": "jei"
+}

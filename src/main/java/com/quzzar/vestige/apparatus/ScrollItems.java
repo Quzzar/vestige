@@ -31,8 +31,14 @@ import java.util.Optional;
 public final class ScrollItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(VestigeMainMod.MOD_ID);
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, VestigeMainMod.MOD_ID);
-    public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<SpellWandItem> WAND = ITEMS.register("wand", () -> new SpellWandItem(new Item.Properties().durability(20)));
     public static final DeferredItem<ScrollFragmentItem> FRAGMENT = ITEMS.register("scroll_fragment", () -> new ScrollFragmentItem(new Item.Properties()));
+    public static final DeferredItem<Item> ENSORCELLED_THREAD = ITEMS.register("ensorcelled_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final DeferredItem<Item> CALLOUS_THREAD = ITEMS.register("callous_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final DeferredItem<Item> SMOLDERING_THREAD = ITEMS.register("smoldering_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final DeferredItem<Item> LACED_THREAD = ITEMS.register("laced_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final DeferredItem<Item> CONSECRATED_THREAD = ITEMS.register("consecrated_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final DeferredItem<AttunementShardItem> ATTUNEMENT_SHARD = ITEMS.register("attunement_shard", () -> new AttunementShardItem(new Item.Properties().stacksTo(16)));
     public static final DeferredItem<HomeboundEyeItem> HOMEBOUND_EYE = ITEMS.register("homebound_eye", () -> new HomeboundEyeItem(new Item.Properties().durability(HomeboundEyeItem.DURABILITY)));
     public static final DeferredItem<com.quzzar.vestige.storage.CraneBagItem> CRANE_BAG = ITEMS.register("crane_bag", () -> new com.quzzar.vestige.storage.CraneBagItem(new Item.Properties().stacksTo(1)));
@@ -141,5 +147,6 @@ public final class ScrollItems {
         event.accept(ATTUNEMENT_SHARD.get());
         event.accept(HOMEBOUND_EYE.get());
         event.accept(CRANE_BAG.get());
+        MagicalThreadRecipe.types().forEach(type -> event.accept(type.item()));
     }
 }

@@ -1,5 +1,7 @@
 # Spell art direction
 
+For item sprites, block/worn textures and GUI artwork, follow [Minecraft art and pixel scale](design/minecraft-art.md). The spell-effect compositions below have a separate scope.
+
 All 214 spells have an explicitly authored combination of silhouette, secondary movement, density, rhythm and scale. Related spells share materials and a visual vocabulary while retaining different compositions. This table describes the intended native rendering; actual appearance is reviewed through Minecraft cast footage in the [gallery](effects-workshop.md). Distinct recipe data alone does not establish artistic quality.
 
 The visual brief is readable magic at ordinary encounter distance: a recognizable form, motion tied to its purpose, a visible impact or reaction, and a finite end. Fire rises and surges; frost grows sharp facets; blood coils or cuts; plants climb and unfurl; force bends and forms sigils; protective magic has panels or substantial material. Information and stealth spells use restrained transitions and private cues so ornament does not reveal hidden bodies.

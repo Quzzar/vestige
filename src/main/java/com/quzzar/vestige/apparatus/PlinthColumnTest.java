@@ -77,12 +77,25 @@ public final class PlinthColumnTest {
         h.assertTrue(layouts.size()==1 && layouts.getFirst().geometry().innerHeight()==0,"Covered lower nodes added a competing ring");
         var layout=layouts.getFirst();var recipe=RitualCrafting.catalog().recipes().get(VestigeMainMod.location("fireball"));
         recipe.parts().forEach(p->layout.stands().get(p.seat()*2).insert(p.ingredient().hint()));
+        var covered=layout.stands().get(0);var original=covered.remove();
+        // A distinct real offering avoids matching or merging with loot from earlier batches.
+        original.set(net.minecraft.core.component.DataComponents.CUSTOM_NAME,net.minecraft.network.chat.Component.literal(java.util.UUID.randomUUID().toString()));
+        covered.insert(original);
         center.insert(ScrollItems.scroll(recipe.spell()));
         h.assertTrue(RitualCrafting.activate(h.makeMockPlayer(GameType.SURVIVAL),center)==RitualCrafting.Outcome.CRAFTING,"Column caps reject normal recipe");
-        var covered=layout.stands().get(0);var original=covered.displayedItem().copy();
-        h.setBlock(layout.stands().get(0).getBlockPos().above().subtract(h.absolutePos(BlockPos.ZERO)),ApparatusBlocks.PLINTH.get());
+        h.setBlock(covered.getBlockPos().above().subtract(h.absolutePos(BlockPos.ZERO)),ApparatusBlocks.PLINTH.get());
+        var drops=h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(2),e->ItemStack.matches(e.getItem(),original));
+        h.assertTrue(drops.size()==1,"Covered cap did not eject exactly one intact offering");
+        var ejected=drops.getFirst();
+        // Replay movement outside the source search area: cancellation must preserve the actual drop.
+        ejected.setPos(ejected.position().add(0,0,-3));
         h.runAfterDelay(65,()->{
-            h.assertTrue(RitualTestOutput.stack(center).isEmpty() && covered.displayedItem().isEmpty() && layout.items().stream().filter(i->!i.isEmpty()).count()==3 && h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,new net.minecraft.world.phys.AABB(covered.getBlockPos()).inflate(2),e->ItemStack.matches(e.getItem(),original)).size()==1 && layout.blocks().stream().noneMatch(OfferingBlockEntity::busy),"Covering active surface consumed ingredients or retained lock");h.succeed();
+            h.assertTrue(RitualTestOutput.stack(center).isEmpty(),"Covered craft produced an output");
+            h.assertTrue(covered.displayedItem().isEmpty(),"Covered cap retained its offering");
+            h.assertTrue(layout.items().stream().filter(i->!i.isEmpty()).count()==3,"Covered craft consumed remaining offerings");
+            h.assertTrue(ejected.isAlive() && ItemStack.matches(ejected.getItem(),original),"Cancellation lost or changed the ejected offering");
+            h.assertTrue(layout.blocks().stream().noneMatch(OfferingBlockEntity::busy),"Covered craft retained locks");h.succeed();
         });
     }
+
 }

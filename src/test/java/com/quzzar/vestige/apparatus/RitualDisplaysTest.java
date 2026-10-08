@@ -13,12 +13,52 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RitualDisplaysTest {
+    @Test void threadRecipesKeepTheSelectorOnStringAndOutOfConsumedIngredients() {
+        var displays=RitualDisplays.threads();assertEquals(5,displays.size());
+        assertEquals(5,displays.stream().map(RitualDisplays.Entry::id).distinct().count());
+        for(int i=0;i<displays.size();i++) {
+            var display=displays.get(i);var type=MagicalThreadRecipe.types().get(i);
+            assertTrue(display.shapeless());assertFalse(display.concealed());assertEquals(4,display.capacity());
+            assertEquals(type.item(),display.output().getItem());assertEquals(1,display.output().getCount());
+            assertEquals(List.of(0,2,4),display.offerings().stream().map(RitualDisplays.Offering::seat).toList());
+            assertEquals(MagicalThreadRecipe.ingredients().stream().map(net.minecraft.core.registries.BuiltInRegistries.ITEM::getKey).toList(),
+                    display.offerings().stream().map(o -> o.ingredient().items().getFirst()).toList());
+            assertEquals(List.of(new RitualDisplays.Imbuement(0,type.material())),display.imbuements());
+            assertFalse(display.imbuements().getFirst().stack().isEmpty());
+        }
+        var original=new RitualDisplayPayload(0,true,false,displays);
+        var buffer=new RegistryFriendlyByteBuf(Unpooled.buffer(),RegistryAccess.EMPTY);
+        try{RitualDisplayPayload.CODEC.encode(buffer,original);assertEquals(original,RitualDisplayPayload.CODEC.decode(buffer));}
+        finally{buffer.release();}
+    }
+    @Test void imbuementsCannotAttachToEmptySeatsOrLeakFromConcealedRecipes() {
+        var display=RitualDisplays.threads().getFirst();var material=display.imbuements().getFirst();
+        assertThrows(IllegalArgumentException.class,() -> new RitualDisplays.Entry(display.id(),display.spell(),false,display.rarity(),4,
+                display.offerings(),List.of(new RitualDisplays.Imbuement(6,material.material()))));
+        assertThrows(IllegalArgumentException.class,() -> new RitualDisplays.Entry(display.id(),display.spell(),false,display.rarity(),4,
+                display.offerings(),List.of(material,material)));
+        assertThrows(IllegalArgumentException.class,() -> new RitualDisplays.Entry(display.id(),Optional.of(display.id()),false,display.rarity(),4,
+                List.of(),List.of(material)));
+    }
+    @Test void frameFitsTheOriginalRightAndBottomEdgesAndReservesTheOfferingHover() {
+        assertTrue(ImbuementFrame.contains(970,627));assertFalse(ImbuementFrame.contains(991,627));
+        assertTrue(ImbuementFrame.contains(627,940));assertFalse(ImbuementFrame.contains(627,959));
+        assertFalse(ImbuementFrame.contains(627,627));assertTrue(ImbuementFrame.contains(627,315));
+        for(int reserved:List.of(16,18)) {
+            var boxes=ImbuementFrame.hitBoxes(reserved);assertFalse(boxes.isEmpty());
+            for(var box:boxes)for(int x=box.x();x<box.x()+box.width();x++) {
+                assertTrue(ImbuementFrame.contains((x+.5)*1254/34,(box.y()+.5)*1254/34));
+                assertFalse(Math.abs(x+.5-17)<reserved/2. && Math.abs(box.y()+.5-17)<reserved/2.);
+            }
+        }
+    }
     @Test void everySpellDisplayPreservesOutputAndCapacityWithoutDisclosingAnyIngredients()throws Exception {
         for(var id:RitualCatalog.builtinIds()) {
             try(var reader=new InputStreamReader(Objects.requireNonNull(getClass().getResourceAsStream("/data/vestige/ritual_recipes/"+id.getPath()+".json")))) {
                 var recipe=RitualRecipe.read(id,JsonParser.parseReader(reader).getAsJsonObject());var display=RitualDisplays.spell(recipe);
                 assertEquals(recipe.circle(),display.capacity());assertEquals(Optional.of(id),display.spell());assertFalse(display.shapeless());
                 assertTrue(display.concealed());assertTrue(display.offerings().isEmpty(),id.toString());
+                assertTrue(display.imbuements().isEmpty(),id.toString());
                 assertEquals(SpellRarity.COMMON,display.rarity());
                 assertEquals(recipe.circle(),display.seats().size());
                 assertEquals(id,ScrollItems.scroll(display.output()).orElseThrow().spell());
@@ -93,7 +133,7 @@ class RitualDisplaysTest {
             try {
                 buffer.writeVarInt(0);buffer.writeBoolean(true);buffer.writeBoolean(false);buffer.writeVarInt(1);
                 buffer.writeUtf(id.toString(),256);buffer.writeBoolean(true);buffer.writeUtf(id.toString(),256);
-                buffer.writeBoolean(false);buffer.writeUtf(rarity,16);buffer.writeByte(4);buffer.writeVarInt(0);
+                buffer.writeBoolean(false);buffer.writeUtf(rarity,16);buffer.writeByte(4);buffer.writeVarInt(0);buffer.writeVarInt(0);
                 assertThrows(IllegalArgumentException.class,() -> RitualDisplayPayload.CODEC.decode(buffer));
             } finally {buffer.release();}
         }

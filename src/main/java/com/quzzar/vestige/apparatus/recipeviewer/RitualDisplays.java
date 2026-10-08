@@ -14,10 +14,23 @@ import java.util.*;
 public final class RitualDisplays {
     private RitualDisplays() { }
     public record Offering(int seat, RitualRecipe.Ingredient ingredient) { }
-    public record Entry(ResourceLocation id, Optional<ResourceLocation> spell, boolean identified, SpellRarity rarity, int capacity, List<Offering> offerings) {
+    /** Installed material belongs to an offering's Plinth and is retained after crafting. */
+    public record Imbuement(int seat, ResourceLocation material) {
+        public Imbuement {
+            Objects.requireNonNull(material);
+            if(BuiltInRegistries.BLOCK.getOptional(material).filter(block -> block.asItem()!=net.minecraft.world.item.Items.AIR).isEmpty())
+                throw new IllegalArgumentException("Invalid ritual material");
+        }
+        public ItemStack stack(){return new ItemStack(BuiltInRegistries.BLOCK.get(material));}
+    }
+    public record Entry(ResourceLocation id, Optional<ResourceLocation> spell, boolean identified, SpellRarity rarity, int capacity, List<Offering> offerings, List<Imbuement> imbuements) {
+        public Entry(ResourceLocation id, Optional<ResourceLocation> spell, boolean identified, SpellRarity rarity, int capacity, List<Offering> offerings) {
+            this(id,spell,identified,rarity,capacity,offerings,List.of());
+        }
         public Entry {
             Objects.requireNonNull(rarity);
             offerings=List.copyOf(offerings);
+            imbuements=List.copyOf(imbuements);
             if (capacity!=4 && capacity!=8 || offerings.size()>capacity
                     || !identified && rarity!=SpellRarity.COMMON
                     || spell.isEmpty() && (identified || offerings.isEmpty())
@@ -26,12 +39,27 @@ public final class RitualDisplays {
                     || offerings.stream().map(Offering::seat).distinct().count()!=offerings.size()
                     || offerings.stream().anyMatch(o -> o.seat()<0 || o.seat()>7 || capacity==4 && (o.seat()&1)!=0))
                 throw new IllegalArgumentException("Invalid ritual display");
+            var offeringSeats=offerings.stream().map(Offering::seat).toList();
+            if(imbuements.size()>offerings.size() || imbuements.stream().map(Imbuement::seat).distinct().count()!=imbuements.size()
+                    || imbuements.stream().anyMatch(m -> m.material()==null || !offeringSeats.contains(m.seat())))
+                throw new IllegalArgumentException("Invalid ritual imbuement");
         }
         public boolean shapeless() { return spell.isEmpty(); }
         public boolean concealed() { return spell.isPresent() && offerings.isEmpty(); }
-        public ItemStack output() { return spell.map(ScrollItems::scroll).orElseGet(() -> new ItemStack(
-                id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() : ScrollItems.ATTUNEMENT_SHARD.get())); }
+        public ItemStack output() { return spell.map(ScrollItems::scroll).orElseGet(() -> MagicalThreadRecipe.types().stream()
+                .filter(type -> id.equals(VestigeMainMod.location("ritual/"+type.id().getPath())))
+                .findFirst().map(type -> new ItemStack(type.item())).orElseGet(() -> new ItemStack(
+                id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() :
+                ScrollItems.ATTUNEMENT_SHARD.get()))); }
         public List<Integer> seats() { return capacity==4 ? List.of(0,2,4,6) : List.of(0,1,2,3,4,5,6,7); }
+    }
+    public static List<Entry> threads() {
+        var ingredients=MagicalThreadRecipe.ingredients();
+        var offerings=java.util.stream.IntStream.range(0,ingredients.size()).mapToObj(i -> new Offering(i*2,
+                new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList();
+        return MagicalThreadRecipe.types().stream().map(type -> new Entry(
+                VestigeMainMod.location("ritual/"+type.id().getPath()),Optional.empty(),false,SpellRarity.COMMON,4,
+                offerings,List.of(new Imbuement(0,type.material())))).toList();
     }
     public static Entry spell(RitualRecipe recipe) {
         return spell(recipe, false, false, SpellRarity.COMMON);

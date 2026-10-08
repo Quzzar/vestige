@@ -1,0 +1,61 @@
+{
+  "status": "Owner-approved appearance",
+  "approvedLocalDate": "2026-10-08",
+  "timezone": "America/New_York",
+  "scope": "The five v6 magical thread textures shown in the actual native inventory comparison.",
+  "ownerStatement": "Finally, finally, finally. This is good.",
+  "evidence": {
+    "nativeCapture": "inventory/threads-beside-string-and-lead.png",
+    "originalVerification": "verification.json",
+    "sourceArtwork": "../source-art/magical-threads-v6.png",
+    "promptSet": "../source-art/prompts-threads-v6.json"
+  },
+  "approvedTextures": [
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/item/ensorcelled_thread.png",
+      "reviewCopy": "ensorcelled_candidate.png",
+      "sha256": "139451f9ce048d5b5c195912507df20bdebb4bab753074dc9ed19bcd2f5159a9",
+      "size": [
+        16,
+        16
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/item/callous_thread.png",
+      "reviewCopy": "callous_candidate.png",
+      "sha256": "1a16215276f8d3156599328d485a6de73c1faf53a32ee8b9e15b92b60fb119de",
+      "size": [
+        16,
+        16
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/item/smoldering_thread.png",
+      "reviewCopy": "smoldering_candidate.png",
+      "sha256": "b7d32132cfdba8183cf26be06056b63dceeb92b91b1650b4f5b24da0bacfd028",
+      "size": [
+        16,
+        16
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/item/laced_thread.png",
+      "reviewCopy": "laced_candidate.png",
+      "sha256": "ed9bb936fcda92ccfc328c6cbd5704ca4519b7bc3bc3b9b92d7cba9ebda4fa56",
+      "size": [
+        16,
+        16
+      ]
+    },
+    {
+      "productionFile": "src/main/resources/assets/vestige/textures/item/consecrated_thread.png",
+      "reviewCopy": "consecrated_candidate.png",
+      "sha256": "658bc515b7722db7f74bcb4b1c7bbf8718f64a419cda4817b7593d385a673cd0",
+      "size": [
+        16,
+        16
+      ]
+    }
+  ],
+  "documentationPass": "Recorded acceptance and the Minecraft art workflow; production PNGs, models and gameplay unchanged. No publication or installation performed by this pass."
+}

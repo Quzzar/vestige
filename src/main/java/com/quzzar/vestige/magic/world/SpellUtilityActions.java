@@ -4,6 +4,7 @@ import com.quzzar.vestige.VestigeMainMod;
 import com.quzzar.vestige.magic.condition.ConditionValue;
 import com.quzzar.vestige.magic.effect.SpellEffects;
 import com.quzzar.vestige.magic.runtime.SpellRuntime;
+import com.quzzar.vestige.magic.runtime.CastObserver;
 import com.quzzar.vestige.magic.presentation.SpellVisual;
 import com.quzzar.vestige.magic.presentation.SpellVisualPayload;
 import net.minecraft.server.level.ServerLevel;
@@ -38,6 +39,7 @@ final class SpellUtilityActions {
                 }
                 // Obstructed terrain skips this pulse without ending the surrounding buff.
                 context.setNumber(VestigeMainMod.location("last_teleport"), moved ? 1 : 0);
+                if (moved) context.resolved(CastObserver.Kind.UTILITY,1);
                 yield true;
             }
             case "dwell_heal" -> {
@@ -54,8 +56,10 @@ final class SpellUtilityActions {
                 if (now - last > interval) context.setNumber(startedKey, now);
                 context.setNumber(lastKey, now);
                 double started = ((ConditionValue.Decimal) context.value(startedKey).orElseThrow()).value();
-                if (now - started >= required && context.claimHit(target.getUUID(), VestigeMainMod.location("dwell_heal"), 1))
-                    target.heal((float) amount);
+                if (now - started >= required && context.claimHit(target.getUUID(), VestigeMainMod.location("dwell_heal"), 1)) {
+                    float before=target.getHealth();target.heal((float)amount);
+                    context.resolved(CastObserver.Kind.HEAL,Math.max(0,target.getHealth()-before));
+                }
                 yield true;
             }
             case "detect_magic" -> {

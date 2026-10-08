@@ -17,14 +17,18 @@ import java.util.*;
 /** Standalone EMI support uses its public API, with no dependency on JEI or its bridge. */
 @EmiEntrypoint
 public final class VestigeEmiPlugin implements EmiPlugin {
-    public static EmiRecipeCategory category;
+    public static EmiRecipeCategory category,wandCategory;
     @Override public void register(EmiRegistry registry) {
         category=new EmiRecipeCategory(VestigeMainMod.location("spellstone_ritual"),EmiStack.of(ApparatusBlocks.SPELLSTONE.get()));
         registry.addCategory(category);
+        wandCategory=new EmiRecipeCategory(VestigeMainMod.location("wand_binding"),EmiStack.of(ScrollItems.WAND.get()));registry.addCategory(wandCategory);
         ApparatusBlocks.all().forEach(block -> registry.addWorkstation(category,EmiStack.of(block)));
+        ApparatusBlocks.all().forEach(block -> registry.addWorkstation(wandCategory,EmiStack.of(block)));
+        registry.setDefaultComparison(ScrollItems.WAND.get(),Comparison.compareData(s -> WandDisplays.identity(s.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.EMPTY))));
         registry.setDefaultComparison(ScrollItems.SCROLL.get(),Comparison.compareData(s -> RitualDisplays.subtype(s.getItemStack())));
         registry.setDefaultComparison(ScrollItems.FRAGMENT.get(),Comparison.compareData(s -> RitualDisplays.subtype(s.getItemStack())));
         registry.setDefaultComparison(ScrollItems.ATTUNEMENT_SHARD.get(),Comparison.DEFAULT_COMPARISON);
+        for(var display:WandViewerClient.displays())registry.addRecipe(new WandEmiRecipe(display));
         for(var display:RitualViewerClient.displays()){registry.addRecipe(new Recipe(display));registry.addEmiStack(EmiStack.of(display.output()));}
     }
     public static final class Recipe implements EmiRecipe {
@@ -41,9 +45,12 @@ public final class VestigeEmiPlugin implements EmiPlugin {
         @Override public ResourceLocation getId(){return ResourceLocation.fromNamespaceAndPath(display.id().getNamespace(),"/"+display.id().getPath());}
         @Override public List<EmiIngredient> getInputs(){return inputs;}
         @Override public List<EmiStack> getOutputs(){return List.of(EmiStack.of(display.output()));}
-        @Override public List<EmiIngredient> getCatalysts(){return List.of(
-                EmiIngredient.of(ApparatusBlocks.SPELLSTONES.values().stream().map(b -> EmiStack.of(b.get())).toList()),
-                EmiIngredient.of(ApparatusBlocks.PLINTHS.values().stream().map(b -> EmiStack.of(b.get())).toList()));}
+        @Override public List<EmiIngredient> getCatalysts(){
+            var catalysts=new ArrayList<EmiIngredient>();
+            catalysts.add(EmiIngredient.of(ApparatusBlocks.SPELLSTONES.values().stream().map(b -> EmiStack.of(b.get())).toList()));
+            catalysts.add(EmiIngredient.of(ApparatusBlocks.PLINTHS.values().stream().map(b -> EmiStack.of(b.get())).toList()));
+            display.imbuements().forEach(material -> catalysts.add(EmiStack.of(material.stack())));return List.copyOf(catalysts);
+        }
         @Override public int getDisplayWidth(){return RitualDiagram.WIDTH;}
         @Override public int getDisplayHeight(){return RitualDiagram.HEIGHT;}
         @Override public boolean supportsRecipeTree(){return !display.concealed() && !display.shapeless();}
@@ -60,9 +67,23 @@ public final class VestigeEmiPlugin implements EmiPlugin {
                 widgets.add(new ScaledSlot(inputs.get(i),offset+(RitualDiagram.x(display,offering.seat())+8)*scale,
                         (RitualDiagram.y(display,offering.seat())+8)*scale,scale)).drawBack(false);
             }
+            for(var material:display.imbuements())for(var box:ImbuementFrame.hitBoxes(18))
+                widgets.add(new FrameSlot(EmiStack.of(material.stack()),
+                        offset+(RitualDiagram.x(display,material.seat())-9+box.x())*scale,
+                        (RitualDiagram.y(display,material.seat())-9+box.y())*scale,box.width()*scale,scale))
+                        .drawBack(false).catalyst(true).appendTooltip(net.minecraft.network.chat.Component.translatable("vestige.viewer.imbuement.retained").withStyle(net.minecraft.ChatFormatting.GRAY));
             widgets.add(new ScaledSlot(getOutputs().getFirst(),offset+(RitualDiagram.OUTPUT_X+8)*scale,
                     (RitualDiagram.OUTPUT_Y+8)*scale,scale)).drawBack(false).recipeContext(this);
         }
+    }
+    private static final class FrameSlot extends SlotWidget {
+        private final Bounds rim;
+        private FrameSlot(EmiIngredient ingredient,float x,float y,float width,float height) {
+            super(ingredient,0,0);rim=new Bounds(Math.round(x),Math.round(y),Math.max(1,Math.round(width)),Math.max(1,Math.round(height)));
+        }
+        @Override public Bounds getBounds(){return rim;}
+        @Override public void drawStack(GuiGraphics graphics,int mouseX,int mouseY,float delta){ }
+        @Override public void drawOverlay(GuiGraphics graphics,int mouseX,int mouseY,float delta){ }
     }
     /** Retains native EMI tooltips and interactions when the holder shrinks the drawing. */
     private static final class ScaledSlot extends SlotWidget {

@@ -1,0 +1,41 @@
+{
+  "frames": [
+    "inventory/threads-beside-string-and-lead.png",
+    "inventory/threads-glint-later.png"
+  ],
+  "threads": [
+    {
+      "thread": "ensorcelled",
+      "opaqueTexels": 77,
+      "animatedTexels": 77,
+      "maxChannelChange": 53
+    },
+    {
+      "thread": "callous",
+      "opaqueTexels": 82,
+      "animatedTexels": 82,
+      "maxChannelChange": 35
+    },
+    {
+      "thread": "smoldering",
+      "opaqueTexels": 83,
+      "animatedTexels": 83,
+      "maxChannelChange": 43
+    },
+    {
+      "thread": "laced",
+      "opaqueTexels": 87,
+      "animatedTexels": 79,
+      "maxChannelChange": 63
+    },
+    {
+      "thread": "consecrated",
+      "opaqueTexels": 91,
+      "animatedTexels": 91,
+      "maxChannelChange": 68
+    }
+  ],
+  "stationaryVanillaStringControlMaxChannelChange": 0,
+  "allTwentyLoadedTextureHashesMatchProduction": true,
+  "allFiveThreadsFoilWithoutActualEnchantments": true
+}

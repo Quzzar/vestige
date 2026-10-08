@@ -1,0 +1,28 @@
+{
+  "wand_models": 63,
+  "source": "Minecraft main render target, ordinary item renderer",
+  "thread_models": 5,
+  "assetSha256": {
+    "models/item/wand.json": "48bfd6f96e1a192d531359a4d2b971c294b5c482885e33db0a7f98c6ad69eb8e",
+    "textures/item/callous_thread.png": "57b2c8296871027cd1998d5f235828d1af02d5f6ec94b907912b4ef95b0308c9",
+    "textures/item/consecrated_thread.png": "877be36b7eab5e340775adbfbc13e762a04d1017145e2c752e18ada0a5d934f4",
+    "textures/item/ensorcelled_thread.png": "7b797173145ff4f12474ea7ec109410ece20b3c164ef4363dae6e6adea5f4ece",
+    "textures/item/laced_thread.png": "120fdda65466cf9a866689cf2c96b081c2975477ca5f29eba862267a31950181",
+    "textures/item/smoldering_thread.png": "d1305c46cad6dca4fd3639f8b65b8b1141ebbe6ddb2164db5237604ffacfbe37",
+    "textures/item/wands/base_bamboo.png": "078f2093abee5bee8e2a8a4382166e0cb669f7754fe521a894967c38130bdd1f",
+    "textures/item/wands/base_blaze_rod.png": "9f7fa3fbbc541532bacb33bdb81165110e99bd588528ddd5e95223eea14f47b2",
+    "textures/item/wands/base_bone.png": "12fd924f80d3817ee243ee4ab9d07968cbc6ce2c9c2f4833546d4fc69d7119cf",
+    "textures/item/wands/base_breeze_rod.png": "98bbd8c34c05d3af1154d34f3cb5814651c2a216e4d31d98a2b22855a060a4f5",
+    "textures/item/wands/base_end_rod.png": "aae73056260ce65de07ce7c773525858ceaa1daee3b1d1b0c00d2263cb2dcc9b",
+    "textures/item/wands/base_lightning_rod.png": "1e909397016a4f70ab85e2a820408cc996108f4542ee111d4a555e6cb5370f80",
+    "textures/item/wands/base_stick.png": "93be02d3a3126cf61bb12e70ec41c64dad141e5ce4480562ede817542aaad26b",
+    "textures/item/wands/tip_amethyst.png": "5b91af2f23cf139782b1dcf1608f3d4009ec1895289b57fa7ab41605a5e53213",
+    "textures/item/wands/tip_copper.png": "1b43e4262e44be8a72d1dde33e579684862babe02756e2715687a4e17c605c61",
+    "textures/item/wands/tip_diamond.png": "4266290ffb4025a752d2623881c1e4177ee791f8d4e52625e231c907a0eb3516",
+    "textures/item/wands/tip_emerald.png": "8172b6f2ca65ae2453c99b313cdb8ff5624a6ee3326451efe9c4820ca41bd0a0",
+    "textures/item/wands/tip_ender_pearl.png": "7de6796bbbb0dde4cafe3aa90cd20b5d5fddb51f3c3dd967c39922dc31ffbf1d",
+    "textures/item/wands/tip_ghast_tear.png": "e192791ecd1e5bbde523ae3c2466f54682568f3060a871a39774c07f0a3fac08",
+    "textures/item/wands/tip_iron.png": "690a8e634c3a6ae7f8cb72f431374b7ce8c6380e13fad4360cb8250cf6c62d0e",
+    "textures/item/wands/tip_netherite.png": "b6e46d2457c855a6b7e746b1a1f8caba62c8074739bf96b06884738b8bfcba27"
+  }
+}

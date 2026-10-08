@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "vestige:item/wands/base_blaze_rod",
+    "layer1": "vestige:item/wands/tip_copper"
+  }
+}

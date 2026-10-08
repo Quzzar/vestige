@@ -7,6 +7,11 @@
   "item.vestige.scroll_fragment.named": "Scroll Fragment: %s",
   "block.vestige.plinth": "Stone Bricks Plinth",
   "item.vestige.attunement_shard": "Attunement Shard",
+  "item.vestige.ensorcelled_thread": "Ensorcelled Thread",
+  "item.vestige.callous_thread": "Callous Thread",
+  "item.vestige.smoldering_thread": "Smoldering Thread",
+  "item.vestige.laced_thread": "Laced Thread",
+  "item.vestige.consecrated_thread": "Consecrated Thread",
   "block.vestige.stone_plinth": "Stone Plinth",
   "block.vestige.stone_spellstone": "Stone Spellstone",
   "block.vestige.cobblestone_plinth": "Cobblestone Plinth",
@@ -130,5 +135,9 @@
   "screen.vestige.xp_points": "%s XP points",
   "screen.vestige.mana_points": "%s mana",
   "screen.vestige.health_points": "%s health points",
-  "screen.vestige.hunger_points": "%s hunger points"
+  "screen.vestige.hunger_points": "%s hunger points",
+  "item.vestige.wand": "Unknown Wand",
+  "item.vestige.wand.named": "Wand of %s",
+  "vestige.viewer.wand_title": "Wand Binding",
+  "emi.category.vestige.wand_binding": "Wand Binding"
 }

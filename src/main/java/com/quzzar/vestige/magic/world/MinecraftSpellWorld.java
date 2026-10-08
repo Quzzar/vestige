@@ -132,6 +132,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
                     if (parts.length == 2) return flag(BuiltInRegistries.MOB_EFFECT.getHolder(ResourceLocation.fromNamespaceAndPath(parts[0], parts[1])).map(living::hasEffect).orElse(false));
                 }
                 if (path.equals(ConditionPaths.TARGET_ALIVE) && subject != null) return flag(subject.isAlive());
+                if (path.equals(ConditionPaths.TARGET_ALLIED)) return flag(subject!=null && ally(caster,subject));
                 if (path.equals(ConditionPaths.DAMAGE_AMOUNT) && context.event().pending().isPresent()) return decimal(context.event().pending().get().amount());
                 if (path.equals(ConditionPaths.DIMENSION)) return identifier(caster.level().dimension().location());
                 if (path.equals(ConditionPaths.GAME_TIME)) return decimal(caster.level().getGameTime());
@@ -252,6 +253,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
         if (caster instanceof Player p) for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
         if (health > 0) caster.setHealth((float) (caster.getHealth() - health));
         if (mana > 0) NativeMana.spend(caster, mana);
+        context.paidMana(mana);
         if (hunger > 0 && caster instanceof Player p) p.getFoodData().setFoodLevel(p.getFoodData().getFoodLevel() - (int) hunger);
         return true;
     }
@@ -262,7 +264,15 @@ public final class MinecraftSpellWorld implements SpellWorld {
     }
     @Override public boolean execute(SpellEffects.Action action, SpellRuntime.Context context) {
         CausalChain previous = executingCause; executingCause = context.cause();
-        try { return actions.execute(action, context); } finally { executingCause = previous; }
+        try {
+            boolean result=actions.execute(action,context);
+            if (result && !Set.of("damage","weapon_damage","heal","dwell_heal","explode","grip","fangs","leech","random_teleport",
+                    "remove_attribute","dismiss_manifestations","reflect_projectiles","optional_backstep","status","remove_status","cleanse",
+                    "food_mana","ignite","freeze","knockback","launch","pull","dash").contains(action.type().getPath())
+                    && (!Set.of("status","ignite","freeze").contains(action.type().getPath()) || target(context)!=null))
+                context.resolved(CastObserver.Kind.UTILITY,1);
+            return result;
+        } finally { executingCause = previous; }
     }
     @Override public Optional<ManifestationHandle> manifest(SpellEffects.Manifestation definition, Map<String, Double> values, SpellRuntime.Context context) {
         return manifestations.create(definition, values, context).map(handle -> {

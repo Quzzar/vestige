@@ -1,0 +1,13 @@
+# Magical threads with vanilla String shading · review version
+
+**October 7, 2026. Local review candidate; not published or installed.** The owner found the previous exported threads flat in game and requested the dark pixels and pale strand pixels of native Minecraft String. The prior source and export were over-softened into midtones. This pass follows String's actual value structure: one dark shadow shade and two pale strand shades, with modest blue/lavender, silver, peach, green and ivory tints. The independently generated loose string arrangements keep the five ingredient identities.
+
+The local pinned Minecraft 1.21.1 String texture uses three opaque colours: `(47,69,71)`, `(219,219,219)` and `(247,247,247)`. [Reference provenance](vanilla-reference.json) pins the local client archive and extracted reference images. These are visual evidence and are not included in Vestige's shipped assets. The [new artwork](../source-art/magical-threads-v3.png) was generated using that enlarged texture as a style reference with the [complete built-in prompt](../source-art/prompts-threads-v3.json).
+
+The source atlas is larger than the game textures. Production exports are actual **16×16 RGBA sprites**, each with **three opaque shades**, hard alpha, one-pixel padding, connected silhouettes and verified dark/pale values. The generated atlas's shading is checked after export at native resolution. `v2-above-v3-below-with-vanilla.png` is an enlarged comparison of exported pixels, with vanilla String at the right; it is not a game screenshot. The five `*_candidate.png` files are exact production-size review copies.
+
+The three images under `inventory/` are unedited native Minecraft survival inventory captures. `threads-beside-string-and-lead.png` shows the five new ingredients directly beside vanilla String and Lead. The native manifest pins all twenty resource-loaded PNG hashes. `verification.json` records the exported shade ramps, actual native frames, unchanged v4 wand hashes, packaging and complete compressed logs. The temporary capture source is retained only as review evidence and excluded from the production package.
+
+Opaque texel centers for all five threads and the native String control are compared against their PNGs. Positions agree, with at most three byte levels of colour difference from the shared GUI shading. This verifies the actual exported patterns and dark/light structure in the rendered inventory, separately from the larger source art.
+
+All fifteen wand component PNGs, item models and gameplay retain their prior bytes/behavior. `tools/author_wand_models.py --check` verifies the five thread sprites and 63 wand unions. The installed testing pack and published branch are unchanged; this is an uncommitted visual review.

@@ -14,7 +14,8 @@ public final class ScrollTooltip {
     private ScrollTooltip() { }
     @SubscribeEvent(priority=EventPriority.LOWEST)
     public static void tooltip(ItemTooltipEvent event) {
-        if (event.getItemStack().getItem() instanceof SpellScrollItem && event.getToolTip().size()>1)
+        if ((event.getItemStack().getItem() instanceof SpellScrollItem || event.getItemStack().getItem() instanceof com.quzzar.vestige.apparatus.SpellWandItem)
+                && event.getToolTip().size()>1)
             event.getToolTip().subList(1,event.getToolTip().size()).clear();
     }
 }
