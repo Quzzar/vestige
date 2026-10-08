@@ -6,6 +6,8 @@ The [equipment review](../art/magic-equipment-review/index.html#wardweave) and i
 
 ## Shared robe recommendation
 
+**Item-name rarity, owner approved October 8:** both robes have native Uncommon/yellow base names. Compatible enchantments retain vanilla's displayed rarity promotion; the abilities and wear rules are unchanged. See the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
+
 Both occupy the chest slot, give **2 armor points, zero toughness and +25 maximum mana**. A wearer with no other capacity bonus has a maximum of 125. Two armor points equal one ordinary shield icon, compared with leather's three chest armor points.
 
 The mana bonus is fixed. Equipping does not refill mana; removal clamps the balance to the remaining capacity. Recovery remains two mana per second after the existing expenditure delay. These robes do not themselves grant a global trait boost: their own abilities read the wearer's approved trait modifiers. A wand's source-local modifiers affect that wand's cast, not a robe ability.

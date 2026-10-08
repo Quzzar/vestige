@@ -19,7 +19,7 @@ public final class RitualViewerClient {
     private static final List<RitualDisplays.Entry> pending=new ArrayList<>();
     private static int nextPage;
     private RitualViewerClient() { }
-    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.fluxedFlint());all.add(RitualDisplays.homeboundEye());all.add(RitualDisplays.whisperingShell());all.addAll(RitualDisplays.threads());all.addAll(com.quzzar.vestige.equipment.MagicArmorDisplays.entries());all.addAll(com.quzzar.vestige.equipment.WayfarerDisplays.entries());return List.copyOf(all);}
+    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.dissentientDiamond());all.add(RitualDisplays.fluxedFlint());all.add(RitualDisplays.homeboundEye());all.add(RitualDisplays.whisperingShell());all.addAll(RitualDisplays.threads());all.addAll(HourglassDisplays.entries());all.addAll(com.quzzar.vestige.equipment.MagicArmorDisplays.entries());all.addAll(com.quzzar.vestige.equipment.WayfarerDisplays.entries());return List.copyOf(all);}
     public static void accept(RitualDisplayPayload payload) {
         if(payload.page()==0){pending.clear();nextPage=0;}
         if(payload.page()!=nextPage++)throw new IllegalArgumentException("Out-of-order ritual display page");

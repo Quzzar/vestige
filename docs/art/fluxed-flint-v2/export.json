@@ -1,0 +1,25 @@
+{
+  "generation": "built-in imagegen edit; source.png and prompt.txt",
+  "export": "tools/author_fluxed_flint.py; original logical-cell/stone mask, generated role medians snapped to pinned vanilla Diamond palette; hard alpha",
+  "dimensions": [
+    16,
+    16
+  ],
+  "bounds": [
+    2,
+    1,
+    13,
+    14
+  ],
+  "opaquePixels": 82,
+  "opaqueShades": 8,
+  "changedAccentPixels": 24,
+  "stoneAndAlphaUnchanged": true,
+  "ownerAcceptance": "pending new revision review",
+  "sha256": {
+    "src/main/resources/assets/vestige/textures/item/fluxed_flint.png": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+    "src/main/resources/assets/vestige/models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+    "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+    "src/main/resources/assets/vestige/models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c"
+  }
+}

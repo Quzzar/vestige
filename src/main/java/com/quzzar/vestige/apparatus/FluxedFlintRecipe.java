@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 public final class FluxedFlintRecipe {
     public static final TagKey<Item> REPAIRABLE = TagKey.create(Registries.ITEM, VestigeMainMod.location("magical_repairable"));
     private FluxedFlintRecipe() { }
-    public static List<Item> ingredients() { return List.of(Items.FLINT, Items.DIAMOND_BLOCK, Items.NETHERITE_INGOT, Items.ECHO_SHARD); }
+    public static List<Item> ingredients() { return List.of(Items.FLINT, Items.NETHERITE_INGOT, ScrollItems.DISSENTIENT_DIAMOND.get(), Items.NETHERITE_INGOT); }
     private static List<Integer> occupied(List<ItemStack> seats) {
         if (seats.size()!=8) return List.of();
         return IntStream.range(0,8).filter(i -> !seats.get(i).isEmpty()).boxed().toList();

@@ -1,0 +1,26 @@
+{
+  "source": "generated-source.png",
+  "source_crop": [
+    245,
+    166,
+    869,
+    1236
+  ],
+  "grid": [
+    16,
+    16
+  ],
+  "occupied_grid": [
+    8,
+    14
+  ],
+  "position": [
+    4,
+    1
+  ],
+  "palette_limit": 12,
+  "alpha": "hard",
+  "method": "opaque-source median-cut palette; dominant indexed color per cell; no dithering; 40% coverage",
+  "production_sha256": "90e5c7e09200fe5aa6ff3b6bdd2ae4381ab29842c0a1a1e861b8f4f53c426e44",
+  "art_status": "Native review pending; owner approval separate"
+}

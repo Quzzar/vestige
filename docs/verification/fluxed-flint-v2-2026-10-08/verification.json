@@ -1,0 +1,55 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72 / Java 21",
+  "unit": {
+    "tests": 211,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 46
+  },
+  "world": {
+    "requiredPassed": 26,
+    "filter": "fluxed_flint|shapeless_ritual|ordered_ritual",
+    "collision": "original production collision source; no bypass"
+  },
+  "sourceSnapshot": "source-snapshot.json",
+  "rootScopedDrift": [],
+  "jar": "build/fluxed-flint-v2-review/libs/vestige-0.1.0.jar",
+  "jarSha256": "ed33865d7a00b14d18b944b585b59dd66c47f94748d860b2289c13c03de4bf3d",
+  "packagedAssetSha256": {
+    "src/main/resources/assets/vestige/textures/item/fluxed_flint.png": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+    "src/main/resources/assets/vestige/models/item/fluxed_flint.json": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8",
+    "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+    "src/main/resources/assets/vestige/models/item/dissentient_diamond.json": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c"
+  },
+  "native": {
+    "checksPassed": 5,
+    "clientSuccess": "1m 46s",
+    "framebuffer": "1920x1440, GUI scale 3, five inspected captures",
+    "inventoryCrop": {
+      "source": "inventory-beside-vanilla.png",
+      "bounds": [
+        690,
+        466,
+        1250,
+        974
+      ],
+      "resampling": false
+    },
+    "runtimeClassesEqualPackaged": [
+      "com/quzzar/vestige/apparatus/DissentientDiamondRecipe.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe$Repair.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintItem.class",
+      "com/quzzar/vestige/apparatus/RitualCrafting.class",
+      "com/quzzar/vestige/apparatus/FourSlotPattern.class",
+      "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.class",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class"
+    ],
+    "loadedAssetsEqualPackaged": true,
+    "isolatedCollisionSourceRestored": true,
+    "packagedCollisionDiffersFromPreviewBypass": true
+  },
+  "installation": "not installed or published"
+}

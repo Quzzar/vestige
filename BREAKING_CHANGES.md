@@ -1,5 +1,13 @@
 # Breaking changes
 
+## October 8, 2026: revised Fluxed Flint ingredient chain
+
+Dissentient Diamond now crafts through the four-seat inner ritual Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder, producing one ingredient. Fluxed Flint construction becomes Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot. Whole quarter-turns are equivalent; duplicate offerings occupy separate Plinths. The provisional Diamond Block/Echo Shard recipe is removed. Both public viewer patterns follow the new recipes. Flint's violet accents become diamond blue, preserving its silhouette/model, repair budget, volatility and exact target-copy semantics. Saved item and network formats are unchanged; there is no migration or installation.
+
+## October 8, 2026: Kairotic Hourglass and atomic device payments
+
+Adds native `vestige:kairotic_hourglass`, its four-offering ordered ritual, all 36 settled imbuement sets and server-owned position history. Saved item data contains trusted selection IDs and bounded physical geometry. The shared sealed `SpellCost` adds `Experience(int)` and the JSON `experience` cost; exhaustive consumers must handle it. `CastReservation.Atomic` / `SpellWorld.payAndCommit` allow fallible device movement with native payment rollback; adapters without transaction support reject those sources before spending. Ordinary reservations retain their prior semantics. Mana-only/resource-only payment no longer replaces unchanged inventory stacks with copies, preserving reserved source identity. Existing spell payment exchange order, old items and protocol formats are unchanged.
+
 ## October 8, 2026: shared magical adjective presentation
 
 Scroll, wand and staff stored-spell labels now use the shared `MagicAdjectives` prefix helper and a generated naming catalog. Single adjustments retain their words and degree labels; complete mixtures now receive one italicized adjective from an exact alias or the reserved Confluent fallback. Rarity styling and identification gates remain intact. The authored Wayfarer matrix covers all sixteen approved and implemented sets. Naming aliases never replace effects or alter saved items, costs, protocol formats or attunement identity. Run `tools/author_magic_adjectives.py --check` when changing source names or aliases. No migration or installation is introduced.

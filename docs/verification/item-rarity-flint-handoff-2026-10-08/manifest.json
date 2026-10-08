@@ -1,0 +1,814 @@
+{
+  "date": "2026-10-08",
+  "baseCommit": "4efe9f9de38ac3b14d90d18c93b6d9ab506355af",
+  "ownership": "This chat: approved item-name rarities; approved Dissentient Diamond art/registration; authorized Fluxed Flint recipe continuation and blue-accent implementation.",
+  "patch": {
+    "path": "docs/verification/item-rarity-flint-handoff-2026-10-08/scoped-changes.patch",
+    "sha256": "bf8629d9ea9b873f53494f65b5ab3fa11653de2c69952c3adcb12556d05b723d",
+    "files": 24,
+    "scope": "24 source/resource/tool/test/document files only; archived evidence must additionally be copied from transferEvidence.",
+    "validatedAgainstExactBase": true,
+    "validatedTargetHashes": true,
+    "workspaceGitIndexChanged": false
+  },
+  "changes": [
+    {
+      "path": "BREAKING_CHANGES.md",
+      "action": "modify",
+      "scope": "Only revised Fluxed Flint ingredient-chain entry. Excludes Hourglass API/payment entry.",
+      "baseSha256": "1299bc908397b46012eb8c6f21f904fc9394f7d7106a632d20093483fe8c15bc",
+      "scopedTargetSha256": "f16c0ea2aee8de8cd21aaf615a569420c13a68f5a4526637cb80c9f69db95363",
+      "rootReferenceSha256": "4f4ecbdab01f1c5abe03f1e1be9862df9f447bdb66cf7d25ef4cc91bc774b495",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "docs/art/fluxed-flint-v1/README.md",
+      "action": "modify",
+      "scope": "Mark old hold and violet sprite as historical; link to v2.",
+      "baseSha256": "30f1a32c2c06a693a6c896d77b66211410676283fdb14bc36f5ff9bac16fc1f5",
+      "scopedTargetSha256": "7730f67e78e96650628a37a4853dbcf933922e4ae8e63acbd1edd9a917ca2164",
+      "rootReferenceSha256": "7730f67e78e96650628a37a4853dbcf933922e4ae8e63acbd1edd9a917ca2164",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "docs/design/item-imbuement-and-readiness.md",
+      "action": "modify",
+      "scope": "Only accepted item-name rarities section and lifted Flint hold in its audit row. Excludes other-chat robe proposals/benchmarks.",
+      "baseSha256": "9e6afcc68b984adc44c79d0d90febd5a840efa06980091ca8db3a2ba5ac748b4",
+      "scopedTargetSha256": "d9d5d44f41e315f03d23b7b47a904b1d5388a06c07b98cd1ea813f56eed85667",
+      "rootReferenceSha256": "51970a1fff114a48a2e8c3911d3bedd122e3fa1aefacdabb021c2452a2222355",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "docs/design/magical-repair.md",
+      "action": "modify",
+      "scope": "Current recipe chain, rarity, lifted hold, unchanged repair/volatility semantics and separate new-pixel review boundary.",
+      "baseSha256": "8540ff7f2476b11956466c1e0001af29c519f899fb6c57ed0e96f13045965730",
+      "scopedTargetSha256": "a180b4862fd59474d22b256d6a8e9e197f6da6785e7b3b7db828ace715241c36",
+      "rootReferenceSha256": "a180b4862fd59474d22b256d6a8e9e197f6da6785e7b3b7db828ace715241c36",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "docs/design/recipe-viewers.md",
+      "action": "modify",
+      "scope": "Only Dissentient Diamond added to the ordinary ordered-construction list.",
+      "baseSha256": "0c86dddfd983d95b47d43f6ed4210c8a013e22c929fd2954d6e7ea1d4385ed01",
+      "scopedTargetSha256": "06084525df558b95320340f4fcf62f7b81a4aee3f15faa17dacde3983ac96399",
+      "rootReferenceSha256": "06084525df558b95320340f4fcf62f7b81a4aee3f15faa17dacde3983ac96399",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "docs/design/ritual-crafting.md",
+      "action": "modify",
+      "scope": "Only two revised construction rows and lifted hold paragraph. Excludes other-chat Hourglass ritual section.",
+      "baseSha256": "83e43c1471881b5589e1805cf15384b5fae3d94e44139912fc2cf3936071c1d5",
+      "scopedTargetSha256": "35506a7ece17b5f1690fbb8b57b8c228ef8d39eff03bd8514ef61517458a904f",
+      "rootReferenceSha256": "1c5e1d10801ba32c32c3a55466e4f802a5c486f1062aaf92f081994186a7a3ac",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "docs/design/robe-behavior-review.md",
+      "action": "modify",
+      "scope": "Only approved native item-name rarity paragraph. Excludes other-chat art/model or robe proposal changes.",
+      "baseSha256": "43b8a701551cbd179fbf3e6dd34ffe478222e6eabe162d9da9d146a93feae3ff",
+      "scopedTargetSha256": "f0a6a0b5cc6d6614f942fc176869eb80a4052e38fdb5d5d87d0041c574728174",
+      "rootReferenceSha256": "2302303226849dc4455885e8bbf4d34e18431ccb3b3e33d9ca0eada721e9bdb9",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "docs/design/staff-crafting.md",
+      "action": "modify",
+      "scope": "Only approved native item-name rarity paragraph. Excludes other-chat art/model or robe proposal changes.",
+      "baseSha256": "d4c9761d8ad77c1ebaca4dfdc8e7306fb231afabfaf98d0d6155a83a45b76cf8",
+      "scopedTargetSha256": "17f2b4e082d46a30d6b22d6c32739667ce4ab31128b8c269a757878820bab500",
+      "rootReferenceSha256": "e206b90d29c9b03597d2aeb7ca5cdb547f1a7b6ee5750c9f2196d8662602dbe2",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "docs/design/wayfarer-imbuement-review.md",
+      "action": "modify",
+      "scope": "Only approved Uncommon base rarity row.",
+      "baseSha256": "84849a4b78312271cc2640d158a8b7d0633da1848668a9451c35442f7e4c92d0",
+      "scopedTargetSha256": "d4622bad9270753c8bab2129b88ef12954bcf5a4b0bd1881941d44de78ae37e9",
+      "rootReferenceSha256": "d4622bad9270753c8bab2129b88ef12954bcf5a4b0bd1881941d44de78ae37e9",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "docs/development-status.md",
+      "action": "modify",
+      "scope": "Only this chat’s Flint continuation and rarity verification entries. Excludes all other new development entries.",
+      "baseSha256": "7e8233024422c318a990d032fd8630baeb8b774c640129123e06295b15f42db0",
+      "scopedTargetSha256": "20126dec69a0755708eb8bf7b8809e490ddaf8358b251bfd181ce78d64acbe99",
+      "rootReferenceSha256": "bfba9c61b21445f5d01e059b14b2f7e6f4cbc645a0ca9b9cf0eb5a8482a41bf1",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java",
+      "action": "add",
+      "scope": "New ordinary four-inner-seat Diamond/Gunpowder/Skull/Gunpowder matcher; one output; whole rotations.",
+      "baseSha256": null,
+      "scopedTargetSha256": "e8153c4844123d06a5e690f583a00f05f3c445475af89248fa621e6acba0484d",
+      "rootReferenceSha256": "e8153c4844123d06a5e690f583a00f05f3c445475af89248fa621e6acba0484d",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java",
+      "action": "modify",
+      "scope": "Only ingredients(): Flint/Netherite/Dissentient Diamond/Netherite. Existing unordered repair unchanged.",
+      "baseSha256": "cc36c741e915549151179426e5d54dd13c522c52845115d046fa60c423717e5d",
+      "scopedTargetSha256": "822cd227064633d0a95ef516b7a9739d0a260efdcafd7b452545741c2ec9f814",
+      "rootReferenceSha256": "822cd227064633d0a95ef516b7a9739d0a260efdcafd7b452545741c2ec9f814",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java",
+      "action": "modify",
+      "scope": "One actual two-stage construction world case; atomic duplicate consumption, rotation, sockets and inactive outer inputs.",
+      "baseSha256": "bcc9ae28b2426e30402a38e544ddf99d770c05f59aec473185e36cc7bc200546",
+      "scopedTargetSha256": "3c15475dd681da40ac2cb72cb540e6b85407dc9d9c5a369d17e7a2bbca3db8dd",
+      "rootReferenceSha256": "3c15475dd681da40ac2cb72cb540e6b85407dc9d9c5a369d17e7a2bbca3db8dd",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java",
+      "action": "modify",
+      "scope": "Only the Dissentient Diamond construction branch immediately before Flint construction. Excludes other-chat Hourglass branch.",
+      "baseSha256": "3e824eac7f50257e87ba2bfc56a02dd557ae63fc2e671f352bbf84b87e0e11fe",
+      "scopedTargetSha256": "a34b8a0d6bb57f7c563e04ef00931dbfe6eef6179c987f410127b20038a3fafe",
+      "rootReferenceSha256": "f909584ed57236f696bb993ccd86824906c0f6230607c82936153fd52fe9d329",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java",
+      "action": "modify",
+      "scope": "Six reviewed native rarity property additions only. Excludes other-chat Hourglass registration and creative entry. Diamond registration/Uncommon rarity already in base.",
+      "baseSha256": "bdf00bee918c5e1b60838d3c1546b6d6676a9ee967d17b77472db9861347294f",
+      "scopedTargetSha256": "b845c57ec37cbb879607a6e297d5943bca0be4b4f63f5dfd3494194ad66ad319",
+      "rootReferenceSha256": "15419b3bac3d2f6ad5935adef0b341d199aaca3bb694969182da29ecdfa13d8e",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java",
+      "action": "modify",
+      "scope": "Repeated ingots give eight labeled arrangements of four distinct rotated patterns; repair audit unchanged.",
+      "baseSha256": "1e6a16404b9391417d264f19e3c6456baddd8cceb5a2c0e73e343d3e86d57967",
+      "scopedTargetSha256": "601832c04cf1cc3bff010c1d5292b7fa6f59470cac92aa75a65a3ce5b905944a",
+      "rootReferenceSha256": "601832c04cf1cc3bff010c1d5292b7fa6f59470cac92aa75a65a3ce5b905944a",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java",
+      "action": "modify",
+      "scope": "Opt-in inventory comparison and actual server-tick completion wait; gameplay timings unchanged.",
+      "baseSha256": "33cb0414ae36e23cd97d7dd0ce739bb9b4322c89fb6d0ad5595cebeac858c180",
+      "scopedTargetSha256": "55b8bac497c3fddf54dff60d9bc0a07eb1b25b85684e95e1d26803e18e87e10e",
+      "rootReferenceSha256": "55b8bac497c3fddf54dff60d9bc0a07eb1b25b85684e95e1d26803e18e87e10e",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java",
+      "action": "modify",
+      "scope": "Only ordinary Diamond output mapping and dissentientDiamond() live-pattern entry. Excludes other-chat Hourglass output fallback.",
+      "baseSha256": "8e93da707fd83f644677c07b9a394cc9f9a0867a24632172a0722f310a42e1f6",
+      "scopedTargetSha256": "67c3b4362352b7f666c89ce0ab7b414dd5538d9f518d5ee661715619da9ffd94",
+      "rootReferenceSha256": "58cb1a28f85e871cedeb5ea282ef2084da56a73769fd12f0d78a3ea237e473bb",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java",
+      "action": "modify",
+      "scope": "Only Diamond public viewer registration. Excludes other-chat Hourglass entries on this shared line.",
+      "baseSha256": "e3c507b74e0cf70617bab1867f9921e1e82320fc0f4e098b1b4207c2834f9734",
+      "scopedTargetSha256": "1620b554e3fc482225bfa38a4ef3fb86070a465b4121f01fbd2e4cf9a526a76f",
+      "rootReferenceSha256": "1dfdf0f0d48c5d2a6d370418063020f03b512cccd8d1734697cce1f951e177db",
+      "copyWholeRootFile": false
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/equipment/MagicArmorItem.java",
+      "action": "modify",
+      "scope": "Only Uncommon rarity on the default robe constructor.",
+      "baseSha256": "bb9acd3969c5a61dd8fcc58ac55c0564ecacfca2b4ea3a0c95ec37899744d258",
+      "scopedTargetSha256": "928e1d2450e1ac32d2a8f7470d0d2b80b71cdc189fdbdc19072e2c9494db8a95",
+      "rootReferenceSha256": "928e1d2450e1ac32d2a8f7470d0d2b80b71cdc189fdbdc19072e2c9494db8a95",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/equipment/WayfarerBootsItem.java",
+      "action": "modify",
+      "scope": "Only Uncommon rarity on the boots constructor; all sixteen variants.",
+      "baseSha256": "42b5938a284c53c8c25878ff677bb45bf1456aed312d7da1108e1307ddcd8df0",
+      "scopedTargetSha256": "7286317148fe3d2c432d4531200e21905b081f5fe4bf3746d98f188eacd79d3b",
+      "rootReferenceSha256": "7286317148fe3d2c432d4531200e21905b081f5fe4bf3746d98f188eacd79d3b",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/main/resources/assets/vestige/textures/item/fluxed_flint.png",
+      "action": "modify",
+      "scope": "24 accent pixels recolored to pinned vanilla Diamond shades; alpha, stone, silhouette and model unchanged. Final owner pixel selection pending.",
+      "baseSha256": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3",
+      "scopedTargetSha256": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+      "rootReferenceSha256": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java",
+      "action": "modify",
+      "scope": "Diamond viewer/matcher coverage, separate duplicate offerings, and rejection of retired Flint recipe.",
+      "baseSha256": "3f281daf49cc8cc2d4a6d2031a4b353f66fafd823953c4a1fa3ba54fe1335c3c",
+      "scopedTargetSha256": "b49b1428a14185ef15d254a1a5264500c6c0ec0e1db5ebef00b7d0103f31a993",
+      "rootReferenceSha256": "b49b1428a14185ef15d254a1a5264500c6c0ec0e1db5ebef00b7d0103f31a993",
+      "copyWholeRootFile": true
+    },
+    {
+      "path": "tools/author_fluxed_flint.py",
+      "action": "modify",
+      "scope": "Constrained blue export from retained generated source and original logical cells.",
+      "baseSha256": "364952bc16d65ba1ba75e492b6d8b937ec591766b6e33105ec2d0e75a830e228",
+      "scopedTargetSha256": "a6d4c193afe83341d824917ca22c9c5539e3b6600bb4eb35aadfd12016110aac",
+      "rootReferenceSha256": "a6d4c193afe83341d824917ca22c9c5539e3b6600bb4eb35aadfd12016110aac",
+      "copyWholeRootFile": true
+    }
+  ],
+  "transferEvidence": [
+    {
+      "path": "docs/art/dissentient-diamond-v10/NativeFlintCapture.java",
+      "sha256": "f9096c549116050ecfaa25aa72e1dcf3ad52345dc12ec79ba311736c6e919ef4",
+      "bytes": 9586
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/README.md",
+      "sha256": "9cd1568ffd0226f2ba4a30322bfce19cbbd2a70c8094ba39c76e5c811cf7c390",
+      "bytes": 3059
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/StandingStoneCollision.preview.java",
+      "sha256": "91f0c8be382b8b55f47c8ca982261a5ebb1756566c83177ad7fb9eaedc1c28f4",
+      "bytes": 555
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/dissentient-diamond-16.png",
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+      "bytes": 292
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/dissentient-diamond-32.png",
+      "sha256": "f44c2fa5d2c47584f970a13cb0f3d8749ecae012c4494829360f1be4032b60b3",
+      "bytes": 428
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/edit-target-64x.png",
+      "sha256": "bba44f402e1cc1a89bf76f22e674a722d6c646cfdbe7717255aeea84b8feeb6e",
+      "bytes": 6764
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/export.json",
+      "sha256": "1a9d7b7f36ed165bba7e79a81e7f55e03618651410aa9d1819b36eb75f3a1e17",
+      "bytes": 4241
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/export.py",
+      "sha256": "50aa21fec58724f183377eb35a83dde6296e941a8ec3d787239354f56bbc7b9a",
+      "bytes": 3150
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/initial-startup/StandingStoneCollision.original.java",
+      "sha256": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+      "bytes": 156158
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/initial-startup/client.log.gz",
+      "sha256": "4aa201bd6f9c3881694e2752de0d276d62560d3296fc459750d40dcb5cb38a0b",
+      "bytes": 15420
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/initial-startup/startup-threads.txt",
+      "sha256": "4412e2ebf51fe11f3bff0961c5a66ebe32a876e0b7ef3792761446f0b3fd2e1d",
+      "bytes": 25133
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/inventory-reference-board.png",
+      "sha256": "b04cf80e4745886fb9a0f2b147a07ab256a6bbe1e32e929fe421a430f4e888d4",
+      "bytes": 4184
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/client.log.gz",
+      "sha256": "4cd7b7e15d7e645725ffe44801a41d3ec575a35d5673e7bb956ca8c6631e58a8",
+      "bytes": 15019
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/held-offered-and-dropped.png",
+      "sha256": "2556b8477f331570becc84b7a34e42b167dcc54a5a9b326c1552f5b56bb5b33e",
+      "bytes": 415846
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/inventory-comparison-crop.png",
+      "sha256": "4270a853b288b51d133a9195ff754ca31e584d0d524bd3b8ab9ef7b519620e09",
+      "bytes": 22950
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/inventory-scale-2.png",
+      "sha256": "2e92bb21140cad573bbb1ef434420f3043dba6b05dcbe86655755c5d8c20bb17",
+      "bytes": 344196
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/inventory-scale-3.png",
+      "sha256": "d516a8e9e58204991a706dbfbdb8113d8080784d5565cf0a0842b8e5a22ab807",
+      "bytes": 321442
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native/verification.json",
+      "sha256": "60d8948c6ece2b5dadb8880dd33dd557939f9fe4360a3db0185ac38ba3e95bc6",
+      "bytes": 1040
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/native-review.json",
+      "sha256": "46db212f7ddf50987c4786043c2185a8650de61c33c5caa1380e340a3eea28d3",
+      "bytes": 2610
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/preview-pack/assets/minecraft/models/item/diamond.json",
+      "sha256": "fa95db96ffded1c2e23c12ecff69637fa5c6da2b15cbc1657a9a4833e0a17c7c",
+      "bytes": 253
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/preview-pack/assets/vestige/models/item/dissentient_diamond.json",
+      "sha256": "56b89e5139099be6f24937cbeff8ac2dac76b646e4937247a3d28e8bdac82630",
+      "bytes": 113
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/preview-pack/assets/vestige/textures/item/dissentient_diamond.png",
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+      "bytes": 292
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/preview-pack/pack.mcmeta",
+      "sha256": "23dd4e7be8987499a38c4f48795d14bf4f068ad6714c52388e452ecec9fd04c2",
+      "bytes": 114
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/production-export.json",
+      "sha256": "40ca7eacac1bd2f3f9f583108d2116aa2a83cdec7eb0df254b2c8028d86b2ddd",
+      "bytes": 1314
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/production-exporter-snapshot.py",
+      "sha256": "b4d1e08f154c978b95ea826964c44f1430be00afe42c6143f152049a39b81e79",
+      "bytes": 4467
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/production-preview.png",
+      "sha256": "73ca6c3c74ac9be441fd9cf4666746d7fa211e6e94d7c4b3c226c2521d4b83c0",
+      "bytes": 1913
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/prompt.txt",
+      "sha256": "8b00472a36e00c3d30861ed98e2d02c361b7e9b0fbb176e9aa4f0e25162e8600",
+      "bytes": 1585
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v10/source.png",
+      "sha256": "e9051f960cdc22a5a267b3467ec300aa6a9f51934a01a2c060c26125c9f659c6",
+      "bytes": 581728
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/NativeFlintCapture.java",
+      "sha256": "7a9863f6dc450b2c7eedc5121b832694a44cfca2556619c3150a1c5d865e8924",
+      "bytes": 13380
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/README.md",
+      "sha256": "6b8fa1ba433984455839801967c0f88d96ac81099850d43336cc594eb6e07358",
+      "bytes": 3068
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/StandingStoneCollision.original.java",
+      "sha256": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+      "bytes": 156158
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/StandingStoneCollision.preview.java",
+      "sha256": "91f0c8be382b8b55f47c8ca982261a5ebb1756566c83177ad7fb9eaedc1c28f4",
+      "bytes": 555
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/build.log.gz",
+      "sha256": "d9ac03952c9b10020ab68dfa9077bab22a936b1427f1d0d9bf8e3b5280ebdfe1",
+      "bytes": 2530
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/native/client.log.gz",
+      "sha256": "a59888c675804edb0285d003ff9670ae30e04b16ef966a309623bf520ce5afba",
+      "bytes": 15249
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/native/rarity-comparison-crop.png",
+      "sha256": "d2086fe4bca9484a40d37698543952dd9a53d800a7de8b76847fdbd7071101a5",
+      "bytes": 120218
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/native/rarity-scale-2.png",
+      "sha256": "4bb23451de014c58ca4ffdf58647cafe4e0180cbbbbf6721c5cf93f760d190a9",
+      "bytes": 364491
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/native/rarity-scale-3.png",
+      "sha256": "5fa1040ab643599fd0948177260aaf20f451a1a1147bcfd98fb29159914c0593",
+      "bytes": 336454
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/native/verification.json",
+      "sha256": "3cac2ceff8a2a2f192adf21d00f2c3adc1e901ab241065f55f93b0b40d910c40",
+      "bytes": 7921
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/source-snapshot.json",
+      "sha256": "574fe9c96403896213910f22fffa5f13e8cd885eaf3982a82b6e184d969be36d",
+      "bytes": 377434
+    },
+    {
+      "path": "docs/verification/item-rarity-2026-10-08/verification.json",
+      "sha256": "d0e39406559cc7cc45420e95835135df5fff6215f1bdc45c0e2a2a45d40279b3",
+      "bytes": 3241
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/README.md",
+      "sha256": "71a469d7466217c197c2b88acb199509f9fadc2f75d0b0a77cfeae811a81c7fe",
+      "bytes": 6084
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/StandingStoneCollision.original.java",
+      "sha256": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+      "bytes": 156158
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/isolated-build-world.log.gz",
+      "sha256": "400237c13bdee8eca14af5db808cdc4bbf44e488f27d00d25688fb6767b67230",
+      "bytes": 13917
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/native-final.log.gz",
+      "sha256": "8ae14b9d2cbe75d09d3f951a45bf300dda5cf221677a08889bdc03180955f121",
+      "bytes": 16139
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/root-build.log.gz",
+      "sha256": "3e0bff037126e14c3b25c78c2a4beab1a9c50e179c322ad6be65a08ef324c465",
+      "bytes": 2355
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/source-snapshot.json",
+      "sha256": "4123573bfb33736497d6dec5f6904d3844e13cb2372321602fc438f0599a0d2f",
+      "bytes": 2099
+    },
+    {
+      "path": "docs/verification/fluxed-flint-v2-2026-10-08/verification.json",
+      "sha256": "f2027c9da36aa44bccf3258ea1500ada9de650708b476277b2d0e2f42d6cbd1d",
+      "bytes": 2314
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/README.md",
+      "sha256": "399919a298162901f0fd45dadabc0a8cf03d10aaa567d058ff5a9e7079896102",
+      "bytes": 2434
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/edit-target-32x.png",
+      "sha256": "0f5a47c87d2499cac20b0bb3730901d8ca62e977eedeeab7f305c18c68114b4f",
+      "bytes": 2457
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/export-preview.png",
+      "sha256": "f5e8677eb329e9cba17cc1d8abd533413d033d03419d980d2ebb049fb7d0ca75",
+      "bytes": 1839
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/export.json",
+      "sha256": "52e9652c0d0058c3f645a1a8d557d80c637c91da44c619e03ccfea69d66f73cd",
+      "bytes": 1062
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/fluxed-flint-16.png",
+      "sha256": "ab33b7efe3052fd04c19be8e95887def024a7251a0d77768ffc2d04b36b24a90",
+      "bytes": 303
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/durability-after-repair.png",
+      "sha256": "9f217f9c51d0bed964880bf935e095c02016fecd5a323d3e2ecba899cbee4226",
+      "bytes": 322239
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/held-and-offered.png",
+      "sha256": "edacf87949fe4c496feeb1b7b0cae12630e536d14c19b10c503e4d57849e7ed0",
+      "bytes": 390126
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/inventory-beside-vanilla.png",
+      "sha256": "fbfe1391e171bf7f5ea01b3681b29eca488d5f7f105cf3e453b35d0ce6dcc766",
+      "bytes": 326127
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/inventory-comparison-crop.png",
+      "sha256": "91bc0527f8fa847c02d09fc1d98291ad91373ac8d3067759696f6cc4d41b6d07",
+      "bytes": 17468
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/repair-in-progress.png",
+      "sha256": "3c35ff5ef261ec081bf40b0aac8411f3eed3065b67849d1a4754c6e456a261ed",
+      "bytes": 402876
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/repaired-output.png",
+      "sha256": "617b15b2682d745ee3186d39ea8771ab63a094c4b2d249e322f95974500575bd",
+      "bytes": 386769
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native/verification.json",
+      "sha256": "7660b942d820be83e339d1e73f3f10522fecc487885e62b8450d38aabcc8134a",
+      "bytes": 847
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native-initial-timing-attempt/error.txt",
+      "sha256": "c427cd0c108e675e980e946150e7426cf184b47e2da51ba845bc5d3300cc7f1f",
+      "bytes": 135
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native-initial-timing-attempt/held-and-offered.png",
+      "sha256": "6a6ee04c0780bf76c5e726da553b1b6e6832b85605a7695882f55cdb587eb991",
+      "bytes": 502406
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native-initial-timing-attempt/inventory-beside-vanilla.png",
+      "sha256": "13b70bc001c3f1e9569a6bd4a46f1424bdd3353c8e5af6a4a19635fb0b2bcd78",
+      "bytes": 360754
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native-initial-timing-attempt/repair-in-progress.png",
+      "sha256": "285dce6a240bb796b57bc1044f247915ee7947f7920a218c4e945f4911b5ada3",
+      "bytes": 506919
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/native-initial-timing-attempt/repaired-output.png",
+      "sha256": "4cb58846480bdb6ded2eb84375a2fc2215d4c4214a9c694d879840a1dc93e01d",
+      "bytes": 482409
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/previous-16.png",
+      "sha256": "5dee950707b0cac26af37ed0389f493c304ed187e4e2a7d0c00dbbaeb37fa2c3",
+      "bytes": 311
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/prompt.txt",
+      "sha256": "2c190c908011c1ea245a2cf1eaf9892c78f8e5e7ec532e8cd180492824facff0",
+      "bytes": 829
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/source.png",
+      "sha256": "2672757199b665399ed9ee91666815871ecc18cb90803dc1fbab5984a7266d35",
+      "bytes": 529175
+    },
+    {
+      "path": "docs/art/fluxed-flint-v2/vanilla-diamond.png",
+      "sha256": "b27b081fde6a794dfb52d37f4ab2a86931ce127323f786a27cea41d2dbe913a2",
+      "bytes": 208
+    }
+  ],
+  "evidenceAlreadyInBase": [
+    {
+      "path": "docs/art/dissentient-diamond-v11/NativeFlintCapture.java",
+      "sha256": "f9096c549116050ecfaa25aa72e1dcf3ad52345dc12ec79ba311736c6e919ef4",
+      "bytes": 9586
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/README.md",
+      "sha256": "7c1d54eaa02e46bb7ba536d77aeacdf0ce23e5af82369791b508881ab5c0abc5",
+      "bytes": 2909
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/StandingStoneCollision.original.java",
+      "sha256": "851beae0625294e034ca8d996e91a79feab0dcf836e448a97a5cdbf11b03df01",
+      "bytes": 156158
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/StandingStoneCollision.preview.java",
+      "sha256": "91f0c8be382b8b55f47c8ca982261a5ebb1756566c83177ad7fb9eaedc1c28f4",
+      "bytes": 555
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/alignment.json",
+      "sha256": "c9a3c3fcab52fb473c3e301c1d588f7c6938d0afab5bc4d233467c8021785dbe",
+      "bytes": 2188
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/approval.json",
+      "sha256": "1899b73b6046786a73bfd9642fab1158be052dc5f18a3487e0f3af3d4f901ec9",
+      "bytes": 1180
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/dissentient-diamond-16.png",
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+      "bytes": 292
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/inventory-reference-board.png",
+      "sha256": "b04cf80e4745886fb9a0f2b147a07ab256a6bbe1e32e929fe421a430f4e888d4",
+      "bytes": 4184
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/client.log.gz",
+      "sha256": "69da45430ba54559fbbeef1fc3a1b3733a8525e977f4f42f1503cccc728b8788",
+      "bytes": 15030
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/held-offered-and-dropped.png",
+      "sha256": "fb66b5b6bb8cca72f7f0def64cb7e7595d67c4a163708e39bb9ddd79b272c71b",
+      "bytes": 502115
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/inventory-comparison-crop.png",
+      "sha256": "acefab60bf560182afba1980271f126860ab1435701844506d0fea4dd206556d",
+      "bytes": 23117
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/inventory-scale-2.png",
+      "sha256": "b2cc0c313cad4113b5337ac9d4d434c77fbde380482f00618b859eb10354aec3",
+      "bytes": 365027
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/inventory-scale-3.png",
+      "sha256": "5120cdf61cf33a61d732a0db04e71533671fe75c2267e6fe0c6049e280ab4379",
+      "bytes": 344658
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native/verification.json",
+      "sha256": "c6045a0ba6032ffc2293beea0a034946dc3c77d5bfc502aeaf4e54525c55feb4",
+      "bytes": 1040
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/native-review.json",
+      "sha256": "878d0f89b1d3198e1053ca18abf4f03bffab3401d63c86fe8779a109134019f7",
+      "bytes": 2533
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/preview-pack/assets/minecraft/models/item/diamond.json",
+      "sha256": "fa95db96ffded1c2e23c12ecff69637fa5c6da2b15cbc1657a9a4833e0a17c7c",
+      "bytes": 253
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/preview-pack/assets/vestige/models/item/dissentient_diamond.json",
+      "sha256": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c",
+      "bytes": 185
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/preview-pack/assets/vestige/textures/item/dissentient_diamond.png",
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51",
+      "bytes": 292
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/preview-pack/pack.mcmeta",
+      "sha256": "f9b1b9ba5b593dbbf825b4deaca25c53b7a3fbd3d748a22d05b86ebeb92b5e5c",
+      "bytes": 115
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/production-export.json",
+      "sha256": "e5850a3a9108d0368b50bd03ab05b39d285bd27f5cbf2e5912925cfee7c2226c",
+      "bytes": 1412
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/production-preview.png",
+      "sha256": "73ca6c3c74ac9be441fd9cf4666746d7fa211e6e94d7c4b3c226c2521d4b83c0",
+      "bytes": 1913
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/NativeFlintCapture.java",
+      "sha256": "40f4686ff5af89ecc7186ef1f65f062688f1b147e8fced5acdf09077fabdf84a",
+      "bytes": 9906
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/README.md",
+      "sha256": "9e483d906078310c967bbebe19b813b7a01bba5d97c76c0c2cf2ddb049ea742e",
+      "bytes": 1630
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/build-review.json",
+      "sha256": "d517ad973c54e643c9dd1a02515b207a7b6cb07d4cabc5f3f0086e561ca3f05d",
+      "bytes": 1011
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/build.log.gz",
+      "sha256": "658eefe3cda6cbb9b4ba47fd152409e91dc45d24d7dfc3c738ec12c0a2e00d70",
+      "bytes": 2544
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/client.log.gz",
+      "sha256": "16d8d52ddded496fe6457f721364f3c5c4944f77b874a9b610e0570230cacfd1",
+      "bytes": 15294
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/held-offered-and-dropped.png",
+      "sha256": "075240bf946851a24b40fc746b1cef310e56bbd2c070add6334953e19a268a71",
+      "bytes": 366819
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/inventory-comparison-crop.png",
+      "sha256": "d68ad21090a506022c465f26939ed2d5b92a7084480232d31bcfde57c5252a6e",
+      "bytes": 25434
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/inventory-scale-2.png",
+      "sha256": "1d0e64ab8205595bb016aa79a012dfcca6759b773023709e995e51ab07bad260",
+      "bytes": 344314
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/inventory-scale-3.png",
+      "sha256": "821c1bbc33082004fca933cddc45c2acfdf7fec2091b4dd537ba858ba3a53441",
+      "bytes": 316036
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native/verification.json",
+      "sha256": "9fc9ca5c2ae352875e924706f9a3f455852a633d3b17c72f724cca0c962f1b36",
+      "bytes": 1079
+    },
+    {
+      "path": "docs/art/dissentient-diamond-v11/registered-item/native-review.json",
+      "sha256": "d4b9c82171ef5e98cb8d49e411435319a220df6826a333592c61e8233c07c697",
+      "bytes": 1953
+    }
+  ],
+  "runtimeAndAssetsAlreadyInBase": [
+    {
+      "path": "tools/author_dissentient_diamond.py",
+      "sha256": "a3b7c657c6d662ee8baf260841b12600da5f79b0c23861431106c22b77cfa34c"
+    },
+    {
+      "path": "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png",
+      "sha256": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51"
+    },
+    {
+      "path": "src/main/resources/assets/vestige/models/item/dissentient_diamond.json",
+      "sha256": "289654371243c01a31531ef446e524a61f532b58fd7eed3ffa69e0695932b40c"
+    },
+    {
+      "path": "src/main/resources/assets/vestige/models/item/fluxed_flint.json",
+      "sha256": "7409525d4b482bce85f2eaba3dfcc7ebf3ba8174d4792010b1fce6f52aa982a8"
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintItem.java",
+      "sha256": "42061faa298671d475ef5a49c083966f4eba7c4624733ad107f08275db1914db"
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/RitualVolatility.java",
+      "sha256": "edbd29419504b1a1ff6654a1f01ce42ee2930d0b637e3274a1ab379fc9c1a827"
+    },
+    {
+      "path": "src/main/java/com/quzzar/vestige/apparatus/MagicalRepairPolicy.java",
+      "sha256": "85cf73f0d6ebac49ec85b808a556cac6e0bc094c2cb0326ce3c43223fc85b78b"
+    },
+    {
+      "path": "src/main/resources/data/vestige/tags/item/magical_repairable.json",
+      "sha256": "92b06cb5a1f1d396147b3872a3cf741450af8225886e57e30406f68e6c648d62"
+    }
+  ],
+  "alreadyInBaseNotes": [
+    "Dissentient Diamond item registration, Uncommon rarity, Ingredients creative entry and English translation are already in the base commit. Do not replace the language file for this handoff.",
+    "The existing unordered two-input repair lifecycle, target/catalyst component copying, independent input volatility and unchanged repairable tag are already merged.",
+    "All 32 v11 Diamond approval/native-review files are already in base byte-for-byte. The 28 v10 provenance files referenced by v11 are new evidence and are included in transferEvidence."
+  ],
+  "approvals": {
+    "rarities": "Human explicitly requested: Okay update them.",
+    "diamondPixelsAndAlignment": "Human explicitly selected and locked v11; exact texture/model hashes retained in its approval.json.",
+    "diamondIngredients": "Human selected one Diamond, two Gunpowder and one Wither Skeleton Skull.",
+    "flintContinuation": "Human requested continuing Fluxed Flint after Diamond and rarity work; implements discussed Flint + two Netherite Ingots + intermediate and blue accents.",
+    "blueFlintFinalPixelSelection": "Pending explicit final owner selection; native appearance reviewed, implementation direction authorized. Do not describe these exact new pixels as owner-locked.",
+    "balance": "128 repair points, 25% per-operation cap and Volatile 2 unchanged; still playtest tuning. No stabilization imbuements added."
+  },
+  "verification": {
+    "rarity": "202 unit tests / 45 suites; 84 native presentation assertions; GUI scales 2 and 3; 2328 existing assets unchanged.",
+    "flintContinuation": "Root and frozen builds pass 211 unit tests / 46 suites; frozen production collision source passes all 26 focused required Minecraft tests; 5 final native assertions and 5 reviewed frames.",
+    "receipt": "docs/verification/fluxed-flint-v2-2026-10-08/verification.json",
+    "currentScopeMatchesPriorFlintSnapshot": [
+      "src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java",
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java",
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintItem.java",
+      "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java",
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java",
+      "src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java",
+      "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java",
+      "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java",
+      "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java",
+      "src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java",
+      "src/main/resources/assets/vestige/textures/item/fluxed_flint.png",
+      "src/main/resources/assets/vestige/models/item/fluxed_flint.json",
+      "src/main/resources/assets/vestige/textures/item/dissentient_diamond.png",
+      "src/main/resources/assets/vestige/models/item/dissentient_diamond.json",
+      "tools/author_fluxed_flint.py"
+    ],
+    "limitations": "No new full world suite, Kithkyn co-load, optional viewer screen inspection, survival-balance acceptance, testing-pack installation or publication by this chat.",
+    "jar": "build/fluxed-flint-v2-review/libs/vestige-0.1.0.jar is a historical tested combined snapshot, not a replacement for the other chat’s final combined build.",
+    "archivedCollisionSources": "Documentation-only historical fixture files. Never copy a preview collision bypass into production. World tests and staged JAR use original production collision code."
+  },
+  "exclusions": [
+    "All Hourglass gameplay, payment/runtime/network changes, registration/creative entries, recipe branch, viewer entries, artwork, naming, tests and documents remain owned by the Hourglass chat.",
+    "The one-line HourglassTest SpellJson.costs -> SpellJson.readCosts compile correction belongs to that chat; retain it in their package, not this scoped patch.",
+    "Robe imbuement proposals, enchanted-armor benchmarks, unrelated Staff 3D model documentation, AGENTS.md, catalog/balance changes and unrelated shared-root edits are excluded.",
+    "Do not copy whole shared root files when copyWholeRootFile is false: apply or merge the owned patch hunks and preserve other chats’ additions."
+  ]
+}

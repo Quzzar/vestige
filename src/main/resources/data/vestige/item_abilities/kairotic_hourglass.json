@@ -1,0 +1,66 @@
+{
+  "traits": {
+    "vestige:time": 1,
+    "vestige:memory": 1,
+    "vestige:space": 1,
+    "vestige:teleportation": 1,
+    "vestige:transmutation": 1,
+    "vestige:amplify": 1
+  },
+  "variables": {
+    "vestige:return_ticks": {
+      "product": [
+        300,
+        {
+          "trait": "vestige:time"
+        },
+        {
+          "trait": "vestige:amplify"
+        }
+      ]
+    }
+  },
+  "activation": "active",
+  "costs": [
+    {
+      "type": "mana",
+      "amount": 60
+    }
+  ],
+  "triggers": [
+    {
+      "id": "vestige:kairotic_hourglass/use",
+      "event": "vestige:interact"
+    }
+  ],
+  "effects": [
+    {
+      "type": "visual",
+      "visual": {
+        "duration": 24,
+        "radius": 1,
+        "height": 0.12,
+        "layers": [
+          {
+            "shape": "vortex",
+            "color": "70ccc6",
+            "alpha": 0.75,
+            "width": 0.12,
+            "scale": 1,
+            "speed": -1.4,
+            "count": 6
+          },
+          {
+            "shape": "motes",
+            "color": "fff0bf",
+            "alpha": 0.8,
+            "width": 0.04,
+            "scale": 0.7,
+            "speed": 0.9,
+            "count": 5
+          }
+        ]
+      }
+    }
+  ]
+}

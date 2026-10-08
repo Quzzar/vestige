@@ -1,0 +1,35 @@
+{
+  "assetSha256": {
+    "models/item/dissentient_diamond.json": "56b89e5139099be6f24937cbeff8ac2dac76b646e4937247a3d28e8bdac82630",
+    "textures/item/dissentient_diamond.png": "bc53aba41e92bfc42db59b8cb8c492ab0cacdd62a58ab5e408a6fe852efccf51"
+  },
+  "checks": [
+    {
+      "check": "Candidate art preview resource pack is present",
+      "passed": true
+    },
+    {
+      "check": "Candidate name and native inventory synchronization",
+      "passed": true
+    },
+    {
+      "check": "Ordinary ingredient has no enchantment shimmer",
+      "passed": true
+    },
+    {
+      "check": "Ordinary stackable ingredient preview",
+      "passed": true
+    },
+    {
+      "check": "Ordinary generated item model scale",
+      "passed": true
+    },
+    {
+      "check": "Loaded texture uses the actual 16x16 pixel grid",
+      "passed": true
+    }
+  ],
+  "source": "Unedited framebuffer",
+  "fixture": "Art-only CustomModelData Diamond carrier; no Dissentient Diamond registry or recipe yet",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

@@ -1,0 +1,53 @@
+{
+  "unitTests": 211,
+  "unitSuites": 46,
+  "unitFailures": 0,
+  "unitErrors": 0,
+  "unitSkipped": 0,
+  "requiredMinecraftTests": 365,
+  "hourglassMinecraftTests": 10,
+  "kithkynLoaded": true,
+  "gradleTasks": [
+    "test",
+    "build",
+    "verifyKithkynCompatibility",
+    "runGameTestServer"
+  ],
+  "nativeClient": {
+    "assertions": 4,
+    "kithkynLoaded": true,
+    "automaticHistory": true,
+    "manualHistorySeed": false,
+    "inspected": [
+      "inventory-beside-vanilla",
+      "held-hourglass",
+      "after-return",
+      "durability-after-return"
+    ],
+    "compiledClassesMatched": 69,
+    "loadedAssetsMatched": 2
+  },
+  "ownerArtworkApproval": "pending",
+  "publication": "Normal repository pull request; see attached PR for live merge state",
+  "testingPackInstallation": {
+    "pack": "Kithkyn Testing",
+    "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "sha256": "5a162043536770b9a188c65354c97d16b9b0e260ecdc207cb5077e7b2c3b9d56",
+    "backupPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261008-164948-kairotic-hourglass/vestige-0.1.0.jar",
+    "previousSha256": "3ba781c1883c9eaf473cb22b29507090d2cd7dc2a64957a1b8e116105fd4e353",
+    "restartRequired": true,
+    "userWorldsChanged": false,
+    "otherModJarsChanged": false
+  },
+  "publicationUnitTests": 211,
+  "publicationUnitSuites": 46,
+  "publicationRequiredMinecraftTests": 365,
+  "authoring": {
+    "spellshapingRules": 56,
+    "adjectiveSources": 79,
+    "adjectiveAliases": 145,
+    "leylineFixtures": 490,
+    "hourglassTexture": "exact native 16x16 export"
+  },
+  "publicationBranch": "codex/kairotic-hourglass-release"
+}

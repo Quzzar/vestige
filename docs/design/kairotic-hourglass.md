@@ -1,40 +1,54 @@
 # Kairotic Hourglass
 
-**October 8, 2026: behavior, ingredients and baseline locked; implementation pending.** The owner chose a reusable hourglass that returns its user to their position fifteen seconds earlier. Right-click activates it. It records recent positions while carried in the player's inventory; an incompletely recorded window returns to the oldest available position without requiring a fifteen-second wait. The selected ingredients are Clock, Glass, Echo Shard and Ender Pearl; the baseline is 60 mana and ten durability, with one wear per successful use. This supersedes the speed-and-fatigue Hourglass candidate in the [original research](../research/pathfinder-kairotic-item-inspiration.md). The prerequisite [shape/payment review](../resource-payment-balance-review.md) is complete; the shared equivalence is locked, while hourglass implementation and its device-specific imbuements remain outstanding.
+**Owner approved and implemented October 8, 2026.** The owner requested finishing the actual item with the settled imbuements. This decision supersedes the earlier pending-implementation/review labels. The item uses the common immutable item ability, trait resolver, typed resource payments and visual plan. No per-spell implementation or engine-semantic Time trait is introduced.
 
-## Accepted direction
+## Baseline and controls
 
-- Record while the hourglass is in the player's inventory, rather than requiring it to be held throughout the recording period.
-- Right-click returns to the recorded position fifteen seconds earlier, or as far back as the available history reaches.
-- The unmodified baseline is **60 mana per successful return and 10 maximum durability**, spending **one durability per successful return**. A fresh unmodified hourglass therefore provides ten successful uses. This supersedes the earlier proposed 50-mana/20-durability baseline.
-- Relative recipe shape matters. Rotating the whole arrangement preserves the recipe; ingredients cannot be freely permuted as in a shapeless recipe.
-- Imbuement can create alternatives that reduce mana payment while adding health, hunger or experience payment. These are alternative costs, not free reductions.
-- For payment balance, health is more valuable than food, and food more valuable than experience. The [shared starting valuation](resource-payments.md) is 1 heart = 2 full hunger icons (4 food points) = 30 XP points = 30 mana. Exact hourglass exchange fractions and selectors remain open.
-- Other shaping may extend or shorten the return interval, with corresponding cost adjustments. Exact materials, recipes, formulas and amounts remain open.
-- Durability may also be increased or decreased by authored shaping, with a meaningful trade-off. Specific selectors and amounts remain open.
-- Use the existing shared immutable item-ability, trait resolution and payment foundation. Numerical effects explicitly consume traits; the item does not introduce an engine-semantic Kairotic trait.
+Right-click the carried **Kairotic Hourglass** to return to the exact recorded position from **15 game seconds (300 ticks)** earlier. If its holder has carried an hourglass for less time, use the oldest available position. Recording works anywhere in the direct inventory, including offhand; holding it throughout is unnecessary. Multiple carried hourglasses share one player-owned trail, and transferring an item never transfers its previous holder's trail.
 
-## Recording and selection
+The neutral baseline is **60 mana, 10 maximum durability, one deterministic wear per successful return**. There is no extra cooldown or random break roll. A no-movement use, blocked destination, invalid source, failed payment or canceled/redirected teleport is silent and free. Successful returns preserve current inventory, health, effects, facing, velocity and fall accumulation, apart from their explicit resource payment. Only position returns; terrain and other actors remain current. Passengers, sleeping players, spectators and dead players cannot activate it. Creative mode retains the shared resource/wear bypass.
 
-The proposed implementation keeps one server-owned trail per player. Multiple carried hourglasses share that trail; the item's previous holder does not become a destination when it changes hands. Each sample contains a server tick, dimension and exact player position. Client-supplied coordinates cannot establish history.
+The initial implementation is **current dimension only**. Clear history on dimension change, death, logout, server stop or losing every valid carried hourglass. Reacquiring one starts fresh. Keep recording after use: the return is part of actual ongoing movement. A destination must have its entire current collision volume in loaded chunks, inside border/build bounds and open. Do not load remote chunks, search for a nearby alternative, force passengers off vehicles or silently change coordinates. Hazardous but collision-free locations remain possible; this is positional recall rather than safe-home travel.
 
-Record once per game tick and discard samples older than the supported return window, retaining the boundary sample needed for selection. At the normal twenty ticks per game second, the baseline fifteen-second trail needs about 300 samples. This uses game time, so lag does not create invented movement between samples.
+## Ordered construction
 
-At activation, calculate the requested destination time from the selected hourglass's resolved return interval. Select the latest recorded sample at or before that time. If recording started later, select the oldest available sample instead. For example, collecting an hourglass, walking for five seconds and activating it returns to the position recorded when carrying began. After twenty seconds of continuous carrying, activation returns to the position from fifteen seconds ago.
+The empty Spellstone's inner layer uses **Clock → Glass block → Echo Shard → Ender Pearl**, one each. Whole quarter-turn rotations are equivalent; reflection and arbitrary permutation are distinct. Four-slot recipes retain their ordinary inner-layer behavior on larger apparatuses. Outer offerings do not become extra ingredients. Sockets belong to their own offerings, remain installed and are revalidated alongside all active offerings and empty seats before commitment.
 
-Handle acquiring and using the item between recording ticks by taking an initial sample during activation if necessary. With no earlier movement recorded, the destination is the current position; the proposed behavior is a silent no-op with no payment or wear.
+Clock supplies time, Glass the vessel, Echo Shard memory and Ender Pearl relocation. There is no generic Amethyst ingredient or Attunement Shard. Successful crafting consumes the four offerings once and drops an ordinary output exactly above the Spellstone with zero initial velocity. Saved trusted selections and physical geometry survive copies, saves and later station reconstruction.
 
-The retained history must cover the supported authored return intervals, not just fifteen seconds hardcoded into the buffer. If a longer interval becomes available after recording begins, use the oldest retained sample while the longer window fills; never fabricate older history. The memory retention policy and maximum supported interval need to be explicit when those variants are implemented.
+## Approved imbuements
 
-## Proposed lifecycle and arrival rules
+Choose at most one temporal contribution on Clock, one vessel contribution on Glass and one alternate-payment contribution on Echo Shard. Ender Pearl is neutral in this palette. Including neutral choices gives **3 × 3 × 4 = 36 valid sets**. These are initial playtest prices; approval of the package does not imply survival-economy measurements.
 
-Clear the trail when the player stops carrying every hourglass, dies, logs out or the server stops. Reacquiring one begins a fresh trail. Keep recording after a successful use; return movement becomes part of the actual ongoing history rather than erasing or rewriting it.
+| Offering | Installed block | Adjective | Contribution | Neutral-layout result alone |
+| --- | --- | --- | --- | --- |
+| Clock | Copper Block | Fleeting | Time ×2/3; mana ×0.75 | 10 seconds, 45 mana, 10 uses |
+| Clock | Amethyst Block | Enduring | Time ×1.20; mana ×1.12 | 18 seconds, 67 mana, 10 uses |
+| Glass | Iron Block | Reinforced | Maximum durability ×1.5; mana ×1.25 | 15 seconds, 75 mana, 15 uses |
+| Glass | Quartz Block | Frugal | Maximum durability ×0.6; mana ×0.75 | 15 seconds, 45 mana, 6 uses |
+| Echo Shard | Soul Sand | Bloodbound | Capped mana exchange for health | 30 mana + 1 heart, 10 uses |
+| Echo Shard | Moss Block | Fasting | Capped mana exchange for hunger | 30 mana + 2 full hunger icons, 10 uses |
+| Echo Shard | Lapis Block | Erudite | Capped mana exchange for XP points | 30 mana + 30 XP points, 10 uses |
 
-The recommended initial dimension policy is **current dimension only**, clearing the trail on a dimension change. The owner has been asked whether cross-dimension returns should be supported; that choice remains open.
+Use the [shared valuation](resource-payments.md): **1 full heart (2 HP) = 2 full hunger icons (4 food points) = 30 XP points = 30 mana**. Let `M = 60 × temporal mana factor × vessel mana factor × stored geometry cost`. For an alternate payment, exchange `E = min(30, 0.75 × M)`. Final mana is `floor(M − E + 0.5)`; health is `2 × ceil(E / 30)` HP, hunger `ceil(E / 7.5)` food points, and XP `ceil(E)` points through `ResourceValuation`. Geometry applies **before** the exchange and its cap; do not reuse the older spell shaping exchange-before-layout order for this device. All required resources are mandatory together; health must leave the user alive. A short or partially recorded window pays its selected variant's price.
 
-Return position only. Current health, inventory, experience, status effects, other actors and the world remain current, subject to the actual activation payment. Preserve current facing. The proposed arrival check requires the recorded position to remain inside the world border/build bounds and open for the player's current collision volume. If it is blocked, reject silently without payment or wear rather than putting the player inside new terrain. Passenger behavior, momentum/fall handling and hazardous-but-open destinations need explicit implementation choices and tests.
+Examples at neutral geometry:
 
-Commit resource payment and deterministic wear only for a valid successful return, including cancellation handling. Existing Homebound Eye behavior demonstrates teleport rollback, but its separate manual payments are not a reason to bypass the shared foundation for the new item. All ordinary feedback remains visual/audio, without chat or actionbar instructions and errors.
+- Enduring + Reinforced: 18 seconds, 84 mana, 15 uses. Adding Erudite gives 54 mana + 30 XP.
+- Reinforced + Bloodbound: 15 seconds, 45 mana + 1 heart, 15 uses.
+- Fleeting + Frugal: 10 seconds, 34 mana, 6 uses. Adding Erudite gives 8 mana + 26 XP.
+
+Each full combination uses its one italic display adjective from the shared [catalog](../magic-adjectives.md), while retaining every contribution separately. Ephemeral is Fleeting + Frugal; Stalwart is Enduring + Reinforced; Relentless is Enduring + Reinforced + Bloodbound. Aliases do not replace effects.
+
+Preserve established exact pair meanings. Glass / Diamond Block is Reflecting, Clock / Stone is Patient, Clock / Redstone Block is Delayed and Ender Pearl / Lodestone is Anchored. These recognized but incompatible paid effects reject hourglass construction. Unknown neutral pairs remain neutral. The seven device choices are explicit trusted routes, not universal meanings for every offered Echo Shard or Glass. All selector blocks already belong to the accepted socket set.
+
+## Traits, history and commitment
+
+`data/vestige/item_abilities/kairotic_hourglass.json` authors Time, Memory, Space, Teleportation, Transmutation and Amplify at 1. The explicit interval variable is `300 × resolved Time × resolved Amplify` ticks. Stored v3 geometry contributes ordinary Amplify/Range/Area and casting-cost multipliers; only the explicitly consumed values affect this ability. Temporary actor boosts enter the common resolver once for each future activation. Durability changes only through the vessel choices. There is no arbitrary 5–30-second power clamp.
+
+Record once each server tick, including an acquisition/use seed between ticks. Retain the longest currently resolved carried interval plus its boundary sample. A newly available longer interval uses the oldest actually retained sample while its window fills. Each player retains at most **4096 samples**: very long windows compact the older half, preserving the oldest boundary and the newest 2048 samples. Recent windows stay tick-exact; long boosted windows can return an older coarse sample at or before the requested tick. This bounds memory without pretending a clamped interval or fabricated history is the requested time.
+
+Shared `SpellCost.Experience` is measured in current points, never experience levels or vanilla's historical total counter. `CastReservation.Atomic` permits a fallible physical commitment inside native resource payment. A canceled/redirected standard NeoForge teleport event restores health, food, current XP and mana/recovery delay and spends no source wear. Existing infallible reservations retain their ordinary commitment path; unsupported nonnative worlds reject atomic sources before payment. Hourglass callbacks contain destination/history validation and physical movement, while shared definitions own traits, variable resolution, payment and the return visual.
 
 ## Time materials: upstream facts and native conventions
 
@@ -47,90 +61,6 @@ The complete [pinned Iron material reference](../research/iron-material-uses.md)
 
 Amethyst is therefore not justified as a mandatory generic magical focus in this recipe. The earlier proposed Amethyst Shard ingredient and arbitrary five-/thirty-second Copper/Amethyst selectors are withdrawn pending a justified material design. No new ore or universal temporal material is selected by this document.
 
-## Locked shaped recipe
+## Verification and artwork
 
-**Owner locked October 8; not implemented:** one Clock, one Glass block, one Echo Shard and one Ender Pearl produce one hourglass. Clock supplies the time mechanism, Glass the vessel, Pearl relocation and Echo Shard the memory of a previous location. The Echo role is an independently authored Vestige use informed by the facts above. Sand is already represented by Glass's construction; Gold and Redstone by the Clock's construction. Ingredient roles remain descriptive clues, not inherent runtime traits.
-
-Use the shared **shaped four-slot** recipe matcher and the reviewed clockwise order: **Clock → Glass → Echo Shard → Ender Pearl**. Clock faces Echo Shard across the center; Glass faces Pearl. The entire pattern accepts quarter-turn rotations while retaining its relative order; reflections remain distinct under the existing matcher. Keep Spellstone's reference surface empty. A larger apparatus can use this ordinary four-slot inner pattern under the existing shaped-recipe rules; it does not make the four ingredients freely interchangeable across eight seats.
-
-Each socket affects its own offering. Rotating the complete offering/socket pattern preserves those local pairings. Consume the four offerings, retain installed materials and store trusted shaping on the result. No Attunement Shard is proposed: this device follows its holder's actual recent trail rather than a shared destination signature.
-
-The October 8 construction correction also makes magical threads, Homebound Eye, Whispering Shell, Standing Stone and Fluxed Flint construction ordered. Attunement Shards retain unordered acceptance with arrangement-derived signatures; scroll-to-fragment normal crafting, fragment-to-scroll discovery and two-item repair retain their separate unordered operations. See [ritual matching](ritual-crafting.md).
-
-## Imbuement and trait proposal
-
-Reserve separate authored controls for return interval, payment exchange and durability. A promising division is Clock-associated temporal shaping, Echo-associated payment shaping and Glass-associated vessel reinforcement, but no material map or exact adjustment is selected yet. Do not announce twelve supported variants from the withdrawn selector table. The accepted direction permits longer/shorter returns and stronger/weaker durability; implementation must pair improvements with an explicit resource, wear or capability trade-off.
-
-Soul Sand, Moss Block and Lapis Block are existing health/hunger/XP selectors on the [Homebound Eye](attuned-devices.md). Reusing that vocabulary is a proposal, not automatic compatibility for every Echo Shard. Clock/Amethyst can be evaluated through the existing Enduring meaning rather than silently redefining its 20% Time contribution as a doubled interval. Unrelated or unsupported pairings must not accidentally inherit a spell effect that has no meaningful hourglass consumer.
-
-### October 8 imbuement review draft
-
-**Proposed for owner review; not accepted or implemented.** Keep the accepted four offerings and their relative order. Give Clock the return-interval controls, Echo Shard the alternate-payment controls and Glass the vessel's durability/mana trade-off. Ender Pearl supplies relocation; the first set does not need an additional Pearl-socket effect merely to occupy every socket. Choose at most one contribution per offering, with independent contributions combining across the three roles. The one Clock does not supply repeated Enduring degrees, and the one Echo Shard does not select several payment resources simultaneously.
-
-All table figures assume neutral four-slot geometry, no actor bonuses and only the listed contribution. Maximum durability equals the successful-use count here because wear remains exactly one. These are starting playtest proposals rather than measured survival-economy equivalences.
-
-| Offering | Socket block | Proposed contribution | Result with other sockets neutral | Trade-off |
-| --- | --- | --- | --- | --- |
-| Clock | Copper Block | Fleeting: Time ×2/3; mana ×0.75 | 10-second return, 45 mana, 10 durability | Cheaper access to a more recent position; cannot reach the older fifteen-second destination. |
-| Clock | Amethyst Block | Enduring: Time ×1.20; mana ×1.12 | 18-second return, 67 mana, 10 durability | Longer recall costs more mana. Preserve the shipped Enduring factors. |
-| Echo Shard | Soul Sand | Health-paid: exchange up to 30 mana, bounded by 75% of the adjusted mana price | 15-second return, 30 mana + 1 full heart, 10 durability | Health is spent in the present and is not restored by the return. |
-| Echo Shard | Moss Block | Hunger-paid: the same exchanged budget, priced through ResourceValuation | 15-second return, 30 mana + 2 full hunger icons, 10 durability | Food is spent in the present; use four food points, not two. |
-| Echo Shard | Lapis Block | Experience-paid: the same exchanged budget, priced through ResourceValuation | 15-second return, 30 mana + 30 XP points, 10 durability | Fixed XP points are consumed, never levels. |
-| Glass | Iron Block | Reinforced: maximum durability ×1.50; mana ×1.25 | 15-second return, 75 mana, 15 durability | More returns from the scarce crafted vessel, with a higher price per return. |
-| Glass | Quartz Block | Frugal: maximum durability ×0.60; mana ×0.75 | 15-second return, 45 mana, 6 durability | Lower mana use consumes the crafted vessel's useful lifetime more quickly. |
-
-Enduring reuses an established **Vestige** pairing and its exact trait/cost factors; extending historical lookback is a new explicit consumer, not proof the existing lifetime adapter already supports this device. The payment selectors reuse Homebound Eye's vocabulary, with new Echo-Shard offering routes. Copper/Clock, Iron/Glass and Quartz/Glass are new native interpretations: speed/recentness, reinforcement and a precise but fragile vessel. The [pinned reference](../research/iron-material-uses.md) gives Copper speed and Iron protection associations, but does not define these hourglass rules; Quartz has no universal Jewelry efficiency parameter. Do not describe any of these new prices as upstream Iron mechanics. Every proposed block is already socket-eligible; this draft adds no arbitrary-block acceptance.
-
-Preserve existing exact pair meanings. **Glass / Diamond Block is Reflecting**, not a durability route. Clock / Stone remains Patient and Clock / Redstone remains Delayed; this draft does not redefine them as shorter or longer history. Those behaviors need separately reviewed compatible consumers before use on the hourglass. Ender Pearl / Lodestone likewise must not redefine Anchored into a fixed historical destination. Match supported device contributions explicitly and reject recognized incompatible paid effects rather than silently charging for a no-op. An unrecognized neutral pairing retains the existing neutral behavior.
-
-### Proposed combination math and examples
-
-Resolve the Time modifier through the common trait resolver and use the existing proposed normalized interval expression below. Keep mana and carrier durability as explicit authored properties; changing Time is not an engine-wide instruction to change durability. For these seven routes, apply the chosen Clock and Glass mana factors once, followed by the saved v3 Casting Cost factor. Temporary trait bonuses follow the same activation resolution as other item abilities.
-
-For the proposed payment selector, let `M` be the unrounded adjusted mana price. Exchange `E = min(30, 0.75 × M)`, leaving `M − E` mana. Convert `E` with the common authority: health is `2 × ceil(E / 30)` HP, hunger is `ceil(E / 7.5)` food points and XP is `ceil(E)` points. Final mana uses the shared nearest-point convention, `floor(M − E + 0.5)`, rather than upward rounding. This corrects the earlier draft wording without changing runtime. The proposed geometry placement includes saved geometry cost in `M` before the exchange, not a second time afterward; its integration with existing `CastShaping` (which converts exchanges before final layout scaling) still needs an explicit shared implementation review. The alternate resource is mandatory; there is no automatic fallback to paying full mana. Rounding may make a small health exchange more expensive than its nominal budget, as in the existing shared whole-heart convention.
-
-| Proposed combination | Return interval | Final payment | Maximum durability / uses |
-| --- | ---: | --- | ---: |
-| Enduring + Reinforced | 18 seconds | 84 mana | 15 |
-| Enduring + Reinforced + Experience-paid | 18 seconds | 54 mana + 30 XP points | 15 |
-| Reinforced + Health-paid | 15 seconds | 45 mana + 1 heart | 15 |
-| Fleeting + Frugal | 10 seconds | 34 mana | 6 |
-| Fleeting + Experience-paid | 10 seconds | 15 mana + 30 XP points | 10 |
-
-The owner revised the shared equivalent to thirty mana after this draft was written. Each alternate-payment route now trades at most thirty mana for one heart, two full hunger icons or thirty XP. For a cap example, Fleeting + Frugal costs 33.75 unrounded mana: exchanging 75% is 25.3125, leaving 8.4375 mana. Its Experience-paid version therefore costs eight mana + twenty-six XP points, with six maximum durability. This preserves the exchange cap, resource-conversion upward rounding and shared final mana rounding. These examples assume neutral geometry.
-
-**October 8 naming direction:** the owner approved giving combined adjustments one italicized adjective. The [shared catalog](../magic-adjectives.md) reserves all 36 proposed temporal/vessel/payment naming sets, including Ephemeral for Fleeting + Frugal, Stalwart for Enduring + Reinforced, and Relentless for Enduring + Reinforced + Bloodbound. Naming aliases preserve independent contributions; they do not implement this device, finalize its open gameplay details, change its recipes or turn the named sets into mechanic-replacing compounds. Revisit the reserved matrix if the eventual route palette changes.
-
-These variants intentionally change repeat-use affordability. Fleeting and Frugal can each permit two mana payments from an ordinary full hundred-mana pool; an alternate payment can permit further payments while its required resource remains available. A valid historical destination, current resources and remaining durability are still required for every return. There is no added cooldown, free refund, random break chance or rewind of resources. A partially filled trail still uses the selected variant's normal price.
-
-For implementation review, a proposed finite return bound is five to thirty game seconds, with enough retained history for thirty seconds even before an actor equips a temporary Time boost. This bound is not yet accepted. Reject a paid modifier that is already saturated and provides no other meaningful effect. A thirty-second crafted route, multi-socket compounds, Pearl-socket riders and lower per-use wear remain later design questions; this first set does not claim to implement them.
-
-Author descriptive Time, Memory, Space, Teleportation and Transmutation traits with explicit effect consumers. Proposed return interval: `15 seconds × resolved Time / base Time × resolved Amplify`. Exact trait ratings, bounds and associated prices remain open. Apply each modifier once through shared resolution. Range and Area have no proposed consumer for this position-return ability; they do not invent passengers or an area rewind. Preserve the accepted leyline v3 math and the shaped recipe's selected active geometry.
-
-Store crafted geometry, as with crafted scroll shaping; rebuilding the station does not rewrite an existing hourglass. Temporary actor boosts affect future activations through the common resolver. A longer resolved interval still uses real retained history, falling back to the oldest available sample while its window fills. Durability adjustment requires an explicit item-property rule; a generic spell-duration or casting-cost multiplier must not silently change maximum durability.
-
-The present shared `SpellCost` repertoire supports mana, health and hunger but not experience. The XP route requires a reusable typed experience payment and atomic cancellation/refund handling in the shared foundation; the Eye-specific helper does not already provide that integration.
-
-## Accepted baseline and outstanding balance
-
-| Unmodified property | Owner-selected value |
-| --- | ---: |
-| Return interval | 15 seconds, or oldest available history |
-| Mana per successful return | 60 |
-| Maximum durability | 10 |
-| Wear per successful return | 1 |
-| Successful uses from a fresh item | 10 |
-
-At the ordinary 100 maximum mana, one unmodified use leaves 40 mana: a second immediate full-price use cannot be paid. A larger mana capacity can change that, as intended. This is a resource limit, not an approved fixed cooldown. Deliberate cost-shaping or alternate-payment variants need their own repeat-use balance assessment; they do not automatically preserve the same two-use restriction.
-
-The owner's balance direction is **health > food > experience** in sacrifice value. A modest health sacrifice should buy stronger relief than a comparably burdensome food sacrifice; experience should buy the weakest relief. Determine each exchange rate in its own units and test practical recovery/renewability. Do not reinstate the withdrawn equal five-heart/five-food proposal or call a heart, food point and XP point equal. The common numerical ratio is now locked in [resource payments](resource-payments.md); hourglass-specific fractions, selectors and any explicit discounts remain open. XP means points rather than levels.
-
-Bloodbound/Fasting now use the shared ratio: one heart per thirty exchanged mana or one food point per 7.5, rounded upward before existing final layout scaling. Homebound Eye uses the same authority. These implemented payment corrections do not supply the hourglass or add a shared typed XP cost.
-
-Health payment must leave the user alive, and all required resources must be available together. Proposed charging uses the selected/resolved interval even with a partially filled history, so deliberately selecting a shorter interval remains distinct from acquiring a longer-window item moments before use. Failed, canceled, obstructed or no-movement returns spend no resources or wear. No random break chance replaces deterministic durability.
-
-## Implementation verification
-
-Required behavior cases include a full fifteen-second history, a partially recorded history, acquisition/use between recording ticks, continuous trimming, multiple hourglasses, different players, ownership transfers, removal/reacquisition, death/logout and the chosen dimension policy. Verify exact position selection and that using the item does not rewind current inventory or health. Payment cases must cover insufficient resources, canceled or obstructed arrivals, successful wear, final durability use and each shipped imbuement route. Trait tests must demonstrate that an authored return-interval expression changes the selected historical time without changing other items' behavior.
-
-No item registration, acquisition recipe, texture, gameplay implementation or testing-pack installation is supplied by this design note.
+`HourglassTest` covers all 36 recipes and quarter-turns, reflected/invalid layouts, saved trusted state, geometry-before-exchange prices, actor Time scaling, malformed inputs, XP grammar, full/partial history, dimension reset and bounded long-window retention. `HourglassWorldTest` covers native crafting/cancellation, all variant payments, recorded returns, failure rollback, final-use breakage and offhand/removal behavior. Native framebuffer captures and loaded resource hashes accompany the independent generated concept and actual 16×16 export in [the art folder](../art/kairotic-hourglass-v1/). Check [development status](../development-status.md) for executed results and shipment status; source tests and an exported PNG alone do not establish client verification or owner artwork acceptance.

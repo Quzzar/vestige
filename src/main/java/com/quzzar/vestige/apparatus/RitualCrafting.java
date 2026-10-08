@@ -77,6 +77,14 @@ public final class RitualCrafting {
                 return begin(selected,player,repair.output(),repair.used(),0xf4e5ff,RitualInputs.capture(selected),
                         java.util.Optional.empty(),Map.of(repair.catalystSeat(),repair.remainingCatalyst()),random,Outcome.CRAFTING);
             }
+            var diamonds=candidates.stream().filter(l -> DissentientDiamondRecipe.create(l.items()).isPresent()).toList();
+            if (!diamonds.isEmpty()) {
+                if (diamonds.size()!=1) return Outcome.INVALID;
+                var selected=diamonds.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                return begin(selected,player,DissentientDiamondRecipe.create(selected.items()).orElseThrow(),
+                        List.of(0,2,4,6),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
+            }
             var flints=candidates.stream().filter(l -> FluxedFlintRecipe.create(l.items()).isPresent()).toList();
             if (!flints.isEmpty()) {
                 if (flints.size()!=1) return Outcome.INVALID;
@@ -141,6 +149,15 @@ public final class RitualCrafting {
                 var inputs=RitualInputs.capture(selected);
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
                 return begin(selected,player,WhisperingShellRecipe.result(selected.items()).orElseThrow(),occupied,0x81ddc3,inputs,random,Outcome.CRAFTING);
+            }
+            var hourglasses=candidates.stream().filter(l -> HourglassRecipe.matches(l.items())).toList();
+            if (!hourglasses.isEmpty()) {
+                if(hourglasses.size()!=1)return Outcome.INVALID;
+                var selected=hourglasses.getFirst();
+                if(selected.blocks().stream().anyMatch(OfferingBlockEntity::busy))return Outcome.BUSY;
+                var inputs=RitualInputs.capture(selected);var output=HourglassRecipe.result(inputs);
+                if(output.isEmpty())return Outcome.INVALID;
+                return begin(selected,player,output.get(),List.of(0,2,4,6),0xf4e5ff,inputs,random,Outcome.CRAFTING);
             }
             var eyes=candidates.stream().filter(l -> HomeboundEyeRecipe.matches(l.items())).toList();
             if (!eyes.isEmpty()) {

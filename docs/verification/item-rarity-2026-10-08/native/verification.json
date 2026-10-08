@@ -1,0 +1,342 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": [
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:dissentient_diamond"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Dissentient Diamond"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:attunement_shard"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Attunement Shard"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:homebound_eye"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Homebound Eye"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:whispering_shell"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Whispering Shell"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:staff"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Fire Staff"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:wardweave_robes"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Wardweave Robes"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:cinderweave_robes"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Cinderweave Robes"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:wayfarer_boots"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Wayfarer Boots"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:crane_bag"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Crane Bag"
+    },
+    {
+      "passed": true,
+      "check": "Registered rarity: vestige:fluxed_flint"
+    },
+    {
+      "passed": true,
+      "check": "Native title color: Fluxed Flint"
+    },
+    {
+      "passed": true,
+      "check": "Thread stays Common with its existing shimmer: vestige:ensorcelled_thread"
+    },
+    {
+      "passed": true,
+      "check": "White thread title: Ensorcelled Thread"
+    },
+    {
+      "passed": true,
+      "check": "Thread stays Common with its existing shimmer: vestige:callous_thread"
+    },
+    {
+      "passed": true,
+      "check": "White thread title: Callous Thread"
+    },
+    {
+      "passed": true,
+      "check": "Thread stays Common with its existing shimmer: vestige:smoldering_thread"
+    },
+    {
+      "passed": true,
+      "check": "White thread title: Smoldering Thread"
+    },
+    {
+      "passed": true,
+      "check": "Thread stays Common with its existing shimmer: vestige:laced_thread"
+    },
+    {
+      "passed": true,
+      "check": "White thread title: Laced Thread"
+    },
+    {
+      "passed": true,
+      "check": "Thread stays Common with its existing shimmer: vestige:consecrated_thread"
+    },
+    {
+      "passed": true,
+      "check": "White thread title: Consecrated Thread"
+    },
+    {
+      "passed": true,
+      "check": "Fragments, all mundane staffs and every apparatus finish remain Common"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 0"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 0"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 1"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 1"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 2"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 2"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 3"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 3"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 4"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 4"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 5"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 5"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 6"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 6"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 7"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 7"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 8"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 8"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 9"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 9"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 10"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 10"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 11"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 11"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 12"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 12"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 13"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 13"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 14"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 14"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant base rarity 15"
+    },
+    {
+      "passed": true,
+      "check": "Wayfarer variant full-name color 15"
+    },
+    {
+      "passed": true,
+      "check": "Homebound Eye route full-name color: DURABILITY"
+    },
+    {
+      "passed": true,
+      "check": "Homebound Eye route full-name color: HEALTH"
+    },
+    {
+      "passed": true,
+      "check": "Homebound Eye route full-name color: HUNGER"
+    },
+    {
+      "passed": true,
+      "check": "Homebound Eye route full-name color: EXPERIENCE"
+    },
+    {
+      "passed": true,
+      "check": "Homebound Eye route full-name color: MANA"
+    },
+    {
+      "passed": true,
+      "check": "Staff capacity keeps yellow title: 2"
+    },
+    {
+      "passed": true,
+      "check": "Staff capacity keeps yellow title: 4"
+    },
+    {
+      "passed": true,
+      "check": "Staff capacity keeps yellow title: 6"
+    },
+    {
+      "passed": true,
+      "check": "Known scroll retains spell color: COMMON"
+    },
+    {
+      "passed": true,
+      "check": "Known wand retains spell color: COMMON"
+    },
+    {
+      "passed": true,
+      "check": "Known scroll retains spell color: UNCOMMON"
+    },
+    {
+      "passed": true,
+      "check": "Known wand retains spell color: UNCOMMON"
+    },
+    {
+      "passed": true,
+      "check": "Known scroll retains spell color: RARE"
+    },
+    {
+      "passed": true,
+      "check": "Known wand retains spell color: RARE"
+    },
+    {
+      "passed": true,
+      "check": "Known scroll retains spell color: MYTHIC"
+    },
+    {
+      "passed": true,
+      "check": "Known wand retains spell color: MYTHIC"
+    },
+    {
+      "passed": true,
+      "check": "Unknown scroll remains white"
+    },
+    {
+      "passed": true,
+      "check": "Unknown wand remains white"
+    },
+    {
+      "passed": true,
+      "check": "Vanilla enchantment promotes armor display without changing its base rarity"
+    },
+    {
+      "passed": true,
+      "check": "Enchanted robe uses vanilla aqua title"
+    },
+    {
+      "passed": true,
+      "check": "Combined adjective preserves italics with inherited yellow color"
+    }
+  ],
+  "source": "Unedited framebuffer; actual registered inventory items; real native tooltip first lines rendered in two comparison columns"
+}

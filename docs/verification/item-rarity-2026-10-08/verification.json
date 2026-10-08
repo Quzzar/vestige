@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-08",
+  "ownerApproval": "Okay update them (the immediately preceding item rarity review)",
+  "scope": "Native item-name rarity assignments only; no new item behavior or artwork",
+  "baseRarities": {
+    "uncommon": [
+      "dissentient_diamond",
+      "attunement_shard",
+      "homebound_eye",
+      "whispering_shell",
+      "staff",
+      "wardweave_robes",
+      "cinderweave_robes",
+      "wayfarer_boots"
+    ],
+    "rare": [
+      "crane_bag",
+      "fluxed_flint"
+    ],
+    "common": "Five magical threads, fragments, all seven mundane staffs and all Spellstone/Plinth/Standing Stone finishes"
+  },
+  "scrollAndWandNames": "Existing knowledge-aware spell-rarity colors preserved; unknown names stay white",
+  "unitTests": {
+    "tests": 202,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "testSuites": 45,
+  "build": "BUILD SUCCESSFUL in 1m 44s",
+  "nativeClientRun": "BUILD SUCCESSFUL in 1m 38s",
+  "nativeAssertions": 84,
+  "nativeScreenshots": [
+    "native/rarity-scale-3.png",
+    "native/rarity-scale-2.png"
+  ],
+  "nativeSource": "Actual registered inventory items; two columns of real vanilla tooltip first lines; unrelated normal cursor tooltip remains visible",
+  "crop": {
+    "file": "native/rarity-comparison-crop.png",
+    "source": "native/rarity-scale-3.png",
+    "bounds": [
+      224,
+      170,
+      1726,
+      978
+    ],
+    "pixelEqualityVerified": true,
+    "sourceSha256": "5fa1040ab643599fd0948177260aaf20f451a1a1147bcfd98fb29159914c0593"
+  },
+  "classesMatchPackagedAndNative": {
+    "com/quzzar/vestige/apparatus/ScrollItems.class": "9580cc4b91d18ae16df15452c4b8d8a6d6bede04e096fcffd4d9e369f9a2b8f3",
+    "com/quzzar/vestige/equipment/MagicArmorItem.class": "092b251dc931b0b5663174f15edcec68682faa8a2db970b5a4c4210213d030b7",
+    "com/quzzar/vestige/equipment/WayfarerBootsItem.class": "b124618757c5ce0797bb8d042156a0849b3f87440a20940e63466ded11b8638e",
+    "com/quzzar/vestige/apparatus/SpellScrollItem.class": "582013f77f1eb04b1602534b9b17b562f76a63ecd3e4f8e34f9581703a0debaa",
+    "com/quzzar/vestige/apparatus/SpellWandItem.class": "d56e163011950496c77672feddebf5f0e94e8c3f94b82756ad53da8dee15fa3d",
+    "com/quzzar/vestige/apparatus/SpellStaffItem.class": "145c6677948e266a654ebc6c22d102de20e4096c366188f09dd776a169cb3dc6"
+  },
+  "productionAssetsUnchanged": 2328,
+  "allAssetsMatchNativeAndPackaged": true,
+  "jar": "build/libs/vestige-0.1.0.jar",
+  "jarSha256": "c7cb8e7fff7d8f264a6afd677e15746b53650f6174040b8472822fdf87bf263d",
+  "sourceAndAssetSnapshot": "source-snapshot.json",
+  "authoringChecks": [
+    "author_magic_adjectives.py --check (79 sources / 145 aliases)",
+    "audit_staff_traits.py --check",
+    "author_staff_texture.py --check"
+  ],
+  "isolatedCollisionPreview": {
+    "originalSource": "StandingStoneCollision.original.java",
+    "previewSource": "StandingStoneCollision.preview.java",
+    "isolatedSourceRestored": true,
+    "rootSourceUntouched": true,
+    "packagedCollisionClassMatchesRootAndDiffersFromPreview": true,
+    "standingStoneUsedInScene": false
+  },
+  "logs": [
+    "build.log.gz",
+    "native/client.log.gz"
+  ],
+  "worldTestSuiteRun": false,
+  "kithkynColoadInNativeCapture": false,
+  "installationOrPublication": false
+}

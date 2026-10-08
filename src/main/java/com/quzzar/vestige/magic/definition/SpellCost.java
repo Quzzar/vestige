@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * A typed cost that must be satisfied by a spell cast.
  */
-public sealed interface SpellCost permits SpellCost.Time, SpellCost.Cooldown, SpellCost.Material, SpellCost.Mana, SpellCost.Health, SpellCost.Hunger {
+public sealed interface SpellCost permits SpellCost.Time, SpellCost.Cooldown, SpellCost.Material, SpellCost.Mana, SpellCost.Health, SpellCost.Hunger, SpellCost.Experience {
     /** Per-actor, per-spell recovery, starting when the initial cast pays. Recasts share it. */
     record Cooldown(int ticks) implements SpellCost {
         public Cooldown { requirePositive(ticks, "Cooldown costs"); }
@@ -78,6 +78,11 @@ public sealed interface SpellCost permits SpellCost.Time, SpellCost.Cooldown, Sp
         public Hunger {
             requirePositive(amount, "Hunger costs");
         }
+    }
+
+    /** Current experience points, never levels or the historical total counter. */
+    record Experience(int amount) implements SpellCost {
+        public Experience { requirePositive(amount, "Experience costs"); }
     }
 
     private static void requirePositive(int amount, String label) {

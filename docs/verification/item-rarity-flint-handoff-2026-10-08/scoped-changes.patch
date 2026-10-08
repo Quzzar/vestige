@@ -1,0 +1,575 @@
+diff --git a/BREAKING_CHANGES.md b/BREAKING_CHANGES.md
+index 5e7ba33..a470d78 100644
+--- a/BREAKING_CHANGES.md
++++ b/BREAKING_CHANGES.md
+@@ -1,5 +1,10 @@
+ # Breaking changes
+ 
++## October 8, 2026: revised Fluxed Flint ingredient chain
++
++Dissentient Diamond now crafts through the four-seat inner ritual Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder, producing one ingredient. Fluxed Flint construction becomes Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot. Whole quarter-turns are equivalent; duplicate offerings occupy separate Plinths. The provisional Diamond Block/Echo Shard recipe is removed. Both public viewer patterns follow the new recipes. Flint's violet accents become diamond blue, preserving its silhouette/model, repair budget, volatility and exact target-copy semantics. Saved item and network formats are unchanged; there is no migration or installation.
++
++
+ ## October 8, 2026: shared magical adjective presentation
+ 
+ Scroll, wand and staff stored-spell labels now use the shared `MagicAdjectives` prefix helper and a generated naming catalog. Single adjustments retain their words and degree labels; complete mixtures now receive one italicized adjective from an exact alias or the reserved Confluent fallback. Rarity styling and identification gates remain intact. The authored Wayfarer matrix covers all sixteen approved and implemented sets. Naming aliases never replace effects or alter saved items, costs, protocol formats or attunement identity. Run `tools/author_magic_adjectives.py --check` when changing source names or aliases. No migration or installation is introduced.
+diff --git a/docs/art/fluxed-flint-v1/README.md b/docs/art/fluxed-flint-v1/README.md
+index 485d6a2..4a2b1c0 100644
+--- a/docs/art/fluxed-flint-v1/README.md
++++ b/docs/art/fluxed-flint-v1/README.md
+@@ -2,7 +2,7 @@
+ 
+ First independently generated sprite study, October 8, 2026. The imagegen built-in tool used [this prompt](prompt.txt) and the pinned vanilla 1.21.1 Flint as a style/pixel-scale reference. This is a new asset, not a recolor of vanilla pixels. [Source](source.png) is a generated study; it is not a literal native-resolution production sprite.
+ 
+-**Owner design hold, October 8:** defer further Fluxed Flint artwork changes while defining the **Dissentient Diamond** intermediate. Its selected ingredients are one Wither Skeleton Skull, two Gunpowder and one Diamond; its artwork and precise behavior remain open. The owner liked the current Flint appearance and suggested replacing violet fractures with diamond-blue accents for the possible revised composition. That recolor has not been made; the existing sprite and captures below remain the current playtest asset. [Recipe and material discussion](../../design/magical-repair.md) records the hold and distinguishes proposals from implemented behavior.
++**Historical hold, lifted October 8 when the owner resumed Fluxed Flint:** the owner paused this revision while defining Dissentient Diamond. After approving that intermediate's artwork, they resumed Flint work. [V2](../fluxed-flint-v2/README.md) now exports the requested diamond-blue recolor and the [current recipe design](../../design/magical-repair.md) records the revised ingredient chain. The violet sprite and captures below remain historical evidence.
+ 
+ `tools/author_fluxed_flint.py` crops at alpha >=128, exports an 11×13 footprint into a 16×16 RGBA canvas with clear margins, and uses nondithered five-gray/three-purple palette reduction with dominant per-cell sampling and preserved fracture accents. The [preview](export-preview.png) is an integer nearest-neighbor enlargement of those exact production pixels on light and dark backgrounds. Production asset: `src/main/resources/assets/vestige/textures/item/fluxed_flint.png`; ordinary generated-item model scale.
+ 
+diff --git a/docs/design/item-imbuement-and-readiness.md b/docs/design/item-imbuement-and-readiness.md
+index 321bdd3..46bcef2 100644
+--- a/docs/design/item-imbuement-and-readiness.md
++++ b/docs/design/item-imbuement-and-readiness.md
+@@ -2,6 +2,21 @@
+ 
+ **Owner direction, October 8, 2026.** Embrace crafted imbuements across native magical items, alongside the existing shared trait system. The owner requested an audit and follow-up changes to existing items, plus an animated native review of independent mana and recovery overlays. The v3 vanilla overlay appearance is approved below; production readiness integration is implemented with Wayfarer; other item conversions remain follow-up work.
+ 
++## Accepted item-name rarities
++
++**Owner approved October 8:** use Minecraft's native base item rarity for the reviewed equipment and devices.
++
++| Base rarity | Items |
++| --- | --- |
++| Uncommon / yellow | Dissentient Diamond, Attunement Shard, Homebound Eye, Whispering Shell, magical Staff, Wardweave Robes, Cinderweave Robes, Wayfarer Boots |
++| Rare / aqua | Crane Bag, Fluxed Flint |
++| Common / white | All five magical threads, Scroll Fragments, all seven mundane Staffs, every Spellstone/Plinth/Standing Stone finish |
++
++Scrolls and Wands retain their existing knowledge-aware spell-rarity name colors; unidentified spells remain white. Magical Staff names stay Uncommon across affinities, selection and two/four/six-slot capacities. Item rarity does not change spell rarity, Staff cast wear, resources, effects, crafting or durability. Crafted adjective prefixes inherit the name color and retain their italics; the stored variant remains authoritative. Existing thread/shard shimmer is independent of rarity and is retained. Compatible armor enchantments keep vanilla's displayed rarity promotion rather than receiving a forced text color. No new Epic base item is selected, and this decision does not implement the pending hourglass or other clothing packages.
++
++[Native verification and packaging](../verification/item-rarity-2026-10-08/README.md) record actual results; changing the testing-pack installation is separate work.
++
++
+ ## Traits and crafted variants
+ 
+ Numerical ability values use the same authored trait relationships as spells. Duration, protection, movement, range and other numerical outcomes can consume the appropriate traits. Numerical relationships remain explicit: a descriptive trait does not acquire a hidden runtime rule merely because an item has a number. Activation snapshots and passive reevaluation keep their existing ownership rules.
+@@ -37,7 +52,7 @@ The October 8 follow-up with the resource/imbuement chat confirmed explicit per-
+ | Crane Bag | Persistent shared contents keyed by attunement | Audit meaningful ability/variant hooks. Any capacity variant needs an explicit shared-pool and overflow policy first; temporary traits must not discard stored items. |
+ | Whispering Shell | Communication keyed by attunement | Audit meaningful variants while preserving channel identity and accepted communication behavior. Do not invent a cost or range merely to add a trait consumer. |
+ | Standing Stones / Attunement Shards | Shared verified blueprint/channel identity; stone payment policy has its own design | Keep identity separate from ability shaping. Audit payment and applicable numerical behaviors without silently rehashing the key or changing existing membership. |
+-| Fluxed Flint | Finite repair budget and intrinsic volatility; stabilizing imbuements remain unimplemented | Include durability/wear and risk shaping in the audit. Respect the existing recipe/art hold; this direction does not choose a stabilization material or change its risk. |
++| Fluxed Flint | Finite repair budget and intrinsic volatility; stabilizing imbuements remain unimplemented | Include durability/wear and risk shaping in the audit. The owner resumed the recipe/art revision after approving Dissentient Diamond; stabilization materials and risk changes remain separate work. |
+ 
+ Wayfarer Boots now implement this path, including four compatible contributions, shared adjective naming, trusted selections, actor trait scaling, typed mana/recovery and durability. Dawnsight Hood, Patchwork Robes, Spiderstep Boots and the selected Kairotic Hourglass still require this path before implementation. Their unapproved controls, values and material selectors remain review decisions. Preserve the hourglass's accepted 60-mana / ten-durability / one-wear baseline.
+ 
+diff --git a/docs/design/magical-repair.md b/docs/design/magical-repair.md
+index 77116bc..bb08545 100644
+--- a/docs/design/magical-repair.md
++++ b/docs/design/magical-repair.md
+@@ -1,10 +1,8 @@
+ # Fluxed Flint and magical repair
+ 
+-**Recipe order correction, October 8:** construction now uses **Flint → Diamond Block → Netherite Ingot → Echo Shard** in the inner layer, with whole rotations equivalent. This order-only correction leaves the ingredient/art redesign hold below in force. Repair remains unordered on any two available seats and keeps the full selected table empty otherwise. Earlier shapeless-construction descriptions below are superseded by this correction.
++**Owner resumed work, October 8, 2026:** the Dissentient Diamond is defined and its artwork approved. The owner requested continuing Fluxed Flint, lifting the earlier recipe/art hold. The implemented construction now uses **Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot** in the inner layer, with whole rotations equivalent. The two ingots occupy separate, opposite Plinths. This replaces the provisional Diamond Block/Echo Shard composition. Repair remains unordered on any two available seats and keeps the full selected table empty otherwise.
+ 
+-**Owner direction, October 8, 2026; first implementation for playtesting.** Fluxed Flint is the selected name for the expensive, volatile repair catalyst. The owner accepted finite catalyst durability, exact target preservation except improved damage, and the shared input-volatility failure rule. Numerical balance and the recipe below are initial implementation choices, not owner-approved final tuning.
+-
+-**Owner design hold, October 8:** pause further Fluxed Flint recipe and artwork changes while defining the reusable **Dissentient Diamond** intermediate below. The owner favors Gunpowder as a volatility/chaos ingredient and proposed a later Flint recipe using two Netherite Ingots, one Flint and that intermediate, with diamond-blue accents replacing the current violet. The revised Flint composition and recolor remain proposals, not implemented or final. The existing playtest implementation remains available; this hold does not disable it.
++**Owner direction, October 8; first implementation for playtesting.** Fluxed Flint is the selected name for the expensive, volatile repair catalyst. The owner accepted finite catalyst durability, exact target preservation except improved damage, and the shared input-volatility failure rule. The 128-point budget, 25% operation cap and Volatile 2 remain initial playtest tuning. The original violet artwork is superseded by the [diamond-blue revision](../art/fluxed-flint-v2/README.md); its exact silhouette and five stone shades are preserved. Final owner selection of the new pixels remains separate from implementation and native verification.
+ 
+ The owner's correction also applies to material attribution: Echo Shard makes Timeless Slurry, which combines with Pyrium in specific Iron restoration recipes, but those recipes do not establish that either ingredient universally supplies restoration. Likewise, a healing ingredient paired with Amethyst does not establish Amethyst as the source of healing. [Pinned material facts](../research/iron-material-uses.md) remain distinct from new Vestige ingredient conventions. Diamond's pinned Jewelry parameters include Armor and a magic-damage action; the explicit Spell Power attribute belongs to Mithril. Gunpowder's proposed broader identity does not automatically make every existing Gunpowder offering volatile.
+ 
+@@ -12,13 +10,15 @@ The owner's correction also applies to material attribution: Echo Shard makes Ti
+ 
+ **Owner selection, October 8:** the reusable intermediate is named **Dissentient Diamond** and uses **one Wither Skeleton Skull, two Gunpowder and one Diamond**. The two Gunpowder units are intentional. This replaces the earlier Ender Pearl suggestion; Soul Sand, Echo Shard, Crying Obsidian and Nether Star were discussed as alternatives, not selected ingredients.
+ 
+-The owner's concept is a highly ordered diamond crystal whose fractured structure has entered a chaotic, heretical state: a crystal in dissent against its own natural order. This is an original Vestige material identity, not an upstream claim that Diamond or Wither Skeleton Skull inherently grants a universal chaos property. Its intrinsic trait rating, crafting presentation, output quantity and additional uses remain to be defined. The ordinary ingredient is registered as `vestige:dissentient_diamond`; its selected crafting recipe is not yet implemented.
++The owner's concept is a highly ordered diamond crystal whose fractured structure has entered a chaotic, heretical state: a crystal in dissent against its own natural order. This is an original Vestige material identity, not an upstream claim that Diamond or Wither Skeleton Skull inherently grants a universal chaos property. The ordinary ingredient is registered as `vestige:dissentient_diamond`. Its selected ingredients now craft **one** intermediate through an ordered four-Plinth ritual: **Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder**, with whole rotations equivalent and an empty Spellstone. The two Gunpowder units occupy separate Plinths opposite each other. Presentation/order and one-item yield are implementation choices consistent with the existing component rituals. It has no intrinsic volatility rating; making a chaotic material does not invent a new trait or random loss during its construction. Additional uses and any future intrinsic trait rating remain separate decisions.
+ 
+-**Owner artwork direction, October 8:** start with the texture, then implement the ingredient. It is a crafting ingredient like the thread components; it does not need enchantment shimmer or an overt magical visual effect. Work from a **32×32 cyan diamond with dark fissures**, then reduce to **16×16 for Minecraft inventory comparison**. The owner rejected v7's intact diamond with small cracks, clarifying that v6's fractured shape was good and only its noise should be reduced. V8 preserved that split structure with quieter faces. V9 replaced the black bottom edge with vanilla Diamond's dark teal. V10 changed the thirteen near-black fissure pixels to dark petrol/navy blue. The owner liked v10 and requested horizontal inventory centering. [V11 artwork and review](../art/dissentient-diamond-v11/README.md) preserves the exact v10 texture and adds a half-texel GUI X translation to center its odd-width footprint. The owner approved this exact artwork and alignment on October 8; [acceptance](../art/dissentient-diamond-v11/approval.json) pins the texture/model hashes. The registered ingredient uses native **Uncommon** rarity and a **yellow** name, matching Minecraft 1.21.1's Wither Skeleton Skull. It is an ordinary stackable ingredient with no glint, durability or direct-use/casting behavior; an intrinsic trait rating remains unspecified. Earlier native art previews used a Diamond carrier. Registration does not change the held Fluxed Flint revision.
++**Owner artwork direction, October 8:** start with the texture, then implement the ingredient. It is a crafting ingredient like the thread components; it does not need enchantment shimmer or an overt magical visual effect. Work from a **32×32 cyan diamond with dark fissures**, then reduce to **16×16 for Minecraft inventory comparison**. The owner rejected v7's intact diamond with small cracks, clarifying that v6's fractured shape was good and only its noise should be reduced. V8 preserved that split structure with quieter faces. V9 replaced the black bottom edge with vanilla Diamond's dark teal. V10 changed the thirteen near-black fissure pixels to dark petrol/navy blue. The owner liked v10 and requested horizontal inventory centering. [V11 artwork and review](../art/dissentient-diamond-v11/README.md) preserves the exact v10 texture and adds a half-texel GUI X translation to center its odd-width footprint. The owner approved this exact artwork and alignment on October 8; [acceptance](../art/dissentient-diamond-v11/approval.json) pins the texture/model hashes. The registered ingredient uses native **Uncommon** rarity and a **yellow** name, matching Minecraft 1.21.1's Wither Skeleton Skull. It is an ordinary stackable ingredient with no glint, durability or direct-use/casting behavior; an intrinsic trait rating remains unspecified. Earlier native art previews used a Diamond carrier. The approved Diamond texture/model remain unchanged by the later Flint continuation.
+ 
+ ## First playable recipe and repair
+ 
+-Craft one Fluxed Flint by offering **one Flint, one Diamond Block, one Netherite Ingot and one Echo Shard** in that clockwise order on the four inner Plinths around an empty Spellstone. Whole rotations match; outer nodes are inactive and socket materials are retained. This provisional composition predates the design hold above. Echo Shard's upstream Timeless Slurry use was recipe inspiration, not evidence of an inherent restoration property; this is an original native recipe, without an Iron dependency or copied quality system. Both optional recipe viewers expose this public construction recipe.
++**Item-name rarity, owner approved October 8:** Fluxed Flint uses native Rare/aqua. This changes its name presentation only; finite repair budget and Volatile 2 are unchanged. See the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
++
++Craft one Fluxed Flint by offering **one Flint, one Netherite Ingot, one Dissentient Diamond and one Netherite Ingot** in that clockwise order on the four inner Plinths around an empty Spellstone. Whole rotations match; the two identical ingots give the pattern a natural reflection symmetry. Outer nodes are inactive and socket materials are retained. Both optional recipe viewers expose this public construction recipe and the intermediate's recipe. Dissentient Diamond supplies the reusable fractured-crystal ingredient identity; no Iron dependency or generic ingredient-quality system is introduced.
+ 
+ For repair, offer **one Fluxed Flint and one damaged magical item** on any two different Plinths in a valid four- or eight-slot layout. They may be on either ring, adjacent or far apart. Leave every other available offering surface and the Spellstone empty; activate normally. The Flint returns to its original Plinth with wear. The repaired item drops above the Spellstone through the ordinary atomic ritual lifecycle. No additional repair bar, menu, chat or actionbar message is added. Flint uses vanilla's item durability bar.
+ 
+diff --git a/docs/design/recipe-viewers.md b/docs/design/recipe-viewers.md
+index 5c2e517..7e343aa 100644
+--- a/docs/design/recipe-viewers.md
++++ b/docs/design/recipe-viewers.md
+@@ -16,7 +16,7 @@ The Attunement Shard display has eight Plinths, with **two separate Amethyst Sha
+ 
+ ## Required imbuements in public recipes
+ 
+-**Accepted and implemented owner requirement, October 6:** a recipe that requires an installed Plinth material must show that requirement at the correct offering seat as well as its consumed ingredients. The first use is the [five magical threads](wand-crafting.md#recipe-viewer-requirement): Diamond Block selects Ensorcelled Thread, Iron Block Callous Thread, Gold Block Smoldering Thread, Emerald Block Laced Thread and Glowstone Consecrated Thread. Only the String offering's own socket chooses the thread. All five consume one each of String, Amethyst Shard and Honeycomb to produce one thread, in the clockwise inner pattern **String → Amethyst Shard → Honeycomb → empty**, with whole rotations equivalent and the installed selector retained. Homebound Eye, Whispering Shell and Fluxed Flint construction likewise show their actual ordered four-slot patterns. Attunement Shards retain their unordered marker; Standing Stone viewer entries remain separate work.
++**Accepted and implemented owner requirement, October 6:** a recipe that requires an installed Plinth material must show that requirement at the correct offering seat as well as its consumed ingredients. The first use is the [five magical threads](wand-crafting.md#recipe-viewer-requirement): Diamond Block selects Ensorcelled Thread, Iron Block Callous Thread, Gold Block Smoldering Thread, Emerald Block Laced Thread and Glowstone Consecrated Thread. Only the String offering's own socket chooses the thread. All five consume one each of String, Amethyst Shard and Honeycomb to produce one thread, in the clockwise inner pattern **String → Amethyst Shard → Honeycomb → empty**, with whole rotations equivalent and the installed selector retained. Homebound Eye, Whispering Shell, Dissentient Diamond and Fluxed Flint construction likewise show their actual ordered four-slot patterns. Attunement Shards retain their unordered marker; Standing Stone viewer entries remain separate work.
+ 
+ The approved implementation keeps the current Spellstone category and parchment diagram and fills the square frame around the String's Plinth with the installed block's texture. The String remains in the clear center, and hovering the rim identifies the retained imbuement. A separate attached block icon was the earlier proposal. Each thread has a public output-specific entry with the same consumed ingredient icons. The installed block is indexed as a retained catalyst, with native material lookup distinct from the offering. Short hover role text may identify the imbuement and its retention; no step-by-step drawing instructions are added. The fitted contours use the original 1254-pixel artwork coordinates.
+ 
+diff --git a/docs/design/ritual-crafting.md b/docs/design/ritual-crafting.md
+index cb15cdd..b7d3c3f 100644
+--- a/docs/design/ritual-crafting.md
++++ b/docs/design/ritual-crafting.md
+@@ -8,9 +8,10 @@
+ | Homebound Eye | Attunement Shard → Flint → Spider Eye → Ender Pearl |
+ | Whispering Shell | Attunement Shard → Sculk Sensor → Nautilus Shell → empty |
+ | Standing Stone | Attunement Shard → masonry → Ender Pearl → same masonry |
+-| Fluxed Flint | Flint → Diamond Block → Netherite Ingot → Echo Shard |
++| Dissentient Diamond | Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder |
++| Fluxed Flint | Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot |
+ 
+-Fluxed Flint's ingredient redesign/art hold remains in force; this pass changes only the existing recipe's order. Four-slot patterns use the nearest complete inner layer even on a complete eight-slot apparatus. Outer nodes are inactive, unreserved and untouched. Intentional empty **inner** positions are part of the pattern and revalidated before commitment. String/Spider Eye selectors stay paired with their offering under rotation.
++The owner resumed Fluxed Flint work after approving Dissentient Diamond. Its new ingredient chain supersedes the provisional Diamond Block/Echo Shard recipe; both duplicate offerings occupy separate seats. Four-slot patterns use the nearest complete inner layer even on a complete eight-slot apparatus. Outer nodes are inactive, unreserved and untouched. Intentional empty **inner** positions are part of the pattern and revalidated before commitment. String/Spider Eye selectors stay paired with their offering under rotation.
+ 
+ **Unordered operations:** one-scroll dismantling into fragments is an ordinary crafting recipe. Combining four or more fragments to discover a scroll is a separate, retained unordered ritual. Attunement Shards accept unordered ingredients but encode their relative arrangement, paired imbuements and geometry into the signature. Fluxed Flint repair accepts a catalyst and one damaged magical target in any two available seats. These unordered rituals select the complete available table, including both rings on an eight-slot layout; unused available seats must remain empty and participate in reservation/revalidation. Public diagrams for ordered construction now show actual relationships; an Attunement Shard diagram remains an example.
+ 
+diff --git a/docs/design/robe-behavior-review.md b/docs/design/robe-behavior-review.md
+index d231bc7..b2f9b36 100644
+--- a/docs/design/robe-behavior-review.md
++++ b/docs/design/robe-behavior-review.md
+@@ -6,6 +6,8 @@ The [equipment review](../art/magic-equipment-review/index.html#wardweave) and i
+ 
+ ## Shared robe recommendation
+ 
++**Item-name rarity, owner approved October 8:** both robes have native Uncommon/yellow base names. Compatible enchantments retain vanilla's displayed rarity promotion; the abilities and wear rules are unchanged. See the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
++
+ Both occupy the chest slot, give **2 armor points, zero toughness and +25 maximum mana**. A wearer with no other capacity bonus has a maximum of 125. Two armor points equal one ordinary shield icon, compared with leather's three chest armor points.
+ 
+ The mana bonus is fixed. Equipping does not refill mana; removal clamps the balance to the remaining capacity. Recovery remains two mana per second after the existing expenditure delay. These robes do not themselves grant a global trait boost: their own abilities read the wearer's approved trait modifiers. A wand's source-local modifiers affect that wand's cast, not a robe ability.
+diff --git a/docs/design/staff-crafting.md b/docs/design/staff-crafting.md
+index fc2d01f..31d9f73 100644
+--- a/docs/design/staff-crafting.md
++++ b/docs/design/staff-crafting.md
+@@ -4,6 +4,8 @@
+ 
+ ## Accepted rules
+ 
++**Item-name rarity, owner approved October 8:** magical Staffs use native Uncommon/yellow across all affinities, capacities and selected scrolls. Mundane Staffs remain Common/white. This presentation tier is independent of the source spell rarity used for wear; see the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
++
+ A staff is permanently tied to one namespaced trait and holds related native spells. A scroll can enter it only after the inserting player has identified its spell and only if that spell has a positive native base rating in the staff's trait. A Fire staff accepts identified Fire/Evocation scrolls, for example. Schools are ordinary traits. Fire 1 and Fire 4 both qualify; trait magnitude and rarity are not staff ranks. Stored augments or equipment contributions cannot add an otherwise missing qualifying trait.
+ 
+ The owner explicitly accepted these choices:
+diff --git a/docs/design/wayfarer-imbuement-review.md b/docs/design/wayfarer-imbuement-review.md
+index eead65f..f1292e2 100644
+--- a/docs/design/wayfarer-imbuement-review.md
++++ b/docs/design/wayfarer-imbuement-review.md
+@@ -9,6 +9,7 @@ The approved baseline and exact crafting behavior are listed below. Numeric valu
+ | Property | Approved baseline |
+ | --- | --- |
+ | Equipment | Feet; 1 armor; zero toughness; no maximum-mana bonus |
++| Base item rarity | Uncommon / yellow across all sixteen crafted variants; owner approved October 8; compatible enchantments retain vanilla's displayed promotion |
+ | Trigger | Deliberate grounded sprint-jump; ordinary walking/jumping remain ordinary |
+ | Burst | 3 seconds at +20% movement speed |
+ | Landing benefit | During the burst, prevent up to 4 HP / two hearts of damage on one landing; unused protection expires with the burst |
+diff --git a/docs/development-status.md b/docs/development-status.md
+index 16d7c82..45df5bb 100644
+--- a/docs/development-status.md
++++ b/docs/development-status.md
+@@ -1,5 +1,23 @@
+ # Development status
+ 
++## October 8 · Fluxed Flint recipe chain and diamond-blue artwork
++
++The owner resumed Fluxed Flint after approving Dissentient Diamond and completing item rarities. The intermediate now crafts one item through **Diamond → Gunpowder → Wither Skeleton Skull → Gunpowder**; Flint construction becomes **Flint → Netherite Ingot → Dissentient Diamond → Netherite Ingot**. Both use the existing four-inner-Plinth ordered ritual, whole quarter-turns, retained sockets and ordinary atomic output. Duplicate units occupy separate seats; both public viewer patterns follow the actual matchers. This retires the provisional Diamond Block/Echo Shard route. Flint's repair budget, cap, Volatile 2, exact target metadata copying and unordered repair on either ring remain unchanged.
++
++The built-in imagegen recolor and constrained export change exactly **24 purple accent pixels** to three pinned vanilla Diamond shades. The literal 16×16 sprite preserves its gray stone, silhouette, alpha and model; approved Diamond artwork and both name rarities are unchanged. [Native inventory comparison](art/fluxed-flint-v2/native/inventory-comparison-crop.png), [source, prompt and export](art/fluxed-flint-v2/README.md).
++
++**Verified:** root and frozen-source builds each pass **211 unit tests across 46 suites**; frozen production collision code passes **all 26 focused Minecraft tests** for Flint, shapeless capacity and ordered construction. The new case crafts the intermediate, then consumes that actual result to craft Flint while preserving sockets/inactive offerings. All five final native assertions pass; inventory, held/offered, lift, output and durability frames were inspected. Nine compiled classes and loaded resource hashes match the staged review JAR. The isolated art-only collision source was restored after preview and its bypass is absent from the staged artifact. [Results, exact source/JAR hashes and logs](verification/fluxed-flint-v2-2026-10-08/README.md).
++
++The capture now waits for actual server ritual ticks under load. Shared-build startup interference was resolved by verifying a frozen copy; Hourglass work remains owned by its other chat. This pass does not claim a full world suite, Kithkyn co-load, viewer screen inspection, installation or publication. Survival tuning, stabilization imbuements and final owner selection of the new Flint pixels remain follow-up.
++
++
++## October 8 · approved native item-name rarities
++
++The owner approved and requested the reviewed rarity assignments. [The accepted policy](design/item-imbuement-and-readiness.md#accepted-item-name-rarities) now uses **Uncommon/yellow** for Attunement Shard, Homebound Eye, Whispering Shell, magical Staffs, Wardweave/Cinderweave Robes and Wayfarer Boots, alongside the already-Uncommon Dissentient Diamond. **Crane Bag and Fluxed Flint are Rare/aqua.** Threads, fragments, mundane Staffs and all apparatus finishes remain Common. Scrolls/Wands retain knowledge-aware spell colors. Crafted adjectives inherit the native color with italics; enchanted armor retains vanilla displayed promotion. Spell rarity, wear, effects, recipes, durability and artwork are unchanged.
++
++**Verified:** root Java 21 build, **202 unit tests across 45 suites**, 84 integrated-client presentation assertions, both GUI scales, all sixteen Wayfarer variants, Eye routes, Staff capacities and unchanged known/unknown Scroll/Wand colors. Naming and Staff authoring checks pass. Six compiled classes match the native capture and packaged JAR, and all 2328 asset files are unchanged and match native/packaged resources. The isolated capture used the documented art-only collision bypass; original isolated source was restored, root source was untouched and the packaged collision class is the root original. [Receipt, native images and logs](verification/item-rarity-2026-10-08/README.md). No new world-test suite, installation or publication is claimed. Fluxed Flint recipe/art and Dissentient Diamond recipe follow-up remain separate.
++
++
+ ## October 8 · approved equipment and adjective combined shipment
+ 
+ The combined package is installed in **Kithkyn Testing**, with the previous jar preserved in a timestamped backup. Restart Minecraft to load it. It includes the approved Wayfarer Boots and all sixteen crafted imbuement variants, shared one-adjective names across implemented spell/item paths, and their approved native equipment/device/runtime foundations. The complete [naming catalog](magic-adjectives.md) has 79 source entries and 145 aliases; full effects, contribution degrees and exact variant equality remain unchanged by naming.
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java b/src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java
+new file mode 100644
+index 0000000..f1535c7
+--- /dev/null
++++ b/src/main/java/com/quzzar/vestige/apparatus/DissentientDiamondRecipe.java
+@@ -0,0 +1,14 @@
++package com.quzzar.vestige.apparatus;
++
++import net.minecraft.world.item.*;
++import java.util.*;
++
++/** Diamond and skull opposite, with a separate Gunpowder offering on either side. */
++public final class DissentientDiamondRecipe {
++    private DissentientDiamondRecipe() { }
++    public static List<Item> ingredients() { return List.of(Items.DIAMOND, Items.GUNPOWDER, Items.WITHER_SKELETON_SKULL, Items.GUNPOWDER); }
++    public static Optional<ItemStack> create(List<ItemStack> seats) {
++        return FourSlotPattern.matches(seats, ingredients())
++                ? Optional.of(new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get())) : Optional.empty();
++    }
++}
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java b/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java
+index 83797e9..a989ad1 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java
+@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
+ public final class FluxedFlintRecipe {
+     public static final TagKey<Item> REPAIRABLE = TagKey.create(Registries.ITEM, VestigeMainMod.location("magical_repairable"));
+     private FluxedFlintRecipe() { }
+-    public static List<Item> ingredients() { return List.of(Items.FLINT, Items.DIAMOND_BLOCK, Items.NETHERITE_INGOT, Items.ECHO_SHARD); }
++    public static List<Item> ingredients() { return List.of(Items.FLINT, Items.NETHERITE_INGOT, ScrollItems.DISSENTIENT_DIAMOND.get(), Items.NETHERITE_INGOT); }
+     private static List<Integer> occupied(List<ItemStack> seats) {
+         if (seats.size()!=8) return List.of();
+         return IntStream.range(0,8).filter(i -> !seats.get(i).isEmpty()).boxed().toList();
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java b/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java
+index a337784..654400c 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java
+@@ -51,6 +51,29 @@ public final class FluxedFlintTest {
+         h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Nonvolatile ingredients rolled");})==RitualCrafting.Outcome.CRAFTING,"Construction rejected");
+         h.runAfterDelay(45,()->{var out=RitualTestOutput.stack(center);h.assertTrue(out.is(ScrollItems.FLUXED_FLINT.get()) && out.getCount()==1 && out.getDamageValue()==0,"Wrong catalyst output");h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty),"Construction inputs survived");h.succeed();});
+     }
++    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=150)
++    public static void diamondIntermediateThenRevisedFlintCraftThroughTheAtomicLifecycle(GameTestHelper h) {
++        var center=structure(h,true);var layout=LeylineStructure.find(center,4).getFirst();
++        for(int i=0;i<4;i++) layout.stands().get((i*2+2)%8).insert(new ItemStack(DissentientDiamondRecipe.ingredients().get(i)));
++        var outer=(OfferingBlockEntity)h.getBlockEntity(CENTER.offset(GEOMETRY.offset(1)));outer.insert(new ItemStack(Items.PAPER));
++        layout.stands().get(0).installMaterial(new ItemStack(Items.AMETHYST_BLOCK));
++        h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Ordinary ingredients rolled risk");})==RitualCrafting.Outcome.CRAFTING,"Diamond construction rejected");
++        h.runAfterDelay(65,()->{
++            var diamond=RitualTestOutput.take(center);
++            h.assertTrue(diamond.is(ScrollItems.DISSENTIENT_DIAMOND.get()) && diamond.getCount()==1 && !diamond.hasFoil(),"Wrong intermediate output");
++            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER)
++                    && layout.stands().get(0).materialItem().is(Items.AMETHYST_BLOCK),"Intermediate consumed inactive offerings or socket");
++            layout.stands().get(2).insert(new ItemStack(Items.FLINT));layout.stands().get(4).insert(new ItemStack(Items.NETHERITE_INGOT));
++            layout.stands().get(6).insert(diamond);layout.stands().get(0).insert(new ItemStack(Items.NETHERITE_INGOT));
++            h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Intermediate acquired an unauthored volatile trait");})==RitualCrafting.Outcome.CRAFTING,"Revised Flint construction rejected");
++        });
++        h.runAfterDelay(115,()->{
++            var result=RitualTestOutput.stack(center);
++            h.assertTrue(result.is(ScrollItems.FLUXED_FLINT.get()) && result.getCount()==1 && result.getDamageValue()==0 && result.getMaxDamage()==128,"Wrong catalyst budget or output");
++            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER)
++                    && layout.stands().get(0).materialItem().is(Items.AMETHYST_BLOCK),"Flint construction failed atomic consumption or touched inactive inputs");h.succeed();
++        });
++    }
+     @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+     public static void successClonesAllTargetAndCatalystComponentsChangingOnlyDamage(GameTestHelper h) {
+         var target=staff();var catalyst=flint(5);catalyst.set(DataComponents.CUSTOM_NAME,Component.literal("My Flint"));
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java b/src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java
+index b2cfb15..b153ccf 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java
+@@ -77,6 +77,14 @@ public final class RitualCrafting {
+                 return begin(selected,player,repair.output(),repair.used(),0xf4e5ff,RitualInputs.capture(selected),
+                         java.util.Optional.empty(),Map.of(repair.catalystSeat(),repair.remainingCatalyst()),random,Outcome.CRAFTING);
+             }
++            var diamonds=candidates.stream().filter(l -> DissentientDiamondRecipe.create(l.items()).isPresent()).toList();
++            if (!diamonds.isEmpty()) {
++                if (diamonds.size()!=1) return Outcome.INVALID;
++                var selected=diamonds.getFirst();
++                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
++                return begin(selected,player,DissentientDiamondRecipe.create(selected.items()).orElseThrow(),
++                        List.of(0,2,4,6),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
++            }
+             var flints=candidates.stream().filter(l -> FluxedFlintRecipe.create(l.items()).isPresent()).toList();
+             if (!flints.isEmpty()) {
+                 if (flints.size()!=1) return Outcome.INVALID;
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java b/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
+index 6a2b662..f3ddd6d 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/ScrollItems.java
+@@ -34,19 +34,19 @@ public final class ScrollItems {
+     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, VestigeMainMod.MOD_ID);
+     public static final DeferredItem<SpellScrollItem> SCROLL = ITEMS.register("spell_scroll", () -> new SpellScrollItem(new Item.Properties().stacksTo(16)));
+     public static final DeferredItem<SpellWandItem> WAND = ITEMS.register("wand", () -> new SpellWandItem(new Item.Properties().durability(20)));
+-    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY)));
++    public static final DeferredItem<FluxedFlintItem> FLUXED_FLINT = ITEMS.register("fluxed_flint", () -> new FluxedFlintItem(new Item.Properties().durability(FluxedFlintItem.DURABILITY).rarity(Rarity.RARE)));
+     public static final DeferredItem<Item> DISSENTIENT_DIAMOND = ITEMS.register("dissentient_diamond", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON)));
+-    public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40)));
++    public static final DeferredItem<SpellStaffItem> STAFF = ITEMS.register("staff", () -> new SpellStaffItem(new Item.Properties().durability(40).rarity(Rarity.UNCOMMON)));
+     public static final DeferredItem<ScrollFragmentItem> FRAGMENT = ITEMS.register("scroll_fragment", () -> new ScrollFragmentItem(new Item.Properties()));
+     public static final DeferredItem<Item> ENSORCELLED_THREAD = ITEMS.register("ensorcelled_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+     public static final DeferredItem<Item> CALLOUS_THREAD = ITEMS.register("callous_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+     public static final DeferredItem<Item> SMOLDERING_THREAD = ITEMS.register("smoldering_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+     public static final DeferredItem<Item> LACED_THREAD = ITEMS.register("laced_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+     public static final DeferredItem<Item> CONSECRATED_THREAD = ITEMS.register("consecrated_thread", () -> new Item(new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+-    public static final DeferredItem<AttunementShardItem> ATTUNEMENT_SHARD = ITEMS.register("attunement_shard", () -> new AttunementShardItem(new Item.Properties().stacksTo(16)));
+-    public static final DeferredItem<WhisperingShellItem> WHISPERING_SHELL = ITEMS.register("whispering_shell", () -> new WhisperingShellItem(new Item.Properties().stacksTo(1)));
+-    public static final DeferredItem<HomeboundEyeItem> HOMEBOUND_EYE = ITEMS.register("homebound_eye", () -> new HomeboundEyeItem(new Item.Properties().durability(HomeboundEyeItem.DURABILITY)));
+-    public static final DeferredItem<com.quzzar.vestige.storage.CraneBagItem> CRANE_BAG = ITEMS.register("crane_bag", () -> new com.quzzar.vestige.storage.CraneBagItem(new Item.Properties().stacksTo(1)));
++    public static final DeferredItem<AttunementShardItem> ATTUNEMENT_SHARD = ITEMS.register("attunement_shard", () -> new AttunementShardItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
++    public static final DeferredItem<WhisperingShellItem> WHISPERING_SHELL = ITEMS.register("whispering_shell", () -> new WhisperingShellItem(new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
++    public static final DeferredItem<HomeboundEyeItem> HOMEBOUND_EYE = ITEMS.register("homebound_eye", () -> new HomeboundEyeItem(new Item.Properties().durability(HomeboundEyeItem.DURABILITY).rarity(Rarity.UNCOMMON)));
++    public static final DeferredItem<com.quzzar.vestige.storage.CraneBagItem> CRANE_BAG = ITEMS.register("crane_bag", () -> new com.quzzar.vestige.storage.CraneBagItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+     public static final DeferredHolder<RecipeSerializer<?>, SimpleCraftingRecipeSerializer<ScrollDismantlingRecipe>> DISMANTLE = SERIALIZERS.register(
+             "scroll_dismantling", () -> new SimpleCraftingRecipeSerializer<>(ScrollDismantlingRecipe::new));
+     private ScrollItems() { }
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java b/src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java
+index b5e2262..6abc020 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/ShapelessRitualTest.java
+@@ -77,10 +77,11 @@ public final class ShapelessRitualTest {
+             if(a==b || a==c || b==c || a==d || b==d || c==d) continue;
+             var seats=new ArrayList<>(Collections.nCopies(8,ItemStack.EMPTY));var positions=List.of(a,b,c,d);
+             for(int i=0;i<4;i++) seats.set(positions.get(i),new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
+-            boolean valid=(a&1)==0 && b==(a+2)%8 && c==(a+4)%8 && d==(a+6)%8;
++            boolean valid=(a&1)==0 && c==(a+4)%8 && ((b==(a+2)%8 && d==(a+6)%8) || (d==(a+2)%8 && b==(a+6)%8));
+             h.assertTrue(FluxedFlintRecipe.create(seats).isPresent()==valid,"Construction ignored relative order");if(valid)constructions++;
+         }
+-        h.assertTrue(repairs==56 && constructions==4,"Arrangement audit was incomplete");h.succeed();
++        // Two identical ingots give two labelings of each of the four distinct rotated patterns.
++        h.assertTrue(repairs==56 && constructions==8,"Arrangement audit was incomplete");h.succeed();
+     }
+     @GameTest(template="empty_9x3x9",batch="shapeless_ritual")
+     public static void extraOuterOfferingRejectsInsteadOfFallingBackToFourSlots(GameTestHelper h) {
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java b/src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java
+index 3790373..4502229 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java
+@@ -33,6 +33,8 @@ public final class NativeFlintCapture {
+     private static int state;
+     private static long started,next;
+     private static CompletableFuture<Void> pending;
++    private static CompletableFuture<Boolean> repairReady;
++    private static int repairTick;
+     private static OfferingBlockEntity center,catalyst,target;
+     private static ItemStack original;
+     private NativeFlintCapture() { }
+@@ -53,7 +55,7 @@ public final class NativeFlintCapture {
+         catalyst.insert(new ItemStack(ScrollItems.FLUXED_FLINT.get()));original=StaffData.create(VestigeMainMod.location("fire"));original.setDamageValue(23);target.insert(original);
+         player.connection.teleport(4,4,-6,33.69f,22);player.setNoGravity(true);
+         for(int i=0;i<player.getInventory().getContainerSize();i++)player.getInventory().setItem(i,ItemStack.EMPTY);
+-        var comparisons=List.of(new ItemStack(Items.FLINT),new ItemStack(ScrollItems.FLUXED_FLINT.get()),new ItemStack(Items.ECHO_SHARD),new ItemStack(Items.AMETHYST_SHARD));
++        var comparisons=List.of(new ItemStack(Items.FLINT),new ItemStack(ScrollItems.FLUXED_FLINT.get()),new ItemStack(Items.DIAMOND),new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get()),new ItemStack(Items.NETHERITE_INGOT));
+         for(int i=0;i<comparisons.size();i++)player.getInventory().setItem(9+i,comparisons.get(i));
+         player.getInventory().setItem(0,new ItemStack(ScrollItems.FLUXED_FLINT.get()));player.getInventory().setItem(1,original.copy());player.inventoryMenu.broadcastChanges();
+     }
+@@ -81,10 +83,17 @@ public final class NativeFlintCapture {
+                     require(RitualCrafting.layout(center).geometry().slots()==8 && RitualCrafting.layout(center).items().stream().filter(item -> !item.isEmpty()).count()==2,
+                             "Eight-slot fixture has only two outer offerings");
+                     require(RitualCrafting.activate(player,center)==RitualCrafting.Outcome.CRAFTING,"Native outer-only activation enters repair lifecycle");
++                    repairTick=mc.getSingleplayerServer().getTickCount();
+                 });state=5;next=now+1_000_000_000L;
+             } else if(state==5 && pending.isDone() && now>=next) {
+                 pending.join();capture(mc,"repair-in-progress");state=6;next=now+1_500_000_000L;
+             } else if(state==6 && now>=next) {
++                // Native scenes can run below 20 TPS during parallel builds. Wait for the
++                // server lifecycle, rather than mistaking a wall-clock delay for commitment.
++                if(repairReady==null) {repairReady=mc.getSingleplayerServer().submit(()->mc.getSingleplayerServer().getTickCount()>=repairTick+65);return;}
++                if(!repairReady.isDone())return;
++                boolean finished=repairReady.join();repairReady=null;
++                if(!finished){next=now+250_000_000L;return;}
+                 capture(mc,"repaired-output");pending=mc.getSingleplayerServer().submit(()->{
+                     var expected=original.copy();expected.setDamageValue(13);
+                     require(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Actual dropped staff differs only by ten restored durability");
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java b/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java
+index 6fc9daf..effd992 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java
+@@ -50,6 +50,7 @@ public final class RitualDisplays {
+                 .filter(type -> id.equals(VestigeMainMod.location("ritual/"+type.id().getPath())))
+                 .findFirst().map(type -> new ItemStack(type.item())).orElseGet(() -> new ItemStack(
+                 id.equals(VestigeMainMod.location("ritual/fluxed_flint")) ? ScrollItems.FLUXED_FLINT.get() :
++                id.equals(VestigeMainMod.location("ritual/dissentient_diamond")) ? ScrollItems.DISSENTIENT_DIAMOND.get() :
+                 id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() :
+                 id.equals(VestigeMainMod.location("ritual/whispering_shell")) ? ScrollItems.WHISPERING_SHELL.get() : ScrollItems.ATTUNEMENT_SHARD.get()))); }
+         public List<Integer> seats() { return capacity==4 ? List.of(0,2,4,6) : List.of(0,1,2,3,4,5,6,7); }
+@@ -89,6 +90,12 @@ public final class RitualDisplays {
+                 java.util.stream.IntStream.range(0,4).mapToObj(i -> new Offering(i*2,
+                         new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
+     }
++    public static Entry dissentientDiamond() {
++        var ingredients=DissentientDiamondRecipe.ingredients();
++        return new Entry(VestigeMainMod.location("ritual/dissentient_diamond"),Optional.empty(),false,SpellRarity.COMMON,4,
++                java.util.stream.IntStream.range(0,4).mapToObj(i -> new Offering(i*2,
++                        new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
++    }
+     public static Entry homeboundEye() {
+         var ingredients=HomeboundEyeRecipe.ingredients();
+         return new Entry(VestigeMainMod.location("ritual/homebound_eye"),Optional.empty(),false,SpellRarity.COMMON,4,
+diff --git a/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java b/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java
+index 951412e..936dc0e 100644
+--- a/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java
++++ b/src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java
+@@ -19,7 +19,7 @@ public final class RitualViewerClient {
+     private static final List<RitualDisplays.Entry> pending=new ArrayList<>();
+     private static int nextPage;
+     private RitualViewerClient() { }
+-    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.fluxedFlint());all.add(RitualDisplays.homeboundEye());all.add(RitualDisplays.whisperingShell());all.addAll(RitualDisplays.threads());all.addAll(com.quzzar.vestige.equipment.MagicArmorDisplays.entries());all.addAll(com.quzzar.vestige.equipment.WayfarerDisplays.entries());return List.copyOf(all);}
++    public static List<RitualDisplays.Entry> displays(){var all=new ArrayList<>(spells);all.add(RitualDisplays.shard());all.add(RitualDisplays.dissentientDiamond());all.add(RitualDisplays.fluxedFlint());all.add(RitualDisplays.homeboundEye());all.add(RitualDisplays.whisperingShell());all.addAll(RitualDisplays.threads());all.addAll(com.quzzar.vestige.equipment.MagicArmorDisplays.entries());all.addAll(com.quzzar.vestige.equipment.WayfarerDisplays.entries());return List.copyOf(all);}
+     public static void accept(RitualDisplayPayload payload) {
+         if(payload.page()==0){pending.clear();nextPage=0;}
+         if(payload.page()!=nextPage++)throw new IllegalArgumentException("Out-of-order ritual display page");
+diff --git a/src/main/java/com/quzzar/vestige/equipment/MagicArmorItem.java b/src/main/java/com/quzzar/vestige/equipment/MagicArmorItem.java
+index 04d7802..af23640 100644
+--- a/src/main/java/com/quzzar/vestige/equipment/MagicArmorItem.java
++++ b/src/main/java/com/quzzar/vestige/equipment/MagicArmorItem.java
+@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
+ public class MagicArmorItem extends ArmorItem {
+     private final ResourceLocation ability;
+     public MagicArmorItem(Holder<ArmorMaterial> material, ResourceLocation ability) {
+-        this(material, ability, Type.CHESTPLATE, new Item.Properties().durability(80).component(net.minecraft.core.component.DataComponents.DYED_COLOR, new net.minecraft.world.item.component.DyedItemColor(DyeColor.WHITE.getTextureDiffuseColor(), false)));
++        this(material, ability, Type.CHESTPLATE, new Item.Properties().durability(80).rarity(Rarity.UNCOMMON).component(net.minecraft.core.component.DataComponents.DYED_COLOR, new net.minecraft.world.item.component.DyedItemColor(DyeColor.WHITE.getTextureDiffuseColor(), false)));
+     }
+     protected MagicArmorItem(Holder<ArmorMaterial> material, ResourceLocation ability, Type type, Item.Properties properties) {
+         super(material, type, properties);
+diff --git a/src/main/java/com/quzzar/vestige/equipment/WayfarerBootsItem.java b/src/main/java/com/quzzar/vestige/equipment/WayfarerBootsItem.java
+index 6c2eef7..b1bc24a 100644
+--- a/src/main/java/com/quzzar/vestige/equipment/WayfarerBootsItem.java
++++ b/src/main/java/com/quzzar/vestige/equipment/WayfarerBootsItem.java
+@@ -8,7 +8,7 @@ import net.minecraft.world.item.*;
+ /** Ordinary armor equipment/repair rules, with trusted crafted naming and source identity. */
+ public final class WayfarerBootsItem extends MagicArmorItem {
+     public WayfarerBootsItem(Holder<ArmorMaterial> material) {
+-        super(material, WayfarerImbuements.ABILITY, Type.BOOTS, new Item.Properties().durability(65));
++        super(material, WayfarerImbuements.ABILITY, Type.BOOTS, new Item.Properties().durability(65).rarity(Rarity.UNCOMMON));
+     }
+     @Override public Component getName(ItemStack stack) {
+         return WayfarerImbuements.read(stack).map(v -> MagicAdjectives.prefix(WayfarerImbuements.FAMILY, v.selections()).append(super.getName(stack)))
+diff --git a/src/main/resources/assets/vestige/textures/item/fluxed_flint.png b/src/main/resources/assets/vestige/textures/item/fluxed_flint.png
+index 1d36a96356705617f693cda09ce65a691b0759b4..f59f0c8d7daef98e6ec49e47c0e9f4e41f3febfb 100644
+GIT binary patch
+delta 276
+zcmV+v0qg#^0<Qv)B!BivL_t(|oMT|1HV_pR|4)i~CS*=te#!sHs92H=VM68@_mnW)
+zzki=WNLYkuLs(!8n1&-N>I|B1-@t_bzkdCak!Tm3E$LyH(3!_@-Q1c%SXczbU|fI^
+znd9ph{2$~3>AX0Gr;`>j#Qy!ouyf~jhIen@FyL|tBQghMn}4dB2G|84AhvBIgS)#Y
+zUPG9$nQC+ACfF6Py!^qML5BQ^O~&dSCTs@0MFb)^EEY4ffx`ymI=lwFe*Kd1_N^NX
+zAj}t?j?HWgS1{sIWMOH8;u2W6uq>X7Ge8;84FO?w4Q)7H`1{3w!J;a{F2LtxqHL!t
+a002uBYPOmLYYm710000<MNUMnLSTXbG=AU!
+
+delta 284
+zcmV+%0ptF!0=EK?B!B)%L_t(|oMT|1HV_pR|4)i~CS*=te#!sHs92H>frBrHe*gFN
+z3;wUJq5Yp&Ls(!8m<I8iJ`8U~-oS+azkdCak!UYet*vC3Fgu1p>rDcKu&@Y<!2}I>
+z{rV;2{rmSB3R0Ia#QFz-4FQFRkgy0|Ll}`cAcd-G8eq*JaDSMwhr!+5lVRu1?F{eU
+zz5!c;*9$Q4Qhf{96}JCNz?wmZ_zQJlbqNy#7V!2hJP^TQ@ok4TIBY<!!x;-80CghR
+zmP&>I1}z4NSC9e7706y;#83fMWMOH8;u2W6Y<yRNH7ppg83MwfL<Pg3gqET{A0-?J
+inuH#3MA=SP02KfZziOV7Eve7|0000<MNUMnLSTZq<a}cQ
+
+diff --git a/src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java b/src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java
+index c211da3..e4f2641 100644
+--- a/src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java
++++ b/src/test/java/com/quzzar/vestige/apparatus/OrderedConstructionTest.java
+@@ -22,26 +22,39 @@ class OrderedConstructionTest {
+         return seats;
+     }
+     @Test void publicDisplaysDescribeTheActualOrderedPatternsAndTheShardStaysUnordered() {
+-        for(var entry:List.of(RitualDisplays.homeboundEye(),RitualDisplays.whisperingShell(),RitualDisplays.fluxedFlint())) {
++        for(var entry:List.of(RitualDisplays.homeboundEye(),RitualDisplays.whisperingShell(),RitualDisplays.fluxedFlint(),RitualDisplays.dissentientDiamond())) {
+             assertFalse(entry.shapeless());assertEquals(4,entry.capacity());
+             var shown=new ArrayList<>(Collections.nCopies(8,ItemStack.EMPTY));
+             entry.offerings().forEach(o->shown.set(o.seat(),RitualDisplays.alternatives(o.ingredient()).getFirst()));
+             if(shown.getFirst().is(ScrollItems.ATTUNEMENT_SHARD.get())) shown.set(0,shard());
+             if(entry.output().is(ScrollItems.HOMEBOUND_EYE.get())) assertTrue(HomeboundEyeRecipe.matches(shown));
+             else if(entry.output().is(ScrollItems.WHISPERING_SHELL.get())) assertTrue(WhisperingShellRecipe.result(shown).isPresent());
++            else if(entry.output().is(ScrollItems.DISSENTIENT_DIAMOND.get())) assertTrue(DissentientDiamondRecipe.create(shown).isPresent());
+             else assertTrue(FluxedFlintRecipe.create(shown).isPresent());
+         }
+         assertTrue(RitualDisplays.shard().shapeless());
+     }
+-    @Test void homeboundAndFlintAcceptFourRotationsButRejectReflectionsPermutationsAndInvalidBindings() {
++    @Test void homeboundAndFlintAcceptFourRotationsButRejectWrongPositionsAndInvalidBindings() {
+         for(int rotation=0;rotation<4;rotation++) {
+             var eye=seats(HomeboundEyeRecipe.ingredients(),rotation); assertTrue(HomeboundEyeRecipe.matches(eye));
+             var flint=seats(FluxedFlintRecipe.ingredients(),rotation);assertTrue(FluxedFlintRecipe.create(flint).isPresent());
+             Collections.swap(eye,(rotation*2+2)%8,(rotation*2+6)%8);assertFalse(HomeboundEyeRecipe.matches(eye));
+-            Collections.swap(flint,(rotation*2+2)%8,(rotation*2+6)%8);assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
++            Collections.swap(flint,(rotation*2)%8,(rotation*2+2)%8);assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
+         }
+         var invalid=seats(HomeboundEyeRecipe.ingredients(),0);invalid.set(0,new ItemStack(ScrollItems.ATTUNEMENT_SHARD.get()));assertFalse(HomeboundEyeRecipe.matches(invalid));
+     }
++    @Test void diamondAndFlintRequireSeparateDuplicateOfferingsAndRetireTheOldComposition() {
++        for(int rotation=0;rotation<4;rotation++) {
++            var diamond=seats(DissentientDiamondRecipe.ingredients(),rotation);
++            assertEquals(1,DissentientDiamondRecipe.create(diamond).orElseThrow().getCount());
++            Collections.swap(diamond,rotation*2,(rotation*2+2)%8);assertTrue(DissentientDiamondRecipe.create(diamond).isEmpty());
++        }
++        var diamond=seats(DissentientDiamondRecipe.ingredients(),0);diamond.set(2,new ItemStack(Items.GUNPOWDER,2));diamond.set(6,ItemStack.EMPTY);
++        assertTrue(DissentientDiamondRecipe.create(diamond).isEmpty());
++        var flint=seats(FluxedFlintRecipe.ingredients(),0);flint.set(2,new ItemStack(Items.NETHERITE_INGOT,2));flint.set(6,ItemStack.EMPTY);
++        assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
++        assertTrue(FluxedFlintRecipe.create(seats(List.of(Items.FLINT,Items.DIAMOND_BLOCK,Items.NETHERITE_INGOT,Items.ECHO_SHARD),0)).isEmpty());
++    }
+     @Test void standingStoneRequiresOppositeShardAndPearlAndTwoSeparateMatchingBodies() {
+         for(int rotation=0;rotation<4;rotation++) {
+             var stone=seats(StandingStoneRecipe.ingredients(),rotation);assertTrue(StandingStoneRecipe.result(stone).isPresent());
+diff --git a/tools/author_fluxed_flint.py b/tools/author_fluxed_flint.py
+index 43742a9..5289d19 100644
+--- a/tools/author_fluxed_flint.py
++++ b/tools/author_fluxed_flint.py
+@@ -1,13 +1,14 @@
+ #!/usr/bin/env python3
+-"""Deterministic 16x16 export from the generated Fluxed Flint study. Requires Pillow."""
++"""Deterministic constrained 16x16 export of the generated diamond-blue recolor. Requires Pillow."""
+ from pathlib import Path
+ from collections import Counter
++from statistics import median
+ from io import BytesIO
+ import argparse
+ from PIL import Image
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-ART = ROOT / 'docs/art/fluxed-flint-v1'
++ART = ROOT / 'docs/art/fluxed-flint-v2'
+ TARGET = ROOT / 'src/main/resources/assets/vestige/textures/item/fluxed_flint.png'
+ 
+ 
+@@ -15,32 +16,30 @@ def sprite():
+     source = Image.open(ART / 'source.png').convert('RGBA')
+     bounds = source.getchannel('A').point(lambda a: 255 if a >= 128 else 0).getbbox()
+     region = source.crop(bounds)
+-    # Reserve the source's purple fracture ramp during nondithered palette reduction.
+-    def accent(rgb):
+-        return rgb[2] > rgb[1]*1.15 and rgb[0] > rgb[1]*1.1
+-    groups = [[], []]
+-    for rgb in (region.getpixel((x,y)) for y in range(region.height) for x in range(region.width)):
+-        if rgb[3] >= 128:
+-            groups[int(accent(rgb))].append(rgb[:3])
+-    palettes = []
+-    for colors, budget in zip(groups, (5, 3)):
+-        sample = Image.new('RGB', (len(colors), 1)); sample.putdata(colors)
+-        palette = sample.quantize(colors=budget, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+-        palettes.append(region.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE).convert('RGB'))
+-    out = Image.new('RGBA', (16, 16))
++    original = Image.open(ART / 'previous-16.png').convert('RGBA')
++    # The requested edit preserves the original logical cells and five stone shades.
++    # Collapse generated shading/edge noise into one diamond shade per accent role.
++    roles = ((100, 39, 159), (193, 118, 239), (244, 194, 251))
++    diamond = Image.open(ART / 'vanilla-diamond.png').convert('RGBA')
++    palette = sorted({p[:3] for p in diamond.getdata() if p[3] and p[1] > p[0] + 20 and p[2] > p[0] + 20})
++    samples = {role: [] for role in roles}
+     for y in range(13):
+         for x in range(11):
+-            box = (round(x*region.width/11), round(y*region.height/13), round((x+1)*region.width/11), round((y+1)*region.height/13))
+-            values = [[], []]
+-            for py in range(box[1], box[3]):
+-                for px in range(box[0], box[2]):
+-                    rgb = region.getpixel((px, py))
+-                    if rgb[3] >= 128:
+-                        group = int(accent(rgb)); values[group].append(palettes[group].getpixel((px, py)))
+-            count = sum(map(len, values))
+-            if count*2 >= (box[2]-box[0])*(box[3]-box[1]):
+-                group = int(len(values[1])*4 >= count)
+-                out.putpixel((x+2, y+1), (*Counter(values[group]).most_common(1)[0][0], 255))
++            role = original.getpixel((x+2, y+1))[:3]
++            if role in samples:
++                pixel = region.getpixel((int((x+.5)*region.width/11), int((y+.5)*region.height/13)))
++                samples[role].append(pixel[:3])
++    exported = {}
++    for role, pixels in samples.items():
++        center = tuple(median(p[channel] for p in pixels) for channel in range(3))
++        exported[role] = min(palette, key=lambda shade: sum((shade[i]-center[i])**2 for i in range(3)))
++    assert len(set(exported.values())) == 3, 'Generated accent ramp collapsed'
++    out = original.copy()
++    for y in range(16):
++        for x in range(16):
++            pixel = original.getpixel((x,y))
++            if pixel[3] and pixel[:3] in exported:
++                out.putpixel((x,y), (*exported[pixel[:3]], 255))
+     return out
+ 
+ 

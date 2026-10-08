@@ -15,6 +15,12 @@ public interface SpellWorld {
     List<SpellSubject> select(TargetSpec target, SpellRuntime.Context context);
     /** Checks and spends the whole cost list atomically, excluding time already handled by the runtime. */
     boolean pay(List<SpellCost> costs, SpellRuntime.Context context);
+    /** Nontransactional adapters reject fallible sources before spending anything. */
+    default boolean payAndCommit(List<SpellCost> costs, SpellRuntime.Context context, CastReservation source) {
+        if (source instanceof CastReservation.Atomic || !pay(costs, context)) return false;
+        source.commit();
+        return true;
+    }
     boolean active(SpellRuntime.Context context);
     /** Activation gate checked before charge/payment and before continuation input. */
     default boolean canActivate(java.util.UUID actor, com.quzzar.vestige.magic.definition.MagicDefinition definition) { return true; }

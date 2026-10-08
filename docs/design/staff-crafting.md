@@ -4,6 +4,8 @@
 
 ## Accepted rules
 
+**Item-name rarity, owner approved October 8:** magical Staffs use native Uncommon/yellow across all affinities, capacities and selected scrolls. Mundane Staffs remain Common/white. This presentation tier is independent of the source spell rarity used for wear; see the [shared item-name policy](item-imbuement-and-readiness.md#accepted-item-name-rarities).
+
 A staff is permanently tied to one namespaced trait and holds related native spells. A scroll can enter it only after the inserting player has identified its spell and only if that spell has a positive native base rating in the staff's trait. A Fire staff accepts identified Fire/Evocation scrolls, for example. Schools are ordinary traits. Fire 1 and Fire 4 both qualify; trait magnitude and rarity are not staff ranks. Stored augments or equipment contributions cannot add an otherwise missing qualifying trait.
 
 The owner explicitly accepted these choices:

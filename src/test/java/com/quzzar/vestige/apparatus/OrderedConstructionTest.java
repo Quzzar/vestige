@@ -22,25 +22,38 @@ class OrderedConstructionTest {
         return seats;
     }
     @Test void publicDisplaysDescribeTheActualOrderedPatternsAndTheShardStaysUnordered() {
-        for(var entry:List.of(RitualDisplays.homeboundEye(),RitualDisplays.whisperingShell(),RitualDisplays.fluxedFlint())) {
+        for(var entry:List.of(RitualDisplays.homeboundEye(),RitualDisplays.whisperingShell(),RitualDisplays.fluxedFlint(),RitualDisplays.dissentientDiamond())) {
             assertFalse(entry.shapeless());assertEquals(4,entry.capacity());
             var shown=new ArrayList<>(Collections.nCopies(8,ItemStack.EMPTY));
             entry.offerings().forEach(o->shown.set(o.seat(),RitualDisplays.alternatives(o.ingredient()).getFirst()));
             if(shown.getFirst().is(ScrollItems.ATTUNEMENT_SHARD.get())) shown.set(0,shard());
             if(entry.output().is(ScrollItems.HOMEBOUND_EYE.get())) assertTrue(HomeboundEyeRecipe.matches(shown));
             else if(entry.output().is(ScrollItems.WHISPERING_SHELL.get())) assertTrue(WhisperingShellRecipe.result(shown).isPresent());
+            else if(entry.output().is(ScrollItems.DISSENTIENT_DIAMOND.get())) assertTrue(DissentientDiamondRecipe.create(shown).isPresent());
             else assertTrue(FluxedFlintRecipe.create(shown).isPresent());
         }
         assertTrue(RitualDisplays.shard().shapeless());
     }
-    @Test void homeboundAndFlintAcceptFourRotationsButRejectReflectionsPermutationsAndInvalidBindings() {
+    @Test void homeboundAndFlintAcceptFourRotationsButRejectWrongPositionsAndInvalidBindings() {
         for(int rotation=0;rotation<4;rotation++) {
             var eye=seats(HomeboundEyeRecipe.ingredients(),rotation); assertTrue(HomeboundEyeRecipe.matches(eye));
             var flint=seats(FluxedFlintRecipe.ingredients(),rotation);assertTrue(FluxedFlintRecipe.create(flint).isPresent());
             Collections.swap(eye,(rotation*2+2)%8,(rotation*2+6)%8);assertFalse(HomeboundEyeRecipe.matches(eye));
-            Collections.swap(flint,(rotation*2+2)%8,(rotation*2+6)%8);assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
+            Collections.swap(flint,(rotation*2)%8,(rotation*2+2)%8);assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
         }
         var invalid=seats(HomeboundEyeRecipe.ingredients(),0);invalid.set(0,new ItemStack(ScrollItems.ATTUNEMENT_SHARD.get()));assertFalse(HomeboundEyeRecipe.matches(invalid));
+    }
+    @Test void diamondAndFlintRequireSeparateDuplicateOfferingsAndRetireTheOldComposition() {
+        for(int rotation=0;rotation<4;rotation++) {
+            var diamond=seats(DissentientDiamondRecipe.ingredients(),rotation);
+            assertEquals(1,DissentientDiamondRecipe.create(diamond).orElseThrow().getCount());
+            Collections.swap(diamond,rotation*2,(rotation*2+2)%8);assertTrue(DissentientDiamondRecipe.create(diamond).isEmpty());
+        }
+        var diamond=seats(DissentientDiamondRecipe.ingredients(),0);diamond.set(2,new ItemStack(Items.GUNPOWDER,2));diamond.set(6,ItemStack.EMPTY);
+        assertTrue(DissentientDiamondRecipe.create(diamond).isEmpty());
+        var flint=seats(FluxedFlintRecipe.ingredients(),0);flint.set(2,new ItemStack(Items.NETHERITE_INGOT,2));flint.set(6,ItemStack.EMPTY);
+        assertTrue(FluxedFlintRecipe.create(flint).isEmpty());
+        assertTrue(FluxedFlintRecipe.create(seats(List.of(Items.FLINT,Items.DIAMOND_BLOCK,Items.NETHERITE_INGOT,Items.ECHO_SHARD),0)).isEmpty());
     }
     @Test void standingStoneRequiresOppositeShardAndPearlAndTwoSeparateMatchingBodies() {
         for(int rotation=0;rotation<4;rotation++) {
