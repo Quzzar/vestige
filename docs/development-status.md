@@ -1,5 +1,29 @@
 # Development status
 
+## October 9 · owner-approved unsupported Hourglass artwork
+
+The owner selected the clean in-game v3 Hourglass: glass bulbs with gold caps and no side supports. [The approval record](art/kairotic-hourglass-v3/approval.json) pins the unchanged 16×16 PNG, eight-color palette, source, model and native inventory view with the owner's wording. Native loaded resources and the texture already installed in Kithkyn Testing match the accepted PNG exactly. The authoring check now rejects drift from those approved hashes; subsequent pixel changes require a new revision.
+
+Fresh latest-main packaging/Kithkyn compatibility and **216 unit tests across 47 suites** pass. Every Hourglass resource/class matches the already-installed approved texture build. Existing installed Fractious Flint entries differ from the published baseline and remain preserved; this art release does not replace that testing JAR. [Release verification](art/kairotic-hourglass-v3/release-verification.json).
+
+This approval preserves the prior successful native/export/packaging evidence. Gameplay and imbuements are unchanged. The preceding installation receipt records the one-texture update, preservation of the later Flint package and retained backup. Publication is tracked separately.
+
+## October 9 · unsupported Hourglass texture in testing
+
+The owner requested removing the Hourglass side supports and aligning its game texture with the shown artwork. The [v3 review candidate](art/kairotic-hourglass-v3/README.md) has glass bulbs and gold caps, eight opaque shades and an actual padded 16×16 sprite. The co-loaded native client passed four assertions, with loaded PNG/model hashes matching production. Native export checks and packaging pass; the exact inventory framebuffer and enlarged crop show the game pixels.
+
+Kithkyn Testing still had v1. The requested update replaces **only the Hourglass PNG** in the latest installed PR #6 JAR, preserving every other archive entry, including the newer Flint imbuements. The reviewed model/texture match the installed resources, and the previous JAR is backed up. Restart Minecraft to load it. No new publication, final artwork acceptance or full world-suite rerun of the later installed bundle is claimed for this texture-only iteration.
+
+## October 8 · simpler Hourglass art review
+
+The owner rejected the first Hourglass sprite as too complex in Minecraft and requested a simpler version. The [v2 candidate](art/kairotic-hourglass-v2/README.md) uses broad brass/glass/sand clusters, six opaque shades and a 10×14 occupied footprint on the actual 16×16 canvas. Gameplay, imbuements and the ordinary item model are unchanged. Export padding/alpha/connectivity checks pass; the co-loaded native client passed four assertions and its exact loaded texture/model hashes match production. Inventory and held views were inspected, with a crisp enlarged inventory crop retained. This is an artwork review candidate, with no new publication, testing-pack installation or owner artwork acceptance claimed.
+
+## October 8 · final combined Hourglass and Flint shimmer installation
+
+The owner authorized the final Fluxed Flint package in the item-rarity chat. Its native enchantment shimmer is now included with the merged Kairotic Hourglass in **Kithkyn Testing**. The blue Flint art and all gameplay remain unchanged; the final JAR differs from the preceding Hourglass installation in **only `ScrollItems.class`**. [Final receipt and installation hashes](verification/combined-flint-shimmer-2026-10-08/README.md).
+
+**Verified:** fresh combined **211 unit tests across 46 suites**, packaging and Kithkyn compatibility. Four Flint classes and four resources match the five-assertion native preview. The unchanged gameplay retains the Hourglass shipment's **365 required Minecraft tests with Kithkyn**; no new local world-suite or co-loaded client run is claimed for the shimmer-only follow-up. Completed-package owner authorization supersedes the earlier pending Flint-art selection; Hourglass pixels remain a native-reviewed candidate. Restart Minecraft to load the final combined JAR.
+
 ## October 8 · Fluxed Flint crafted imbuements
 
 The owner authorized Fluxed Flint imbuements. Its existing ordered construction now accepts **Quartz Block in the Dissentient Diamond socket** for Stabilized and **Iron Block in either Netherite Ingot socket** for Reinforced. Their combination is Braced. The plain/Stabilized/Reinforced/Braced repair budgets are **128/96/192/144**, with intrinsic Flint backfire chances **10%/5%/15%/7.5%**. Shared bounded item selections, immutable trait resolution and complete adjective naming preserve one contribution per choice. Worn catalyst and repaired target metadata remain exact copies apart from damage; the retained-socket, rotation, duplicate and cancellation rules are covered by behavior tests.
