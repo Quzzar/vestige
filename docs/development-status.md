@@ -1,5 +1,13 @@
 # Development status
 
+## October 9 · Fractious Fluxed Flint
+
+The owner approved a stronger, riskier repair imbuement. **Magma Block beneath the Flint offering** selects Fractious during construction: **50% target-max durability per activation and 20% intrinsic Flint backfire chance**, with unchanged total budget and exactly one Flint point spent per restored point. Missing damage and remaining budget still cap the actual transfer. The choice composes with Stabilized/Reinforced in all eight sets, including Restive, Audacious and Impetuous full-set names. Exact saved target/catalyst components, old variant identities, public recipe IDs and the shared independent-input failure rule are preserved.
+
+**Verified:** **217 model tests across 47 suites, all 376 required Minecraft tests with Kithkyn, packaging and compatibility**, plus **13 native assertions and five inspected client frames**. Eight rotated construction patterns, three retained selectors, forty-point transfer, all cap/damage/budget limits, exact save/load and higher-risk failure are covered. Naming/Spellshaping checks and 490 leyline fixtures pass. Seven changed packaged classes and the loaded Flint assets match tested files. The cleanup assertion was corrected to run after the existing explosion animation; an interrupted rerun is distinct from the final complete pass. [Evidence and hashes](verification/fractious-flint-2026-10-09/README.md).
+
+The update is installed in **Kithkyn Testing** with a verified backup and preserves the Hourglass chat's existing texture preview; all release classes/data match the installed package. Restart Minecraft to load it. Flint artwork, rarity and shimmer remain unchanged. Optional viewer screens, hovered-tooltip pixels and survival tuning remain follow-up.
+
 ## October 8 · Fluxed Flint crafted imbuements
 
 The owner authorized Fluxed Flint imbuements. Its existing ordered construction now accepts **Quartz Block in the Dissentient Diamond socket** for Stabilized and **Iron Block in either Netherite Ingot socket** for Reinforced. Their combination is Braced. The plain/Stabilized/Reinforced/Braced repair budgets are **128/96/192/144**, with intrinsic Flint backfire chances **10%/5%/15%/7.5%**. Shared bounded item selections, immutable trait resolution and complete adjective naming preserve one contribution per choice. Worn catalyst and repaired target metadata remain exact copies apart from damage; the retained-socket, rotation, duplicate and cancellation rules are covered by behavior tests.

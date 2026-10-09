@@ -18,9 +18,9 @@ class FluxedFlintImbuementsTest {
         return new RitualInputs(GEOMETRY, java.util.stream.IntStream.range(0, 4).mapToObj(i ->
                 new RitualInputs.Node(i * 2, GEOMETRY.offset(i * 2), offerings.get(i), materials.get(i))).toList());
     }
-    @Test void allFourPublicPatternsMatchEveryRotationIncludingEitherReinforcedIngot() {
+    @Test void allEightPublicPatternsMatchEveryRotationIncludingEitherReinforcedIngot() {
         var displays = new ArrayList<>(List.of(RitualDisplays.fluxedFlint())); displays.addAll(FluxedFlintDisplays.entries());
-        assertEquals(4, displays.size());
+        assertEquals(8, displays.size());
         for (var display : displays) for (boolean otherIngot : List.of(false, true)) {
             var offerings = display.offerings().stream().map(o -> new ItemStack(BuiltInRegistries.ITEM.get(o.ingredient().items().getFirst()))).toList();
             var materials = new ArrayList<ItemStack>(Collections.nCopies(4, ItemStack.EMPTY));
@@ -33,10 +33,11 @@ class FluxedFlintImbuementsTest {
         }
     }
     @Test void exactTradeoffsAndCompleteNamesComposeOnce() {
-        int[] budgets = {128, 96, 192, 144}; double[] chances = {.1, .05, .15, .075};
-        String[] adjectives = {"", "Stabilized", "Reinforced", "Braced"};
-        for (int i = 0; i < 4; i++) {
+        int[] budgets = {128, 96, 192, 144, 128, 96, 192, 144}; double[] chances = {.1, .05, .15, .075, .2, .1, .3, .15};
+        String[] adjectives = {"", "Stabilized", "Reinforced", "Braced", "Fractious", "Restive", "Audacious", "Impetuous"};
+        for (int i = 0; i < 8; i++) {
             var v = FluxedFlintImbuements.variants().get(i); var stack = FluxedFlintImbuements.create(v);
+            assertEquals(i < 4 ? .25 : .5, v.repairFraction()); assertEquals(i < 4 ? 21 : 41, v.repairCap(81));
             assertEquals(budgets[i], stack.getMaxDamage()); assertEquals(v, FluxedFlintImbuements.read(stack).orElseThrow());
             assertEquals(chances[i], ForfeitPolicy.DEFAULT.chance(RitualVolatility.traits(stack), true), 1e-12);
             assertEquals(adjectives[i].isEmpty() ? List.of() : List.of(adjectives[i]), MagicAdjectives.words(FluxedFlintImbuements.FAMILY, v.selections()));
@@ -44,6 +45,14 @@ class FluxedFlintImbuementsTest {
             assertTrue(stack.hasFoil());
         }
         assertEquals(2, FluxedFlintItem.TRAITS.rating(SpecialTraits.VOLATILE));
+    }
+    @Test void fractiousSelectsOnlyTheFlintOfferingAndUsesAnAcceptedSocket() {
+        var choice = FluxedFlintImbuements.Choice.FRACTIOUS;
+        assertTrue(Spellshaping.isImbuementMaterial(choice.material));
+        assertTrue(choice.matches(new ItemStack(Items.FLINT), choice.material));
+        assertFalse(choice.matches(new ItemStack(Items.NETHERITE_INGOT), choice.material));
+        assertFalse(choice.matches(new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get()), choice.material));
+        assertFalse(choice.matches(new ItemStack(Items.FLINT), FluxedFlintImbuements.Choice.REINFORCED.material));
     }
     @Test void duplicatesAndRecognizedIncompatiblePairsRejectWithoutRewritingInputs() {
         var offerings = FluxedFlintRecipe.ingredients().stream().map(ItemStack::new).toList();

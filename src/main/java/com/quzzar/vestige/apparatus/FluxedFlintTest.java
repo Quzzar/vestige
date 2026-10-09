@@ -45,6 +45,66 @@ public final class FluxedFlintTest {
         return layout;
     }
     @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void fractiousCombinesAllThreeSocketsThroughRotatedConstruction(GameTestHelper h) {
+        var center=structure(h,true);var layout=LeylineStructure.find(center,4).getFirst();
+        for(int i=0;i<4;i++) layout.stands().get((i*2+2)%8).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
+        layout.stands().get(2).installMaterial(new ItemStack(Items.MAGMA_BLOCK));
+        layout.stands().get(0).installMaterial(new ItemStack(Items.IRON_BLOCK));
+        layout.stands().get(6).installMaterial(new ItemStack(Items.QUARTZ_BLOCK));
+        var outer=(OfferingBlockEntity)h.getBlockEntity(CENTER.offset(GEOMETRY.offset(1)));outer.insert(new ItemStack(Items.PAPER));
+        h.assertTrue(RitualCrafting.activate(player(h),center,()->{throw new AssertionError("Construction ingredients rolled");})==RitualCrafting.Outcome.CRAFTING,"Three-choice construction rejected");
+        h.runAfterDelay(45,()->{
+            h.assertTrue(ItemStack.matches(FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(7)),RitualTestOutput.stack(center)),"Three choices did not compose");
+            h.assertTrue(layout.items().stream().allMatch(ItemStack::isEmpty) && outer.displayedItem().is(Items.PAPER),"Wrong layer consumed");
+            h.assertTrue(layout.stands().get(2).materialItem().is(Items.MAGMA_BLOCK) && layout.stands().get(0).materialItem().is(Items.IRON_BLOCK) && layout.stands().get(6).materialItem().is(Items.QUARTZ_BLOCK),"Construction consumed selectors");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void fractiousRepairTransfersFortyPointsAndPreservesCompleteSavedComponents(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(4));catalyst.setDamageValue(5);
+        CustomData.update(DataComponents.CUSTOM_DATA,catalyst,tag -> tag.putString("unrelated","keep"));
+        catalyst.set(DataComponents.CONTAINER,ItemContainerContents.fromItems(List.of(new ItemStack(Items.DIAMOND,2))));
+        catalyst=ItemStack.parse(h.getLevel().registryAccess(),catalyst.save(h.getLevel().registryAccess())).orElseThrow();
+        var before=catalyst.copy();var target=staff();target.setDamageValue(59);var layout=offer(h,target,catalyst);
+        h.assertTrue(RitualCrafting.activate(player(h),layout.center(),()->.21)==RitualCrafting.Outcome.CRAFTING,"Valid Fractious repair rejected");
+        h.runAfterDelay(45,()->{
+            var expected=target.copy();expected.setDamageValue(19);var worn=before.copy();worn.setDamageValue(45);
+            h.assertTrue(ItemStack.matches(expected,RitualTestOutput.stack(layout.center())),"Target did not preserve components with forty-point repair");
+            h.assertTrue(ItemStack.matches(worn,layout.stands().get(0).displayedItem()),"Catalyst did not spend exactly forty points");
+            var saved=ItemStack.parse(h.getLevel().registryAccess(),worn.save(h.getLevel().registryAccess())).orElseThrow();
+            h.assertTrue(ItemStack.matches(worn,saved) && FluxedFlintImbuements.read(saved).orElseThrow().repairFraction()==.5 && saved.getMaxDamage()==128,"Reload changed Fractious budget or transfer cap");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void fractiousBackfireUsesHigherRiskAndPreservesExactTriggerWithoutWear(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(4));catalyst.setDamageValue(17);
+        CustomData.update(DataComponents.CUSTOM_DATA,catalyst,tag -> tag.putString("unrelated","keep"));
+        var layout=offer(h,staff(),catalyst);
+        // Fifteen percent passes ordinary Flint's roll and fails Fractious Flint's roll.
+        h.assertTrue(RitualCrafting.activate(player(h),layout.center(),()->.15)==RitualCrafting.Outcome.EXPLOSION_PENDING,"Fractious did not increase risk");
+        h.runAfterDelay(35,()->{
+            h.assertTrue(ItemStack.matches(catalyst,layout.stands().get(0).displayedItem()),"Backfire damaged or reconstructed its trigger");
+            h.assertTrue(layout.stands().get(4).displayedItem().isEmpty() && RitualTestOutput.stack(layout.center()).isEmpty(),"Backfire kept target or produced a repair");
+            h.assertTrue(h.getBlockEntity(CENTER)==layout.center() && !layout.center().busy(),"Backfire damaged apparatus or leaked reservation");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint")
+    public static void allEightVariantsRoundCapsAndLimitTransfersToDamageAndRemainingBudget(GameTestHelper h) {
+        var seats=new ArrayList<ItemStack>(Collections.nCopies(8,ItemStack.EMPTY));
+        for(int i=0;i<8;i++) {
+            var variant=FluxedFlintImbuements.variants().get(i);var target=staff();target.set(DataComponents.MAX_DAMAGE,81);target.setDamageValue(59);
+            var catalyst=FluxedFlintImbuements.create(variant);seats.set(7,target);seats.set(1,catalyst);
+            var repair=FluxedFlintRecipe.repair(seats).orElseThrow();int restored=i<4 ? 21 : 41;
+            h.assertTrue(repair.output().getDamageValue()==59-restored && repair.remainingCatalyst().getDamageValue()==restored,"Variant cap rounding or one-to-one wear failed");
+            target.setDamageValue(3);repair=FluxedFlintRecipe.repair(seats).orElseThrow();
+            h.assertTrue(repair.output().getDamageValue()==0 && repair.remainingCatalyst().getDamageValue()==3,"Repair overspent missing damage");
+            target.setDamageValue(59);catalyst.setDamageValue(variant.durability()-7);repair=FluxedFlintRecipe.repair(seats).orElseThrow();
+            h.assertTrue(repair.output().getDamageValue()==52 && repair.remainingCatalyst().isEmpty(),"Repair overspent remaining Flint budget");
+            h.assertTrue(target.getDamageValue()==59 && catalyst.getDamageValue()==variant.durability()-7,"Planning mutated offered inputs");
+        }
+        h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
     public static void combinedImbuementsCraftWithEitherIngotAndRetainSocketsAndInactiveOuterItems(GameTestHelper h) {
         var center=structure(h,true);var layout=LeylineStructure.find(center,4).getFirst();
         for(int i=0;i<4;i++) layout.stands().get((i*2+2)%8).insert(new ItemStack(FluxedFlintRecipe.ingredients().get(i)));
@@ -62,8 +122,8 @@ public final class FluxedFlintTest {
     @GameTest(template="empty_9x3x9",batch="fluxed_flint")
     public static void allImbuedRiskBoundariesUseSharedIndependentVolatilityAndProtectTheTrigger(GameTestHelper h) {
         var center=structure(h,true);var layout=LeylineStructure.find(center,8).getFirst();
-        double[] chances={.1,.05,.15,.075};
-        for(int i=0;i<4;i++) {
+        double[] chances={.1,.05,.15,.075,.2,.1,.3,.15};
+        for(int i=0;i<8;i++) {
             double chance=chances[i];var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(i));
             layout.stands().get(1).insert(catalyst);layout.stands().get(7).insert(staff());var inputs=RitualInputs.capture(layout);
             h.assertTrue(RitualVolatility.culprit(ItemStack.EMPTY,inputs,List.of(7,1),0,()->Math.nextUp(chance)).isEmpty(),"Above variant boundary backfired");

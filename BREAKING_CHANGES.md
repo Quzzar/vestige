@@ -1,5 +1,9 @@
 # Breaking changes
 
+## October 9, 2026: Fractious Fluxed Flint
+
+Flint / Magma Block now selects the third craft-time imbuement, Fractious. It doubles the target-relative repair cap from 25% to 50% and intrinsic volatility from 10% to 20%, retaining the total budget and one-to-one wear. It composes with Stabilized/Reinforced in eight exact sets; Restive, Audacious and Impetuous name the new combinations. Existing saved variants, budgets and public recipe IDs remain unchanged. No migration or refill is introduced. Both optional viewers derive all eight construction patterns from the live palette. Matching client/server builds are required for the new selection.
+
 ## October 8, 2026: crafted Fluxed Flint imbuements
 
 Fluxed Flint construction now compiles retained local socket selections: Dissentient Diamond / Quartz selects Stabilized, and either Netherite Ingot / Iron selects Reinforced. The four exact variants have 128/96/192/144 repair points and 10/5/15/7.5% intrinsic failure chances. Existing ordinary stacks remain valid without rewriting or migration. Imbued stacks store shared bounded item selections and an authored maximum-durability component; invalid selections or forged budgets reject repair. Names use the shared adjective catalog, including Braced for the full combination. Base ingredients, artwork, rarity, shimmer, operation cap, exact copies and independent volatility order remain unchanged. Optional recipe viewers add three public variant patterns.
