@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "kind": "Unsupported-hourglass artwork iteration",
+  "ownerRequest": "Make an unsupported hourglass, or make the game texture match the photo preview.",
+  "builtinImageGeneration": true,
+  "source": "generated-source.png",
+  "fullPrompt": "prompt.txt",
+  "productionTexture": "src/main/resources/assets/vestige/textures/item/kairotic_hourglass.png",
+  "grid": [
+    16,
+    16
+  ],
+  "opaqueColors": 8,
+  "supports": "No side supports; glass bulbs and top/bottom caps only",
+  "native": "native/verification.json",
+  "ownerAcceptance": "Approved October 9; exact asset hashes pinned in approval.json",
+  "mechanicsChanged": false
+}

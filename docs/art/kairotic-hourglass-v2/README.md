@@ -1,0 +1,11 @@
+# Kairotic Hourglass · simplified native sprite
+
+**October 9 follow-up:** the owner requested an unsupported hourglass. The [v3 candidate](../kairotic-hourglass-v3/README.md) removes the side rails; v2 was not installed or selected as a final pixel baseline.
+
+**Owner revision request, October 8:** the first artwork looked overcomplicated and poor in the actual inventory. The owner requested a simpler sprite rather than a detailed drawing reduced into too few pixels. V1 remains historical evidence and is not an accepted visual baseline.
+
+This built-in image-generation revision removes the inset metal detailing and scattered glass highlights. The actual `kairotic_hourglass.png` is 16×16 RGBA, occupies 10×14 cells, and uses six opaque shades within a seven-shade budget (three brass, two glass and two teal sand slots). Broad material clusters, a clear waist and transparent padding take priority over surface detail. The unchanged ordinary item model supplies native Minecraft scale.
+
+`prompt.txt` retains the complete generation request; `generated-source.png` is the source concept, not a game screenshot. `tools/author_hourglass_texture.py` exports each native cell from its dominant source material and shade. Separating brass, glass and sand palettes prevents the small teal region from being merged into gold/gray. No dither, smoothing, hand-painted corrections or new decorative pixels are applied. `export.json` pins the exact settings and output hash; `native-pixels-enlarged.png` shows those same production pixels on light/dark backdrops.
+
+The actual Minecraft 1.21.1/NeoForge client with Kithkyn loaded shows the exact new pixels in the [ordinary inventory](native/inventory-beside-vanilla.png), [2× nearest-neighbor menu crop](native/inventory-zoom.png) and [held item](native/held-hourglass.png). All four native assertions pass, including a real partial-history return with sixty mana and one wear. Loaded texture/model hashes match production. No collision bypass was used. `native/client.log.gz` retains the co-loaded run. The revision is a review candidate, not owner-approved artwork. Native client evidence and loaded resource hashes are recorded in `native/verification.json`. Gameplay, recipe, imbuements and item model are unchanged. No publication or testing-pack installation is claimed by this artwork revision.

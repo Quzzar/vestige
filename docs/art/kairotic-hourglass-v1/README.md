@@ -1,5 +1,7 @@
 # Kairotic Hourglass · first native sprite
 
+**Owner rejected the in-game appearance, October 8.** The drawing was too complex after reduction into native pixels. The requested [simpler revision](../kairotic-hourglass-v2/README.md) supersedes this review candidate; its historical implementation/capture records remain intact.
+
 Independent generated antique brass/gold hourglass with pale glass and echo-colored sand. The frame references the ordinary Clock's material language, with the Echo Shard/Ender Pearl family informing the sand. The [retained generated concept](generated-source.png) is a larger source study; the actual [production texture](kairotic_hourglass.png) is **16×16 RGBA**, with a one-pixel transparent margin and restrained twelve-color opaque-source palette. The eight-by-fourteen occupied export preserves the source's proportions.
 
 `tools/author_hourglass_texture.py` reproduces the nondithered dominant-cell export through the already-used item exporter. `--check` verifies exact pixels, native dimensions, hard alpha, padding and connectivity. [Export settings and hash](export.json), [integer enlargement](native-pixels-enlarged.png), [same-grid vanilla comparison](native-pixel-reference-board.png) and pinned local vanilla references in `vanilla/` distinguish production pixels from the concept. No vanilla pixels were copied into the new item.

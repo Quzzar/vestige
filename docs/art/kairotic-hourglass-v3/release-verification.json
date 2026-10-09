@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-09",
+  "tests": {
+    "tests": 217,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 47
+  },
+  "build": "BUILD SUCCESSFUL in 40s; build verifyKithkynCompatibility",
+  "publicationBase": "5667e782107b504faace418dc5197521667f82be",
+  "jarSha256": "79a18f92e4f4c5059da96073e0bbb113353d6e893f2ac84acccb170a1ef725a8",
+  "installedJarSha256": "bdc8c590c05251fff768fbaee605323b81182b292826a8ce9d993180c99d8cd3",
+  "allInstalledJarEntryContentsEqualBuiltJar": true,
+  "matchedArchiveEntries": 3712,
+  "approvedTexture": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33",
+  "approvedModel": "530d68174feb0a09633dca751bc31a8438176e399c7878a08dec986275011e46",
+  "acceptance": "approval.json",
+  "nativeEvidence": "Four native assertions with Kithkyn and exact loaded texture/model agreement retained in native/verification.json; no new client/world-suite rerun for acceptance bookkeeping",
+  "note": "Latest published Fractious Flint changes are included. Every archive entry matches the already-installed combined testing package; archive container hashes differ. No additional pack replacement was needed."
+}

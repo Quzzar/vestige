@@ -1,0 +1,29 @@
+{
+  "source": "generated-source.png",
+  "source_crop": [
+    335,
+    119,
+    919,
+    1134
+  ],
+  "grid": [
+    16,
+    16
+  ],
+  "occupied_grid": [
+    8,
+    14
+  ],
+  "position": [
+    4,
+    1
+  ],
+  "palette_limit": 8,
+  "alpha": "hard",
+  "method": "separate brass/glass/sand 3/3/2 shade ramps; dominant material and shade per logical cell; no dithering; 40% coverage",
+  "production_sha256": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33",
+  "art_status": "Owner-approved October 9; exact native and installed texture match",
+  "native_verification": "native/verification.json",
+  "actual_opaque_colors": 8,
+  "approval": "approval.json"
+}

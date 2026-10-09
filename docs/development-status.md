@@ -1,5 +1,23 @@
 # Development status
 
+## October 9 · owner-approved unsupported Hourglass artwork
+
+The owner selected the clean in-game v3 Hourglass: glass bulbs with gold caps and no side supports. [The approval record](art/kairotic-hourglass-v3/approval.json) pins the unchanged 16×16 PNG, eight-color palette, source, model and native inventory view with the owner's wording. Native loaded resources and the texture already installed in Kithkyn Testing match the accepted PNG exactly. The authoring check now rejects drift from those approved hashes; subsequent pixel changes require a new revision.
+
+Fresh packaging/Kithkyn compatibility with the published Fractious Flint release and **217 unit tests across 47 suites** pass. Every archive entry in the final build matches the already-installed combined testing package, including the exact approved Hourglass texture; no further pack replacement was needed. [Release verification](art/kairotic-hourglass-v3/release-verification.json).
+
+This approval preserves the prior successful native/export/packaging evidence. Gameplay and imbuements are unchanged. The preceding installation receipt records the one-texture update, preservation of the later Flint package and retained backup. Publication is tracked separately.
+
+## October 9 · unsupported Hourglass texture in testing
+
+The owner requested removing the Hourglass side supports and aligning its game texture with the shown artwork. The [v3 review candidate](art/kairotic-hourglass-v3/README.md) has glass bulbs and gold caps, eight opaque shades and an actual padded 16×16 sprite. The co-loaded native client passed four assertions, with loaded PNG/model hashes matching production. Native export checks and packaging pass; the exact inventory framebuffer and enlarged crop show the game pixels.
+
+Kithkyn Testing still had v1. The requested update replaces **only the Hourglass PNG** in the existing combined testing JAR, preserving every other archive entry, including the newer Flint imbuements. The reviewed model/texture match the installed resources, and the previous JAR is backed up. Restart Minecraft to load it. No new publication, final artwork acceptance or full world-suite rerun of the later installed bundle is claimed for this texture-only iteration.
+
+## October 8 · simpler Hourglass art review
+
+The owner rejected the first Hourglass sprite as too complex in Minecraft and requested a simpler version. The [v2 candidate](art/kairotic-hourglass-v2/README.md) uses broad brass/glass/sand clusters, six opaque shades and a 10×14 occupied footprint on the actual 16×16 canvas. Gameplay, imbuements and the ordinary item model are unchanged. Export padding/alpha/connectivity checks pass; the co-loaded native client passed four assertions and its exact loaded texture/model hashes match production. Inventory and held views were inspected, with a crisp enlarged inventory crop retained. This is an artwork review candidate, with no new publication, testing-pack installation or owner artwork acceptance claimed.
+
 ## October 9 · Fractious Fluxed Flint
 
 The owner approved a stronger, riskier repair imbuement. **Magma Block beneath the Flint offering** selects Fractious during construction: **50% target-max durability per activation and 20% intrinsic Flint backfire chance**, with unchanged total budget and exactly one Flint point spent per restored point. Missing damage and remaining budget still cap the actual transfer. The choice composes with Stabilized/Reinforced in all eight sets, including Restive, Audacious and Impetuous full-set names. Exact saved target/catalyst components, old variant identities, public recipe IDs and the shared independent-input failure rule are preserved.
