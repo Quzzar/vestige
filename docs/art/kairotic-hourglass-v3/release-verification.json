@@ -1,45 +1,21 @@
 {
   "date": "2026-10-09",
   "tests": {
-    "suites": 47,
-    "tests": 216,
+    "tests": 217,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 0,
+    "suites": 47
   },
-  "build": "BUILD SUCCESSFUL in 51s; build verifyKithkynCompatibility",
-  "publicationBase": "500ae68c275e2743a7cf4b89e5a411548454b537",
-  "jarSha256": "daaf47b1c62e3967598c60236e108580b397b535c5aad2e96a517c02b66ad972",
+  "build": "BUILD SUCCESSFUL in 40s; build verifyKithkynCompatibility",
+  "publicationBase": "5667e782107b504faace418dc5197521667f82be",
+  "jarSha256": "79a18f92e4f4c5059da96073e0bbb113353d6e893f2ac84acccb170a1ef725a8",
   "installedJarSha256": "bdc8c590c05251fff768fbaee605323b81182b292826a8ce9d993180c99d8cd3",
-  "hourglassEntriesEqualBuiltJar": [
-    "com/quzzar/vestige/apparatus/HourglassData.class",
-    "com/quzzar/vestige/apparatus/KairoticHourglassItem.class",
-    "com/quzzar/vestige/apparatus/HourglassWorldTest.class",
-    "com/quzzar/vestige/apparatus/HourglassRecipe.class",
-    "com/quzzar/vestige/apparatus/HourglassMagic$Return.class",
-    "com/quzzar/vestige/apparatus/HourglassData$Choice.class",
-    "com/quzzar/vestige/apparatus/client/NativeHourglassCapture.class",
-    "com/quzzar/vestige/apparatus/recipeviewer/HourglassDisplays.class",
-    "com/quzzar/vestige/apparatus/HourglassMagic.class",
-    "com/quzzar/vestige/apparatus/HourglassData$Variant.class",
-    "com/quzzar/vestige/travel/PositionTrail.class",
-    "com/quzzar/vestige/travel/PositionTrail$Sample.class",
-    "data/vestige/item_abilities/kairotic_hourglass.json",
-    "assets/vestige/textures/item/kairotic_hourglass.png",
-    "assets/vestige/models/item/kairotic_hourglass.json"
-  ],
+  "allInstalledJarEntryContentsEqualBuiltJar": true,
+  "matchedArchiveEntries": 3712,
   "approvedTexture": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33",
-  "nativeEvidence": "Four native assertions with Kithkyn and exact loaded texture/model agreement retained in native/verification.json; no new client/world-suite rerun for acceptance bookkeeping",
+  "approvedModel": "530d68174feb0a09633dca751bc31a8438176e399c7878a08dec986275011e46",
   "acceptance": "approval.json",
-  "otherInstalledDifferencesPreserved": [
-    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class",
-    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class",
-    "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class",
-    "com/quzzar/vestige/apparatus/FluxedFlintTest.class",
-    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class",
-    "com/quzzar/vestige/apparatus/FluxedFlintImbuements.class",
-    "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class",
-    "data/vestige/magic_adjectives.json"
-  ],
-  "note": "The existing installed Flint package also includes Fractious and its combinations beyond the published PR #6 snapshot. The current testing JAR remains intact; this artwork publication does not install the source-built JAR or replace those other entries."
+  "nativeEvidence": "Four native assertions with Kithkyn and exact loaded texture/model agreement retained in native/verification.json; no new client/world-suite rerun for acceptance bookkeeping",
+  "note": "Latest published Fractious Flint changes are included. Every archive entry matches the already-installed combined testing package; archive container hashes differ. No additional pack replacement was needed."
 }

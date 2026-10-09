@@ -13,13 +13,17 @@ import java.util.*;
 public final class FluxedFlintImbuements {
     public static final ResourceLocation FAMILY = VestigeMainMod.location("fluxed_flint");
     public enum Choice {
-        STABILIZED("minecraft:quartz_block", 4), REINFORCED("minecraft:iron_block", 2);
+        STABILIZED("minecraft:quartz_block", 4), REINFORCED("minecraft:iron_block", 2), FRACTIOUS("minecraft:magma_block", 0);
         public final ResourceLocation material;
         public final int displaySeat;
         Choice(String material, int displaySeat) { this.material = ResourceLocation.parse(material); this.displaySeat = displaySeat; }
         public ResourceLocation id() { return VestigeMainMod.location("fluxed_flint/" + name().toLowerCase(Locale.ROOT)); }
         public boolean matches(ItemStack offering, ResourceLocation socket) {
-            return material.equals(socket) && (this == STABILIZED ? offering.is(ScrollItems.DISSENTIENT_DIAMOND.get()) : offering.is(Items.NETHERITE_INGOT));
+            return material.equals(socket) && switch (this) {
+                case STABILIZED -> offering.is(ScrollItems.DISSENTIENT_DIAMOND.get());
+                case REINFORCED -> offering.is(Items.NETHERITE_INGOT);
+                case FRACTIOUS -> offering.is(Items.FLINT);
+            };
         }
     }
     private static final Set<ResourceLocation> IDS = Arrays.stream(Choice.values()).map(Choice::id).collect(java.util.stream.Collectors.toUnmodifiableSet());
@@ -32,17 +36,22 @@ public final class FluxedFlintImbuements {
             return (int) Math.floor(FluxedFlintItem.DURABILITY * (choices.contains(Choice.STABILIZED) ? .75 : 1)
                     * (choices.contains(Choice.REINFORCED) ? 1.5 : 1) + .5);
         }
+        public double repairFraction() { return choices.contains(Choice.FRACTIOUS) ? .5 : .25; }
+        public int repairCap(int maximumDurability) { return Math.max(1, (int) Math.ceil(maximumDurability * repairFraction())); }
         public TraitProfile traits() {
             var modifiers = new ArrayList<TraitModifier>();
             if (choices.contains(Choice.STABILIZED)) modifiers.add(new TraitModifier(SpecialTraits.VOLATILE, TraitModifier.Operation.MULTIPLY, .5));
             if (choices.contains(Choice.REINFORCED)) modifiers.add(new TraitModifier(SpecialTraits.VOLATILE, TraitModifier.Operation.MULTIPLY, 1.5));
+            if (choices.contains(Choice.FRACTIOUS)) modifiers.add(new TraitModifier(SpecialTraits.VOLATILE, TraitModifier.Operation.MULTIPLY, 2));
             return FluxedFlintItem.TRAITS.resolve(modifiers);
         }
     }
     private FluxedFlintImbuements() { }
     public static List<Variant> variants() {
         return List.of(new Variant(Set.of()), new Variant(Set.of(Choice.STABILIZED)),
-                new Variant(Set.of(Choice.REINFORCED)), new Variant(Set.of(Choice.STABILIZED, Choice.REINFORCED)));
+                new Variant(Set.of(Choice.REINFORCED)), new Variant(Set.of(Choice.STABILIZED, Choice.REINFORCED)),
+                new Variant(Set.of(Choice.FRACTIOUS)), new Variant(Set.of(Choice.STABILIZED, Choice.FRACTIOUS)),
+                new Variant(Set.of(Choice.REINFORCED, Choice.FRACTIOUS)), new Variant(Set.of(Choice.STABILIZED, Choice.REINFORCED, Choice.FRACTIOUS)));
     }
     public static ItemStack create(Variant variant) {
         var stack = new ItemStack(ScrollItems.FLUXED_FLINT.get());

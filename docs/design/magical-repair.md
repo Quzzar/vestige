@@ -63,24 +63,33 @@ Intrinsic item traits come from `RitualTraitSource`. Flint resolves its immutabl
 | --- | --- | --- | --- |
 | Dissentient Diamond | Quartz Block | Stabilized | Volatile ×0.5; maximum repair budget ×0.75 |
 | Either Netherite Ingot | Iron Block | Reinforced | Maximum repair budget ×1.5; Volatile ×1.5 |
+| Flint | Magma Block | Fractious | Per-activation repair cap ×2; Volatile ×2; total budget unchanged |
 
-| Full item name | Total repair budget | Volatile | Flint's own backfire chance |
-| --- | ---: | ---: | ---: |
-| Fluxed Flint | 128 | 2 | 10% |
-| *Stabilized* Fluxed Flint | 96 | 1 | 5% |
-| *Reinforced* Fluxed Flint | 192 | 3 | 15% |
-| *Braced* Fluxed Flint | 144 | 1.5 | 7.5% |
+**Owner authorized October 9, 2026:** add a stronger, riskier repair choice. Fractious uses retained Magma beneath the Flint offering during the same construction. The 50% cap and doubled intrinsic volatility are initial implementation tuning. It raises the amount transferred in one activation without adding total repair points. A Flint-triggered backfire still preserves that exact Flint without wear and destroys the target.
 
-Both choices compose once. Braced is the shared catalog's exact full-set display alias, preserving both contributions; only the prefix is italic. Stabilization still risks losing a nontriggering target, and any volatile target retains its separate independent roll. These percentages describe the Flint input, not a promise about the total ritual risk.
+| Full item name | Total repair budget | Maximum repair per activation | Volatile | Flint's own backfire chance |
+| --- | ---: | ---: | ---: | ---: |
+| Fluxed Flint | 128 | 25% | 2 | 10% |
+| *Stabilized* Fluxed Flint | 96 | 25% | 1 | 5% |
+| *Reinforced* Fluxed Flint | 192 | 25% | 3 | 15% |
+| *Braced* Fluxed Flint | 144 | 25% | 1.5 | 7.5% |
+| *Fractious* Fluxed Flint | 128 | 50% | 4 | 20% |
+| *Restive* Fluxed Flint | 96 | 50% | 2 | 10% |
+| *Audacious* Fluxed Flint | 192 | 50% | 6 | 30% |
+| *Impetuous* Fluxed Flint | 144 | 50% | 3 | 15% |
 
-Quartz's stabilizing role is an explicitly authored Vestige crystal-structure convention for this one pairing, not an Iron fact or a universal material property. Iron's reinforcement role follows the established authored carrier-durability convention without adopting upstream quality values. Both blocks already belong to the accepted socket set. Whole rotations keep each offering/socket pair together. Either of the identical opposite ingot offerings can select Reinforced, but installing Iron on both rejects a duplicate degree-one contribution freely. Known spell-only offering/socket routes, such as Flint / Gold Block's Excavating, reject rather than consuming an ineffective imbuement. Unmatched decorative pairings remain neutral. Outer sockets and offerings stay inactive during four-slot construction.
+The cap uses the target's maximum durability and rounds upward; actual restoration is limited by missing durability and remaining Flint points. Every successful restored point spends exactly one Flint point. An 80-durability target can receive at most 20 points normally or 40 with Fractious in any combination. If it is missing only three points, either spends three. If the Flint has seven points left, either restores seven and breaks.
 
-Imbuements are selected while making a fresh catalyst; an existing Flint is never re-crafted or refilled. Plain existing stacks remain valid without rewriting their components. `ItemImbuements` stores trusted versioned IDs at degree one; coefficients and maximum budgets come from native code. Unknown IDs, duplicate selections, wrong family/degrees, mismatched maximum durability, unbreakable or exhausted stacks cannot repair. Invalid data conservatively retains the ordinary intrinsic volatility when offered in another ritual, rather than supplying a risk-free forged input. Successful repair copies the exact offered Flint and spends only restored points, retaining its selections, custom components and existing wear; save/load preserves the variant. The operation's 25% target cap is unchanged, and installed materials during repair do not modify a previously crafted catalyst.
+All three choices compose once. Braced combines Stabilized/Reinforced, Restive combines Stabilized/Fractious, Audacious combines Reinforced/Fractious, and Impetuous combines all three. Each is the shared catalog's exact full-set alias, preserving its complete contributions; only the prefix is italic. Stabilization still risks losing a nontriggering target, and any volatile target retains its separate independent roll. These percentages describe the Flint input, not a promise about the total ritual risk.
 
-All four public construction variants are derived from the same live palette in both optional recipe viewers. Their diagrams show the retained socket materials on the correct offering. Dynamic per-target repair outputs remain separate work.
+Quartz's stabilizing role is an explicitly authored Vestige crystal-structure convention for this one pairing, not an Iron fact or a universal material property. Iron's reinforcement role follows the established authored carrier-durability convention without adopting upstream quality values. Magma is a Vestige-local selector for this stronger, riskier transfer; this pairing does not assign generic volatility to the block or claim an upstream material effect. All three blocks already belong to the accepted socket set. Whole rotations keep each offering/socket pair together. Either of the identical opposite ingot offerings can select Reinforced, but installing Iron on both rejects a duplicate degree-one contribution freely. Known spell-only offering/socket routes, such as Flint / Gold Block's Excavating, reject rather than consuming an ineffective imbuement. Unmatched decorative pairings remain neutral. Outer sockets and offerings stay inactive during four-slot construction.
+
+Imbuements are selected while making a fresh catalyst; an existing Flint is never re-crafted or refilled. Plain existing stacks remain valid without rewriting their components. `ItemImbuements` stores trusted versioned IDs at degree one; coefficients and maximum budgets come from native code. Unknown IDs, duplicate selections, wrong family/degrees, mismatched maximum durability, unbreakable or exhausted stacks cannot repair. Invalid data conservatively retains the ordinary intrinsic volatility when offered in another ritual, rather than supplying a risk-free forged input. Successful repair copies the exact offered Flint and spends only restored points, retaining its selections, custom components and existing wear; save/load preserves the variant. The cap is 25% normally and 50% with Fractious, including its combinations. Installed materials during repair do not modify a previously crafted catalyst.
+
+All eight public construction variants are derived from the same live palette in both optional recipe viewers. Their diagrams show the retained socket materials on the correct offering. Dynamic per-target repair outputs remain separate work.
 
 ## Remaining design choices
 
-The expensive composition, base and imbued repair budgets, 25% operation cap and volatility trade-offs need survival playtesting. A public dynamic repair viewer presentation is also separate work: its exact output depends on the offered target's complete data, so it is not represented by a misleading fixed output recipe. Craft-time stabilization and reinforcement are implemented; no post-crafting upgrade/refill operation is introduced.
+The expensive composition, base and imbued repair budgets, 25%/50% operation caps and volatility trade-offs need survival playtesting. A public dynamic repair viewer presentation is also separate work: its exact output depends on the offered target's complete data, so it is not represented by a misleading fixed output recipe. Craft-time stabilization, reinforcement and Fractious transfer are implemented; no post-crafting upgrade/refill operation is introduced.
 
 Historical per-equipment Amethyst/Iron/thread repair proposals are superseded by this shared catalyst route. [Restoration folklore research](../research/magical-restoration-folklore.md) supplied thematic context; Fluxed Flint is an original name and mechanic, not a claim that folklore describes this exact object.

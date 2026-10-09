@@ -47,12 +47,12 @@ public final class FluxedFlintRecipe {
         var catalysts=used.stream().filter(i -> seats.get(i).is(ScrollItems.FLUXED_FLINT.get())).toList();
         if (catalysts.size()!=1) return Optional.empty();
         int catalyst=catalysts.getFirst(), target=used.getFirst()==catalyst ? used.getLast() : used.getFirst();
-        var stone=seats.get(catalyst); var original=seats.get(target);
+        var stone=seats.get(catalyst); var original=seats.get(target); var variant=FluxedFlintImbuements.read(stone);
         if (!original.is(REPAIRABLE) || original.is(ScrollItems.FLUXED_FLINT.get()) || !original.isDamageableItem() || !original.isDamaged()
-                || original.getDamageValue()>=original.getMaxDamage() || FluxedFlintImbuements.read(stone).isEmpty()) return Optional.empty();
+                || original.getDamageValue()>=original.getMaxDamage() || variant.isEmpty()) return Optional.empty();
         int budget=stone.getMaxDamage()-stone.getDamageValue();
         if (budget<=0) return Optional.empty();
-        int restored=Math.min(Math.min(original.getDamageValue(), Math.max(1,(int)Math.ceil(original.getMaxDamage()/4.0))),budget);
+        int restored=Math.min(Math.min(original.getDamageValue(), variant.orElseThrow().repairCap(original.getMaxDamage())),budget);
         // Copy the actual offered stack, never reconstruct an item or whitelist its components.
         var output=original.copy(); output.setDamageValue(original.getDamageValue()-restored);
         var remainder=stone.copy(); remainder.setDamageValue(stone.getDamageValue()+restored);

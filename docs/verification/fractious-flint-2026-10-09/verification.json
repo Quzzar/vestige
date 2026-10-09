@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-09",
+  "baseline": "500ae68c275e2743a7cf4b89e5a411548454b537",
+  "releaseSha256": "9e2824137d493fff998e76e4ffb9813ec635fc69c97ec5c56dc15fb74771b1b5",
+  "unitTests": 217,
+  "unitSuites": 47,
+  "requiredMinecraftTests": 376,
+  "nativeAssertions": 13,
+  "nativeFrames": 5,
+  "kithkynCoLoaded": true,
+  "spellshapingRules": 56,
+  "leylineFixtures": 490,
+  "adjectiveEntries": 82,
+  "adjectiveCombinations": 149,
+  "constructionPatterns": 8,
+  "changedJarEntries": [
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class",
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class",
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements.class",
+    "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class",
+    "com/quzzar/vestige/apparatus/FluxedFlintTest.class",
+    "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class",
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class",
+    "data/vestige/magic_adjectives.json"
+  ],
+  "packagedClassSha256": {
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class": "c290104576611e73f5c8bab536e3769befefe037ba17e64beb5c38a117f9e55a",
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class": "2067fa72fd6eea0d85ca45205650228c4a86eaa55d0c72f11fa5c65d29a1969c",
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements.class": "a53d4ab8300e8944b5913d2a5d536af4de1d31a01dfafc7918f2d8cd250e1377",
+    "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class": "0871fac5d69c212e6bb5927d79450a7554edca4864109d0cb9be95c454103ca2",
+    "com/quzzar/vestige/apparatus/FluxedFlintTest.class": "1c99d3d0bc38249cceffd8ae5bfcae0005e33a18dc4202665ca26e499a43f6d1",
+    "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class": "0a65ba7fb1e4bc13ca24e0813417622d8de7c77853b75cda27dec752b308a626",
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class": "88d528aa6cdab225394e0099a80068514c962ca1ac3c1c0edc195c5bd7b16194"
+  },
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintImbuements.java": "11cfa215e677ba3ed8de6721dd843b4d8bc68c457bf6ddb133b2a0390688f099",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "b1c32c3e646ff9c6e02a8696b3ba38de662ae5b038fd702bd75e3af96ef583fe",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "dfb1cf1cdb440bd75a584012c6a9ce6b57e1fe661e52460208141f6a6730864d",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "61dca2b009a2b4757a4215aa1699da7bfd0d30329a851e673a920b5dc99be6e3",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "a40eba6f74777ee8167c1be726ba3af8b2c0439c35e7a6c1046ea42fcdad4cde",
+    "src/main/resources/data/vestige/magic_adjectives.json": "32fc693ed2c6fc87fd797defc7939a3ca0979224c942831b0a4e8b12b6cfda25",
+    "src/test/java/com/quzzar/vestige/apparatus/FluxedFlintImbuementsTest.java": "621de217dce582c26304269cf529f6b5b67705b83ef391ed116182ed6480955d",
+    "tools/magic-adjective-policy.json": "a5e27e4ff11572e960a7d745a93b7894b9e86c87f9252374be4f8f8f399b62df"
+  },
+  "artworkChanged": false,
+  "initialAttempt": "The new backfire cleanup assertion ran at tick 25, before the existing 32-tick animation release. Only its scheduled check was corrected to tick 35; the fresh full world suite then passed.",
+  "limitations": [
+    "Optional JEI/EMI screens and hovered tooltip pixels were not inspected.",
+    "Budget, cap and risk are starting tuning pending survival playtesting."
+  ],
+  "diagnostics": "Raw diagnostic logs remain local outside the repository."
+}

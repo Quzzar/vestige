@@ -31,6 +31,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Fleeting | `vestige:hourglass/fleeting` — Implemented Kairotic Hourglass adjustment | Shorter positional recall at a lower mana price. |
 | Focused | `vestige:spellshaping/focused` — Implemented spell adjustment | Amplify ×1.12 per contribution. |
 | Forked | `vestige:spellshaping/forked` — Implemented spell adjustment | Increase a native projectile fan; existing hit and rider budgets remain shared. |
+| Fractious | `vestige:fluxed_flint/fractious` — Implemented Fluxed Flint adjustment | Double the per-activation restoration cap and intrinsic volatility; the total repair budget is unchanged. |
 | Freezing | `vestige:spellshaping/freezing` — Implemented spell adjustment | A sufficiently qualified cold impact builds a finite frozen state. |
 | Frugal | `vestige:spellshaping/frugal` — Implemented spell adjustment<br>`vestige:hourglass/frugal` — Implemented Kairotic Hourglass adjustment | Amplify ×0.85 per contribution.<br>Less activation mana with less carrier durability. |
 | Gathering | `vestige:spellshaping/gathering` — Implemented spell adjustment | Range ×1.2 per contribution. |
@@ -224,6 +225,9 @@ These names describe the exact complete set below. The underlying adjustments st
 | Forbearing | `vestige:kairotic_hourglass` | Enduring + Frugal + Fasting | Enduring + frugal + fasting; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
 | Contemplative | `vestige:kairotic_hourglass` | Enduring + Frugal + Erudite | Enduring + frugal + erudite; each authored contribution retains its own trade-off. Implemented Kairotic Hourglass adjustment. |
 | Braced | `vestige:fluxed_flint` | Stabilized + Reinforced | Stabilized + Reinforced; both budget and volatility factors compose once. Implemented Fluxed Flint adjustment. |
+| Restive | `vestige:fluxed_flint` | Stabilized + Fractious | Stabilized + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
+| Audacious | `vestige:fluxed_flint` | Reinforced + Fractious | Reinforced + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
+| Impetuous | `vestige:fluxed_flint` | Stabilized + Reinforced + Fractious | Stabilized + Reinforced + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
 
 ## Implemented mechanical compounds
 
@@ -252,7 +256,7 @@ These name five crafting components; they are not additional wand prefixes. Thei
 
 ## Scope and coverage
 
-Inventory: **63 distinct individual words**, **146 display combinations**, **six mechanical compounds**, **five thread component names**.
+Inventory: **64 distinct individual words**, **149 display combinations**, **six mechanical compounds**, **five thread component names**.
 
 Scrolls, bound wands and staff stored-scroll labels use one italic adjective for a mixture. Supported Homebound Eye payment routes use their individual adjective; its ordinary durability route keeps the plain title. Wayfarer uses its complete finite matrix. Hourglass names are reserved design entries, not implemented gameplay. Plain items, spell titles, rarity colors, affinity names, cosmetic finishes and attunement runes are not inferred into this catalog.
 
@@ -320,11 +324,15 @@ Ordinary / Greater / Grand are existing degree labels, not three different adjus
 | *Forbearing* Kairotic Hourglass (design only) | Enduring + Frugal + Fasting |
 | *Contemplative* Kairotic Hourglass (design only) | Enduring + Frugal + Erudite |
 
-`vestige:fluxed_flint` has exhaustive naming coverage for its **4** declared combinations, including the unmodified item and individual adjustments. Gameplay reachability is checked by its own recipe tests.
+`vestige:fluxed_flint` has exhaustive naming coverage for its **8** declared combinations, including the unmodified item and individual adjustments. Gameplay reachability is checked by its own recipe tests.
 
 | Full item name | Underlying adjustments |
 | --- | --- |
 | Fluxed Flint | None |
+| *Fractious* Fluxed Flint | Fractious |
 | *Reinforced* Fluxed Flint | Reinforced |
+| *Audacious* Fluxed Flint | Reinforced + Fractious |
 | *Stabilized* Fluxed Flint | Stabilized |
+| *Restive* Fluxed Flint | Stabilized + Fractious |
 | *Braced* Fluxed Flint | Stabilized + Reinforced |
+| *Impetuous* Fluxed Flint | Stabilized + Reinforced + Fractious |

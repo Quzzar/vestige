@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "pack": "Kithkyn Testing",
+  "releaseSha256": "9e2824137d493fff998e76e4ffb9813ec635fc69c97ec5c56dc15fb74771b1b5",
+  "installedSha256": "bdc8c590c05251fff768fbaee605323b81182b292826a8ce9d993180c99d8cd3",
+  "previousSha256": "99a5defdbddb3bbf89d77ab529aa3ef9c4e53b3e04b9c917149f85b5b4a64d71",
+  "backupRetained": true,
+  "restartRequired": true,
+  "preservedPreview": {
+    "entry": "assets/vestige/textures/item/kairotic_hourglass.png",
+    "sha256": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33"
+  },
+  "allReleaseClassesAndDataMatch": true,
+  "worldsChanged": false,
+  "otherModJarsChanged": false
+}
