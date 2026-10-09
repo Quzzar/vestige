@@ -1,0 +1,13 @@
+# Kairotic Hourglass · unsupported glass vessel
+
+**Owner-approved October 9.** [Exact texture, model, source and native screenshot hashes](approval.json) retain the owner's acceptance: “It looks kind of clean in game. Yeah, I like it.” The accepted pixels are unchanged.
+
+**Owner revision request, October 9:** try an unsupported hourglass and make the texture loaded by Minecraft match the shown artwork. V3 removes the vertical side rails entirely, leaving only the glass bulbs and gold top/bottom caps. The actual production sprite is **16×16 RGBA**, with eight opaque shades, a padded 8×14 footprint and broad glass/sand regions.
+
+The built-in image tool edited the prior native sprite; [the full prompt](prompt.txt) and [generated study](generated-source.png) are retained. The study is not a game screenshot. `tools/author_hourglass_texture.py` exports native cells from separate three-shade brass, three-shade glass and two-shade sand ramps without dithering, smoothing or painted corrections. Light blue glass is distinguished from darker teal sand during export. [The enlarged exact production pixels](native-pixels-enlarged.png) and `export.json` identify the real game texture, independently of the larger study.
+
+The actual client with Kithkyn loaded rendered these exact pixels in the [ordinary inventory](native/inventory-beside-vanilla.png); [the 2× nearest-neighbor menu crop](native/inventory-zoom.png) magnifies that framebuffer without repainting it. All four native assertions passed, including a real partial-history return spending sixty mana and one wear. Loaded model/texture hashes match production, the art checker passes and the clean artwork snapshot packages successfully. No collision bypass was used. Native/build logs and `native/verification.json` retain that evidence.
+
+**Testing-pack update:** the pack still contained v1. This candidate replaces only `assets/vestige/textures/item/kairotic_hourglass.png` in the latest installed PR #6 JAR. Exact archive comparison proves every other entry, including the later Fluxed Flint imbuements, is unchanged. The model equals the preview model; the installed texture equals the preview's loaded PNG. A timestamped backup is retained. [Installation receipt](installation.json). Restart Minecraft to load it.
+
+The owner selected this exact in-game texture on October 9. Publication is recorded separately from acceptance and installation. Gameplay, recipe, imbuements and item model are unchanged. The native capture used the clean approved Hourglass snapshot; no new full world-suite run of the later installed Flint bundle is claimed for this texture-only update.

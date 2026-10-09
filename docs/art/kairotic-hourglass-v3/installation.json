@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-09",
+  "pack": "Kithkyn Testing",
+  "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "sha256": "99a5defdbddb3bbf89d77ab529aa3ef9c4e53b3e04b9c917149f85b5b4a64d71",
+  "backupPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mod-backups/20261009-002747-hourglass-unsupported-preview/vestige-0.1.0.jar",
+  "previousSha256": "c2c625a2bcb5c1087e0765688b9a1f6e2d72af5b88dca526547564dada862751",
+  "baseRelease": "https://github.com/Quzzar/vestige/pull/6",
+  "method": "Preview-only replacement of one native item texture in the latest installed release; later Flint imbuements and all other content preserved",
+  "onlyChangedJarEntries": [
+    "assets/vestige/textures/item/kairotic_hourglass.png"
+  ],
+  "textureSha256": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33",
+  "modelUnchanged": true,
+  "restartRequired": true,
+  "userWorldsChanged": false,
+  "otherModJarsChanged": false,
+  "artAcceptance": "Review candidate; no new artwork approval or publication claimed"
+}

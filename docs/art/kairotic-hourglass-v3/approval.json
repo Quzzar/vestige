@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-09",
+  "status": "approved",
+  "ownerMessage": "Yeah, I want to see this in... actually, this doesn't look that bad in game. It looks kind of clean in game. Yeah, I like it.",
+  "textureSha256": "d9cd66e9c9408f3413719f05be8dde8f5fe98c581afae7c478a5a9376b4a6c33",
+  "modelSha256": "530d68174feb0a09633dca751bc31a8438176e399c7878a08dec986275011e46",
+  "sourceSha256": "2d72c40b208fb82605647e0ab932a71932efa95af8c3faf9690102aa5abe1979",
+  "nativeScreenshot": "native/inventory-zoom.png",
+  "nativeScreenshotSha256": "a6f4cd82ed5b089708aaae85b0c149b9aff9a7ab9c9f31aabae5aadf8ac53a46",
+  "grid": [
+    16,
+    16
+  ],
+  "opaqueColors": 8,
+  "design": "Unsupported glass hourglass, gold caps, no side rails",
+  "installedTextureMatches": true,
+  "acceptedPixelsChanged": false
+}

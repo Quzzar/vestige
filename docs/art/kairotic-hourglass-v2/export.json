@@ -1,0 +1,28 @@
+{
+  "source": "generated-source.png",
+  "source_crop": [
+    392,
+    235,
+    862,
+    1019
+  ],
+  "grid": [
+    16,
+    16
+  ],
+  "occupied_grid": [
+    10,
+    14
+  ],
+  "position": [
+    3,
+    1
+  ],
+  "palette_limit": 7,
+  "alpha": "hard",
+  "method": "separate brass/glass/sand 3/2/2 shade ramps; dominant material and shade per logical cell; no dithering; 40% coverage",
+  "production_sha256": "017bc2f3a9aecb8f6dd7eb421cd4cda4372e14b02245f80182be77e6ce808ac2",
+  "art_status": "Native client reviewed; owner acceptance pending",
+  "native_verification": "native/verification.json",
+  "actual_opaque_colors": 6
+}
