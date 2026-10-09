@@ -1,0 +1,142 @@
+{
+  "ownerAuthorization": "October 8: We did talk about potentially letting us imbue the flux flint. So you can do that.",
+  "base": "acda6c51de3c755568f4bf277781b16c03ab9c4c",
+  "variants": [
+    {
+      "name": "Fluxed Flint",
+      "budget": 128,
+      "volatile": 2,
+      "chance": 0.1
+    },
+    {
+      "name": "Stabilized Fluxed Flint",
+      "budget": 96,
+      "volatile": 1,
+      "chance": 0.05
+    },
+    {
+      "name": "Reinforced Fluxed Flint",
+      "budget": 192,
+      "volatile": 3,
+      "chance": 0.15
+    },
+    {
+      "name": "Braced Fluxed Flint",
+      "budget": 144,
+      "volatile": 1.5,
+      "chance": 0.075
+    }
+  ],
+  "rootVerification": {
+    "unitSuites": 47,
+    "unitTests": 216,
+    "failures": 0,
+    "errors": 0,
+    "build": "success",
+    "note": "Latest native capture harness and socket-change test are verified in the scoped release separately."
+  },
+  "authorChecks": [
+    "magic-adjectives",
+    "56 spellshaping rules",
+    "490 leyline parity fixtures"
+  ],
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintImbuements.java": "5efa7d89ef969ae1fd28b81430ed12cb11346eb88b941bbc8894e1edbe87431d",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintItem.java": "5b500dfe85787007b2394f47e9d76b86b878f2e1f5bf17ba8930f245ebe6d645",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintRecipe.java": "9d269d0e12e4c0f59aeaa260c582f9922e65c5082f35513fac0dc75e212fc562",
+    "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "a69fa5cb668c833168945dc79fbb596f3769a8aed3a6fdf4d4487533f4329b34",
+    "src/main/java/com/quzzar/vestige/apparatus/RitualCrafting.java": "507f3e1190ec3b396d55c9fc8a81fd96c651723e7711d59d6e682ec11f309354",
+    "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "3215a36ba19086c45ae817effde72a3e1c3579699c654b2dd8f8ad7c341bd70d",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/FluxedFlintDisplays.java": "286e0b10493f398445db3a7c176062393244556845c0102af2268cd19fdd728a",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.java": "6660cf9096b8e59fc17266f4ad4299034fd4bc1afa81a907176f307c38c2817a",
+    "src/main/java/com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.java": "52ba5a0661a1d638fc110647ab0b0ad242b55cf8734a2ef6cbc5c29a685003f2",
+    "src/test/java/com/quzzar/vestige/apparatus/FluxedFlintImbuementsTest.java": "3b78c2deeceee1d2b5b4c206088f4e1cf2b166072ff133e6ded8ba340952a6a3",
+    "tools/magic-adjective-policy.json": "55c925885cde95a4f8546e84e32c6ec1ef5167fea9bade8d134623361ca79cac",
+    "src/main/resources/data/vestige/magic_adjectives.json": "95e6f2d589f251f9a0f89ec4a4d23baedd263f340e010ac7e1c825be9023f125",
+    "src/main/java/com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.java": "8fa69de7fba83d074c35d8490579325780c90f2e971d6fee85da9304c4eaa00e"
+  },
+  "publication": {
+    "url": "https://github.com/Quzzar/vestige/pull/6",
+    "state": "draft",
+    "branch": "codex/fluxed-flint-imbuements",
+    "firstRevisionChecks": "build and cast-gallery passed"
+  },
+  "installation": {
+    "pack": "Kithkyn Testing",
+    "sha256": "c2c625a2bcb5c1087e0765688b9a1f6e2d72af5b88dca526547564dada862751",
+    "previousSha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+    "backupRetained": true,
+    "restartRequired": true,
+    "userWorldsChanged": false,
+    "otherModJarsChanged": false,
+    "installedAt": "2026-10-08T21:51:35.917736+00:00"
+  },
+  "package": {
+    "sha256": "c2c625a2bcb5c1087e0765688b9a1f6e2d72af5b88dca526547564dada862751",
+    "priorInstalledSha256": "9f72b19b864155c4045f02f06f0c2f9b90699a26231eca79f682f09e63327013",
+    "changedEntries": [
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintItem.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe$Repair.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class",
+      "com/quzzar/vestige/apparatus/FluxedFlintTest.class",
+      "com/quzzar/vestige/apparatus/RitualCrafting$BlastImpact.class",
+      "com/quzzar/vestige/apparatus/RitualCrafting$Pending.class",
+      "com/quzzar/vestige/apparatus/RitualCrafting.class",
+      "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class",
+      "com/quzzar/vestige/apparatus/recipeviewer/FluxedFlintDisplays.class",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class",
+      "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class",
+      "data/vestige/magic_adjectives.json"
+    ],
+    "allExistingAssetsUnchanged": true,
+    "newNativeClassesMatchJar": {
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Choice.class": "5f0192f076b82d0cc608289426d9747a125785bff2cc71db7626bee9e4192685",
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class": "9f4b282c9318bee9c14aad88ea6833b69f4985e2dae3ee7827cb6b5264f1dfb3",
+      "com/quzzar/vestige/apparatus/FluxedFlintImbuements.class": "5248805246c59b46b63ce764c5285c265d1ba3ee6413cc3d0146049ea418704e",
+      "com/quzzar/vestige/apparatus/FluxedFlintItem.class": "ca2a0326a1b94916513e611d0f071b947a142ee62bc81c77ac4df64c4db41754",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe$Repair.class": "bed75884857394d492d4529dc59d0bbb5d70c47b0f692f0a9d0d863362937387",
+      "com/quzzar/vestige/apparatus/FluxedFlintRecipe.class": "72dabb9926644c273f73517328c313cfb43e97c939373aa5079a200b9172d375",
+      "com/quzzar/vestige/apparatus/FluxedFlintTest.class": "aa4e3a9a24aeefebbbb77327ddc8405612b6b587d7accc418f12c5bdda271424",
+      "com/quzzar/vestige/apparatus/RitualCrafting$BlastImpact.class": "bd3160d54d8c3052353e40b8bd25d02af27e7f24920954fc0451c9a12ecf04d5",
+      "com/quzzar/vestige/apparatus/RitualCrafting$Pending.class": "9467e805bee23af9a5baa44f0779550020929176dac1d7b838a466ed70b8dc22",
+      "com/quzzar/vestige/apparatus/RitualCrafting.class": "cce263a207dfc9d2461e2098b3ebe5f4465f79a1556c0707bf20d0df3e17789c",
+      "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class": "cf52ba5cb32b41fa7747ba4921d848c5fc70ef2ee0b486b0b92aa36f935396a0",
+      "com/quzzar/vestige/apparatus/recipeviewer/FluxedFlintDisplays.class": "91ae4036ce10aa7acbb44f90e48c719613e6e2971bba0b93c750e1df9db7074f",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class": "be100a20175158af2c37b5dd8ad0a171b438390a5ad97caddb8e1b6d39deb5d3",
+      "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class": "e281f613314288af6e288359d7e178eeabb8b3cc6aaa2eb5e3142fe2bf2d4c82",
+      "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class": "b09c1fa553d6df0f26c3a48c3c47b6be173e99ad928e87196a091b791248c570"
+    },
+    "nativeLoadedAssetsMatchJar": true
+  },
+  "scopedVerification": {
+    "unitSuites": 47,
+    "unitTests": 216,
+    "failures": 0,
+    "errors": 0,
+    "requiredMinecraftTests": 372,
+    "worldResult": "All 372 required tests passed",
+    "withKithkyn": true,
+    "flintWorldCases": 21,
+    "newFlintWorldCases": 7,
+    "freshCompileWithoutBuildCache": true,
+    "nativePreview": "passed",
+    "combinedInvocation": "216 unit tests and 372 required world cases passed; packaging passed. Final isolated native invocation completed successfully after excluding the new mode from the general recorder.",
+    "limitations": [
+      "Optional JEI/EMI screens not opened",
+      "Survival balance remains initial playtest tuning"
+    ],
+    "nativeAssertions": 9,
+    "nativeFramesInspected": 5,
+    "nativeClientBuild": "success",
+    "nativeWithKithkyn": true,
+    "nativeLimitations": [
+      "No hovered tooltip is visible in the stored frames; exact translated names, rarity and glint are asserted in the actual client."
+    ],
+    "earlyAttempts": "Overlapping compilation and incomplete local cache fixed by fresh no-cache compilation. Initial native attempts were stopped; the new capture mode also activated the general recorder. The final recorder exclusion fixes the collision. The Mac was locked during the first UI inspection."
+  },
+  "sharedWorkspaceNote": "Preserved a separate unshipped Staff-preview guard in the shared recorder; the scoped recorder changes only the new Flint mode."
+}

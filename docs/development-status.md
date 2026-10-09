@@ -1,5 +1,11 @@
 # Development status
 
+## October 8 · Fluxed Flint crafted imbuements
+
+The owner authorized Fluxed Flint imbuements. Its existing ordered construction now accepts **Quartz Block in the Dissentient Diamond socket** for Stabilized and **Iron Block in either Netherite Ingot socket** for Reinforced. Their combination is Braced. The plain/Stabilized/Reinforced/Braced repair budgets are **128/96/192/144**, with intrinsic Flint backfire chances **10%/5%/15%/7.5%**. Shared bounded item selections, immutable trait resolution and complete adjective naming preserve one contribution per choice. Worn catalyst and repaired target metadata remain exact copies apart from damage; the retained-socket, rotation, duplicate and cancellation rules are covered by behavior tests.
+
+**Verified:** fresh scoped packaging, **216 unit tests across 47 suites and all 372 required Minecraft tests with Kithkyn**, including seven new Flint world cases. Adjective/Spellshaping checks and 490 leyline fixtures pass. The co-loaded native preview passes all nine assertions; five inspected frames show native inventory/shimmer, lift, repaired output and exact catalyst wear/imbuement retention. Fifteen changed classes and loaded item assets match the installed JAR. The exact tested package is installed in **Kithkyn Testing** with a verified timestamped backup; restart Minecraft to load it. Existing artwork, rarity and shimmer are unchanged. The new preview mode is excluded from the general recorder to prevent competing world creation; earlier failed attempts and local-only diagnostic logs are recorded. Optional viewer screens, hovered-tooltip pixels and survival tuning remain follow-up. [Evidence and exact package hashes](verification/fluxed-flint-imbuements-2026-10-08/README.md).
+
 ## October 8 · final combined Hourglass and Flint shimmer installation
 
 The owner authorized the final Fluxed Flint package in the item-rarity chat. Its native enchantment shimmer is now included with the merged Kairotic Hourglass in **Kithkyn Testing**. The blue Flint art and all gameplay remain unchanged; the final JAR differs from the preceding Hourglass installation in **only `ScrollItems.class`**. [Final receipt and installation hashes](verification/combined-flint-shimmer-2026-10-08/README.md).
