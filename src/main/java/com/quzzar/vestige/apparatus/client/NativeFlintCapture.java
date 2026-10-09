@@ -28,7 +28,8 @@ import java.util.concurrent.CompletableFuture;
 /** Opt-in framebuffer evidence for the exact packaged sprite and a real atomic repair. */
 @EventBusSubscriber(modid=VestigeMainMod.MOD_ID,value=Dist.CLIENT)
 public final class NativeFlintCapture {
-    private static final boolean IMBUEMENTS="fluxed_flint_imbuements".equals(System.getProperty("vestige.capture.kind"));
+    private static final boolean FRACTIOUS="fractious_flint".equals(System.getProperty("vestige.capture.kind"));
+    private static final boolean IMBUEMENTS=FRACTIOUS || "fluxed_flint_imbuements".equals(System.getProperty("vestige.capture.kind"));
     private static final boolean ENABLED=IMBUEMENTS || "fluxed_flint".equals(System.getProperty("vestige.capture.kind"));
     private static final List<Map<String,Object>> CHECKS=new ArrayList<>();
     private static int state;
@@ -53,12 +54,12 @@ public final class NativeFlintCapture {
         for(var offset:List.of(new BlockPos(2,0,0),new BlockPos(-2,0,0),new BlockPos(0,0,2),new BlockPos(0,0,-2),
                 new BlockPos(3,0,-3),new BlockPos(3,0,3),new BlockPos(-3,0,3),new BlockPos(-3,0,-3)))level.setBlockAndUpdate(pos.offset(offset),ApparatusBlocks.PLINTH.get().defaultBlockState());
         center=(OfferingBlockEntity)level.getBlockEntity(pos);catalyst=(OfferingBlockEntity)level.getBlockEntity(pos.offset(3,0,-3));target=(OfferingBlockEntity)level.getBlockEntity(pos.offset(-3,0,3));
-        catalyst.insert(IMBUEMENTS ? FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(1)) : new ItemStack(ScrollItems.FLUXED_FLINT.get()));original=StaffData.create(VestigeMainMod.location("fire"));original.setDamageValue(23);target.insert(original);
+        catalyst.insert(IMBUEMENTS ? FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(FRACTIOUS ? 4 : 1)) : new ItemStack(ScrollItems.FLUXED_FLINT.get()));original=StaffData.create(VestigeMainMod.location("fire"));original.setDamageValue(23);target.insert(original);
         player.connection.teleport(4,4,-6,33.69f,22);player.setNoGravity(true);
         for(int i=0;i<player.getInventory().getContainerSize();i++)player.getInventory().setItem(i,ItemStack.EMPTY);
         var comparisons=List.of(new ItemStack(Items.FLINT),new ItemStack(ScrollItems.FLUXED_FLINT.get()),new ItemStack(Items.DIAMOND),new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get()),new ItemStack(Items.NETHERITE_INGOT));
         for(int i=0;i<comparisons.size();i++)player.getInventory().setItem(9+i,comparisons.get(i));
-        if(IMBUEMENTS) for(int i=1;i<4;i++) player.getInventory().setItem(13+i,FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(i)));
+        if(IMBUEMENTS) for(int i=1;i<FluxedFlintImbuements.variants().size();i++) player.getInventory().setItem(13+i,FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(i)));
         player.getInventory().setItem(0,catalyst.displayedItem());player.getInventory().setItem(1,original.copy());player.inventoryMenu.broadcastChanges();
     }
     @SubscribeEvent public static void frame(RenderFrameEvent.Post event) {
@@ -74,8 +75,8 @@ public final class NativeFlintCapture {
             } else if(state==2 && pending.isDone() && now>=next) {
                 pending.join();require(mc.player.getInventory().getItem(10).getHoverName().getString().equals("Fluxed Flint"),"Translated native item name");
                 if(IMBUEMENTS) {
-                    var names=List.of("Stabilized Fluxed Flint","Reinforced Fluxed Flint","Braced Fluxed Flint");
-                    for(int i=0;i<3;i++) {
+                    var names=List.of("Stabilized Fluxed Flint","Reinforced Fluxed Flint","Braced Fluxed Flint","Fractious Fluxed Flint","Restive Fluxed Flint","Audacious Fluxed Flint","Impetuous Fluxed Flint");
+                    for(int i=0;i<names.size();i++) {
                         var stack=mc.player.getInventory().getItem(14+i);
                         require(stack.getHoverName().getString().equals(names.get(i)) && stack.hasFoil() && stack.getRarity()==Rarity.RARE,"Native variant name, rarity and glint: "+names.get(i));
                     }
@@ -109,10 +110,10 @@ public final class NativeFlintCapture {
                 boolean finished=repairReady.join();repairReady=null;
                 if(!finished){next=now+250_000_000L;return;}
                 capture(mc,"repaired-output");pending=mc.getSingleplayerServer().submit(()->{
-                    var expected=original.copy();expected.setDamageValue(13);
-                    require(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Actual dropped staff differs only by ten restored durability");
-                    require(catalyst.displayedItem().getDamageValue()==10 && target.displayedItem().isEmpty(),"Catalyst spends ten points and target is consumed once");
-                    if(IMBUEMENTS) require(catalyst.displayedItem().getMaxDamage()==96 && FluxedFlintImbuements.read(catalyst.displayedItem()).orElseThrow().choices().equals(Set.of(FluxedFlintImbuements.Choice.STABILIZED)),"Actual repaired catalyst retains stabilized identity and budget");
+                    int restored=FRACTIOUS ? 20 : 10;var expected=original.copy();expected.setDamageValue(23-restored);
+                    require(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Actual dropped staff differs only by "+restored+" restored durability");
+                    require(catalyst.displayedItem().getDamageValue()==restored && target.displayedItem().isEmpty(),"Catalyst spends "+restored+" points and target is consumed once");
+                    if(IMBUEMENTS) require(catalyst.displayedItem().getMaxDamage()==(FRACTIOUS ? 128 : 96) && FluxedFlintImbuements.read(catalyst.displayedItem()).orElseThrow().choices().equals(Set.of(FRACTIOUS ? FluxedFlintImbuements.Choice.FRACTIOUS : FluxedFlintImbuements.Choice.STABILIZED)),"Actual repaired catalyst retains its crafted identity and budget");
                     var player=mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst();player.getInventory().setItem(0,catalyst.displayedItem());player.getInventory().setItem(1,RitualTestOutput.stack(center));player.inventoryMenu.broadcastChanges();
                 });state=7;next=now+600_000_000L;
             } else if(state==7 && pending.isDone() && now>=next) {

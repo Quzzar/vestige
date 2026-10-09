@@ -649,6 +649,14 @@
       "word": "Reinforced",
       "meaning": "One and a half times the repair budget and intrinsic volatility.",
       "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:fluxed_flint/fractious",
+      "word": "Fractious",
+      "meaning": "Double the per-activation restoration cap and intrinsic volatility; the total repair budget is unchanged.",
+      "status": "Implemented Fluxed Flint adjustment"
     }
   ],
   "combinations": [
@@ -2130,6 +2138,37 @@
         "vestige:fluxed_flint/reinforced": 1
       },
       "meaning": "Stabilized + Reinforced; both budget and volatility factors compose once.",
+      "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "family": "vestige:fluxed_flint",
+      "word": "Restive",
+      "requires": {
+        "vestige:fluxed_flint/stabilized": 1,
+        "vestige:fluxed_flint/fractious": 1
+      },
+      "meaning": "Stabilized + Fractious; all authored contributions compose once.",
+      "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "family": "vestige:fluxed_flint",
+      "word": "Audacious",
+      "requires": {
+        "vestige:fluxed_flint/reinforced": 1,
+        "vestige:fluxed_flint/fractious": 1
+      },
+      "meaning": "Reinforced + Fractious; all authored contributions compose once.",
+      "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "family": "vestige:fluxed_flint",
+      "word": "Impetuous",
+      "requires": {
+        "vestige:fluxed_flint/stabilized": 1,
+        "vestige:fluxed_flint/reinforced": 1,
+        "vestige:fluxed_flint/fractious": 1
+      },
+      "meaning": "Stabilized + Reinforced + Fractious; all authored contributions compose once.",
       "status": "Implemented Fluxed Flint adjustment"
     }
   ]
