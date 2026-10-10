@@ -52,6 +52,7 @@ public final class RitualDisplays {
                 id.equals(VestigeMainMod.location("ritual/fluxed_flint")) ? ScrollItems.FLUXED_FLINT.get() :
                 id.equals(VestigeMainMod.location("ritual/dissentient_diamond")) ? ScrollItems.DISSENTIENT_DIAMOND.get() :
                 id.equals(VestigeMainMod.location("ritual/homebound_eye")) ? ScrollItems.HOMEBOUND_EYE.get() :
+                id.equals(VestigeMainMod.location("ritual/crane_bag")) ? ScrollItems.CRANE_BAG.get() :
                 id.equals(VestigeMainMod.location("ritual/whispering_shell")) ? ScrollItems.WHISPERING_SHELL.get() : ScrollItems.ATTUNEMENT_SHARD.get()))); }
         public List<Integer> seats() { return capacity==4 ? List.of(0,2,4,6) : List.of(0,1,2,3,4,5,6,7); }
     }
@@ -62,6 +63,12 @@ public final class RitualDisplays {
         return MagicalThreadRecipe.types().stream().map(type -> new Entry(
                 VestigeMainMod.location("ritual/"+type.id().getPath()),Optional.empty(),false,SpellRarity.COMMON,4,
                 offerings,List.of(new Imbuement(0,type.material())))).toList();
+    }
+    public static Entry craneBag() {
+        var ingredients=com.quzzar.vestige.storage.CraneBagRecipe.ingredients();
+        return new Entry(VestigeMainMod.location("ritual/crane_bag"),Optional.empty(),false,SpellRarity.COMMON,4,
+                java.util.stream.IntStream.range(0,ingredients.size()).mapToObj(i->new Offering(i*2,
+                        new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(ingredients.get(i))),List.of()))).toList());
     }
     public static Entry spell(RitualRecipe recipe) {
         return spell(recipe, false, false, SpellRarity.COMMON);

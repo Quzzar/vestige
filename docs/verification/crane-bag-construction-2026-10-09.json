@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-09",
+  "scope": "Approved Crane Bag ingredient recipe, ordered survival construction and public viewer entry",
+  "modelTests": 224,
+  "modelSuites": 49,
+  "minecraftTests": 389,
+  "failures": 0,
+  "kithkynCoLoaded": true,
+  "nativeViewers": [
+    "JEI 19.22.1.316",
+    "EMI 1.1.24+1.21.1"
+  ],
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/storage/CraneBagRecipe.java": "9bd021d5ae42d7b2e7f2a0f653cd349c984169c151bdda1d6f9b597f00979a65",
+    "src/main/java/com/quzzar/vestige/storage/CraneBagRitualTest.java": "0a0873aad51bbdb8a2fb7deaded0886a73351654db9e073c55678a5d64177496",
+    "src/test/java/com/quzzar/vestige/storage/CraneBagRecipeTest.java": "245294e62ba21c824aa01ce3a2f5e17d323d9189052f86fa5e90bbc3dca1437b"
+  },
+  "previousInstalledSha256": "ed045716f199554edba8107cb54bb7af3d5930636414456ee87d8381c603491a",
+  "buildSha256": "37ad9db163c4e08a4ec40afc35f6febf34cca94f31a8a05a0b671f2bced04b5d",
+  "changedMembers": [
+    "com/quzzar/vestige/apparatus/RitualCrafting$BlastImpact.class",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Pending.class",
+    "com/quzzar/vestige/apparatus/RitualCrafting.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays$Entry.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualDisplays.class",
+    "com/quzzar/vestige/apparatus/recipeviewer/RitualViewerClient.class",
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class"
+  ],
+  "addedMembers": [
+    "com/quzzar/vestige/apparatus/recipeviewer/NativeCraneRecipeCapture.class",
+    "com/quzzar/vestige/storage/CraneBagRecipe.class",
+    "com/quzzar/vestige/storage/CraneBagRitualTest$1.class",
+    "com/quzzar/vestige/storage/CraneBagRitualTest.class"
+  ],
+  "removedMembers": [],
+  "allUnrelatedJarMembersUnchanged": true,
+  "remaining": "Additional Crane Bag imbuements require a reviewed package; no capacity change is introduced."
+}

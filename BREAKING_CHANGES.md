@@ -1,5 +1,9 @@
 # Breaking changes
 
+## October 9, 2026: Crane Bag survival construction
+
+Adds the selected four-offering, ordered inner-layer ritual and one public display shared by JEI/EMI. Whole quarter-turns are equivalent; the bag copies the exact verified Attunement Shard key. Existing saved bags, shared pool contents/capacity, transfers, artwork and signature presentation are unchanged. There is no new carrier imbuement palette or migration.
+
 ## October 9, 2026: crafted Wardweave imbuements
 
 Wardweave's existing ordered, same-color eight-offering recipe now compiles retained local sockets into four independent choices: Warded, Enduring, Quickened and Reinforced. All sixteen sets have shared full-set names and source-local trait/recovery adjustments. Reinforced carriers have 120 durability and repair 30 per Callous Thread; other sets retain 80/20. Existing plain robes remain valid without rewriting. Saved variants use the shared bounded item-selection format; invalid families, selections or carrier budgets cannot activate a ward. All variants share wearer-owned recovery. Public plain-color display IDs are preserved, and both optional viewers derive 256 color/variant patterns from the live palette. Matching client/server builds are required for new selections. Approved artwork, mana capacity and the unmodified ward behavior remain unchanged.
