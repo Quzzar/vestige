@@ -122,7 +122,7 @@ public final class StoneTravel {
                         && player.level() == level && player.position().distanceToSqr(point) <= .01;
             }
         };
-        if (!MinecraftSpellWorld.payAndCommit(player, List.of(quote.cost()), reservation)) return;
+        if (!MinecraftSpellWorld.payAndCommit(player, quote.costs(), reservation)) return;
         player.fallDistance = 0;
         SESSIONS.get(player.getServer()).remove(player.getUUID());
         for (var site : List.of(Map.entry(departureLevel, departure), Map.entry(level, point))) {

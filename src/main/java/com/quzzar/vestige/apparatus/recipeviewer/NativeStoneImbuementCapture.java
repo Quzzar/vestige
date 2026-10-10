@@ -89,11 +89,21 @@ public final class NativeStoneImbuementCapture {
                 pending.join();var payment=StandingStonePayment.values()[route];
                 if(!screen.view().source().equals(source) || screen.view().destinations().size()!=3 || screen.view().destinations().stream().anyMatch(d->d.quote().route()!=payment || !d.affordable()))throw new IllegalStateException("Real menu route mismatch "+payment);
                 capture(mc,"menu-"+payment.id());refreshedScreen=screen;
+                if(payment==StandingStonePayment.ERUDITE)checks.add(Map.of("eruditeQuotes",screen.view().destinations().stream().map(d->Map.of("xp",d.quote().amount(),"mana",d.quote().manaAmount())).toList()));
                 pending=mc.getSingleplayerServer().submit(()->{var player=mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst();player.setHealth(1);player.getFoodData().setFoodLevel(0);NativeMana.set(player,0);player.setExperienceLevels(0);player.setExperiencePoints(0);});state=6;next=now+1_500_000_000L;
             } else if(state==6 && pending.isDone() && now>=next) {
                 pending.join();if(mc.screen!=refreshedScreen || refreshedScreen.view().destinations().stream().anyMatch(d->d.affordable()))throw new IllegalStateException("Affordability did not refresh the existing menu");
-                capture(mc,"menu-"+StandingStonePayment.values()[route].id()+"-unaffordable");if(++route<5) {pending=mc.getSingleplayerServer().submit(()->menu(mc.getSingleplayerServer(),StandingStonePayment.values()[route]));state=3;next=now+1_500_000_000L;}
+                capture(mc,"menu-"+StandingStonePayment.values()[route].id()+"-unaffordable");
+                if(StandingStonePayment.values()[route]==StandingStonePayment.ERUDITE) {
+                    pending=mc.getSingleplayerServer().submit(()->mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst().giveExperiencePoints(60));state=7;next=now+1_500_000_000L;
+                } else if(++route<5) {pending=mc.getSingleplayerServer().submit(()->menu(mc.getSingleplayerServer(),StandingStonePayment.values()[route]));state=3;next=now+1_500_000_000L;}
                 else {mc.setScreen(new InventoryScreen(mc.player));pending=mc.getSingleplayerServer().submit(()->mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst().setHealth(20));state=4;next=now+1_500_000_000L;}
+            } else if((state==7 || state==8) && pending.isDone() && now>=next) {
+                pending.join();if(mc.screen!=refreshedScreen || refreshedScreen.view().destinations().stream().anyMatch(d->d.affordable()))throw new IllegalStateException("Erudite ignored missing currency");
+                capture(mc,state==7?"menu-erudite-no-mana":"menu-erudite-no-xp");
+                if(state==7) {
+                    pending=mc.getSingleplayerServer().submit(()->{var player=mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst();player.setExperienceLevels(0);player.setExperiencePoints(0);NativeMana.set(player,100);});state=8;next=now+1_500_000_000L;
+                } else {++route;pending=mc.getSingleplayerServer().submit(()->menu(mc.getSingleplayerServer(),StandingStonePayment.values()[route]));state=3;next=now+1_500_000_000L;}
             } else if(state==4 && now>=next) {
                 pending.join();if(!(mc.screen instanceof InventoryScreen))throw new IllegalStateException("Balance refresh reopened a closed travel menu");checks.add(Map.of("closedMenuStaysClosedOnBalanceRefresh",true));
                 capture(mc,"inventory");route=0;mc.setScreen(new InventoryScreen(mc.player));var stack=StandingStones.bound(KEY,ApparatusMaterials.ANDESITE,StandingStonePayment.values()[route]);if(emi())EmiInspection.show(stack);else JeiInspection.show(stack);state=5;next=now+1_500_000_000L;

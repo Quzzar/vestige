@@ -185,6 +185,6 @@ public final class StoneNetworkScreen extends Screen {
             case HUNGER -> TravelCostDisplay.Type.HUNGER;
             case HEALTH -> TravelCostDisplay.Type.HEALTH;
         };
-        return new TravelCostDisplay(type, current.quote().amount(), current.affordable() && current.quote().affordable(player));
+        return new TravelCostDisplay(type, current.quote().amount(), current.affordable() && current.quote().affordable(player), current.quote().manaAmount());
     }
 }

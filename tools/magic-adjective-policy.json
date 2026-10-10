@@ -168,7 +168,7 @@
     {
       "id": "vestige:standing_stone/erudite",
       "word": "Erudite",
-      "meaning": "Standing Stone travel spends 25% less experience, in points.",
+      "meaning": "Standing Stone travel spends 25% less experience, in points, plus mana at one-third of the ordinary fare.",
       "status": "Implemented Standing Stone payment"
     },
     {

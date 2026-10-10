@@ -1,5 +1,7 @@
 # Standing Stone imbuements — native client evidence
 
+**Historical Erudite frames:** this initial capture shows the superseded XP-only Lapis discount. Current paired XP/mana evidence is in [the Erudite follow-up](../standing-stone-erudite-native/README.md). Other route prices and the recipe catalog are unchanged.
+
 October 10, 2026. These are unedited Minecraft 1.21.1 / NeoForge 21.1.72 framebuffers from fresh local worlds with Kithkyn. No generated illustrations or composited UI are used.
 
 Each viewer folder contains ten real destination-menu captures (five funded routes and five unaffordable routes), one inventory capture alongside vanilla ingredients, five ritual recipe screens, and its machine-readable verification record. JEI uses the scoped publication build; EMI uses the combined development build, which has additional independently approved equipment recipes. The total ritual counts differ for that reason.

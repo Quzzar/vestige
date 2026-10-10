@@ -1,5 +1,9 @@
 # Breaking changes
 
+## October 10, 2026: Erudite Standing Stone resource trade-off
+
+The `stone_network` payload protocol is now **6**, adding the exact extra mana amount alongside each primary fare. Erudite uses 75% XP plus one-third of the ordinary distance budget in mana (24 XP becomes 18 XP + 8 mana). Both balances are required and debit/refund atomically. Other routes retain their prices. Saved route version 1 and attunement identity are unchanged; existing Erudite stones use the current policy. `StandingStonePayment.Quote` adds `manaAmount`; `costs()` replaces the single `cost()` accessor. Matching client/server builds are required.
+
 ## October 10 · Standing Stone typed payment quotes
 
 The stone_network payload protocol is now **5**. Every destination carries the departure stone’s route, exact resource amount and affordability. Refresh-only updates change an open matching menu without reopening closed screens. Client and server require matching builds. Stone items and block entities store a versioned payment route separately from the unchanged attunement key. Existing native stones without route data retain ordinary XP; malformed explicit routes reject access. Ordinary XP pricing, network membership and masonry/profile selection remain unchanged.
