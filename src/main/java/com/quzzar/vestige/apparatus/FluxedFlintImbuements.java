@@ -33,7 +33,7 @@ public final class FluxedFlintImbuements {
             return choices.stream().sorted().map(c -> new MagicAdjectives.Adjustment(c.id(), 1)).toList();
         }
         public int durability() {
-            return (int) Math.floor(FluxedFlintItem.DURABILITY * (choices.contains(Choice.STABILIZED) ? .75 : 1)
+            return (int) Math.floor(FluxedFlintItem.DURABILITY * (choices.contains(Choice.STABILIZED) ? .60 : 1)
                     * (choices.contains(Choice.REINFORCED) ? 1.5 : 1) + .5);
         }
         public double repairFraction() { return choices.contains(Choice.FRACTIOUS) ? .5 : .25; }

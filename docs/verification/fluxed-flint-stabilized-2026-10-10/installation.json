@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-10",
+  "baselineSha256": "e2b63494d2f56aecf0f93ab4ee922454b219920a64a2b78fcab8368316b83e6d",
+  "candidateSha256": "1771915848be3edc48b7a7b44819ecd227737693acfdf93ed17d0ed2fc79b8f5",
+  "changedEntries": {
+    "com/quzzar/vestige/apparatus/FluxedFlintImbuements$Variant.class": "a3d3cd1d4f28d4afb145ae3c195e9a7b040b23555693c9e6751c94da52ecbf4a",
+    "com/quzzar/vestige/apparatus/FluxedFlintTest.class": "4074c1baca46f21fd7c4a235f478cbc5511a571f3a4ff5ad2d1d7563f40ddbb4",
+    "com/quzzar/vestige/apparatus/client/NativeFlintCapture.class": "19ba13abb56486099df31041dff4c9d22ed059d582b6a16ed1522bf786030d02",
+    "data/vestige/magic_adjectives.json": "146675521e63bf8d168e07d98ad4b986655ce5e865eea585e67e50478ef274db"
+  },
+  "otherEntriesByteIdentical": true,
+  "productionVariantMatchesBothVerifiedCompilations": true,
+  "pack": "Kithkyn Testing",
+  "installedPath": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "installedSha256": "1771915848be3edc48b7a7b44819ecd227737693acfdf93ed17d0ed2fc79b8f5",
+  "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/.vestige-build-backups/vestige-before-stabilized-tradeoff-e2b63494d2f5.jar",
+  "otherModJarsUnchanged": true,
+  "restartRequired": true,
+  "worldsChanged": false
+}

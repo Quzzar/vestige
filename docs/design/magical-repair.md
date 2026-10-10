@@ -61,22 +61,24 @@ Intrinsic item traits come from `RitualTraitSource`. Flint resolves its immutabl
 
 | Offering | Installed socket block | Choice | Authored factors |
 | --- | --- | --- | --- |
-| Dissentient Diamond | Quartz Block | Stabilized | Volatile ×0.5; maximum repair budget ×0.75 |
+| Dissentient Diamond | Quartz Block | Stabilized | Volatile ×0.5; maximum repair budget ×0.60 |
 | Either Netherite Ingot | Iron Block | Reinforced | Maximum repair budget ×1.5; Volatile ×1.5 |
 | Flint | Magma Block | Fractious | Per-activation repair cap ×2; Volatile ×2; total budget unchanged |
+
+**Owner approved October 10, 2026:** Stabilized now keeps three fifths of the repair budget (×0.60), replacing ×0.75. Braced and Impetuous each have 115 repair points, so their improved safety costs total repair capacity instead of dominating plain and Fractious Flint. Stabilized and Restive each have 77 points. Risk factors and per-activation caps are unchanged; factors compose before rounding the final budget once. This is fresh-craft playtest tuning: earlier imbued test stacks with superseded maximum budgets are rejected by the existing trusted-budget validation; no automatic conversion or refill is introduced.
 
 **Owner authorized October 9, 2026:** add a stronger, riskier repair choice. Fractious uses retained Magma beneath the Flint offering during the same construction. The 50% cap and doubled intrinsic volatility are initial implementation tuning. It raises the amount transferred in one activation without adding total repair points. A Flint-triggered backfire still preserves that exact Flint without wear and destroys the target.
 
 | Full item name | Total repair budget | Maximum repair per activation | Volatile | Flint's own backfire chance |
 | --- | ---: | ---: | ---: | ---: |
 | Fluxed Flint | 128 | 25% | 2 | 10% |
-| *Stabilized* Fluxed Flint | 96 | 25% | 1 | 5% |
+| *Stabilized* Fluxed Flint | 77 | 25% | 1 | 5% |
 | *Reinforced* Fluxed Flint | 192 | 25% | 3 | 15% |
-| *Braced* Fluxed Flint | 144 | 25% | 1.5 | 7.5% |
+| *Braced* Fluxed Flint | 115 | 25% | 1.5 | 7.5% |
 | *Fractious* Fluxed Flint | 128 | 50% | 4 | 20% |
-| *Restive* Fluxed Flint | 96 | 50% | 2 | 10% |
+| *Restive* Fluxed Flint | 77 | 50% | 2 | 10% |
 | *Audacious* Fluxed Flint | 192 | 50% | 6 | 30% |
-| *Impetuous* Fluxed Flint | 144 | 50% | 3 | 15% |
+| *Impetuous* Fluxed Flint | 115 | 50% | 3 | 15% |
 
 The cap uses the target's maximum durability and rounds upward; actual restoration is limited by missing durability and remaining Flint points. Every successful restored point spends exactly one Flint point. An 80-durability target can receive at most 20 points normally or 40 with Fractious in any combination. If it is missing only three points, either spends three. If the Flint has seven points left, either restores seven and breaks.
 

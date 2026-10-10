@@ -113,7 +113,7 @@ public final class NativeFlintCapture {
                     int restored=FRACTIOUS ? 20 : 10;var expected=original.copy();expected.setDamageValue(23-restored);
                     require(ItemStack.matches(expected,RitualTestOutput.stack(center)),"Actual dropped staff differs only by "+restored+" restored durability");
                     require(catalyst.displayedItem().getDamageValue()==restored && target.displayedItem().isEmpty(),"Catalyst spends "+restored+" points and target is consumed once");
-                    if(IMBUEMENTS) require(catalyst.displayedItem().getMaxDamage()==(FRACTIOUS ? 128 : 96) && FluxedFlintImbuements.read(catalyst.displayedItem()).orElseThrow().choices().equals(Set.of(FRACTIOUS ? FluxedFlintImbuements.Choice.FRACTIOUS : FluxedFlintImbuements.Choice.STABILIZED)),"Actual repaired catalyst retains its crafted identity and budget");
+                    if(IMBUEMENTS) require(catalyst.displayedItem().getMaxDamage()==(FRACTIOUS ? 128 : 77) && FluxedFlintImbuements.read(catalyst.displayedItem()).orElseThrow().choices().equals(Set.of(FRACTIOUS ? FluxedFlintImbuements.Choice.FRACTIOUS : FluxedFlintImbuements.Choice.STABILIZED)),"Actual repaired catalyst retains its crafted identity and budget");
                     var player=mc.getSingleplayerServer().getPlayerList().getPlayers().getFirst();player.getInventory().setItem(0,catalyst.displayedItem());player.getInventory().setItem(1,RitualTestOutput.stack(center));player.inventoryMenu.broadcastChanges();
                 });state=7;next=now+600_000_000L;
             } else if(state==7 && pending.isDone() && now>=next) {

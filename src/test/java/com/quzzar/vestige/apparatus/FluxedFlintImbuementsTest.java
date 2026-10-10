@@ -33,7 +33,7 @@ class FluxedFlintImbuementsTest {
         }
     }
     @Test void exactTradeoffsAndCompleteNamesComposeOnce() {
-        int[] budgets = {128, 96, 192, 144, 128, 96, 192, 144}; double[] chances = {.1, .05, .15, .075, .2, .1, .3, .15};
+        int[] budgets = {128, 77, 192, 115, 128, 77, 192, 115}; double[] chances = {.1, .05, .15, .075, .2, .1, .3, .15};
         String[] adjectives = {"", "Stabilized", "Reinforced", "Braced", "Fractious", "Restive", "Audacious", "Impetuous"};
         for (int i = 0; i < 8; i++) {
             var v = FluxedFlintImbuements.variants().get(i); var stack = FluxedFlintImbuements.create(v);
@@ -53,6 +53,18 @@ class FluxedFlintImbuementsTest {
         assertFalse(choice.matches(new ItemStack(Items.NETHERITE_INGOT), choice.material));
         assertFalse(choice.matches(new ItemStack(ScrollItems.DISSENTIENT_DIAMOND.get()), choice.material));
         assertFalse(choice.matches(new ItemStack(Items.FLINT), FluxedFlintImbuements.Choice.REINFORCED.material));
+    }
+    @Test void noVariantImprovesEveryRepairMetricOverAnotherVariant() {
+        for (var candidate : FluxedFlintImbuements.variants()) for (var other : FluxedFlintImbuements.variants()) {
+            if (candidate.equals(other)) continue;
+            double candidateRisk = ForfeitPolicy.DEFAULT.chance(candidate.traits(), true);
+            double otherRisk = ForfeitPolicy.DEFAULT.chance(other.traits(), true);
+            boolean noSacrifice = candidate.durability() >= other.durability()
+                    && candidate.repairFraction() >= other.repairFraction() && candidateRisk <= otherRisk;
+            boolean improvement = candidate.durability() > other.durability()
+                    || candidate.repairFraction() > other.repairFraction() || candidateRisk < otherRisk;
+            assertFalse(noSacrifice && improvement, candidate.choices() + " dominates " + other.choices());
+        }
     }
     @Test void duplicatesAndRecognizedIncompatiblePairsRejectWithoutRewritingInputs() {
         var offerings = FluxedFlintRecipe.ingredients().stream().map(ItemStack::new).toList();

@@ -639,7 +639,7 @@
       "max_degree": 1,
       "id": "vestige:fluxed_flint/stabilized",
       "word": "Stabilized",
-      "meaning": "Half intrinsic volatility and three quarters of the repair budget.",
+      "meaning": "Half intrinsic volatility and three fifths of the repair budget.",
       "status": "Implemented Fluxed Flint adjustment"
     },
     {
