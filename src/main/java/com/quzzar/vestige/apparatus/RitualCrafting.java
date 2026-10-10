@@ -145,6 +145,15 @@ public final class RitualCrafting {
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
                 return begin(selected,player,output.get(),occupied,0xf4e5ff,inputs,random,Outcome.CRAFTING);
             }
+            var bags=candidates.stream().filter(l -> com.quzzar.vestige.storage.CraneBagRecipe.result(l.items()).isPresent()).toList();
+            if (!bags.isEmpty()) {
+                if (bags.size()!=1) return Outcome.INVALID;
+                var selected=bags.getFirst();
+                if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
+                var inputs=RitualInputs.capture(selected);
+                return begin(selected,player,com.quzzar.vestige.storage.CraneBagRecipe.result(selected.items()).orElseThrow(),
+                        List.of(0,2,4,6),0x81ddc3,inputs,random,Outcome.CRAFTING);
+            }
             var shells=candidates.stream().filter(l -> WhisperingShellRecipe.result(l.items()).isPresent()).toList();
             if (!shells.isEmpty()) {
                 if (shells.size()!=1) return Outcome.INVALID;

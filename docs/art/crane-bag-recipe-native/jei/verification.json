@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "boundOutputMatches": 1,
+    "registeredRituals": 556,
+    "capacity": 4,
+    "featherUses": 17,
+    "genericOutputMatches": 1,
+    "shapeless": false
+  },
+  "screen": "mezz.jei.gui.recipes.RecipesGui",
+  "source": "Unedited native optional-viewer framebuffer",
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}
