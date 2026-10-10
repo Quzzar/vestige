@@ -1,0 +1,678 @@
+{
+  "date": "2026-10-09",
+  "status": "Offline proposal arithmetic, authored layout fixtures and temporary naming compilation; no production implementation or native gameplay verification",
+  "source": "docs/design/wardweave-imbuement-values.json",
+  "sourceSha256": "c010d32f9168fc85434d00df2c7a17dc3e076531a18dc9831313a17ba262a4ef",
+  "namingSha256": "dd78108a2d9d4cb79c1716cbe294abc620195adbc7ca1bd0376f057db57adea1",
+  "cinderweaveProposalSha256": "8e20ee3f498ef61515ca1971a66c9d03403e34c5874079b71bcd070dab403a14",
+  "productionNamingSha256Unchanged": "a5e27e4ff11572e960a7d745a93b7894b9e86c87f9252374be4f8f8f399b62df",
+  "variantCount": 16,
+  "authoredLayoutFixtures": 4480,
+  "namingCompilerPass": true,
+  "bothRobePalettesCompileTogether": true,
+  "historicalNameCorrection": "Staunch is now reserved for the approved Cinderweave Repelling+Enduring set; Wardweave Warded+Quickened+Reinforced proposes Unflinching instead.",
+  "checks": [
+    "Baseline numerical constants agree with production Wardweave ability",
+    "Every independent four-choice set has exact arithmetic and one complete name",
+    "16 matching wool colors and four whole quarter-turns",
+    "Enduring reachable from any one matching wool seat",
+    "Quickened and Reinforced reachable through either thread seat and together through separate seats",
+    "Neutral costs and carrier repair quantities",
+    "Recovery factors compose before final rounding",
+    "Actor and source trait example composes once",
+    "Real catalog compiler checks both robe palettes through temporary policy",
+    "Production naming policy remains unchanged"
+  ],
+  "sets": [
+    {
+      "choices": [],
+      "traits": {
+        "time": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "1",
+          "value": 1.0
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "lifetime_ticks": 80,
+      "protection_hp": {
+        "exact": "2",
+        "value": 2.0
+      },
+      "recovery_ticks": 240,
+      "recovery_seconds": {
+        "exact": "12",
+        "value": 12.0
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": null
+    },
+    {
+      "choices": [
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "lifetime_ticks": 80,
+      "protection_hp": {
+        "exact": "8/5",
+        "value": 1.6
+      },
+      "recovery_ticks": 240,
+      "recovery_seconds": {
+        "exact": "12",
+        "value": 12.0
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Reinforced"
+    },
+    {
+      "choices": [
+        "Quickened"
+      ],
+      "traits": {
+        "time": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "lifetime_ticks": 80,
+      "protection_hp": {
+        "exact": "8/5",
+        "value": 1.6
+      },
+      "recovery_ticks": 192,
+      "recovery_seconds": {
+        "exact": "48/5",
+        "value": 9.6
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Quickened"
+    },
+    {
+      "choices": [
+        "Quickened",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "16/25",
+          "value": 0.64
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "lifetime_ticks": 80,
+      "protection_hp": {
+        "exact": "32/25",
+        "value": 1.28
+      },
+      "recovery_ticks": 192,
+      "recovery_seconds": {
+        "exact": "48/5",
+        "value": 9.6
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Dependable"
+    },
+    {
+      "choices": [
+        "Enduring"
+      ],
+      "traits": {
+        "time": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "1",
+          "value": 1.0
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "6",
+        "value": 6.0
+      },
+      "lifetime_ticks": 120,
+      "protection_hp": {
+        "exact": "2",
+        "value": 2.0
+      },
+      "recovery_ticks": 288,
+      "recovery_seconds": {
+        "exact": "72/5",
+        "value": 14.4
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Enduring"
+    },
+    {
+      "choices": [
+        "Enduring",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "6",
+        "value": 6.0
+      },
+      "lifetime_ticks": 120,
+      "protection_hp": {
+        "exact": "8/5",
+        "value": 1.6
+      },
+      "recovery_ticks": 288,
+      "recovery_seconds": {
+        "exact": "72/5",
+        "value": 14.4
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Stalwart"
+    },
+    {
+      "choices": [
+        "Enduring",
+        "Quickened"
+      ],
+      "traits": {
+        "time": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "6",
+        "value": 6.0
+      },
+      "lifetime_ticks": 120,
+      "protection_hp": {
+        "exact": "8/5",
+        "value": 1.6
+      },
+      "recovery_ticks": 230,
+      "recovery_seconds": {
+        "exact": "23/2",
+        "value": 11.5
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Tireless"
+    },
+    {
+      "choices": [
+        "Enduring",
+        "Quickened",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "force": {
+          "exact": "1",
+          "value": 1.0
+        },
+        "amplify": {
+          "exact": "16/25",
+          "value": 0.64
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "6",
+        "value": 6.0
+      },
+      "lifetime_ticks": 120,
+      "protection_hp": {
+        "exact": "32/25",
+        "value": 1.28
+      },
+      "recovery_ticks": 230,
+      "recovery_seconds": {
+        "exact": "23/2",
+        "value": 11.5
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Resolute"
+    },
+    {
+      "choices": [
+        "Warded"
+      ],
+      "traits": {
+        "time": {
+          "exact": "4/5",
+          "value": 0.8
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "1",
+          "value": 1.0
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "16/5",
+        "value": 3.2
+      },
+      "lifetime_ticks": 64,
+      "protection_hp": {
+        "exact": "3",
+        "value": 3.0
+      },
+      "recovery_ticks": 240,
+      "recovery_seconds": {
+        "exact": "12",
+        "value": 12.0
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Warded"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "4/5",
+          "value": 0.8
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "16/5",
+        "value": 3.2
+      },
+      "lifetime_ticks": 64,
+      "protection_hp": {
+        "exact": "12/5",
+        "value": 2.4
+      },
+      "recovery_ticks": 240,
+      "recovery_seconds": {
+        "exact": "12",
+        "value": 12.0
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Fortified"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Quickened"
+      ],
+      "traits": {
+        "time": {
+          "exact": "4/5",
+          "value": 0.8
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "16/5",
+        "value": 3.2
+      },
+      "lifetime_ticks": 64,
+      "protection_hp": {
+        "exact": "12/5",
+        "value": 2.4
+      },
+      "recovery_ticks": 192,
+      "recovery_seconds": {
+        "exact": "48/5",
+        "value": 9.6
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Watchful"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Quickened",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "4/5",
+          "value": 0.8
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "16/25",
+          "value": 0.64
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "16/5",
+        "value": 3.2
+      },
+      "lifetime_ticks": 64,
+      "protection_hp": {
+        "exact": "48/25",
+        "value": 1.92
+      },
+      "recovery_ticks": 192,
+      "recovery_seconds": {
+        "exact": "48/5",
+        "value": 9.6
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Unflinching"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Enduring"
+      ],
+      "traits": {
+        "time": {
+          "exact": "6/5",
+          "value": 1.2
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "1",
+          "value": 1.0
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "24/5",
+        "value": 4.8
+      },
+      "lifetime_ticks": 96,
+      "protection_hp": {
+        "exact": "3",
+        "value": 3.0
+      },
+      "recovery_ticks": 288,
+      "recovery_seconds": {
+        "exact": "72/5",
+        "value": 14.4
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Vigilant"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Enduring",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "6/5",
+          "value": 1.2
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "24/5",
+        "value": 4.8
+      },
+      "lifetime_ticks": 96,
+      "protection_hp": {
+        "exact": "12/5",
+        "value": 2.4
+      },
+      "recovery_ticks": 288,
+      "recovery_seconds": {
+        "exact": "72/5",
+        "value": 14.4
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Indomitable"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Enduring",
+        "Quickened"
+      ],
+      "traits": {
+        "time": {
+          "exact": "6/5",
+          "value": 1.2
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "4/5",
+          "value": 0.8
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "24/5",
+        "value": 4.8
+      },
+      "lifetime_ticks": 96,
+      "protection_hp": {
+        "exact": "12/5",
+        "value": 2.4
+      },
+      "recovery_ticks": 230,
+      "recovery_seconds": {
+        "exact": "23/2",
+        "value": 11.5
+      },
+      "maximum_durability": 80,
+      "thread_repair": 20,
+      "maximum_mana_bonus": 25,
+      "name": "Untiring"
+    },
+    {
+      "choices": [
+        "Warded",
+        "Enduring",
+        "Quickened",
+        "Reinforced"
+      ],
+      "traits": {
+        "time": {
+          "exact": "6/5",
+          "value": 1.2
+        },
+        "force": {
+          "exact": "3/2",
+          "value": 1.5
+        },
+        "amplify": {
+          "exact": "16/25",
+          "value": 0.64
+        }
+      },
+      "lifetime_seconds": {
+        "exact": "24/5",
+        "value": 4.8
+      },
+      "lifetime_ticks": 96,
+      "protection_hp": {
+        "exact": "48/25",
+        "value": 1.92
+      },
+      "recovery_ticks": 230,
+      "recovery_seconds": {
+        "exact": "23/2",
+        "value": 11.5
+      },
+      "maximum_durability": 120,
+      "thread_repair": 30,
+      "maximum_mana_bonus": 25,
+      "name": "Unshaken"
+    }
+  ],
+  "boostedWardedReinforcedExample": {
+    "choices": [
+      "Warded",
+      "Reinforced"
+    ],
+    "traits": {
+      "time": {
+        "exact": "1",
+        "value": 1.0
+      },
+      "force": {
+        "exact": "15/8",
+        "value": 1.875
+      },
+      "amplify": {
+        "exact": "1",
+        "value": 1.0
+      }
+    },
+    "lifetime_seconds": {
+      "exact": "4",
+      "value": 4.0
+    },
+    "lifetime_ticks": 80,
+    "protection_hp": {
+      "exact": "15/4",
+      "value": 3.75
+    },
+    "recovery_ticks": 240,
+    "recovery_seconds": {
+      "exact": "12",
+      "value": 12.0
+    },
+    "maximum_durability": 120,
+    "thread_repair": 30,
+    "maximum_mana_bonus": 25
+  },
+  "limitations": [
+    "Layout fixtures model the proposed local pairs, not the production matcher",
+    "No unit/world/client gameplay or wear tests executed for these variants",
+    "Source-local malformed-state handling, actual preservation and native behavior remain implementation work",
+    "Prices and trade-offs are starting playtest values, not survival-equivalence measurements"
+  ]
+}

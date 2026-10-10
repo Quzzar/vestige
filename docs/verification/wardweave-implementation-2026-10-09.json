@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-09",
+  "scope": "Approved Wardweave four-choice/full-sixteen-set package",
+  "modelTests": 221,
+  "modelSuites": 48,
+  "modelFailures": 0,
+  "minecraftTests": 385,
+  "minecraftFailures": 0,
+  "kithkynCoLoaded": true,
+  "authoredLayoutsExecuted": 4480,
+  "viewerPatterns": 256,
+  "nativeClientEvidence": "docs/art/wardweave-imbuements-native/verification.json",
+  "sourceSha256": {
+    "src/main/java/com/quzzar/vestige/equipment/WardweaveImbuements.java": "560179f0299a662ebab58910ef94cd6a8f4be3043b11f2e88905fcff124e58d3",
+    "src/main/java/com/quzzar/vestige/equipment/WardweaveWorldTest.java": "ab012e874cff13da34fb56b266afa5b09e99163f5689b781ce6b6c5aa90fb6a6",
+    "src/test/java/com/quzzar/vestige/equipment/WardweaveTest.java": "0798fe6b205e37d130c1dd0473ed1014c8b1ef015f0ce0f407bd7d44068bbd32"
+  },
+  "limitations": [
+    "Survival balance and live multiplayer remain playtest work.",
+    "Cinderweave is an independently owned implementation; shared-root integration must preserve it."
+  ]
+}

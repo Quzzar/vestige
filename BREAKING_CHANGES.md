@@ -1,5 +1,9 @@
 # Breaking changes
 
+## October 9, 2026: crafted Wardweave imbuements
+
+Wardweave's existing ordered, same-color eight-offering recipe now compiles retained local sockets into four independent choices: Warded, Enduring, Quickened and Reinforced. All sixteen sets have shared full-set names and source-local trait/recovery adjustments. Reinforced carriers have 120 durability and repair 30 per Callous Thread; other sets retain 80/20. Existing plain robes remain valid without rewriting. Saved variants use the shared bounded item-selection format; invalid families, selections or carrier budgets cannot activate a ward. All variants share wearer-owned recovery. Public plain-color display IDs are preserved, and both optional viewers derive 256 color/variant patterns from the live palette. Matching client/server builds are required for new selections. Approved artwork, mana capacity and the unmodified ward behavior remain unchanged.
+
 ## October 9, 2026: Fractious Fluxed Flint
 
 Flint / Magma Block now selects the third craft-time imbuement, Fractious. It doubles the target-relative repair cap from 25% to 50% and intrinsic volatility from 10% to 20%, retaining the total budget and one-to-one wear. It composes with Stabilized/Reinforced in eight exact sets; Restive, Audacious and Impetuous name the new combinations. Existing saved variants, budgets and public recipe IDs remain unchanged. No migration or refill is introduced. Both optional viewers derive all eight construction patterns from the live palette. Matching client/server builds are required for the new selection.

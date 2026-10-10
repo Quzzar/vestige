@@ -1,0 +1,260 @@
+{
+  "source": "Unedited framebuffer / production registered items and private packets",
+  "checks": [
+    {
+      "activation": "integrated-server health damage and ward absorption",
+      "wear": 1,
+      "manaPayment": 0,
+      "recoveryTicks": 230
+    },
+    {
+      "zeroManaShortage": 0,
+      "privatePacketRecovery": 0.8785217
+    },
+    {
+      "name": "Wardweave Robes",
+      "mask": 0,
+      "segments": [
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Warded Wardweave Robes",
+      "mask": 1,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Warded "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Enduring Wardweave Robes",
+      "mask": 2,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Enduring "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Vigilant Wardweave Robes",
+      "mask": 3,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Vigilant "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Quickened Wardweave Robes",
+      "mask": 4,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Quickened "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Watchful Wardweave Robes",
+      "mask": 5,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Watchful "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Tireless Wardweave Robes",
+      "mask": 6,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Tireless "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Untiring Wardweave Robes",
+      "mask": 7,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Untiring "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 80
+    },
+    {
+      "name": "Reinforced Wardweave Robes",
+      "mask": 8,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Reinforced "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Fortified Wardweave Robes",
+      "mask": 9,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Fortified "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Stalwart Wardweave Robes",
+      "mask": 10,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Stalwart "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Indomitable Wardweave Robes",
+      "mask": 11,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Indomitable "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Dependable Wardweave Robes",
+      "mask": 12,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Dependable "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Unflinching Wardweave Robes",
+      "mask": 13,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Unflinching "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Resolute Wardweave Robes",
+      "mask": 14,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Resolute "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "name": "Unshaken Wardweave Robes",
+      "mask": 15,
+      "segments": [
+        {
+          "italic": true,
+          "text": "Unshaken "
+        },
+        {
+          "italic": false,
+          "text": "Wardweave Robes"
+        }
+      ],
+      "durability": 120
+    },
+    {
+      "recoveryFinished": 0.0
+    }
+  ],
+  "loadedAssetSha256": {
+    "textures/item/wardweave_robes.png": "4f3357a7d66f1185f7339e805a4743f499d48488fbf250e70bb87bea636fc23b",
+    "textures/models/armor/wardweave_layer_1.png": "06d694a69f6abede32bbcec8c719440faa5a8b1f48a7d9cb76a1901f92c0b7bc",
+    "models/item/wardweave_robes.json": "35acf782c747d8e82f10bc09a498bd7a261a7ce65f185d8f0421149116b1e849"
+  },
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72"
+}

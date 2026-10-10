@@ -1,5 +1,7 @@
 # Wardweave and Cinderweave behavior review
 
+**October 9 addition:** [the approved Wardweave imbuement package](wardweave-imbuement-review.md) adds four independent choices, sixteen complete sets and reinforced 120-durability carriers. This document retains the unmodified robe baseline; the linked package supplies its crafted changes and their explicit trade-offs.
+
 October 7, 2026. **Owner-approved Wardweave and Cinderweave gameplay, now implemented; worn artwork approved October 8.** The owner locked in the reviewed packages after approving uncapped trait growth, finite armor durability, absorbed-hit wear and exclusion of Unbreaking/Mending. The two robes use 2 armor, zero toughness, +25 maximum mana, 80 initial durability and matching-thread anvil repair of 20 durability per thread. Other clothing packages remain in review. [The accepted mage armor](../art/magic-equipment-armor-v2/approval.json) supersedes the earlier worn-art comparisons.
 
 The [equipment review](../art/magic-equipment-review/index.html#wardweave) and its [native-readable formulas](../art/magic-equipment-review/ability-proposals.json) supply the current values. [Shared item magic](item-abilities.md) defines resolution and snapshot ownership. All relevant base trait ratings are one; a 25% multiplier makes the corresponding rating 1.25.

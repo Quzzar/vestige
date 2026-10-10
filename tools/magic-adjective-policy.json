@@ -140,6 +140,30 @@
       "word": "Fractious",
       "meaning": "Double the per-activation restoration cap and intrinsic volatility; the total repair budget is unchanged.",
       "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "id": "vestige:wardweave/warded",
+      "word": "Warded",
+      "meaning": "Stronger protection with a shorter opportunity to use the charge.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "id": "vestige:wardweave/enduring",
+      "word": "Enduring",
+      "meaning": "Longer charge lifetime with a longer recovery.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "id": "vestige:wardweave/quickened",
+      "word": "Quickened",
+      "meaning": "Shorter recovery with weaker protection.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "id": "vestige:wardweave/reinforced",
+      "word": "Reinforced",
+      "meaning": "Greater carrier durability with weaker protection.",
+      "status": "Implemented Wardweave adjustment"
     }
   ],
   "combinations": [
@@ -1653,6 +1677,122 @@
       },
       "meaning": "Stabilized + Reinforced + Fractious; all authored contributions compose once.",
       "status": "Implemented Fluxed Flint adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Vigilant",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/enduring": 1
+      },
+      "meaning": "Independent Warded, Enduring adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Watchful",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/quickened": 1
+      },
+      "meaning": "Independent Warded, Quickened adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Fortified",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Warded, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Tireless",
+      "requires": {
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/quickened": 1
+      },
+      "meaning": "Independent Enduring, Quickened adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Stalwart",
+      "requires": {
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Enduring, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Dependable",
+      "requires": {
+        "vestige:wardweave/quickened": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Quickened, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Untiring",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/quickened": 1
+      },
+      "meaning": "Independent Warded, Enduring, Quickened adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Indomitable",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Warded, Enduring, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Unflinching",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/quickened": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Warded, Quickened, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Resolute",
+      "requires": {
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/quickened": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Enduring, Quickened, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "family": "vestige:wardweave_robes",
+      "word": "Unshaken",
+      "requires": {
+        "vestige:wardweave/warded": 1,
+        "vestige:wardweave/enduring": 1,
+        "vestige:wardweave/quickened": 1,
+        "vestige:wardweave/reinforced": 1
+      },
+      "meaning": "Independent Warded, Enduring, Quickened, Reinforced adjustments; preserve every trade-off.",
+      "status": "Implemented Wardweave adjustment"
     }
   ],
   "complete_families": [
@@ -1705,6 +1845,24 @@
         ],
         [
           "vestige:fluxed_flint/fractious"
+        ]
+      ]
+    },
+    {
+      "id": "vestige:wardweave_robes",
+      "label": "Wardweave Robes",
+      "groups": [
+        [
+          "vestige:wardweave/warded"
+        ],
+        [
+          "vestige:wardweave/enduring"
+        ],
+        [
+          "vestige:wardweave/quickened"
+        ],
+        [
+          "vestige:wardweave/reinforced"
         ]
       ]
     }

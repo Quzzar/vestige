@@ -10,6 +10,19 @@ import java.util.*;
 public final class MagicArmorRecipe {
     private MagicArmorRecipe() { }
     public static Optional<ItemStack> result(List<ItemStack> seats) {
+        return plain(seats);
+    }
+    public static Optional<ItemStack> result(List<ItemStack> seats, List<ItemStack> materials) {
+        if (materials.size() != 8) return Optional.empty();
+        var base = plain(seats);
+        if (base.isEmpty() || !base.get().is(MagicEquipment.WARDWEAVE.get())) return base;
+        return WardweaveImbuements.resolve(seats, materials).map(variant -> {
+            var result = WardweaveImbuements.create(variant.choices());
+            result.set(DataComponents.DYED_COLOR, base.get().get(DataComponents.DYED_COLOR));
+            return result;
+        });
+    }
+    private static Optional<ItemStack> plain(List<ItemStack> seats) {
         if (seats.size() != 8 || seats.stream().anyMatch(s -> s.isEmpty() || s.getCount() != 1)) return Optional.empty();
         DyeColor wool = null;
         for (DyeColor color : DyeColor.values()) {

@@ -19,6 +19,7 @@ public final class MagicArmorDisplays {
     }
     public static Optional<ItemStack> output(ResourceLocation id) {
         if (!owns(id)) return Optional.empty();
+        if (id.getPath().startsWith("ritual/wardweave_robes/")) return WardweaveDisplays.output(id);
         String[] parts=id.getPath().split("/");if(parts.length!=3)return Optional.empty();
         DyeColor color=DyeColor.byName(parts[2],null);if(color==null)return Optional.empty();
         var result=new ItemStack(parts[1].equals("wardweave_robes")?MagicEquipment.WARDWEAVE.get():MagicEquipment.CINDERWEAVE.get());
@@ -26,15 +27,16 @@ public final class MagicArmorDisplays {
     }
     public static List<RitualDisplays.Entry> entries() {
         var result=new ArrayList<RitualDisplays.Entry>();
-        for(boolean cinder:List.of(false,true))for(DyeColor color:DyeColor.values()) {
+        for(DyeColor color:DyeColor.values()) {
             var offerings=new ArrayList<RitualDisplays.Offering>();
             for(int i=0;i<8;i++) {
-                Item item=i%2==0?MagicArmorRecipe.wool(color):i==1||i==5?cinder?ScrollItems.SMOLDERING_THREAD.get():ScrollItems.CALLOUS_THREAD.get()
-                        :i==3?cinder?Items.BLAZE_POWDER:Items.IRON_INGOT:cinder?Items.MAGMA_CREAM:Items.PUFFERFISH;
+                Item item=i%2==0?MagicArmorRecipe.wool(color):i==1||i==5?ScrollItems.SMOLDERING_THREAD.get()
+                        :i==3?Items.BLAZE_POWDER:Items.MAGMA_CREAM;
                 offerings.add(new RitualDisplays.Offering(i,new RitualRecipe.Ingredient(List.of(BuiltInRegistries.ITEM.getKey(item)),List.of())));
             }
-            result.add(new RitualDisplays.Entry(VestigeMainMod.location("ritual/"+(cinder?"cinderweave":"wardweave")+"_robes/"+color.getName()),Optional.empty(),false,SpellRarity.COMMON,8,offerings));
+            result.add(new RitualDisplays.Entry(VestigeMainMod.location("ritual/cinderweave_robes/"+color.getName()),Optional.empty(),false,SpellRarity.COMMON,8,offerings));
         }
+        result.addAll(WardweaveDisplays.entries());
         return List.copyOf(result);
     }
 }
