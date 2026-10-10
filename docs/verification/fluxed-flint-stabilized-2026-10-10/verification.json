@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-10",
+  "approvedChange": "Stabilized repair-budget factor 0.75 -> 0.60; other factors unchanged",
+  "variants": [
+    {
+      "name": "Plain",
+      "repairBudget": 128,
+      "flintBackfireChance": 0.1,
+      "repairFraction": 0.25
+    },
+    {
+      "name": "Stabilized",
+      "repairBudget": 77,
+      "flintBackfireChance": 0.05,
+      "repairFraction": 0.25
+    },
+    {
+      "name": "Reinforced",
+      "repairBudget": 192,
+      "flintBackfireChance": 0.15,
+      "repairFraction": 0.25
+    },
+    {
+      "name": "Braced",
+      "repairBudget": 115,
+      "flintBackfireChance": 0.075,
+      "repairFraction": 0.25
+    },
+    {
+      "name": "Fractious",
+      "repairBudget": 128,
+      "flintBackfireChance": 0.2,
+      "repairFraction": 0.5
+    },
+    {
+      "name": "Restive",
+      "repairBudget": 77,
+      "flintBackfireChance": 0.1,
+      "repairFraction": 0.5
+    },
+    {
+      "name": "Audacious",
+      "repairBudget": 192,
+      "flintBackfireChance": 0.3,
+      "repairFraction": 0.5
+    },
+    {
+      "name": "Impetuous",
+      "repairBudget": 115,
+      "flintBackfireChance": 0.15,
+      "repairFraction": 0.5
+    }
+  ],
+  "checks": {
+    "scopedUnitTests": 229,
+    "scopedSuites": 50,
+    "sharedUnitTests": 252,
+    "sharedSuites": 53,
+    "scopedFlintWorldTests": 27,
+    "sharedFlintWorldTests": 27,
+    "exactCombinedArtifactFlintWorldTests": 27,
+    "orderedPairDominanceChecks": 56,
+    "nativeClientChecks": 13,
+    "nativeFrames": 5,
+    "namingGeneratorCheck": true,
+    "buildAndKithkynCompatibility": true
+  },
+  "sourceSha256": {
+    "scoped": {
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintImbuements.java": "b0e3a54bd0bf78679c34c6078dbfe214e6097a7a28e428c43386415ed014dda5",
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "81aadd0817fe18c2d97792964d757048ed51f6af99c8bdc7857a7e58ef731de1",
+      "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "611015997bf9125f139769dd2bfa93a966aff018614e568e4e826050529b9b4c",
+      "src/test/java/com/quzzar/vestige/apparatus/FluxedFlintImbuementsTest.java": "2992374d5d4aa7950b32fe9fc00d2568889abb7943713bcc5d9b2c4e78679539",
+      "tools/magic-adjective-policy.json": "ba12281009334a6cc702d831b4e620700e5e91108fee3a6e9f07b5eff31315d1"
+    },
+    "shared": {
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintImbuements.java": "b0e3a54bd0bf78679c34c6078dbfe214e6097a7a28e428c43386415ed014dda5",
+      "src/main/java/com/quzzar/vestige/apparatus/FluxedFlintTest.java": "8178f6962d6ead1a05669cdc33306a1f9d89624fc9845deb282afb2b96844378",
+      "src/main/java/com/quzzar/vestige/apparatus/client/NativeFlintCapture.java": "611015997bf9125f139769dd2bfa93a966aff018614e568e4e826050529b9b4c",
+      "src/test/java/com/quzzar/vestige/apparatus/FluxedFlintImbuementsTest.java": "2992374d5d4aa7950b32fe9fc00d2568889abb7943713bcc5d9b2c4e78679539",
+      "tools/magic-adjective-policy.json": "38b646542f9e19ec9939297511e070d95213759ed5f3c96382bdc6160b324a6b"
+    }
+  },
+  "limitations": [
+    "Earlier Stabilized-containing test stacks with superseded maximum budgets must be freshly crafted; existing trusted-budget validation is unchanged.",
+    "Survival balance remains playtest tuning.",
+    "Other audit findings and concurrent shared payment/component work remain with their owning chats.",
+    "Client captures confirm inventory and native repair behavior with both optional viewers loaded, not a new visual audit of every viewer recipe."
+  ],
+  "initialTestRepair": "The new Braced test initially checked reservation cleanup at tick 45; it now waits to tick 65, after the existing 60-tick success animation."
+}

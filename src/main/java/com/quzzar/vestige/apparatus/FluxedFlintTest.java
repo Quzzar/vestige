@@ -120,6 +120,44 @@ public final class FluxedFlintTest {
         });
     }
     @GameTest(template="empty_9x3x9",batch="fluxed_flint")
+    public static void allEightVariantsTransferExactlyTheirLifetimeRepairBudgets(GameTestHelper h) {
+        int[] budgets={128,77,192,115,128,77,192,115};
+        var seats=new ArrayList<ItemStack>(Collections.nCopies(8,ItemStack.EMPTY));
+        for(int i=0;i<8;i++) {
+            var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(i));
+            int transferred=0;
+            while(!catalyst.isEmpty()) {
+                var target=staff();target.set(DataComponents.MAX_DAMAGE,81);target.setDamageValue(59);
+                seats.set(1,catalyst);seats.set(7,target);
+                var repair=FluxedFlintRecipe.repair(seats).orElseThrow();
+                int restored=59-repair.output().getDamageValue();
+                h.assertTrue(restored>0 && restored<=budgets[i]-transferred,"Transfer exceeded remaining approved budget");
+                var expected=target.copy();expected.setDamageValue(59-restored);
+                h.assertTrue(ItemStack.matches(expected,repair.output()),"Repair changed target components");
+                transferred+=restored;catalyst=repair.remainingCatalyst();
+                if(!catalyst.isEmpty()) {
+                    h.assertTrue(catalyst.getMaxDamage()==budgets[i] && catalyst.getDamageValue()==transferred,"Catalyst lost lifetime wear");
+                    catalyst=ItemStack.parse(h.getLevel().registryAccess(),catalyst.save(h.getLevel().registryAccess())).orElseThrow();
+                }
+            }
+            h.assertTrue(transferred==budgets[i],"Lifetime repair total disagrees with approved capacity");
+        }
+        h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)
+    public static void bracedRepairExhaustsItsReducedBudgetThroughAtomicCrafting(GameTestHelper h) {
+        var catalyst=FluxedFlintImbuements.create(FluxedFlintImbuements.variants().get(3));
+        catalyst.setDamageValue(100);var target=staff();target.set(DataComponents.MAX_DAMAGE,81);target.setDamageValue(59);
+        var layout=offer(h,target,catalyst);
+        h.assertTrue(RitualCrafting.activate(player(h),layout.center(),()->.08)==RitualCrafting.Outcome.CRAFTING,"Braced safety rejected a roll above 7.5 percent");
+        h.runAfterDelay(65,()->{
+            var expected=target.copy();expected.setDamageValue(44);
+            h.assertTrue(ItemStack.matches(expected,RitualTestOutput.stack(layout.center())),"Braced did not transfer exactly its last fifteen points");
+            h.assertTrue(layout.stands().get(0).displayedItem().isEmpty() && layout.stands().get(4).displayedItem().isEmpty(),"Exhausted Flint or original target remained");
+            h.assertTrue(!layout.center().busy(),"Completed repair leaked its reservation");h.succeed();
+        });
+    }
+    @GameTest(template="empty_9x3x9",batch="fluxed_flint")
     public static void allImbuedRiskBoundariesUseSharedIndependentVolatilityAndProtectTheTrigger(GameTestHelper h) {
         var center=structure(h,true);var layout=LeylineStructure.find(center,8).getFirst();
         double[] chances={.1,.05,.15,.075,.2,.1,.3,.15};
@@ -146,7 +184,7 @@ public final class FluxedFlintTest {
             h.assertTrue(ItemStack.matches(expected,RitualTestOutput.stack(layout.center())),"Target components changed");
             h.assertTrue(ItemStack.matches(worn,layout.stands().get(0).displayedItem()),"Remainder lost selections or unrelated data");
             var reloaded=ItemStack.parse(h.getLevel().registryAccess(),worn.save(h.getLevel().registryAccess())).orElseThrow();
-            h.assertTrue(ItemStack.matches(worn,reloaded) && FluxedFlintImbuements.read(reloaded).orElseThrow().durability()==96,"Reload lost budget or variant");h.succeed();
+            h.assertTrue(ItemStack.matches(worn,reloaded) && FluxedFlintImbuements.read(reloaded).orElseThrow().durability()==77,"Reload lost budget or variant");h.succeed();
         });
     }
     @GameTest(template="empty_9x3x9",batch="fluxed_flint",timeoutTicks=90)

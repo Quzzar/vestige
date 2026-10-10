@@ -64,7 +64,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Seeking | `vestige:spellshaping/seeking` — Implemented spell adjustment | Native projectiles steer toward an eligible target found at release. |
 | Shaping | `vestige:spellshaping/shaping` — Implemented spell adjustment | Range ×1.2 per contribution. |
 | Shocking | `vestige:spellshaping/shocking` — Implemented spell adjustment | Add a small electrical rider after an eligible hit. |
-| Stabilized | `vestige:fluxed_flint/stabilized` — Implemented Fluxed Flint adjustment | Half intrinsic volatility and three quarters of the repair budget. |
+| Stabilized | `vestige:fluxed_flint/stabilized` — Implemented Fluxed Flint adjustment | Half intrinsic volatility and three fifths of the repair budget. |
 | Steadfast | `vestige:wand_tip/netherite` — Implemented wand tip | Caster stability with additional mana and preparation. |
 | Swift | `vestige:wayfarer/swift` — Implemented Wayfarer adjustment | A faster, shorter movement burst: Motion ×1.50 and Time ×2/3. |
 | Unbalancing | `vestige:spellshaping/unbalancing` — Implemented spell adjustment | Apply a short physical stumble after contact. |

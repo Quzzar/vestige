@@ -1,5 +1,11 @@
 # Development status
 
+## October 10 · Fluxed Flint Stabilized trade-off corrected
+
+The owner-approved Stabilized budget factor is now **×0.60**. Stabilized/Restive have **77 repair points** and Braced/Impetuous have **115**; the existing risk factors and 25%/50% operation caps remain. All eight variants retain choices across total capacity, operation cap and intrinsic risk. The shared adjective description and live construction outputs agree. Earlier Stabilized-containing test stacks with superseded maximum budgets need fresh crafting; trusted-budget validation and wear preservation remain unchanged.
+
+**Verified:** 229 scoped and 252 shared-project unit tests, builds and Kithkyn compatibility; all 27 Flint world tests in each checkout and separately against the exact combined installation candidate. Coverage includes all eight lifetime repair budgets, rounded caps, final-point atomic exhaustion, save/load, independent volatility and cancellation. The native client adds five unedited frames and 13 passing repair/name/glint checks. The [receipt](verification/fluxed-flint-stabilized-2026-10-10/README.md) records scope, source hashes and limitations. The verified combined jar is installed in Kithkyn Testing with a backup; its other archive entries and other mod jars are preserved. Restart required. Broader audit and other equipment/payment corrections remain with their owning chats.
+
 ## October 10 · Erudite Standing Stone trade-off
 
 The owner approved replacing Erudite’s strictly better XP discount with **75% of the ordinary unrounded budget in XP plus one-third in mana**, e.g. 24 XP becomes 18 XP + 8 mana. The exchanged XP portion carries an explicit 4/3 mana premium. Both resources use the shared typed transaction, affordability and rollback, and appear side by side in the native menu. Existing Erudite route IDs and shard keys remain unchanged. The revised payload is protocol 6; other route prices, cosmetics, recipes and network membership are unchanged.
