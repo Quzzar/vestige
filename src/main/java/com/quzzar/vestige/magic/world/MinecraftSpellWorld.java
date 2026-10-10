@@ -238,6 +238,9 @@ public final class MinecraftSpellWorld implements SpellWorld {
     }
     @Override public boolean pay(List<SpellCost> costs, SpellRuntime.Context context) {
         LivingEntity caster = actor(context); if (caster == null) return false;
+        return pay(costs, caster, context::paidMana);
+    }
+    private static boolean pay(List<SpellCost> costs, LivingEntity caster, java.util.function.DoubleConsumer paidMana) {
         if (caster instanceof Player player && player.isCreative()) return true;
         double health = 0, mana = 0; long hunger = 0, experience = 0;
         List<ItemStack> inventory = caster instanceof Player p ? p.getInventory().items.stream().map(ItemStack::copy).toList() : List.of();
@@ -268,7 +271,7 @@ public final class MinecraftSpellWorld implements SpellWorld {
             for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
         if (health > 0) caster.setHealth((float) (caster.getHealth() - health));
         if (mana > 0) NativeMana.spend(caster, mana);
-        context.paidMana(mana);
+        paidMana.accept(mana);
         if (hunger > 0 && caster instanceof Player p) p.getFoodData().setFoodLevel(p.getFoodData().getFoodLevel() - (int) hunger);
         return true;
     }
@@ -277,25 +280,39 @@ public final class MinecraftSpellWorld implements SpellWorld {
         if (!(source instanceof CastReservation.Atomic atomic)) return SpellWorld.super.payAndCommit(costs, context, source);
         LivingEntity caster = actor(context);
         if (!(caster instanceof ServerPlayer player)) return false;
+        return commitPayment(player, costs, () -> pay(costs, context), () -> source.valid() && atomic.tryCommit());
+    }
+    /** Native devices use the same typed debit and rollback without manufacturing a spell cast. */
+    public static boolean payAndCommit(ServerPlayer player, List<SpellCost> costs, CastReservation.Atomic source) {
+        var immutable = List.copyOf(costs);
+        if (!source.valid()) return false;
+        return commitPayment(player, immutable, () -> pay(immutable, player, ignored -> { }), () -> source.valid() && source.tryCommit());
+    }
+    private static boolean commitPayment(ServerPlayer player, List<SpellCost> costs,
+                                         java.util.function.BooleanSupplier debit, java.util.function.BooleanSupplier commit) {
         var inventory = player.getInventory().items.stream().map(ItemStack::copy).toList();
         float health = player.getHealth(); int hunger = player.getFoodData().getFoodLevel();
         var xp = com.quzzar.vestige.travel.PlayerExperience.Snapshot.of(player);
         var data = player.getPersistentData().copy();
         boolean committed = false;
         try {
-            if (!pay(costs, context)) return false;
-            committed = source.valid() && atomic.tryCommit();
+            if (!debit.getAsBoolean()) return false;
+            committed = commit.getAsBoolean();
             return committed;
         } finally {
             if (!committed) {
                 if (costs.stream().anyMatch(SpellCost.Material.class::isInstance))
                     for (int i=0;i<inventory.size();i++) player.getInventory().setItem(i,inventory.get(i));
-                player.setHealth(health); player.getFoodData().setFoodLevel(hunger); xp.restore(player);
-                for (String key : List.of("vestige:mana", "vestige:mana_recovery")) {
-                    if (data.contains(key)) player.getPersistentData().put(key,data.get(key).copy());
-                    else player.getPersistentData().remove(key);
+                if (costs.stream().anyMatch(SpellCost.Health.class::isInstance)) player.setHealth(health);
+                if (costs.stream().anyMatch(SpellCost.Hunger.class::isInstance)) player.getFoodData().setFoodLevel(hunger);
+                if (costs.stream().anyMatch(SpellCost.Experience.class::isInstance)) xp.restore(player);
+                if (costs.stream().anyMatch(SpellCost.Mana.class::isInstance)) {
+                    for (String key : List.of("vestige:mana", "vestige:mana_recovery")) {
+                        if (data.contains(key)) player.getPersistentData().put(key,data.get(key).copy());
+                        else player.getPersistentData().remove(key);
+                    }
+                    NativeMana.sync(player,true);
                 }
-                NativeMana.sync(player,true);
             }
         }
     }

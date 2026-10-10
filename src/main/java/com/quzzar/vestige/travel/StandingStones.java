@@ -35,6 +35,10 @@ public final class StandingStones {
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion()));
             blocks.put(material, block);
             items.put(material, ITEMS.register(blockName(material), () -> new BlockItem(block.get(), new Item.Properties()) {
+                @Override public Component getName(ItemStack stack) {
+                    return payment(stack).<Component>map(route -> com.quzzar.vestige.magic.presentation.MagicAdjectives.prefix(
+                            StandingStonePayment.FAMILY, route.adjectives()).append(super.getName(stack))).orElseGet(() -> super.getName(stack));
+                }
                 @Override public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> text, TooltipFlag flag) {
                     key(stack).ifPresent(value -> text.add(AttunementMark.fromKey(value).component()));
                 }
@@ -61,6 +65,10 @@ public final class StandingStones {
         String value = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getString("vestige_attunement");
         return StoneNetwork.validKey(value) ? Optional.of(value) : Optional.empty();
     }
+    public static Optional<StandingStonePayment> payment(ItemStack stack) {
+        return material(stack).isEmpty() ? Optional.empty() : StandingStonePayment.read(
+                stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag());
+    }
     /** The device inherits the existing shard key. Its own ingredients do not change it. */
     public static ItemStack fromShard(ItemStack shard) {
         return fromShard(shard, ApparatusMaterials.STONE_BRICKS);
@@ -72,9 +80,18 @@ public final class StandingStones {
         return bound(key, ApparatusMaterials.STONE_BRICKS);
     }
     public static ItemStack bound(String key, ApparatusMaterials material) {
+        return bound(key, material, StandingStonePayment.EXPERIENCE);
+    }
+    public static ItemStack bound(String key, ApparatusMaterials material, StandingStonePayment payment) {
         if (!StoneNetwork.validKey(key)) throw new IllegalArgumentException("Invalid attunement");
+        ItemStack stack = preview(material, payment);
+        CompoundTag tag = stack.get(DataComponents.CUSTOM_DATA).copyTag(); tag.putString("vestige_attunement", key);
+        stack.set(DataComponents.CUSTOM_DATA, CustomData.of(tag)); return stack;
+    }
+    /** Public recipe outputs disclose finish/payment only, without inventing a private network key. */
+    public static ItemStack preview(ApparatusMaterials material, StandingStonePayment payment) {
         ItemStack stack = new ItemStack(STONE_ITEMS.get(material).get());
-        CompoundTag tag = new CompoundTag(); tag.putString("vestige_attunement", key);
+        CompoundTag tag = new CompoundTag(); payment.write(tag);
         stack.set(DataComponents.CUSTOM_DATA, CustomData.of(tag)); return stack;
     }
     @SubscribeEvent public static void creative(BuildCreativeModeTabContentsEvent event) {

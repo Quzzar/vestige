@@ -26,16 +26,19 @@ record TravelCostDisplay(Type type, int amount, boolean affordable) {
         if (type == null || amount < 1) throw new IllegalArgumentException("Positive typed display cost required");
     }
     Component description() { return Component.translatable(type.label, amount); }
-    boolean usesCountedIcons() { return type == Type.HEALTH || type == Type.HUNGER; }
+    boolean usesCountedIcons() { return (type == Type.HEALTH || type == Type.HUNGER) && amount <= 20; }
     int fullIcons() { return usesCountedIcons() ? amount / 2 : 0; }
     boolean hasHalfIcon() { return usesCountedIcons() && amount % 2 != 0; }
+    private String number() {
+        return type == Type.HEALTH || type == Type.HUNGER ? Integer.toString(amount / 2) + (amount % 2 == 0 ? "" : ".5") : Integer.toString(amount);
+    }
     int width(Font font) {
         return usesCountedIcons() ? (fullIcons() + (hasHalfIcon() ? 1 : 0)) * ICON_SPACING - 1
-                : font.width(Integer.toString(amount)) + 4 + ICON_SIZE;
+                : font.width(number()) + 4 + ICON_SIZE;
     }
     /** Right-aligned amounts; full and half resource icons retain the actual point count. */
     void draw(GuiGraphics graphics, Font font, int right, int y, int textColor) {
-        if (!usesCountedIcons()) graphics.drawString(font, Integer.toString(amount), right - width(font), y, textColor, true);
+        if (!usesCountedIcons()) graphics.drawString(font, number(), right - width(font), y, textColor, true);
         float shade = affordable ? 1 : .4f;
         graphics.setColor(shade, shade, shade, 1);
         switch (type) {
@@ -45,6 +48,10 @@ record TravelCostDisplay(Type type, int amount, boolean affordable) {
             }
             case HEALTH, HUNGER -> {
                 var full = type == Type.HEALTH ? HEART : FOOD;
+                if (!usesCountedIcons()) {
+                    graphics.blitSprite(full, right - ICON_SIZE, y, ICON_SIZE, ICON_SIZE);
+                    break;
+                }
                 int left = right - width(font);
                 for (int i = 0; i < fullIcons(); i++) graphics.blitSprite(full, left + i * ICON_SPACING, y, ICON_SIZE, ICON_SIZE);
                 if (hasHalfIcon()) {

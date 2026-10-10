@@ -1,5 +1,10 @@
 # Breaking changes
 
+## October 10 · Standing Stone typed payment quotes
+
+The stone_network payload protocol is now **5**. Every destination carries the departure stone’s route, exact resource amount and affordability. Refresh-only updates change an open matching menu without reopening closed screens. Client and server require matching builds. Stone items and block entities store a versioned payment route separately from the unchanged attunement key. Existing native stones without route data retain ordinary XP; malformed explicit routes reject access. Ordinary XP pricing, network membership and masonry/profile selection remain unchanged.
+
+
 ## October 9, 2026: Crane Bag survival construction
 
 Adds the selected four-offering, ordered inner-layer ritual and one public display shared by JEI/EMI. Whole quarter-turns are equivalent; the bag copies the exact verified Attunement Shard key. Existing saved bags, shared pool contents/capacity, transfers, artwork and signature presentation are unchanged. There is no new carrier imbuement palette or migration.

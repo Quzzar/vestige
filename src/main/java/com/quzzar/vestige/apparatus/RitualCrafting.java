@@ -189,8 +189,10 @@ public final class RitualCrafting {
                 var selected=stones.getFirst();
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
                 var inputs=RitualInputs.capture(selected);
+                var stoneOutput=com.quzzar.vestige.travel.StandingStoneRecipe.result(inputs);
+                if (stoneOutput.isEmpty()) return Outcome.INVALID;
                 var occupied=inputs.nodes().stream().filter(n -> !n.offering().isEmpty()).map(RitualInputs.Node::seat).toList();
-                return begin(selected,player,com.quzzar.vestige.travel.StandingStoneRecipe.result(selected.items()).orElseThrow(),occupied,0x83d9ef,inputs,random,Outcome.CRAFTING);
+                return begin(selected,player,stoneOutput.get(),occupied,0x83d9ef,inputs,random,Outcome.CRAFTING);
             }
             var attunements=advanced.stream().filter(l -> attunementRecipe(l.items())).toList();
             if (!attunements.isEmpty()) {

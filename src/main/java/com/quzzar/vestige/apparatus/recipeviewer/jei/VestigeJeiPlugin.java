@@ -60,6 +60,7 @@ public final class VestigeJeiPlugin implements IModPlugin {
     }
     /** Ingredient-list identity includes name visibility; recipe lookup always retains the base spell identity. */
     private static String subtype(ItemStack stack,UidContext context) {
+        var stone=StandingStoneDisplays.subtype(stack);if(!stone.isEmpty())return stone;
         var id=stack.is(ScrollItems.WAND.get())?WandDisplays.subtype(stack):RitualDisplays.subtype(stack);
         var scroll=ScrollItems.scroll(stack);
         if(context==UidContext.Ingredient && scroll.isPresent()) {
@@ -96,6 +97,7 @@ public final class VestigeJeiPlugin implements IModPlugin {
         registration.registerSubtypeInterpreter(ScrollItems.WAND.get(),interpreter);
         registration.registerSubtypeInterpreter(ScrollItems.SCROLL.get(),interpreter);
         registration.registerSubtypeInterpreter(ScrollItems.FRAGMENT.get(),interpreter);
+        for(var item:com.quzzar.vestige.travel.StandingStones.STONE_ITEMS.values())registration.registerSubtypeInterpreter(item.get(),interpreter);
     }
     @Override public void registerCategories(IRecipeCategoryRegistration registration) {
         if(active()){registration.addRecipeCategories(new Category(registration.getJeiHelpers().getGuiHelper()),new WandJeiCategory(registration.getJeiHelpers().getGuiHelper()));}
