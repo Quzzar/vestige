@@ -40,7 +40,7 @@ public final class StoneTravelPayloads {
             buffer.writeUtf(value.sourceName(), 64); buffer.writeVarInt(value.destinations().size());
             for (var node : value.destinations()) {
                 buffer.writeUUID(node.id()); buffer.writeResourceLocation(node.dimension()); buffer.writeBlockPos(node.position()); buffer.writeUtf(node.name(), 64);
-                buffer.writeEnum(node.quote().route()); buffer.writeVarInt(node.quote().amount()); buffer.writeBoolean(node.affordable());
+                buffer.writeEnum(node.quote().route()); buffer.writeVarInt(node.quote().amount()); buffer.writeVarInt(node.quote().manaAmount()); buffer.writeBoolean(node.affordable());
             }
             buffer.writeVarInt(value.page()); buffer.writeVarInt(value.total()); buffer.writeBoolean(value.refreshOnly());
         }, buffer -> {
@@ -49,7 +49,7 @@ public final class StoneTravelPayloads {
             int size = buffer.readVarInt(); if (size < 0 || size > StoneTravel.PAGE_SIZE) throw new IllegalArgumentException("Invalid network page");
             List<Destination> nodes = new ArrayList<>(size);
             for (int i = 0; i < size; i++) nodes.add(new Destination(buffer.readUUID(), buffer.readResourceLocation(), buffer.readBlockPos(), buffer.readUtf(64),
-                    new StandingStonePayment.Quote(buffer.readEnum(StandingStonePayment.class), buffer.readVarInt()), buffer.readBoolean()));
+                    new StandingStonePayment.Quote(buffer.readEnum(StandingStonePayment.class), buffer.readVarInt(), buffer.readVarInt()), buffer.readBoolean()));
             return new View(source, key, dimension, position, sourceName, nodes, buffer.readVarInt(), buffer.readVarInt(), buffer.readBoolean());
         });
         public View {
@@ -83,7 +83,7 @@ public final class StoneTravelPayloads {
         @Override public Type<Rename> type() { return TYPE; }
     }
     @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event) {
-        var registrar = event.registrar("5");
+        var registrar = event.registrar("6");
         registrar.playToClient(View.TYPE, View.CODEC, (payload, context) -> com.quzzar.vestige.travel.client.StoneNetworkScreen.open(payload));
         registrar.playToServer(Request.TYPE, Request.CODEC, (payload, context) -> {
             if (context.player() instanceof ServerPlayer player) StoneTravel.travel(player, payload.source(), payload.destination());

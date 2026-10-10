@@ -50,23 +50,32 @@ public enum StandingStonePayment {
             case HEALTH -> ResourceValuation.healthForMana(budget);
             case HUNGER -> ResourceValuation.foodForMana(budget);
         };
-        return new Quote(this, amount);
+        // Saving 25% XP exchanges that portion for mana with a 4/3 premium.
+        int mana = this == ERUDITE ? Math.max(1, Math.toIntExact((long) Math.ceil(budget / 3))) : 0;
+        return new Quote(this, amount, mana);
     }
-    public record Quote(StandingStonePayment route, int amount) {
-        public Quote { Objects.requireNonNull(route); if (amount < 1) throw new IllegalArgumentException("Positive travel cost required"); }
-        public SpellCost cost() {
+    public record Quote(StandingStonePayment route, int amount, int manaAmount) {
+        public Quote(StandingStonePayment route, int amount) { this(route, amount, 0); }
+        public Quote {
+            Objects.requireNonNull(route);
+            if (amount < 1 || (route == ERUDITE ? manaAmount < 1 : manaAmount != 0))
+                throw new IllegalArgumentException("Invalid travel costs");
+        }
+        public List<SpellCost> costs() {
             return switch (route) {
-                case EXPERIENCE, ERUDITE -> new SpellCost.Experience(amount);
-                case MANA -> new SpellCost.Mana(amount);
-                case HUNGER -> new SpellCost.Hunger(amount);
-                case HEALTH -> new SpellCost.Health(amount);
+                case EXPERIENCE -> List.of(new SpellCost.Experience(amount));
+                case ERUDITE -> List.of(new SpellCost.Experience(amount), new SpellCost.Mana(manaAmount));
+                case MANA -> List.of(new SpellCost.Mana(amount));
+                case HUNGER -> List.of(new SpellCost.Hunger(amount));
+                case HEALTH -> List.of(new SpellCost.Health(amount));
             };
         }
         public boolean affordable(Player player) {
             if (player == null || !player.isAlive()) return false;
             if (player.isCreative()) return true;
             return switch (route) {
-                case EXPERIENCE, ERUDITE -> PlayerExperience.available(player) >= amount;
+                case EXPERIENCE -> PlayerExperience.available(player) >= amount;
+                case ERUDITE -> PlayerExperience.available(player) >= amount && NativeMana.amount(player) >= manaAmount;
                 case MANA -> NativeMana.amount(player) >= amount;
                 case HUNGER -> player.getFoodData().getFoodLevel() >= amount;
                 case HEALTH -> player.getHealth() > amount;

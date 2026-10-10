@@ -267,10 +267,11 @@ public final class MinecraftSpellWorld implements SpellWorld {
         if (!Double.isFinite(health) || caster.getHealth() <= health || !Double.isFinite(mana) || NativeMana.amount(caster) < mana || hunger > 0 && (!(caster instanceof Player p) || p.getFoodData().getFoodLevel() < hunger)) return false;
         if (experience > 0 && (!(caster instanceof ServerPlayer player) || experience > Integer.MAX_VALUE
                 || !com.quzzar.vestige.travel.PlayerExperience.spend(player, (int) experience))) return false;
+        // XP callbacks can change mana after the initial affordability check.
+        if (mana > 0 && !NativeMana.spend(caster, mana)) return false;
         if (costs.stream().anyMatch(SpellCost.Material.class::isInstance) && caster instanceof Player p)
             for (int i = 0; i < inventory.size(); i++) p.getInventory().setItem(i, inventory.get(i));
         if (health > 0) caster.setHealth((float) (caster.getHealth() - health));
-        if (mana > 0) NativeMana.spend(caster, mana);
         paidMana.accept(mana);
         if (hunger > 0 && caster instanceof Player p) p.getFoodData().setFoodLevel(p.getFoodData().getFoodLevel() - (int) hunger);
         return true;

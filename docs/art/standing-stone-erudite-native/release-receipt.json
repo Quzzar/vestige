@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-10",
+  "item": "Erudite Standing Stone",
+  "policy": {
+    "xp": "max(1, round(0.75 * B))",
+    "mana": "max(1, ceil(B / 3))",
+    "example": {
+      "ordinary_xp": 24,
+      "erudite_xp": 18,
+      "erudite_mana": 8
+    }
+  },
+  "protocol": 6,
+  "saved_route_version": 1,
+  "combined_jar_sha256": "54c49b064a38aeca69af1115fa02c9bf3765f7522f82ebbed47f6d1f0f350f9b",
+  "scoped_jar_sha256": "1399d51b84ab762f270932bc834b1170fdfce62a3f7708722adf5cedf291cf9a",
+  "installed_path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+  "previous_sha256": "9c09d1c452b50bfa74ac17c399fcb96d776bf3c245c13aa1c1f19065a9bfd8bf",
+  "backup_path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/.vestige-build-backups/vestige-before-erudite-tradeoff-9c09d1c452b5.jar",
+  "verification": {
+    "combined_unit_tests": 246,
+    "combined_suites": 53,
+    "scoped_unit_tests": 228,
+    "scoped_suites": 50,
+    "minecraft_tests_with_kithkyn": 50,
+    "native_client": "Minecraft 1.21.1 / NeoForge 21.1.72 with JEI and Kithkyn",
+    "public_and_bound_recipe_variants": 185,
+    "native_frames": 18
+  },
+  "limitations": [
+    "Client inspection used JEI; EMI recipe integration is unchanged from its initial verified package.",
+    "Resource-generation and repeated long-distance travel remain playtest tuning.",
+    "Minecraft must restart to load the installed build."
+  ]
+}

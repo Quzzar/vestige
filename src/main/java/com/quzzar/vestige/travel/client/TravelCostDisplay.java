@@ -7,7 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
 /** Exact native costs: counted full/half hearts or food, and numbered XP/mana marks. */
-record TravelCostDisplay(Type type, int amount, boolean affordable) {
+record TravelCostDisplay(Type type, int amount, boolean affordable, int manaAmount) {
     enum Type {
         XP("screen.vestige.xp_points"), HEALTH("screen.vestige.health_points"),
         MANA("screen.vestige.mana_points"), HUNGER("screen.vestige.hunger_points");
@@ -22,10 +22,16 @@ record TravelCostDisplay(Type type, int amount, boolean affordable) {
     private static final ResourceLocation FOOD = ResourceLocation.withDefaultNamespace("hud/food_full");
     private static final ResourceLocation HALF_FOOD = ResourceLocation.withDefaultNamespace("hud/food_half");
     private static final ResourceLocation EMPTY_FOOD = ResourceLocation.withDefaultNamespace("hud/food_empty");
+    TravelCostDisplay(Type type, int amount, boolean affordable) { this(type, amount, affordable, 0); }
     TravelCostDisplay {
-        if (type == null || amount < 1) throw new IllegalArgumentException("Positive typed display cost required");
+        if (type == null || amount < 1 || manaAmount < 0 || manaAmount > 0 && type != Type.XP)
+            throw new IllegalArgumentException("Invalid typed display cost");
     }
-    Component description() { return Component.translatable(type.label, amount); }
+    Component description() {
+        var text = Component.translatable(type.label, amount);
+        if (manaAmount > 0) text.append(" + ").append(Component.translatable(Type.MANA.label, manaAmount));
+        return text;
+    }
     boolean usesCountedIcons() { return (type == Type.HEALTH || type == Type.HUNGER) && amount <= 20; }
     int fullIcons() { return usesCountedIcons() ? amount / 2 : 0; }
     boolean hasHalfIcon() { return usesCountedIcons() && amount % 2 != 0; }
@@ -33,12 +39,20 @@ record TravelCostDisplay(Type type, int amount, boolean affordable) {
         return type == Type.HEALTH || type == Type.HUNGER ? Integer.toString(amount / 2) + (amount % 2 == 0 ? "" : ".5") : Integer.toString(amount);
     }
     int width(Font font) {
+        return primaryWidth(font) + (manaAmount > 0 ? 7 + mana().width(font) : 0);
+    }
+    private TravelCostDisplay mana() { return new TravelCostDisplay(Type.MANA, manaAmount, affordable); }
+    private int primaryWidth(Font font) {
         return usesCountedIcons() ? (fullIcons() + (hasHalfIcon() ? 1 : 0)) * ICON_SPACING - 1
                 : font.width(number()) + 4 + ICON_SIZE;
     }
     /** Right-aligned amounts; full and half resource icons retain the actual point count. */
     void draw(GuiGraphics graphics, Font font, int right, int y, int textColor) {
-        if (!usesCountedIcons()) graphics.drawString(font, number(), right - width(font), y, textColor, true);
+        if (manaAmount > 0) {
+            var mana = mana(); mana.draw(graphics, font, right, y, textColor);
+            right -= mana.width(font) + 7;
+        }
+        if (!usesCountedIcons()) graphics.drawString(font, number(), right - primaryWidth(font), y, textColor, true);
         float shade = affordable ? 1 : .4f;
         graphics.setColor(shade, shade, shade, 1);
         switch (type) {
@@ -52,7 +66,7 @@ record TravelCostDisplay(Type type, int amount, boolean affordable) {
                     graphics.blitSprite(full, right - ICON_SIZE, y, ICON_SIZE, ICON_SIZE);
                     break;
                 }
-                int left = right - width(font);
+                int left = right - primaryWidth(font);
                 for (int i = 0; i < fullIcons(); i++) graphics.blitSprite(full, left + i * ICON_SPACING, y, ICON_SIZE, ICON_SIZE);
                 if (hasHalfIcon()) {
                     int x = left + fullIcons() * ICON_SPACING;

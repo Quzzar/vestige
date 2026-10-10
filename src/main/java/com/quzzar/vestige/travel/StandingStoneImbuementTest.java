@@ -166,10 +166,29 @@ public final class StandingStoneImbuementTest {
                 StoneTravel.travel(player,pair.source().id(),pair.target().id());
                 h.assertTrue(player.position().distanceToSqr(pair.start())>1,"Funded travel failed "+route);
                 int amount=quote.amount();h.assertTrue(PlayerExperience.available(player)==100-((route==StandingStonePayment.EXPERIENCE || route==StandingStonePayment.ERUDITE)?amount:0)
-                        && NativeMana.amount(player)==100-(route==StandingStonePayment.MANA?amount:0) && player.getFoodData().getFoodLevel()==20-(route==StandingStonePayment.HUNGER?amount:0)
+                        && NativeMana.amount(player)==100-(route==StandingStonePayment.MANA?amount:quote.manaAmount()) && player.getFoodData().getFoodLevel()==20-(route==StandingStonePayment.HUNGER?amount:0)
                         && player.getHealth()==20-(route==StandingStonePayment.HEALTH?amount:0),"Wrong typed payment "+route);
                 var after=player.position();StoneTravel.travel(player,pair.source().id(),pair.target().id());h.assertTrue(player.position().equals(after),"Session replayed");
             }
+        }h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="stone_imbuement_travel")
+    public static void eruditeRequiresBothResourcesAndPaysExactBalancesTogether(GameTestHelper h) {
+        var pair=pair(h);try(var player=SurvivalTestPlayer.create(h)) {
+            for(boolean missingMana:List.of(true,false)) {
+                fund(player,pair,StandingStonePayment.ERUDITE);var quote=StandingStoneFare.quote(pair.source().getBlockPos(),pair.target().getBlockPos(),StandingStonePayment.ERUDITE);
+                player.setExperienceLevels(0);player.setExperiencePoints(0);player.giveExperiencePoints(quote.amount()-(missingMana?0:1));
+                NativeMana.set(player,quote.manaAmount()-(missingMana?1:0));
+                long xp=PlayerExperience.available(player);double mana=NativeMana.amount(player);var recovery=player.getPersistentData().get("vestige:mana_recovery");
+                h.assertTrue(!quote.affordable(player) && !StoneTravel.view(player,pair.source(),0).destinations().getFirst().affordable(),"Erudite ignored one missing resource");
+                StoneTravel.travel(player,pair.source().id(),pair.target().id());
+                h.assertTrue(player.position().equals(pair.start()) && PlayerExperience.available(player)==xp && NativeMana.amount(player)==mana
+                        && Objects.equals(recovery,player.getPersistentData().get("vestige:mana_recovery")),"Rejected Erudite trip spent part of its payment");
+            }
+            fund(player,pair,StandingStonePayment.ERUDITE);var quote=StandingStoneFare.quote(pair.source().getBlockPos(),pair.target().getBlockPos(),StandingStonePayment.ERUDITE);
+            player.setExperienceLevels(0);player.setExperiencePoints(0);player.giveExperiencePoints(quote.amount());NativeMana.set(player,quote.manaAmount());
+            h.assertTrue(quote.affordable(player),"Exact paired balances rejected");StoneTravel.travel(player,pair.source().id(),pair.target().id());
+            h.assertTrue(player.position().distanceToSqr(pair.start())>1 && PlayerExperience.available(player)==0 && NativeMana.amount(player)==0,"Exact paired payment failed");
         }h.succeed();
     }
     @GameTest(template="empty_9x3x9",batch="stone_imbuement_travel")
@@ -199,13 +218,28 @@ public final class StandingStoneImbuementTest {
         }h.succeed();
     }
     @GameTest(template="empty_9x3x9",batch="stone_imbuement_cancel_travel")
+    public static void eruditeXpCallbacksCannotWaiveManaOrCommitPartialPayment(GameTestHelper h) {
+        var pair=pair(h);try(var player=SurvivalTestPlayer.create(h)) {
+            for(boolean cancel:List.of(true,false)) {
+                fund(player,pair,StandingStonePayment.ERUDITE);var before=player.getPersistentData().copy();
+                Consumer<PlayerXpEvent.XpChange> listener=e->{if(e.getEntity()==player && e.getAmount()<0){if(cancel)e.setCanceled(true);else NativeMana.set(player,0);}};
+                NeoForge.EVENT_BUS.addListener(listener);try {StoneTravel.travel(player,pair.source().id(),pair.target().id());}finally {NeoForge.EVENT_BUS.unregister(listener);}
+                h.assertTrue(player.position().equals(pair.start()) && PlayerExperience.available(player)==100 && NativeMana.amount(player)==100
+                        && Objects.equals(before.get("vestige:mana_recovery"),player.getPersistentData().get("vestige:mana_recovery")),"XP callback waived mana or left a partial debit");
+            }
+        }h.succeed();
+    }
+    @GameTest(template="empty_9x3x9",batch="stone_imbuement_cancel_travel")
     public static void xpCallbacksCannotReenterOrChangeTheQuotedRouteDuringCommit(GameTestHelper h) {
         var pair=pair(h);try(var player=SurvivalTestPlayer.create(h)) {
-            fund(player,pair,StandingStonePayment.EXPERIENCE);int[] callbacks={0};
+            for(var route:List.of(StandingStonePayment.EXPERIENCE,StandingStonePayment.ERUDITE)) {
+            fund(player,pair,route);int[] callbacks={0};var before=player.getPersistentData().copy();
             Consumer<PlayerXpEvent.XpChange> listener=e->{if(e.getEntity()==player && e.getAmount()<0) {callbacks[0]++;StoneTravel.travel(player,pair.source().id(),pair.target().id());pair.source().configure(pair.source().key(),"Standing Stone",StandingStonePayment.HEALTH);}};
             NeoForge.EVENT_BUS.addListener(listener);try {StoneTravel.travel(player,pair.source().id(),pair.target().id());}finally {NeoForge.EVENT_BUS.unregister(listener);}
-            h.assertTrue(callbacks[0]==1 && PlayerExperience.available(player)==100 && player.position().equals(pair.start()),"Reentrant or stale quote consumed XP");
+            h.assertTrue(callbacks[0]==1 && PlayerExperience.available(player)==100 && NativeMana.amount(player)==100 && player.position().equals(pair.start())
+                    && Objects.equals(before.get("vestige:mana_recovery"),player.getPersistentData().get("vestige:mana_recovery")),"Reentrant or stale quote consumed resources");
             StoneTravel.travel(player,pair.source().id(),pair.target().id());h.assertTrue(player.position().equals(pair.start()),"Stale route session accepted");
+            }
             pair.source().configure(pair.source().key(),"Standing Stone",null);StoneTravel.open(player,pair.source(),0);StoneTravel.travel(player,pair.source().id(),pair.target().id());h.assertTrue(player.position().equals(pair.start()),"Malformed route opened travel");
         }h.succeed();
     }
