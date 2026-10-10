@@ -39,12 +39,14 @@ class MagicArmorRecipeTest {
         seats = recipe(DyeColor.BLUE, false); seats.set(7, new ItemStack(Items.COD)); assertTrue(MagicArmorRecipe.result(seats).isEmpty());
     }
     @Test void viewerRecipesAreConcreteMatchingColorRecipesWithTheSameActualOutputs() {
-        var entries=MagicArmorDisplays.entries();assertEquals(32,entries.size());
+        var entries=MagicArmorDisplays.entries();assertEquals(272,entries.size());
         for(var entry:entries) {
             assertFalse(entry.shapeless());assertEquals(8,entry.capacity());
             var seats=new ArrayList<ItemStack>(Collections.nCopies(8,ItemStack.EMPTY));
             for(var offering:entry.offerings()) seats.set(offering.seat(),new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.get(offering.ingredient().items().getFirst())));
-            assertTrue(ItemStack.matches(entry.output(),MagicArmorRecipe.result(seats).orElseThrow()));
+            var materials=new ArrayList<ItemStack>(Collections.nCopies(8,ItemStack.EMPTY));
+            for(var material:entry.imbuements()) materials.set(material.seat(),new ItemStack(net.minecraft.core.registries.BuiltInRegistries.ITEM.get(material.material())));
+            assertTrue(ItemStack.matches(entry.output(),MagicArmorRecipe.result(seats,materials).orElseThrow()));
         }
     }
     @Test void productionFormulasMatchReviewedTraitVariables() throws IOException {

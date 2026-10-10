@@ -92,15 +92,18 @@ public final class EquipmentMagic {
                 || hit != null && hit.wardSpent) return;
         ItemStack armor = actor.getItemBySlot(EquipmentSlot.CHEST);
         if (!armor.is(MagicEquipment.WARDWEAVE.get())) return;
+        var variant = WardweaveImbuements.read(armor);
+        if (variant.isEmpty()) return;
         var old = WARDS.get(actor.getUUID());
         if (old != null && old.continues()) return;
         var ability = NativeMagic.abilities().abilities().get(((MagicArmorItem) armor.getItem()).ability());
         if (ability == null) return;
         var session = NativeMagic.session(actor.getServer()); session.world().registerActor(actor);
         var source = new WornSource(actor, armor);
-        session.runtime().activate(ability, new SpellEvent(SpellTriggerTypes.DAMAGE_TAKEN, actor.getUUID(),
+        session.runtime().cast(ability, new SpellEvent(SpellTriggerTypes.DAMAGE_TAKEN, actor.getUUID(),
                 Optional.of(new SpellSubject.Entity(actor.getUUID())), Optional.empty(), session.world().cause(event.getSource().getDirectEntity()),
-                Map.of(id("event/damage_amount"), new ConditionValue.Decimal(event.getNewDamage()))), List.of(), source);
+                Map.of(id("event/damage_amount"), new ConditionValue.Decimal(event.getNewDamage()))), variant.get().modifiers(),
+                true, Optional.empty(), false, variant.get().shaping(), source);
     }
     /** Slot mutation revokes a ward immediately. Its actor/ability recovery remains in the runtime. */
     public static void removed(LivingEntity actor) {
@@ -143,10 +146,12 @@ public final class EquipmentMagic {
     private static final class WornSource implements CastReservation, CastObserver {
         final LivingEntity actor;
         final ItemStack armor;
+        final WardweaveImbuements.Variant variant;
         boolean armed, started;
         long expires;
-        WornSource(LivingEntity actor, ItemStack armor) { this.actor = actor; this.armor = armor; }
-        @Override public boolean valid() { return actor.isAlive() && !armor.isEmpty() && actor.getItemBySlot(EquipmentSlot.CHEST) == armor; }
+        WornSource(LivingEntity actor, ItemStack armor) { this.actor = actor; this.armor = armor; this.variant = WardweaveImbuements.read(armor).orElseThrow(); }
+        @Override public boolean valid() { return actor.isAlive() && !armor.isEmpty() && actor.getItemBySlot(EquipmentSlot.CHEST) == armor
+                && WardweaveImbuements.read(armor).filter(variant::equals).isPresent(); }
         @Override public boolean continues() { return !started || armed && valid() && actor.level().getGameTime() < expires; }
         @Override public void commit() { }
         @Override public CastObserver observer() { return this; }

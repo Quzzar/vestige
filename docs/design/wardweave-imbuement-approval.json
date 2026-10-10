@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "status": "owner-approved package; implemented",
+  "ownerMessage": "Yeah, I think this is cool. This is great.",
+  "scope": "Four Wardweave imbuements, concrete trade-offs and the linked complete 16-set recipe/naming package presented immediately before approval",
+  "approvedFiles": {
+    "docs/design/wardweave-imbuement-review.md": "dd849199e89eaf7b8e39363b31cabdd62695d148b452e955cf8c278c0a8777e0",
+    "docs/design/wardweave-imbuement-values.json": "c010d32f9168fc85434d00df2c7a17dc3e076531a18dc9831313a17ba262a4ef",
+    "docs/design/wardweave-adjective-proposal.json": "dd78108a2d9d4cb79c1716cbe294abc620195adbc7ca1bd0376f057db57adea1"
+  },
+  "implementation": "docs/design/wardweave-imbuement-review.md"
+}

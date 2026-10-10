@@ -21,7 +21,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Drawing | `vestige:spellshaping/drawing` — Implemented spell adjustment | Bring a qualified recipient toward an explicit anchor. |
 | Echoing | `vestige:spellshaping/echoing` — Implemented spell adjustment | A supported direct outcome repeats at reduced strength. |
 | Elusive | `vestige:wand_tip/ender_pearl` — Implemented wand tip | An optional short caster backstep after a supported cast. |
-| Enduring | `vestige:spellshaping/enduring` — Implemented spell adjustment<br>`vestige:hourglass/enduring` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/enduring` — Implemented Wayfarer adjustment | Extend finite supported manifestations without independently extending event bindings.<br>Longer positional recall at a higher mana price.<br>A longer movement burst: Time ×1.20 and mana ×1.12. |
+| Enduring | `vestige:spellshaping/enduring` — Implemented spell adjustment<br>`vestige:hourglass/enduring` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/enduring` — Implemented Wayfarer adjustment<br>`vestige:wardweave/enduring` — Implemented Wardweave adjustment | Extend finite supported manifestations without independently extending event bindings.<br>Longer positional recall at a higher mana price.<br>A longer movement burst: Time ×1.20 and mana ×1.12.<br>Longer charge lifetime with a longer recovery. |
 | Envenomed | `vestige:spellshaping/envenomed` — Implemented spell adjustment | Add bounded poison to an eligible damaged recipient. |
 | Erudite | `vestige:hourglass/erudite` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/experience` — Implemented Homebound Eye payment | Exchange part of activation mana for experience points through the shared valuation.<br>An experience-point-backed return with reduced carrier wear. |
 | Excavating | `vestige:spellshaping/excavating` — Implemented spell adjustment | Increase the supported mining hardness threshold. |
@@ -47,14 +47,14 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Patient | `vestige:spellshaping/patient` — Implemented spell adjustment | Twenty extra charge ticks per contribution reduce mana payment. |
 | Piercing | `vestige:spellshaping/piercing` — Implemented spell adjustment | Extra native projectile penetration, limited to four pierces. |
 | Purifying | `vestige:spellshaping/purifying` — Implemented spell adjustment | Remove explicitly selected harmful statuses after an eligible protective/healing result. |
-| Quickened | `vestige:wayfarer/quickened` — Implemented Wayfarer adjustment | Shorter actor recovery with increased mana: recovery ×0.80 and mana ×1.25. This changes recovery, not preparation. |
+| Quickened | `vestige:wayfarer/quickened` — Implemented Wayfarer adjustment<br>`vestige:wardweave/quickened` — Implemented Wardweave adjustment | Shorter actor recovery with increased mana: recovery ×0.80 and mana ×1.25. This changes recovery, not preparation.<br>Shorter recovery with weaker protection. |
 | Quieting | `vestige:spellshaping/quieting` — Implemented spell adjustment | Suppress authored casting cues that own a sound. |
 | Reaching | `vestige:spellshaping/reaching` — Implemented spell adjustment | Range ×1.3 per contribution. |
 | Reckless | `vestige:spellshaping/reckless` — Implemented spell adjustment | Amplify ×1.15 per contribution. |
 | Reclaiming | `vestige:wand_tip/emerald` — Implemented wand tip | A conditional rebate of actually paid mana, with additional wear. |
 | Reflecting | `vestige:spellshaping/reflecting` — Implemented spell adjustment | Add a three-second protective halo that returns up to two incoming vanilla arrows or tridents; native spell deliveries are excluded. |
 | Refracting | `vestige:wand_tip/diamond` — Implemented wand tip | A bounded distribution of supported damage or healing to nearby recipients. |
-| Reinforced | `vestige:hourglass/reinforced` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment<br>`vestige:fluxed_flint/reinforced` — Implemented Fluxed Flint adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25.<br>One and a half times the repair budget and intrinsic volatility. |
+| Reinforced | `vestige:hourglass/reinforced` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/reinforced` — Implemented Wayfarer adjustment<br>`vestige:fluxed_flint/reinforced` — Implemented Fluxed Flint adjustment<br>`vestige:wardweave/reinforced` — Implemented Wardweave adjustment | More carrier durability at a higher activation mana price.<br>More carrier durability with increased mana: maximum durability ×1.50 and mana ×1.25.<br>One and a half times the repair budget and intrinsic volatility.<br>Greater carrier durability with weaker protection. |
 | Renewing | `vestige:wand_tip/ghast_tear` — Implemented wand tip | A bounded caster restoration following the authored successful outcome. |
 | Repelling | `vestige:spellshaping/repelling` — Implemented spell adjustment<br>`vestige:wand_tip/iron` — Implemented wand tip | Drive a hit recipient away from the declared impact origin.<br>An additional bounded push after eligible damage, healing or protection. |
 | Resonating | `vestige:wand_tip/amethyst` — Implemented wand tip | A bounded delayed echo of a supported damage or healing outcome. |
@@ -70,7 +70,7 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Unbalancing | `vestige:spellshaping/unbalancing` — Implemented spell adjustment | Apply a short physical stumble after contact. |
 | Veiled | `vestige:spellshaping/veiled` — Implemented spell adjustment | A compatible non-damaging utility cast grants brief invisibility. |
 | Votive | `vestige:spellshaping/votive` — Implemented spell adjustment | Amplify ×1.12 per contribution. |
-| Warded | `vestige:spellshaping/warded` — Implemented spell adjustment | After successful entity protection, add an owned four-second ward with 2 charges and 1 base mitigation per hit. |
+| Warded | `vestige:spellshaping/warded` — Implemented spell adjustment<br>`vestige:wardweave/warded` — Implemented Wardweave adjustment | After successful entity protection, add an owned four-second ward with 2 charges and 1 base mitigation per hit.<br>Stronger protection with a shorter opportunity to use the charge. |
 | Widening | `vestige:spellshaping/widening` — Implemented spell adjustment | Area ×1.2 per contribution. |
 
 ## Combination-only display adjectives
@@ -228,6 +228,17 @@ These names describe the exact complete set below. The underlying adjustments st
 | Restive | `vestige:fluxed_flint` | Stabilized + Fractious | Stabilized + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
 | Audacious | `vestige:fluxed_flint` | Reinforced + Fractious | Reinforced + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
 | Impetuous | `vestige:fluxed_flint` | Stabilized + Reinforced + Fractious | Stabilized + Reinforced + Fractious; all authored contributions compose once. Implemented Fluxed Flint adjustment. |
+| Vigilant | `vestige:wardweave_robes` | Warded + Enduring | Independent Warded, Enduring adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Watchful | `vestige:wardweave_robes` | Warded + Quickened | Independent Warded, Quickened adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Fortified | `vestige:wardweave_robes` | Warded + Reinforced | Independent Warded, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Tireless | `vestige:wardweave_robes` | Enduring + Quickened | Independent Enduring, Quickened adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Stalwart | `vestige:wardweave_robes` | Enduring + Reinforced | Independent Enduring, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Dependable | `vestige:wardweave_robes` | Quickened + Reinforced | Independent Quickened, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Untiring | `vestige:wardweave_robes` | Warded + Enduring + Quickened | Independent Warded, Enduring, Quickened adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Indomitable | `vestige:wardweave_robes` | Warded + Enduring + Reinforced | Independent Warded, Enduring, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Unflinching | `vestige:wardweave_robes` | Warded + Quickened + Reinforced | Independent Warded, Quickened, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Resolute | `vestige:wardweave_robes` | Enduring + Quickened + Reinforced | Independent Enduring, Quickened, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
+| Unshaken | `vestige:wardweave_robes` | Warded + Enduring + Quickened + Reinforced | Independent Warded, Enduring, Quickened, Reinforced adjustments; preserve every trade-off. Implemented Wardweave adjustment. |
 
 ## Implemented mechanical compounds
 
@@ -256,7 +267,7 @@ These name five crafting components; they are not additional wand prefixes. Thei
 
 ## Scope and coverage
 
-Inventory: **64 distinct individual words**, **149 display combinations**, **six mechanical compounds**, **five thread component names**.
+Inventory: **64 distinct individual words**, **160 display combinations**, **six mechanical compounds**, **five thread component names**.
 
 Scrolls, bound wands and staff stored-scroll labels use one italic adjective for a mixture. Supported Homebound Eye payment routes use their individual adjective; its ordinary durability route keeps the plain title. Wayfarer uses its complete finite matrix. Hourglass names are reserved design entries, not implemented gameplay. Plain items, spell titles, rarity colors, affinity names, cosmetic finishes and attunement runes are not inferred into this catalog.
 
@@ -336,3 +347,24 @@ Ordinary / Greater / Grand are existing degree labels, not three different adjus
 | *Restive* Fluxed Flint | Stabilized + Fractious |
 | *Braced* Fluxed Flint | Stabilized + Reinforced |
 | *Impetuous* Fluxed Flint | Stabilized + Reinforced + Fractious |
+
+`vestige:wardweave_robes` has exhaustive naming coverage for its **16** declared combinations, including the unmodified item and individual adjustments. Gameplay reachability is checked by its own recipe tests.
+
+| Full item name | Underlying adjustments |
+| --- | --- |
+| Wardweave Robes | None |
+| *Reinforced* Wardweave Robes | Reinforced |
+| *Quickened* Wardweave Robes | Quickened |
+| *Dependable* Wardweave Robes | Quickened + Reinforced |
+| *Enduring* Wardweave Robes | Enduring |
+| *Stalwart* Wardweave Robes | Enduring + Reinforced |
+| *Tireless* Wardweave Robes | Enduring + Quickened |
+| *Resolute* Wardweave Robes | Enduring + Quickened + Reinforced |
+| *Warded* Wardweave Robes | Warded |
+| *Fortified* Wardweave Robes | Warded + Reinforced |
+| *Watchful* Wardweave Robes | Warded + Quickened |
+| *Unflinching* Wardweave Robes | Warded + Quickened + Reinforced |
+| *Vigilant* Wardweave Robes | Warded + Enduring |
+| *Indomitable* Wardweave Robes | Warded + Enduring + Reinforced |
+| *Untiring* Wardweave Robes | Warded + Enduring + Quickened |
+| *Unshaken* Wardweave Robes | Warded + Enduring + Quickened + Reinforced |

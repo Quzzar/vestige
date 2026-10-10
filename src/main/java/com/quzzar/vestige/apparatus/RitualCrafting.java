@@ -120,7 +120,9 @@ public final class RitualCrafting {
                 if (robes.size()!=1) return Outcome.INVALID;
                 var selected=robes.getFirst();
                 if (selected.blocks().stream().anyMatch(OfferingBlockEntity::busy)) return Outcome.BUSY;
-                return begin(selected,player,com.quzzar.vestige.equipment.MagicArmorRecipe.result(selected.items()).orElseThrow(),
+                var output=com.quzzar.vestige.equipment.MagicArmorRecipe.result(selected.items(),selected.stands().stream().map(OfferingBlockEntity::materialItem).toList());
+                if (output.isEmpty()) return Outcome.INVALID;
+                return begin(selected,player,output.get(),
                         java.util.stream.IntStream.range(0,8).boxed().toList(),0xf4e5ff,RitualInputs.capture(selected),random,Outcome.CRAFTING);
             }
             var wands=advanced.stream().filter(l -> WandRecipe.match(l.items()).isPresent()).toList();

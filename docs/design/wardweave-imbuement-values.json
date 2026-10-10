@@ -1,0 +1,151 @@
+{
+  "status": "October 9 Wardweave proposal for owner review; no production change or approval implied",
+  "date": "2026-10-09",
+  "family": "vestige:wardweave_robes",
+  "base": {
+    "lifetime_seconds": [
+      4,
+      1
+    ],
+    "protection_hp": [
+      2,
+      1
+    ],
+    "recovery_ticks": 240,
+    "maximum_durability": 80,
+    "maximum_mana_bonus": 25,
+    "repair_fraction": [
+      1,
+      4
+    ]
+  },
+  "choices": [
+    {
+      "id": "warded",
+      "word": "Warded",
+      "offering": "minecraft:pufferfish",
+      "socket": "minecraft:iron_block",
+      "modifiers": {
+        "force": [
+          3,
+          2
+        ],
+        "time": [
+          4,
+          5
+        ]
+      },
+      "recovery": [
+        1,
+        1
+      ],
+      "durability": [
+        1,
+        1
+      ],
+      "meaning": "Stronger protection with a shorter opportunity to use the charge."
+    },
+    {
+      "id": "enduring",
+      "word": "Enduring",
+      "offering": "matching_wool",
+      "socket": "minecraft:amethyst_block",
+      "modifiers": {
+        "time": [
+          3,
+          2
+        ]
+      },
+      "recovery": [
+        6,
+        5
+      ],
+      "durability": [
+        1,
+        1
+      ],
+      "meaning": "Longer charge lifetime with a longer recovery."
+    },
+    {
+      "id": "quickened",
+      "word": "Quickened",
+      "offering": "vestige:callous_thread",
+      "socket": "minecraft:copper_block",
+      "modifiers": {
+        "amplify": [
+          4,
+          5
+        ]
+      },
+      "recovery": [
+        4,
+        5
+      ],
+      "durability": [
+        1,
+        1
+      ],
+      "meaning": "Shorter recovery with weaker protection."
+    },
+    {
+      "id": "reinforced",
+      "word": "Reinforced",
+      "offering": "vestige:callous_thread",
+      "socket": "minecraft:iron_block",
+      "modifiers": {
+        "amplify": [
+          4,
+          5
+        ]
+      },
+      "recovery": [
+        1,
+        1
+      ],
+      "durability": [
+        3,
+        2
+      ],
+      "meaning": "Greater carrier durability with weaker protection."
+    }
+  ],
+  "recipe": {
+    "capacity": 8,
+    "offerings": [
+      "matching_wool",
+      "vestige:callous_thread",
+      "matching_wool",
+      "minecraft:iron_ingot",
+      "matching_wool",
+      "vestige:callous_thread",
+      "matching_wool",
+      "minecraft:pufferfish"
+    ],
+    "quarter_turn_offsets": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "all_wool_same_color": true,
+    "degree": 1,
+    "duplicate_selection": "reject",
+    "retains_sockets": true,
+    "geometry": "cosmetic; no additional robe shaping"
+  },
+  "rounding": {
+    "lifetime_ticks": "ceil once after Time composition; existing binding work bounds apply",
+    "recovery_ticks": "floor(raw_ticks + 1/2) once after cost composition",
+    "maximum_durability": "floor(raw + 1/2)",
+    "thread_repair": "floor(maximum_durability / 4)"
+  },
+  "preserve": [
+    "triggering hit cannot consume its new charge",
+    "one occupied charge never stacks or refreshes",
+    "spent-charge hit cannot rearm",
+    "snapshot protection and lifetime at formation",
+    "recovery owned by wearer and Wardweave ability across copies and variants",
+    "no mana spent and no additional idle/activation wear",
+    "same armor, enchantments, dyeing, visuals and mana capacity as shipped"
+  ]
+}

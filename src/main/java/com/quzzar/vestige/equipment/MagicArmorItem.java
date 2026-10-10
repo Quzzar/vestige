@@ -19,6 +19,12 @@ public class MagicArmorItem extends ArmorItem {
         this.ability = ability;
     }
     public ResourceLocation ability() { return ability; }
+    @Override public net.minecraft.network.chat.Component getName(ItemStack stack) {
+        if (ability.equals(WardweaveImbuements.ABILITY))
+            return WardweaveImbuements.read(stack).map(v -> com.quzzar.vestige.magic.presentation.MagicAdjectives.prefix(WardweaveImbuements.FAMILY,v.selections()).append(super.getName(stack)))
+                    .orElseGet(() -> super.getName(stack).copy());
+        return super.getName(stack);
+    }
     private static boolean forbidden(Holder<Enchantment> enchantment) {
         return enchantment.is(Enchantments.UNBREAKING) || enchantment.is(Enchantments.MENDING);
     }

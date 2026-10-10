@@ -1,0 +1,30 @@
+{
+  "previousInstalledSha256": "bdc8c590c05251fff768fbaee605323b81182b292826a8ce9d993180c99d8cd3",
+  "buildSha256": "ed045716f199554edba8107cb54bb7af3d5930636414456ee87d8381c603491a",
+  "changedMembers": [
+    "com/quzzar/vestige/apparatus/RitualCrafting$BlastImpact.class",
+    "com/quzzar/vestige/apparatus/RitualCrafting$Pending.class",
+    "com/quzzar/vestige/apparatus/RitualCrafting.class",
+    "com/quzzar/vestige/equipment/EquipmentMagic$Hit.class",
+    "com/quzzar/vestige/equipment/EquipmentMagic$WornSource.class",
+    "com/quzzar/vestige/equipment/EquipmentMagic.class",
+    "com/quzzar/vestige/equipment/MagicArmorDisplays.class",
+    "com/quzzar/vestige/equipment/MagicArmorItem.class",
+    "com/quzzar/vestige/equipment/MagicArmorRecipe.class",
+    "com/quzzar/vestige/magic/presentation/client/NativeEffectsCapture.class",
+    "data/vestige/magic_adjectives.json"
+  ],
+  "addedMembers": [
+    "com/quzzar/vestige/equipment/WardweaveDisplays$1.class",
+    "com/quzzar/vestige/equipment/WardweaveDisplays.class",
+    "com/quzzar/vestige/equipment/WardweaveImbuements$Choice.class",
+    "com/quzzar/vestige/equipment/WardweaveImbuements$Variant.class",
+    "com/quzzar/vestige/equipment/WardweaveImbuements.class",
+    "com/quzzar/vestige/equipment/WardweaveWorldTest$Wearer.class",
+    "com/quzzar/vestige/equipment/WardweaveWorldTest.class",
+    "com/quzzar/vestige/equipment/client/WardweaveCapture$1.class",
+    "com/quzzar/vestige/equipment/client/WardweaveCapture.class"
+  ],
+  "removedMembers": [],
+  "allUnrelatedMembersUnchanged": true
+}
