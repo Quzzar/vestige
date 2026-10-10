@@ -58,7 +58,8 @@ public final class StandingStoneBlock extends BaseEntityBlock {
     @Override public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         level.setBlock(pos.above(), state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
         if (!level.isClientSide && level.getBlockEntity(pos) instanceof StandingStoneEntity stone)
-            stone.configure(StandingStones.key(stack).orElse(""), stack.getHoverName().getString());
+            stone.configure(StandingStones.key(stack).orElse(""), stack.has(net.minecraft.core.component.DataComponents.CUSTOM_NAME)
+                    ? stack.getHoverName().getString() : "Standing Stone", StandingStones.payment(stack).orElse(null));
     }
     @Override protected BlockState updateShape(BlockState state, Direction direction, BlockState neighbor, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         var half = state.getValue(HALF);

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "installedCombinedBuild": {
+    "path": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/mods/vestige-0.1.0.jar",
+    "sha256": "9c09d1c452b50bfa74ac17c399fcb96d776bf3c245c13aa1c1f19065a9bfd8bf",
+    "previousSha256": "37ad9db163c4e08a4ec40afc35f6febf34cca94f31a8a05a0b671f2bced04b5d",
+    "backup": "/Users/quzzar/Library/Application Support/PrismLauncher/instances/Kithkyn Testing/minecraft/.vestige-build-backups/vestige-before-standing-stone-imbuements-37ad9db163c4.jar",
+    "baseCommit": "b9b436deaa07ea857d935b7e1adc2ff490546de3",
+    "unitTests": 244,
+    "worldTestsFinal": 48,
+    "worldTestsBroaderEarlier": 67
+  },
+  "scopedPublicationBuild": {
+    "sha256": "47348be0c9c8ea0c9ed9dcc3fc57c8348a762969192e048e2e5252d794da3b24",
+    "unitTests": 227,
+    "worldTests": 48
+  },
+  "note": "Scoped publication adds Standing Stone routes only. Testing pack keeps the approved combined development equipment work. JEI capture uses the scoped build; EMI uses the combined build. Restart Minecraft to load the update."
+}

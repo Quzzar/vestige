@@ -17,7 +17,7 @@ public final class StoneNetworkScreen extends Screen {
     private static final int BACKGROUND = 0xff303030, FRAME = 0xff737373, TEXT = 0xffeeeeee, MUTED = 0xffbcbcbc;
     private static final int INSET = 0xff252525, SHADOW = 0xff161616, EDGE = 0xff494949;
     private static final int ROW_HEIGHT = 20, ROW_SPACING = 22;
-    private final StoneTravelPayloads.View view;
+    private StoneTravelPayloads.View view;
     private final Optional<TravelCostDisplay.Type> previewType;
     private final List<DestinationButton> destinations = new ArrayList<>();
     private int left, top, panelWidth, panelHeight;
@@ -36,6 +36,13 @@ public final class StoneNetworkScreen extends Screen {
     }
     public static void open(StoneTravelPayloads.View view) {
         var minecraft = Minecraft.getInstance(); var next = new StoneNetworkScreen(view);
+        if (view.refreshOnly()) {
+            if (minecraft.screen instanceof StoneNetworkScreen current && current.previewType.isEmpty()
+                    && current.view.source().equals(view.source()) && current.view.page() == view.page()) {
+                current.view = view; current.updateAffordability();
+            }
+            return;
+        }
         if (minecraft.screen instanceof StoneNetworkScreen current && current.view.source().equals(view.source())
                 && current.view.sourceName().equals(view.sourceName())) {
             next.editing = current.editing;
@@ -44,7 +51,7 @@ public final class StoneNetworkScreen extends Screen {
         } else minecraft.setScreen(next);
     }
     String sourceName() { return view.sourceName(); }
-    StoneTravelPayloads.View view() { return view; }
+    public StoneTravelPayloads.View view() { return view; }
     int panelWidth() { return panelWidth; }
     static String ellipsize(Font font, String text, int width) {
         if (font.width(text) <= width) return text;
@@ -171,6 +178,13 @@ public final class StoneNetworkScreen extends Screen {
             return new TravelCostDisplay(previewType.get(), amount, index < 2);
         }
         var player = Minecraft.getInstance().player;
-        return new TravelCostDisplay(TravelCostDisplay.Type.XP, node.xpCost(), player != null && PlayerExperience.available(player) >= node.xpCost());
+        var current = view.destinations().stream().filter(value -> value.id().equals(node.id())).findFirst().orElse(node);
+        var type = switch (current.quote().route()) {
+            case EXPERIENCE, ERUDITE -> TravelCostDisplay.Type.XP;
+            case MANA -> TravelCostDisplay.Type.MANA;
+            case HUNGER -> TravelCostDisplay.Type.HUNGER;
+            case HEALTH -> TravelCostDisplay.Type.HEALTH;
+        };
+        return new TravelCostDisplay(type, current.quote().amount(), current.affordable() && current.quote().affordable(player));
     }
 }

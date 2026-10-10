@@ -11,8 +11,8 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Absorbing | `vestige:spellshaping/absorbing` — Implemented spell adjustment | After successful entity protection, add an owned four-second ward with 1 charges and 4 base mitigation per hit. |
 | Anchored | `vestige:spellshaping/anchored` — Implemented spell adjustment | Freeze a moving field whose actual pulses query around its own position; target-locked and already stationary fields are incompatible. |
 | Bleeding | `vestige:spellshaping/bleeding` — Implemented spell adjustment | Positive primary damage opens one bounded wound. |
-| Bloodbound | `vestige:spellshaping/bloodbound` — Implemented spell adjustment<br>`vestige:hourglass/bloodbound` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/health` — Implemented Homebound Eye payment | Amplify ×1.05 per contribution.<br>Exchange part of activation mana for health through the shared valuation.<br>A health-backed return with reduced carrier wear. |
-| Charged | `vestige:spellshaping/charged` — Implemented spell adjustment<br>`vestige:homebound_eye/mana` — Implemented Homebound Eye payment | Amplify ×1.15 per contribution.<br>A mana-backed return with reduced carrier wear. |
+| Bloodbound | `vestige:spellshaping/bloodbound` — Implemented spell adjustment<br>`vestige:hourglass/bloodbound` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/health` — Implemented Homebound Eye payment<br>`vestige:standing_stone/health` — Implemented Standing Stone payment | Amplify ×1.05 per contribution.<br>Exchange part of activation mana for health through the shared valuation.<br>A health-backed return with reduced carrier wear.<br>Standing Stone travel spends nonlethal health instead of experience. |
+| Charged | `vestige:spellshaping/charged` — Implemented spell adjustment<br>`vestige:homebound_eye/mana` — Implemented Homebound Eye payment<br>`vestige:standing_stone/mana` — Implemented Standing Stone payment | Amplify ×1.15 per contribution.<br>A mana-backed return with reduced carrier wear.<br>Standing Stone travel spends mana instead of experience. |
 | Chilling | `vestige:spellshaping/chilling` — Implemented spell adjustment | Cold contact leaves brief movement impairment. |
 | Cleansing | `vestige:spellshaping/cleansing` — Implemented spell adjustment | Couple eligible healing to a limited removal of harmful statuses. |
 | Conductive | `vestige:wand_tip/copper` — Implemented wand tip | An additional bounded electrical outcome after eligible damage. |
@@ -23,11 +23,11 @@ The [naming convention](design/magic-adjectives.md) separates reusable individua
 | Elusive | `vestige:wand_tip/ender_pearl` — Implemented wand tip | An optional short caster backstep after a supported cast. |
 | Enduring | `vestige:spellshaping/enduring` — Implemented spell adjustment<br>`vestige:hourglass/enduring` — Implemented Kairotic Hourglass adjustment<br>`vestige:wayfarer/enduring` — Implemented Wayfarer adjustment<br>`vestige:wardweave/enduring` — Implemented Wardweave adjustment | Extend finite supported manifestations without independently extending event bindings.<br>Longer positional recall at a higher mana price.<br>A longer movement burst: Time ×1.20 and mana ×1.12.<br>Longer charge lifetime with a longer recovery. |
 | Envenomed | `vestige:spellshaping/envenomed` — Implemented spell adjustment | Add bounded poison to an eligible damaged recipient. |
-| Erudite | `vestige:hourglass/erudite` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/experience` — Implemented Homebound Eye payment | Exchange part of activation mana for experience points through the shared valuation.<br>An experience-point-backed return with reduced carrier wear. |
+| Erudite | `vestige:hourglass/erudite` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/experience` — Implemented Homebound Eye payment<br>`vestige:standing_stone/erudite` — Implemented Standing Stone payment | Exchange part of activation mana for experience points through the shared valuation.<br>An experience-point-backed return with reduced carrier wear.<br>Standing Stone travel spends 25% less experience, in points. |
 | Excavating | `vestige:spellshaping/excavating` — Implemented spell adjustment | Increase the supported mining hardness threshold. |
 | Exhausting | `vestige:spellshaping/exhausting` — Implemented spell adjustment | Increase Amplify by 25% per degree at 35% more mana per degree. |
 | Famished | `vestige:spellshaping/famished` — Implemented spell adjustment | Amplify ×1.1 per contribution. |
-| Fasting | `vestige:spellshaping/fasting` — Implemented spell adjustment<br>`vestige:hourglass/fasting` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/hunger` — Implemented Homebound Eye payment | Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.<br>Exchange part of activation mana for food through the shared valuation.<br>A food-backed return with reduced carrier wear. |
+| Fasting | `vestige:spellshaping/fasting` — Implemented spell adjustment<br>`vestige:hourglass/fasting` — Implemented Kairotic Hourglass adjustment<br>`vestige:homebound_eye/hunger` — Implemented Homebound Eye payment<br>`vestige:standing_stone/hunger` — Implemented Standing Stone payment | Exchange a quarter of adjusted mana for one food point per 7.5 mana, rounded up.<br>Exchange part of activation mana for food through the shared valuation.<br>A food-backed return with reduced carrier wear.<br>Standing Stone travel spends food points instead of experience. |
 | Fleeting | `vestige:hourglass/fleeting` — Implemented Kairotic Hourglass adjustment | Shorter positional recall at a lower mana price. |
 | Focused | `vestige:spellshaping/focused` — Implemented spell adjustment | Amplify ×1.12 per contribution. |
 | Forked | `vestige:spellshaping/forked` — Implemented spell adjustment | Increase a native projectile fan; existing hit and rider budgets remain shared. |
@@ -368,3 +368,13 @@ Ordinary / Greater / Grand are existing degree labels, not three different adjus
 | *Indomitable* Wardweave Robes | Warded + Enduring + Reinforced |
 | *Untiring* Wardweave Robes | Warded + Enduring + Quickened |
 | *Unshaken* Wardweave Robes | Warded + Enduring + Quickened + Reinforced |
+
+`vestige:standing_stone` has exhaustive naming coverage for its **5** declared combinations, including the unmodified item and individual adjustments. Gameplay reachability is checked by its own recipe tests.
+
+| Full item name | Underlying adjustments |
+| --- | --- |
+| Standing Stone payments (implemented) | None |
+| *Erudite* Standing Stone payments (implemented) | Erudite |
+| *Charged* Standing Stone payments (implemented) | Charged |
+| *Fasting* Standing Stone payments (implemented) | Fasting |
+| *Bloodbound* Standing Stone payments (implemented) | Bloodbound |

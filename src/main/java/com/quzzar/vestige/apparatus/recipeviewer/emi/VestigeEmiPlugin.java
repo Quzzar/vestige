@@ -28,6 +28,7 @@ public final class VestigeEmiPlugin implements EmiPlugin {
         registry.setDefaultComparison(ScrollItems.SCROLL.get(),Comparison.compareData(s -> RitualDisplays.subtype(s.getItemStack())));
         registry.setDefaultComparison(ScrollItems.FRAGMENT.get(),Comparison.compareData(s -> RitualDisplays.subtype(s.getItemStack())));
         registry.setDefaultComparison(ScrollItems.ATTUNEMENT_SHARD.get(),Comparison.DEFAULT_COMPARISON);
+        for(var item:com.quzzar.vestige.travel.StandingStones.STONE_ITEMS.values())registry.setDefaultComparison(item.get(),Comparison.compareData(stack->StandingStoneDisplays.subtype(stack.getItemStack())));
         for(var display:WandViewerClient.displays())registry.addRecipe(new WandEmiRecipe(display));
         for(var display:RitualViewerClient.displays()){registry.addRecipe(new Recipe(display));registry.addEmiStack(EmiStack.of(display.output()));}
     }

@@ -1,0 +1,94 @@
+{
+  "engine": "Minecraft 1.21.1 / NeoForge 21.1.72",
+  "checks": [
+    {
+      "rituals": 741,
+      "finishes": 36,
+      "routes": 5,
+      "publicAndBoundVariantsVerified": 185
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-experience",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-experience-unaffordable",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-erudite",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-erudite-unaffordable",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-mana",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-mana-unaffordable",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-hunger",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-hunger-unaffordable",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-health",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "menu-health-unaffordable",
+      "screen": "com.quzzar.vestige.travel.client.StoneNetworkScreen"
+    },
+    {
+      "closedMenuStaysClosedOnBalanceRefresh": true
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "inventory",
+      "screen": "net.minecraft.client.gui.screens.inventory.InventoryScreen"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "recipe-experience",
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "recipe-erudite",
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "recipe-mana",
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "recipe-hunger",
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    },
+    {
+      "source": "Unedited native Minecraft framebuffer",
+      "capture": "recipe-health",
+      "screen": "mezz.jei.gui.recipes.RecipesGui"
+    }
+  ]
+}

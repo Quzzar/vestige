@@ -689,6 +689,38 @@
       "word": "Reinforced",
       "meaning": "Greater carrier durability with weaker protection.",
       "status": "Implemented Wardweave adjustment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:standing_stone/erudite",
+      "word": "Erudite",
+      "meaning": "Standing Stone travel spends 25% less experience, in points.",
+      "status": "Implemented Standing Stone payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:standing_stone/mana",
+      "word": "Charged",
+      "meaning": "Standing Stone travel spends mana instead of experience.",
+      "status": "Implemented Standing Stone payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:standing_stone/hunger",
+      "word": "Fasting",
+      "meaning": "Standing Stone travel spends food points instead of experience.",
+      "status": "Implemented Standing Stone payment"
+    },
+    {
+      "kind": "individual",
+      "max_degree": 1,
+      "id": "vestige:standing_stone/health",
+      "word": "Bloodbound",
+      "meaning": "Standing Stone travel spends nonlethal health instead of experience.",
+      "status": "Implemented Standing Stone payment"
     }
   ],
   "combinations": [

@@ -1,5 +1,18 @@
 # Development status
 
+## October 10 · Standing Stone payment imbuements implemented
+
+The owner approved the complete [five-route package](design/standing-stone-imbuement-plan.md). The Plinth carrying the Ender Pearl now selects ordinary XP, Erudite discounted XP, Charged mana, Fasting hunger or Bloodbound nonlethal health. Crafting copies the full verified shard key unchanged. Route data survives placement, either-half mining and saving separately from finish, silhouette, signature and editable endpoint name. Missing baseline route data keeps ordinary XP; malformed explicit routes reject access and remain malformed after mining.
+
+Distance quotes use the unchanged XP budget and shared ResourceValuation conversions. Departure alone selects payment. The shared typed transaction restores the selected resource and mana recovery delay for canceled, redirected, failed, throwing or callback-invalidated trips; reentrant requests and stale route sessions reject. Exact health payment must leave life, hunger may reach zero and creative bypasses costs. Native six-row menus show real resource symbols and refresh affordability without reopening closed menus.
+
+Dynamic JEI/EMI displays cover **180 primary variants plus five separate Chiseled Stone Bricks alternatives**. Both public and privately bound outputs index correctly without exposing the shard key. The ordered recipe has interchangeable quarter-turns; because its masonry pair is identical, a reflection is also the same valid pattern.
+
+**Verified:** scoped publication build and Kithkyn compatibility; **227 unit tests across 50 suites**, **all 48 targeted Minecraft tests**, adjective-generation drift checks and whitespace checks. World evidence includes 740 rotated recipe checks, all 180 finish/route placement/mining/save combinations, all five actual ritual outputs, changed-socket cancellation, survival resource debits, strict health boundaries, creative, malformed/unbound drops, typed payload round trips, reentrant XP callbacks and canceled/redirected/throwing teleports. The combined development build additionally passed **244 unit tests across 53 suites** and the final 48-test pass; an earlier broader pass covered all 67 required tests including Cinderweave integration.
+
+[Actual client evidence](art/standing-stone-imbuements-native/README.md) contains funded/unfunded menus for every route and all five recipe screens in JEI and EMI. Both viewers verify all 185 generic/bound recipes; the final JEI inspection also checks closed-screen refresh behavior. No new model or texture is introduced. The verified combined build is installed in Kithkyn Testing; [release hashes and backup receipt](art/standing-stone-imbuements-native/release-receipt.json) distinguish it from the scoped publication artifact. Restart Minecraft to load it. Initial long-distance balance, a real multiplayer/restart soak and existing unrelated EMI/temporary-water warnings remain follow-up; this is not a rerun of every unrelated gameplay test.
+
+
 ## October 9 · owner-approved unsupported Hourglass artwork
 
 The owner selected the clean in-game v3 Hourglass: glass bulbs with gold caps and no side supports. [The approval record](art/kairotic-hourglass-v3/approval.json) pins the unchanged 16×16 PNG, eight-color palette, source, model and native inventory view with the owner's wording. Native loaded resources and the texture already installed in Kithkyn Testing match the accepted PNG exactly. The authoring check now rejects drift from those approved hashes; subsequent pixel changes require a new revision.

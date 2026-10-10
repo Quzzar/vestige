@@ -30,7 +30,7 @@ The former cooldown drawback did nothing on the packaged spell catalog. Exhausti
 
 ## Scope and future prices
 
-Standing Stone's accepted ordinary XP distance fare remains unchanged; alternate travel payments are not implemented. When authored, convert the same unrounded XP budget through this ratio before the resource's final rounding, minimum and any explicit route discount. That is a future implementation requirement, not a shipped alternate route.
+Standing Stone's ordinary XP distance fare remains unchanged. Its five implemented routes convert the same unrounded distance budget through this ratio before final rounding: XP and mana round to points, Health and Hunger use the shared conversion helpers, and Lapis applies an explicit 25% XP discount. See [Standing Stone payment imbuements](standing-stone-imbuement-plan.md).
 
 The [Kairotic Hourglass](kairotic-hourglass.md) now implements the locked fifteen seconds, sixty mana, ten durability and one wear per successful return. Its Bloodbound/Fasting/Erudite choices use these rates through shared typed Health/Hunger/Experience costs. For this device, temporal and vessel factors and saved geometry resolve the complete mana budget before its capped exchange: `E = min(30, 0.75 × M)`. This device order is explicit; existing spell exchange-before-layout semantics remain unchanged. Failed or canceled physical returns restore payment and mana recovery delay and spend no wear. Wands, staffs and robes retain their existing component costs and wear; their already-shaped spells inherit the common Bloodbound/Fasting and Exhausting changes through the same runtime.
 

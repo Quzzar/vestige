@@ -45,7 +45,11 @@ public final class RitualDisplays {
         }
         public boolean shapeless() { return id.equals(VestigeMainMod.location("ritual/attunement_shard")); }
         public boolean concealed() { return spell.isPresent() && offerings.isEmpty(); }
-        public ItemStack output() { return com.quzzar.vestige.equipment.WayfarerDisplays.output(id).orElseGet(() -> com.quzzar.vestige.equipment.MagicArmorDisplays.output(id).orElseGet(() -> HourglassDisplays.output(id).orElseGet(() -> FluxedFlintDisplays.output(id).orElseGet(this::ordinaryOutput)))); }
+        public ItemStack output() {
+            var stone = StandingStoneDisplays.output(id);
+            if (stone.isPresent()) return stone.get();
+            return com.quzzar.vestige.equipment.WayfarerDisplays.output(id).orElseGet(() -> com.quzzar.vestige.equipment.MagicArmorDisplays.output(id).orElseGet(() -> HourglassDisplays.output(id).orElseGet(() -> FluxedFlintDisplays.output(id).orElseGet(this::ordinaryOutput))));
+        }
         private ItemStack ordinaryOutput() { return spell.map(ScrollItems::scroll).orElseGet(() -> MagicalThreadRecipe.types().stream()
                 .filter(type -> id.equals(VestigeMainMod.location("ritual/"+type.id().getPath())))
                 .findFirst().map(type -> new ItemStack(type.item())).orElseGet(() -> new ItemStack(
