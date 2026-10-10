@@ -13,7 +13,8 @@
   "scopedPublicationBuild": {
     "sha256": "47348be0c9c8ea0c9ed9dcc3fc57c8348a762969192e048e2e5252d794da3b24",
     "unitTests": 227,
-    "worldTests": 48
+    "worldTests": 48,
+    "completeStandaloneWorldTests": 399
   },
   "note": "Scoped publication adds Standing Stone routes only. Testing pack keeps the approved combined development equipment work. JEI capture uses the scoped build; EMI uses the combined build. Restart Minecraft to load the update."
 }
